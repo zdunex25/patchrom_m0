@@ -1,0 +1,4 @@
+ro.camera.sound.forced=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+persist.service.adb.enable=1

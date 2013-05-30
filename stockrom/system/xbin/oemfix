@@ -1,0 +1,2 @@
+#!/system/bin/sh
+chmod 600 /dev/exynos-mem
