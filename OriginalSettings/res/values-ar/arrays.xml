@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timezone_filters">
+        <item>أمريكا</item>
+        <item>Europe</item>
+        <item>Africa</item>
+        <item>آسيا</item>
+        <item>أستراليا</item>
+        <item>المحيط الهادي</item>
+        <item>الكل</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 ثانية</item>
+        <item>30 ثانية</item>
+        <item>دقيقة واحدة</item>
+        <item>دقيقتين</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>30 دقيقة</item>
+    </string-array>
+    <string-array name="screen_timeout_for_device_lock_entries">
+        <item>15 ثانية</item>
+        <item>30 ثانية</item>
+        <item>دقيقة واحدة</item>
+        <item>3 دقائق</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>15 دقيقة</item>
+        <item>30 دقيقة</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>أبدا</item>
+        <item>15 ثانية</item>
+        <item>30 ثانية</item>
+        <item>دقيقة واحدة</item>
+        <item>دقيقتين</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>30 دقيقة</item>
+    </string-array>
+    <string-array name="device_lock_timeout_entries">
+        <item>Instantly with power key or screen timeout</item>
+        <item>15 ثانية</item>
+        <item>30 ثانية</item>
+        <item>دقيقة واحدة</item>
+        <item>3 دقائق</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>15 دقيقة</item>
+        <item>30 دقيقة</item>
+        <item>1 hours</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>في الحال</item>
+        <item>5 ثوان</item>
+        <item>15 ثانية</item>
+        <item>30 ثانية</item>
+        <item>دقيقة واحدة</item>
+        <item>دقيقتين</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>30 دقيقة</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>صغير جدا</item>
+        <item>صغير</item>
+        <item>عادي</item>
+        <item>كبير</item>
+        <item>ضخم</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>بطيء جدا</item>
+        <item>بطيء</item>
+        <item>عادي</item>
+        <item>سريع</item>
+        <item>سريع جدا</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="tts_pitch_entries">
+        <item>ضعيفة جدا</item>
+        <item>غير هامة</item>
+        <item>عادي</item>
+        <item>مرتفعة</item>
+        <item>عالية جدا</item>
+    </string-array>
+    <string-array name="tts_pitch_values">
+        <item>50</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+        <item>150</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>جاري الفحص...</item>
+        <item>جاري التوصيل...</item>
+        <item>جاري المصادقة...</item>
+        <item>جار الحصول على عنوان IP...</item>
+        <item>تم التوصيل</item>
+        <item>موقوف</item>
+        <item>جاري الفصل...</item>
+        <item>تم الفصل</item>
+        <item>غير ناجح</item>
+        <item>تم التوصيل</item>
+        <item>يتم تجنب الاتصال الضعيف مؤقتًا</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>جاري الفحص...</item>
+        <item>جاري الاتصال بـ %s...</item>
+        <item>جاري المصادقة مع %s...</item>
+        <item>جار الحصول على عنوان IP من %s...</item>
+        <item>متصل بـ %1$s</item>
+        <item>موقوف</item>
+        <item>جاري قطع الاتصال من %s...</item>
+        <item>تم الفصل</item>
+        <item>غير ناجح</item>
+        <item>تم التوصيل</item>
+        <item>يتم تجنب الاتصال الضعيف مؤقتًا</item>
+    </string-array>
+    <string-array name="wifi_ap_security">
+        <item>Open</item>
+        <item>WPA PSK</item>
+        <item>WPA2 PSK</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>زر الدفع</item>
+        <item>رمز PIN للجهاز النظير</item>
+        <item>رمز PIN لهذا الجهاز</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>تم التوصيل</item>
+        <item>تمت الدعوة</item>
+        <item>فشل التوصيل</item>
+        <item>انقر للتوصيل</item>
+        <item>خارج المدى</item>
+        <item>متصل بجهاز آخر</item>
+    </string-array>
+    <string-array name="wifi_ap_timeout">
+        <item>لا توجد مهلة مطلقا</item>
+        <item>5 دقائق</item>
+        <item>10 دقائق</item>
+        <item>20 دقيقة</item>
+        <item>30 دقيقة</item>
+        <item>60 دقيقة</item>
+    </string-array>
+    <string-array name="wifi_ap_connection_mode">
+        <item>السماح لجميع الأجهزة</item>
+        <item>الأجهزة المسموح بها فقط</item>
+    </string-array>
+    <string-array name="wifi_ap_channel">
+        <item>تلقائي</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>۱۰</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_maxclient">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>۱۰</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 دقيقة</item>
+        <item>5 دقائق</item>
+        <item>ساعة واحدة</item>
+        <item>لا توجد مهلة مطلقا</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>ضعيفة</item>
+        <item>مقبولة</item>
+        <item>جيدة</item>
+        <item>قوية</item>
+        <item>قوية جدا</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>دائما</item>
+        <item>عند التوصيل فقط</item>
+        <item>عدم الاستخدام مطلقا (يؤدي إلى زيادة استخدام البيانات)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>دائما</item>
+        <item>عند التوصيل فقط</item>
+        <item>أبدا</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>تلقائي</item>
+        <item>5 جيجاهرتز فقط</item>
+        <item>2.4 جيجاهرتز فقط</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>وقت التخزين</item>
+        <item>بدء العد</item>
+        <item>اسم التطبيق</item>
+    </string-array>
+    <string-array name="wifi_eap_entries">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>PWD</item>
+    </string-array>
+    <string-array name="wifi_phase1_entries">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>لا شيء</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>غير مفعل</item>
+        <item>زر الدفع</item>
+        <item>رمز PIN من نقطة الوصول</item>
+        <item>رمز PIN لهذا الجهاز</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>ثابت</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>لا شيء</item>
+        <item>يدوي</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>غير فعال</item>
+        <item>تنبيه</item>
+        <item>اهتزاز</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>لا شيء</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP أو CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>غير محدد</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>وحدة التخزين الداخلية بالجهاز</item>
+        <item>بطاقة SD قابلة للإزالة</item>
+        <item>افتراضي</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>قصير</item>
+        <item>وسط</item>
+        <item>طويل</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>عدم التحقق مطلقا</item>
+        <item>فحص محتوى DRM فقط</item>
+        <item>التحقق دائما</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>عدم استخدام ‏‫التحقق من HDCP مطلقا</item>
+        <item>استخدام التحقق من HDCP مع محتوى DRM فقط</item>
+        <item>استخدام ‏‫التحقق من HDCP دائما</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>الرسوم متحركة قيد الإيقاف</item>
+        <item>مقياس الحركة بمعدل 0.5x</item>
+        <item>مقياس الحركة بمعدل 1x</item>
+        <item>مقياس الحركة بمعدل 1.5x</item>
+        <item>مقياس الحركة بمعدل 2x</item>
+        <item>مقياس الحركة بمعدل 5x</item>
+        <item>مقياس الحركة بمعدل 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>الرسوم متحركة قيد الإيقاف</item>
+        <item>مقياس الحركة بمعدل 0.5x</item>
+        <item>مقياس الحركة بمعدل 1x</item>
+        <item>مقياس الحركة بمعدل 1.5x</item>
+        <item>مقياس الحركة بمعدل 2x</item>
+        <item>مقياس الحركة بمعدل 5x</item>
+        <item>مقياس الحركة بمعدل 10x</item>
+    </string-array>
+    <string-array name="animator_duration_scale_entries">
+        <item>الرسوم متحركة قيد الإيقاف</item>
+        <item>مقياس الحركة بمعدل 0.5x</item>
+        <item>مقياس الحركة بمعدل 1x</item>
+        <item>مقياس الحركة بمعدل 1.5x</item>
+        <item>مقياس الحركة بمعدل 2x</item>
+        <item>مقياس الحركة بمعدل 5x</item>
+        <item>مقياس الحركة بمعدل 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>الحد القياسي</item>
+        <item>لا يتم إجراء أي عمليات في الخلفية</item>
+        <item>عملية واحدة كحد أقصى</item>
+        <item>2 من العمليات كحد أقصى</item>
+        <item>3 عمليات كحد أقصى</item>
+        <item>4 عمليات كحد أقصى</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>شبكة L2TP/IPSec VPN مزودة بمفاتيح مشتركة مسبقا</item>
+        <item>شبكة L2TP/IPSec VPN مزودة بشهادات</item>
+        <item>شبكة IPSec VPN مزودة بمفاتيح مشتركة مسبقا ومصادقة XAuth</item>
+        <item>شبكة IPSec VPN مزودة بشهادات ومصادقة XAuth</item>
+        <item>شبكة IPSec VPN مزودة بشهادات ومصادقة مختلطة</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>تم قطع الاتصال</item>
+        <item>جاري البدء...</item>
+        <item>جاري التوصيل...</item>
+        <item>تم التوصيل</item>
+        <item>مهلة الشاشة</item>
+        <item>غير ناجح</item>
+    </string-array>
+    <string-array name="allshare_download_to">
+        <item>الجهاز</item>
+        <item>بطاقة SD</item>
+    </string-array>
+    <string-array name="allshare_download_to_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="allshare_download_from">
+        <item>القبول دوما</item>
+        <item>اسأل دائما</item>
+        <item>الرفض دوما</item>
+    </string-array>
+    <string-array name="allshare_download_from_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="allshare_access_control">
+        <item>السماح للكل</item>
+        <item>الأجهزة المسموح بها فقط</item>
+    </string-array>
+    <string-array name="allshare_access_control_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="allshare_contents_share">
+        <item>الفيديو</item>
+        <item>صور فوتوغرافية</item>
+        <item>الموسيقى</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>تلقائي</item>
+        <item>يدوي</item>
+        <item>اسأل دائما</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>غير مفعل دائما</item>
+        <item>3 ثوان</item>
+        <item>5 ثوان</item>
+        <item>10 ثوان</item>
+        <item>15 ثانية</item>
+    </string-array>
+    <string-array name="allow_list_entries">
+        <item>لا شيء</item>
+        <item>كل الأسماء</item>
+        <item>المفضلة</item>
+        <item>ضبط مخصص</item>
+    </string-array>
+    <string-array name="signature_settings_verification_level_entries">
+        <item>مرتفعة</item>
+        <item>وسط</item>
+        <item>غير هامة</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 ثانية</item>
+        <item>6 ثواني</item>
+        <item>غير مفعل دائما</item>
+        <item>مفعل دائما</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>الأكثر تحميلا</item>
+        <item>وسط</item>
+        <item>أسفل</item>
+    </string-array>
+    <string-array name="contents_type_entries">
+        <item>أخبار</item>
+        <item>الأسهم</item>
+        <item>Facebook</item>
+    </string-array>
+    <string-array name="contents_type_entries_weibo">
+        <item>الأخبار</item>
+        <item>الأسهم</item>
+        <item>Weibo</item>
+    </string-array>
+    <string-array name="sliding_speed_entries">
+        <item>بطيء</item>
+        <item>عادي</item>
+        <item>سريع</item>
+    </string-array>
+    <string-array name="facebook_auto_refresh_entries">
+        <item>لا شيء</item>
+        <item>كل 30 دقيقة</item>
+        <item>كل ساعة</item>
+        <item>كل ساعتين</item>
+        <item>كل 4 ساعات</item>
+    </string-array>
+    <string-array name="bluetooth_class_of_device_entries">
+        <item>سماعة رأس</item>
+        <item>كمبيوتر</item>
+        <item>الهاتف</item>
+        <item>أجهزة HID‬ (لوحة المفاتيح، الماوس، وما إلى ذلك)</item>
+        <item>كل الأجهزة</item>
+    </string-array>
+    <string-array name="audio_output_entries">
+        <item>استيريو</item>
+        <item>مجسم</item>
+    </string-array>
+</resources>

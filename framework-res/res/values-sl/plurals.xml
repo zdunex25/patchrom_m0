@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="num_seconds_ago">
+        <item quantity="other">pred %d sekundami</item>
+        <item quantity="one">pred 1 sekundo</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">pred %d minutami</item>
+        <item quantity="one">pred 1 minuto</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item quantity="other">pred %d urami</item>
+        <item quantity="one">Pred 1 uro</item>
+    </plurals>
+    <plurals name="last_num_days">
+        <item quantity="other">Zadnjih %d dni</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item quantity="other">Pred %d dnevi</item>
+        <item quantity="one">Včeraj</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item quantity="other">v %d sekundah</item>
+        <item quantity="one">Čez 1 sekundo</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">v %d minutah</item>
+        <item quantity="one">v 1 minuti</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item quantity="other">v %d urah</item>
+        <item quantity="one">v 1 uri</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item quantity="other">v %d dneh</item>
+        <item quantity="one">jutri</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item quantity="other">Pred %d sekundami</item>
+        <item quantity="one">pred 1 sekundo</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">pred %d minutami</item>
+        <item quantity="one">pred 1 minuto</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item quantity="other">pred %d urami</item>
+        <item quantity="one">Pred 1 uro</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item quantity="other">Pred %d dnevi</item>
+        <item quantity="one">Včeraj</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item quantity="other">v %d sekundah</item>
+        <item quantity="one">čez 1 sekundo</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">Čez %d minut</item>
+        <item quantity="one">v 1 minuti</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item quantity="other">v %d urah</item>
+        <item quantity="one">v 1 uri</item>
+    </plurals>
+    <plurals name="abbrev_in_num_days">
+        <item quantity="other">v %d dneh</item>
+        <item quantity="one">jutri</item>
+    </plurals>
+    <plurals name="wifi_available">
+        <item quantity="other">Na voljo so omrežja Wi-Fi</item>
+        <item quantity="one">Na voljo so omrežja Wi-Fi</item>
+    </plurals>
+    <plurals name="wifi_available_detailed">
+        <item quantity="other">Odpri razpoložljiva omrežja Wi-Fi</item>
+        <item quantity="one">Odpri razpoložljiva omrežja Wi-Fi</item>
+    </plurals>
+    <plurals name="matches_found">
+        <item quantity="other">%1$d od %2$d</item>
+        <item quantity="one">1 ujemanje</item>
+    </plurals>
+</resources>

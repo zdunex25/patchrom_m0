@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="icon">false</item>
+    <item type="id" name="filename">false</item>
+    <item type="id" name="prune">false</item>
+    <item type="id" name="list_refresh">false</item>
+    <item type="id" name="view">false</item>
+    <item type="id" name="settings">false</item>
+    <item type="id" name="about">false</item>
+    <item type="id" name="donate">false</item>
+    <item type="id" name="refresh">false</item>
+    <item type="id" name="exit">false</item>
+</resources>

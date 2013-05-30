@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="sel_pic_items">
+        <item>@string/gallery</item>
+        <item>@string/take_photo</item>
+    </array>
+</resources>

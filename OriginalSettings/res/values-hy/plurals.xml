@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d տառ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 տառ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d փոքրատառ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 փոքրատառ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d մեծատառ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 մեծատառ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d թիվ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 թիվ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d սիմվոլ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 սիմվոլ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Գաղտնաբառը պետք է պարունակի առնվազն %d թիվ կամ սիմվոլ</item>
+        <item quantity="one">Գաղտնաբառը պետք է պարունակի առնվազն 1 թիվ կամ սիմվոլ</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d րոպե</item>
+        <item quantity="one">1 րոպե</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d վայրկյան</item>
+        <item quantity="one">1 վայրկյան</item>
+    </plurals>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">رمز عبور باید حداقل %d حرف داشته باشد</item>
+        <item quantity="one">رمز عبور باید حداقل 1 حرف داشته باشد</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">رمز عبور باید حداقل %d حرف کوچک داشته باشد</item>
+        <item quantity="one">رمز عبور باید حداقل 1 حرف کوچک داشته باشد</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">رمز عبور باید حداقل %d حرف بزرگ داشته باشد</item>
+        <item quantity="one">رمز عبور باید حداقل 1 حرف بزرگ داشته باشد</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">رمز عبور باید حداقل %d عدد داشته باشد</item>
+        <item quantity="one">رمز عبور باید حداقل 1 عدد داشته باشد</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">رمز ورود باید حداقل دارای %d نماد باشد</item>
+        <item quantity="one">رمز ورود باید حداقل دارای 1 نماد باشد</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">رمز ورود باید حداقل دارای %d عدد یا نماد باشد</item>
+        <item quantity="one">رمز ورود باید حداقل دارای 1 عدد یا نماد باشد</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d دقيقه</item>
+        <item quantity="one">1 دقيقه</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%dثانیه</item>
+        <item quantity="one">1ثانیه</item>
+    </plurals>
+</resources>

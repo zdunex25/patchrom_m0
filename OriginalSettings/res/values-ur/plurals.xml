@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">پاس ورڈ میں کم از کم %d حروف شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 حرف شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">پاس ورڈ میں کم از کم %d چھوٹے حروف شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 چھوٹا حرف شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">پاس ورڈ میں کم از کم %d بڑے حروف شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 بڑا حرف شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">پاس ورڈ میں کم از کم ‎%d اعدد شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 عدد شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">پاس ورڈ میں کم از کم %d علامات شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 علامت شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">پاس ورڈ میں کم از کم ‎%d اعدد یا علامات شامل ہونا ضروری ہے</item>
+        <item quantity="one">پاس ورڈ میں کم از کم 1 عدد یا علامت شامل ہونا ضروری ہے</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d منٹ</item>
+        <item quantity="one">1 منٹ</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d سیکینڈز</item>
+        <item quantity="one">1 سیکینڈ</item>
+    </plurals>
+</resources>

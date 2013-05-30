@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_notifications">
+        <CheckBoxPreference android:title="@string/display_notifications" android:key="show_notif" android:defaultValue="true" android:summaryOn="@string/notify_default" android:summaryOff="@string/notify_false" />
+    </PreferenceCategory>
+</PreferenceScreen>

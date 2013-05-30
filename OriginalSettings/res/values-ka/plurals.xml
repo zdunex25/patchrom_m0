@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">პაროლი უნდა შეიცავდეს მინიმუმ %d ასოს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს მინიმუმ 1 ასოს</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">პაროლი უნდა შეიცავდეს ქვედა რეგისტრის მინიმუმ %d ასოს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს ქვედა რეგისტრის მინიმუმ 1 ასოს</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">პაროლი უნდა შეიცავდეს ზედა რეგისტრის მინიმუმ %d ასოს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს ზედა რეგისტრის მინიმუმ 1 ასოს</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">პაროლი უნდა შეიცავდეს მინიმუმ %d ციფრს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს მინიმუმ 1 ციფრს</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">პაროლი უნდა შეიცავდეს მინიმუმ %d სიმბოლოს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს მინიმუმ 1 სიმბოლოს</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">პაროლი უნდა შეიცავდეს მინიმუმ %d ციფრს ან სიმბოლოს</item>
+        <item quantity="one">პაროლი უნდა შეიცავდეს მინიმუმ 1 ციფრს ან სიმბოლოს</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d წუთი</item>
+        <item quantity="one">1 წუთი</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d წამი</item>
+        <item quantity="one">1 წამი</item>
+    </plurals>
+</resources>

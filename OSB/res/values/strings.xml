@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info1">On Screen Button Enabler</string>
+    <string name="info2">After pressing Enable or Disable, phone will automatically reboot!</string>
+    <string name="rootinfo">(ROOT is required)</string>
+    <string name="app_name">On Screen Button Enabler</string>
+    <string name="app_url">http://www.google.com</string>
+    <string name="app_version">V1.0</string>
+    <string name="credits">"Credits:
+------------
+Soheil_rf @ XDA"</string>
+    <string name="note">NOTE:</string>
+    <string name="mount">Enable</string>
+    <string name="unmount">Disable</string>
+    <string name="design">Design :</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_actions">
+        <item>Install</item>
+        <item>Rename</item>
+        <item>Delete</item>
+    </string-array>
+    <string-array name="install_options">
+        <item>Wipe Data</item>
+        <item>Wipe Cache</item>
+    </string-array>
+    <string-array name="file_ages">
+        <item>1 week</item>
+        <item>2 weeks</item>
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>1 year</item>
+    </string-array>
+</resources>

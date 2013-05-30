@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sleep_notification">intelligent_sleep_mode</string>
+    <string name="sleep_notification_action_start">faceservice_enabled</string>
+    <string name="sleep_notification_action_stop">faceservice_disabled</string>
+    <string name="sleep_notification_action_fail">faceservice_failed</string>
+</resources>

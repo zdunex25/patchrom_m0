@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parola ən azı %d hərf daxil olmalıdır</item>
+        <item quantity="one">Parola ən az 1 hərf daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parola ən azı %d kiçik hərf daxil olmalıdır</item>
+        <item quantity="one">Parola ən az 1 kiçik hərf daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parola ən azı %d böyük hərf daxil olmalıdır</item>
+        <item quantity="one">Parola ən az 1 böyük hərf daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parola ən azı %d rəqəm daxil olmalıdır</item>
+        <item quantity="one">Parola ən az 1 rəqəm daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parola ən azı %d simvol daxil olmalıdır</item>
+        <item quantity="one">Parola ən azı 1 simvol daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parola ən azı %d rəqəm və ya simvol daxil olmalıdır</item>
+        <item quantity="one">Parola ən azı 1 rəqəm və ya simvol daxil olmalıdır</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d dəqiqə</item>
+        <item quantity="one">1 dəqiqə</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d saniyə</item>
+        <item quantity="one">1 saniyə</item>
+    </plurals>
+</resources>

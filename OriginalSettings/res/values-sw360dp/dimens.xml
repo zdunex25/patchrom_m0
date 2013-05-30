@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="account_and_sync_account_textsize">20.0sp</dimen>
+    <dimen name="account_and_sync_summary_textsize">15.0sp</dimen>
+    <dimen name="account_and_sync_list_height">56.0dip</dimen>
+</resources>

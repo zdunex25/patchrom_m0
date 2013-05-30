@@ -1,0 +1,8 @@
+version: 1.4.4.19f991d
+apkFileName: FmRadio.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 2
+  tag: i9300

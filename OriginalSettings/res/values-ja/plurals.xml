@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">パスワードは%d文字以上に設定する必要があります。</item>
+        <item quantity="one">パスワードは1文字以上に設定する必要があります。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">パスワードには%d文字以上の小文字を含める必要があります。</item>
+        <item quantity="one">パスワードには1文字以上の小文字を含める必要があります。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">パスワードには%d文字以上の大文字を含める必要があります。</item>
+        <item quantity="one">パスワードには1文字以上の大文字を含める必要があります。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">パスワードには%d個以上の数字を含める必要があります</item>
+        <item quantity="one">パスワードには1個以上の数字を含める必要があります。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">パスワードには%d文字以上の記号を含める必要があります。</item>
+        <item quantity="one">パスワードには1文字以上の記号を含める必要があります。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">パスワードには%d文字以上の数字または記号を含める必要があります。</item>
+        <item quantity="one">パスワードには1文字以上の数字または記号を含める必要があります。</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d分</item>
+        <item quantity="one">1​分</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+</resources>

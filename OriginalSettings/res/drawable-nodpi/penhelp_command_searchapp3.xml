@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="1000" android:drawable="@drawable/help_command05_6" />
+    <item android:duration="1000" android:drawable="@drawable/help_command05_7" />
+    <item android:duration="1000" android:drawable="@drawable/help_command05_8" />
+    <item android:duration="1000" android:drawable="@drawable/help_command05_9" />
+    <item android:duration="1000" android:drawable="@drawable/help_command05_10" />
+</animation-list>

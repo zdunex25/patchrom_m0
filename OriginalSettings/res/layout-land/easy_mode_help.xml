@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/easymode_help_layout" android:layout_width="fill_parent" android:layout_height="2000.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/preview_image" android:background="@drawable/img_basic_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="43.0dip" android:layout_marginBottom="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="#ffd7d7d7" android:ellipsize="marquee" android:paddingLeft="23.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="10.0dip" android:text="@string/easy_mode_title" />
+                <Spinner android:id="@id/mode_list" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="23.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="10.0dip" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0dip" android:textColor="#ffd7d7d7" android:ellipsize="marquee" android:id="@id/help_instruction" android:paddingLeft="23.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/standard_mode_body" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

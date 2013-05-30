@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/main_device_info">
+        <Preference android:icon="@drawable/device" android:title="@string/main_device" android:key="device_view" />
+        <Preference android:icon="@drawable/hammer" android:title="@string/main_rom" android:key="rom_view" />
+        <Preference android:icon="@drawable/version" android:title="@string/main_version" android:key="version_view" />
+        <Preference android:icon="@drawable/key" android:title="@string/main_otaid" android:key="otaid_view" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/main_updates">
+        <Preference android:icon="@drawable/cloud" android:title="@string/main_avail_updates" android:key="avail_updates" />
+    </PreferenceCategory>
+</PreferenceScreen>

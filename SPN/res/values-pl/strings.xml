@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">"Wpisz poniżej własną nazwę operatora, zapisz zmiany i przełącz Tryb  Samolotowy"</string>
+    <string name="app_name">Nazwa operatora</string>
+    <string name="no_sim_service">Włóż kartę SIM i upewnij się, że telefon nie jest już w Trybie Samolotowym</string>
+    <string name="save">Zapisz</string>
+    <string name="airplane_on">Wł. T. Samolotowy</string>
+    <string name="airplane_off">Wył. T. Samolotowy</string>
+</resources>

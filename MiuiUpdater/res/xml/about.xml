@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/about_title">
+        <Preference android:title="@string/about_ota_title" android:key="about_pref" android:summary="@string/about_ota_summary" />
+        <Preference android:title="@string/about_version_title" android:key="about_version" />
+        <Preference android:title="@string/contributors_title" android:key="team_pref" />
+        <Preference android:title="@string/license_title" android:key="license_pref" android:summary="@string/license_apache_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
