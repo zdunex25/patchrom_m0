@@ -11,8 +11,8 @@
     <dimen name="config_viewConfigurationTouchSlop">16.0dip</dimen>
     <dimen name="toast_y_offset">64.0dip</dimen>
     <dimen name="status_bar_height">25.0dip</dimen>
-    <dimen name="navigation_bar_height">48.0dip</dimen>
-    <dimen name="navigation_bar_height_landscape">48.0dip</dimen>
+    <dimen name="navigation_bar_height">42.0dip</dimen>
+    <dimen name="navigation_bar_height_landscape">42.0dip</dimen>
     <dimen name="navigation_bar_width">42.0dip</dimen>
     <dimen name="status_bar_icon_size">24.0dip</dimen>
     <dimen name="status_bar_content_number_size">48.0sp</dimen>
