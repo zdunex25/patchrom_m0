@@ -13,6 +13,7 @@ ui_print("Set permission...");
 show_progress(0.200000, 0);
 set_perm_recursive(0, 0, 0755, 0644, "/system/app");
 set_perm_recursive(0, 0, 0755, 0644, "/system/framework");
+set_perm(0, 0, 0644, "/system/build.prop");
 ui_print("Finishing installation...");
 show_progress(0.100000, 0);
 unmount("/system");
