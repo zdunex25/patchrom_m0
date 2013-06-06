@@ -157,8 +157,10 @@ rm -r system/app/BluetoothMap.apk
 rm -r system/app/BluetoothTest.apk
 rm -r system/app/Camera.apk
 rm -r system/app/CertInstaller.apk
+rm -r system/app/ChromeBookmarksSyncAdapter.apk
 rm -r system/app/ClipboardSaveService.apk
 rm -r system/app/CSC.apk
+rm -r system/app/Divx.apk
 rm -r system/app/DSPManager.apk
 rm -r system/app/EdmVpnServices.apk
 rm -r system/app/FaceLock.apk
@@ -188,7 +190,6 @@ rm -r system/app/OmaCP.apk
 rm -r system/app/OriginalSettings.apk
 rm -r system/app/OSB.apk
 rm -r system/app/PanningTryActually.apk
-rm -r system/app/PCWClientS.apk
 rm -r system/app/PCWClientS.apk
 rm -r system/app/PhoneErrService.apk
 rm -r system/app/Phonesky.apk

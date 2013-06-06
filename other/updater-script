@@ -1,5 +1,5 @@
 ui_print(" ");
-ui_print("OTA UPDATE FOR");
+ui_print("OTA UPDATE OF");
 ui_print("MIUI GALAXY by Z25");
 show_progress(0.500000, 0);
 ui_print("Installing ota files...");
