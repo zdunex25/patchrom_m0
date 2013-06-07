@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9300.zip
 local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera FmRadio MiuiUpdater SPN OSB #OriginalSettings
+local-modified-apps := Camera FmRadio MiuiUpdater SPN OSB OriginalSettings
 
 local-modified-jars :=
 
@@ -43,8 +43,8 @@ include $(PORT_BUILD)/porting.mk
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
-#	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
-	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
+#	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
@@ -59,7 +59,7 @@ local-pre-zip-misc:
 	cp other/DSPManager.apk $(ZIP_DIR)/system/app/DSPManager.apk
 	cp other/MiuiWeather.apk $(ZIP_DIR)/system/app/MiuiWeather.apk
 #	cp other/MusicFX.apk $(ZIP_DIR)/system/app/MusicFX.apk
-	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
+#	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

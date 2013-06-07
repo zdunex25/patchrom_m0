@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:OriginalSettings="http://schemas.android.com/apk/res/com.android.OriginalSettings">
     <com.android.OriginalSettings.RingerVolumePreference android:persistent="false" android:title="@string/all_volume_title" android:key="ring_volume" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/all_volume_title" android:streamType="ring" />
-    <com.android.OriginalSettings.VibrationFeedbackPreference android:title="@string/vibration_intensity" android:key="vibration_feedback_intensity" android:summary="" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/vibration_intensity" />
+    <!--com.android.OriginalSettings.VibrationFeedbackPreference android:title="@string/vibration_intensity" android:key="vibration_feedback_intensity" android:summary="" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/vibration_intensity" /-->
     <PreferenceScreen android:title="@string/phone_profile" android:key="phone_profile" android:summary="@string/normal" android:fragment="com.android.settings.phoneprofile.PhoneProfileSettings" />
     <Preference android:title="@string/musicfx_title" android:key="musicfx">
         <intent android:targetPackage="com.android.musicfx" android:targetClass="com.android.musicfx.ControlPanelPicker" />

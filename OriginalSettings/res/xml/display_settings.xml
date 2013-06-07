@@ -20,6 +20,7 @@
     <!--PreferenceCategory android:title="@string/font" />
     <com.android.OriginalSettings.flipfont.FontListPreference android:title="@string/monotype_preference_title" android:key="MONOTYPE" android:summary="@string/monotype_preference_summary" android:widgetLayout="@layout/round_more_icon" /-->
     <com.android.OriginalSettings.FontSizeListPreference android:entries="@array/entries_font_size" android:title="@string/title_font_size" android:key="font_size" android:summary="@string/summary_font_size" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/dialog_title_font_size" android:entryValues="@array/entryvalues_font_size" />
+    <com.android.OriginalSettings.VibrationFeedbackPreference android:title="@string/vibration_intensity" android:key="vibration_feedback_intensity" android:summary="" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/vibration_intensity" />
     <!--PreferenceCategory android:title="@string/more_settings" android:key="more_settings" /-->
     <ListPreference android:persistent="false" android:entries="@array/quick_launch_entries" android:title="@string/quick_launch_title" android:key="quick_launch" android:summary="@string/screen_quick_launch_summary" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/quick_launch_values" />
     <CheckBoxPreference android:title="@string/sub_lcd_auto_lock" android:key="sub_lcd_auto_lock" android:summary="@string/sub_lcd_auto_lock_summary" />

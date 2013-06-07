@@ -143,7 +143,9 @@ rm -r 'META-INF/CERT.RSA'
 rm -r 'META-INF/CERT.SF'
 rm -r 'META-INF/MANIFEST.MF'
 zip -q -r "../../unsigned-miuigalaxy-v5-i9300-$version.zip" 'data' 'META-INF' 'system'
+cp -f ../../other/update-binary META-INF/com/google/android/update-binary
 cp -f ../../other/updater-script META-INF/com/google/android/updater-script
+cp -f ../../other/busybox busybox
 rm -f system/CSCVersion.txt
 rm -f system/default.prop
 rm -f system/SW_Configuration.xml
@@ -289,7 +291,7 @@ rm -rf system/vsc
 rm -rf system/wakeupdata
 rm -rf system/xbin
 cp -rf ../../../miui/XHDPI/system/xbin system
-zip -q -r "../../unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip" 'META-INF' 'system'
+zip -q -r "../../unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip" 'META-INF' 'system' 'busybox'
 cd ../..
 . ../build/envsetup.sh
 cd m0
