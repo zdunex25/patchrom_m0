@@ -50,8 +50,7 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
     <\/header>\
     <header android:icon=\"@drawable\/ic_osb_settings\" android:title=\"@string\/osb_settings\">\
-        <intent android:action="com.android.settings.OSB\" \/>/' \
-					| sed -e "s/android:id=\"@id\/dock_settings\"/android:icon=\"@drawable\/ic_dock_settings\" android:id=\"@id\/dock_settings\"/g" > '../Settings/res/xml/settings_headers.xml'
+        <intent android:action="com.android.settings.OSB\" \/>/' > '../Settings/res/xml/settings_headers.xml'
 cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.player/g" \
 				| sed -e "s/ControlPanelPicker/ui.EqualizerActivity/g" > '../Settings/res/xml/sound_settings.xml'
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
@@ -149,8 +148,8 @@ cp -f ../../other/busybox busybox
 rm -f system/CSCVersion.txt
 rm -f system/default.prop
 rm -f system/SW_Configuration.xml
-rm -rf system/app/mcRegistry
-rm -r system/app/FFFFFFFF000000000000000000000001.drbin
+#rm -rf system/app/mcRegistry
+#rm -r system/app/FFFFFFFF000000000000000000000001.drbin
 rm -r system/app/ApplicationsProvider.apk
 rm -r system/app/BackupRestoreConfirmation.apk
 rm -r system/app/BadgeProvider.apk
@@ -165,7 +164,6 @@ rm -r system/app/CSC.apk
 rm -r system/app/Divx.apk
 rm -r system/app/DSPManager.apk
 rm -r system/app/EdmVpnServices.apk
-rm -r system/app/FaceLock.apk
 rm -r system/app/FactoryTest.apk
 rm -r system/app/FmRadio.apk
 rm -r system/app/Gmail.apk
@@ -200,7 +198,6 @@ rm -r system/app/Preconfig.apk
 rm -r system/app/PreloadInstaller.apk
 rm -r system/app/PRUI.apk
 rm -r system/app/SamsungIME.apk
-rm -r system/app/SamsungTTS.apk
 rm -r system/app/SecHTMLViewer.apk
 rm -r system/app/SecLiveWallpapersPicker.apk
 rm -r system/app/SecMediaProvider.apk
@@ -293,6 +290,7 @@ rm -rf system/xbin
 cp -rf ../../../miui/XHDPI/system/xbin system
 zip -q -r "../../unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip" 'META-INF' 'system' 'busybox'
 cd ../..
+fi
 . ../build/envsetup.sh
 cd m0
 rm -f 'Mms/AndroidManifest.xml'
@@ -312,5 +310,4 @@ rm -r "unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip"
 echo -e "MD5 sums are\n"
 md5sum -b "miuigalaxy-v5-i9300-$version.zip"
 md5sum -b "miuigalaxy-v5-i9300-ota-to-$version.zip"
-fi
 read -p "Done, miuigalaxy-v5-i9300-$version.zip and OTA have been created in root of m0 directory, copy to sd and flash it!"

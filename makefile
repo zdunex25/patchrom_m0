@@ -17,7 +17,7 @@ local-modified-apps := Camera FmRadio MiuiUpdater SPN OSB OriginalSettings
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider SuperMarket Updater Weather WeatherProvider
+local-miui-removed-apps := MediaProvider SuperMarket Updater Weather
 
 local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager MiuiSystemUI BugReport XiaomiServiceFramework Music
 
@@ -44,7 +44,7 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
-#	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
@@ -53,7 +53,7 @@ local-pre-zip-misc:
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
 	cp -f other/audio_effects.conf $(ZIP_DIR)/system/etc/audio_effects.conf
-	cp other/libcyanogen-dsp.so $(ZIP_DIR)/system/lib/soundfx/libcyanogen-dsp.so
+	cp -f other/*.so $(ZIP_DIR)/system/lib/soundfx
 	
 	@echo Add various apps
 	cp other/DSPManager.apk $(ZIP_DIR)/system/app/DSPManager.apk
@@ -71,14 +71,14 @@ local-pre-zip-misc:
 	@echo Remove usless stuff
 	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
 #	rm -rf $(ZIP_DIR)/system/csc
-#	rm -f $(ZIP_DIR)/system/app/FaceLock.apk
 #	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.android.maps.xml
 #	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.android.media.effects.xml
 #	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.widevine.software.drm.xml
 #	rm -f $(ZIP_DIR)/system/framework/com.google.android.maps.jar
 #	rm -f $(ZIP_DIR)/system/framework/com.google.android.media.effects.jar
 #	rm -f $(ZIP_DIR)/system/framework/com.google.widevine.software.drm.jar
+	rm -rf $(ZIP_DIR)/system/tts/lang_SMT
+	rm -rf $(ZIP_DIR)/system/tts/lang_SVOX
 #	rm -rf $(ZIP_DIR)/system/usr/srec/en-US
-#	rm -rf $(ZIP_DIR)/system/vendor/pittpatt
 
 out/framework2.jar : out/framework.jar

@@ -12,7 +12,6 @@ private-phone-apps := ApplicationsProvider \
 					  DefaultContainerService \
 					  Divx \
 					  EdmVpnServices \
-					  FaceLock \
 					  FactoryTest \
 					  FmRadio \
 					  KeyChain \
@@ -31,7 +30,6 @@ private-phone-apps := ApplicationsProvider \
 					  PopupuiReceiver \
 					  Preconfig \
 					  PreloadInstaller \
-					  SamsungTTS \
 					  SamsungIME \
 					  SecMediaProvider \
 					  SecHTMLViewer \
@@ -68,6 +66,7 @@ private-phone-apps2 :=  AllshareDMC \
 						EdmSysScopeService \
 						EdmVpnServices \
 						EnterprisePermissions \
+						FaceLock \
 						Hearingdro \
 						INDI_Server \
 						JobManager \
@@ -80,6 +79,7 @@ private-phone-apps2 :=  AllshareDMC \
 						PCWClientS \
 						PhaseBeam \
 						PRUI \
+					 	SamsungTTS \
 						SecurityProvider \
 						ShaoNv \
 						TwDVFSApp \
