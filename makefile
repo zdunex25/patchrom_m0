@@ -52,11 +52,9 @@ local-pre-zip-misc:
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
-	cp -f other/audio_effects.conf $(ZIP_DIR)/system/etc/audio_effects.conf
-	cp -f other/*.so $(ZIP_DIR)/system/lib/soundfx
 	
 	@echo Add various apps
-	cp other/DSPManager.apk $(ZIP_DIR)/system/app/DSPManager.apk
+#	cp other/DSPManager.apk $(ZIP_DIR)/system/app/DSPManager.apk
 	cp other/MiuiWeather.apk $(ZIP_DIR)/system/app/MiuiWeather.apk
 #	cp other/MusicFX.apk $(ZIP_DIR)/system/app/MusicFX.apk
 #	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
