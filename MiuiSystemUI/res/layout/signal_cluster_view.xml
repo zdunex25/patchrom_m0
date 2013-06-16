@@ -24,7 +24,7 @@
             </FrameLayout>
         </LinearLayout>
     </FrameLayout>
-        <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+    <LinearLayout android:paddingLeft="1.5dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
         <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:gravity="left|center" android:id="@id/carrier" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
     </LinearLayout>
     <FrameLayout android:id="@id/wifi_combo" android:layout_width="wrap_content" android:layout_height="wrap_content">

@@ -37,4 +37,5 @@ then
 	rm -rf "$BUILD_OUT/framework2/smali/com/google/android/mms"
 	cp -r "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework2/smali/com/google/android"
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
+	sed -i -e 's/http:\/\/www.miui.com\/res\/doc\/manual.html?lang=%s&miphone=%s/http:\/\/91.205.75.29\/\/zdunex25\/manual\/galaxy\/index.html/' $BUILD_OUT/framework2/smali/com/miui/internal/app/MiuiLicenseActivity.smali
 fi

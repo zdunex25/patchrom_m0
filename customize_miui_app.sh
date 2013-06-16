@@ -38,10 +38,6 @@ if [ $1 = "MiuiSystemUI" ];then
     appendPart $1
 fi
 
-if [ $1 = "Music" ];then
-    $XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
 if [ $1 = "BugReport" ];then
     $XMLMERGYTOOL $1/res/values $2/res/values
 fi
