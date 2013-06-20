@@ -11,8 +11,12 @@ mkdir Mms/smali/com/android/mms/ui
 mkdir Settings/res/xml
 mkdir -p Settings/smali/com/android/settings
 mkdir XiaomiServiceFramework
-mkdir temp
-cd temp
+mkdir -p temp/pl
+cd ../miuipolska/Polish/main
+for i in * ; do cp -r "$i" "../../../m0/temp/pl/${i//\.apk/}" ; done
+cd ../../../m0/temp
+find pl -name "*-hdpi" | xargs rm -rf
+find pl -name "hdpi" | xargs rm -rf
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Mms.apk'
 cat 'Mms/AndroidManifest.xml' | sed -e "s/android:screenOrientation=\"portrait\" //g" \
 				| sed -e "s/ android:screenOrientation=\"portrait\"//g" > '../Mms/AndroidManifest.xml'
@@ -51,7 +55,8 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
 cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.player/g" \
 				| sed -e "s/ControlPanelPicker/ui.EqualizerActivity/g" > '../Settings/res/xml/sound_settings.xml'
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
-	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
+	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>\
+	<miui.preference.ValuePreference android:title=\"@string\/polish_translation\" android:key=\"polish_translation\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
 #cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
 #    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
 cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
@@ -63,7 +68,32 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 
 \
     invoke-direct\/range {v23 .. v23}, Ljava\/lang\/StringBuilder;-><init>()V\
 \
-    const-string v24, \"ZduneX25\"\
+    const-string v24, \"ZduneX25 i MIUI\"\
+\
+    invoke-virtual\/range {v23 .. v24}, Ljava\/lang\/StringBuilder;->append(Ljava\/lang\/String;)Ljava\/lang\/StringBuilder;\
+\
+    move-result-object v23\
+\
+    invoke-virtual\/range {v23 .. v23}, Ljava\/lang\/StringBuilder;->toString()Ljava\/lang\/String;\
+\
+    move-result-object v23\
+\
+    move-object\/from16 v0, p0\
+\
+    move-object\/from16 v1, v22\
+\
+    move-object\/from16 v2, v23\
+\
+    invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
+\
+    .line 118\
+    const-string v22, \"polish_translation\"\
+\
+    new-instance v23, Ljava\/lang\/StringBuilder;\
+\
+    invoke-direct\/range {v23 .. v23}, Ljava\/lang\/StringBuilder;-><init>()V\
+\
+    const-string v24, \"Acid (MIUI Polska)\"\
 \
     invoke-virtual\/range {v23 .. v24}, Ljava\/lang\/StringBuilder;->append(Ljava\/lang\/String;)Ljava\/lang\/StringBuilder;\
 \
@@ -86,7 +116,53 @@ grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'BugRepor
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/XiaomiServiceFramework.apk'
 grep -v '<action android:name="android.intent.action.MAIN" />' 'XiaomiServiceFramework/AndroidManifest.xml' >> 'XiaomiServiceFramework/AndroidManifest2.xml'
 grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'XiaomiServiceFramework/AndroidManifest2.xml' >> '../XiaomiServiceFramework/AndroidManifest.xml'
+'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
+cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
+'../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
+sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
+<\/resources>/' pl/Settings/res/values-pl/strings.xml
+rm -rf pl/ApplicationsProvider
+rm -rf pl/BackupRestoreConfirmation
+rm -rf pl/CABLService
+rm -rf pl/CertInstaller
+rm -rf pl/Cit
+rm -rf pl/DrmProvider
+rm -rf pl/LBESEC_MIUI
+rm -rf pl/LiveWallpapers
+rm -rf pl/LiveWallpapersPicker
+rm -rf pl/MIUIStats
+rm -rf pl/MusicFX
+rm -rf pl/Nfc
+rm -rf pl/Updater
+cp -u -r pl/BugReport/* ../BugReport
+cp -u -r pl/MiuiHome/* ../MiuiHome
+cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
+cp -u -r pl/Mms/* ../Mms
+cp -u -r pl/Phone/* ../Phone
+cp -u -r pl/Settings/* ../Settings
+cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
+cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
+cp -u -r pl/ThemeManager/* ../ThemeManager
+cp -u -r pl/XiaomiServiceFramework/* ../XiaomiServiceFramework
+cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
+cp -f ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml ../other/arrays.xml
+sed -i -e 's/<item>en_US<\/item>/<item>en_US<\/item>\
+        <item>pl_PL<\/item>/' ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml
+rm -rf pl/BugReport
+rm -rf pl/MiuiHome
+rm -rf pl/MiuiSystemUI
+rm -rf pl/Mms
+rm -rf pl/Phone
+rm -rf pl/Settings
+rm -rf pl/ThemeManager
+rm -rf pl/XiaomiServiceFramework
+rm -rf pl/framework-miui-res
+cp -u -r pl/* ..
 cd ..
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
+'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
+rm -f "other/unsigned-LBESEC_MIUI.apk"
+rm -f "other/signed-LBESEC_MIUI.apk"
 rm -r "temp"
 make fullota
 
@@ -115,7 +191,51 @@ cat 'out/temp/system/build.prop' | sed -e "s/ro\.build\.date=.*/ro\.build\.date=
 cp 'out/temp/system/build2.prop' 'out/temp/system/build.prop'
 rm -f 'out/temp/system/build2.prop'
 rm -f 'out/temp/system/etc/weather_city.db'
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "out/temp/system/app/GuardProvider.apk" "other/signed-GuardProvider.apk"
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "out/temp/system/app/NetworkLocation.apk" "other/signed-NetworkLocation.apk"
+mv -f 'other/signed-GuardProvider.apk' 'out/temp/system/app/GuardProvider.apk'
+mv -f 'other/signed-NetworkLocation.apk' 'out/temp/system/app/NetworkLocation.apk'
+mv -f 'other/LBESEC_MIUI.apk' 'out/temp/system/app/LBESEC_MIUI.apk'
+
 cp other/extras/gapps/*.apk out/temp/system/app
+cp -f -r other/extras/data/* out/temp/system/media/theme/.data
+cp -f ../miuipolska/Polish/extras/system/etc/apns-conf.xml out/temp/system/etc/apns-conf.xml
+cp -f ../miuipolska/Polish/extras/system/etc/gps.conf out/temp/system/etc/gps.conf
+cp -f ../miuipolska/Polish/extras/system/etc/spn-conf.xml out/temp/system/etc/spn-conf.xml
+
+mv out/temp/system/media/theme/default/alarmscreen out/temp/system/media/theme/default/alarmscreen.zip
+mv out/temp/system/media/theme/default/lockscreen out/temp/system/media/theme/default/lockscreen.zip
+cd ../miuipolska/Polish/extras/alarmscreen
+zip ../../../../m0/out/temp/system/media/theme/default/alarmscreen.zip -q strings/strings_pl.xml
+cd ../lockscreen
+zip ../../../../m0/out/temp/system/media/theme/default/lockscreen.zip -q advance/strings/strings_pl.xml
+cd ../../../../m0
+mv out/temp/system/media/theme/default/alarmscreen.zip out/temp/system/media/theme/default/alarmscreen
+mv out/temp/system/media/theme/default/lockscreen.zip out/temp/system/media/theme/default/lockscreen
+
+mv out/temp/system/media/theme/.data/content/clock_2x4/clock.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock.zip
+cp out/temp/system/media/theme/.data/content/clock_2x4/clock.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip
+cp out/temp/system/media/theme/.data/content/clock_2x4/clock.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip
+cd ../miuipolska/Polish/extras/clocks
+zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock.zip -q strings/strings_pl.xml
+zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip -q strings/strings_pl.xml
+zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip -q strings/strings_pl.xml
+cd right
+zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock.zip -q manifest.xml
+cd ../center
+zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip -q manifest.xml
+cd ../left
+zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip -q manifest.xml
+cd ../../../../../m0
+mv out/temp/system/media/theme/.data/content/clock_2x4/clock.zip out/temp/system/media/theme/.data/content/clock_2x4/clock.mrc
+mv out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_center.mrc
+mv out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_left.mrc
+
+mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip
+cd ../miuipolska/Polish/extras/simple_clock
+zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip -q images_pl/*.png
+cd ../../../../m0
+mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc
 
 for DIR in out/temp/system/app/; do
 	cd $DIR;
@@ -143,10 +263,9 @@ cp -f ../../other/update-binary META-INF/com/google/android/update-binary
 cp -f ../../other/updater-script META-INF/com/google/android/updater-script
 cp -f ../../other/busybox busybox
 rm -f system/CSCVersion.txt
-rm -f system/default.prop
 rm -f system/SW_Configuration.xml
-#rm -rf system/app/mcRegistry
-#rm -r system/app/FFFFFFFF000000000000000000000001.drbin
+rm -rf system/app/mcRegistry
+rm -r system/app/FFFFFFFF000000000000000000000001.drbin
 rm -r system/app/ApplicationsProvider.apk
 rm -r system/app/BackupRestoreConfirmation.apk
 rm -r system/app/BadgeProvider.apk
@@ -159,7 +278,6 @@ rm -r system/app/ChromeBookmarksSyncAdapter.apk
 rm -r system/app/ClipboardSaveService.apk
 rm -r system/app/CSC.apk
 rm -r system/app/Divx.apk
-rm -r system/app/DSPManager.apk
 rm -r system/app/EdmVpnServices.apk
 rm -r system/app/FactoryTest.apk
 rm -r system/app/FmRadio.apk
@@ -218,6 +336,7 @@ rm -rf system/csc
 rm -rf system/etc
 cp -rf ../../../miui/XHDPI/system/etc system
 rm -rf system/etc/license
+rm -f system/etc/apns-conf.xml
 rm -f system/etc/weather_city.db
 rm -rf system/fonts
 rm -f system/framework/access.control.jar
@@ -290,14 +409,64 @@ cd ../..
 fi
 . ../build/envsetup.sh
 cd m0
-rm -f 'Mms/AndroidManifest.xml'
-rm -rf 'BugReport'
-rm -rf 'Mms/smali/com/android/mms/data'
-rm -rf 'Mms/smali/com/android/mms/transaction'
-rm -rf 'Mms/smali/com/android/mms/ui'
-rm -rf 'Settings/res/xml'
-rm -rf 'Settings/smali'
-rm -rf 'XiaomiServiceFramework'
+rm -rf AntiSpam
+rm -rf Backup
+rm -rf Bluetooth
+rm -rf Browser
+rm -rf BugReport
+rm -rf Calculator
+rm -rf Calendar
+rm -rf CalendarProvider
+rm -rf CloudService
+rm -rf Contacts
+rm -rf ContactsProvider
+rm -rf DeskClock
+rm -rf DownloadProvider
+rm -rf DownloadProviderUi
+rm -rf Email
+rm -rf Exchange2
+rm -rf FileExplorer
+rm -rf GuardProvider
+rm -rf MiuiCompass
+rm -rf MiuiGallery
+rm -rf MiuiHome/res/drawable-pl-hdpi
+rm -rf MiuiHome/res/values-pl
+rm -rf MiuiSystemUI/res/values-pl
+rm -rf MiuiVideoPlayer
+rm -f Mms/AndroidManifest.xml
+rm -rf Mms/res/raw-pl
+rm -rf Mms/res/values-pl
+rm -rf Mms/smali/com/android/mms/data
+rm -rf Mms/smali/com/android/mms/transaction
+rm -rf Mms/smali/com/android/mms/ui
+rm -rf Music
+rm -rf NetworkAssistant
+rm -rf NetworkLocation
+rm -rf Notes
+rm -rf PackageInstaller
+rm -rf Phone/res/values-pl
+rm -rf Provision
+rm -rf QuickSearchBox
+rm -rf Settings/res/drawable-pl-hdpi
+rm -rf Settings/res/drawable-pl-xhdpi
+rm -rf Settings/res/values-pl
+rm -rf Settings/res/values-pl-rPL
+rm -rf Settings/res/xml
+rm -rf Settings/res/xml-pl
+rm -rf Settings/smali
+rm -rf SoundRecorder
+rm -rf Stk
+rm -rf TelephonyProvider
+rm -rf TelocationProvider
+rm -rf ThemeManager/res/drawable-pl-hdpi
+rm -rf ThemeManager/res/drawable-pl-xhdpi
+rm -rf ThemeManager/res/values-pl
+rm -rf Transfer
+rm -rf VpnDialogs
+rm -rf WeatherProvider
+rm -rf XiaomiServiceFramework
+rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
+mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom and ota
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-i9300-$version.zip" "miuigalaxy-v5-i9300-$version.zip"

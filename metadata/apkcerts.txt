@@ -92,7 +92,7 @@ name="MtpApplication.apk" certificate="build/target/product/security/platform.x5
 name="MusicFX.apk" certificate="PRESIGNED" private_key=""
 name="MusicPlayer.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="MyFiles.apk" certificate="PRESIGNED" private_key=""
-name="NetworkLocation.apk" certificate="PRESIGNED" private_key=""
+name="NetworkLocation.apk" certificate="build/target/product/security/testkey.x509.pem" private_key="build/target/product/security/testkey.pk8"
 name="Nfc.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="NfcTest.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="NoiseField.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="musicfx_title">Music equalizer</string>
-    <string name="build_author">Build author</string>
+    <string name="build_author">Built by</string>
+    <string name="polish_translation">Polish by</string>
     <string name="header_category_galaxy">GALAXY</string>
     <string name="carrier_settings">Carrier name</string>
     <string name="galaxy_settings">Galaxy settings</string>

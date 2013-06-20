@@ -12,14 +12,18 @@ local-out-zip-file := MIUI_i9300.zip
 local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera FmRadio MiuiUpdater SPN OSB OriginalSettings
+local-modified-apps := Camera FmRadio MiuiUpdater OriginalSettings OSB SPN
 
 local-modified-jars :=
 
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider SuperMarket Updater Weather
 
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager MiuiSystemUI BugReport XiaomiServiceFramework
+local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer GuardProvider \
+			MiuiCompass MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant NetworkLocation \
+			Notes PackageInstaller Phone Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider \
+			TelocationProvider ThemeManager Transfer VpnDialogs WeatherProvider XiaomiServiceFramework
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -44,11 +48,11 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
-	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+#	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
-	cp other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
+	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app

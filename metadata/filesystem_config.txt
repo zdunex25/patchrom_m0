@@ -2156,6 +2156,7 @@ system/wakeupdata/sensory/nn_fr_mfcc_16k_15_big_250_v2_2.raw 0 0 644
 system/wakeupdata/sensory/nn_it_mfcc_16k_15_big_250_v3_2.raw 0 0 644
 system/wakeupdata/sensory/nn_ko_mfcc_16k_15_big_250_v2_1.raw 0 0 644
 system/xbin 0 2000 755
+system/xbin/bash 0 2000 755
 system/xbin/busybox 0 0 6755
 system/xbin/dexdump 0 2000 755
 system/xbin/insecure 0 1000 6750
