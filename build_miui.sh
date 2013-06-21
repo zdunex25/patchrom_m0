@@ -177,9 +177,9 @@ then
 unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
-grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
-cp -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
-rm -f 'out/temp/META-INF/com/google/android/updater-script2'
+#grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
+#cp -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
+#rm -f 'out/temp/META-INF/com/google/android/updater-script2'
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -264,7 +264,7 @@ cd 'out/temp'
 rm -r 'META-INF/CERT.RSA'
 rm -r 'META-INF/CERT.SF'
 rm -r 'META-INF/MANIFEST.MF'
-zip -q -r "../../unsigned-miuigalaxy-v5-i9300-$version.zip" 'data' 'META-INF' 'system'
+zip -q -r "../../unsigned-miuigalaxy-v5-i9300-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
 cp -f ../../other/update-binary META-INF/com/google/android/update-binary
 cp -f ../../other/updater-script META-INF/com/google/android/updater-script
 cp -f ../../other/busybox busybox
