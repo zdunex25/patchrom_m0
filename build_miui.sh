@@ -110,6 +110,10 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 
     move-object\/from16 v2, v23\
 \
     invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/' > '../Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali'
+
+#'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Bluetooth.apk'
+#cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/\"@android:style\/Theme.Holo.Dialog\"/\"@miui:style\/V5.Theme.Light.Dialog\"/g" \
+#				| sed -e "s/\"@android:style\/Theme.Holo.Dialog.Alert\"/\"@miui:style\/V5.Theme.Light.Dialog.Alert\"/g" > '../Bluetooth/AndroidManifest.xml'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/BugReport.apk'
 grep -v '<action android:name="android.intent.action.MAIN" />' 'BugReport/AndroidManifest.xml' >> 'BugReport/AndroidManifest2.xml'
 grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'BugReport/AndroidManifest2.xml' >> '../BugReport/AndroidManifest.xml'
@@ -134,6 +138,7 @@ rm -rf pl/MIUIStats
 rm -rf pl/MusicFX
 rm -rf pl/Nfc
 rm -rf pl/Updater
+cp -u -r pl/Bluetooth/* ../Bluetooth
 cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
@@ -148,6 +153,7 @@ cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml ../other/arrays.xml
 sed -i -e 's/<item>en_US<\/item>/<item>en_US<\/item>\
         <item>pl_PL<\/item>/' ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml
+rm -rf pl/Bluetooth
 rm -rf pl/BugReport
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -411,7 +417,8 @@ fi
 cd m0
 rm -rf AntiSpam
 rm -rf Backup
-rm -rf Bluetooth
+#rm -f Bluetooth/AndroidManifest.xml
+rm -rf Bluetooth/res/values-pl
 rm -rf Browser
 rm -rf BugReport
 rm -rf Calculator
