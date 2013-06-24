@@ -108,17 +108,29 @@ ro.miui.ui.version.code=3
 #
 # VARIOUS TWEAKS
 #
+# Increase camera's photo and video recording quality
 ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
-ro.media.enc.hprof.vid.fps=25
+
+# Reduce dial-out time
 ro.telephony.call_ring.delay=0
+ring.delay=0
+
+# Saves some battery without reducing performances
 ro.ril.disable.power.collapse=0
 ro.ril.fast.dormancy.rule=0
-ring.delay=0
 pm.sleep_mode=1
+
+# Disable error reporting and logging
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+
+# Google DNS
 net.rmnet0.dns1=8.8.8.8
 net.rmnet0.dns2=8.8.4.4
 net.ppp0.dns1=8.8.8.8
 net.ppp0.dns2=8.8.4.4
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
+

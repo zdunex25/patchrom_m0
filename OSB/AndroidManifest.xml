@@ -2,7 +2,7 @@
 <manifest android:versionCode="1" android:versionName="1.2" package="com.miui.osb"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="10" />
-    <application android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:debuggable="true">
+    <application android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/info1" android:icon="@drawable/ic_launcher" android:debuggable="true">
         <activity android:label="@string/info2" android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

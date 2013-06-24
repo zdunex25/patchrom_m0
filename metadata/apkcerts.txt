@@ -196,6 +196,7 @@ name="VoiceRecorder.apk" certificate="build/target/product/security/platform.x50
 name="VoiceSearchStub.apk" certificate="PRESIGNED" private_key=""
 name="voicetalk.apk" certificate="PRESIGNED" private_key=""
 name="VpnDialogs.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="VFX.apk" certificate="build/target/product/security/testkey.x509.pem" private_key="build/target/product/security/testkey.pk8"
 name="WAPPushManager.apk" certificate="PRESIGNED" private_key=""
 name="WeatherWall.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="WebManual.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"

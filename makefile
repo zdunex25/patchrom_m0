@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9300.zip
 local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera FmRadio MiuiUpdater OriginalSettings OSB SPN
+local-modified-apps := Camera FmRadio MiuiUpdater OriginalSettings OSB SPN VFX
 
 local-modified-jars :=
 

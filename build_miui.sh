@@ -44,7 +44,10 @@ cat 'Mms/smali/com/android/mms/ui/MessageEditableActivityBase.smali' | sed -e 's
     invoke-static {v0, v1}, Landroid\/telephony\/SmsMessage;->calculateLength(Ljava\/lang\/CharSequence;Z)\[I/' > '../Mms/smali/com/android/mms/ui/MessageEditableActivityBase.smali'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Settings.apk'
 cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id\/manufacturer_settings\">/<header android:title=\"@string\/header_category_galaxy\" \/>/g" \
-					| sed -e 's/    <intent android:action=\"com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>/<header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
+					| sed -e 's/    <intent android:action=\"com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>/<header android:icon=\"@drawable\/ic_ringer_volume_settings\" android:title=\"@string\/viper_settings\">\
+        <intent android:action="com.android.settings.VIPER\" \/>\
+    <\/header>\
+    <header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
         <intent android:action="com.android.settings.CARRIER\" \/>\
     <\/header>\
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
@@ -110,10 +113,6 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 
     move-object\/from16 v2, v23\
 \
     invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/' > '../Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali'
-
-#'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Bluetooth.apk'
-#cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/\"@android:style\/Theme.Holo.Dialog\"/\"@miui:style\/V5.Theme.Light.Dialog\"/g" \
-#				| sed -e "s/\"@android:style\/Theme.Holo.Dialog.Alert\"/\"@miui:style\/V5.Theme.Light.Dialog.Alert\"/g" > '../Bluetooth/AndroidManifest.xml'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/BugReport.apk'
 grep -v '<action android:name="android.intent.action.MAIN" />' 'BugReport/AndroidManifest.xml' >> 'BugReport/AndroidManifest2.xml'
 grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'BugReport/AndroidManifest2.xml' >> '../BugReport/AndroidManifest.xml'
@@ -123,8 +122,6 @@ grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'XiaomiSe
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
-sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
-<\/resources>/' pl/Settings/res/values-pl/strings.xml
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
@@ -143,7 +140,11 @@ cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms
+sed -i -e 's/\"no_effect\">Płaski/\"no_effect\">ViPER FX/' pl/Music/res/values-pl/strings.xml
+cp -u -r pl/Music/* ../Music
 cp -u -r pl/Phone/* ../Phone
+sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
+<\/resources>/' pl/Settings/res/values-pl/strings.xml
 cp -u -r pl/Settings/* ../Settings
 cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
@@ -158,6 +159,7 @@ rm -rf pl/BugReport
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
 rm -rf pl/Mms
+rm -rf pl/Music
 rm -rf pl/Phone
 rm -rf pl/Settings
 rm -rf pl/ThemeManager
@@ -177,9 +179,9 @@ then
 unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
-#grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
-#cp -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
-#rm -f 'out/temp/META-INF/com/google/android/updater-script2'
+grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
+cp -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
+rm -f 'out/temp/META-INF/com/google/android/updater-script2'
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -264,10 +266,11 @@ cd 'out/temp'
 rm -r 'META-INF/CERT.RSA'
 rm -r 'META-INF/CERT.SF'
 rm -r 'META-INF/MANIFEST.MF'
-zip -q -r "../../unsigned-miuigalaxy-v5-i9300-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-i9300-$version.zip" 'data' 'META-INF' 'system'
 cp -f ../../other/update-binary META-INF/com/google/android/update-binary
 cp -f ../../other/updater-script META-INF/com/google/android/updater-script
 cp -f ../../other/busybox busybox
+rm -r META-INF/com/android
 rm -f system/CSCVersion.txt
 rm -f system/SW_Configuration.xml
 rm -rf system/app/mcRegistry
@@ -331,6 +334,7 @@ rm -r system/app/Talkback.apk
 rm -r system/app/UserDictionaryProvider.apk
 rm -r system/app/Velvet.apk
 rm -r system/app/VoiceSearchStub.apk
+#rm -r system/app/VFX.apk
 rm -r system/app/WAPPushManager.apk
 rm -r system/app/WlanTest.apk
 rm -r system/app/wssyncmlnps.apk
@@ -417,7 +421,6 @@ fi
 cd m0
 rm -rf AntiSpam
 rm -rf Backup
-#rm -f Bluetooth/AndroidManifest.xml
 rm -rf Bluetooth/res/values-pl
 rm -rf Browser
 rm -rf BugReport
@@ -446,7 +449,8 @@ rm -rf Mms/res/values-pl
 rm -rf Mms/smali/com/android/mms/data
 rm -rf Mms/smali/com/android/mms/transaction
 rm -rf Mms/smali/com/android/mms/ui
-rm -rf Music
+rm -rf Music/res/drawable-pl-xhdpi
+rm -rf Music/res/values-pl
 rm -rf NetworkAssistant
 rm -rf NetworkLocation
 rm -rf Notes
@@ -475,9 +479,10 @@ rm -rf XiaomiServiceFramework
 rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
 mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
-echo Signing rom and ota
+echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-i9300-$version.zip" "miuigalaxy-v5-i9300-$version.zip"
 rm -r "unsigned-miuigalaxy-v5-i9300-$version.zip"
+echo Signing ota
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip" "miuigalaxy-v5-i9300-ota-to-$version.zip"
 rm -r "unsigned-miuigalaxy-v5-i9300-ota-to-$version.zip"
 echo -e "MD5 sums are\n"
