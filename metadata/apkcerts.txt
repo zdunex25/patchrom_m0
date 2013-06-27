@@ -84,7 +84,6 @@ name="LuminousDots.apk" certificate="build/target/product/security/shared.x509.p
 name="MediaUploader.apk" certificate="PRESIGNED" private_key=""
 name="minimode-res.apk" certificate="PRESIGNED" private_key=""
 name="MiuiUpdater.apk" certificate="build/target/product/security/testkey.x509.pem" private_key="build/target/product/security/testkey.pk8"
-name="MiuiWeather.apk" certificate="PRESIGNED" private_key=""
 name="MobilePrint.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="MobileTrackerEngineTwo.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="MoreServices.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"

@@ -18,7 +18,7 @@
                 <com.android.systemui.statusbar.StatusBarIconView android:id="@id/moreIcon" android:visibility="gone" android:layout_width="@dimen/status_bar_icon_size" android:layout_height="fill_parent" android:src="@drawable/stat_notify_more" />
             </LinearLayout>
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/statusIcons" android:layout_width="wrap_content" android:layout_height="fill_parent" />
-            <com.android.systemui.statusbar.phone.IconMerger android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/notificationIcons" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <com.android.systemui.statusbar.phone.IconMerger android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/notificationIcons" android:paddingTop="1.0px" android:layout_width="wrap_content" android:layout_height="fill_parent" />
             <com.android.systemui.statusbar.phone.BatteryStatusIconView android:id="@id/battery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>

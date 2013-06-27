@@ -51,17 +51,12 @@ local-pre-zip-misc:
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
+	cp -f other/dynamic_icons.mtz $(ZIP_DIR)/system/media/theme
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
-	
-	@echo Add various apps
-#	cp other/DSPManager.apk $(ZIP_DIR)/system/app/DSPManager.apk
-	cp other/MiuiWeather.apk $(ZIP_DIR)/system/app/MiuiWeather.apk
-#	cp other/MusicFX.apk $(ZIP_DIR)/system/app/MusicFX.apk
-#	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

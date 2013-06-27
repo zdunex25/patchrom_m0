@@ -67,6 +67,10 @@ private-phone-apps2 :=  AllshareDMC \
 						EdmVpnServices \
 						EnterprisePermissions \
 						FaceLock \
+						Gmail \
+						GmsCore \
+						GMS_Maps \
+						GoogleTTS \
 						Hearingdro \
 						INDI_Server \
 						JobManager \
@@ -78,13 +82,19 @@ private-phone-apps2 :=  AllshareDMC \
 						PanningTryActually \
 						PCWClientS \
 						PhaseBeam \
+						Phonesky \
 						PRUI \
 					 	SamsungTTS \
 						SecurityProvider \
 						ShaoNv \
+						Talk \
+						talkback \
 						TwDVFSApp \
+						Velvet \
+						VoiceSearchStub \
 						VpnDialogs \
 						WfdBroker \
+						YouTube \
 						BluetoothAvrcp \
 						BluetoothMap \
 						BluetoothTest
