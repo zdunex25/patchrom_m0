@@ -292,7 +292,7 @@ rm -rf FileExplorer
 rm -rf GuardProvider
 rm -rf MiuiCompass
 rm -rf MiuiGallery
-rm -rf MiuiHome/res/drawable-pl-hdpi
+rm -rf MiuiHome/res/drawable-pl-xhdpi
 rm -rf MiuiHome/res/values-pl
 rm -rf MiuiSystemUI/res/values-pl
 rm -rf MiuiVideoPlayer
