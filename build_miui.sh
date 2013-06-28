@@ -188,6 +188,11 @@ version=$z$y
 time=`date +%c`
 utc=`date +%s`
 ota=`date +%Y%m%d-%H%M`
+md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
+size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`
+data=`date +%-d/%-m/%Y`
+LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
+
 sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" out/temp/system/build.prop
@@ -334,6 +339,7 @@ make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
 rm -r "unsigned-miuigalaxy-v5-sgs3-$version.zip"
-echo -e "MD5 sums is\n"
-md5sum -b "miuigalaxy-v5-sgs3-$version.zip"
+echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Zdancewicza" status="" link="'$LINK_PL'" rozmiar="'$size'" rodzaj="pelna"]
+    
+    ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
