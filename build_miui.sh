@@ -144,6 +144,8 @@ sed -i -e 's/\"no_effect\">Płaski/\"no_effect\">ViPER FX/' pl/Music/res/values-
 cp -u -r pl/Music/* ../Music
 cp -u -r pl/Phone/* ../Phone
 sed -i -e 's/>Efekty muzyczne/>Equalizer MIUI/' pl/Settings/res/values-pl/strings.xml
+sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
+sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
 <\/resources>/' pl/Settings/res/values-pl/strings.xml
 cp -u -r pl/Settings/* ../Settings
@@ -168,11 +170,7 @@ rm -rf pl/XiaomiServiceFramework
 rm -rf pl/framework-miui-res
 cp -u -r pl/* ..
 cd ..
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
-'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
-rm -f "other/unsigned-LBESEC_MIUI.apk"
-rm -f "other/signed-LBESEC_MIUI.apk"
-rm -r "temp"
+rm -r temp
 make fullota
 
 if [ -f "out/fullota.zip" ];
@@ -181,8 +179,7 @@ unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
 grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
-cp -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
-rm -f 'out/temp/META-INF/com/google/android/updater-script2'
+mv -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -191,20 +188,22 @@ version=$z$y
 time=`date +%c`
 utc=`date +%s`
 ota=`date +%Y%m%d-%H%M`
-cat 'out/temp/system/build.prop' | sed -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" \
-				| sed -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" \
-				| sed -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" \
-				| sed -e "s/updater\.time=.*/updater\.time=$ota/g" \
-				| sed -e "s/updater\.ver=.*/updater\.ver=$version/g" \
-				| sed -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=sgs3/g" > 'out/temp/system/build2.prop'
-cp 'out/temp/system/build2.prop' 'out/temp/system/build.prop'
-rm -f 'out/temp/system/build2.prop'
-rm -f 'out/temp/system/etc/weather_city.db'
+sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
+sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
+sed -i -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" out/temp/system/build.prop
+sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
+sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
+sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/temp/system/build.prop
+rm -f out/temp/system/etc/weather_city.db
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "out/temp/system/app/GuardProvider.apk" "other/signed-GuardProvider.apk"
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "out/temp/system/app/NetworkLocation.apk" "other/signed-NetworkLocation.apk"
-mv -f 'other/signed-GuardProvider.apk' 'out/temp/system/app/GuardProvider.apk'
-mv -f 'other/signed-NetworkLocation.apk' 'out/temp/system/app/NetworkLocation.apk'
-mv -f 'other/LBESEC_MIUI.apk' 'out/temp/system/app/LBESEC_MIUI.apk'
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
+'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
+mv -f other/signed-GuardProvider.apk out/temp/system/app/GuardProvider.apk
+mv -f other/signed-NetworkLocation.apk out/temp/system/app/NetworkLocation.apk
+mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
+rm -f other/unsigned-LBESEC_MIUI.apk
+rm -f other/signed-LBESEC_MIUI.apk
 
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
@@ -263,11 +262,11 @@ for DIR in out/temp/system/app/; do
 	cd ../../../..
 done;
 
-cd 'out/temp'
-rm -r 'META-INF/CERT.RSA'
-rm -r 'META-INF/CERT.SF'
-rm -r 'META-INF/MANIFEST.MF'
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system'
+cd out/temp
+rm META-INF/CERT.RSA
+rm META-INF/CERT.SF
+rm META-INF/MANIFEST.MF
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
@@ -335,10 +334,6 @@ make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
 rm -r "unsigned-miuigalaxy-v5-sgs3-$version.zip"
-#echo Signing ota
-#java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-ota-to-$version.zip" "miuigalaxy-v5-sgs3-ota-to-$version.zip"
-#rm -r "unsigned-miuigalaxy-v5-sgs3-ota-to-$version.zip"
 echo -e "MD5 sums is\n"
 md5sum -b "miuigalaxy-v5-sgs3-$version.zip"
-#md5sum -b "miuigalaxy-v5-sgs3-ota-to-$version.zip"
 read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
