@@ -51,7 +51,7 @@ local-pre-zip-misc:
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
-	cp -f other/dynamic_icons.mtz $(ZIP_DIR)/system/media/theme
+#	cp -f other/dynamic_icons.mtz $(ZIP_DIR)/system/media/theme
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
@@ -67,13 +67,7 @@ local-pre-zip-misc:
 	
 	@echo Remove usless stuff
 	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
-#	rm -rf $(ZIP_DIR)/system/csc
-#	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.android.maps.xml
-#	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.android.media.effects.xml
-#	rm -f $(ZIP_DIR)/system/etc/permissions/com.google.widevine.software.drm.xml
-#	rm -f $(ZIP_DIR)/system/framework/com.google.android.maps.jar
-#	rm -f $(ZIP_DIR)/system/framework/com.google.android.media.effects.jar
-#	rm -f $(ZIP_DIR)/system/framework/com.google.widevine.software.drm.jar
+	rm -rf $(ZIP_DIR)/system/csc
 	rm -rf $(ZIP_DIR)/system/tts/lang_SMT
 	rm -rf $(ZIP_DIR)/system/tts/lang_SVOX
 #	rm -rf $(ZIP_DIR)/system/usr/srec/en-US

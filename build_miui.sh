@@ -178,8 +178,8 @@ then
 unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
-#grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
-#mv -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
+grep -v 'package_extract_file("boot.img", "/dev/block/mmcblk0p5");' 'out/temp/META-INF/com/google/android/updater-script' >> 'out/temp/META-INF/com/google/android/updater-script2'
+mv -f 'out/temp/META-INF/com/google/android/updater-script2' 'out/temp/META-INF/com/google/android/updater-script'
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -267,7 +267,7 @@ cd out/temp
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
@@ -340,7 +340,9 @@ md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
 size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
 LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Zdancewicza" status="" link="'$LINK_PL'" rozmiar="'$size'" rodzaj="pelna"]
+MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version.zip"
+MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version.zip"
+echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Zdancewicza" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
