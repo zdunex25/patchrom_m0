@@ -236,6 +236,21 @@
 
     move-result-object v7
 
+    if-eqz p2, :cond_2xx
+
+    const/16 v9, 0xb
+
+    const/4 v10, 0x0
+
+    const v2, 0x10
+
+    invoke-virtual {v7, v9, v2, v10}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_2xx
     const/16 v9, 0xa
 
     invoke-virtual {v7, v9}, Landroid/os/Handler;->removeMessages(I)V
