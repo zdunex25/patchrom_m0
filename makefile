@@ -20,10 +20,10 @@ local-modified-jars :=
 local-miui-removed-apps := MediaProvider SuperMarket Updater Weather
 
 local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer GuardProvider \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer \
 			MiuiCompass MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant NetworkLocation \
 			Notes PackageInstaller Phone Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider \
-			TelocationProvider ThemeManager Transfer VpnDialogs WeatherProvider XiaomiServiceFramework
+			ThemeManager Transfer VpnDialogs WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch

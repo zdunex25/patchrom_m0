@@ -58,7 +58,7 @@ set_perm(0, 2000, 0755, "/system/vendor/lib");
 set_perm_recursive(0, 2000, 0755, 0644, "/system/vendor/lib/drm");
 set_perm(0, 0, 0644, "/system/vendor/lib/drm/libdrmwvmplugin.so");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin");
-ui_print("Finishing installation...");
+ui_print("Update Boot image...");
 show_progress(0.200000, 0);
 show_progress(0.200000, 10);
 package_extract_file("boot.img", "/dev/block/mmcblk0p5");

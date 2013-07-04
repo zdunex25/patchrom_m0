@@ -1,0 +1,3 @@
+#!/system/xbin/busybox sh
+touch /data/local/tmp/init.d_log_test.txt
+echo "done" >> /data/local/tmp/init.d_log_test.txt

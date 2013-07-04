@@ -1,0 +1,17 @@
+ui_print("OTA UPDATE");
+ui_print("Updating system files...");
+show_progress(0.500000, 0);
+package_extract_file("busybox", "/tmp/busybox");
+set_perm_recursive(0, 0, 0775, 0775, "/tmp");
+run_program("/tmp/busybox", "mount", "/system");
+show_progress(0.400000, 0);
+package_extract_dir("system", "/system");
+show_progress(0.300000, 0);
+ui_print("Set permission...");
+show_progress(0.200000, 0);
+set_perm_recursive(0, 0, 0755, 0644, "/system/app");
+set_perm_recursive(0, 0, 0755, 0644, "/system/framework");
+set_perm(0, 0, 0644, "/system/build.prop");
+ui_print("Finishing installation...");
+show_progress(0.100000, 0);
+run_program("/tmp/busybox", "umount", "/system");

@@ -88,10 +88,6 @@ if [ $1 = "FileExplorer" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
-if [ $1 = "GuardProvider" ];then
-	$XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
 if [ $1 = "MiuiCompass" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
@@ -166,10 +162,6 @@ if [ $1 = "TelephonyProvider" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
-if [ $1 = "TelocationProvider" ];then
-	$XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
 if [ $1 = "ThemeManager" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
@@ -187,5 +179,9 @@ if [ $1 = "WeatherProvider" ];then
 fi
 
 if [ $1 = "XiaomiServiceFramework" ];then
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
+if [ $1 = "YellowPage" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
