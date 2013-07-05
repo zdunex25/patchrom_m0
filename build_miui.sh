@@ -134,6 +134,7 @@ rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/MIUIStats
 rm -rf pl/MusicFX
+rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
 rm -rf pl/TelocationProvider
 rm -rf pl/Updater
@@ -305,7 +306,6 @@ rm -rf Mms/res/values-pl
 rm -rf Music/res/drawable-pl-xhdpi
 rm -rf Music/res/values-pl
 rm -rf NetworkAssistant
-rm -rf NetworkLocation
 rm -rf Notes
 rm -rf PackageInstaller
 rm -rf Phone/res/values-pl

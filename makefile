@@ -21,7 +21,7 @@ local-miui-removed-apps := MediaProvider SuperMarket Updater Weather
 
 local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer \
-			MiuiCompass MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant NetworkLocation \
+			MiuiCompass MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant \
 			Notes PackageInstaller Phone Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider \
 			ThemeManager Transfer VpnDialogs WeatherProvider XiaomiServiceFramework YellowPage
 

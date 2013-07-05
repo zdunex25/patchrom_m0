@@ -122,10 +122,6 @@ if [ $1 = "NetworkAssistant" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
-if [ $1 = "NetworkLocation" ];then
-	$XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
 if [ $1 = "Notes" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
