@@ -183,7 +183,7 @@ echo -e "\nPreparing flashable zips.."
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
 sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
-package_extract_file(\"boot.img\", \"/dev/block/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
+package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
