@@ -200,10 +200,8 @@ sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
 sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
 sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/temp/system/build.prop
 rm -f out/temp/system/etc/weather_city.db
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "out/temp/system/app/NetworkLocation.apk" "other/signed-NetworkLocation.apk"
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
-mv -f other/signed-NetworkLocation.apk out/temp/system/app/NetworkLocation.apk
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
 rm -f other/unsigned-LBESEC_MIUI.apk
 rm -f other/signed-LBESEC_MIUI.apk
