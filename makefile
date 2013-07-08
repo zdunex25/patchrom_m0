@@ -20,10 +20,10 @@ local-modified-jars :=
 local-miui-removed-apps := MediaProvider SuperMarket Updater Weather
 
 local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer \
-			MiuiCompass MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant \
-			Notes PackageInstaller Phone Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider \
-			ThemeManager Transfer VpnDialogs WeatherProvider XiaomiServiceFramework YellowPage
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
+			MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer Mms Music NetworkAssistant Notes PackageInstaller Phone \
+			Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider ThemeManager Transfer VpnDialogs \
+			WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -51,7 +51,6 @@ local-pre-zip-misc:
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	
 	@echo Add missing stuff
-#	cp -f other/dynamic_icons.mtz $(ZIP_DIR)/system/media/theme
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper

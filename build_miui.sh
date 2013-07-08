@@ -205,6 +205,9 @@ java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "othe
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
 rm -f other/unsigned-LBESEC_MIUI.apk
 rm -f other/signed-LBESEC_MIUI.apk
+mkdir out/temp/system/usr/extras
+cp -f ../miui/XHDPI/system/app/MiuiSystemUI.apk out/temp/system/usr/extras/MiuiSystemUI.apk
+cp -f other/statusbar.sh out/temp/system/bin/statusbar.sh
 
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
@@ -330,20 +333,20 @@ rm -rf YellowPage
 rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
 mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
-echo Signing rom
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
-rm -r unsigned-miuigalaxy-v5-sgs3-$version.zip
+#echo Signing rom
+#java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
+#rm -r unsigned-miuigalaxy-v5-sgs3-$version.zip
 #java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-ota-to-$version.zip" "miuigalaxy-v5-sgs3-ota-to-$version.zip"
 #rm -r unsigned-miuigalaxy-v5-sgs3-ota-to-$version.zip
 #md5sum -b "miuigalaxy-v5-sgs3-ota-to-$version.zip"
 
-md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
-size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`
-data=`date +%-d/%-m/%Y`
-LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
-MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version.zip"
-MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Zdancewicza" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
-    
-    ' > download_v5.txt
+#md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
+#size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`
+#data=`date +%-d/%-m/%Y`
+#LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
+#MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version.zip"
+#MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version.zip"
+#echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Zdancewicza" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
+#    
+#    ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
