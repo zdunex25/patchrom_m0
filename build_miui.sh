@@ -307,6 +307,7 @@ rm -r system/app/LogsProvider.apk
 rm -r system/app/Maps.apk
 rm -r system/app/MediaUploader.apk
 rm -r system/app/minimode-res.apk
+rm -r system/app/MiuiUpdater.apk
 rm -r system/app/MtpApplication.apk
 rm -r system/app/MusicFX.apk
 rm -r system/app/Nfc.apk
@@ -343,10 +344,10 @@ rm -r system/app/YouTube.apk
 rm -rf system/bin
 rm -rf system/cameradata
 rm -rf system/etc
-cp -rf ../../../miui/XHDPI/system/etc system
-rm -rf system/etc/license
-rm -f system/etc/apns-conf.xml
-rm -f system/etc/weather_city.db
+#cp -rf ../../../miui/XHDPI/system/etc system
+#rm -rf system/etc/license
+#rm -f system/etc/apns-conf.xml
+#rm -f system/etc/weather_city.db
 rm -rf system/fonts
 rm -f system/framework/access.control.jar
 rm -f system/framework/allshare.jar
@@ -402,8 +403,9 @@ rm -rf system/media/video
 rm -f system/media/*.emd
 rm -f system/media/*.qmg
 rm -f system/media/*.zip
+rm -rf system/media/theme/.data
 rm -rf system/media/theme/miui_mod_icons
-rm -f system/media/theme/simple_lockscreen.mtz
+rm -f system/media/theme/*.mtz
 rm -rf system/T9DB
 rm -rf system/tts
 rm -rf system/usr
