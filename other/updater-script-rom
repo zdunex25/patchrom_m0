@@ -1,13 +1,15 @@
 assert(getprop("ro.product.device") == "m0" ||
        getprop("ro.build.product") == "m0" || getprop("ro.product.device") == "galaxys3" || getprop("ro.build.product") == "galaxys3");
+ui_print(" ");
+ui_print("MIUI GALAXY od Z25");
 show_progress(0.500000, 0);
-ui_print("Formatting system...");
+ui_print("Formatowanie systemu...");
 unmount("/system");
 format("ext4", "EMMC", "/dev/block/mmcblk0p9", "0");
-ui_print("Installing system files...");
+ui_print("Instalowanie plikow...");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p9", "/system");
 package_extract_dir("system", "/system");
-ui_print("Creating system links...");
+ui_print("Tworzenie symlinkow...");
 symlink("/system/bin/mksh", "/system/bin/sh");
 symlink("/system/bin/toolbox", "/system/bin/cat", "/system/bin/chmod",
         "/system/bin/chown", "/system/bin/cmp", "/system/bin/date",
@@ -104,7 +106,7 @@ symlink("/system/xbin/busybox", "/system/xbin/[", "/system/xbin/[[",
         "/system/xbin/which", "/system/xbin/whoami", "/system/xbin/xargs",
         "/system/xbin/xz", "/system/xbin/xzcat", "/system/xbin/yes",
         "/system/xbin/zcat");
-ui_print("Set permission...");
+ui_print("Ustawianie uprawnien...");
 set_perm_recursive(0, 0, 0755, 0644, "/system");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
 set_perm(0, 3003, 02750, "/system/bin/netcfg");
@@ -136,7 +138,7 @@ set_perm(0, 0, 06755, "/system/xbin/busybox");
 set_perm(0, 2000, 0755, "/system/xbin/dexdump");
 set_perm(0, 1000, 06750, "/system/xbin/shelld");
 set_perm(0, 0, 06755, "/system/xbin/su");
-ui_print("Update Boot image...");
+ui_print("Konczenie instalacji...");
 show_progress(0.200000, 0);
 show_progress(0.200000, 10);
 show_progress(0.100000, 0);

@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9300.zip
 local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera FmRadio MiuiUpdater OriginalSettings OSB SPN VFX
+local-modified-apps := Camera FmRadio MiuiUpdater OSB SPN VFX
 
 local-modified-jars :=
 
@@ -54,6 +54,7 @@ local-pre-zip-misc:
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
+	cp -f other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
 	
