@@ -60,9 +60,9 @@ cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.playe
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/polish_translation\" android:key=\"polish_translation\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
-#cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
-#    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
-cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
+cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
+    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
+cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
 \
     .line 116\
     const-string v22, \"build_author\"\
@@ -122,17 +122,23 @@ grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'XiaomiSe
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
+cp -u -r pl/Mms/* Mms
+cp -f ../Mms/AndroidManifest.xml Mms/AndroidManifest.xml
+'../../tools/apktool' --quiet b -f 'Mms' '../other/unsigned-Mms.apk'
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
 rm -rf pl/CertInstaller
 rm -rf pl/Cit
 rm -rf pl/DrmProvider
+rm -rf pl/Ds
+rm -rf pl/DsUI
 rm -rf pl/GuardProvider
 rm -rf pl/LBESEC_MIUI
 rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/MIUIStats
+rm -rf pl/MiWallpaper
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
@@ -182,8 +188,8 @@ unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
-#sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
-#package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
+sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
+package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -201,13 +207,19 @@ sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
 sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/temp/system/build.prop
 rm -f out/temp/system/etc/weather_city.db
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-Mms.apk" "other/signed-Mms.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
+'other/zipalign' -f 4 "other/signed-Mms.apk" "other/Mms.apk"
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
 rm -f other/unsigned-LBESEC_MIUI.apk
 rm -f other/signed-LBESEC_MIUI.apk
 mkdir out/temp/system/usr/extras
 cp -f ../miui/XHDPI/system/app/MiuiSystemUI.apk out/temp/system/usr/extras/MiuiSystemUI.apk
+mv -f other/Mms.apk out/temp/system/usr/extras/Mms.apk
+rm -f other/unsigned-Mms.apk
+rm -f other/signed-Mms.apk
 cp -f other/statusbar.sh out/temp/system/bin/statusbar.sh
+cp -f other/unicode.sh out/temp/system/bin/unicode.sh
 
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
@@ -270,151 +282,7 @@ cd out/temp
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
-cp -f ../../other/updater-script-ota META-INF/com/google/android/updater-script
-rm -f system/CSCVersion.txt
-rm -f system/SW_Configuration.xml
-rm -rf system/app/mcRegistry
-rm -r system/app/FFFFFFFF000000000000000000000001.drbin
-rm -r system/app/ApplicationsProvider.apk
-rm -r system/app/BackupRestoreConfirmation.apk
-rm -r system/app/BadgeProvider.apk
-rm -r system/app/BluetoothAvrcp.apk
-rm -r system/app/BluetoothMap.apk
-rm -r system/app/BluetoothTest.apk
-rm -r system/app/Camera.apk
-rm -r system/app/CertInstaller.apk
-rm -r system/app/ChromeBookmarksSyncAdapter.apk
-rm -r system/app/ClipboardSaveService.apk
-rm -r system/app/CSC.apk
-rm -r system/app/Divx.apk
-rm -r system/app/EdmVpnServices.apk
-rm -r system/app/FactoryTest.apk
-rm -r system/app/FmRadio.apk
-rm -r system/app/GenieWidget.apk
-rm -r system/app/Gmail.apk
-rm -r system/app/GoogleBackupTransport.apk
-rm -r system/app/GoogleCalendarSyncAdapter.apk
-rm -r system/app/GoogleContactsSyncAdapter.apk
-rm -r system/app/GoogleFeedback.apk
-rm -r system/app/GoogleGMS.apk
-rm -r system/app/GoogleLoginService.apk
-rm -r system/app/GooglePartnerSetup.apk
-rm -r system/app/GoogleServicesFramework.apk
-rm -r system/app/GoogleTTS.apk
-rm -r system/app/KeyChain.apk
-rm -r system/app/LogsProvider.apk
-rm -r system/app/Maps.apk
-rm -r system/app/MediaUploader.apk
-rm -r system/app/minimode-res.apk
-rm -r system/app/MiuiUpdater.apk
-rm -r system/app/MtpApplication.apk
-rm -r system/app/MusicFX.apk
-rm -r system/app/Nfc.apk
-rm -r system/app/NfcTest.apk
-rm -r system/app/OmaCP.apk
-rm -r system/app/OriginalSettings.apk
-rm -r system/app/OSB.apk
-rm -r system/app/PanningTryActually.apk
-rm -r system/app/PCWClientS.apk
-rm -r system/app/PhoneErrService.apk
-rm -r system/app/Phonesky.apk
-rm -r system/app/PopupuiReceiver.apk
-rm -r system/app/Preconfig.apk
-rm -r system/app/PreloadInstaller.apk
-rm -r system/app/PRUI.apk
-rm -r system/app/SamsungIME.apk
-rm -r system/app/SecHTMLViewer.apk
-rm -r system/app/SecLiveWallpapersPicker.apk
-rm -r system/app/SecMediaProvider.apk
-rm -r system/app/SecurityProvider.apk
-rm -r system/app/SelfTestMode.apk
-rm -r system/app/serviceModeApp.apk
-rm -r system/app/SPN.apk
-rm -r system/app/Talk.apk
-rm -r system/app/Talkback.apk
-rm -r system/app/UserDictionaryProvider.apk
-rm -r system/app/Velvet.apk
-rm -r system/app/VoiceSearchStub.apk
-rm -r system/app/VFX.apk
-rm -r system/app/WAPPushManager.apk
-rm -r system/app/WlanTest.apk
-rm -r system/app/wssyncmlnps.apk
-rm -r system/app/YouTube.apk
-rm -rf system/bin
-rm -rf system/cameradata
-rm -rf system/etc
-#cp -rf ../../../miui/XHDPI/system/etc system
-#rm -rf system/etc/license
-#rm -f system/etc/apns-conf.xml
-#rm -f system/etc/weather_city.db
-rm -rf system/fonts
-rm -f system/framework/access.control.jar
-rm -f system/framework/allshare.jar
-rm -f system/framework/allsharelib.jar
-rm -f system/framework/am.jar
-rm -f system/framework/android.test.runner.jar
-rm -f system/framework/apache-xml.jar
-rm -f system/framework/bmgr.jar
-rm -f system/framework/bouncycastle.jar
-rm -f system/framework/bu.jar
-rm -f system/framework/com.android.future.usb.accessory.jar
-rm -f system/framework/com.android.location.provider.jar
-rm -f system/framework/com.android.nfc_extras.jar
-rm -f system/framework/com.dropboxpartner.jar
-rm -f system/framework/com.google.android.maps.jar
-rm -f system/framework/com.google.android.media.effects.jar
-rm -f system/framework/com.google.widevine.software.drm.jar
-rm -f system/framework/com.samsung.device.jar
-rm -f system/framework/content.jar
-rm -f system/framework/core.jar
-rm -f system/framework/core-junit.jar
-rm -f system/framework/CustFeature.jar
-rm -f system/framework/ext.jar
-rm -f system/framework/GlobalConfig.jar
-rm -f system/framework/ime.jar
-rm -f system/framework/input.jar
-rm -f system/framework/javax.obex.jar
-rm -f system/framework/kies_feature.jar
-rm -f system/framework/libvtmanagerjar.jar
-rm -f system/framework/minimode.jar
-rm -f system/framework/monkey.jar
-rm -f system/framework/org.simalliance.openmobileapi.jar
-rm -f system/framework/pm.jar
-rm -f system/framework/requestsync.jar
-rm -f system/framework/seccamera.jar
-rm -f system/framework/sec_edm.jar
-rm -f system/framework/secface.jar
-rm -f system/framework/sec_feature.jar
-rm -f system/framework/sechardware.jar
-rm -f system/framework/secmediarecorder.jar
-rm -f system/framework/sec_platform_library.jar
-rm -f system/framework/svc.jar
-rm -f system/framework/twframework.jar
-rm -f system/framework/twframework-res.apk
-rm -f system/framework/uiautomator.jar
-rm -rf system/hdic
-rm -rf system/lib
-cp -rf ../../../miui/XHDPI/system/lib system
-rm -rf system/media/audio
-rm -rf system/media/lockscreen
-rm -rf system/media/wallpaper
-rm -rf system/media/video
-rm -f system/media/*.emd
-rm -f system/media/*.qmg
-rm -f system/media/*.zip
-rm -rf system/media/theme/.data
-rm -rf system/media/theme/miui_mod_icons
-rm -f system/media/theme/*.mtz
-rm -rf system/T9DB
-rm -rf system/tts
-rm -rf system/usr
-rm -rf system/vendor
-rm -rf system/voicebargeindata
-rm -rf system/vsc
-rm -rf system/wakeupdata
-rm -rf system/xbin
-zip -q -r "../../unsigned-otagalaxy-v5-sgs3-$version.zip" 'META-INF' 'system'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
@@ -480,9 +348,6 @@ make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
 rm -r unsigned-miuigalaxy-v5-sgs3-$version.zip
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-otagalaxy-v5-sgs3-$version.zip" "otagalaxy-v5-sgs3-$version.zip"
-rm -r unsigned-otagalaxy-v5-sgs3-$version.zip
-md5sum -b "otagalaxy-v5-sgs3-$version.zip"
 
 md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
 size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`

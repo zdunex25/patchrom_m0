@@ -170,29 +170,29 @@
         <item>200 Procent</item>
     </string-array>
     <string-array name="dynamicsystem_outputs">
-        <item>Nauszne z mocnym bassem(v2)</item>
+        <item>Nauszne z mocnym basem(v2)</item>
         <item>Nauszne wysokiej klasy(v2)</item>
         <item>Nauszne uniwersalne(v2)</item>
         <item>Nauszne niskiej klasy(v2)</item>
         <item>Douszne uniwersalne(v2)</item>
-        <item>Nauszne z mocnym bassem(v1)</item>
+        <item>Nauszne z mocnym basem(v1)</item>
         <item>Nauszne wysokiej klasy(v1)</item>
         <item>Nauszne uniwersalne(v1)</item>
         <item>Douszne uniwersalne(v1)</item>
-        <item>Douszne Appleowe</item>
-        <item>Douszne Monstery</item>
+        <item>Douszne Apple</item>
+        <item>Douszne Monster</item>
         <item>Douszne Motoroli</item>
-        <item>Douszne Philipsy</item>
-        <item>Philipsy SHP 2000</item>
-        <item>Philipsy SHP 9000</item>
+        <item>Douszne Philips</item>
+        <item>Philips SHP 2000</item>
+        <item>Philips SHP 9000</item>
         <item>Nieznany Typ I</item>
         <item>Nieznany Typ II</item>
         <item>Nieznany Typ III</item>
         <item>Nieznany Typ IV</item>
     </string-array>
     <string-array name="vbass_mode">
-        <item>Naturalny Bass</item>
-        <item>Czysty Bass+</item>
+        <item>Naturalny Bas</item>
+        <item>Czysty Bas+</item>
     </string-array>
     <string-array name="vbass_freq">
         <item>40 Hz</item>
