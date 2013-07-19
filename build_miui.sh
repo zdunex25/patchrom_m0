@@ -188,8 +188,8 @@ unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
-sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
-package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
+#sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
+#package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -282,7 +282,7 @@ cd out/temp
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
