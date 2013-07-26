@@ -1413,6 +1413,7 @@ system/lib/soundfx/libaudiopreprocessing.so 0 0 644
 system/lib/soundfx/libbundlewrapper.so 0 0 644
 system/lib/soundfx/libdownmix.so 0 0 644
 system/lib/soundfx/libreverbwrapper.so 0 0 644
+system/lib/soundfx/libv4a_fx_ics.so 0 0 644
 system/lib/soundfx/libvisualizer.so 0 0 644
 system/lib/ssl 0 0 755
 system/lib/ssl/engines 0 0 755

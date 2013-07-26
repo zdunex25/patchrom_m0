@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="app_theme" parent="@android:style/Theme">
+        <item name="android:colorBackground">@android:color/background_holo_light</item>
+        <item name="android:buttonStyle">@style/newWidgetButton</item>
+        <item name="android:windowBackground">@miui:drawable/v5_window_bg_light</item>
+        <item name="android:windowTitleSize">45.0dip</item>
+        <item name="android:windowTitleStyle">@miui:style/V5.TextAppearance.Title</item>
+        <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+        <item name="android:checkboxStyle">@style/newCheckBox</item>
+        <item name="android:expandableListViewStyle">@style/TransparentExpandableListView</item>
+        <item name="android:listViewStyle">@style/TransparentListView</item>
+        <item name="android:textViewStyle">@style/newTextView</item>
+		<item name="android:editTextBackground">@miui:drawable/v5_group_single_item_bg_light</item>
+		<item name="android:editTextStyle">@android:style/Widget.EditText</item>
+		<item name="android:alertDialogStyle">@miui:style/V5.AlertDialog</item>
+		<item name="android:alertDialogTheme">@miui:style/V5.Theme.Light.Dialog.Alert</item>
+    </style>
+    <style name="TransparentListView" parent="@android:style/Widget.ListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+    <style name="TransparentExpandableListView" parent="@android:style/Widget.ExpandableListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+    <style name="newTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@miui:color/v5_secondary_text_color_light</item>
+    </style>
+    <style name="newCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@miui:color/v5_secondary_text_color_light</item>
+        <item name="android:button">@miui:drawable/v5_btn_checkbox_light</item>
+    </style>
+    <style name="WindowTitleBackground" parent="@android:style/TextAppearance.StatusBar.Title">
+        <item name="android:background">#ff000000</item>
+    </style>
+    <style name="WindowTitle" parent="@android:style/TextAppearance.StatusBar.Icon">
+        <item name="android:textColor">@miui:color/v5_title_text_light</item>
+        <item name="android:shadowColor">@miui:color/v5_title_text_shadow_light</item>
+    </style>
+    <style name="newWidgetButton" parent="@android:style/Widget">
+        <item name="android:textAppearance">?android:textAppearanceSmallInverse</item>
+        <item name="android:textColor">@miui:color/v5_button_text_color_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@miui:drawable/v5_btn_bg_light</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

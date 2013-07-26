@@ -1,5 +1,5 @@
 version: 1.4.3
-apkFileName: MiuiCarrier.apk
+apkFileName: SPN.apk
 isFrameworkApk: false
 usesFramework:
   ids:

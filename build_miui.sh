@@ -125,6 +125,9 @@ cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 cp -u -r pl/Mms/* Mms
 cp -f ../Mms/AndroidManifest.xml Mms/AndroidManifest.xml
 '../../tools/apktool' --quiet b -f 'Mms' '../other/unsigned-Mms.apk'
+'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
+cp -u -r pl/MiuiSystemUI/* MiuiSystemUI
+'../../tools/apktool' --quiet b -f 'MiuiSystemUI' '../other/unsigned-MiuiSystemUI.apk'
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
@@ -188,8 +191,8 @@ unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
-sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
-package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
+#sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
+#package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -208,18 +211,18 @@ sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/tem
 rm -f out/temp/system/etc/weather_city.db
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-Mms.apk" "other/signed-Mms.apk"
+java -jar 'other/signapk.jar' '../build/security/platform.x509.pem' '../build/security/platform.pk8' "other/unsigned-MiuiSystemUI.apk" "other/signed-MiuiSystemUI.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
 'other/zipalign' -f 4 "other/signed-Mms.apk" "other/Mms.apk"
+'other/zipalign' -f 4 "other/signed-MiuiSystemUI.apk" "other/MiuiSystemUI.apk"
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
-rm -f other/unsigned-LBESEC_MIUI.apk
-rm -f other/signed-LBESEC_MIUI.apk
 mkdir out/temp/system/usr/extras
-cp -f ../miui/XHDPI/system/app/MiuiSystemUI.apk out/temp/system/usr/extras/MiuiSystemUI.apk
 mv -f other/Mms.apk out/temp/system/usr/extras/Mms.apk
-rm -f other/unsigned-Mms.apk
-rm -f other/signed-Mms.apk
+mv -f other/MiuiSystemUI.apk out/temp/system/usr/extras/MiuiSystemUI.apk
 cp -f other/statusbar.sh out/temp/system/bin/statusbar.sh
 cp -f other/unicode.sh out/temp/system/bin/unicode.sh
+find other -name "unsigned-*" | xargs rm -f
+find other -name "signed-*" | xargs rm -f
 
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
@@ -282,7 +285,7 @@ cd out/temp
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' 'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh

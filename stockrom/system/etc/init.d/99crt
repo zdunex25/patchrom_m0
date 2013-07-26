@@ -1,4 +1,4 @@
 #!/system/xbin/busybox sh
 
-echo 100 > /sys/kernel/early_suspend/early_suspend_delay
+echo 200 > /sys/kernel/early_suspend/early_suspend_delay
 

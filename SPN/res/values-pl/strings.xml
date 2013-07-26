@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">"Wpisz poniżej własną nazwę operatora, zapisz zmiany i przełącz Tryb  Samolotowy"</string>
     <string name="app_name">Nazwa operatora</string>
-    <string name="no_sim_service">Włóż kartę SIM i upewnij się, że telefon nie jest już w Trybie Samolotowym</string>
-    <string name="save">Zapisz</string>
-    <string name="airplane_on">Wł. T. Samolotowy</string>
-    <string name="airplane_off">Wył. T. Samolotowy</string>
+    <string name="welcome2">Podaj nazwę sieci, zapisz i uruchom ponownie telefon!</string>
+    <string name="backup">Kopia zapasowa</string>
+    <string name="backup_import">Przywróć kopię</string>
+    <string name="backup_import_ok">Zakończono</string>
+    <string name="backup_export">Wyeksportuj kopię</string>
+    <string name="backup_export_ok">Zakończono</string>
+    <string name="backup_overwrite">Kopia już istnieje, nadpisać?</string>
+    <string name="backup_exists">Której kopi użyć?</string>
+    <string name="backup_sd">Pamięć zewnętrzna</string>
+    <string name="backup_internal">Pamięć wewnętrzna</string>
+    <string name="donate_title">O nas</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="sim_carrier">Operator:</string>
+    <string name="now_carrier">Obecna nazwa sieci:</string>
+    <string name="new_carrier">Nowa nazwa sieci:</string>
+    <string name="new_carrier_error">Wypełnij puste pole.</string>
+    <string name="change">Zmień</string>
+    <string name="ok">"Gotowe!
+Uruchomić ponownie telefon?"</string>
+    <string name="error_spn">Plik spn-conf.xml nie istnieje...</string>
+    <string name="error_field">Wypełnij puste pole.</string>
+    <string name="error">BŁĄD</string>
+    <string name="error_root">Zmiana nazwy sieci wymaga ponownego uruchomienia!</string>
+    <string name="error_sim">Karta SIM nie jest gotowa... Wyłącz tryb samolotowy.</string>
+    <string name="widgetload">Ładowanie...</string>
+    <string name="ok_reboot">Uruchom ponownie</string>
+    <string name="ok_cancel">Anuluj</string>
 </resources>
