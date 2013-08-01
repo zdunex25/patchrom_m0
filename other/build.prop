@@ -70,6 +70,11 @@ updater.id=miuigalaxy-v5
 updater.time=20121019-1822
 updater.ver=eng.20121019.182247
 
+# GooManager
+ro.goo.developerid=mikegapinski
+ro.goo.rom=miuigalaxyv5
+ro.goo.version=eng.20121019.182247
+
 # Multimedia property for Smart View
 media.enable-commonsource=true
 #

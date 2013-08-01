@@ -1025,8 +1025,7 @@
     .parameter "x0"
 
     .prologue
-    .line 111
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showAlmostAtAccountLoginDialog()V
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showAlmostAtAccountLoginDialog()V
 
     return-void
 .end method
@@ -3967,18 +3966,15 @@
     return-void
 .end method
 
-.method private showAlmostAtAccountLoginDialog()V
+.method protected showAlmostAtAccountLoginDialog()V
     .locals 8
 
     .prologue
-    .line 1645
     const/16 v2, 0x1e
 
-    .line 1646
     .local v2, timeoutInSeconds:I
-    const/16 v0, 0xf
+    const/16 v0, 0x4
 
-    .line 1648
     .local v0, count:I
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
@@ -4022,13 +4018,11 @@
 
     move-result-object v1
 
-    .line 1650
     .local v1, message:Ljava/lang/String;
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3, v1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v3, v1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1651
     return-void
 .end method
 
@@ -4071,17 +4065,15 @@
 
     move-result-object v0
 
-    .line 1657
     .local v0, message:Ljava/lang/String;
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v2, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1658
     return-void
 .end method
 
-.method private showDialog(Ljava/lang/String;Ljava/lang/String;)V
+.method protected showDialog(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
     .parameter "title"
     .parameter "message"
@@ -4278,16 +4270,13 @@
 
     move-result-object v0
 
-    .line 1641
     .local v0, message:Ljava/lang/String;
     const/4 v4, 0x0
 
-    invoke-direct {p0, v4, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v4, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1642
     return-void
 
-    .line 1635
     .end local v0           #message:Ljava/lang/String;
     :cond_2
     const v1, 0x104040c
@@ -6357,7 +6346,7 @@
     .local v0, message:Ljava/lang/String;
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v3, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 

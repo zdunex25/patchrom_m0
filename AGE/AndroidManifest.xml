@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="14" android:versionName="1.2.8" package="com.golgorz.hoveringcontrols"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-feature android:name="android.hardware.sensor.proximity" android:required="true" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launchernew">
+        <activity android:theme="@style/AppTheme" android:label="@string/title_activity_main" android:name="com.golgorz.hoveringcontrols.MainActivity" android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.settings.GESTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/EmptyActivity" android:name="com.golgorz.hoveringcontrols.DummyBrightnessActivity" android:taskAffinity="com.golgorz.hoveringcontrols.dummy" android:excludeFromRecents="true" />
+        <service android:name="com.golgorz.hoveringcontrols.MyService" />
+        <!--receiver android:name="com.golgorz.hoveringcontrols.Widget">
+            <intent-filter>
+                <action android:name="com.golgorz.widgetclick.changeimage" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info" />
+        </receiver-->
+        <receiver android:name="com.golgorz.hoveringcontrols.BootBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/title_activity_list_apps" android:name="com.golgorz.hoveringcontrols.ListApps" android:configChanges="keyboard|keyboardHidden|orientation" android:hardwareAccelerated="true" />
+        <activity android:label="@string/title_activity_carousel_list" android:name="com.golgorz.hoveringcontrols.CarouselList" />
+        <activity android:label="@string/menu_settings" android:name="com.golgorz.hoveringcontrols.Settings" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:label="@string/title_activity_sensor_test" android:name="com.golgorz.hoveringcontrols.SensorTest" />
+        <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/title_activity_quick_glance" android:name="com.golgorz.hoveringcontrols.QuickGlance" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/title_activity_tilted" android:name="com.golgorz.hoveringcontrols.Tilted" />
+    </application>
+</manifest>

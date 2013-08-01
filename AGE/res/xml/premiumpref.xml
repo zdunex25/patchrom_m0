@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Sensor Detection" android:summary="Type of sensor detection">
+        <CheckBoxPreference android:title="Alternative Detector" android:key="sensorDetector" android:summary="Use alternative hand detection mode" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Configuration Options" android:summary="Configue different options">
+        <CheckBoxPreference android:title="Start at Boot" android:key="autoinicio" android:summary="Run Hovering Controls when booting" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Vibrate" android:key="vibrate" android:summary="Vibrate when action is detected" android:defaultValue="true" />
+        <CheckBoxPreference android:title="Stop Screen Off" android:key="stopScreenOff" android:summary="Stop detecting when screen off, QuickGlance and Music controls will stop." android:defaultValue="false" />
+        <CheckBoxPreference android:title="Hide Notification Icon" android:key="hidenotificon" android:summary="If active, android may stop the service to free memory if needed (it will restart automatically)" android:defaultValue="false" />
+        <CheckBoxPreference android:title="(Beta)Music/Video Controls" android:key="musicControls" android:summary="(Beta)Allows to control music and video players, even with screen off. Feature not yet finished" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Silence Alarm" android:key="silenceAlarm" android:summary="Silence the alarm with one slide" android:defaultValue="true" />
+    </PreferenceCategory>
+	<PreferenceCategory android:title="Phone Call Options" android:summary="xxx">
+        <CheckBoxPreference android:title="Auto Answer" android:key="colgarDescolgar" android:summary="Put your phone in your ear to answer a call (it uses an event similar to hover hold)" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Silence Incoming Call" android:key="silenceCall" android:summary="Silence ringing call with Slide Once" android:defaultValue="true" />
+        <CheckBoxPreference android:title="Speakerphone Shake" android:key="shakeAltavoz" android:summary="Shake phone while in a call to set speakerphone on/off" android:defaultValue="true" />
+        <CheckBoxPreference android:enabled="false" android:title="Shake to Reject (Disabled)" android:key="shakeReject" android:summary="Shake phone to reject a call: Disabled because it needs a permission i dont like (shows as Services that cost you money)" android:defaultValue="false" />
+    </PreferenceCategory>
+	<PreferenceCategory android:title="LockScreen - QuickGlance" android:summary="yyy">
+        <CheckBoxPreference android:title="Show LockScreen Info" android:key="screenoffInfo" android:summary="Show lockscreen without unlocking with 1 wave" android:defaultValue="false" />
+        <CheckBoxPreference android:enabled="false" android:title="Show QuickGlance" android:key="quickGlance" android:summary="Show QuickGlance window instead of LockScreen" android:defaultValue="false" />
+    </PreferenceCategory>
+	<PreferenceCategory android:title="Orientation/Camera Pause" android:summary="zzz">
+        <CheckBoxPreference android:title="Pause in Camera" android:key="pauseCamera" android:summary="Pause events when in camera app (Music controls not affected)" android:defaultValue="true" />
+        <CheckBoxPreference android:title="Pause in landscape" android:key="pauseLandscape" android:summary="Pause events when screen orientation is landscape" android:defaultValue="true" />
+        <CheckBoxPreference android:title="Only Hover Hold" android:key="pauseOnlyHold" android:summary="Only pause Hover Hold when landscape" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="ROOT Options" android:summary="Root needed options">
+        <CheckBoxPreference android:enabled="false" android:title="Camera AutoShoot" android:key="autoCamera" android:summary="Shoot Camera with Hover Hold(Disabled Until Future Updates)" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Browser Navigation" android:key="autoBrowser" android:summary="Allow slide up/down with browser, 1 slide: down; 2 slide: up" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Gallery Slider" android:key="autoGallery" android:summary="Allow image slide with Gallery. 1 slide: next; 2 slide: previous" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Unlock Phone" android:key="screenoffUnlock" android:summary="Unlock phone with two slides" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
