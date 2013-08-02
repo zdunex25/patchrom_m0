@@ -50,14 +50,14 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
     <header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
         <intent android:action="com.android.settings.CARRIER\" \/>\
     <\/header>\
+    <header android:icon=\"@drawable\/ic_accessibility_settings\" android:title=\"@string\/age_settings\">\
+        <intent android:action="com.android.settings.GESTURE\" \/>\
+    <\/header>\
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
     <\/header>\
     <header android:icon=\"@drawable\/ic_key_settings\" android:title=\"@string\/osb_settings\">\
-        <intent android:action="com.android.settings.OSB\" \/>\
-    <\/header>\
-    <header android:icon=\"@drawable\/ic_accessibility_settings\" android:title=\"@string\/age_settings\">\
-        <intent android:action="com.android.settings.GESTURE\" \/>/' > '../Settings/res/xml/settings_headers.xml'
+        <intent android:action="com.android.settings.OSB\" \/>/' > '../Settings/res/xml/settings_headers.xml'
 cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.player/g" \
 				| sed -e "s/ControlPanelPicker/ui.EqualizerActivity/g" > '../Settings/res/xml/sound_settings.xml'
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\

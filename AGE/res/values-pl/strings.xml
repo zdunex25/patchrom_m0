@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kontrola gestami</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="title_activity_main">Kontrola gestami</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_list_apps">Wybierz aplikację</string>
+    <string name="title_activity_carousel_list">Wybierz aplikacje</string>
+    <string name="title_activity_sensor_test">Test sensorów</string>
+</resources>

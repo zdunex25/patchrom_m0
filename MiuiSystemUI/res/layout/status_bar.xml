@@ -9,7 +9,7 @@
         <LinearLayout android:gravity="left" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
             <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/signal_battery_cluster" android:layout_width="wrap_content" android:layout_height="fill_parent">
                 <include android:id="@id/signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view" />
-                <com.android.systemui.statusbar.NetworkSpeedView android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="left|center" android:id="@id/network_speed_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingLeft="1.2dip" android:layout_marginLeft="2.0dip" android:singleLine="true" />
+                <com.android.systemui.statusbar.NetworkSpeedView android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="left|center" android:id="@id/network_speed_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:singleLine="true" />
             </LinearLayout>
         </LinearLayout>
         <com.android.systemui.statusbar.policy.Clock android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="left|center" android:id="@id/clock" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
