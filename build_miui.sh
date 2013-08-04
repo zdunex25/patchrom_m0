@@ -173,6 +173,13 @@ cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml ../other/arrays.xml
 sed -i -e 's/<item>en_US<\/item>/<item>en_US<\/item>\
         <item>pl_PL<\/item>/' ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml
+sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruchom w recovery<\/string>\
+  <string name=\"android_factorytest_download\">Tryb odin<\/string>\
+<\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
+cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
+sed -i -e 's/<public type=\"string\" name=\"def_sms_received_sound\" id=\"0x060c0253\"\/>/<public type=\"string\" name=\"def_sms_received_sound\" id=\"0x060c0253\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0254\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0255\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/BugReport
 rm -rf pl/MiuiHome
@@ -287,6 +294,33 @@ for DIR in out/temp/system/app/; do
 done;
 
 cd out/temp
+'../../../tools/apktool' --quiet d -f 'system/framework/android.policy.jar'
+cp -rf '../../other/extras/advanved-reboot/impl' 'android.policy.jar.out/smali/com/android/internal/policy'
+
+sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$4;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$4;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
+\
+    invoke-virtual {v0, v1}, Ljava\/util\/ArrayList;->add(Ljava\/lang\/Object;)Z\
+\
+    new-instance v1, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;\
+\
+    const v2, 0x6020074\
+\
+    const v3, 0x60c0254\
+\
+    invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
+\
+    invoke-virtual {v0, v1}, Ljava\/util\/ArrayList;->add(Ljava\/lang\/Object;)Z\
+\
+    new-instance v1, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;\
+\
+    const v2, 0x6020074\
+\
+    const v3, 0x60c0255\
+\
+    invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
+
+'../../../tools/apktool' --quiet b -f 'android.policy.jar.out' 'system/framework/android.policy.jar'
+rm -rf 'android.policy.jar.out'
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
@@ -352,6 +386,7 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
 mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
+mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
