@@ -72,7 +72,7 @@
 
     invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030001
+    const v0, 0x7f030002
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/ListApps;->setContentView(I)V
 

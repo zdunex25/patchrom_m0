@@ -23,20 +23,30 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/s;->a:Lcom/golgorz/hoveringcontrols/MyService;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->F(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    move-result-object v0
+    const/high16 v1, 0x5801
 
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/s;->a:Lcom/golgorz/hoveringcontrols/MyService;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/s;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->w(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-virtual {v1}, Lcom/golgorz/hoveringcontrols/MyService;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-class v2, Lcom/golgorz/hoveringcontrols/UnlockNormal;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/s;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/MyService;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

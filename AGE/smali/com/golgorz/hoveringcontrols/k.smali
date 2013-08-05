@@ -45,7 +45,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->F(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->H(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->F(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->H(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->G(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->I(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     :cond_1
     :goto_1
@@ -134,7 +134,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->H(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->J(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     goto :goto_1
 

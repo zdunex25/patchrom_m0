@@ -6,63 +6,69 @@
 
 
 # static fields
-.field private static f:I
+.field private static g:I
 
 
 # instance fields
-.field private A:Z
+.field private A:F
 
-.field private B:Z
+.field private B:Ljava/util/ArrayList;
 
-.field private C:Landroid/telephony/TelephonyManager;
+.field private C:Ljava/util/ArrayList;
 
-.field private D:I
+.field private D:Z
 
-.field private E:I
+.field private E:Z
 
-.field private F:Z
+.field private F:Landroid/telephony/TelephonyManager;
 
-.field private G:Z
+.field private G:I
 
-.field private H:Z
+.field private H:I
 
-.field private I:Landroid/content/BroadcastReceiver;
+.field private I:Z
 
-.field private J:Landroid/os/Handler;
+.field private J:Z
 
-.field private K:Landroid/media/AudioManager;
+.field private K:Z
 
-.field private L:I
+.field private L:Landroid/content/BroadcastReceiver;
 
-.field private M:Z
+.field private M:Landroid/os/Handler;
 
-.field private N:J
+.field private N:Landroid/media/AudioManager;
 
-.field private O:Ljava/lang/String;
+.field private O:I
 
-.field private P:Ljava/util/ArrayList;
+.field private P:Z
 
-.field private Q:Landroid/os/Handler;
+.field private Q:J
 
-.field private R:Landroid/content/SharedPreferences;
+.field private R:Ljava/lang/String;
 
-.field private S:Landroid/os/PowerManager$WakeLock;
+.field private S:Ljava/util/ArrayList;
 
-.field private T:Z
+.field private T:Landroid/os/Handler;
 
-.field private U:Z
+.field private U:Landroid/content/SharedPreferences;
 
-.field private V:Ljava/lang/Runnable;
+.field private V:Landroid/os/PowerManager$WakeLock;
 
-.field private W:Ljava/lang/Runnable;
+.field private W:Z
 
-.field private X:Landroid/os/Handler;
+.field private X:Z
 
 .field private Y:Ljava/lang/Runnable;
 
-.field private Z:Landroid/content/BroadcastReceiver;
+.field private Z:Ljava/lang/Runnable;
 
 .field a:Z
+
+.field private aa:Landroid/os/Handler;
+
+.field private ab:Ljava/lang/Runnable;
+
+.field private ac:Landroid/content/BroadcastReceiver;
 
 .field b:I
 
@@ -72,45 +78,45 @@
 
 .field e:Landroid/os/Vibrator;
 
-.field private g:F
+.field f:Landroid/content/BroadcastReceiver;
 
 .field private h:F
 
 .field private i:F
 
-.field private j:J
+.field private j:F
 
-.field private k:I
+.field private k:J
 
-.field private l:J
+.field private l:I
 
 .field private m:J
 
-.field private n:Ljava/util/List;
+.field private n:J
 
 .field private o:Ljava/util/List;
 
-.field private p:Z
+.field private p:Ljava/util/List;
 
-.field private q:Z
+.field private q:Ljava/lang/String;
 
-.field private r:I
+.field private r:Ljava/lang/String;
 
-.field private s:J
+.field private s:Z
 
-.field private t:J
+.field private t:Z
 
-.field private u:Landroid/hardware/SensorManager;
+.field private u:I
 
-.field private v:Landroid/hardware/Sensor;
+.field private v:J
 
-.field private w:Landroid/hardware/Sensor;
+.field private w:J
 
-.field private x:F
+.field private x:Landroid/hardware/SensorManager;
 
-.field private y:Ljava/util/ArrayList;
+.field private y:Landroid/hardware/Sensor;
 
-.field private z:Ljava/util/ArrayList;
+.field private z:Landroid/hardware/Sensor;
 
 
 # direct methods
@@ -119,7 +125,7 @@
 
     const/16 v0, 0x1f4
 
-    sput v0, Lcom/golgorz/hoveringcontrols/MyService;->f:I
+    sput v0, Lcom/golgorz/hoveringcontrols/MyService;->g:I
 
     return-void
 .end method
@@ -137,19 +143,13 @@
 
     iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->a:Z
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->g:F
-
     iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->h:F
 
     iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->i:F
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:I
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:F
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:Ljava/util/List;
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:I
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -157,86 +157,108 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Z
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:I
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Ljava/util/List;
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:Z
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:Z
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:I
 
-    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:Z
 
-    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:Z
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:Z
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:I
+
+    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
+
+    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
+
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Z
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Landroid/os/Handler;
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Z
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:J
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Ljava/util/ArrayList;
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Landroid/os/Handler;
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Z
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Z
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/j;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/j;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->V:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Y:Ljava/lang/Runnable;
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/m;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/m;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Ljava/lang/Runnable;
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->aa:Landroid/os/Handler;
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/n;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/n;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Y:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->ab:Ljava/lang/Runnable;
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/o;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/o;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->ac:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic A(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic A(Lcom/golgorz/hoveringcontrols/MyService;)I
+    .locals 1
+
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:I
+
+    return v0
+.end method
+
+.method static synthetic B(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method static synthetic C(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->j()V
@@ -244,7 +266,7 @@
     return-void
 .end method
 
-.method static synthetic B(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic D(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->i()V
@@ -252,39 +274,39 @@
     return-void
 .end method
 
-.method static synthetic C(Lcom/golgorz/hoveringcontrols/MyService;)Z
+.method static synthetic E(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Z
 
     return v0
 .end method
 
-.method static synthetic D(Lcom/golgorz/hoveringcontrols/MyService;)Z
+.method static synthetic F(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:Z
 
     return v0
 .end method
 
-.method static synthetic E(Lcom/golgorz/hoveringcontrols/MyService;)I
+.method static synthetic G(Lcom/golgorz/hoveringcontrols/MyService;)I
     .locals 1
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->L:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:I
 
     return v0
 .end method
 
-.method static synthetic F(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+.method static synthetic H(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->V:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
 .end method
 
-.method static synthetic G(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic I(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->k()V
@@ -292,7 +314,7 @@
     return-void
 .end method
 
-.method static synthetic H(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic J(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->l()V
@@ -303,7 +325,7 @@
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/MyService;)I
     .locals 1
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:I
 
     return v0
 .end method
@@ -319,11 +341,11 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Z
 
     if-eqz v0, :cond_1
 
@@ -432,7 +454,7 @@
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/MyService;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     return-void
 .end method
@@ -440,7 +462,7 @@
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:Z
 
     return-void
 .end method
@@ -460,7 +482,7 @@
 
     if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "hidenotificon"
 
@@ -514,7 +536,7 @@
 
     invoke-virtual {p0, v6, v0}, Lcom/golgorz/hoveringcontrols/MyService;->startForeground(ILandroid/app/Notification;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "vibrate"
 
@@ -533,7 +555,7 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "hidenotificon"
 
@@ -587,7 +609,7 @@
 
     invoke-virtual {p0, v6, v0}, Lcom/golgorz/hoveringcontrols/MyService;->startForeground(ILandroid/app/Notification;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "vibrate"
 
@@ -617,7 +639,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -629,11 +651,11 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     if-ne v0, v5, :cond_0
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Z
 
     if-nez v0, :cond_0
 
@@ -679,7 +701,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    iput-boolean v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Z
+    iput-boolean v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Z
 
     :cond_0
     return-void
@@ -688,8 +710,6 @@
     move-exception v0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->r()V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -843,7 +863,15 @@
 .method static synthetic b(Lcom/golgorz/hoveringcontrols/MyService;I)V
     .locals 0
 
-    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:I
+    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:I
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/golgorz/hoveringcontrols/MyService;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Ljava/lang/String;
 
     return-void
 .end method
@@ -851,7 +879,7 @@
 .method static synthetic b(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:Z
 
     return-void
 .end method
@@ -859,7 +887,7 @@
 .method static synthetic b(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     return v0
 .end method
@@ -867,7 +895,7 @@
 .method private c()V
     .locals 4
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "quickGlance"
 
@@ -878,6 +906,12 @@
     move-result v0
 
     if-eqz v0, :cond_0
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "mostramos quickglance"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -905,6 +939,12 @@
     return-void
 
     :cond_0
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "mostramos lockinfo"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
     :try_start_0
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MyService;->getApplicationContext()Landroid/content/Context;
 
@@ -926,9 +966,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->V:Landroid/os/PowerManager$WakeLock;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->V:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
     :try_end_0
@@ -1117,10 +1157,18 @@
     return-void
 .end method
 
+.method static synthetic c(Lcom/golgorz/hoveringcontrols/MyService;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method static synthetic c(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:Z
 
     return-void
 .end method
@@ -1128,7 +1176,7 @@
 .method static synthetic c(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
 
     return v0
 .end method
@@ -1136,56 +1184,13 @@
 .method static synthetic d(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/media/AudioManager;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:Landroid/media/AudioManager;
 
     return-object v0
 .end method
 
 .method private d()V
-    .locals 4
-
-    const-string v0, "power"
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MyService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager;
-
-    const v1, 0x3000001a
-
-    const-string v2, "TempWakeLock"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
+    .locals 2
 
     new-instance v0, Landroid/os/Handler;
 
@@ -1195,11 +1200,7 @@
 
     invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/s;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    const-wide/16 v2, 0x1f4
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->e()V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -1207,33 +1208,13 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/golgorz/hoveringcontrols/t;
-
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/t;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_1
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method
 
 .method static synthetic d(Lcom/golgorz/hoveringcontrols/MyService;I)V
     .locals 0
 
-    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:I
+    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:I
 
     return-void
 .end method
@@ -1241,7 +1222,7 @@
 .method static synthetic d(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Z
 
     return-void
 .end method
@@ -1368,7 +1349,7 @@
 .method static synthetic e(Lcom/golgorz/hoveringcontrols/MyService;I)V
     .locals 0
 
-    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->L:I
+    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:I
 
     return-void
 .end method
@@ -1376,7 +1357,7 @@
 .method static synthetic e(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Z
 
     return-void
 .end method
@@ -1384,7 +1365,7 @@
 .method static synthetic e(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Z
 
     return v0
 .end method
@@ -1392,7 +1373,7 @@
 .method static synthetic f(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -1519,7 +1500,7 @@
 .method static synthetic f(Lcom/golgorz/hoveringcontrols/MyService;I)V
     .locals 0
 
-    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iput p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     return-void
 .end method
@@ -1527,7 +1508,7 @@
 .method static synthetic f(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Z
 
     return-void
 .end method
@@ -1535,7 +1516,7 @@
 .method static synthetic g(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/Runnable;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -1588,7 +1569,7 @@
 .method static synthetic g(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Z
 
     return-void
 .end method
@@ -1596,7 +1577,7 @@
 .method static synthetic h(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1661,7 +1642,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iput-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1696,7 +1677,7 @@
     if-nez v1, :cond_6
 
     :goto_2
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "music"
 
@@ -1706,7 +1687,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "vlc"
 
@@ -1716,7 +1697,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "spotify"
 
@@ -1726,7 +1707,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "winamp"
 
@@ -1736,7 +1717,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "mxtech.videoplayer"
 
@@ -1746,7 +1727,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v2, "maxmpz.audioplayer"
 
@@ -1756,7 +1737,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->isMusicActive()Z
 
@@ -1765,7 +1746,7 @@
     if-eqz v1, :cond_2
 
     :cond_1
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v2, "musicControls"
 
@@ -1776,7 +1757,7 @@
     if-nez v1, :cond_b
 
     :cond_2
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
 
     if-eqz v1, :cond_b
 
@@ -1786,9 +1767,9 @@
 
     if-nez v0, :cond_b
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1796,7 +1777,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "pauseCamera"
 
@@ -1913,7 +1894,7 @@
 
     :cond_4
     :goto_3
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "vibrate"
 
@@ -1953,7 +1934,7 @@
 
     iget-object v3, v1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2172,7 +2153,7 @@
     goto/16 :goto_3
 
     :cond_b
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "music"
 
@@ -2182,7 +2163,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "vlc"
 
@@ -2192,7 +2173,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "spotify"
 
@@ -2202,7 +2183,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "winamp"
 
@@ -2212,7 +2193,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "mxtech.videoplayer"
 
@@ -2222,7 +2203,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "maxmpz.audioplayer"
 
@@ -2232,7 +2213,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isMusicActive()Z
 
@@ -2241,7 +2222,7 @@
     if-eqz v0, :cond_4
 
     :cond_c
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "musicControls"
 
@@ -2292,7 +2273,7 @@
 
     if-nez v0, :cond_e
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v3, "com.sec.android.app.music"
 
@@ -2391,7 +2372,7 @@
 
     iget-object v4, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2432,7 +2413,7 @@
 
     new-instance v0, Landroid/content/ComponentName;
 
-    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-direct {v0, v3, v8}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2468,7 +2449,7 @@
 
     new-instance v0, Landroid/content/ComponentName;
 
-    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-direct {v0, v3, v8}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2491,7 +2472,7 @@
 .method static synthetic h(Lcom/golgorz/hoveringcontrols/MyService;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
 
     return-void
 .end method
@@ -2499,7 +2480,7 @@
 .method static synthetic i(Lcom/golgorz/hoveringcontrols/MyService;)I
     .locals 1
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     return v0
 .end method
@@ -2514,9 +2495,9 @@
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
     :try_end_0
@@ -2536,7 +2517,7 @@
 .method static synthetic j(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/content/SharedPreferences;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
@@ -2545,9 +2526,9 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Landroid/hardware/Sensor;
 
     const/4 v2, 0x2
 
@@ -2570,9 +2551,9 @@
     .locals 2
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
     :try_end_0
@@ -2590,7 +2571,7 @@
 .method static synthetic k(Lcom/golgorz/hoveringcontrols/MyService;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:Z
 
     return v0
 .end method
@@ -2598,7 +2579,7 @@
 .method static synthetic l(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->aa:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -2607,9 +2588,9 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     const/4 v2, 0x3
 
@@ -2629,7 +2610,7 @@
 .method static synthetic m(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/Runnable;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Y:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->ab:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -2678,7 +2659,7 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/io/ObjectInputStream;
 
@@ -2694,12 +2675,12 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Ljava/util/ArrayList;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2707,7 +2688,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -2721,13 +2702,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Ljava/util/ArrayList;
 
     goto :goto_0
 .end method
@@ -2782,7 +2763,7 @@
 
     move-result v11
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -2930,7 +2911,7 @@
 
     iput-object v12, v0, Lcom/golgorz/hoveringcontrols/u;->d:Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -2959,7 +2940,7 @@
 .method static synthetic o(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:Ljava/util/List;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3033,7 +3014,7 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:Ljava/util/List;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -3183,7 +3164,7 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Ljava/util/List;
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -3234,15 +3215,31 @@
     return-void
 .end method
 
-.method static synthetic t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
+.method static synthetic t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic u(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic u(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic v(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method static synthetic w(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->n()V
@@ -3250,7 +3247,7 @@
     return-void
 .end method
 
-.method static synthetic v(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic x(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->c()V
@@ -3258,7 +3255,7 @@
     return-void
 .end method
 
-.method static synthetic w(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method static synthetic y(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->e()V
@@ -3266,26 +3263,10 @@
     return-void
 .end method
 
-.method static synthetic x(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
-    .locals 1
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method static synthetic y(Lcom/golgorz/hoveringcontrols/MyService;)I
-    .locals 1
-
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:I
-
-    return v0
-.end method
-
 .method static synthetic z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -3301,7 +3282,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -3309,7 +3290,7 @@
 
     if-ge p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -3457,7 +3438,7 @@
 
     if-ne v0, v4, :cond_1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "pauseLandscape"
 
@@ -3467,7 +3448,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "pauseOnlyHold"
 
@@ -3520,6 +3501,24 @@
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->p()V
 
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v2, "com.android.music.playstatechanged"
+
+    invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    new-instance v2, Lcom/golgorz/hoveringcontrols/t;
+
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/t;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
+
+    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->f:Landroid/content/BroadcastReceiver;
+
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->f:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v2, v0}, Lcom/golgorz/hoveringcontrols/MyService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
     const-string v0, "vibrator"
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MyService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3534,15 +3533,15 @@
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/k;-><init>(Lcom/golgorz/hoveringcontrols/MyService;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->L:Landroid/content/BroadcastReceiver;
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -3570,11 +3569,11 @@
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->ac:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v2, v0}, Lcom/golgorz/hoveringcontrols/MyService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->L:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -3586,7 +3585,7 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
     const-string v0, "audio"
 
@@ -3596,10 +3595,10 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:Landroid/media/AudioManager;
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
     const/16 v1, 0x8
 
@@ -3607,9 +3606,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x1
 
@@ -3617,18 +3616,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:Landroid/hardware/Sensor;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Landroid/hardware/Sensor;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getMaximumRange()F
 
     move-result v0
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:F
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -3638,7 +3637,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v2}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
 
@@ -3654,7 +3653,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v2}, Landroid/hardware/Sensor;->getType()I
 
@@ -3670,7 +3669,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v2}, Landroid/hardware/Sensor;->getVendor()Ljava/lang/String;
 
@@ -3696,9 +3695,9 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Landroid/telephony/TelephonyManager;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Landroid/telephony/TelephonyManager;
 
     new-instance v1, Lcom/golgorz/hoveringcontrols/v;
 
@@ -3708,7 +3707,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->C:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Landroid/telephony/TelephonyManager;
 
     new-instance v1, Lcom/golgorz/hoveringcontrols/v;
 
@@ -3718,7 +3717,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "hidenotificon"
 
@@ -3778,7 +3777,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/golgorz/hoveringcontrols/MyService;->startForeground(ILandroid/app/Notification;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "vibrate"
 
@@ -3836,7 +3835,7 @@
 
     if-ne v0, v7, :cond_3
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "pauseLandscape"
 
@@ -3846,7 +3845,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "pauseOnlyHold"
 
@@ -3911,39 +3910,47 @@
 .method public onDestroy()V
     .locals 2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->z:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
     :cond_0
     :goto_0
     :try_start_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :goto_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->L:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MyService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->ac:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MyService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    :try_start_2
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->f:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MyService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
     return-void
@@ -3951,9 +3958,16 @@
     :catch_0
     move-exception v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_2
 
     :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
     move-exception v0
 
     goto :goto_0
@@ -3997,9 +4011,9 @@
 
     move-result v2
 
-    sput v2, Lcom/golgorz/hoveringcontrols/MyService;->f:I
+    sput v2, Lcom/golgorz/hoveringcontrols/MyService;->g:I
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->m:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:J
 
     sub-long v2, v0, v2
 
@@ -4011,10 +4025,10 @@
 
     const/4 v2, 0x0
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:I
 
     :cond_0
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:J
 
     sub-long v2, v0, v2
 
@@ -4024,7 +4038,7 @@
 
     if-lez v2, :cond_3
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:J
 
     sub-long v2, v0, v2
 
@@ -4050,15 +4064,15 @@
 
     add-float/2addr v4, v5
 
-    iget v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->g:F
-
-    sub-float/2addr v4, v5
-
     iget v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->h:F
 
     sub-float/2addr v4, v5
 
     iget v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->i:F
+
+    sub-float/2addr v4, v5
+
+    iget v5, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:F
 
     sub-float/2addr v4, v5
 
@@ -4074,7 +4088,7 @@
 
     mul-float/2addr v2, v3
 
-    sget v3, Lcom/golgorz/hoveringcontrols/MyService;->f:I
+    sget v3, Lcom/golgorz/hoveringcontrols/MyService;->g:I
 
     int-to-float v3, v3
 
@@ -4082,17 +4096,17 @@
 
     if-lez v2, :cond_2
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:I
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:I
 
     const/4 v3, 0x4
 
     if-lt v2, v3, :cond_1
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->m:J
 
     sub-long v2, v0, v2
 
@@ -4102,19 +4116,19 @@
 
     if-lez v2, :cond_1
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->m:J
 
     const/4 v2, 0x0
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->l:I
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->a()V
 
     :cond_1
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->m:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:J
 
     :cond_2
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->k:J
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -4122,7 +4136,7 @@
 
     aget v0, v0, v1
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->g:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->h:F
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -4130,7 +4144,7 @@
 
     aget v0, v0, v1
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->h:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->i:F
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -4138,7 +4152,7 @@
 
     aget v0, v0, v1
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->i:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->j:F
 
     :cond_3
     :goto_0
@@ -4167,17 +4181,13 @@
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
-    invoke-virtual {v0}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Proximity"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_3
 
     const-string v0, "activity"
 
@@ -4207,9 +4217,9 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iput-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:Z
 
     if-eqz v1, :cond_6
 
@@ -4223,7 +4233,7 @@
 
     aget v0, v0, v1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getMaximumRange()F
 
@@ -4233,17 +4243,17 @@
 
     if-gez v0, :cond_5
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:Z
 
     if-nez v0, :cond_5
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->T:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->V:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->Y:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x5dc
 
@@ -4256,7 +4266,7 @@
 
     aget v0, v0, v1
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getMaximumRange()F
 
@@ -4266,22 +4276,22 @@
 
     if-ltz v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->q:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:Z
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->r:I
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:I
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_6
     iget-byte v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->d:B
@@ -4292,7 +4302,7 @@
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iput-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -4300,15 +4310,15 @@
 
     aget v1, v1, v2
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:F
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:F
 
     cmpl-float v1, v1, v2
 
     if-ltz v1, :cond_8
 
-    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
-    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:J
+    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:J
 
     sub-long/2addr v1, v3
 
@@ -4316,15 +4326,15 @@
 
     if-gtz v1, :cond_8
 
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     if-ne v1, v5, :cond_8
 
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v1, :cond_8
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v2, "silenceCall"
 
@@ -4350,13 +4360,13 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:Z
 
     :cond_7
     :goto_1
-    iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:J
 
     goto/16 :goto_0
 
@@ -4367,15 +4377,15 @@
 
     aget v1, v1, v2
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:F
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:F
 
     cmpl-float v1, v1, v2
 
     if-ltz v1, :cond_10
 
-    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
-    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->t:J
+    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->w:J
 
     sub-long/2addr v1, v3
 
@@ -4383,25 +4393,25 @@
 
     if-gtz v1, :cond_10
 
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:I
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:I
 
     if-nez v1, :cond_10
 
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v1, :cond_10
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:Z
 
     if-eqz v1, :cond_9
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v2, "silenceAlarm"
 
@@ -4443,18 +4453,18 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->B:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->E:Z
 
     goto :goto_1
 
     :cond_9
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Z
 
     if-eqz v1, :cond_f
 
-    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
-    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:J
+    iget-wide v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:J
 
     sub-long/2addr v1, v3
 
@@ -4462,7 +4472,7 @@
 
     if-gtz v1, :cond_f
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->aa:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
@@ -4470,17 +4480,17 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Z
+    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Z
 
     const-wide/16 v1, 0x0
 
-    iput-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:J
+    iput-wide v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:J
 
-    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iget-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
 
     if-nez v1, :cond_a
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v2, "screenoffUnlock"
 
@@ -4497,9 +4507,9 @@
     goto/16 :goto_1
 
     :cond_a
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->n:Ljava/util/List;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->o:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -4507,7 +4517,7 @@
 
     if-eqz v1, :cond_b
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v2, "autoBrowser"
 
@@ -4542,7 +4552,7 @@
 
     if-nez v0, :cond_e
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "gallery"
 
@@ -4552,7 +4562,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "PicFolder"
 
@@ -4562,7 +4572,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "fstop"
 
@@ -4572,7 +4582,7 @@
 
     if-nez v0, :cond_c
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "album"
 
@@ -4583,7 +4593,7 @@
     if-eqz v0, :cond_e
 
     :cond_c
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v1, "autoGallery"
 
@@ -4595,7 +4605,7 @@
 
     if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->O:Ljava/lang/String;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Ljava/lang/String;
 
     const-string v1, "PicFolder"
 
@@ -4626,21 +4636,21 @@
     :cond_f
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->P:Z
 
-    iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:J
+    iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:J
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->Q:J
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->aa:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->X:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->aa:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->Y:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->ab:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x1f4
 
@@ -4655,17 +4665,17 @@
 
     aget v0, v0, v1
 
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:F
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->A:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_7
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Z
 
     if-nez v0, :cond_11
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->N:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isMusicActive()Z
 
@@ -4673,7 +4683,7 @@
 
     if-nez v0, :cond_11
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->H:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->K:Z
 
     if-eqz v0, :cond_7
 
@@ -4682,19 +4692,19 @@
 
     if-ne v0, v6, :cond_7
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->J:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->M:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->W:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->Z:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x5dc
 
@@ -4713,9 +4723,9 @@
     const/4 v1, 0x0
 
     :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->u:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->x:Landroid/hardware/SensorManager;
 
-    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->v:Landroid/hardware/Sensor;
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/MyService;->y:Landroid/hardware/Sensor;
 
     const/4 v4, 0x1
 
@@ -4740,10 +4750,10 @@
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->m()V
 
-    iput v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->D:I
+    iput v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->G:I
 
     :goto_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v3, "sensorDetector"
 
@@ -4753,7 +4763,7 @@
 
     if-eqz v0, :cond_6
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:Z
 
     :goto_3
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MyService;->o()V
@@ -4788,20 +4798,20 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v0, :cond_2
 
     move v0, v1
 
     :goto_4
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     :cond_1
     :goto_5
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->R:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->U:Landroid/content/SharedPreferences;
 
     const-string v3, "hidenotificon"
 
@@ -4811,7 +4821,7 @@
 
     if-nez v0, :cond_4
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v0, :cond_3
 
@@ -4841,7 +4851,7 @@
     goto :goto_2
 
     :cond_4
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->F:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/MyService;->I:Z
 
     if-eqz v0, :cond_5
 
@@ -4875,7 +4885,7 @@
     goto :goto_2
 
     :cond_6
-    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->p:Z
+    iput-boolean v1, p0, Lcom/golgorz/hoveringcontrols/MyService;->s:Z
 
     goto :goto_3
 .end method

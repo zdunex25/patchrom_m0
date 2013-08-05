@@ -297,7 +297,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030004
+    const v0, 0x7f030005
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->setContentView(I)V
 

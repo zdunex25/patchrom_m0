@@ -175,7 +175,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030002
+    const/4 v0, 0x5
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->requestWindowFeature(I)Z
+
+    const v0, 0x7f030003
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setContentView(I)V
 
@@ -331,6 +335,14 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method protected onDestroy()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    return-void
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
@@ -572,6 +584,14 @@
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_2
+.end method
+
+.method protected onPause()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
+
+    return-void
 .end method
 
 .method protected onResume()V

@@ -21,6 +21,7 @@
 	<PreferenceCategory android:title="LockScreen - QuickGlance" android:summary="yyy">
         <CheckBoxPreference android:title="Show LockScreen Info" android:key="screenoffInfo" android:summary="Show lockscreen without unlocking with 1 wave" android:defaultValue="false" />
         <CheckBoxPreference android:enabled="false" android:title="Show QuickGlance" android:key="quickGlance" android:summary="Show QuickGlance window instead of LockScreen" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Unlock Phone" android:key="screenoffUnlock" android:summary="Unlock phone with two slides" android:defaultValue="false" />
     </PreferenceCategory>
 	<PreferenceCategory android:title="Orientation/Camera Pause" android:summary="zzz">
         <CheckBoxPreference android:title="Pause in Camera" android:key="pauseCamera" android:summary="Pause events when in camera app (Music controls not affected)" android:defaultValue="false" />
@@ -31,6 +32,5 @@
         <CheckBoxPreference android:enabled="false" android:title="Camera AutoShoot" android:key="autoCamera" android:summary="Shoot Camera with Hover Hold(Disabled Until Future Updates)" android:defaultValue="false" />
         <CheckBoxPreference android:title="Browser Navigation" android:key="autoBrowser" android:summary="Allow slide up/down with browser, 1 slide: down; 2 slide: up" android:defaultValue="false" />
         <CheckBoxPreference android:title="Gallery Slider" android:key="autoGallery" android:summary="Allow image slide with Gallery. 1 slide: next; 2 slide: previous" android:defaultValue="false" />
-        <CheckBoxPreference android:title="Unlock Phone" android:key="screenoffUnlock" android:summary="Unlock phone with two slides" android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>

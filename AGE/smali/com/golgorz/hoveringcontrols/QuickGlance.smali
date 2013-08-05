@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    const v0, 0x7f030003
+    const v0, 0x7f030004
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->setContentView(I)V
 

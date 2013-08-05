@@ -44,4 +44,5 @@
     <item type="id" name="testSensor">false</item>
     <item type="id" name="info">false</item>
     <item type="id" name="quickglance">false</item>
+    <item type="id" name="action_settings">false</item>
 </resources>

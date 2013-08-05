@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="14" android:versionName="1.2.9" package="com.golgorz.hoveringcontrols"
+<manifest android:versionCode="15" android:versionName="1.2.9" package="com.golgorz.hoveringcontrols"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -51,5 +51,7 @@
         <activity android:label="@string/title_activity_sensor_test" android:name="com.golgorz.hoveringcontrols.SensorTest" />
         <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/title_activity_quick_glance" android:name="com.golgorz.hoveringcontrols.QuickGlance" android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:label="@string/title_activity_tilted" android:name="com.golgorz.hoveringcontrols.Tilted" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:label="@string/title_activity_unlock_normal" android:name="com.golgorz.hoveringcontrols.UnlockNormal" />
+        <activity android:label="@string/title_activity_enable_keyguard" android:name="com.golgorz.hoveringcontrols.EnableKeyguard" />
     </application>
 </manifest>

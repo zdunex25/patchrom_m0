@@ -23,17 +23,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 15
+    .locals 14
 
     const/high16 v6, 0x7000
 
-    const/16 v14, 0x55
+    const/16 v13, 0x55
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
-    const/4 v13, 0x1
+    const/4 v12, 0x1
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -47,7 +47,7 @@
 
     move-result v0
 
-    if-eq v0, v13, :cond_0
+    if-eq v0, v12, :cond_0
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -68,7 +68,7 @@
 
     const-string v1, "colgarDescolgar"
 
-    invoke-interface {v0, v1, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v11}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -88,7 +88,7 @@
 
     const-string v1, "vibrate"
 
-    invoke-interface {v0, v1, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -110,7 +110,7 @@
 
     iget-boolean v0, v0, Lcom/golgorz/hoveringcontrols/MyService;->a:Z
 
-    if-nez v0, :cond_11
+    if-nez v0, :cond_10
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -118,7 +118,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_11
+    if-nez v0, :cond_10
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -142,7 +142,7 @@
 
     const-string v1, "autoCamera"
 
-    invoke-interface {v0, v1, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v11}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -200,12 +200,12 @@
 
     move-result-object v1
 
-    move-object v8, v1
+    move-object v3, v1
 
     :goto_1
     const-string v1, "music"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -213,7 +213,7 @@
 
     const-string v1, "vlc"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -221,7 +221,7 @@
 
     const-string v1, "spotify"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -229,7 +229,7 @@
 
     const-string v1, "winamp"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -237,7 +237,7 @@
 
     const-string v1, "mxtech.videoplayer"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -245,7 +245,7 @@
 
     const-string v1, "maxmpz.audioplayer"
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -269,7 +269,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_a
 
     :cond_5
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
@@ -280,57 +280,40 @@
 
     const-string v2, "musicControls"
 
-    invoke-interface {v1, v2, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, v2, v11}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_a
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
     :try_start_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
-
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/MyService;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    new-instance v3, Landroid/content/Intent;
-
-    const-string v4, "android.intent.action.MEDIA_BUTTON"
-
-    invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v3, v4}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    move-object v10, v9
-
-    :cond_6
-    :goto_2
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
     const-string v0, "com.sec.android.app.music"
 
-    invoke-virtual {v8, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-nez v0, :cond_6
 
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "com.sec.android.app.music"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    :cond_6
     new-instance v0, Landroid/content/Intent;
 
     const-string v3, "com.sec.android.app.music.musicservicecommand.pause"
@@ -347,7 +330,13 @@
 
     invoke-virtual {v3, v0}, Lcom/golgorz/hoveringcontrols/MyService;->sendBroadcast(Landroid/content/Intent;)V
 
-    :goto_3
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v3, "SEC ANDROID MUSIC"
+
+    invoke-virtual {v0, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    :goto_2
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->d(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/media/AudioManager;
@@ -358,7 +347,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -373,23 +362,23 @@
     :catch_0
     move-exception v0
 
-    move-object v8, v0
+    move-object v9, v0
 
     new-instance v10, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
-    invoke-direct {v10, v0, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v10, v0, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     new-instance v0, Landroid/view/KeyEvent;
 
     move-wide v3, v1
 
-    move v5, v12
+    move v5, v11
 
-    move v6, v14
+    move v6, v13
 
-    move v7, v12
+    move v7, v11
 
     invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
@@ -399,23 +388,23 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-virtual {v0, v10, v9}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {v0, v10, v8}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     new-instance v10, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
-    invoke-direct {v10, v0, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v10, v0, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     new-instance v0, Landroid/view/KeyEvent;
 
     move-wide v3, v1
 
-    move v5, v13
+    move v5, v12
 
-    move v6, v14
+    move v6, v13
 
-    move v7, v12
+    move v7, v11
 
     invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
@@ -425,7 +414,13 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-virtual {v0, v10, v9}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {v0, v10, v8}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "SEC ANDROID MUSIC CATCH"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -437,14 +432,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0, v13}, Lcom/golgorz/hoveringcontrols/MyService;->d(Lcom/golgorz/hoveringcontrols/MyService;Z)V
+    invoke-static {v0, v12}, Lcom/golgorz/hoveringcontrols/MyService;->d(Lcom/golgorz/hoveringcontrols/MyService;Z)V
 
-    :goto_4
-    invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
+    :goto_3
+    invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -453,44 +448,19 @@
 
     invoke-virtual {v1}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    move-object v8, v2
+    move-object v3, v2
 
     goto/16 :goto_1
 
     :cond_7
     :try_start_2
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    if-eqz v0, :cond_6
-
-    iget-object v4, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-virtual {v4, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    move-object v10, v0
-
-    goto/16 :goto_2
-
-    :cond_8
-    new-instance v11, Landroid/content/Intent;
+    new-instance v9, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
     const/4 v3, 0x0
 
-    invoke-direct {v11, v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v9, v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     new-instance v0, Landroid/view/KeyEvent;
 
@@ -504,29 +474,41 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
+    new-instance v3, Landroid/content/ComponentName;
+
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v4}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v5}, Lcom/golgorz/hoveringcontrols/MyService;->u(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v3, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
     const-string v3, "android.intent.extra.KEY_EVENT"
 
-    invoke-virtual {v11, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    new-instance v0, Landroid/content/ComponentName;
-
-    invoke-direct {v0, v8, v10}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v11, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v9, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v11, v3}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {v0, v9, v3}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    new-instance v11, Landroid/content/Intent;
+    new-instance v9, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
     const/4 v3, 0x0
 
-    invoke-direct {v11, v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v9, v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     new-instance v0, Landroid/view/KeyEvent;
 
@@ -542,23 +524,81 @@
 
     const-string v3, "android.intent.extra.KEY_EVENT"
 
-    invoke-virtual {v11, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v9, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     new-instance v0, Landroid/content/ComponentName;
 
-    invoke-direct {v0, v8, v10}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-virtual {v11, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v4}, Lcom/golgorz/hoveringcontrols/MyService;->u(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v0, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "PAUSED?:"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v4}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "-"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-static {v4}, Lcom/golgorz/hoveringcontrols/MyService;->u(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v11, v3}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {v0, v9, v3}, Lcom/golgorz/hoveringcontrols/MyService;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    goto/16 :goto_3
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    :cond_9
+    const-string v3, "SEC ANDROID MUSIC ELSE"
+
+    invoke-virtual {v0, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :cond_8
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     const/4 v3, 0x0
@@ -569,14 +609,14 @@
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_9
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0, v12}, Lcom/golgorz/hoveringcontrols/MyService;->d(Lcom/golgorz/hoveringcontrols/MyService;Z)V
+    invoke-static {v0, v11}, Lcom/golgorz/hoveringcontrols/MyService;->d(Lcom/golgorz/hoveringcontrols/MyService;Z)V
 
-    goto :goto_4
+    goto/16 :goto_3
 
-    :cond_b
+    :cond_a
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     invoke-static {v1}, Lcom/golgorz/hoveringcontrols/MyService;->c(Lcom/golgorz/hoveringcontrols/MyService;)Z
@@ -593,15 +633,15 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->v(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-interface {v0, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_b
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -611,18 +651,18 @@
 
     const-string v1, "pauseCamera"
 
-    invoke-interface {v0, v1, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    :cond_c
+    :cond_b
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     const-string v1, "target"
 
-    invoke-virtual {v0, v1, v12}, Lcom/golgorz/hoveringcontrols/MyService;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1, v11}, Lcom/golgorz/hoveringcontrols/MyService;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -666,7 +706,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_c
 
     const-string v3, "empty"
 
@@ -716,7 +756,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1, v12}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    invoke-static {v0, v1, v11}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -724,7 +764,7 @@
 
     goto/16 :goto_0
 
-    :cond_d
+    :cond_c
     :try_start_3
     const-string v0, "empty"
 
@@ -732,7 +772,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_12
+    if-nez v0, :cond_11
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
@@ -744,8 +784,8 @@
 
     move-result-object v0
 
-    :goto_5
-    if-eqz v0, :cond_e
+    :goto_4
+    if-eqz v0, :cond_d
 
     const/high16 v2, 0x7000
 
@@ -802,7 +842,7 @@
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_d
     :try_start_4
     const-string v0, "GolgorzPreviousAPP"
 
@@ -810,11 +850,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_e
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->u(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->w(Lcom/golgorz/hoveringcontrols/MyService;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
@@ -867,7 +907,7 @@
 
     goto/16 :goto_0
 
-    :cond_f
+    :cond_e
     const-string v0, "empty"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -876,7 +916,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_f
 
     :try_start_8
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
@@ -892,11 +932,11 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_8 .. :try_end_8} :catch_5
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
 
-    move-result-object v9
+    move-result-object v8
 
-    :goto_6
+    :goto_5
     :try_start_9
-    iget-object v0, v9, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
+    iget-object v0, v8, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
 
     const/4 v1, 0x0
 
@@ -939,9 +979,9 @@
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    goto :goto_6
+    goto :goto_5
 
-    :cond_10
+    :cond_f
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "hover hold active is empty"
@@ -952,12 +992,12 @@
 
     goto/16 :goto_0
 
-    :cond_11
+    :cond_10
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/m;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     const-string v1, "target"
 
-    invoke-virtual {v0, v1, v12}, Lcom/golgorz/hoveringcontrols/MyService;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1, v11}, Lcom/golgorz/hoveringcontrols/MyService;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -984,10 +1024,10 @@
 
     move-result-object v0
 
-    :goto_7
+    :goto_6
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
 
-    aget-object v2, v0, v13
+    aget-object v2, v0, v12
 
     iget-object v2, v2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
@@ -999,7 +1039,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v0, v0, v13
+    aget-object v0, v0, v12
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1040,12 +1080,12 @@
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    move-object v0, v9
+    move-object v0, v8
 
-    goto :goto_7
+    goto :goto_6
 
-    :cond_12
-    move-object v0, v9
+    :cond_11
+    move-object v0, v8
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 .end method

@@ -101,12 +101,6 @@
 
     if-nez v1, :cond_3
 
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v1, "HOLDINGGGG"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/j;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->c(Lcom/golgorz/hoveringcontrols/MyService;)Z

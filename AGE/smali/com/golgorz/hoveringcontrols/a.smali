@@ -150,7 +150,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f030007
+    const v2, 0x7f030009
 
     iget-object v3, p0, Lcom/golgorz/hoveringcontrols/a;->b:Lcom/golgorz/hoveringcontrols/CarouselList;
 

@@ -31,34 +31,13 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/Settings;
-
-    invoke-virtual {v1}, Lcom/golgorz/hoveringcontrols/Settings;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lcom/golgorz/hoveringcontrols/MyService;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/Settings;
-
-    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/Settings;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    :cond_0
     const-string v0, "screenoffInfo"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-interface {p1, p2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -78,14 +57,14 @@
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
-    :cond_1
+    :cond_0
     const-string v0, "pauseLandscape"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     invoke-interface {p1, p2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -105,6 +84,6 @@
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
-    :cond_2
+    :cond_1
     return-void
 .end method

@@ -79,7 +79,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->v(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->x(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     :cond_0
     :goto_0
@@ -177,7 +177,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->w(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     goto :goto_0
 
@@ -1075,7 +1075,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->t(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->v(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1290,7 +1290,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->u(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->w(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     :try_start_4
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
@@ -1483,7 +1483,7 @@
     :cond_16
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->x(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1511,13 +1511,13 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->x(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/MyService;->A(Lcom/golgorz/hoveringcontrols/MyService;)I
 
     move-result v3
 
@@ -1546,13 +1546,13 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->x(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/MyService;->A(Lcom/golgorz/hoveringcontrols/MyService;)I
 
     move-result v2
 
@@ -1591,13 +1591,13 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->B(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/MyService;->A(Lcom/golgorz/hoveringcontrols/MyService;)I
 
     move-result v3
 
@@ -1624,7 +1624,7 @@
     :goto_6
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->A(Lcom/golgorz/hoveringcontrols/MyService;)I
 
     move-result v1
 
@@ -1634,13 +1634,13 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->y(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->A(Lcom/golgorz/hoveringcontrols/MyService;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/n;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/MyService;->x(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/MyService;->z(Lcom/golgorz/hoveringcontrols/MyService;)Ljava/util/ArrayList;
 
     move-result-object v1
 
