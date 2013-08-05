@@ -216,10 +216,12 @@
         <item>17.0 dB</item>
     </string-array>
     <string-array name="vclarity_mode">
-        <item>Naturalna czystość dźwięku</item>
+        <item>Naturalna</item>
         <item>OZone+</item>
+        <item>XHiFi</item>
     </string-array>
     <string-array name="vclarity_boost">
+        <item>Domyślnie</item>
         <item>3.5 dB</item>
         <item>6.0 dB</item>
         <item>8.0 dB</item>
