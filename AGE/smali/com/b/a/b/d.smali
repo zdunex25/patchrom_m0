@@ -1,4 +1,4 @@
-.class Lcom/a/a/b/d;
+.class Lcom/b/a/b/d;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/a/a/b/c;
+.field final synthetic a:Lcom/b/a/b/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/a/a/b/c;)V
+.method constructor <init>(Lcom/b/a/b/c;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/a/a/b/d;->a:Lcom/a/a/b/c;
+    iput-object p1, p0, Lcom/b/a/b/d;->a:Lcom/b/a/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,9 +26,9 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/a/a/b/d;->a:Lcom/a/a/b/c;
+    iget-object v0, p0, Lcom/b/a/b/d;->a:Lcom/b/a/b/c;
 
-    invoke-static {v0}, Lcom/a/a/b/c;->a(Lcom/a/a/b/c;)V
+    invoke-static {v0}, Lcom/b/a/b/c;->a(Lcom/b/a/b/c;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -44,7 +44,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v1, v2, v0}, Lcom/a/a/a;->a(Ljava/lang/String;ILjava/lang/Exception;)V
+    invoke-static {v1, v2, v0}, Lcom/b/a/a;->a(Ljava/lang/String;ILjava/lang/Exception;)V
 
     goto :goto_0
 .end method

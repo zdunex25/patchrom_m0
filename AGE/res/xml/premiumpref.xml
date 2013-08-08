@@ -10,6 +10,7 @@
         <CheckBoxPreference android:title="Stop Screen Off" android:key="stopScreenOff" android:summary="Stop detecting when screen off, QuickGlance and Music controls will stop." android:defaultValue="true" />
         <CheckBoxPreference android:title="Hide Notification Icon" android:key="hidenotificon" android:summary="If active, android may stop the service to free memory if needed (it will restart automatically)" android:defaultValue="true" />
         <CheckBoxPreference android:title="(Beta)Music/Video Controls" android:key="musicControls" android:summary="(Beta)Allows to control music and video players, even with screen off. Feature not yet finished" android:defaultValue="false" />
+        <Preference android:title="Select Video Player" android:key="videoplayer" android:summary="Select your default video player for media controls" />
         <CheckBoxPreference android:title="Silence Alarm" android:key="silenceAlarm" android:summary="Silence the alarm with one slide" android:defaultValue="false" />
     </PreferenceCategory>
 	<PreferenceCategory android:title="Phone Call Options" android:summary="xxx">

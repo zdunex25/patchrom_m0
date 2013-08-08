@@ -209,7 +209,7 @@
 .end method
 
 .method protected onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
-    .locals 5
+    .locals 3
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->g:Ljava/lang/String;
 
@@ -221,7 +221,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0b0026
+    const v0, 0x7f0b0028
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -246,66 +246,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v0, "ADDED!:"
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->e:Ljava/util/List;
-
-    invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "-"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->e:Ljava/util/List;
-
-    invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/CarouselList;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
+    :try_start_0
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->a:Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->e:Ljava/util/List;
@@ -345,9 +286,11 @@
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    :try_start_0
+    :try_start_1
     new-instance v0, Ljava/io/ObjectOutputStream;
 
     new-instance v1, Ljava/io/FileOutputStream;
@@ -383,30 +326,11 @@
     invoke-virtual {v0}, Ljava/io/ObjectOutputStream;->flush()V
 
     invoke-virtual {v0}, Ljava/io/ObjectOutputStream;->close()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_2
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v1, "---------"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     :cond_0
+    :goto_2
     invoke-super/range {p0 .. p5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
     return-void
@@ -414,9 +338,17 @@
     :cond_1
     const/4 v1, 0x1
 
-    goto/16 :goto_0
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_1
 
     :cond_2
+    :try_start_2
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->b:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/golgorz/hoveringcontrols/CarouselList;->a:Ljava/util/ArrayList;
@@ -454,42 +386,24 @@
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_1
 
-    :catch_0
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_2
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "CAROUSEL PACKAGES:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    goto :goto_3
 .end method
 
 .method protected onPause()V

@@ -2,6 +2,12 @@
 .super Landroid/app/Activity;
 
 
+# static fields
+.field private static m:Ljava/lang/String;
+
+.field private static final n:[B
+
+
 # instance fields
 .field private a:Landroid/content/SharedPreferences;
 
@@ -27,8 +33,56 @@
 
 .field private l:Ljava/util/ArrayList;
 
+.field private o:Lcom/a/a/a/a/i;
+
+.field private p:Lcom/a/a/a/a/m;
+
+.field private q:Landroid/os/Handler;
+
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtinFNIYAPVJXAwYCASAwwKYjhhOUVc50CF9lM5AOQik6FsBJ3C10O6EySsB/usgEnUpPyEwI4Xljyoo9jIrxexz5OdQrqtdjj6sLzRwiChpsZBJ2n15zQ5nQ3WmR+xvrnjS19wHiNPbW9FCqxM8TRhZH8wjjHObfub0yHmzM9jG5m6WRtw1RpOp6YldsG7dt6/z8NJKrlAmlawO05gZKap8YZigffplTm6zEgCZvBDo0q5T1uIxPCHJvWG2TMtP+LC6p629Ff6iRAVtrxsPzbOXgAPiPloxEuyMxW10o1gqfTIHAX8IbslC+E0vyYvTAlAcBmcHsv8XWBYOPWFARvQIDAQAB"
+
+    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Ljava/lang/String;
+
+    const/16 v0, 0x14
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->n:[B
+
+    return-void
+
+    :array_0
+    .array-data 0x1
+        0x4ct
+        0xet
+        0x54t
+        0x6ft
+        0x24t
+        0xft
+        0xf6t
+        0x24t
+        0xbt
+        0x31t
+        0x2ct
+        0xc8t
+        0x14t
+        0xa1t
+        0x32t
+        0xb9t
+        0x38t
+        0x18t
+        0xect
+        0x9t
+    .end array-data
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -81,6 +135,50 @@
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/golgorz/hoveringcontrols/MainActivity;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/golgorz/hoveringcontrols/MainActivity;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/golgorz/hoveringcontrols/MainActivity;->a(Z)V
+
+    return-void
+.end method
+
+.method private a(Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+
+    new-instance v1, Lcom/golgorz/hoveringcontrols/p;
+
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/p;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method private a(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+
+    new-instance v1, Lcom/golgorz/hoveringcontrols/q;
+
+    invoke-direct {v1, p0, p1}, Lcom/golgorz/hoveringcontrols/q;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -169,9 +267,9 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 9
 
-    const/4 v2, 0x0
+    const/4 v8, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -179,9 +277,85 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->requestWindowFeature(I)Z
 
-    const v0, 0x7f030003
+    const v0, 0x7f030004
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setContentView(I)V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+
+    new-instance v0, Lcom/golgorz/hoveringcontrols/r;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/r;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Lcom/golgorz/hoveringcontrols/r;)V
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/a/a/a/a/m;
+
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "android_id"
+
+    invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    const-string v0, "phone"
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/a/a/a/a/i;
+
+    new-instance v3, Lcom/a/a/a/a/s;
+
+    new-instance v4, Lcom/a/a/a/a/a;
+
+    sget-object v5, Lcom/golgorz/hoveringcontrols/MainActivity;->n:[B
+
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v4, v5, v6, v0}, Lcom/a/a/a/a/a;-><init>([BLjava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {v3, p0, v4}, Lcom/a/a/a/a/s;-><init>(Landroid/content/Context;Lcom/a/a/a/a/o;)V
+
+    sget-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Ljava/lang/String;
+
+    invoke-direct {v2, p0, v3, v0}, Lcom/a/a/a/a/i;-><init>(Landroid/content/Context;Lcom/a/a/a/a/p;Ljava/lang/String;)V
+
+    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/a/a/a/a/i;
 
     const v0, 0x7f0b0012
 
@@ -215,7 +389,7 @@
 
     const-string v0, "target"
 
-    invoke-virtual {p0, v0, v2}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v8}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -297,7 +471,7 @@
 
     const-string v1, "stopit"
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v8}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -321,6 +495,84 @@
     return-void
 .end method
 
+.method protected onCreateDialog(I)Landroid/app/Dialog;
+    .locals 4
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ne p1, v0, :cond_0
+
+    :goto_0
+    new-instance v2, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const-string v3, "License Error"
+
+    invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v2
+
+    if-eqz v0, :cond_1
+
+    const v1, 0x7f07000f
+
+    :goto_1
+    invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v2
+
+    if-eqz v0, :cond_2
+
+    const v1, 0x7f070011
+
+    :goto_2
+    new-instance v3, Lcom/golgorz/hoveringcontrols/n;
+
+    invoke-direct {v3, p0, v0}, Lcom/golgorz/hoveringcontrols/n;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+
+    invoke-virtual {v2, v1, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f070012
+
+    new-instance v2, Lcom/golgorz/hoveringcontrols/o;
+
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/o;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    const v1, 0x7f07000e
+
+    goto :goto_1
+
+    :cond_2
+    const v1, 0x7f070010
+
+    goto :goto_2
+.end method
+
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
     .locals 2
 
@@ -338,9 +590,13 @@
 .end method
 
 .method protected onDestroy()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/a/a/a/a/i;
+
+    invoke-virtual {v0}, Lcom/a/a/a/a/i;->a()V
 
     return-void
 .end method
@@ -354,7 +610,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b002a
+    const v1, 0x7f0b002c
 
     if-ne v0, v1, :cond_0
 
@@ -401,12 +657,6 @@
     move-result-object v0
 
     const-string v1, "\nGoogle Play Developer name:\n Golgorz"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\n- This version is from original thread in XDA-Developers"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -462,9 +712,9 @@
 
     const-string v1, "Ok"
 
-    new-instance v2, Lcom/golgorz/hoveringcontrols/i;
+    new-instance v2, Lcom/golgorz/hoveringcontrols/m;
 
-    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/i;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/m;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -493,7 +743,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0028
+    const v1, 0x7f0b002a
 
     if-ne v0, v1, :cond_1
 
@@ -518,7 +768,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b002b
+    const v1, 0x7f0b002d
 
     if-ne v0, v1, :cond_3
 
@@ -563,7 +813,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0029
+    const v1, 0x7f0b002b
 
     if-ne v0, v1, :cond_2
 

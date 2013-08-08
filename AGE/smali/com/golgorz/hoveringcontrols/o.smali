@@ -1,38 +1,33 @@
 .class Lcom/golgorz/hoveringcontrols/o;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/o;->a:Lcom/golgorz/hoveringcontrols/MyService;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/o;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/o;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
 
-    const-string v1, "ALARMA RECIVIDA"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/o;->a:Lcom/golgorz/hoveringcontrols/MyService;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->b(Lcom/golgorz/hoveringcontrols/MyService;Z)V
+    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->finish()V
 
     return-void
 .end method

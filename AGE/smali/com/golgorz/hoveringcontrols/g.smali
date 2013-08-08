@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030008
+    const v1, 0x7f030009
 
     const/4 v2, 0x0
 
@@ -65,7 +65,7 @@
 
     invoke-direct {v1, v0}, Lcom/golgorz/hoveringcontrols/h;-><init>(Lcom/golgorz/hoveringcontrols/ListApps;)V
 
-    const v0, 0x7f0b0024
+    const v0, 0x7f0b0026
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     iput-object v0, v1, Lcom/golgorz/hoveringcontrols/h;->b:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b0025
+    const v0, 0x7f0b0027
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="15" android:versionName="1.2.9" package="com.golgorz.hoveringcontrols"
+<manifest android:versionCode="16" android:versionName="1.3.0" package="com.golgorz.hoveringcontrols"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -46,12 +46,13 @@
             </intent-filter>
         </receiver>
         <activity android:label="@string/title_activity_list_apps" android:name="com.golgorz.hoveringcontrols.ListApps" android:configChanges="keyboard|keyboardHidden|orientation" android:hardwareAccelerated="true" />
+        <activity android:label="@string/title_activitylistvideoplayer" android:name="com.golgorz.hoveringcontrols.ListVideoPlayers" android:configChanges="keyboard|keyboardHidden|orientation" android:hardwareAccelerated="true" />
         <activity android:label="@string/title_activity_carousel_list" android:name="com.golgorz.hoveringcontrols.CarouselList" />
         <activity android:label="@string/menu_settings" android:name="com.golgorz.hoveringcontrols.Settings" android:configChanges="keyboard|keyboardHidden|orientation" />
         <activity android:label="@string/title_activity_sensor_test" android:name="com.golgorz.hoveringcontrols.SensorTest" />
-        <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/title_activity_quick_glance" android:name="com.golgorz.hoveringcontrols.QuickGlance" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/title_activity_quick_glance" android:name="com.golgorz.hoveringcontrols.QuickGlance" android:configChanges="keyboardHidden|orientation|screenSize" android:noHistory="true" />
         <activity android:label="@string/title_activity_tilted" android:name="com.golgorz.hoveringcontrols.Tilted" />
-        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:label="@string/title_activity_unlock_normal" android:name="com.golgorz.hoveringcontrols.UnlockNormal" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/title_activity_unlock_normal" android:name="com.golgorz.hoveringcontrols.UnlockNormal" android:noHistory="true" />
         <activity android:label="@string/title_activity_enable_keyguard" android:name="com.golgorz.hoveringcontrols.EnableKeyguard" />
     </application>
 </manifest>

@@ -1,5 +1,5 @@
-.class public Lcom/a/a/b/b;
-.super Lcom/a/a/b/a;
+.class public Lcom/b/a/b/b;
+.super Lcom/b/a/b/a;
 
 
 # instance fields
@@ -10,13 +10,13 @@
 .method public varargs constructor <init>(I[Ljava/lang/String;)V
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Lcom/a/a/b/a;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/b/a/b/a;-><init>(I[Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/a/a/b/b;->f:Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/b/a/b/b;->f:Ljava/lang/StringBuilder;
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 .method public a(ILjava/lang/String;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/a/a/b/b;->f:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/b/a/b/b;->f:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,7 +66,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/b/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/a/a/b/b;->f:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/b/a/b/b;->f:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

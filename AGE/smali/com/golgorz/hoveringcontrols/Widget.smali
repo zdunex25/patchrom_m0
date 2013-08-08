@@ -60,7 +60,7 @@
 
     const/4 v5, 0x1
 
-    const v4, 0x7f0b0027
+    const v4, 0x7f0b0029
 
     const/4 v3, 0x0
 
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f03000a
+    const v2, 0x7f03000b
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
@@ -146,7 +146,7 @@
 
     sget-object v1, Lcom/golgorz/hoveringcontrols/Widget;->a:Landroid/widget/RemoteViews;
 
-    const v2, 0x7f020007
+    const v2, 0x7f020008
 
     invoke-virtual {v1, v4, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
@@ -177,7 +177,7 @@
     :cond_1
     sget-object v1, Lcom/golgorz/hoveringcontrols/Widget;->a:Landroid/widget/RemoteViews;
 
-    const v2, 0x7f020006
+    const v2, 0x7f020007
 
     invoke-virtual {v1, v4, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 

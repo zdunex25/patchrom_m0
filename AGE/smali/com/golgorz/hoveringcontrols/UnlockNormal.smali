@@ -52,9 +52,9 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/UnlockNormal;->a:Landroid/os/Handler;
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/ag;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/aq;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ag;-><init>(Lcom/golgorz/hoveringcontrols/UnlockNormal;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/aq;-><init>(Lcom/golgorz/hoveringcontrols/UnlockNormal;)V
 
     iget v2, p0, Lcom/golgorz/hoveringcontrols/UnlockNormal;->b:I
 

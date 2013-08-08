@@ -1,4 +1,4 @@
-.class public Lcom/a/a/b/f;
+.class public Lcom/b/a/b/f;
 .super Ljava/lang/Thread;
 
 
@@ -20,21 +20,21 @@
 
     const/16 v0, -0x38f
 
-    iput v0, p0, Lcom/a/a/b/f;->a:I
+    iput v0, p0, Lcom/b/a/b/f;->a:I
 
-    iput-object p1, p0, Lcom/a/a/b/f;->b:Ljava/lang/Process;
+    iput-object p1, p0, Lcom/b/a/b/f;->b:Ljava/lang/Process;
 
-    iput-object p2, p0, Lcom/a/a/b/f;->c:Ljava/io/BufferedReader;
+    iput-object p2, p0, Lcom/b/a/b/f;->c:Ljava/io/BufferedReader;
 
-    iput-object p3, p0, Lcom/a/a/b/f;->d:Ljava/io/OutputStreamWriter;
+    iput-object p3, p0, Lcom/b/a/b/f;->d:Ljava/io/OutputStreamWriter;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;Lcom/a/a/b/d;)V
+.method synthetic constructor <init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;Lcom/b/a/b/d;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/a/a/b/f;-><init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/b/a/b/f;-><init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;)V
 
     return-void
 .end method
@@ -45,19 +45,19 @@
     .locals 2
 
     :try_start_0
-    iget-object v0, p0, Lcom/a/a/b/f;->d:Ljava/io/OutputStreamWriter;
+    iget-object v0, p0, Lcom/b/a/b/f;->d:Ljava/io/OutputStreamWriter;
 
     const-string v1, "echo Started\n"
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/a/a/b/f;->d:Ljava/io/OutputStreamWriter;
+    iget-object v0, p0, Lcom/b/a/b/f;->d:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->flush()V
 
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/a/a/b/f;->c:Ljava/io/BufferedReader;
+    iget-object v0, p0, Lcom/b/a/b/f;->c:Ljava/io/BufferedReader;
 
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -78,7 +78,7 @@
 
     const/16 v1, -0x2a
 
-    iput v1, p0, Lcom/a/a/b/f;->a:I
+    iput v1, p0, Lcom/b/a/b/f;->a:I
 
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/a/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/b/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     :goto_1
     return-void
@@ -115,14 +115,14 @@
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/a/a/b/f;->a:I
+    iput v0, p0, Lcom/b/a/b/f;->a:I
 
     goto :goto_1
 
     :cond_2
     const-string v0, "unkown error occured."
 
-    invoke-static {v0}, Lcom/a/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/b/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -131,7 +131,7 @@
     :cond_3
     const-string v0, "RootAccess denied?."
 
-    invoke-static {v0}, Lcom/a/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/b/a/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     goto :goto_1
 .end method

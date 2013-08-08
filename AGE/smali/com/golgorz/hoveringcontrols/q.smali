@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MainActivity;
+
+.field private final synthetic b:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MyService;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
+
+    iput-boolean p2, p0, Lcom/golgorz/hoveringcontrols/q;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,13 +27,24 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MyService;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
 
-    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->f(Lcom/golgorz/hoveringcontrols/MyService;Z)V
+    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setProgressBarIndeterminateVisibility(Z)V
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
+
+    iget-boolean v2, p0, Lcom/golgorz/hoveringcontrols/q;->b:Z
+
+    if-eqz v2, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->showDialog(I)V
 
     return-void
 .end method

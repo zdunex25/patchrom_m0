@@ -2,6 +2,6 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ProgressBar android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
-    <CheckBox android:id="@id/checkBox1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Open Previous App" android:onClick="previous" />
+    <CheckBox android:id="@id/alterdetect" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Open Previous App" android:onClick="previous" />
     <ListView android:id="@android:id/list" android:drawingCacheQuality="low" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" />
 </LinearLayout>

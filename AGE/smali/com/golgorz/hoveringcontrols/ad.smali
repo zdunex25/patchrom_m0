@@ -1,39 +1,32 @@
 .class Lcom/golgorz/hoveringcontrols/ad;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/SensorTest;
+.field a:I
+
+.field b:Ljava/lang/String;
+
+.field c:Ljava/lang/CharSequence;
+
+.field d:Landroid/content/Intent;
+
+.field e:I
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/SensorTest;)V
+.method public constructor <init>(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
-
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/ad;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p3, p0, Lcom/golgorz/hoveringcontrols/ad;->b:Ljava/lang/String;
 
+    iput-object p4, p0, Lcom/golgorz/hoveringcontrols/ad;->c:Ljava/lang/CharSequence;
 
-# virtual methods
-.method public run()V
-    .locals 2
+    iput p5, p0, Lcom/golgorz/hoveringcontrols/ad;->a:I
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/ad;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const-string v1, "Waiting for shake"
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iput p6, p0, Lcom/golgorz/hoveringcontrols/ad;->e:I
 
     return-void
 .end method

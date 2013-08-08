@@ -1,47 +1,35 @@
 .class Lcom/golgorz/hoveringcontrols/z;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/z;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/z;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public run()V
     .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/z;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/z;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->finish()V
+    const/4 v1, 0x1
 
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->g(Lcom/golgorz/hoveringcontrols/MyService;Z)V
 
-    const-string v1, "QUICKGLANCE KILLED"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

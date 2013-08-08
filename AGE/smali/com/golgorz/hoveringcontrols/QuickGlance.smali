@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    const v0, 0x7f030004
+    const v0, 0x7f030005
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->setContentView(I)V
 
@@ -106,9 +106,9 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->j:Landroid/widget/TextView;
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/w;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/af;
 
-    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/w;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/af;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->d:Landroid/content/BroadcastReceiver;
 
@@ -266,9 +266,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/x;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/ag;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/x;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ag;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     const-wide/16 v2, 0x12c
 
@@ -278,17 +278,17 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/y;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/ah;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/y;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ah;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     const-wide/16 v2, 0xfa0
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/z;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/ai;
 
-    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/z;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/ai;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->e:Landroid/content/BroadcastReceiver;
 

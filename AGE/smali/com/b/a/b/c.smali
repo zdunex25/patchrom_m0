@@ -1,15 +1,15 @@
-.class public Lcom/a/a/b/c;
+.class public Lcom/b/a/b/c;
 .super Ljava/lang/Object;
 
 
 # static fields
 .field private static f:Ljava/lang/String;
 
-.field private static g:Lcom/a/a/b/c;
+.field private static g:Lcom/b/a/b/c;
 
-.field private static h:Lcom/a/a/b/c;
+.field private static h:Lcom/b/a/b/c;
 
-.field private static i:Lcom/a/a/b/c;
+.field private static i:Lcom/b/a/b/c;
 
 .field private static j:I
 
@@ -38,17 +38,17 @@
 
     const-string v0, ""
 
-    sput-object v0, Lcom/a/a/b/c;->f:Ljava/lang/String;
+    sput-object v0, Lcom/b/a/b/c;->f:Ljava/lang/String;
 
-    sput-object v1, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
-    sput-object v1, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
-    sput-object v1, Lcom/a/a/b/c;->i:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->i:Lcom/b/a/b/c;
 
     const/16 v0, 0x2710
 
-    sput v0, Lcom/a/a/b/c;->j:I
+    sput v0, Lcom/b/a/b/c;->j:I
 
     return-void
 .end method
@@ -66,21 +66,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iput-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
-    iput-boolean v2, p0, Lcom/a/a/b/c;->e:Z
+    iput-boolean v2, p0, Lcom/b/a/b/c;->e:Z
 
-    new-instance v0, Lcom/a/a/b/d;
+    new-instance v0, Lcom/b/a/b/d;
 
-    invoke-direct {v0, p0}, Lcom/a/a/b/d;-><init>(Lcom/a/a/b/c;)V
+    invoke-direct {v0, p0}, Lcom/b/a/b/d;-><init>(Lcom/b/a/b/c;)V
 
-    iput-object v0, p0, Lcom/a/a/b/c;->k:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/b/a/b/c;->k:Ljava/lang/Runnable;
 
-    new-instance v0, Lcom/a/a/b/e;
+    new-instance v0, Lcom/b/a/b/e;
 
-    invoke-direct {v0, p0}, Lcom/a/a/b/e;-><init>(Lcom/a/a/b/c;)V
+    invoke-direct {v0, p0}, Lcom/b/a/b/e;-><init>(Lcom/b/a/b/c;)V
 
-    iput-object v0, p0, Lcom/a/a/b/c;->l:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/b/a/b/c;->l:Ljava/lang/Runnable;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/ProcessBuilder;
 
@@ -118,13 +118,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iput-object v0, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     new-instance v0, Ljava/io/BufferedReader;
 
     new-instance v1, Ljava/io/InputStreamReader;
 
-    iget-object v2, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v2, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v2}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
 
@@ -134,11 +134,11 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    iput-object v0, p0, Lcom/a/a/b/c;->b:Ljava/io/BufferedReader;
+    iput-object v0, p0, Lcom/b/a/b/c;->b:Ljava/io/BufferedReader;
 
     new-instance v0, Ljava/io/OutputStreamWriter;
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v1}, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
 
@@ -148,42 +148,42 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/a/a/b/c;->c:Ljava/io/OutputStreamWriter;
+    iput-object v0, p0, Lcom/b/a/b/c;->c:Ljava/io/OutputStreamWriter;
 
-    new-instance v0, Lcom/a/a/b/f;
+    new-instance v0, Lcom/b/a/b/f;
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
-    iget-object v2, p0, Lcom/a/a/b/c;->b:Ljava/io/BufferedReader;
+    iget-object v2, p0, Lcom/b/a/b/c;->b:Ljava/io/BufferedReader;
 
-    iget-object v3, p0, Lcom/a/a/b/c;->c:Ljava/io/OutputStreamWriter;
+    iget-object v3, p0, Lcom/b/a/b/c;->c:Ljava/io/OutputStreamWriter;
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/a/a/b/f;-><init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;Lcom/a/a/b/d;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/b/a/b/f;-><init>(Ljava/lang/Process;Ljava/io/BufferedReader;Ljava/io/OutputStreamWriter;Lcom/b/a/b/d;)V
 
-    invoke-virtual {v0}, Lcom/a/a/b/f;->start()V
+    invoke-virtual {v0}, Lcom/b/a/b/f;->start()V
 
     :try_start_0
-    sget v1, Lcom/a/a/b/c;->j:I
+    sget v1, Lcom/b/a/b/c;->j:I
 
     int-to-long v1, v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b/f;->join(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/b/a/b/f;->join(J)V
 
-    iget v1, v0, Lcom/a/a/b/f;->a:I
+    iget v1, v0, Lcom/b/a/b/f;->a:I
 
     const/16 v2, -0x38f
 
     if-ne v1, v2, :cond_0
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v1}, Ljava/lang/Process;->destroy()V
 
     new-instance v1, Ljava/util/concurrent/TimeoutException;
 
-    sget-object v2, Lcom/a/a/b/c;->f:Ljava/lang/String;
+    sget-object v2, Lcom/b/a/b/c;->f:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
 
@@ -194,7 +194,7 @@
     :catch_0
     move-exception v1
 
-    invoke-virtual {v0}, Lcom/a/a/b/f;->interrupt()V
+    invoke-virtual {v0}, Lcom/b/a/b/f;->interrupt()V
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -210,28 +210,28 @@
 
     :cond_0
     :try_start_1
-    iget v1, v0, Lcom/a/a/b/f;->a:I
+    iget v1, v0, Lcom/b/a/b/f;->a:I
 
     const/16 v2, -0x2a
 
     if-ne v1, v2, :cond_1
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v1}, Ljava/lang/Process;->destroy()V
 
-    new-instance v1, Lcom/a/a/a/a;
+    new-instance v1, Lcom/b/a/a/a;
 
     const-string v2, "Root Access Denied"
 
-    invoke-direct {v1, v2}, Lcom/a/a/a/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/b/a/a/a;-><init>(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
     new-instance v1, Ljava/lang/Thread;
 
-    iget-object v2, p0, Lcom/a/a/b/c;->k:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/b/a/b/c;->k:Ljava/lang/Runnable;
 
     const-string v3, "Shell Input"
 
@@ -241,7 +241,7 @@
 
     new-instance v1, Ljava/lang/Thread;
 
-    iget-object v2, p0, Lcom/a/a/b/c;->l:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/b/a/b/c;->l:Ljava/lang/Runnable;
 
     const-string v3, "Shell Output"
 
@@ -254,46 +254,46 @@
     return-void
 .end method
 
-.method public static a(I)Lcom/a/a/b/c;
+.method public static a(I)Lcom/b/a/b/c;
     .locals 1
 
     const/4 v0, 0x3
 
-    invoke-static {p0, v0}, Lcom/a/a/b/c;->a(II)Lcom/a/a/b/c;
+    invoke-static {p0, v0}, Lcom/b/a/b/c;->a(II)Lcom/b/a/b/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(II)Lcom/a/a/b/c;
+.method public static a(II)Lcom/b/a/b/c;
     .locals 4
 
-    sput p0, Lcom/a/a/b/c;->j:I
+    sput p0, Lcom/b/a/b/c;->j:I
 
-    sget-object v0, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     if-nez v0, :cond_1
 
     const-string v0, "Starting Root Shell!"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
     const-string v3, "su"
 
     const/4 v0, 0x0
 
     :goto_0
-    sget-object v1, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v1, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     if-nez v1, :cond_2
 
     :try_start_0
-    new-instance v1, Lcom/a/a/b/c;
+    new-instance v1, Lcom/b/a/b/c;
 
-    invoke-direct {v1, v3}, Lcom/a/a/b/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v3}, Lcom/b/a/b/c;-><init>(Ljava/lang/String;)V
 
-    sput-object v1, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -310,7 +310,7 @@
 
     const-string v0, "IOException, could not start shell"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
     throw v2
 
@@ -322,10 +322,10 @@
     :cond_1
     const-string v0, "Using Existing Root Shell!"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
     :cond_2
-    sget-object v0, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     return-object v0
 .end method
@@ -333,52 +333,52 @@
 .method static synthetic a(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    sput-object p0, Lcom/a/a/b/c;->f:Ljava/lang/String;
+    sput-object p0, Lcom/b/a/b/c;->f:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/a/a/b/c;)V
+.method static synthetic a(Lcom/b/a/b/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/a/a/b/c;->g()V
+    invoke-direct {p0}, Lcom/b/a/b/c;->g()V
 
     return-void
 .end method
 
-.method public static b(I)Lcom/a/a/b/c;
+.method public static b(I)Lcom/b/a/b/c;
     .locals 2
 
-    sput p0, Lcom/a/a/b/c;->j:I
+    sput p0, Lcom/b/a/b/c;->j:I
 
     :try_start_0
-    sget-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     if-nez v0, :cond_0
 
     const-string v0, "Starting Shell!"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/a/a/b/c;
+    new-instance v0, Lcom/b/a/b/c;
 
     const-string v1, "/system/bin/sh"
 
-    invoke-direct {v0, v1}, Lcom/a/a/b/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/b/a/b/c;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sput-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     :goto_0
-    sget-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     return-object v0
 
     :cond_0
     const-string v0, "Using Existing Shell!"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
     :try_end_0
-    .catch Lcom/a/a/a/a; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/b/a/a/a; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -395,7 +395,7 @@
 .method public static b()V
     .locals 1
 
-    sget-object v0, Lcom/a/a/b/c;->i:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->i:Lcom/b/a/b/c;
 
     if-nez v0, :cond_0
 
@@ -403,17 +403,17 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/a/a/b/c;->i:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->i:Lcom/b/a/b/c;
 
-    invoke-virtual {v0}, Lcom/a/a/b/c;->a()V
+    invoke-virtual {v0}, Lcom/b/a/b/c;->a()V
 
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/a/a/b/c;)V
+.method static synthetic b(Lcom/b/a/b/c;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/a/a/b/c;->f()V
+    invoke-direct {p0}, Lcom/b/a/b/c;->f()V
 
     return-void
 .end method
@@ -421,7 +421,7 @@
 .method public static c()V
     .locals 1
 
-    sget-object v0, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     if-nez v0, :cond_0
 
@@ -429,9 +429,9 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
-    invoke-virtual {v0}, Lcom/a/a/b/c;->a()V
+    invoke-virtual {v0}, Lcom/b/a/b/c;->a()V
 
     goto :goto_0
 .end method
@@ -439,7 +439,7 @@
 .method public static d()V
     .locals 1
 
-    sget-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     if-nez v0, :cond_0
 
@@ -447,9 +447,9 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
-    invoke-virtual {v0}, Lcom/a/a/b/c;->a()V
+    invoke-virtual {v0}, Lcom/b/a/b/c;->a()V
 
     goto :goto_0
 .end method
@@ -457,11 +457,11 @@
 .method public static e()V
     .locals 0
 
-    invoke-static {}, Lcom/a/a/b/c;->d()V
+    invoke-static {}, Lcom/b/a/b/c;->d()V
 
-    invoke-static {}, Lcom/a/a/b/c;->c()V
+    invoke-static {}, Lcom/b/a/b/c;->c()V
 
-    invoke-static {}, Lcom/a/a/b/c;->b()V
+    invoke-static {}, Lcom/b/a/b/c;->b()V
 
     return-void
 .end method
@@ -483,7 +483,7 @@
 
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/a/a/b/c;->b:Ljava/io/BufferedReader;
+    iget-object v1, p0, Lcom/b/a/b/c;->b:Ljava/io/BufferedReader;
 
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -494,22 +494,22 @@
     :goto_1
     const-string v1, "Read all output"
 
-    invoke-static {v1}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v1}, Ljava/lang/Process;->waitFor()I
 
-    iget-object v1, p0, Lcom/a/a/b/c;->a:Ljava/lang/Process;
+    iget-object v1, p0, Lcom/b/a/b/c;->a:Ljava/lang/Process;
 
     invoke-virtual {v1}, Ljava/lang/Process;->destroy()V
 
     const-string v1, "Shell destroyed"
 
-    invoke-static {v1}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/b/a/a;->a(Ljava/lang/String;)V
 
     :goto_2
-    iget-object v1, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v1, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -519,18 +519,18 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/a/a/b/a;
+    check-cast v0, Lcom/b/a/b/a;
 
     :cond_1
     const-string v1, "Unexpected Termination."
 
-    invoke-virtual {v0, v1}, Lcom/a/a/b/a;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/b/a/b/a;->b(Ljava/lang/String;)V
 
     add-int/lit8 v4, v4, 0x1
 
@@ -541,7 +541,7 @@
     :cond_2
     if-nez v0, :cond_4
 
-    iget-object v3, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v3, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -549,20 +549,20 @@
 
     if-lt v4, v3, :cond_3
 
-    iget-boolean v1, p0, Lcom/a/a/b/c;->e:Z
+    iget-boolean v1, p0, Lcom/b/a/b/c;->e:Z
 
     if-eqz v1, :cond_0
 
     goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/a/a/b/a;
+    check-cast v0, Lcom/b/a/b/a;
 
     :cond_4
     const-string v3, "F*D^W@#FGF"
@@ -573,13 +573,13 @@
 
     if-lez v3, :cond_5
 
-    iget v6, v0, Lcom/a/a/b/a;->d:I
+    iget v6, v0, Lcom/b/a/b/a;->d:I
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0, v6, v7}, Lcom/a/a/b/a;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, v6, v7}, Lcom/b/a/b/a;->a(ILjava/lang/String;)V
 
     :cond_5
     if-ltz v3, :cond_7
@@ -630,7 +630,7 @@
     :goto_4
     if-ne v1, v4, :cond_6
 
-    invoke-virtual {v0, v6}, Lcom/a/a/b/a;->b(I)V
+    invoke-virtual {v0, v6}, Lcom/b/a/b/a;->b(I)V
 
     add-int/lit8 v0, v4, 0x1
 
@@ -651,9 +651,9 @@
     move-object v1, v3
 
     :cond_7
-    iget v3, v0, Lcom/a/a/b/a;->d:I
+    iget v3, v0, Lcom/b/a/b/a;->d:I
 
-    invoke-virtual {v0, v3, v1}, Lcom/a/a/b/a;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, v3, v1}, Lcom/b/a/b/a;->a(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -673,7 +673,7 @@
 
     :goto_0
     :try_start_0
-    iget-object v2, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v2, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     monitor-enter v2
     :try_end_0
@@ -681,11 +681,11 @@
 
     :goto_1
     :try_start_1
-    iget-boolean v0, p0, Lcom/a/a/b/c;->e:Z
+    iget-boolean v0, p0, Lcom/b/a/b/c;->e:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -693,7 +693,7 @@
 
     if-lt v1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
@@ -720,21 +720,21 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v1, v2, v0}, Lcom/a/a/a;->a(Ljava/lang/String;ILjava/lang/Exception;)V
+    invoke-static {v1, v2, v0}, Lcom/b/a/a;->a(Ljava/lang/String;ILjava/lang/Exception;)V
 
     :goto_2
     return-void
 
     :cond_0
     :try_start_3
-    iget-object v3, p0, Lcom/a/a/b/c;->c:Ljava/io/OutputStreamWriter;
+    iget-object v3, p0, Lcom/b/a/b/c;->c:Ljava/io/OutputStreamWriter;
 
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :try_start_4
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -742,15 +742,15 @@
 
     if-ge v1, v0, :cond_1
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/a/a/b/a;
+    check-cast v0, Lcom/b/a/b/a;
 
-    invoke-virtual {v0, v3}, Lcom/a/a/b/a;->a(Ljava/io/OutputStreamWriter;)V
+    invoke-virtual {v0, v3}, Lcom/b/a/b/a;->a(Ljava/io/OutputStreamWriter;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -788,7 +788,7 @@
     goto :goto_0
 
     :cond_1
-    iget-boolean v0, p0, Lcom/a/a/b/c;->e:Z
+    iget-boolean v0, p0, Lcom/b/a/b/c;->e:Z
 
     if-eqz v0, :cond_2
 
@@ -802,7 +802,7 @@
 
     const-string v0, "Closing shell"
 
-    invoke-static {v0}, Lcom/a/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/b/a/a;->a(Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
 
@@ -816,10 +816,10 @@
 
 
 # virtual methods
-.method public a(Lcom/a/a/b/a;)Lcom/a/a/b/a;
+.method public a(Lcom/b/a/b/a;)Lcom/b/a/b/a;
     .locals 2
 
-    iget-boolean v0, p0, Lcom/a/a/b/c;->e:Z
+    iget-boolean v0, p0, Lcom/b/a/b/c;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -832,16 +832,16 @@
     throw v0
 
     :cond_0
-    iget-object v1, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v1, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
@@ -864,37 +864,37 @@
 
     const/4 v1, 0x0
 
-    sget-object v0, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     if-ne p0, v0, :cond_0
 
-    sput-object v1, Lcom/a/a/b/c;->g:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->g:Lcom/b/a/b/c;
 
     :cond_0
-    sget-object v0, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     if-ne p0, v0, :cond_1
 
-    sput-object v1, Lcom/a/a/b/c;->h:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->h:Lcom/b/a/b/c;
 
     :cond_1
-    sget-object v0, Lcom/a/a/b/c;->i:Lcom/a/a/b/c;
+    sget-object v0, Lcom/b/a/b/c;->i:Lcom/b/a/b/c;
 
     if-ne p0, v0, :cond_2
 
-    sput-object v1, Lcom/a/a/b/c;->i:Lcom/a/a/b/c;
+    sput-object v1, Lcom/b/a/b/c;->i:Lcom/b/a/b/c;
 
     :cond_2
-    iget-object v1, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v1, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     monitor-enter v1
 
     const/4 v0, 0x1
 
     :try_start_0
-    iput-boolean v0, p0, Lcom/a/a/b/c;->e:Z
+    iput-boolean v0, p0, Lcom/b/a/b/c;->e:Z
 
-    iget-object v0, p0, Lcom/a/a/b/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/b/a/b/c;->d:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 

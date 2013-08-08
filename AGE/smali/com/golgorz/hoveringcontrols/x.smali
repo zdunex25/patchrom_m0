@@ -1,61 +1,38 @@
 .class Lcom/golgorz/hoveringcontrols/x;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->getApplicationContext()Landroid/content/Context;
+    const-string v1, "ALARMA RECIVIDA"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    const-string v1, "power"
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    const v2, 0x1000001a
-
-    const-string v3, "Hovering Controls"
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/golgorz/hoveringcontrols/QuickGlance;->k:Landroid/os/PowerManager$WakeLock;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/x;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    iget-object v0, v0, Lcom/golgorz/hoveringcontrols/QuickGlance;->k:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->b(Lcom/golgorz/hoveringcontrols/MyService;Z)V
 
     return-void
 .end method

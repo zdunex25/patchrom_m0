@@ -1,4 +1,4 @@
-.class public final Lcom/a/a/a;
+.class public final Lcom/b/a/a;
 .super Ljava/lang/Object;
 
 
@@ -13,7 +13,7 @@
 
 .field public static e:Z
 
-.field private static f:Lcom/a/a/c/a;
+.field private static f:Lcom/b/a/c/a;
 
 
 # direct methods
@@ -24,59 +24,59 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/a/a/a;->f:Lcom/a/a/c/a;
+    sput-object v0, Lcom/b/a/a;->f:Lcom/b/a/c/a;
 
-    sput-boolean v1, Lcom/a/a/a;->a:Z
+    sput-boolean v1, Lcom/b/a/a;->a:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/a/a/a;->b:Ljava/util/List;
+    sput-object v0, Lcom/b/a/a;->b:Ljava/util/List;
 
     const-string v0, ""
 
-    sput-object v0, Lcom/a/a/a;->c:Ljava/lang/String;
+    sput-object v0, Lcom/b/a/a;->c:Ljava/lang/String;
 
-    sput v1, Lcom/a/a/a;->d:I
+    sput v1, Lcom/b/a/a;->d:I
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/a/a/a;->e:Z
+    sput-boolean v0, Lcom/b/a/a;->e:Z
 
     return-void
 .end method
 
-.method public static a(Z)Lcom/a/a/b/c;
+.method public static a(Z)Lcom/b/a/b/c;
     .locals 1
 
     const/16 v0, 0x2710
 
-    invoke-static {p0, v0}, Lcom/a/a/a;->a(ZI)Lcom/a/a/b/c;
+    invoke-static {p0, v0}, Lcom/b/a/a;->a(ZI)Lcom/b/a/b/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(ZI)Lcom/a/a/b/c;
+.method public static a(ZI)Lcom/b/a/b/c;
     .locals 1
 
     const/4 v0, 0x3
 
-    invoke-static {p0, p1, v0}, Lcom/a/a/a;->a(ZII)Lcom/a/a/b/c;
+    invoke-static {p0, p1, v0}, Lcom/b/a/a;->a(ZII)Lcom/b/a/b/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(ZII)Lcom/a/a/b/c;
+.method public static a(ZII)Lcom/b/a/b/c;
     .locals 1
 
     if-eqz p0, :cond_0
 
-    invoke-static {p1}, Lcom/a/a/b/c;->a(I)Lcom/a/a/b/c;
+    invoke-static {p1}, Lcom/b/a/b/c;->a(I)Lcom/b/a/b/c;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p1}, Lcom/a/a/b/c;->b(I)Lcom/a/a/b/c;
+    invoke-static {p1}, Lcom/b/a/b/c;->b(I)Lcom/b/a/b/c;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     const/4 v0, 0x3
 
-    invoke-static {v1, p0, v0, v1}, Lcom/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
+    invoke-static {v1, p0, v0, v1}, Lcom/b/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0, p0, p1, p2}, Lcom/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
+    invoke-static {v0, p0, p1, p2}, Lcom/b/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
     return-void
 .end method
@@ -120,7 +120,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, p1, v0, v1}, Lcom/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
+    invoke-static {p0, p1, v0, v1}, Lcom/b/a/a;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
     return-void
 .end method
@@ -138,7 +138,7 @@
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcom/a/a/a;->a:Z
+    sget-boolean v0, Lcom/b/a/a;->a:Z
 
     if-eqz v0, :cond_1
 
