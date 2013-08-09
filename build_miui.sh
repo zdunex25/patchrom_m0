@@ -394,7 +394,7 @@ data=`date +%-d/%-m/%Y`
 LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
 MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version.zip"
 MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
+echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" ota="'$ota'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
