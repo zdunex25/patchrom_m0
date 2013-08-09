@@ -50,9 +50,6 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
     <header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
         <intent android:action="com.android.settings.CARRIER\" \/>\
     <\/header>\
-    <header android:icon=\"@drawable\/ic_accessibility_settings\" android:title=\"@string\/age_settings\">\
-        <intent android:action="com.android.settings.GESTURE\" \/>\
-    <\/header>\
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
     <\/header>\
@@ -63,9 +60,9 @@ cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.playe
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/polish_translation\" android:key=\"polish_translation\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
-cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
-    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
-cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
+#cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
+#    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
+cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
 \
     .line 116\
     const-string v22, \"build_author\"\
@@ -162,7 +159,6 @@ sed -i -e 's/>Efekty muzyczne/>Equalizer MIUI/' pl/Settings/res/values-pl/string
 sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
-  <string name=\"age_settings\">Kontrola gestami<\/string>\
 <\/resources>/' pl/Settings/res/values-pl/strings.xml
 cp -u -r pl/Settings/* ../Settings
 cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
@@ -177,9 +173,9 @@ sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruch
   <string name=\"android_factorytest_download\">Tryb odin<\/string>\
 <\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"def_sms_received_sound\" id=\"0x060c0253\"\/>/<public type=\"string\" name=\"def_sms_received_sound\" id=\"0x060c0253\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0254\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0255\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
+sed -i -e 's/<public type=\"string\" name=\"android_action_bar_up_description\" id=\"0x060c0255\"\/>/<public type=\"string\" name=\"android_action_bar_up_description\" id=\"0x060c0255\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0256\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0257\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/BugReport
 rm -rf pl/MiuiHome
@@ -305,7 +301,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0254\
+    const v3, 0x60c0256\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -315,7 +311,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0255\
+    const v3, 0x60c0257\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 

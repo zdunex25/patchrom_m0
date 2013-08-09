@@ -7,5 +7,4 @@
     <string name="carrier_settings">Carrier name</string>
     <string name="galaxy_settings">Galaxy settings</string>
     <string name="osb_settings">On screen buttons</string>
-    <string name="age_settings">Hovering controls</string>
 </resources>
