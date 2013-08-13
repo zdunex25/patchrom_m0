@@ -50,6 +50,9 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
     <header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
         <intent android:action="com.android.settings.CARRIER\" \/>\
     <\/header>\
+    <header android:icon=\"@drawable\/ic_accessibility_settings\" android:title=\"@string\/age_settings\">\
+        <intent android:action="com.android.settings.GESTURE\" \/>\
+    <\/header>\
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
     <\/header>\
