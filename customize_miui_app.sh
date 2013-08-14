@@ -101,6 +101,7 @@ if [ $1 = "MiuiHome" ];then
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
+    sed -i -e 's/config_maxNotificationIcons\">5/config_maxNotificationIcons\">3/' $2/res/values-sw720dp/integers.xml
     $XMLMERGYTOOL $1/res/values $2/res/values
     $XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi
     appendPart $1
