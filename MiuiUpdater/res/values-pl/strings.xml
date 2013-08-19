@@ -32,7 +32,7 @@ Plik .zip znajduje się w: %1$s"</string>
     <string name="alert_unsupported_message">"Deweloper ROMu nie dodał wsparcia OTA Updatera! Zanim użyjesz tej aplikacji!Proszę zapytaj go (grzecznie) czy nie dodałby wsparcia OTA Updatera
 
 (wartość updater.id pusta lub jej brak)"</string>
-    <string name="alert_update_to">Ta aktualizacja zaktualizuje twój ROM z wersji (%1$s)do %2$s</string>
+    <string name="alert_update_to">Ta aktualizacja zaktualizuje Twój ROM (%1$s) do wersji %2$s</string>
     <string name="alert_prune_title">Usuń pliki starsze niż</string>
     <string name="menu_view">Wyświetl pobrane ROMy</string>
     <string name="menu_about">O aplikacji</string>

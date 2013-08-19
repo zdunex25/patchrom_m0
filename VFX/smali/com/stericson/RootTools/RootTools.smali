@@ -83,7 +83,7 @@
     .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 956
+    .line 811
     return-void
 .end method
 
@@ -92,7 +92,7 @@
     .parameter "util"
 
     .prologue
-    .line 133
+    .line 130
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -113,10 +113,10 @@
     .end annotation
 
     .prologue
-    .line 144
+    .line 139
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->closeAll()V
 
-    .line 145
+    .line 140
     return-void
 .end method
 
@@ -129,10 +129,10 @@
     .end annotation
 
     .prologue
-    .line 155
+    .line 148
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->closeCustomShell()V
 
-    .line 156
+    .line 149
     return-void
 .end method
 
@@ -146,17 +146,17 @@
     .end annotation
 
     .prologue
-    .line 169
+    .line 158
     if-eqz p0, :cond_0
 
-    .line 170
+    .line 159
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->closeRootShell()V
 
-    .line 173
+    .line 162
     :goto_0
     return-void
 
-    .line 172
+    .line 161
     :cond_0
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->closeShell()V
 
@@ -171,7 +171,7 @@
     .parameter "preserveFileAttributes"
 
     .prologue
-    .line 192
+    .line 177
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -188,7 +188,7 @@
     .parameter "file"
 
     .prologue
-    .line 220
+    .line 199
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -205,7 +205,7 @@
     .parameter "binaryName"
 
     .prologue
-    .line 269
+    .line 238
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -223,14 +223,14 @@
     .parameter "utilPath"
 
     .prologue
-    .line 236
+    .line 213
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
 
     invoke-virtual {v0, p0, p1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->fixUtil(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 237
+    .line 214
     return-void
 .end method
 
@@ -244,7 +244,7 @@
     .end annotation
 
     .prologue
-    .line 255
+    .line 228
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -275,7 +275,7 @@
     .end annotation
 
     .prologue
-    .line 300
+    .line 263
     const-string v0, ""
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->getBusyBoxApplets(Ljava/lang/String;)Ljava/util/List;
@@ -307,7 +307,7 @@
     .end annotation
 
     .prologue
-    .line 317
+    .line 274
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -323,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 286
+    .line 253
     const-string v0, ""
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->getBusyBoxVersion(Ljava/lang/String;)Ljava/lang/String;
@@ -338,7 +338,7 @@
     .parameter "path"
 
     .prologue
-    .line 279
+    .line 246
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -362,7 +362,7 @@
     .end annotation
 
     .prologue
-    .line 354
+    .line 301
     const/16 v0, 0x2710
 
     invoke-static {p0, v0}, Lcom/stericson/RootTools/RootTools;->getCustomShell(Ljava/lang/String;I)Lcom/stericson/RootTools/execution/Shell;
@@ -385,7 +385,7 @@
     .end annotation
 
     .prologue
-    .line 337
+    .line 288
     invoke-static {p0, p1}, Lcom/stericson/RootTools/execution/Shell;->startCustomShell(Ljava/lang/String;I)Lcom/stericson/RootTools/execution/Shell;
 
     move-result-object v0
@@ -398,7 +398,7 @@
     .parameter "file"
 
     .prologue
-    .line 368
+    .line 311
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -415,7 +415,7 @@
     .parameter "file"
 
     .prologue
-    .line 381
+    .line 322
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -462,7 +462,7 @@
     .end annotation
 
     .prologue
-    .line 408
+    .line 347
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -493,7 +493,7 @@
     .end annotation
 
     .prologue
-    .line 395
+    .line 335
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -524,7 +524,7 @@
     .end annotation
 
     .prologue
-    .line 419
+    .line 357
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -548,7 +548,7 @@
     .end annotation
 
     .prologue
-    .line 482
+    .line 402
     const/16 v0, 0x2710
 
     invoke-static {p0, v0}, Lcom/stericson/RootTools/RootTools;->getShell(ZI)Lcom/stericson/RootTools/execution/Shell;
@@ -571,7 +571,7 @@
     .end annotation
 
     .prologue
-    .line 465
+    .line 389
     const/4 v0, 0x3
 
     invoke-static {p0, p1, v0}, Lcom/stericson/RootTools/RootTools;->getShell(ZII)Lcom/stericson/RootTools/execution/Shell;
@@ -595,15 +595,15 @@
     .end annotation
 
     .prologue
-    .line 442
+    .line 372
     if-eqz p0, :cond_0
 
-    .line 443
+    .line 373
     invoke-static {p1}, Lcom/stericson/RootTools/execution/Shell;->startRootShell(I)Lcom/stericson/RootTools/execution/Shell;
 
     move-result-object v0
 
-    .line 445
+    .line 375
     :goto_0
     return-object v0
 
@@ -620,7 +620,7 @@
     .parameter "path"
 
     .prologue
-    .line 495
+    .line 414
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -637,7 +637,7 @@
     .parameter "file"
 
     .prologue
-    .line 509
+    .line 426
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -671,7 +671,7 @@
     .end annotation
 
     .prologue
-    .line 526
+    .line 440
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -687,7 +687,7 @@
     .locals 1
 
     .prologue
-    .line 537
+    .line 451
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -704,7 +704,7 @@
     .parameter "updateSize"
 
     .prologue
-    .line 550
+    .line 463
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -722,7 +722,7 @@
     .parameter "box"
 
     .prologue
-    .line 563
+    .line 475
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -741,7 +741,7 @@
     .parameter "binaryName"
 
     .prologue
-    .line 601
+    .line 506
     const-string v0, "700"
 
     invoke-static {p0, p1, p2, v0}, Lcom/stericson/RootTools/RootTools;->installBinary(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)Z
@@ -759,7 +759,7 @@
     .parameter "mode"
 
     .prologue
-    .line 583
+    .line 491
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -775,7 +775,7 @@
     .locals 1
 
     .prologue
-    .line 636
+    .line 537
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -792,7 +792,7 @@
     .parameter "applet"
 
     .prologue
-    .line 627
+    .line 529
     const-string v0, ""
 
     invoke-static {p0, v0}, Lcom/stericson/RootTools/RootTools;->isAppletAvailable(Ljava/lang/String;Ljava/lang/String;)Z
@@ -808,7 +808,7 @@
     .parameter "path"
 
     .prologue
-    .line 615
+    .line 518
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -824,7 +824,7 @@
     .locals 1
 
     .prologue
-    .line 643
+    .line 544
     const-string v0, "busybox"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->findBinary(Ljava/lang/String;)Z
@@ -840,7 +840,7 @@
     .parameter "context"
 
     .prologue
-    .line 647
+    .line 548
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -857,7 +857,7 @@
     .parameter "processName"
 
     .prologue
-    .line 661
+    .line 560
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -873,7 +873,7 @@
     .locals 1
 
     .prologue
-    .line 668
+    .line 567
     const-string v0, "su"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->findBinary(Ljava/lang/String;)Z
@@ -888,7 +888,7 @@
     .parameter "processName"
 
     .prologue
-    .line 680
+    .line 578
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -907,12 +907,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1012
+    .line 866
     const/4 v0, 0x3
 
     invoke-static {v1, p0, v0, v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
-    .line 1013
+    .line 867
     return-void
 .end method
 
@@ -923,12 +923,12 @@
     .parameter "e"
 
     .prologue
-    .line 1055
+    .line 901
     const/4 v0, 0x0
 
     invoke-static {v0, p0, p1, p2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
-    .line 1056
+    .line 902
     return-void
 .end method
 
@@ -938,14 +938,14 @@
     .parameter "msg"
 
     .prologue
-    .line 1032
+    .line 883
     const/4 v0, 0x3
 
     const/4 v1, 0x0
 
     invoke-static {p0, p1, v0, v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Exception;)V
 
-    .line 1033
+    .line 884
     return-void
 .end method
 
@@ -957,7 +957,7 @@
     .parameter "e"
 
     .prologue
-    .line 1080
+    .line 920
     if-eqz p1, :cond_1
 
     const-string v0, ""
@@ -968,45 +968,45 @@
 
     if-nez v0, :cond_1
 
-    .line 1081
+    .line 921
     sget-boolean v0, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v0, :cond_1
 
-    .line 1082
+    .line 922
     if-nez p0, :cond_0
 
-    .line 1083
+    .line 923
     const-string p0, "RootTools v2.6"
 
-    .line 1086
+    .line 926
     :cond_0
     packed-switch p2, :pswitch_data_0
 
-    .line 1100
+    .line 939
     :cond_1
     :goto_0
     return-void
 
-    .line 1089
+    .line 928
     :pswitch_0
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1092
+    .line 931
     :pswitch_1
     invoke-static {p0, p1, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 1095
+    .line 934
     :pswitch_2
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1086
+    .line 926
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1021,7 +1021,7 @@
     .parameter "requestCode"
 
     .prologue
-    .line 704
+    .line 599
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -1038,14 +1038,14 @@
     .parameter "activity"
 
     .prologue
-    .line 690
+    .line 587
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->offerBusyBox(Landroid/app/Activity;)V
 
-    .line 691
+    .line 588
     return-void
 .end method
 
@@ -1055,7 +1055,7 @@
     .parameter "requestCode"
 
     .prologue
-    .line 728
+    .line 620
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
@@ -1072,14 +1072,14 @@
     .parameter "activity"
 
     .prologue
-    .line 714
+    .line 608
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->offerSuperUser(Landroid/app/Activity;)V
 
-    .line 715
+    .line 609
     return-void
 .end method
 
@@ -1089,12 +1089,12 @@
     .parameter "mountType"
 
     .prologue
-    .line 749
+    .line 639
     new-instance v0, Lcom/stericson/RootTools/internal/Remounter;
 
     invoke-direct {v0}, Lcom/stericson/RootTools/internal/Remounter;-><init>()V
 
-    .line 751
+    .line 641
     .local v0, remounter:Lcom/stericson/RootTools/internal/Remounter;
     invoke-virtual {v0, p0, p1}, Lcom/stericson/RootTools/internal/Remounter;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1107,17 +1107,17 @@
     .locals 1
 
     .prologue
-    .line 762
+    .line 652
     const-string v0, "Restart Android"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 763
+    .line 653
     const-string v0, "zygote"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->killProcess(Ljava/lang/String;)Z
 
-    .line 764
+    .line 654
     return-void
 .end method
 
@@ -1128,16 +1128,16 @@
     .parameter "parameter"
 
     .prologue
-    .line 778
+    .line 665
     new-instance v0, Lcom/stericson/RootTools/internal/Runner;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/stericson/RootTools/internal/Runner;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 779
+    .line 666
     .local v0, runner:Lcom/stericson/RootTools/internal/Runner;
     invoke-virtual {v0}, Lcom/stericson/RootTools/internal/Runner;->start()V
 
-    .line 780
+    .line 667
     return-void
 .end method
 
@@ -1152,10 +1152,10 @@
     .end annotation
 
     .prologue
-    .line 797
+    .line 680
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 798
+    .line 681
     return-void
 .end method
 
@@ -1184,7 +1184,7 @@
     .end annotation
 
     .prologue
-    .line 953
+    .line 808
     const/4 v0, 0x0
 
     invoke-static {p0, v0, p1}, Lcom/stericson/RootTools/RootTools;->sendShell(Ljava/lang/String;Lcom/stericson/RootTools/RootTools$Result;I)Ljava/util/List;
@@ -1223,7 +1223,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 925
+    .line 784
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1263,7 +1263,7 @@
     .end annotation
 
     .prologue
-    .line 893
+    .line 758
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0, p2}, Lcom/stericson/RootTools/RootTools;->sendShell([Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;I)Ljava/util/List;
@@ -1302,7 +1302,7 @@
     .end annotation
 
     .prologue
-    .line 827
+    .line 705
     sget-boolean v0, Lcom/stericson/RootTools/RootTools;->useRoot:Z
 
     invoke-static {p0, p1, p2, v0, p3}, Lcom/stericson/RootTools/RootTools;->sendShell([Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;ZI)Ljava/util/List;
@@ -1342,7 +1342,7 @@
     .end annotation
 
     .prologue
-    .line 862
+    .line 733
     new-instance v0, Lcom/stericson/RootTools/execution/Executer;
 
     invoke-direct {v0}, Lcom/stericson/RootTools/execution/Executer;-><init>()V
@@ -1384,7 +1384,7 @@
     .parameter "remountAsRw"
 
     .prologue
-    .line 205
+    .line 188
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getInternals()Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     move-result-object v0

@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 1142
+    .line 1024
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     iput-object p4, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->val$results:Ljava/util/List;
@@ -47,12 +47,12 @@
     .parameter "line"
 
     .prologue
-    .line 1147
+    .line 1028
     const/4 v0, 0x7
 
     if-ne p1, v0, :cond_0
 
-    .line 1149
+    .line 1029
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -65,12 +65,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1151
+    .line 1030
     iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->val$results:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1154
+    .line 1033
     :cond_0
     return-void
 .end method

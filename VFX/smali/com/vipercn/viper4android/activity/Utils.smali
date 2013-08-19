@@ -26,22 +26,22 @@
 
     const/4 v0, 0x0
 
-    .line 479
+    .line 485
     sput-boolean v1, Lcom/stericson/RootTools/RootTools;->useRoot:Z
 
-    .line 480
+    .line 486
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->isRootAvailable()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 482
+    .line 488
     :cond_0
     :goto_0
     return v0
 
-    .line 481
+    .line 487
     :cond_1
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->isAccessGiven()Z
 
@@ -51,7 +51,7 @@
 
     move v0, v1
 
-    .line 482
+    .line 488
     goto :goto_0
 .end method
 
@@ -196,7 +196,7 @@
     .parameter "szSignal"
 
     .prologue
-    .line 652
+    .line 658
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/data/"
@@ -211,7 +211,7 @@
 
     move-result-object v0
 
-    .line 653
+    .line 659
     .local v0, szDestFile:Ljava/lang/String;
     invoke-static {v0}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
@@ -229,22 +229,22 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 881
+    .line 887
     invoke-static {p0}, Lcom/vipercn/viper4android/activity/Utils;->GetBasePath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 882
+    .line 888
     .local v7, szBasePath:Ljava/lang/String;
     const-string v10, ""
 
     if-ne v7, v10, :cond_0
 
-    .line 910
+    .line 916
     :goto_0
     return v9
 
-    .line 883
+    .line 889
     :cond_0
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -268,25 +268,25 @@
 
     move-result-object p2
 
-    .line 885
+    .line 891
     const/4 v2, 0x0
 
-    .line 886
+    .line 892
     .local v2, myInput:Ljava/io/InputStream;
     const/4 v3, 0x0
 
-    .line 887
+    .line 893
     .local v3, myOutput:Ljava/io/OutputStream;
     move-object v6, p2
 
-    .line 890
+    .line 896
     .local v6, outFileName:Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 891
+    .line 897
     .local v1, hfOutput:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -296,7 +296,7 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 893
+    .line 899
     :cond_1
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -304,7 +304,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 894
+    .line 900
     .end local v3           #myOutput:Ljava/io/OutputStream;
     .local v4, myOutput:Ljava/io/OutputStream;
     :try_start_1
@@ -316,16 +316,16 @@
 
     move-result-object v2
 
-    .line 895
+    .line 901
     const/16 v10, 0x400
 
     new-array v8, v10, [B
 
-    .line 896
+    .line 902
     .local v8, tBuffer:[B
     const/4 v5, 0x0
 
-    .line 897
+    .line 903
     .local v5, nLength:I
     :goto_1
     invoke-virtual {v2, v8}, Ljava/io/InputStream;->read([B)I
@@ -334,29 +334,29 @@
 
     if-gtz v5, :cond_2
 
-    .line 899
+    .line 905
     invoke-virtual {v4}, Ljava/io/OutputStream;->flush()V
 
-    .line 900
+    .line 906
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    .line 901
+    .line 907
     const/4 v2, 0x0
 
-    .line 902
+    .line 908
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
 
-    .line 903
+    .line 909
     const/4 v3, 0x0
 
-    .line 910
+    .line 916
     .end local v4           #myOutput:Ljava/io/OutputStream;
     .restart local v3       #myOutput:Ljava/io/OutputStream;
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 898
+    .line 904
     .end local v3           #myOutput:Ljava/io/OutputStream;
     .restart local v4       #myOutput:Ljava/io/OutputStream;
     :cond_2
@@ -368,7 +368,7 @@
 
     goto :goto_1
 
-    .line 905
+    .line 911
     .end local v5           #nLength:I
     .end local v8           #tBuffer:[B
     :catch_0
@@ -376,7 +376,7 @@
 
     move-object v3, v4
 
-    .line 907
+    .line 913
     .end local v1           #hfOutput:Ljava/io/File;
     .end local v4           #myOutput:Ljava/io/OutputStream;
     .local v0, e:Ljava/lang/Exception;
@@ -384,7 +384,7 @@
     :goto_2
     goto :goto_0
 
-    .line 905
+    .line 911
     .end local v0           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -401,12 +401,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 611
+    .line 617
     invoke-static {p1, p2}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 612
+    .line 618
     .local v4, szToolbox:Ljava/lang/String;
     const-string v7, ""
 
@@ -416,11 +416,11 @@
 
     if-eqz v7, :cond_0
 
-    .line 625
+    .line 631
     :goto_0
     return v6
 
-    .line 614
+    .line 620
     :cond_0
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -440,7 +440,7 @@
 
     move-result-object v5
 
-    .line 615
+    .line 621
     .local v5, szTouch:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -460,7 +460,7 @@
 
     move-result-object v0
 
-    .line 616
+    .line 622
     .local v0, szChmod:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -480,7 +480,7 @@
 
     move-result-object v3
 
-    .line 618
+    .line 624
     .local v3, szSync:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -496,13 +496,13 @@
 
     move-result-object v2
 
-    .line 619
+    .line 625
     .local v2, szDestFile:Ljava/lang/String;
     const/4 v7, 0x3
 
     new-array v1, v7, [Ljava/lang/String;
 
-    .line 620
+    .line 626
     .local v1, szCommand:[Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -528,7 +528,7 @@
 
     aput-object v7, v1, v6
 
-    .line 621
+    .line 627
     const/4 v6, 0x1
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -555,17 +555,17 @@
 
     aput-object v7, v1, v6
 
-    .line 622
+    .line 628
     const/4 v6, 0x2
 
     aput-object v3, v1, v6
 
-    .line 623
+    .line 629
     const/16 v6, 0x64
 
     invoke-static {v1, v6}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 625
+    .line 631
     invoke-static {v2}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
     move-result v6
@@ -584,12 +584,12 @@
 
     const/4 v5, 0x0
 
-    .line 631
+    .line 637
     invoke-static {p1, p2}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 632
+    .line 638
     .local v4, szToolbox:Ljava/lang/String;
     const-string v7, ""
 
@@ -599,12 +599,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 646
+    .line 652
     :cond_0
     :goto_0
     return v5
 
-    .line 634
+    .line 640
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -624,7 +624,7 @@
 
     move-result-object v2
 
-    .line 635
+    .line 641
     .local v2, szRemove:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -644,7 +644,7 @@
 
     move-result-object v3
 
-    .line 637
+    .line 643
     .local v3, szSync:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -660,7 +660,7 @@
 
     move-result-object v1
 
-    .line 638
+    .line 644
     .local v1, szDestFile:Ljava/lang/String;
     invoke-static {v1}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
@@ -672,13 +672,13 @@
 
     goto :goto_0
 
-    .line 640
+    .line 646
     :cond_2
     const/4 v7, 0x2
 
     new-array v0, v7, [Ljava/lang/String;
 
-    .line 641
+    .line 647
     .local v0, szCommand:[Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -704,15 +704,15 @@
 
     aput-object v7, v0, v5
 
-    .line 642
+    .line 648
     aput-object v3, v0, v6
 
-    .line 643
+    .line 649
     const/16 v7, 0x64
 
     invoke-static {v0, v7}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 645
+    .line 651
     invoke-static {v1}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
     move-result v7
@@ -721,7 +721,7 @@
 
     move v5, v6
 
-    .line 646
+    .line 652
     goto :goto_0
 .end method
 
@@ -958,12 +958,12 @@
     .parameter "ctx"
 
     .prologue
-    .line 871
+    .line 877
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 872
+    .line 878
     .local v0, cont:Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
@@ -973,7 +973,7 @@
 
     move-result-object v1
 
-    .line 873
+    .line 879
     .local v1, szBasePath:Ljava/lang/String;
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
@@ -985,7 +985,7 @@
 
     if-nez v2, :cond_0
 
-    .line 874
+    .line 880
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v2
@@ -998,7 +998,7 @@
 
     const-string v1, ""
 
-    .line 875
+    .line 881
     .end local v1           #szBasePath:Ljava/lang/String;
     :cond_0
     return-object v1
@@ -1305,25 +1305,25 @@
     .parameter "ctx"
 
     .prologue
-    .line 576
+    .line 582
     const/4 v2, 0x0
 
     invoke-virtual {p1, p0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 577
+    .line 583
     .local v0, preferences:Landroid/content/SharedPreferences;
     if-nez v0, :cond_1
 
     const-string v1, ""
 
-    .line 582
+    .line 588
     :cond_0
     :goto_0
     return-object v1
 
-    .line 578
+    .line 584
     :cond_1
     const-string v2, "viper4android.settings.toolbox"
 
@@ -1333,7 +1333,7 @@
 
     move-result-object v1
 
-    .line 579
+    .line 585
     .local v1, szToolbox:Ljava/lang/String;
     if-nez v1, :cond_2
 
@@ -1341,7 +1341,7 @@
 
     goto :goto_0
 
-    .line 580
+    .line 586
     :cond_2
     const-string v2, ""
 
@@ -1355,7 +1355,7 @@
 
     goto :goto_0
 
-    .line 581
+    .line 587
     :cond_3
     const-string v2, "none"
 
@@ -1375,7 +1375,7 @@
     .parameter "szName"
 
     .prologue
-    .line 490
+    .line 496
     :try_start_0
     const-string v1, "ViPER4Android_Utils"
 
@@ -1401,7 +1401,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
+    .line 497
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/system/bin/"
@@ -1422,7 +1422,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 493
+    .line 499
     const-string v1, "ViPER4Android_Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1441,7 +1441,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
+    .line 500
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/system/bin/"
@@ -1456,11 +1456,11 @@
 
     move-result-object v1
 
-    .line 525
+    .line 531
     :goto_0
     return-object v1
 
-    .line 496
+    .line 502
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1482,7 +1482,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 498
+    .line 504
     const-string v1, "ViPER4Android_Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1501,7 +1501,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 505
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/system/xbin/"
@@ -1518,7 +1518,7 @@
 
     goto :goto_0
 
-    .line 501
+    .line 507
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1540,7 +1540,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 503
+    .line 509
     const-string v1, "ViPER4Android_Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1559,7 +1559,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 504
+    .line 510
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/bin/"
@@ -1576,7 +1576,7 @@
 
     goto :goto_0
 
-    .line 506
+    .line 512
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1598,7 +1598,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 508
+    .line 514
     const-string v1, "ViPER4Android_Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1617,7 +1617,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
+    .line 515
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/xbin/"
@@ -1634,7 +1634,7 @@
 
     goto/16 :goto_0
 
-    .line 511
+    .line 517
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1656,7 +1656,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 513
+    .line 519
     const-string v1, "ViPER4Android_Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1675,7 +1675,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
+    .line 520
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/sbin/"
@@ -1692,7 +1692,7 @@
 
     goto/16 :goto_0
 
-    .line 518
+    .line 524
     :cond_4
     const-string v1, "ViPER4Android_Utils"
 
@@ -1720,16 +1720,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 519
+    .line 525
     const-string v1, ""
 
     goto/16 :goto_0
 
-    .line 522
+    .line 528
     :catch_0
     move-exception v0
 
-    .line 524
+    .line 530
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "ViPER4Android_Utils"
 
@@ -1753,7 +1753,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
+    .line 531
     const-string v1, ""
 
     goto/16 :goto_0
@@ -1766,7 +1766,7 @@
     .parameter "szDriverName"
 
     .prologue
-    .line 924
+    .line 930
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v17
@@ -1779,14 +1779,14 @@
 
     if-nez v17, :cond_0
 
-    .line 925
+    .line 931
     const/16 v17, 0x0
 
-    .line 1047
+    .line 1053
     :goto_0
     return v17
 
-    .line 928
+    .line 934
     :cond_0
     const-string v17, "libv4a_fx_ics.so"
 
@@ -1802,18 +1802,18 @@
 
     if-nez v17, :cond_1
 
-    .line 929
+    .line 935
     const/16 v17, 0x0
 
     goto :goto_0
 
-    .line 931
+    .line 937
     :cond_1
     invoke-static/range {p0 .. p1}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 932
+    .line 938
     .local v15, szToolbox:Ljava/lang/String;
     const-string v17, ""
 
@@ -1829,7 +1829,7 @@
 
     goto :goto_0
 
-    .line 935
+    .line 941
     :cond_2
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1849,7 +1849,7 @@
 
     move-result-object v10
 
-    .line 936
+    .line 942
     .local v10, szMount:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1869,7 +1869,7 @@
 
     move-result-object v11
 
-    .line 937
+    .line 943
     .local v11, szRemove:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1889,7 +1889,7 @@
 
     move-result-object v7
 
-    .line 938
+    .line 944
     .local v7, szChmod:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1909,7 +1909,7 @@
 
     move-result-object v13
 
-    .line 940
+    .line 946
     .local v13, szSync:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1933,7 +1933,7 @@
 
     move-result-object v14
 
-    .line 941
+    .line 947
     .local v14, szSystemConf:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1957,11 +1957,11 @@
 
     move-result-object v16
 
-    .line 943
+    .line 949
     .local v16, szVendorConf:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 944
+    .line 950
     .local v4, bExistsVendor:Z
     const-string v17, "/system/vendor/etc/audio_effects.conf"
 
@@ -1971,21 +1971,21 @@
 
     if-eqz v17, :cond_3
 
-    .line 945
+    .line 951
     const/4 v4, 0x1
 
-    .line 948
+    .line 954
     :cond_3
     if-eqz v4, :cond_5
 
-    .line 950
+    .line 956
     const/16 v17, 0x3
 
     move/from16 v0, v17
 
     new-array v8, v0, [Ljava/lang/String;
 
-    .line 951
+    .line 957
     .local v8, szCopyConfToSD:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2003,7 +2003,7 @@
 
     aput-object v18, v8, v17
 
-    .line 952
+    .line 958
     const/16 v17, 0x1
 
     const-string v18, "/system/vendor/etc/audio_effects.conf"
@@ -2022,23 +2022,23 @@
 
     aput-object v18, v8, v17
 
-    .line 953
+    .line 959
     const/16 v17, 0x2
 
     aput-object v13, v8, v17
 
-    .line 954
+    .line 960
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v8, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 965
+    .line 971
     :goto_1
     const/4 v5, 0x1
 
-    .line 966
+    .line 972
     .local v5, bModifyResult:Z
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -2066,10 +2066,10 @@
 
     and-int v5, v5, v17
 
-    .line 967
+    .line 973
     if-eqz v4, :cond_4
 
-    .line 968
+    .line 974
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-static/range {v16 .. v16}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2094,21 +2094,21 @@
 
     and-int v5, v5, v17
 
-    .line 969
+    .line 975
     :cond_4
     if-nez v5, :cond_7
 
-    .line 971
+    .line 977
     if-eqz v4, :cond_6
 
-    .line 973
+    .line 979
     const/16 v17, 0x5
 
     move/from16 v0, v17
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 974
+    .line 980
     .local v12, szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2138,7 +2138,7 @@
 
     aput-object v18, v12, v17
 
-    .line 975
+    .line 981
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2173,7 +2173,7 @@
 
     aput-object v18, v12, v17
 
-    .line 976
+    .line 982
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2204,7 +2204,7 @@
 
     aput-object v18, v12, v17
 
-    .line 977
+    .line 983
     const/16 v17, 0x3
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2241,25 +2241,25 @@
 
     aput-object v18, v12, v17
 
-    .line 978
+    .line 984
     const/16 v17, 0x4
 
     aput-object v13, v12, v17
 
-    .line 979
+    .line 985
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v12, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 989
+    .line 995
     :goto_2
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 958
+    .line 964
     .end local v5           #bModifyResult:Z
     .end local v8           #szCopyConfToSD:[Ljava/lang/String;
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
@@ -2270,7 +2270,7 @@
 
     new-array v8, v0, [Ljava/lang/String;
 
-    .line 959
+    .line 965
     .restart local v8       #szCopyConfToSD:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2288,12 +2288,12 @@
 
     aput-object v18, v8, v17
 
-    .line 960
+    .line 966
     const/16 v17, 0x1
 
     aput-object v13, v8, v17
 
-    .line 961
+    .line 967
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -2302,7 +2302,7 @@
 
     goto/16 :goto_1
 
-    .line 983
+    .line 989
     .restart local v5       #bModifyResult:Z
     :cond_6
     const/16 v17, 0x3
@@ -2311,7 +2311,7 @@
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 984
+    .line 990
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2341,7 +2341,7 @@
 
     aput-object v18, v12, v17
 
-    .line 985
+    .line 991
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2376,12 +2376,12 @@
 
     aput-object v18, v12, v17
 
-    .line 986
+    .line 992
     const/16 v17, 0x2
 
     aput-object v13, v12, v17
 
-    .line 987
+    .line 993
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -2390,12 +2390,12 @@
 
     goto :goto_2
 
-    .line 993
+    .line 999
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
     :cond_7
     if-eqz v4, :cond_8
 
-    .line 995
+    .line 1001
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-static/range {p1 .. p1}, Lcom/vipercn/viper4android/activity/Utils;->GetBasePath(Landroid/content/Context;)Ljava/lang/String;
@@ -2424,7 +2424,7 @@
 
     move-result-object v6
 
-    .line 996
+    .line 1002
     .local v6, szBaseDrvPathName:Ljava/lang/String;
     const/16 v17, 0xa
 
@@ -2432,7 +2432,7 @@
 
     new-array v9, v0, [Ljava/lang/String;
 
-    .line 997
+    .line 1003
     .local v9, szCopyToSystem:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2456,7 +2456,7 @@
 
     aput-object v18, v9, v17
 
-    .line 998
+    .line 1004
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2493,7 +2493,7 @@
 
     aput-object v18, v9, v17
 
-    .line 999
+    .line 1005
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2530,7 +2530,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1000
+    .line 1006
     const/16 v17, 0x3
 
     const-string v18, "/system/lib/soundfx/libv4a_fx_ics.so"
@@ -2547,12 +2547,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1001
+    .line 1007
     const/16 v17, 0x4
 
     aput-object v13, v9, v17
 
-    .line 1002
+    .line 1008
     const/16 v17, 0x5
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2575,7 +2575,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1003
+    .line 1009
     const/16 v17, 0x6
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2598,7 +2598,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1004
+    .line 1010
     const/16 v17, 0x7
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2621,12 +2621,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1005
+    .line 1011
     const/16 v17, 0x8
 
     aput-object v13, v9, v17
 
-    .line 1006
+    .line 1012
     const/16 v17, 0x9
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2649,25 +2649,25 @@
 
     aput-object v18, v9, v17
 
-    .line 1007
+    .line 1013
     const/16 v17, 0xc8
 
     move/from16 v0, v17
 
     invoke-static {v9, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1025
+    .line 1031
     :goto_3
     if-eqz v4, :cond_9
 
-    .line 1027
+    .line 1033
     const/16 v17, 0x5
 
     move/from16 v0, v17
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1028
+    .line 1034
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2697,7 +2697,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1029
+    .line 1035
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2732,7 +2732,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1030
+    .line 1036
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2763,7 +2763,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1031
+    .line 1037
     const/16 v17, 0x3
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2800,19 +2800,19 @@
 
     aput-object v18, v12, v17
 
-    .line 1032
+    .line 1038
     const/16 v17, 0x4
 
     aput-object v13, v12, v17
 
-    .line 1033
+    .line 1039
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v12, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1045
+    .line 1051
     :goto_4
     const-string v17, "/system/lib/soundfx/libv4a_fx_ics.so"
 
@@ -2822,12 +2822,12 @@
 
     if-nez v17, :cond_a
 
-    .line 1046
+    .line 1052
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 1011
+    .line 1017
     .end local v6           #szBaseDrvPathName:Ljava/lang/String;
     .end local v9           #szCopyToSystem:[Ljava/lang/String;
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
@@ -2860,7 +2860,7 @@
 
     move-result-object v6
 
-    .line 1012
+    .line 1018
     .restart local v6       #szBaseDrvPathName:Ljava/lang/String;
     const/16 v17, 0x8
 
@@ -2868,7 +2868,7 @@
 
     new-array v9, v0, [Ljava/lang/String;
 
-    .line 1013
+    .line 1019
     .restart local v9       #szCopyToSystem:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -2892,7 +2892,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1014
+    .line 1020
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2929,7 +2929,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1015
+    .line 1021
     const/16 v17, 0x2
 
     const-string v18, "/system/lib/soundfx/libv4a_fx_ics.so"
@@ -2946,12 +2946,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1016
+    .line 1022
     const/16 v17, 0x3
 
     aput-object v13, v9, v17
 
-    .line 1017
+    .line 1023
     const/16 v17, 0x4
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2974,7 +2974,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1018
+    .line 1024
     const/16 v17, 0x5
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -2997,12 +2997,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1019
+    .line 1025
     const/16 v17, 0x6
 
     aput-object v13, v9, v17
 
-    .line 1020
+    .line 1026
     const/16 v17, 0x7
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3025,7 +3025,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1021
+    .line 1027
     const/16 v17, 0xc8
 
     move/from16 v0, v17
@@ -3034,7 +3034,7 @@
 
     goto/16 :goto_3
 
-    .line 1037
+    .line 1043
     :cond_9
     const/16 v17, 0x3
 
@@ -3042,7 +3042,7 @@
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1038
+    .line 1044
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3072,7 +3072,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1039
+    .line 1045
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3107,12 +3107,12 @@
 
     aput-object v18, v12, v17
 
-    .line 1040
+    .line 1046
     const/16 v17, 0x2
 
     aput-object v13, v12, v17
 
-    .line 1041
+    .line 1047
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -3121,7 +3121,7 @@
 
     goto/16 :goto_4
 
-    .line 1047
+    .line 1053
     :cond_a
     const/16 v17, 0x1
 
@@ -3135,7 +3135,7 @@
     .parameter "szDriverName"
 
     .prologue
-    .line 1053
+    .line 1059
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v17
@@ -3148,14 +3148,14 @@
 
     if-nez v17, :cond_0
 
-    .line 1054
+    .line 1060
     const/16 v17, 0x0
 
-    .line 1176
+    .line 1182
     :goto_0
     return v17
 
-    .line 1057
+    .line 1063
     :cond_0
     const-string v17, "libv4a_xhifi_ics.so"
 
@@ -3171,18 +3171,18 @@
 
     if-nez v17, :cond_1
 
-    .line 1058
+    .line 1064
     const/16 v17, 0x0
 
     goto :goto_0
 
-    .line 1060
+    .line 1066
     :cond_1
     invoke-static/range {p0 .. p1}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 1061
+    .line 1067
     .local v15, szToolbox:Ljava/lang/String;
     const-string v17, ""
 
@@ -3198,7 +3198,7 @@
 
     goto :goto_0
 
-    .line 1064
+    .line 1070
     :cond_2
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3218,7 +3218,7 @@
 
     move-result-object v10
 
-    .line 1065
+    .line 1071
     .local v10, szMount:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3238,7 +3238,7 @@
 
     move-result-object v11
 
-    .line 1066
+    .line 1072
     .local v11, szRemove:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3258,7 +3258,7 @@
 
     move-result-object v7
 
-    .line 1067
+    .line 1073
     .local v7, szChmod:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3278,7 +3278,7 @@
 
     move-result-object v13
 
-    .line 1069
+    .line 1075
     .local v13, szSync:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3302,7 +3302,7 @@
 
     move-result-object v14
 
-    .line 1070
+    .line 1076
     .local v14, szSystemConf:Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3326,11 +3326,11 @@
 
     move-result-object v16
 
-    .line 1072
+    .line 1078
     .local v16, szVendorConf:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 1073
+    .line 1079
     .local v4, bExistsVendor:Z
     const-string v17, "/system/vendor/etc/audio_effects.conf"
 
@@ -3340,21 +3340,21 @@
 
     if-eqz v17, :cond_3
 
-    .line 1074
+    .line 1080
     const/4 v4, 0x1
 
-    .line 1077
+    .line 1083
     :cond_3
     if-eqz v4, :cond_5
 
-    .line 1079
+    .line 1085
     const/16 v17, 0x3
 
     move/from16 v0, v17
 
     new-array v8, v0, [Ljava/lang/String;
 
-    .line 1080
+    .line 1086
     .local v8, szCopyConfToSD:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3372,7 +3372,7 @@
 
     aput-object v18, v8, v17
 
-    .line 1081
+    .line 1087
     const/16 v17, 0x1
 
     const-string v18, "/system/vendor/etc/audio_effects.conf"
@@ -3391,23 +3391,23 @@
 
     aput-object v18, v8, v17
 
-    .line 1082
+    .line 1088
     const/16 v17, 0x2
 
     aput-object v13, v8, v17
 
-    .line 1083
+    .line 1089
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v8, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1094
+    .line 1100
     :goto_1
     const/4 v5, 0x1
 
-    .line 1095
+    .line 1101
     .local v5, bModifyResult:Z
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3435,10 +3435,10 @@
 
     and-int v5, v5, v17
 
-    .line 1096
+    .line 1102
     if-eqz v4, :cond_4
 
-    .line 1097
+    .line 1103
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-static/range {v16 .. v16}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -3463,21 +3463,21 @@
 
     and-int v5, v5, v17
 
-    .line 1098
+    .line 1104
     :cond_4
     if-nez v5, :cond_7
 
-    .line 1100
+    .line 1106
     if-eqz v4, :cond_6
 
-    .line 1102
+    .line 1108
     const/16 v17, 0x5
 
     move/from16 v0, v17
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1103
+    .line 1109
     .local v12, szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3507,7 +3507,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1104
+    .line 1110
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3542,7 +3542,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1105
+    .line 1111
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3573,7 +3573,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1106
+    .line 1112
     const/16 v17, 0x3
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3610,25 +3610,25 @@
 
     aput-object v18, v12, v17
 
-    .line 1107
+    .line 1113
     const/16 v17, 0x4
 
     aput-object v13, v12, v17
 
-    .line 1108
+    .line 1114
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v12, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1118
+    .line 1124
     :goto_2
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 1087
+    .line 1093
     .end local v5           #bModifyResult:Z
     .end local v8           #szCopyConfToSD:[Ljava/lang/String;
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
@@ -3639,7 +3639,7 @@
 
     new-array v8, v0, [Ljava/lang/String;
 
-    .line 1088
+    .line 1094
     .restart local v8       #szCopyConfToSD:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3657,12 +3657,12 @@
 
     aput-object v18, v8, v17
 
-    .line 1089
+    .line 1095
     const/16 v17, 0x1
 
     aput-object v13, v8, v17
 
-    .line 1090
+    .line 1096
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -3671,7 +3671,7 @@
 
     goto/16 :goto_1
 
-    .line 1112
+    .line 1118
     .restart local v5       #bModifyResult:Z
     :cond_6
     const/16 v17, 0x3
@@ -3680,7 +3680,7 @@
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1113
+    .line 1119
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3710,7 +3710,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1114
+    .line 1120
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3745,12 +3745,12 @@
 
     aput-object v18, v12, v17
 
-    .line 1115
+    .line 1121
     const/16 v17, 0x2
 
     aput-object v13, v12, v17
 
-    .line 1116
+    .line 1122
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -3759,12 +3759,12 @@
 
     goto :goto_2
 
-    .line 1122
+    .line 1128
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
     :cond_7
     if-eqz v4, :cond_8
 
-    .line 1124
+    .line 1130
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-static/range {p1 .. p1}, Lcom/vipercn/viper4android/activity/Utils;->GetBasePath(Landroid/content/Context;)Ljava/lang/String;
@@ -3793,7 +3793,7 @@
 
     move-result-object v6
 
-    .line 1125
+    .line 1131
     .local v6, szBaseDrvPathName:Ljava/lang/String;
     const/16 v17, 0xa
 
@@ -3801,7 +3801,7 @@
 
     new-array v9, v0, [Ljava/lang/String;
 
-    .line 1126
+    .line 1132
     .local v9, szCopyToSystem:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -3825,7 +3825,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1127
+    .line 1133
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3862,7 +3862,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1128
+    .line 1134
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3899,7 +3899,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1129
+    .line 1135
     const/16 v17, 0x3
 
     const-string v18, "/system/lib/soundfx/libv4a_xhifi_ics.so"
@@ -3916,12 +3916,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1130
+    .line 1136
     const/16 v17, 0x4
 
     aput-object v13, v9, v17
 
-    .line 1131
+    .line 1137
     const/16 v17, 0x5
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3944,7 +3944,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1132
+    .line 1138
     const/16 v17, 0x6
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3967,7 +3967,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1133
+    .line 1139
     const/16 v17, 0x7
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -3990,12 +3990,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1134
+    .line 1140
     const/16 v17, 0x8
 
     aput-object v13, v9, v17
 
-    .line 1135
+    .line 1141
     const/16 v17, 0x9
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4018,25 +4018,25 @@
 
     aput-object v18, v9, v17
 
-    .line 1136
+    .line 1142
     const/16 v17, 0xc8
 
     move/from16 v0, v17
 
     invoke-static {v9, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1154
+    .line 1160
     :goto_3
     if-eqz v4, :cond_9
 
-    .line 1156
+    .line 1162
     const/16 v17, 0x5
 
     move/from16 v0, v17
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1157
+    .line 1163
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -4066,7 +4066,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1158
+    .line 1164
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4101,7 +4101,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1159
+    .line 1165
     const/16 v17, 0x2
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4132,7 +4132,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1160
+    .line 1166
     const/16 v17, 0x3
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4169,19 +4169,19 @@
 
     aput-object v18, v12, v17
 
-    .line 1161
+    .line 1167
     const/16 v17, 0x4
 
     aput-object v13, v12, v17
 
-    .line 1162
+    .line 1168
     const/16 v17, 0x64
 
     move/from16 v0, v17
 
     invoke-static {v12, v0}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 1174
+    .line 1180
     :goto_4
     const-string v17, "/system/lib/soundfx/libv4a_xhifi_ics.so"
 
@@ -4191,12 +4191,12 @@
 
     if-nez v17, :cond_a
 
-    .line 1175
+    .line 1181
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 1140
+    .line 1146
     .end local v6           #szBaseDrvPathName:Ljava/lang/String;
     .end local v9           #szCopyToSystem:[Ljava/lang/String;
     .end local v12           #szRemoveTmpFiles:[Ljava/lang/String;
@@ -4229,7 +4229,7 @@
 
     move-result-object v6
 
-    .line 1141
+    .line 1147
     .restart local v6       #szBaseDrvPathName:Ljava/lang/String;
     const/16 v17, 0x8
 
@@ -4237,7 +4237,7 @@
 
     new-array v9, v0, [Ljava/lang/String;
 
-    .line 1142
+    .line 1148
     .restart local v9       #szCopyToSystem:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -4261,7 +4261,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1143
+    .line 1149
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4298,7 +4298,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1144
+    .line 1150
     const/16 v17, 0x2
 
     const-string v18, "/system/lib/soundfx/libv4a_xhifi_ics.so"
@@ -4315,12 +4315,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1145
+    .line 1151
     const/16 v17, 0x3
 
     aput-object v13, v9, v17
 
-    .line 1146
+    .line 1152
     const/16 v17, 0x4
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4343,7 +4343,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1147
+    .line 1153
     const/16 v17, 0x5
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4366,12 +4366,12 @@
 
     aput-object v18, v9, v17
 
-    .line 1148
+    .line 1154
     const/16 v17, 0x6
 
     aput-object v13, v9, v17
 
-    .line 1149
+    .line 1155
     const/16 v17, 0x7
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4394,7 +4394,7 @@
 
     aput-object v18, v9, v17
 
-    .line 1150
+    .line 1156
     const/16 v17, 0xc8
 
     move/from16 v0, v17
@@ -4403,7 +4403,7 @@
 
     goto/16 :goto_3
 
-    .line 1166
+    .line 1172
     :cond_9
     const/16 v17, 0x3
 
@@ -4411,7 +4411,7 @@
 
     new-array v12, v0, [Ljava/lang/String;
 
-    .line 1167
+    .line 1173
     .restart local v12       #szRemoveTmpFiles:[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -4441,7 +4441,7 @@
 
     aput-object v18, v12, v17
 
-    .line 1168
+    .line 1174
     const/16 v17, 0x1
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -4476,12 +4476,12 @@
 
     aput-object v18, v12, v17
 
-    .line 1169
+    .line 1175
     const/16 v17, 0x2
 
     aput-object v13, v12, v17
 
-    .line 1170
+    .line 1176
     const/16 v17, 0x64
 
     move/from16 v0, v17
@@ -4490,7 +4490,7 @@
 
     goto/16 :goto_4
 
-    .line 1176
+    .line 1182
     :cond_a
     const/16 v17, 0x1
 
@@ -4909,12 +4909,12 @@
     .parameter "szDstFile"
 
     .prologue
-    .line 588
+    .line 594
     invoke-static {p0, p1}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 589
+    .line 595
     .local v2, szToolbox:Ljava/lang/String;
     const-string v3, ""
 
@@ -4926,11 +4926,11 @@
 
     const-string v3, ""
 
-    .line 605
+    .line 611
     :goto_0
     return-object v3
 
-    .line 591
+    .line 597
     :cond_0
     const/4 v3, 0x0
 
@@ -4938,7 +4938,7 @@
 
     move-result-object v0
 
-    .line 592
+    .line 598
     .local v0, preferences:Landroid/content/SharedPreferences;
     if-nez v0, :cond_1
 
@@ -4946,7 +4946,7 @@
 
     goto :goto_0
 
-    .line 593
+    .line 599
     :cond_1
     const-string v3, "viper4android.settings.copycmd"
 
@@ -4956,7 +4956,7 @@
 
     move-result-object v1
 
-    .line 594
+    .line 600
     .local v1, szCopy:Ljava/lang/String;
     if-nez v1, :cond_2
 
@@ -4964,7 +4964,7 @@
 
     goto :goto_0
 
-    .line 595
+    .line 601
     :cond_2
     const-string v3, ""
 
@@ -4978,7 +4978,7 @@
 
     goto :goto_0
 
-    .line 597
+    .line 603
     :cond_3
     const-string v3, "dd"
 
@@ -4988,7 +4988,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 599
+    .line 605
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5023,7 +5023,7 @@
 
     goto :goto_0
 
-    .line 601
+    .line 607
     :cond_4
     const-string v3, "cp"
 
@@ -5033,7 +5033,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 603
+    .line 609
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5068,7 +5068,7 @@
 
     goto :goto_0
 
-    .line 605
+    .line 611
     :cond_5
     const-string v3, ""
 
@@ -5083,7 +5083,7 @@
     .parameter "szDest"
 
     .prologue
-    .line 916
+    .line 922
     const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5092,7 +5092,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 917
+    .line 923
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5125,7 +5125,7 @@
 
     move-result-object v0
 
-    .line 918
+    .line 924
     :goto_0
     return-object v0
 
@@ -5171,7 +5171,7 @@
     .parameter "szOutputFile"
 
     .prologue
-    .line 659
+    .line 665
     const-string v11, "ViPER4Android_Utils"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -5200,25 +5200,25 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 662
+    .line 668
     :try_start_0
     invoke-static {p0}, Lcom/vipercn/viper4android/activity/Utils;->GetFileLength(Ljava/lang/String;)J
 
     move-result-wide v7
 
-    .line 664
+    .line 670
     .local v7, lInputFileLength:J
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 665
+    .line 671
     .local v4, fisInput:Ljava/io/FileInputStream;
     new-instance v5, Ljava/io/FileOutputStream;
 
     invoke-direct {v5, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 666
+    .line 672
     .local v5, fosOutput:Ljava/io/FileOutputStream;
     new-instance v6, Ljava/io/InputStreamReader;
 
@@ -5226,7 +5226,7 @@
 
     invoke-direct {v6, v4, v11}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 667
+    .line 673
     .local v6, isrInput:Ljava/io/InputStreamReader;
     new-instance v9, Ljava/io/OutputStreamWriter;
 
@@ -5234,73 +5234,73 @@
 
     invoke-direct {v9, v5, v11}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 668
+    .line 674
     .local v9, oswOutput:Ljava/io/OutputStreamWriter;
     new-instance v1, Ljava/io/BufferedReader;
 
     invoke-direct {v1, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 669
+    .line 675
     .local v1, brInput:Ljava/io/BufferedReader;
     new-instance v2, Ljava/io/BufferedWriter;
 
     invoke-direct {v2, v9}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 671
+    .line 677
     .local v2, bwOutput:Ljava/io/BufferedWriter;
     const/4 v0, 0x0
 
-    .line 672
+    .line 678
     .local v0, bConfigModified:Z
     long-to-int v11, v7
 
     invoke-virtual {v1, v11}, Ljava/io/BufferedReader;->mark(I)V
 
-    .line 675
+    .line 681
     :cond_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 676
+    .line 682
     .local v10, szLine:Ljava/lang/String;
     if-nez v10, :cond_1
 
-    .line 685
+    .line 691
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 687
+    .line 693
     invoke-virtual {v1}, Ljava/io/BufferedReader;->reset()V
 
-    .line 690
+    .line 696
     :goto_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 691
+    .line 697
     if-nez v10, :cond_2
 
-    .line 694
+    .line 700
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 696
+    .line 702
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 697
+    .line 703
     invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
 
-    .line 698
+    .line 704
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
 
-    .line 699
+    .line 705
     invoke-virtual {v9}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 701
+    .line 707
     const/4 v11, 0x1
 
-    .line 740
+    .line 746
     .end local v0           #bConfigModified:Z
     .end local v1           #brInput:Ljava/io/BufferedReader;
     .end local v2           #bwOutput:Ljava/io/BufferedWriter;
@@ -5313,7 +5313,7 @@
     :goto_2
     return v11
 
-    .line 677
+    .line 683
     .restart local v0       #bConfigModified:Z
     .restart local v1       #brInput:Ljava/io/BufferedReader;
     .restart local v2       #bwOutput:Ljava/io/BufferedWriter;
@@ -5332,7 +5332,7 @@
 
     if-eqz v11, :cond_0
 
-    .line 679
+    .line 685
     const-string v11, "ViPER4Android_Utils"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -5351,12 +5351,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
+    .line 686
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 692
+    .line 698
     :cond_2
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -5382,7 +5382,7 @@
 
     goto :goto_1
 
-    .line 737
+    .line 743
     .end local v0           #bConfigModified:Z
     .end local v1           #brInput:Ljava/io/BufferedReader;
     .end local v2           #bwOutput:Ljava/io/BufferedWriter;
@@ -5395,7 +5395,7 @@
     :catch_0
     move-exception v3
 
-    .line 739
+    .line 745
     .local v3, e:Ljava/lang/Exception;
     const-string v11, "ViPER4Android_Utils"
 
@@ -5419,12 +5419,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
+    .line 746
     const/4 v11, 0x0
 
     goto :goto_2
 
-    .line 705
+    .line 711
     .end local v3           #e:Ljava/lang/Exception;
     .restart local v0       #bConfigModified:Z
     .restart local v1       #brInput:Ljava/io/BufferedReader;
@@ -5439,36 +5439,36 @@
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->reset()V
 
-    .line 708
+    .line 714
     :goto_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 709
+    .line 715
     if-nez v10, :cond_4
 
-    .line 727
+    .line 733
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 729
+    .line 735
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 730
+    .line 736
     invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
 
-    .line 731
+    .line 737
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
 
-    .line 732
+    .line 738
     invoke-virtual {v9}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 734
+    .line 740
     const/4 v11, 0x1
 
     goto :goto_2
 
-    .line 710
+    .line 716
     :cond_4
     invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -5482,7 +5482,7 @@
 
     if-eqz v11, :cond_5
 
-    .line 712
+    .line 718
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5503,24 +5503,24 @@
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 713
+    .line 719
     const-string v11, "  v4a_fx {\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 714
+    .line 720
     const-string v11, "    path /system/lib/soundfx/libv4a_fx_ics.so\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 715
+    .line 721
     const-string v11, "  }\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 717
+    .line 723
     :cond_5
     invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -5534,7 +5534,7 @@
 
     if-eqz v11, :cond_6
 
-    .line 719
+    .line 725
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5555,29 +5555,29 @@
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 720
+    .line 726
     const-string v11, "  v4a_standard_fx {\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 721
+    .line 727
     const-string v11, "    library v4a_fx\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 722
+    .line 728
     const-string v11, "    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 723
+    .line 729
     const-string v11, "  }\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 725
+    .line 731
     :cond_6
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -5610,7 +5610,7 @@
     .parameter "szOutputFile"
 
     .prologue
-    .line 747
+    .line 753
     const-string v11, "ViPER4Android_Utils"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -5639,25 +5639,25 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
+    .line 756
     :try_start_0
     invoke-static {p0}, Lcom/vipercn/viper4android/activity/Utils;->GetFileLength(Ljava/lang/String;)J
 
     move-result-wide v7
 
-    .line 752
+    .line 758
     .local v7, lInputFileLength:J
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 753
+    .line 759
     .local v4, fisInput:Ljava/io/FileInputStream;
     new-instance v5, Ljava/io/FileOutputStream;
 
     invoke-direct {v5, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 754
+    .line 760
     .local v5, fosOutput:Ljava/io/FileOutputStream;
     new-instance v6, Ljava/io/InputStreamReader;
 
@@ -5665,7 +5665,7 @@
 
     invoke-direct {v6, v4, v11}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 755
+    .line 761
     .local v6, isrInput:Ljava/io/InputStreamReader;
     new-instance v9, Ljava/io/OutputStreamWriter;
 
@@ -5673,73 +5673,73 @@
 
     invoke-direct {v9, v5, v11}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 756
+    .line 762
     .local v9, oswOutput:Ljava/io/OutputStreamWriter;
     new-instance v1, Ljava/io/BufferedReader;
 
     invoke-direct {v1, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 757
+    .line 763
     .local v1, brInput:Ljava/io/BufferedReader;
     new-instance v2, Ljava/io/BufferedWriter;
 
     invoke-direct {v2, v9}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 759
+    .line 765
     .local v2, bwOutput:Ljava/io/BufferedWriter;
     const/4 v0, 0x0
 
-    .line 760
+    .line 766
     .local v0, bConfigModified:Z
     long-to-int v11, v7
 
     invoke-virtual {v1, v11}, Ljava/io/BufferedReader;->mark(I)V
 
-    .line 763
+    .line 769
     :cond_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 764
+    .line 770
     .local v10, szLine:Ljava/lang/String;
     if-nez v10, :cond_1
 
-    .line 773
+    .line 779
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 775
+    .line 781
     invoke-virtual {v1}, Ljava/io/BufferedReader;->reset()V
 
-    .line 778
+    .line 784
     :goto_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 779
+    .line 785
     if-nez v10, :cond_2
 
-    .line 782
+    .line 788
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 784
+    .line 790
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 785
+    .line 791
     invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
 
-    .line 786
+    .line 792
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
 
-    .line 787
+    .line 793
     invoke-virtual {v9}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 789
+    .line 795
     const/4 v11, 0x1
 
-    .line 828
+    .line 834
     .end local v0           #bConfigModified:Z
     .end local v1           #brInput:Ljava/io/BufferedReader;
     .end local v2           #bwOutput:Ljava/io/BufferedWriter;
@@ -5752,7 +5752,7 @@
     :goto_2
     return v11
 
-    .line 765
+    .line 771
     .restart local v0       #bConfigModified:Z
     .restart local v1       #brInput:Ljava/io/BufferedReader;
     .restart local v2       #bwOutput:Ljava/io/BufferedWriter;
@@ -5771,7 +5771,7 @@
 
     if-eqz v11, :cond_0
 
-    .line 767
+    .line 773
     const-string v11, "ViPER4Android_Utils"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -5790,12 +5790,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 768
+    .line 774
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 780
+    .line 786
     :cond_2
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -5821,7 +5821,7 @@
 
     goto :goto_1
 
-    .line 825
+    .line 831
     .end local v0           #bConfigModified:Z
     .end local v1           #brInput:Ljava/io/BufferedReader;
     .end local v2           #bwOutput:Ljava/io/BufferedWriter;
@@ -5834,7 +5834,7 @@
     :catch_0
     move-exception v3
 
-    .line 827
+    .line 833
     .local v3, e:Ljava/lang/Exception;
     const-string v11, "ViPER4Android_Utils"
 
@@ -5858,12 +5858,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
+    .line 834
     const/4 v11, 0x0
 
     goto :goto_2
 
-    .line 793
+    .line 799
     .end local v3           #e:Ljava/lang/Exception;
     .restart local v0       #bConfigModified:Z
     .restart local v1       #brInput:Ljava/io/BufferedReader;
@@ -5878,36 +5878,36 @@
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->reset()V
 
-    .line 796
+    .line 802
     :goto_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 797
+    .line 803
     if-nez v10, :cond_4
 
-    .line 815
+    .line 821
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 817
+    .line 823
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 818
+    .line 824
     invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
 
-    .line 819
+    .line 825
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
 
-    .line 820
+    .line 826
     invoke-virtual {v9}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 822
+    .line 828
     const/4 v11, 0x1
 
     goto :goto_2
 
-    .line 798
+    .line 804
     :cond_4
     invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -5921,7 +5921,7 @@
 
     if-eqz v11, :cond_5
 
-    .line 800
+    .line 806
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5942,24 +5942,24 @@
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 801
+    .line 807
     const-string v11, "  v4a_xhifi {\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 802
+    .line 808
     const-string v11, "    path /system/lib/soundfx/libv4a_xhifi_ics.so\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 803
+    .line 809
     const-string v11, "  }\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 805
+    .line 811
     :cond_5
     invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -5973,7 +5973,7 @@
 
     if-eqz v11, :cond_6
 
-    .line 807
+    .line 813
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -5994,29 +5994,29 @@
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 808
+    .line 814
     const-string v11, "  v4a_standard_xhifi {\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 809
+    .line 815
     const-string v11, "    library v4a_xhifi\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 810
+    .line 816
     const-string v11, "    uuid d92c3a90-3e26-11e2-a25f-0800200c9a66\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 811
+    .line 817
     const-string v11, "  }\n"
 
     invoke-virtual {v2, v11}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 813
+    .line 819
     :cond_6
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -6055,21 +6055,21 @@
 
     const/4 v6, 0x0
 
-    .line 532
+    .line 538
     invoke-static {p0}, Lcom/vipercn/viper4android/activity/Utils;->GetToolbox(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 533
+    .line 539
     .local v5, szToolboxPath:Ljava/lang/String;
     if-nez v5, :cond_1
 
-    .line 570
+    .line 576
     :cond_0
     :goto_0
     return v6
 
-    .line 534
+    .line 540
     :cond_1
     const-string v8, ""
 
@@ -6079,7 +6079,7 @@
 
     if-nez v8, :cond_0
 
-    .line 536
+    .line 542
     const-string v8, "ViPER4Android_Utils"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6098,12 +6098,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
+    .line 544
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    .line 539
+    .line 545
     .local v0, rndMachine:Ljava/util/Random;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6131,7 +6131,7 @@
 
     move-result-object v4
 
-    .line 540
+    .line 546
     .local v4, szTestFilename:Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6147,7 +6147,7 @@
 
     move-result-object v3
 
-    .line 541
+    .line 547
     .local v3, szSysTestFilename:Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6163,13 +6163,13 @@
 
     move-result-object v2
 
-    .line 543
+    .line 549
     .local v2, szDataTestFilename:Ljava/lang/String;
     const/4 v8, 0x7
 
     new-array v1, v8, [Ljava/lang/String;
 
-    .line 544
+    .line 550
     .local v1, szCommandList:[Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6191,7 +6191,7 @@
 
     aput-object v8, v1, v6
 
-    .line 545
+    .line 551
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -6216,7 +6216,7 @@
 
     aput-object v8, v1, v7
 
-    .line 546
+    .line 552
     const/4 v8, 0x2
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6239,7 +6239,7 @@
 
     aput-object v9, v1, v8
 
-    .line 548
+    .line 554
     if-eqz p1, :cond_2
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6276,7 +6276,7 @@
 
     aput-object v8, v1, v11
 
-    .line 551
+    .line 557
     :goto_1
     const/4 v8, 0x4
 
@@ -6304,7 +6304,7 @@
 
     aput-object v9, v1, v8
 
-    .line 552
+    .line 558
     const/4 v8, 0x5
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6327,7 +6327,7 @@
 
     aput-object v9, v1, v8
 
-    .line 553
+    .line 559
     const/4 v8, 0x6
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -6350,19 +6350,19 @@
 
     aput-object v9, v1, v8
 
-    .line 554
+    .line 560
     const/16 v8, 0xc8
 
     invoke-static {v1, v8}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
 
-    .line 556
+    .line 562
     invoke-static {v3}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    .line 558
+    .line 564
     const-string v7, "ViPER4Android_Utils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6389,7 +6389,7 @@
 
     goto/16 :goto_0
 
-    .line 549
+    .line 555
     :cond_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6427,7 +6427,7 @@
 
     goto/16 :goto_1
 
-    .line 561
+    .line 567
     :cond_3
     invoke-static {v2}, Lcom/vipercn/viper4android/activity/Utils;->fileExists(Ljava/lang/String;)Z
 
@@ -6435,7 +6435,7 @@
 
     if-nez v8, :cond_4
 
-    .line 563
+    .line 569
     const-string v7, "ViPER4Android_Utils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6462,7 +6462,7 @@
 
     goto/16 :goto_0
 
-    .line 567
+    .line 573
     :cond_4
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -6488,7 +6488,7 @@
 
     invoke-static {v6}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand(Ljava/lang/String;)Z
 
-    .line 568
+    .line 574
     const-string v6, "ViPER4Android_Utils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6515,7 +6515,7 @@
 
     move v6, v7
 
-    .line 570
+    .line 576
     goto/16 :goto_0
 .end method
 
@@ -6887,7 +6887,7 @@
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     .line 324
-    const-string v9, "viper4android.headphonefx.vhs.enable"
+    const-string v9, "viper4android.headphonefx.diffsurr.enable"
 
     const/4 v10, 0x0
 
@@ -6900,6 +6900,42 @@
     move-result-object v8
 
     .line 325
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "viper4android.headphonefx.diffsurr.enable=boolean="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\n"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    .line 326
+    const-string v9, "viper4android.headphonefx.vhs.enable"
+
+    const/4 v10, 0x0
+
+    invoke-interface {v4, v9, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v9
+
+    invoke-static {v9}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 327
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.vhs.enable=boolean="
@@ -6922,7 +6958,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 326
+    .line 328
     const-string v9, "viper4android.headphonefx.reverb.enable"
 
     const/4 v10, 0x0
@@ -6935,7 +6971,7 @@
 
     move-result-object v8
 
-    .line 327
+    .line 329
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.enable=boolean="
@@ -6958,7 +6994,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 328
+    .line 330
     const-string v9, "viper4android.headphonefx.dynamicsystem.enable"
 
     const/4 v10, 0x0
@@ -6971,7 +7007,7 @@
 
     move-result-object v8
 
-    .line 329
+    .line 331
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.dynamicsystem.enable=boolean="
@@ -6994,7 +7030,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 330
+    .line 332
     const-string v9, "viper4android.headphonefx.dynamicsystem.tube"
 
     const/4 v10, 0x0
@@ -7007,7 +7043,7 @@
 
     move-result-object v8
 
-    .line 331
+    .line 333
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.dynamicsystem.tube=boolean="
@@ -7030,7 +7066,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 332
+    .line 334
     const-string v9, "viper4android.headphonefx.fidelity.bass.enable"
 
     const/4 v10, 0x0
@@ -7043,7 +7079,7 @@
 
     move-result-object v8
 
-    .line 333
+    .line 335
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.bass.enable=boolean="
@@ -7066,7 +7102,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 334
+    .line 336
     const-string v9, "viper4android.headphonefx.fidelity.clarity.enable"
 
     const/4 v10, 0x0
@@ -7079,7 +7115,7 @@
 
     move-result-object v8
 
-    .line 335
+    .line 337
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.clarity.enable=boolean="
@@ -7102,7 +7138,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 336
+    .line 338
     const-string v9, "viper4android.headphonefx.cure.enable"
 
     const/4 v10, 0x0
@@ -7115,7 +7151,7 @@
 
     move-result-object v8
 
-    .line 337
+    .line 339
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.cure.enable=boolean="
@@ -7138,7 +7174,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 340
+    .line 342
     const-string v9, "viper4android.headphonefx.playbackgain.ratio"
 
     const-string v10, "50"
@@ -7147,7 +7183,7 @@
 
     move-result-object v8
 
-    .line 341
+    .line 343
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.playbackgain.ratio=string="
@@ -7170,7 +7206,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 342
+    .line 344
     const-string v9, "viper4android.headphonefx.playbackgain.maxscaler"
 
     const-string v10, "400"
@@ -7179,7 +7215,7 @@
 
     move-result-object v8
 
-    .line 343
+    .line 345
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.playbackgain.maxscaler=string="
@@ -7202,7 +7238,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 344
+    .line 346
     const-string v9, "viper4android.headphonefx.playbackgain.volume"
 
     const-string v10, "80"
@@ -7211,7 +7247,7 @@
 
     move-result-object v8
 
-    .line 345
+    .line 347
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.playbackgain.volume=string="
@@ -7234,7 +7270,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 346
+    .line 348
     const-string v9, "viper4android.headphonefx.fireq"
 
     const-string v10, "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;"
@@ -7243,7 +7279,7 @@
 
     move-result-object v8
 
-    .line 347
+    .line 349
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fireq=string="
@@ -7266,7 +7302,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 348
+    .line 350
     const-string v9, "viper4android.headphonefx.fireq.custom"
 
     const-string v10, "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;"
@@ -7275,7 +7311,7 @@
 
     move-result-object v8
 
-    .line 349
+    .line 351
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fireq.custom=string="
@@ -7298,7 +7334,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 350
+    .line 352
     const-string v9, "viper4android.headphonefx.convolver.kernel"
 
     const-string v10, ""
@@ -7307,7 +7343,7 @@
 
     move-result-object v8
 
-    .line 351
+    .line 353
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.convolver.kernel=string="
@@ -7330,7 +7366,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 352
+    .line 354
     const-string v9, "viper4android.headphonefx.colorfulmusic.coeffs"
 
     const-string v10, "120;200"
@@ -7339,7 +7375,7 @@
 
     move-result-object v8
 
-    .line 353
+    .line 355
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.colorfulmusic.coeffs=string="
@@ -7362,7 +7398,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 354
+    .line 356
     const-string v9, "viper4android.headphonefx.colorfulmusic.midimage"
 
     const-string v10, "150"
@@ -7371,7 +7407,7 @@
 
     move-result-object v8
 
-    .line 355
+    .line 357
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.colorfulmusic.midimage=string="
@@ -7394,7 +7430,39 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 356
+    .line 358
+    const-string v9, "viper4android.headphonefx.diffsurr.delay"
+
+    const-string v10, "500"
+
+    invoke-interface {v4, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 359
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "viper4android.headphonefx.diffsurr.delay=string="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\n"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    .line 360
     const-string v9, "viper4android.headphonefx.vhs.qual"
 
     const-string v10, "0"
@@ -7403,7 +7471,7 @@
 
     move-result-object v8
 
-    .line 357
+    .line 361
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.vhs.qual=string="
@@ -7426,7 +7494,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 358
+    .line 362
     const-string v9, "viper4android.headphonefx.reverb.roomsize"
 
     const-string v10, "0"
@@ -7435,7 +7503,7 @@
 
     move-result-object v8
 
-    .line 359
+    .line 363
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.roomsize=string="
@@ -7458,7 +7526,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 360
+    .line 364
     const-string v9, "viper4android.headphonefx.reverb.roomwidth"
 
     const-string v10, "0"
@@ -7467,7 +7535,7 @@
 
     move-result-object v8
 
-    .line 361
+    .line 365
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.roomwidth=string="
@@ -7490,7 +7558,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 362
+    .line 366
     const-string v9, "viper4android.headphonefx.reverb.damp"
 
     const-string v10, "0"
@@ -7499,7 +7567,7 @@
 
     move-result-object v8
 
-    .line 363
+    .line 367
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.damp=string="
@@ -7522,7 +7590,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 364
+    .line 368
     const-string v9, "viper4android.headphonefx.reverb.wet"
 
     const-string v10, "0"
@@ -7531,7 +7599,7 @@
 
     move-result-object v8
 
-    .line 365
+    .line 369
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.wet=string="
@@ -7554,7 +7622,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 366
+    .line 370
     const-string v9, "viper4android.headphonefx.reverb.dry"
 
     const-string v10, "50"
@@ -7563,7 +7631,7 @@
 
     move-result-object v8
 
-    .line 367
+    .line 371
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.reverb.dry=string="
@@ -7586,7 +7654,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 368
+    .line 372
     const-string v9, "viper4android.headphonefx.dynamicsystem.coeffs"
 
     const-string v10, "100;5600;40;80;50;50"
@@ -7595,7 +7663,7 @@
 
     move-result-object v8
 
-    .line 369
+    .line 373
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.dynamicsystem.coeffs=string="
@@ -7618,7 +7686,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 370
+    .line 374
     const-string v9, "viper4android.headphonefx.dynamicsystem.bass"
 
     const-string v10, "0"
@@ -7627,7 +7695,7 @@
 
     move-result-object v8
 
-    .line 371
+    .line 375
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.dynamicsystem.bass=string="
@@ -7650,7 +7718,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 372
+    .line 376
     const-string v9, "viper4android.headphonefx.fidelity.bass.mode"
 
     const-string v10, "0"
@@ -7659,7 +7727,7 @@
 
     move-result-object v8
 
-    .line 373
+    .line 377
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.bass.mode=string="
@@ -7682,7 +7750,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 374
+    .line 378
     const-string v9, "viper4android.headphonefx.fidelity.bass.freq"
 
     const-string v10, "40"
@@ -7691,7 +7759,7 @@
 
     move-result-object v8
 
-    .line 375
+    .line 379
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.bass.freq=string="
@@ -7714,7 +7782,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 376
+    .line 380
     const-string v9, "viper4android.headphonefx.fidelity.bass.gain"
 
     const-string v10, "50"
@@ -7723,7 +7791,7 @@
 
     move-result-object v8
 
-    .line 377
+    .line 381
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.bass.gain=string="
@@ -7746,7 +7814,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 378
+    .line 382
     const-string v9, "viper4android.headphonefx.fidelity.clarity.mode"
 
     const-string v10, "0"
@@ -7755,7 +7823,7 @@
 
     move-result-object v8
 
-    .line 379
+    .line 383
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.clarity.mode=string="
@@ -7778,7 +7846,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 380
+    .line 384
     const-string v9, "viper4android.headphonefx.fidelity.clarity.gain"
 
     const-string v10, "50"
@@ -7787,7 +7855,7 @@
 
     move-result-object v8
 
-    .line 381
+    .line 385
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.fidelity.clarity.gain=string="
@@ -7810,7 +7878,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 382
+    .line 386
     const-string v9, "viper4android.headphonefx.cure.crossfeed"
 
     const-string v10, "0"
@@ -7819,7 +7887,7 @@
 
     move-result-object v8
 
-    .line 383
+    .line 387
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.cure.crossfeed=string="
@@ -7842,7 +7910,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 384
+    .line 388
     const-string v9, "viper4android.headphonefx.outvol"
 
     const-string v10, "100"
@@ -7851,7 +7919,7 @@
 
     move-result-object v8
 
-    .line 385
+    .line 389
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.outvol=string="
@@ -7874,7 +7942,39 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 386
+    .line 390
+    const-string v9, "viper4android.headphonefx.channelpan"
+
+    const-string v10, "0"
+
+    invoke-interface {v4, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 391
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "viper4android.headphonefx.channelpan=string="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\n"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+
+    .line 392
     const-string v9, "viper4android.headphonefx.limiter"
 
     const-string v10, "100"
@@ -7883,7 +7983,7 @@
 
     move-result-object v8
 
-    .line 387
+    .line 393
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.headphonefx.limiter=string="
@@ -7906,7 +8006,7 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 388
+    .line 394
     const-string v9, "viper4android.speakerfx.limiter"
 
     const-string v10, "100"
@@ -7915,7 +8015,7 @@
 
     move-result-object v8
 
-    .line 389
+    .line 395
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "viper4android.speakerfx.limiter=string="
@@ -7938,21 +8038,21 @@
 
     invoke-virtual {v0, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 391
+    .line 397
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->flush()V
 
-    .line 392
+    .line 398
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
 
-    .line 393
+    .line 399
     invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
 
-    .line 394
+    .line 400
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 401
+    .line 407
     .end local v0           #bwOutput:Ljava/io/BufferedWriter;
     .end local v2           #fosOutput:Ljava/io/FileOutputStream;
     .end local v3           #oswOutput:Ljava/io/OutputStreamWriter;
@@ -7965,11 +8065,11 @@
     :goto_0
     return-void
 
-    .line 397
+    .line 403
     :catch_0
     move-exception v1
 
-    .line 399
+    .line 405
     .local v1, e:Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -7980,12 +8080,12 @@
     .parameter "ctx"
 
     .prologue
-    .line 835
+    .line 841
     invoke-static {p0, p1}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 836
+    .line 842
     .local v4, szToolbox:Ljava/lang/String;
     const-string v5, ""
 
@@ -7995,11 +8095,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 848
+    .line 854
     :goto_0
     return-void
 
-    .line 838
+    .line 844
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8019,7 +8119,7 @@
 
     move-result-object v1
 
-    .line 839
+    .line 845
     .local v1, szMount:Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8039,7 +8139,7 @@
 
     move-result-object v2
 
-    .line 840
+    .line 846
     .local v2, szRemove:Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8059,13 +8159,13 @@
 
     move-result-object v3
 
-    .line 842
+    .line 848
     .local v3, szSync:Ljava/lang/String;
     const/4 v5, 0x4
 
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 843
+    .line 849
     .local v0, szCmdLine:[Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -8089,7 +8189,7 @@
 
     aput-object v6, v0, v5
 
-    .line 844
+    .line 850
     const/4 v5, 0x1
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8112,12 +8212,12 @@
 
     aput-object v6, v0, v5
 
-    .line 845
+    .line 851
     const/4 v5, 0x2
 
     aput-object v3, v0, v5
 
-    .line 846
+    .line 852
     const/4 v5, 0x3
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8140,7 +8240,7 @@
 
     aput-object v6, v0, v5
 
-    .line 847
+    .line 853
     const/16 v5, 0xc8
 
     invoke-static {v0, v5}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
@@ -8154,12 +8254,12 @@
     .parameter "ctx"
 
     .prologue
-    .line 853
+    .line 859
     invoke-static {p0, p1}, Lcom/vipercn/viper4android/activity/Utils;->GetSavedToolbox(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 854
+    .line 860
     .local v4, szToolbox:Ljava/lang/String;
     const-string v5, ""
 
@@ -8169,11 +8269,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 866
+    .line 872
     :goto_0
     return-void
 
-    .line 856
+    .line 862
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8193,7 +8293,7 @@
 
     move-result-object v1
 
-    .line 857
+    .line 863
     .local v1, szMount:Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8213,7 +8313,7 @@
 
     move-result-object v2
 
-    .line 858
+    .line 864
     .local v2, szRemove:Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -8233,13 +8333,13 @@
 
     move-result-object v3
 
-    .line 860
+    .line 866
     .local v3, szSync:Ljava/lang/String;
     const/4 v5, 0x4
 
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 861
+    .line 867
     .local v0, szCmdLine:[Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -8263,7 +8363,7 @@
 
     aput-object v6, v0, v5
 
-    .line 862
+    .line 868
     const/4 v5, 0x1
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8286,12 +8386,12 @@
 
     aput-object v6, v0, v5
 
-    .line 863
+    .line 869
     const/4 v5, 0x2
 
     aput-object v3, v0, v5
 
-    .line 864
+    .line 870
     const/4 v5, 0x3
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8314,7 +8414,7 @@
 
     aput-object v6, v0, v5
 
-    .line 865
+    .line 871
     const/16 v5, 0xc8
 
     invoke-static {v0, v5}, Lcom/vipercn/viper4android/activity/Utils;->runRootCommand([Ljava/lang/String;I)Z
@@ -8464,14 +8564,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 406
+    .line 412
     const/4 v3, 0x0
 
-    .line 407
+    .line 413
     .local v3, mProcess:Ljava/lang/Process;
     const/4 v1, 0x0
 
-    .line 410
+    .line 416
     .local v1, mOutStream:Ljava/io/DataOutputStream;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -8484,7 +8584,7 @@
 
     move-result-object v3
 
-    .line 411
+    .line 417
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-virtual {v3}, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
@@ -8496,7 +8596,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 412
+    .line 418
     .end local v1           #mOutStream:Ljava/io/DataOutputStream;
     .local v2, mOutStream:Ljava/io/DataOutputStream;
     :try_start_1
@@ -8520,35 +8620,35 @@
 
     invoke-virtual {v2, v5}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 413
+    .line 419
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 414
+    .line 420
     const-wide/16 v5, 0x64
 
     invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 415
+    .line 421
     const-string v5, "exit\n"
 
     invoke-virtual {v2, v5}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 416
+    .line 422
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 417
+    .line 423
     invoke-virtual {v3}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 427
+    .line 433
     if-eqz v2, :cond_0
 
     :try_start_2
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 428
+    .line 434
     :cond_0
     if-eqz v3, :cond_1
 
@@ -8556,7 +8656,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 435
+    .line 441
     :cond_1
     const/4 v4, 0x1
 
@@ -8568,11 +8668,11 @@
     :goto_0
     return v4
 
-    .line 419
+    .line 425
     :catch_0
     move-exception v0
 
-    .line 427
+    .line 433
     .local v0, e:Ljava/lang/Exception;
     :goto_1
     if-eqz v1, :cond_3
@@ -8580,7 +8680,7 @@
     :try_start_3
     invoke-virtual {v1}, Ljava/io/DataOutputStream;->close()V
 
-    .line 428
+    .line 434
     :cond_3
     if-eqz v3, :cond_2
 
@@ -8590,26 +8690,26 @@
 
     goto :goto_0
 
-    .line 430
+    .line 436
     :catch_1
     move-exception v0
 
-    .line 432
+    .line 438
     goto :goto_0
 
-    .line 424
+    .line 430
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v5
 
-    .line 427
+    .line 433
     :goto_2
     if-eqz v1, :cond_4
 
     :try_start_4
     invoke-virtual {v1}, Ljava/io/DataOutputStream;->close()V
 
-    .line 428
+    .line 434
     :cond_4
     if-eqz v3, :cond_5
 
@@ -8617,19 +8717,19 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 434
+    .line 440
     :cond_5
     throw v5
 
-    .line 430
+    .line 436
     :catch_2
     move-exception v0
 
-    .line 432
+    .line 438
     .restart local v0       #e:Ljava/lang/Exception;
     goto :goto_0
 
-    .line 430
+    .line 436
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
@@ -8639,12 +8739,12 @@
     .restart local v0       #e:Ljava/lang/Exception;
     move-object v1, v2
 
-    .line 432
+    .line 438
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v1       #mOutStream:Ljava/io/DataOutputStream;
     goto :goto_0
 
-    .line 424
+    .line 430
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
@@ -8657,7 +8757,7 @@
     .restart local v1       #mOutStream:Ljava/io/DataOutputStream;
     goto :goto_2
 
-    .line 419
+    .line 425
     .end local v1           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
     :catch_4
@@ -8678,14 +8778,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 441
+    .line 447
     const/4 v4, 0x0
 
-    .line 442
+    .line 448
     .local v4, mProcess:Ljava/lang/Process;
     const/4 v2, 0x0
 
-    .line 445
+    .line 451
     .local v2, mOutStream:Ljava/io/DataOutputStream;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -8698,7 +8798,7 @@
 
     move-result-object v4
 
-    .line 446
+    .line 452
     new-instance v3, Ljava/io/DataOutputStream;
 
     invoke-virtual {v4}, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
@@ -8710,7 +8810,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 447
+    .line 453
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .local v3, mOutStream:Ljava/io/DataOutputStream;
     const/4 v1, 0x0
@@ -8722,27 +8822,27 @@
 
     if-lt v1, v6, :cond_3
 
-    .line 453
+    .line 459
     const-string v6, "exit\n"
 
     invoke-virtual {v3, v6}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 454
+    .line 460
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 455
+    .line 461
     invoke-virtual {v4}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 465
+    .line 471
     if-eqz v3, :cond_0
 
     :try_start_2
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
 
-    .line 466
+    .line 472
     :cond_0
     if-eqz v4, :cond_1
 
@@ -8750,7 +8850,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 473
+    .line 479
     :cond_1
     const/4 v5, 0x1
 
@@ -8763,7 +8863,7 @@
     :goto_1
     return v5
 
-    .line 449
+    .line 455
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v1       #i:I
     .restart local v3       #mOutStream:Ljava/io/DataOutputStream;
@@ -8791,10 +8891,10 @@
 
     invoke-virtual {v3, v6}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 450
+    .line 456
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 451
+    .line 457
     int-to-long v6, p1
 
     invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
@@ -8802,19 +8902,19 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 447
+    .line 453
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 457
+    .line 463
     .end local v1           #i:I
     .end local v3           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
     :catch_0
     move-exception v0
 
-    .line 465
+    .line 471
     .local v0, e:Ljava/lang/Exception;
     :goto_2
     if-eqz v2, :cond_4
@@ -8822,7 +8922,7 @@
     :try_start_4
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 466
+    .line 472
     :cond_4
     if-eqz v4, :cond_2
 
@@ -8832,26 +8932,26 @@
 
     goto :goto_1
 
-    .line 468
+    .line 474
     :catch_1
     move-exception v0
 
-    .line 470
+    .line 476
     goto :goto_1
 
-    .line 462
+    .line 468
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v6
 
-    .line 465
+    .line 471
     :goto_3
     if-eqz v2, :cond_5
 
     :try_start_5
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 466
+    .line 472
     :cond_5
     if-eqz v4, :cond_6
 
@@ -8859,19 +8959,19 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 472
+    .line 478
     :cond_6
     throw v6
 
-    .line 468
+    .line 474
     :catch_2
     move-exception v0
 
-    .line 470
+    .line 476
     .restart local v0       #e:Ljava/lang/Exception;
     goto :goto_1
 
-    .line 468
+    .line 474
     .end local v0           #e:Ljava/lang/Exception;
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v1       #i:I
@@ -8882,12 +8982,12 @@
     .restart local v0       #e:Ljava/lang/Exception;
     move-object v2, v3
 
-    .line 470
+    .line 476
     .end local v3           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
     goto :goto_1
 
-    .line 462
+    .line 468
     .end local v0           #e:Ljava/lang/Exception;
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v3       #mOutStream:Ljava/io/DataOutputStream;
@@ -8900,7 +9000,7 @@
     .restart local v2       #mOutStream:Ljava/io/DataOutputStream;
     goto :goto_3
 
-    .line 457
+    .line 463
     .end local v2           #mOutStream:Ljava/io/DataOutputStream;
     .restart local v3       #mOutStream:Ljava/io/DataOutputStream;
     :catch_4

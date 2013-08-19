@@ -21,13 +21,13 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 127
+    .line 128
     :try_start_0
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getMounts()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 128
+    .line 129
     .local v3, mounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Mount;>;"
     new-instance v4, Ljava/io/File;
 
@@ -37,7 +37,7 @@
     :cond_0
     if-eqz v4, :cond_2
 
-    .line 129
+    .line 130
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -56,7 +56,7 @@
 
     check-cast v2, Lcom/stericson/RootTools/containers/Mount;
 
-    .line 130
+    .line 131
     .local v2, mount:Lcom/stericson/RootTools/containers/Mount;
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Mount;->getMountPoint()Ljava/io/File;
 
@@ -71,7 +71,7 @@
 
     if-eqz v6, :cond_1
 
-    .line 143
+    .line 144
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #mount:Lcom/stericson/RootTools/containers/Mount;
     .end local v3           #mounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Mount;>;"
@@ -84,16 +84,16 @@
     :cond_2
     move-object v2, v5
 
-    .line 135
+    .line 136
     goto :goto_0
 
-    .line 136
+    .line 137
     .end local v3           #mounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Mount;>;"
     .end local v4           #path:Ljava/io/File;
     :catch_0
     move-exception v0
 
-    .line 137
+    .line 138
     .local v0, e:Ljava/io/IOException;
     new-instance v5, Ljava/lang/RuntimeException;
 
@@ -101,24 +101,24 @@
 
     throw v5
 
-    .line 138
+    .line 139
     .end local v0           #e:Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 139
+    .line 140
     .local v0, e:Ljava/lang/Exception;
     sget-boolean v6, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v6, :cond_3
 
-    .line 140
+    .line 141
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3
     move-object v2, v5
 
-    .line 143
+    .line 144
     goto :goto_0
 .end method
 
@@ -267,7 +267,7 @@
     :cond_4
     const/4 v7, 0x0
 
-    .line 121
+    .line 122
     .end local v1           #e:Ljava/lang/Exception;
     :goto_1
     return v7
@@ -630,14 +630,14 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 112
+    .line 113
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :goto_2
     invoke-direct {p0, p1}, Lcom/stericson/RootTools/internal/Remounter;->findMountPointRecursive(Ljava/lang/String;)Lcom/stericson/RootTools/containers/Mount;
 
     move-result-object v6
 
-    .line 115
+    .line 116
     :cond_6
     const-string v7, "RootTools v2.6"
 
@@ -673,7 +673,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
+    .line 117
     invoke-virtual {v6}, Lcom/stericson/RootTools/containers/Mount;->getFlags()Ljava/util/Set;
 
     move-result-object v7
@@ -688,7 +688,7 @@
 
     if-eqz v7, :cond_7
 
-    .line 117
+    .line 118
     invoke-virtual {v6}, Lcom/stericson/RootTools/containers/Mount;->getFlags()Ljava/util/Set;
 
     move-result-object v7
@@ -699,12 +699,12 @@
 
     invoke-static {v7}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     const/4 v7, 0x1
 
     goto/16 :goto_1
 
-    .line 120
+    .line 121
     :cond_7
     invoke-virtual {v6}, Lcom/stericson/RootTools/containers/Mount;->getFlags()Ljava/util/Set;
 
@@ -716,7 +716,7 @@
 
     invoke-static {v7}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 121
+    .line 122
     const/4 v7, 0x0
 
     goto/16 :goto_1

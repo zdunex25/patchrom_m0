@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 90
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->group:Ljava/lang/String;
 
     return-object v0
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 50
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->group:Ljava/lang/String;
 
     return-object v0
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 98
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->other:Ljava/lang/String;
 
     return-object v0
@@ -64,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 54
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->other:Ljava/lang/String;
 
     return-object v0
@@ -74,7 +74,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 42
     iget v0, p0, Lcom/stericson/RootTools/containers/Permissions;->permissions:I
 
     return v0
@@ -84,7 +84,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 34
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->symlink:Ljava/lang/String;
 
     return-object v0
@@ -94,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 38
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->type:Ljava/lang/String;
 
     return-object v0
@@ -104,7 +104,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 82
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->user:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 46
     iget-object v0, p0, Lcom/stericson/RootTools/containers/Permissions;->user:Ljava/lang/String;
 
     return-object v0
@@ -125,10 +125,10 @@
     .parameter "group"
 
     .prologue
-    .line 110
+    .line 94
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->group:Ljava/lang/String;
 
-    .line 111
+    .line 95
     return-void
 .end method
 
@@ -137,10 +137,10 @@
     .parameter "group"
 
     .prologue
-    .line 85
+    .line 74
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->group:Ljava/lang/String;
 
-    .line 86
+    .line 75
     return-void
 .end method
 
@@ -149,10 +149,10 @@
     .parameter "other"
 
     .prologue
-    .line 120
+    .line 102
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->other:Ljava/lang/String;
 
-    .line 121
+    .line 103
     return-void
 .end method
 
@@ -161,10 +161,10 @@
     .parameter "other"
 
     .prologue
-    .line 90
+    .line 78
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->other:Ljava/lang/String;
 
-    .line 91
+    .line 79
     return-void
 .end method
 
@@ -173,10 +173,10 @@
     .parameter "permissions"
 
     .prologue
-    .line 75
+    .line 66
     iput p1, p0, Lcom/stericson/RootTools/containers/Permissions;->permissions:I
 
-    .line 76
+    .line 67
     return-void
 .end method
 
@@ -185,10 +185,10 @@
     .parameter "symlink"
 
     .prologue
-    .line 65
+    .line 58
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->symlink:Ljava/lang/String;
 
-    .line 66
+    .line 59
     return-void
 .end method
 
@@ -197,10 +197,10 @@
     .parameter "type"
 
     .prologue
-    .line 70
+    .line 62
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->type:Ljava/lang/String;
 
-    .line 71
+    .line 63
     return-void
 .end method
 
@@ -209,10 +209,10 @@
     .parameter "user"
 
     .prologue
-    .line 100
+    .line 86
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->user:Ljava/lang/String;
 
-    .line 101
+    .line 87
     return-void
 .end method
 
@@ -221,9 +221,9 @@
     .parameter "user"
 
     .prologue
-    .line 80
+    .line 70
     iput-object p1, p0, Lcom/stericson/RootTools/containers/Permissions;->user:Ljava/lang/String;
 
-    .line 81
+    .line 71
     return-void
 .end method

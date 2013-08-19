@@ -55,7 +55,7 @@
     .parameter "which"
 
     .prologue
-    const v11, 0x7f06008f
+    const v11, 0x7f060096
 
     const/4 v10, 0x2
 
@@ -233,7 +233,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060086
+    const v8, 0x7f06008d
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -316,7 +316,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060087
+    const v8, 0x7f06008e
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

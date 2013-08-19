@@ -34,7 +34,7 @@
     .line 40
     iput-object v0, p0, Lcom/stericson/RootTools/execution/Executer;->result:Lcom/stericson/RootTools/RootTools$Result;
 
-    .line 107
+    .line 93
     return-void
 .end method
 
@@ -55,12 +55,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 276
+    .line 249
     iget-object v0, p0, Lcom/stericson/RootTools/execution/Executer;->process:Ljava/lang/Process;
 
     if-eqz v0, :cond_0
 
-    .line 280
+    .line 252
     :try_start_0
     iget-object v0, p0, Lcom/stericson/RootTools/execution/Executer;->process:Ljava/lang/Process;
 
@@ -68,24 +68,24 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 282
+    .line 255
     :goto_0
     iput-object v1, p0, Lcom/stericson/RootTools/execution/Executer;->process:Ljava/lang/Process;
 
-    .line 285
+    .line 258
     :cond_0
     iget-object v0, p0, Lcom/stericson/RootTools/execution/Executer;->result:Lcom/stericson/RootTools/RootTools$Result;
 
     if-eqz v0, :cond_1
 
-    .line 287
+    .line 259
     iput-object v1, p0, Lcom/stericson/RootTools/execution/Executer;->result:Lcom/stericson/RootTools/RootTools$Result;
 
-    .line 289
+    .line 261
     :cond_1
     return-void
 
-    .line 281
+    .line 253
     :catch_0
     move-exception v0
 
@@ -124,7 +124,7 @@
     .end annotation
 
     .prologue
-    .line 76
+    .line 66
     monitor-enter p0
 
     :try_start_0
@@ -169,7 +169,7 @@
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 78
+    .line 68
     new-instance v0, Lcom/stericson/RootTools/execution/Executer$Worker;
 
     const/4 v6, 0x0
@@ -186,42 +186,42 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/stericson/RootTools/execution/Executer$Worker;-><init>(Lcom/stericson/RootTools/execution/Executer;[Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;ZLcom/stericson/RootTools/execution/Executer$1;)V
 
-    .line 79
+    .line 69
     .local v0, worker:Lcom/stericson/RootTools/execution/Executer$Worker;
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Executer$Worker;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 83
+    .line 72
     const/4 v1, -0x1
 
     if-ne p5, v1, :cond_0
 
-    .line 85
+    .line 73
     const p5, 0x493e0
 
-    .line 88
+    .line 76
     :cond_0
     int-to-long v1, p5
 
     :try_start_1
     invoke-virtual {v0, v1, v2}, Lcom/stericson/RootTools/execution/Executer$Worker;->join(J)V
 
-    .line 91
+    .line 79
     sget v1, Lcom/stericson/RootTools/RootTools;->shellDelay:I
 
     int-to-long v1, v1
 
     invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 93
+    .line 81
     iget v1, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
     const/16 v2, -0x38f
 
     if-eq v1, v2, :cond_2
 
-    .line 94
+    .line 82
     iget-object v1, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->finalResponse:Ljava/util/List;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -231,7 +231,7 @@
 
     return-object v1
 
-    .line 76
+    .line 66
     .end local v0           #worker:Lcom/stericson/RootTools/execution/Executer$Worker;
     :cond_1
     :try_start_2
@@ -241,7 +241,7 @@
 
     goto :goto_0
 
-    .line 96
+    .line 84
     .restart local v0       #worker:Lcom/stericson/RootTools/execution/Executer$Worker;
     :cond_2
     :try_start_3
@@ -254,23 +254,23 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 98
+    .line 85
     :catch_0
     move-exception v7
 
-    .line 100
+    .line 86
     .local v7, ex:Ljava/lang/InterruptedException;
     :try_start_4
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Executer$Worker;->interrupt()V
 
-    .line 101
+    .line 87
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    .line 102
+    .line 88
     new-instance v1, Ljava/util/concurrent/TimeoutException;
 
     invoke-direct {v1}, Ljava/util/concurrent/TimeoutException;-><init>()V
@@ -279,7 +279,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 76
+    .line 66
     .end local v0           #worker:Lcom/stericson/RootTools/execution/Executer$Worker;
     .end local v7           #ex:Ljava/lang/InterruptedException;
     :catchall_0

@@ -27,7 +27,7 @@
     .line 1
     iput-object p1, p0, Lcom/vipercn/viper4android/service/HeadsetService$7;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
-    .line 492
+    .line 495
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -41,13 +41,13 @@
     .parameter "intent"
 
     .prologue
-    .line 498
+    .line 501
     const-string v0, "ViPER4Android"
 
     const-string v1, "mScreenOnReceiver::onReceive()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 502
     return-void
 .end method

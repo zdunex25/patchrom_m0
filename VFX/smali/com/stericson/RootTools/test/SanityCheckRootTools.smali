@@ -28,7 +28,7 @@
     .line 46
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 370
+    .line 347
     return-void
 .end method
 
@@ -159,7 +159,7 @@
 
     invoke-virtual {p0, v4}, Lcom/stericson/RootTools/test/SanityCheckRootTools;->print(Ljava/lang/CharSequence;)V
 
-    .line 76
+    .line 75
     :try_start_1
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
     :try_end_1
@@ -167,7 +167,7 @@
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lcom/stericson/RootTools/exceptions/RootDeniedException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 95
+    .line 88
     :goto_1
     :try_start_2
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->isAccessGiven()Z
@@ -176,65 +176,65 @@
 
     if-nez v4, :cond_0
 
-    .line 96
+    .line 89
     const-string v4, "ERROR: No root access to this device.\n"
 
     invoke-virtual {p0, v4}, Lcom/stericson/RootTools/test/SanityCheckRootTools;->print(Ljava/lang/CharSequence;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 110
+    .line 103
     :goto_2
     return-void
 
-    .line 78
+    .line 76
     :catch_0
     move-exception v1
 
-    .line 81
+    .line 78
     .local v1, e2:Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 83
+    .line 79
     .end local v1           #e2:Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 85
+    .line 80
     .local v0, e:Ljava/util/concurrent/TimeoutException;
     const-string v4, "[ TIMEOUT EXCEPTION! ]\n"
 
     invoke-virtual {p0, v4}, Lcom/stericson/RootTools/test/SanityCheckRootTools;->print(Ljava/lang/CharSequence;)V
 
-    .line 86
+    .line 81
     invoke-virtual {v0}, Ljava/util/concurrent/TimeoutException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 88
+    .line 82
     .end local v0           #e:Ljava/util/concurrent/TimeoutException;
     :catch_2
     move-exception v0
 
-    .line 90
+    .line 83
     .local v0, e:Lcom/stericson/RootTools/exceptions/RootDeniedException;
     const-string v4, "[ ROOT DENIED EXCEPTION! ]\n"
 
     invoke-virtual {p0, v4}, Lcom/stericson/RootTools/test/SanityCheckRootTools;->print(Ljava/lang/CharSequence;)V
 
-    .line 91
+    .line 84
     invoke-virtual {v0}, Lcom/stericson/RootTools/exceptions/RootDeniedException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 99
+    .line 92
     .end local v0           #e:Lcom/stericson/RootTools/exceptions/RootDeniedException;
     :catch_3
     move-exception v0
 
-    .line 100
+    .line 93
     .local v0, e:Ljava/lang/Exception;
     const-string v4, "ERROR: could not determine root access to this device.\n"
 
@@ -242,7 +242,7 @@
 
     goto :goto_2
 
-    .line 105
+    .line 98
     .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     new-instance v4, Landroid/app/ProgressDialog;
@@ -251,17 +251,17 @@
 
     iput-object v4, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools;->mPDialog:Landroid/app/ProgressDialog;
 
-    .line 106
+    .line 99
     iget-object v4, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools;->mPDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v4, v7}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 107
+    .line 100
     iget-object v4, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools;->mPDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v4, v7}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 109
+    .line 102
     new-instance v4, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     new-instance v5, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;
@@ -288,12 +288,12 @@
     .parameter "text"
 
     .prologue
-    .line 113
+    .line 106
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
 
-    .line 114
+    .line 107
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools;->mScrollView:Landroid/widget/ScrollView;
 
     new-instance v1, Lcom/stericson/RootTools/test/SanityCheckRootTools$1;
@@ -302,6 +302,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->post(Ljava/lang/Runnable;)Z
 
-    .line 119
+    .line 112
     return-void
 .end method

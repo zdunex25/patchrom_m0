@@ -91,7 +91,7 @@
     .parameter "id"
 
     .prologue
-    .line 72
+    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +118,7 @@
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 73
+    .line 72
     return-void
 .end method
 
@@ -131,10 +131,10 @@
     .end annotation
 
     .prologue
-    .line 132
+    .line 129
     monitor-enter p0
 
-    .line 133
+    .line 130
     :try_start_0
     iget v0, p0, Lcom/stericson/RootTools/execution/Command;->timeout:I
 
@@ -146,7 +146,7 @@
 
     return v0
 
-    .line 134
+    .line 131
     :catchall_0
     move-exception v0
 
@@ -167,24 +167,24 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 114
     monitor-enter p0
 
-    .line 118
+    .line 115
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/execution/Command;->waitForFinish(I)V
 
-    .line 119
+    .line 116
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 120
+    .line 117
     iget v0, p0, Lcom/stericson/RootTools/execution/Command;->exitCode:I
 
     return v0
 
-    .line 119
+    .line 116
     :catchall_0
     move-exception v0
 
@@ -276,33 +276,33 @@
     .parameter "code"
 
     .prologue
-    .line 76
+    .line 75
     monitor-enter p0
 
-    .line 77
+    .line 76
     :try_start_0
     iput p1, p0, Lcom/stericson/RootTools/execution/Command;->exitCode:I
 
-    .line 78
+    .line 77
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/stericson/RootTools/execution/Command;->finished:Z
 
-    .line 79
+    .line 78
     iget v0, p0, Lcom/stericson/RootTools/execution/Command;->id:I
 
     invoke-virtual {p0, v0}, Lcom/stericson/RootTools/execution/Command;->commandFinished(I)V
 
-    .line 80
+    .line 79
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 81
+    .line 80
     monitor-exit p0
 
-    .line 82
+    .line 81
     return-void
 
-    .line 81
+    .line 80
     :catchall_0
     move-exception v0
 
@@ -318,25 +318,25 @@
     .parameter "reason"
 
     .prologue
-    .line 87
+    .line 85
     :try_start_0
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->closeAll()V
 
-    .line 88
+    .line 86
     const-string v0, "Terminating all shells."
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 89
+    .line 87
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/execution/Command;->terminated(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
+    .line 90
     :goto_0
     return-void
 
-    .line 91
+    .line 88
     :catch_0
     move-exception v0
 
@@ -348,12 +348,12 @@
     .parameter "reason"
 
     .prologue
-    .line 95
+    .line 93
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0}, Lcom/stericson/RootTools/execution/Command;->setExitCode(I)V
 
-    .line 96
+    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +382,7 @@
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 97
+    .line 95
     return-void
 .end method
 
@@ -395,22 +395,22 @@
     .end annotation
 
     .prologue
-    .line 125
+    .line 122
     monitor-enter p0
 
-    .line 126
+    .line 123
     :try_start_0
     iget v0, p0, Lcom/stericson/RootTools/execution/Command;->timeout:I
 
     invoke-virtual {p0, v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish(I)V
 
-    .line 127
+    .line 124
     monitor-exit p0
 
-    .line 128
+    .line 125
     return-void
 
-    .line 127
+    .line 124
     :catchall_0
     move-exception v0
 
@@ -431,10 +431,10 @@
     .end annotation
 
     .prologue
-    .line 101
+    .line 99
     monitor-enter p0
 
-    .line 102
+    .line 100
     :cond_0
     :goto_0
     :try_start_0
@@ -442,34 +442,34 @@
 
     if-nez v0, :cond_1
 
-    .line 103
+    .line 101
     int-to-long v0, p1
 
     invoke-virtual {p0, v0, v1}, Ljava/lang/Object;->wait(J)V
 
-    .line 105
+    .line 103
     iget-boolean v0, p0, Lcom/stericson/RootTools/execution/Command;->finished:Z
 
     if-nez v0, :cond_0
 
-    .line 107
+    .line 104
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/stericson/RootTools/execution/Command;->finished:Z
 
-    .line 108
+    .line 105
     const-string v0, "Timeout Exception has occurred."
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 109
+    .line 106
     const-string v0, "Timeout Exception"
 
     invoke-virtual {p0, v0}, Lcom/stericson/RootTools/execution/Command;->terminate(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 112
+    .line 109
     :catchall_0
     move-exception v0
 
@@ -485,7 +485,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 113
+    .line 110
     return-void
 .end method
 

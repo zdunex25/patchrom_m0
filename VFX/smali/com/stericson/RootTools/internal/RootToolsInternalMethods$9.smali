@@ -32,7 +32,7 @@
     .parameter
 
     .prologue
-    .line 1286
+    .line 1154
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     iput-object p4, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;->val$box:Ljava/lang/String;
@@ -54,7 +54,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1291
+    .line 1158
     iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;->val$box:Ljava/lang/String;
 
     const-string v1, "toolbox"
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1292
+    .line 1159
     const-string v0, "no such tool"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -74,15 +74,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1293
+    .line 1160
     sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
 
-    .line 1302
+    .line 1169
     :cond_0
     :goto_0
     return-void
 
-    .line 1295
+    .line 1162
     :cond_1
     iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;->val$box:Ljava/lang/String;
 
@@ -94,7 +94,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1297
+    .line 1164
     iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;->val$util:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -103,12 +103,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1298
+    .line 1165
     const-string v0, "Found util!"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1299
+    .line 1166
     sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
 
     goto :goto_0

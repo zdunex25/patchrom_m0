@@ -46,7 +46,7 @@
     .prologue
     const/4 v6, 0x0
 
-    const v5, 0x7f06008f
+    const v5, 0x7f060096
 
     .line 335
     iget-object v3, p0, Lcom/vipercn/viper4android/activity/ViPER4Android$1$1$1;->this$2:Lcom/vipercn/viper4android/activity/ViPER4Android$1$1;
@@ -147,7 +147,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f060099
+    const v4, 0x7f0600a0
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -232,7 +232,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f06009b
+    const v4, 0x7f0600a2
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

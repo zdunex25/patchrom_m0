@@ -47,32 +47,32 @@
     .parameter "useRoot"
 
     .prologue
-    .line 118
+    .line 102
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 112
+    .line 97
     const/16 v0, -0x38f
 
     iput v0, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 119
+    .line 103
     iput-object p2, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->commands:[Ljava/lang/String;
 
-    .line 120
+    .line 104
     iput p3, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->sleepTime:I
 
-    .line 121
+    .line 105
     iput-object p1, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
 
-    .line 122
+    .line 106
     iget-object v0, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
 
     iput-object p4, v0, Lcom/stericson/RootTools/execution/Executer;->result:Lcom/stericson/RootTools/RootTools$Result;
 
-    .line 123
+    .line 107
     iput-boolean p5, p0, Lcom/stericson/RootTools/execution/Executer$Worker;->useRoot:Z
 
-    .line 124
+    .line 108
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .parameter "x5"
 
     .prologue
-    .line 107
+    .line 93
     invoke-direct/range {p0 .. p5}, Lcom/stericson/RootTools/execution/Executer$Worker;-><init>(Lcom/stericson/RootTools/execution/Executer;[Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;Z)V
 
     return-void
@@ -98,18 +98,18 @@
     .locals 23
 
     .prologue
-    .line 127
+    .line 111
     const/4 v10, 0x0
 
-    .line 128
+    .line 112
     .local v10, os:Ljava/io/DataOutputStream;
     const/4 v14, 0x0
 
-    .line 129
+    .line 113
     .local v14, osRes:Ljava/io/InputStreamReader;
     const/4 v12, 0x0
 
-    .line 133
+    .line 116
     .local v12, osErr:Ljava/io/InputStreamReader;
     :try_start_0
     move-object/from16 v0, p0
@@ -126,14 +126,14 @@
 
     if-nez v20, :cond_0
 
-    .line 135
+    .line 117
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v20
 
     invoke-virtual/range {v20 .. v20}, Ljava/lang/Runtime;->gc()V
 
-    .line 137
+    .line 119
     sget-object v20, Lcom/stericson/RootTools/RootTools;->customShell:Ljava/lang/String;
 
     const-string v21, ""
@@ -144,7 +144,7 @@
 
     if-eqz v20, :cond_4
 
-    .line 139
+    .line 120
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -180,7 +180,7 @@
 
     iput-object v0, v1, Lcom/stericson/RootTools/execution/Executer;->process:Ljava/lang/Process;
 
-    .line 140
+    .line 121
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->useRoot:Z
@@ -194,7 +194,7 @@
     :goto_1
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 148
+    .line 127
     :goto_2
     move-object/from16 v0, p0
 
@@ -210,7 +210,7 @@
 
     if-eqz v20, :cond_0
 
-    .line 149
+    .line 128
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -237,7 +237,7 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/stericson/RootTools/RootTools$Result;->setProcess(Ljava/lang/Process;)Lcom/stericson/RootTools/RootTools$Result;
 
-    .line 153
+    .line 132
     :cond_0
     new-instance v11, Ljava/io/DataOutputStream;
 
@@ -265,7 +265,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_7
 
-    .line 154
+    .line 133
     .end local v10           #os:Ljava/io/DataOutputStream;
     .local v11, os:Ljava/io/DataOutputStream;
     :try_start_1
@@ -295,7 +295,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_b
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_8
 
-    .line 155
+    .line 134
     .end local v14           #osRes:Ljava/io/InputStreamReader;
     .local v15, osRes:Ljava/io/InputStreamReader;
     :try_start_2
@@ -325,7 +325,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_c
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_9
 
-    .line 156
+    .line 135
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .local v13, osErr:Ljava/io/InputStreamReader;
     :try_start_3
@@ -335,7 +335,7 @@
 
     invoke-direct {v0, v15}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 157
+    .line 136
     .local v16, reader:Ljava/io/BufferedReader;
     new-instance v17, Ljava/io/BufferedReader;
 
@@ -343,11 +343,11 @@
 
     invoke-direct {v0, v13}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 159
+    .line 138
     .local v17, reader_error:Ljava/io/BufferedReader;
     const/16 v18, 0x0
 
-    .line 161
+    .line 140
     .local v18, response:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -363,7 +363,7 @@
 
     if-nez v20, :cond_1
 
-    .line 162
+    .line 141
     new-instance v18, Ljava/util/LinkedList;
 
     .end local v18           #response:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -373,7 +373,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 168
+    .line 147
     .restart local v18       #response:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     :try_start_4
@@ -393,7 +393,7 @@
 
     aget-object v19, v2, v5
 
-    .line 169
+    .line 148
     .local v19, single:Ljava/lang/String;
     new-instance v20, Ljava/lang/StringBuilder;
 
@@ -419,7 +419,7 @@
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 170
+    .line 149
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,10 +446,10 @@
 
     invoke-virtual {v11, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 171
+    .line 150
     invoke-virtual {v11}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 172
+    .line 151
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->sleepTime:I
@@ -467,12 +467,12 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 168
+    .line 147
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 139
+    .line 120
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -492,13 +492,13 @@
 
     goto/16 :goto_0
 
-    .line 140
+    .line 121
     :cond_3
     const-string v20, "Using sh"
 
     goto/16 :goto_1
 
-    .line 144
+    .line 123
     :cond_4
     move-object/from16 v0, p0
 
@@ -522,7 +522,7 @@
 
     iput-object v0, v1, Lcom/stericson/RootTools/execution/Executer;->process:Ljava/lang/Process;
 
-    .line 145
+    .line 124
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -551,16 +551,16 @@
 
     goto/16 :goto_2
 
-    .line 238
+    .line 213
     :catch_0
     move-exception v6
 
-    .line 251
+    .line 224
     .local v6, ignore:Ljava/lang/InterruptedException;
     :goto_4
     if-eqz v10, :cond_5
 
-    .line 252
+    .line 225
     :try_start_6
     const-string v20, "exit \n"
 
@@ -568,38 +568,38 @@
 
     invoke-virtual {v10, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 253
+    .line 226
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 254
+    .line 227
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->close()V
 
-    .line 255
+    .line 228
     const/4 v10, 0x0
 
-    .line 257
+    .line 230
     :cond_5
     if-eqz v14, :cond_6
 
-    .line 258
+    .line 231
     invoke-virtual {v14}, Ljava/io/InputStreamReader;->close()V
 
-    .line 259
+    .line 232
     const/4 v14, 0x0
 
-    .line 261
+    .line 234
     :cond_6
     if-eqz v12, :cond_7
 
-    .line 262
+    .line 235
     invoke-virtual {v12}, Ljava/io/InputStreamReader;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_a
 
-    .line 263
+    .line 236
     const/4 v12, 0x0
 
-    .line 268
+    .line 242
     :cond_7
     :goto_5
     move-object/from16 v0, p0
@@ -611,12 +611,12 @@
     #calls: Lcom/stericson/RootTools/execution/Executer;->closeShell()V
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/execution/Executer;->access$100(Lcom/stericson/RootTools/execution/Executer;)V
 
-    .line 271
+    .line 245
     .end local v6           #ignore:Ljava/lang/InterruptedException;
     :goto_6
     return-void
 
-    .line 175
+    .line 154
     .end local v10           #os:Ljava/io/DataOutputStream;
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .end local v14           #osRes:Ljava/io/InputStreamReader;
@@ -637,26 +637,26 @@
 
     invoke-virtual {v11, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 176
+    .line 155
     invoke-virtual {v11}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 178
+    .line 157
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 179
+    .line 158
     .local v8, line:Ljava/lang/String;
     invoke-virtual/range {v17 .. v17}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 181
+    .line 160
     .local v9, line_error:Ljava/lang/String;
     :goto_7
     if-eqz v8, :cond_d
 
-    .line 182
+    .line 161
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -671,12 +671,12 @@
 
     if-nez v20, :cond_9
 
-    .line 183
+    .line 162
     move-object/from16 v0, v18
 
     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 188
+    .line 167
     :goto_8
     new-instance v20, Ljava/lang/StringBuilder;
 
@@ -700,14 +700,14 @@
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 190
+    .line 169
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_7
 
-    .line 185
+    .line 164
     :cond_9
     move-object/from16 v0, p0
 
@@ -730,7 +730,7 @@
 
     goto :goto_8
 
-    .line 209
+    .line 187
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -739,14 +739,14 @@
     :catch_1
     move-exception v4
 
-    .line 211
+    .line 188
     .local v4, ex:Ljava/lang/Exception;
     :try_start_8
     sget-boolean v20, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v20, :cond_a
 
-    .line 212
+    .line 189
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -771,7 +771,7 @@
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 215
+    .line 192
     :cond_a
     move-object/from16 v0, p0
 
@@ -787,7 +787,7 @@
 
     if-eqz v20, :cond_b
 
-    .line 217
+    .line 193
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -806,14 +806,14 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 220
+    .line 196
     :cond_b
     :try_start_9
     const-string v20, "In finally block"
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 222
+    .line 198
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -828,19 +828,19 @@
 
     if-eqz v20, :cond_c
 
-    .line 223
+    .line 199
     const-string v20, "Getting Exit"
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 224
+    .line 200
     move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->finalResponse:Ljava/util/List;
 
-    .line 225
+    .line 201
     const/16 v20, -0x1
 
     move/from16 v0, v20
@@ -849,7 +849,7 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 226
+    .line 202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -872,12 +872,12 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 227
+    .line 203
     const-string v20, "Exit done..."
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 228
+    .line 204
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
@@ -886,7 +886,7 @@
 
     sput v20, Lcom/stericson/RootTools/RootTools;->lastExitCode:I
 
-    .line 230
+    .line 206
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -901,7 +901,7 @@
 
     if-eqz v20, :cond_19
 
-    .line 231
+    .line 207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -926,13 +926,13 @@
     .catch Ljava/lang/InterruptedException; {:try_start_9 .. :try_end_9} :catch_2
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_3
 
-    .line 251
+    .line 224
     .end local v4           #ex:Ljava/lang/Exception;
     :cond_c
     :goto_9
     if-eqz v11, :cond_1d
 
-    .line 252
+    .line 225
     :try_start_a
     const-string v20, "exit \n"
 
@@ -940,48 +940,48 @@
 
     invoke-virtual {v11, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 253
+    .line 226
     invoke-virtual {v11}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 254
+    .line 227
     invoke-virtual {v11}, Ljava/io/DataOutputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 255
+    .line 228
     const/4 v10, 0x0
 
-    .line 257
+    .line 230
     .end local v11           #os:Ljava/io/DataOutputStream;
     .restart local v10       #os:Ljava/io/DataOutputStream;
     :goto_a
     if-eqz v15, :cond_1c
 
-    .line 258
+    .line 231
     :try_start_b
     invoke-virtual {v15}, Ljava/io/InputStreamReader;->close()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_d
 
-    .line 259
+    .line 232
     const/4 v14, 0x0
 
-    .line 261
+    .line 234
     .end local v15           #osRes:Ljava/io/InputStreamReader;
     .restart local v14       #osRes:Ljava/io/InputStreamReader;
     :goto_b
     if-eqz v13, :cond_1b
 
-    .line 262
+    .line 235
     :try_start_c
     invoke-virtual {v13}, Ljava/io/InputStreamReader;->close()V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_e
 
-    .line 263
+    .line 236
     const/4 v12, 0x0
 
-    .line 268
+    .line 242
     .end local v13           #osErr:Ljava/io/InputStreamReader;
     .restart local v12       #osErr:Ljava/io/InputStreamReader;
     :goto_c
@@ -996,7 +996,7 @@
 
     goto/16 :goto_6
 
-    .line 193
+    .line 172
     .end local v10           #os:Ljava/io/DataOutputStream;
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .end local v14           #osRes:Ljava/io/InputStreamReader;
@@ -1014,11 +1014,11 @@
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 195
+    .line 174
     :goto_d
     if-eqz v9, :cond_10
 
-    .line 196
+    .line 175
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1033,12 +1033,12 @@
 
     if-nez v20, :cond_e
 
-    .line 197
+    .line 176
     move-object/from16 v0, v18
 
     invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 202
+    .line 181
     :goto_e
     new-instance v20, Ljava/lang/StringBuilder;
 
@@ -1062,14 +1062,14 @@
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 203
+    .line 182
     invoke-virtual/range {v17 .. v17}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v9
 
     goto :goto_d
 
-    .line 199
+    .line 178
     :cond_e
     move-object/from16 v0, p0
 
@@ -1092,7 +1092,7 @@
 
     goto :goto_e
 
-    .line 220
+    .line 196
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -1106,7 +1106,7 @@
 
     invoke-static/range {v21 .. v21}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 222
+    .line 198
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1121,19 +1121,19 @@
 
     if-eqz v21, :cond_f
 
-    .line 223
+    .line 199
     const-string v21, "Getting Exit"
 
     invoke-static/range {v21 .. v21}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 224
+    .line 200
     move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->finalResponse:Ljava/util/List;
 
-    .line 225
+    .line 201
     const/16 v21, -0x1
 
     move/from16 v0, v21
@@ -1142,7 +1142,7 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 226
+    .line 202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1165,12 +1165,12 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 227
+    .line 203
     const-string v21, "Exit done..."
 
     invoke-static/range {v21 .. v21}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 228
+    .line 204
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
@@ -1179,7 +1179,7 @@
 
     sput v21, Lcom/stericson/RootTools/RootTools;->lastExitCode:I
 
-    .line 230
+    .line 206
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1194,7 +1194,7 @@
 
     if-eqz v21, :cond_1a
 
-    .line 231
+    .line 207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1215,7 +1215,7 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/stericson/RootTools/RootTools$Result;->onComplete(I)V
 
-    .line 233
+    .line 209
     :cond_f
     :goto_f
     throw v20
@@ -1224,7 +1224,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_e .. :try_end_e} :catch_2
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_3
 
-    .line 238
+    .line 213
     .end local v16           #reader:Ljava/io/BufferedReader;
     .end local v17           #reader_error:Ljava/io/BufferedReader;
     .end local v18           #response:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -1245,7 +1245,7 @@
     .restart local v10       #os:Ljava/io/DataOutputStream;
     goto/16 :goto_4
 
-    .line 206
+    .line 185
     .end local v10           #os:Ljava/io/DataOutputStream;
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .end local v14           #osRes:Ljava/io/InputStreamReader;
@@ -1269,13 +1269,13 @@
     .catchall {:try_start_f .. :try_end_f} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_1
 
-    .line 220
+    .line 196
     :try_start_10
     const-string v20, "In finally block"
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 222
+    .line 198
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1290,19 +1290,19 @@
 
     if-eqz v20, :cond_c
 
-    .line 223
+    .line 199
     const-string v20, "Getting Exit"
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 224
+    .line 200
     move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->finalResponse:Ljava/util/List;
 
-    .line 225
+    .line 201
     const/16 v20, -0x1
 
     move/from16 v0, v20
@@ -1311,7 +1311,7 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 226
+    .line 202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1334,12 +1334,12 @@
 
     iput v0, v1, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
 
-    .line 227
+    .line 203
     const-string v20, "Exit done..."
 
     invoke-static/range {v20 .. v20}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 228
+    .line 204
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->exit:I
@@ -1348,7 +1348,7 @@
 
     sput v20, Lcom/stericson/RootTools/RootTools;->lastExitCode:I
 
-    .line 230
+    .line 206
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1363,7 +1363,7 @@
 
     if-eqz v20, :cond_15
 
-    .line 231
+    .line 207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/stericson/RootTools/execution/Executer$Worker;->executer:Lcom/stericson/RootTools/execution/Executer;
@@ -1390,7 +1390,7 @@
 
     goto/16 :goto_9
 
-    .line 242
+    .line 215
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -1412,7 +1412,7 @@
     .restart local v14       #osRes:Ljava/io/InputStreamReader;
     move-object v10, v11
 
-    .line 243
+    .line 216
     .end local v11           #os:Ljava/io/DataOutputStream;
     .local v3, e:Ljava/lang/Exception;
     .restart local v10       #os:Ljava/io/DataOutputStream;
@@ -1422,10 +1422,10 @@
 
     if-eqz v20, :cond_11
 
-    .line 244
+    .line 217
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 245
+    .line 218
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -1452,11 +1452,11 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_2
 
-    .line 251
+    .line 224
     :cond_11
     if-eqz v10, :cond_12
 
-    .line 252
+    .line 225
     :try_start_12
     const-string v20, "exit \n"
 
@@ -1464,38 +1464,38 @@
 
     invoke-virtual {v10, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 253
+    .line 226
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 254
+    .line 227
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->close()V
 
-    .line 255
+    .line 228
     const/4 v10, 0x0
 
-    .line 257
+    .line 230
     :cond_12
     if-eqz v14, :cond_13
 
-    .line 258
+    .line 231
     invoke-virtual {v14}, Ljava/io/InputStreamReader;->close()V
 
-    .line 259
+    .line 232
     const/4 v14, 0x0
 
-    .line 261
+    .line 234
     :cond_13
     if-eqz v12, :cond_14
 
-    .line 262
+    .line 235
     invoke-virtual {v12}, Ljava/io/InputStreamReader;->close()V
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_6
 
-    .line 263
+    .line 236
     const/4 v12, 0x0
 
-    .line 268
+    .line 242
     :cond_14
     :goto_11
     move-object/from16 v0, p0
@@ -1509,7 +1509,7 @@
 
     goto/16 :goto_6
 
-    .line 233
+    .line 209
     .end local v3           #e:Ljava/lang/Exception;
     .end local v10           #os:Ljava/io/DataOutputStream;
     .end local v12           #osErr:Ljava/io/InputStreamReader;
@@ -1549,7 +1549,7 @@
 
     goto/16 :goto_9
 
-    .line 249
+    .line 222
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -1571,13 +1571,13 @@
     .restart local v14       #osRes:Ljava/io/InputStreamReader;
     move-object v10, v11
 
-    .line 251
+    .line 224
     .end local v11           #os:Ljava/io/DataOutputStream;
     .restart local v10       #os:Ljava/io/DataOutputStream;
     :goto_12
     if-eqz v10, :cond_16
 
-    .line 252
+    .line 225
     :try_start_14
     const-string v21, "exit \n"
 
@@ -1585,38 +1585,38 @@
 
     invoke-virtual {v10, v0}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 253
+    .line 226
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 254
+    .line 227
     invoke-virtual {v10}, Ljava/io/DataOutputStream;->close()V
 
-    .line 255
+    .line 228
     const/4 v10, 0x0
 
-    .line 257
+    .line 230
     :cond_16
     if-eqz v14, :cond_17
 
-    .line 258
+    .line 231
     invoke-virtual {v14}, Ljava/io/InputStreamReader;->close()V
 
-    .line 259
+    .line 232
     const/4 v14, 0x0
 
-    .line 261
+    .line 234
     :cond_17
     if-eqz v12, :cond_18
 
-    .line 262
+    .line 235
     invoke-virtual {v12}, Ljava/io/InputStreamReader;->close()V
     :try_end_14
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_5
 
-    .line 263
+    .line 236
     const/4 v12, 0x0
 
-    .line 268
+    .line 242
     :cond_18
     :goto_13
     move-object/from16 v0, p0
@@ -1630,7 +1630,7 @@
 
     throw v20
 
-    .line 233
+    .line 209
     .end local v10           #os:Ljava/io/DataOutputStream;
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .end local v14           #osRes:Ljava/io/InputStreamReader;
@@ -1685,7 +1685,7 @@
 
     goto/16 :goto_f
 
-    .line 265
+    .line 238
     :catch_4
     move-exception v20
 
@@ -1712,7 +1712,7 @@
 
     goto :goto_13
 
-    .line 249
+    .line 222
     :catchall_2
     move-exception v20
 
@@ -1746,14 +1746,14 @@
     .restart local v10       #os:Ljava/io/DataOutputStream;
     goto :goto_12
 
-    .line 265
+    .line 238
     .restart local v3       #e:Ljava/lang/Exception;
     :catch_6
     move-exception v20
 
     goto :goto_11
 
-    .line 242
+    .line 215
     .end local v3           #e:Ljava/lang/Exception;
     :catch_7
     move-exception v3
@@ -1788,14 +1788,14 @@
     .restart local v10       #os:Ljava/io/DataOutputStream;
     goto/16 :goto_10
 
-    .line 265
+    .line 238
     .restart local v6       #ignore:Ljava/lang/InterruptedException;
     :catch_a
     move-exception v20
 
     goto/16 :goto_5
 
-    .line 238
+    .line 213
     .end local v6           #ignore:Ljava/lang/InterruptedException;
     .end local v10           #os:Ljava/io/DataOutputStream;
     .restart local v11       #os:Ljava/io/DataOutputStream;
@@ -1825,7 +1825,7 @@
     .restart local v10       #os:Ljava/io/DataOutputStream;
     goto/16 :goto_4
 
-    .line 265
+    .line 238
     .end local v12           #osErr:Ljava/io/InputStreamReader;
     .end local v14           #osRes:Ljava/io/InputStreamReader;
     .restart local v13       #osErr:Ljava/io/InputStreamReader;

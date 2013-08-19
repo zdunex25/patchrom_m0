@@ -38,7 +38,7 @@
     .parameter
 
     .prologue
-    .line 370
+    .line 347
     iput-object p1, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -52,7 +52,7 @@
     .parameter "x1"
 
     .prologue
-    .line 370
+    .line 347
     invoke-direct {p0, p1}, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;-><init>(Lcom/stericson/RootTools/test/SanityCheckRootTools;)V
 
     return-void
@@ -65,7 +65,7 @@
     .parameter "msg"
 
     .prologue
-    .line 379
+    .line 356
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -76,7 +76,7 @@
 
     move-result v0
 
-    .line 380
+    .line 357
     .local v0, action:I
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -88,15 +88,15 @@
 
     move-result-object v1
 
-    .line 382
+    .line 359
     .local v1, text:Ljava/lang/String;
     packed-switch v0, :pswitch_data_0
 
-    .line 399
+    .line 376
     :goto_0
     return-void
 
-    .line 384
+    .line 361
     :pswitch_0
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
@@ -107,7 +107,7 @@
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->show()V
 
-    .line 385
+    .line 362
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
     #getter for: Lcom/stericson/RootTools/test/SanityCheckRootTools;->mPDialog:Landroid/app/ProgressDialog;
@@ -121,16 +121,16 @@
 
     goto :goto_0
 
-    .line 388
+    .line 365
     :pswitch_1
     if-eqz v1, :cond_0
 
-    .line 389
+    .line 366
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
     invoke-virtual {v2, v1}, Lcom/stericson/RootTools/test/SanityCheckRootTools;->print(Ljava/lang/CharSequence;)V
 
-    .line 390
+    .line 367
     :cond_0
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 393
+    .line 370
     :pswitch_2
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
@@ -151,7 +151,7 @@
 
     goto :goto_0
 
-    .line 396
+    .line 373
     :pswitch_3
     iget-object v2, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$TestHandler;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
@@ -164,7 +164,7 @@
 
     goto :goto_0
 
-    .line 382
+    .line 359
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

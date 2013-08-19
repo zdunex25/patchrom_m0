@@ -3,15 +3,15 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_centerVertical="true">
         <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-            <ImageView android:id="@id/imageView1" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/missedcallother" android:scaleType="fitCenter" android:tint="#ffffffff" />
+            <ImageView android:id="@id/imageView1" android:layout_width="70.0px" android:layout_height="70.0px" android:src="@drawable/missedcallother" android:scaleType="fitCenter" android:tint="#ffffffff" />
             <TextView android:gravity="center" android:id="@id/missedCall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" />
         </LinearLayout>
         <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-            <ImageView android:id="@id/imageView2" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/batteryusage" android:scaleType="fitCenter" android:tint="#ffffffff" />
+            <ImageView android:id="@id/imageView2" android:layout_width="64.0px" android:layout_height="96.0px" android:src="@drawable/batteryusage" android:scaleType="fitCenter" android:tint="#ffffffff" />
             <TextView android:gravity="center" android:id="@id/bateryLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0%" />
         </LinearLayout>
         <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-            <ImageView android:id="@id/imageView3" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/mensajes" android:scaleType="fitCenter" android:tint="#ffffffff" />
+            <ImageView android:id="@id/imageView3" android:layout_width="70.0px" android:layout_height="70.0px" android:src="@drawable/mensajes" android:scaleType="fitCenter" android:tint="#ffffffff" />
             <TextView android:gravity="center" android:id="@id/missedSMS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" />
         </LinearLayout>
     </LinearLayout>

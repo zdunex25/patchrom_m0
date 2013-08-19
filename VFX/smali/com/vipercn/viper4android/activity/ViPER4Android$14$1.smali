@@ -54,7 +54,7 @@
     .parameter "v"
 
     .prologue
-    const v8, 0x7f060084
+    const v8, 0x7f06008b
 
     const/4 v10, 0x2
 
@@ -329,7 +329,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060088
+    const v8, 0x7f06008f
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -419,7 +419,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f060085
+    const v7, 0x7f06008c
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -434,7 +434,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f06007b
+    const v7, 0x7f060082
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -453,7 +453,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f06007c
+    const v7, 0x7f060083
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -613,7 +613,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060083
+    const v8, 0x7f06008a
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

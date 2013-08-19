@@ -27,7 +27,7 @@
     .line 1
     iput-object p1, p0, Lcom/vipercn/viper4android/service/HeadsetService$1;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
-    .line 364
+    .line 367
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
     .parameter "msg"
 
     .prologue
-    .line 371
+    .line 374
     :try_start_0
     iget-object v1, p0, Lcom/vipercn/viper4android/service/HeadsetService$1;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
@@ -60,7 +60,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 373
+    .line 376
     iget-object v1, p0, Lcom/vipercn/viper4android/service/HeadsetService$1;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
     #getter for: Lcom/vipercn/viper4android/service/HeadsetService;->mGeneralFX:Lcom/vipercn/viper4android/service/HeadsetService$V4ADSPModule;
@@ -72,7 +72,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 374
+    .line 377
     iget-object v1, p0, Lcom/vipercn/viper4android/service/HeadsetService$1;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
     #getter for: Lcom/vipercn/viper4android/service/HeadsetService;->mGeneralFX:Lcom/vipercn/viper4android/service/HeadsetService$V4ADSPModule;
@@ -86,21 +86,21 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/vipercn/viper4android/service/HeadsetService$V4ADSPModule;->setParameter_px4_vx4x1(II)V
 
-    .line 376
+    .line 379
     :cond_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 382
+    .line 385
     :goto_0
     return-void
 
-    .line 378
+    .line 381
     :catch_0
     move-exception v0
 
-    .line 380
+    .line 383
     .local v0, e:Ljava/lang/Exception;
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 114
+    .line 107
     iput-object p1, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$1;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 116
+    .line 109
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$1;->this$0:Lcom/stericson/RootTools/test/SanityCheckRootTools;
 
     #getter for: Lcom/stericson/RootTools/test/SanityCheckRootTools;->mScrollView:Landroid/widget/ScrollView;
@@ -53,6 +53,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->fullScroll(I)Z
 
-    .line 117
+    .line 110
     return-void
 .end method

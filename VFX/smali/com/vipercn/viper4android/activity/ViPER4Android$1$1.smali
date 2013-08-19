@@ -73,7 +73,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 329
-    const v1, 0x7f060091
+    const v1, 0x7f060098
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -98,7 +98,7 @@
     move-result-object v0
 
     .line 354
-    const v1, 0x7f060090
+    const v1, 0x7f060097
 
     new-instance v2, Lcom/vipercn/viper4android/activity/ViPER4Android$1$1$2;
 

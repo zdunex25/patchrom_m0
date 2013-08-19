@@ -216,7 +216,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f060094
+    const v3, 0x7f06009b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -806,7 +806,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f060094
+    const v7, 0x7f06009b
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1598,7 +1598,7 @@
 
     move-result-object v20
 
-    const v21, 0x7f06008d
+    const v21, 0x7f060094
 
     invoke-virtual/range {v20 .. v21}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1613,7 +1613,7 @@
 
     move-result-object v20
 
-    const v21, 0x7f06008f
+    const v21, 0x7f060096
 
     invoke-virtual/range {v20 .. v21}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2223,7 +2223,7 @@
 
     move-result-object v20
 
-    const v21, 0x7f06008e
+    const v21, 0x7f060095
 
     invoke-virtual/range {v20 .. v21}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2238,7 +2238,7 @@
 
     move-result-object v20
 
-    const v21, 0x7f06008f
+    const v21, 0x7f060096
 
     invoke-virtual/range {v20 .. v21}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2455,7 +2455,7 @@
 
     .line 548
     .local v9, mChglog:Landroid/app/AlertDialog$Builder;
-    const v20, 0x7f06009c
+    const v20, 0x7f0600a3
 
     move/from16 v0, v20
 
@@ -2469,7 +2469,7 @@
 
     move-result-object v20
 
-    const v21, 0x7f06008f
+    const v21, 0x7f060096
 
     invoke-virtual/range {v20 .. v21}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2646,7 +2646,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f0600a6
+    const v35, 0x7f0600ad
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2729,7 +2729,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f0600a1
+    const v35, 0x7f0600a8
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2788,7 +2788,7 @@
 
     move-result-object v35
 
-    const v36, 0x7f0600a2
+    const v36, 0x7f0600a9
 
     invoke-virtual/range {v35 .. v36}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2815,7 +2815,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f0600a0
+    const v35, 0x7f0600a7
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2835,7 +2835,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2860,7 +2860,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f0600a4
+    const v35, 0x7f0600ab
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3161,7 +3161,7 @@
 
     .line 872
     .local v11, mChglog:Landroid/app/AlertDialog$Builder;
-    const v34, 0x7f06009c
+    const v34, 0x7f0600a3
 
     move/from16 v0, v34
 
@@ -3177,7 +3177,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3324,7 +3324,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 892
-    const v35, 0x7f060080
+    const v35, 0x7f060087
 
     invoke-virtual/range {v34 .. v35}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -3355,7 +3355,7 @@
     move-result-object v34
 
     .line 935
-    const v35, 0x7f060090
+    const v35, 0x7f060097
 
     new-instance v36, Lcom/vipercn/viper4android/activity/ViPER4Android$13;
 
@@ -3479,7 +3479,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f060097
+    const v35, 0x7f06009e
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3515,7 +3515,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f060093
+    const v35, 0x7f06009a
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3530,7 +3530,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06007b
+    const v35, 0x7f060082
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3555,7 +3555,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06007c
+    const v35, 0x7f060083
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3585,7 +3585,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f060098
+    const v35, 0x7f06009f
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3611,7 +3611,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 1093
-    const v35, 0x7f060091
+    const v35, 0x7f060098
 
     invoke-virtual/range {v34 .. v35}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -3636,7 +3636,7 @@
     move-result-object v34
 
     .line 1118
-    const v35, 0x7f060090
+    const v35, 0x7f060097
 
     new-instance v36, Lcom/vipercn/viper4android/activity/ViPER4Android$17;
 
@@ -3661,7 +3661,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06009f
+    const v35, 0x7f0600a6
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3703,7 +3703,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f060089
+    const v35, 0x7f060090
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3762,7 +3762,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008b
+    const v35, 0x7f060092
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3777,7 +3777,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3829,7 +3829,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008c
+    const v35, 0x7f060093
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3844,7 +3844,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3870,7 +3870,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008a
+    const v35, 0x7f060091
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3929,7 +3929,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008b
+    const v35, 0x7f060092
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3944,7 +3944,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3991,7 +3991,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008c
+    const v35, 0x7f060093
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4006,7 +4006,7 @@
 
     move-result-object v34
 
-    const v35, 0x7f06008f
+    const v35, 0x7f060096
 
     invoke-virtual/range {v34 .. v35}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4074,7 +4074,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 1180
-    const v35, 0x7f060095
+    const v35, 0x7f06009c
 
     invoke-virtual/range {v34 .. v35}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -4274,7 +4274,7 @@
 
     move-result-object v35
 
-    const v36, 0x7f060075
+    const v36, 0x7f06007c
 
     invoke-virtual/range {v35 .. v36}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4289,7 +4289,7 @@
 
     move-result-object v35
 
-    const v36, 0x7f060076
+    const v36, 0x7f06007d
 
     invoke-virtual/range {v35 .. v36}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4304,7 +4304,7 @@
 
     move-result-object v35
 
-    const v36, 0x7f060078
+    const v36, 0x7f06007f
 
     invoke-virtual/range {v35 .. v36}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4319,7 +4319,7 @@
 
     move-result-object v35
 
-    const v36, 0x7f060077
+    const v36, 0x7f06007e
 
     invoke-virtual/range {v35 .. v36}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4338,7 +4338,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 1246
-    const v35, 0x7f06007a
+    const v35, 0x7f060081
 
     invoke-virtual/range {v34 .. v35}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -4488,7 +4488,7 @@
     .prologue
     const v13, 0x7f08000d
 
-    const v12, 0x7f060098
+    const v12, 0x7f06009f
 
     const/4 v9, 0x0
 
@@ -4569,7 +4569,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f06008a
+    const v9, 0x7f060091
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4638,7 +4638,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f060089
+    const v9, 0x7f060090
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4673,7 +4673,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f060097
+    const v9, 0x7f06009e
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

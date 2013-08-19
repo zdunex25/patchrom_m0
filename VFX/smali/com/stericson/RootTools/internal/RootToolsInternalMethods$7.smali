@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1068
+    .line 954
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$7;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
@@ -42,12 +42,12 @@
     .parameter "line"
 
     .prologue
-    .line 1073
+    .line 958
     const/4 v0, 0x6
 
     if-ne p1, v0, :cond_0
 
-    .line 1075
+    .line 959
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->getSpaceFor:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1076
+    .line 960
     const-string v0, " "
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -69,7 +69,7 @@
 
     sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
 
-    .line 1079
+    .line 963
     :cond_0
     return-void
 .end method

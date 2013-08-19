@@ -32,16 +32,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 956
+    .line 811
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 957
+    .line 812
     iput-object v0, p0, Lcom/stericson/RootTools/RootTools$Result;->process:Ljava/lang/Process;
 
-    .line 958
+    .line 813
     iput-object v0, p0, Lcom/stericson/RootTools/RootTools$Result;->data:Ljava/io/Serializable;
 
-    .line 959
+    .line 814
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/stericson/RootTools/RootTools$Result;->error:I
@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 984
+    .line 839
     iget-object v0, p0, Lcom/stericson/RootTools/RootTools$Result;->data:Ljava/io/Serializable;
 
     return-object v0
@@ -65,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 993
+    .line 848
     iget v0, p0, Lcom/stericson/RootTools/RootTools$Result;->error:I
 
     return v0
@@ -75,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 975
+    .line 830
     iget-object v0, p0, Lcom/stericson/RootTools/RootTools$Result;->process:Ljava/lang/Process;
 
     return-object v0
@@ -108,10 +108,10 @@
     .parameter "data"
 
     .prologue
-    .line 979
+    .line 834
     iput-object p1, p0, Lcom/stericson/RootTools/RootTools$Result;->data:Ljava/io/Serializable;
 
-    .line 980
+    .line 835
     return-object p0
 .end method
 
@@ -120,7 +120,7 @@
     .parameter "x0"
 
     .prologue
-    .line 956
+    .line 811
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/RootTools$Result;->setData(Ljava/io/Serializable;)Lcom/stericson/RootTools/RootTools$Result;
 
     move-result-object v0
@@ -133,10 +133,10 @@
     .parameter "error"
 
     .prologue
-    .line 988
+    .line 843
     iput p1, p0, Lcom/stericson/RootTools/RootTools$Result;->error:I
 
-    .line 989
+    .line 844
     return-object p0
 .end method
 
@@ -145,7 +145,7 @@
     .parameter "x0"
 
     .prologue
-    .line 956
+    .line 811
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/RootTools$Result;->setError(I)Lcom/stericson/RootTools/RootTools$Result;
 
     move-result-object v0
@@ -158,10 +158,10 @@
     .parameter "process"
 
     .prologue
-    .line 970
+    .line 825
     iput-object p1, p0, Lcom/stericson/RootTools/RootTools$Result;->process:Ljava/lang/Process;
 
-    .line 971
+    .line 826
     return-object p0
 .end method
 
@@ -170,7 +170,7 @@
     .parameter "x0"
 
     .prologue
-    .line 956
+    .line 811
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/RootTools$Result;->setProcess(Ljava/lang/Process;)Lcom/stericson/RootTools/RootTools$Result;
 
     move-result-object v0

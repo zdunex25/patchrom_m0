@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 300
+    .line 280
     iput-object p1, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->this$1:Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     invoke-direct {p0}, Lcom/stericson/RootTools/RootTools$Result;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "diag"
 
     .prologue
-    .line 314
+    .line 294
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->this$1:Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     const/4 v1, 0x3
@@ -49,7 +49,7 @@
     #calls: Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->visualUpdate(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->access$200(Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;ILjava/lang/String;)V
 
-    .line 315
+    .line 295
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .parameter "ex"
 
     .prologue
-    .line 308
+    .line 288
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->this$1:Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     const/4 v1, 0x2
@@ -84,12 +84,12 @@
     #calls: Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->visualUpdate(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->access$200(Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;ILjava/lang/String;)V
 
-    .line 309
+    .line 289
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->setError(I)Lcom/stericson/RootTools/RootTools$Result;
 
-    .line 310
+    .line 290
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .end annotation
 
     .prologue
-    .line 303
+    .line 283
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->this$1:Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     const/4 v1, 0x3
@@ -129,7 +129,7 @@
     #calls: Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->visualUpdate(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->access$200(Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;ILjava/lang/String;)V
 
-    .line 304
+    .line 284
     return-void
 .end method
 
@@ -143,7 +143,7 @@
     .end annotation
 
     .prologue
-    .line 319
+    .line 299
     iget-object v0, p0, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread$2;->this$1:Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;
 
     const/4 v1, 0x3
@@ -169,6 +169,6 @@
     #calls: Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->visualUpdate(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;->access$200(Lcom/stericson/RootTools/test/SanityCheckRootTools$SanityCheckThread;ILjava/lang/String;)V
 
-    .line 320
+    .line 300
     return-void
 .end method

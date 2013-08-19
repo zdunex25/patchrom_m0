@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 818
+    .line 729
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$5;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
     invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
@@ -42,12 +42,12 @@
     .parameter "line"
 
     .prologue
-    .line 822
+    .line 732
     const/4 v3, 0x2
 
     if-ne p1, v3, :cond_2
 
-    .line 824
+    .line 733
     new-instance v0, Ljava/util/HashSet;
 
     const-string v3, " "
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 825
+    .line 734
     .local v0, ID:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -82,11 +82,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 826
+    .line 735
     .local v2, userid:Ljava/lang/String;
     invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 828
+    .line 737
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -99,29 +99,29 @@
 
     if-eqz v3, :cond_0
 
-    .line 829
+    .line 738
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
 
-    .line 830
+    .line 739
     const-string v3, "Access Given"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 834
+    .line 743
     .end local v2           #userid:Ljava/lang/String;
     :cond_1
     sget-boolean v3, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
 
     if-nez v3, :cond_2
 
-    .line 835
+    .line 744
     const-string v3, "Access Denied?"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 838
+    .line 747
     .end local v0           #ID:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     .end local v1           #i$:Ljava/util/Iterator;
     :cond_2

@@ -56,7 +56,7 @@
     .parameter "mode"
 
     .prologue
-    .line 75
+    .line 72
     new-instance v9, Ljava/io/File;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -89,7 +89,7 @@
 
     invoke-direct {v9, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 76
+    .line 73
     .local v9, mf:Ljava/io/File;
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -97,7 +97,7 @@
 
     if-nez v12, :cond_8
 
-    .line 81
+    .line 78
     :try_start_0
     move-object/from16 v0, p0
 
@@ -109,14 +109,14 @@
 
     move-result-object v5
 
-    .line 82
+    .line 79
     .local v5, fis:Ljava/io/FileInputStream;
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 111
+    .line 107
     .end local v5           #fis:Ljava/io/FileInputStream;
     :cond_0
     :goto_0
@@ -134,11 +134,11 @@
 
     move-result-object v7
 
-    .line 112
+    .line 108
     .local v7, iss:Ljava/io/InputStream;
     const/4 v10, 0x0
 
-    .line 114
+    .line 110
     .local v10, oss:Ljava/io/FileOutputStream;
     :try_start_1
     new-instance v11, Ljava/io/FileOutputStream;
@@ -148,7 +148,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 115
+    .line 111
     .end local v10           #oss:Ljava/io/FileOutputStream;
     .local v11, oss:Ljava/io/FileOutputStream;
     const/16 v12, 0x1000
@@ -159,7 +159,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_d
 
-    .line 118
+    .line 114
     .local v1, buffer:[B
     :goto_1
     const/4 v12, -0x1
@@ -172,7 +172,7 @@
     .local v8, len:I
     if-eq v12, v8, :cond_6
 
-    .line 119
+    .line 115
     const/4 v12, 0x0
 
     invoke-virtual {v11, v1, v12, v8}, Ljava/io/FileOutputStream;->write([BII)V
@@ -183,19 +183,19 @@
 
     goto :goto_1
 
-    .line 121
+    .line 117
     .end local v8           #len:I
     :catch_0
     move-exception v4
 
-    .line 122
+    .line 118
     .local v4, ex:Ljava/io/IOException;
     :try_start_4
     sget-boolean v12, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v12, :cond_1
 
-    .line 123
+    .line 119
     const-string v12, "RootTools::Installer"
 
     invoke-virtual {v4}, Ljava/io/IOException;->toString()Ljava/lang/String;
@@ -207,20 +207,20 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_d
 
-    .line 125
+    .line 121
     :cond_1
     const/4 v12, 0x0
 
-    .line 134
+    .line 129
     if-eqz v11, :cond_2
 
-    .line 136
+    .line 131
     :try_start_5
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_9
 
-    .line 155
+    .line 152
     .end local v1           #buffer:[B
     .end local v4           #ex:Ljava/io/IOException;
     .end local v7           #iss:Ljava/io/InputStream;
@@ -229,15 +229,15 @@
     :goto_2
     return v12
 
-    .line 83
+    .line 80
     :catch_1
     move-exception v3
 
-    .line 84
+    .line 81
     .local v3, e:Ljava/io/FileNotFoundException;
     const/4 v6, 0x0
 
-    .line 86
+    .line 83
     .local v6, fos:Ljava/io/FileOutputStream;
     :try_start_6
     move-object/from16 v0, p0
@@ -252,7 +252,7 @@
 
     move-result-object v6
 
-    .line 87
+    .line 84
     const-string v12, "justcreatedfilesdirectory"
 
     invoke-virtual {v12}, Ljava/lang/String;->getBytes()[B
@@ -264,14 +264,14 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 95
+    .line 91
     if-eqz v6, :cond_0
 
-    .line 97
+    .line 93
     :try_start_7
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
 
-    .line 98
+    .line 94
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/stericson/RootTools/internal/Installer;->context:Landroid/content/Context;
@@ -284,24 +284,24 @@
 
     goto :goto_0
 
-    .line 99
+    .line 95
     :catch_2
     move-exception v12
 
     goto :goto_0
 
-    .line 88
+    .line 85
     :catch_3
     move-exception v4
 
-    .line 89
+    .line 86
     .local v4, ex:Ljava/lang/Exception;
     :try_start_8
     sget-boolean v12, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v12, :cond_3
 
-    .line 90
+    .line 87
     const-string v12, "RootTools::Installer"
 
     invoke-virtual {v4}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -312,18 +312,18 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 92
+    .line 89
     :cond_3
     const/4 v12, 0x0
 
-    .line 95
+    .line 91
     if-eqz v6, :cond_2
 
-    .line 97
+    .line 93
     :try_start_9
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
 
-    .line 98
+    .line 94
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/stericson/RootTools/internal/Installer;->context:Landroid/content/Context;
@@ -336,24 +336,24 @@
 
     goto :goto_2
 
-    .line 99
+    .line 95
     :catch_4
     move-exception v13
 
     goto :goto_2
 
-    .line 95
+    .line 91
     .end local v4           #ex:Ljava/lang/Exception;
     :catchall_0
     move-exception v12
 
     if-eqz v6, :cond_4
 
-    .line 97
+    .line 93
     :try_start_a
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
 
-    .line 98
+    .line 94
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/stericson/RootTools/internal/Installer;->context:Landroid/content/Context;
@@ -364,24 +364,24 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_e
 
-    .line 99
+    .line 96
     :cond_4
     :goto_3
     throw v12
 
-    .line 103
+    .line 99
     .end local v3           #e:Ljava/io/FileNotFoundException;
     .end local v6           #fos:Ljava/io/FileOutputStream;
     :catch_5
     move-exception v4
 
-    .line 104
+    .line 100
     .local v4, ex:Ljava/io/IOException;
     sget-boolean v12, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v12, :cond_5
 
-    .line 105
+    .line 101
     const-string v12, "RootTools::Installer"
 
     invoke-virtual {v4}, Ljava/io/IOException;->toString()Ljava/lang/String;
@@ -390,13 +390,13 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
+    .line 103
     :cond_5
     const/4 v12, 0x0
 
     goto :goto_2
 
-    .line 134
+    .line 129
     .end local v4           #ex:Ljava/io/IOException;
     .restart local v1       #buffer:[B
     .restart local v7       #iss:Ljava/io/InputStream;
@@ -405,13 +405,13 @@
     :cond_6
     if-eqz v11, :cond_7
 
-    .line 136
+    .line 131
     :try_start_b
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_a
 
-    .line 141
+    .line 137
     :cond_7
     :goto_4
     :try_start_c
@@ -419,7 +419,7 @@
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_8
 
-    .line 150
+    .line 146
     :try_start_d
     new-instance v2, Lcom/stericson/RootTools/execution/CommandCapture;
 
@@ -483,7 +483,7 @@
 
     invoke-direct {v2, v12, v13}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 151
+    .line 147
     .local v2, command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -491,12 +491,12 @@
 
     invoke-virtual {v12, v2}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 152
+    .line 148
     invoke-virtual {v2}, Lcom/stericson/RootTools/execution/CommandCapture;->waitForFinish()V
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_c
 
-    .line 155
+    .line 152
     .end local v1           #buffer:[B
     .end local v2           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .end local v7           #iss:Ljava/io/InputStream;
@@ -508,13 +508,13 @@
 
     goto/16 :goto_2
 
-    .line 127
+    .line 123
     .restart local v7       #iss:Ljava/io/InputStream;
     .restart local v10       #oss:Ljava/io/FileOutputStream;
     :catch_6
     move-exception v4
 
-    .line 128
+    .line 124
     .local v4, ex:Ljava/io/FileNotFoundException;
     :goto_6
     :try_start_e
@@ -522,7 +522,7 @@
 
     if-eqz v12, :cond_9
 
-    .line 129
+    .line 125
     const-string v12, "RootTools::Installer"
 
     invoke-virtual {v4}, Ljava/io/FileNotFoundException;->toString()Ljava/lang/String;
@@ -533,14 +533,14 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 131
+    .line 127
     :cond_9
     const/4 v12, 0x0
 
-    .line 134
+    .line 129
     if-eqz v10, :cond_2
 
-    .line 136
+    .line 131
     :try_start_f
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
     :try_end_f
@@ -548,13 +548,13 @@
 
     goto/16 :goto_2
 
-    .line 137
+    .line 132
     :catch_7
     move-exception v13
 
     goto/16 :goto_2
 
-    .line 134
+    .line 129
     .end local v4           #ex:Ljava/io/FileNotFoundException;
     :catchall_1
     move-exception v12
@@ -562,18 +562,18 @@
     :goto_7
     if-eqz v10, :cond_a
 
-    .line 136
+    .line 131
     :try_start_10
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
     :try_end_10
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_b
 
-    .line 137
+    .line 133
     :cond_a
     :goto_8
     throw v12
 
-    .line 142
+    .line 138
     .end local v10           #oss:Ljava/io/FileOutputStream;
     .restart local v1       #buffer:[B
     .restart local v8       #len:I
@@ -581,13 +581,13 @@
     :catch_8
     move-exception v4
 
-    .line 143
+    .line 139
     .local v4, ex:Ljava/io/IOException;
     sget-boolean v12, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v12, :cond_b
 
-    .line 144
+    .line 140
     const-string v12, "RootTools::Installer"
 
     invoke-virtual {v4}, Ljava/io/IOException;->toString()Ljava/lang/String;
@@ -596,13 +596,13 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 142
     :cond_b
     const/4 v12, 0x0
 
     goto/16 :goto_2
 
-    .line 137
+    .line 132
     .end local v8           #len:I
     :catch_9
     move-exception v13
@@ -625,7 +625,7 @@
 
     goto :goto_8
 
-    .line 153
+    .line 149
     .end local v10           #oss:Ljava/io/FileOutputStream;
     .restart local v1       #buffer:[B
     .restart local v8       #len:I
@@ -635,7 +635,7 @@
 
     goto :goto_5
 
-    .line 134
+    .line 129
     .end local v1           #buffer:[B
     .end local v8           #len:I
     :catchall_2
@@ -647,7 +647,7 @@
     .restart local v10       #oss:Ljava/io/FileOutputStream;
     goto :goto_7
 
-    .line 127
+    .line 123
     .end local v10           #oss:Ljava/io/FileOutputStream;
     .restart local v11       #oss:Ljava/io/FileOutputStream;
     :catch_d
@@ -659,7 +659,7 @@
     .restart local v10       #oss:Ljava/io/FileOutputStream;
     goto :goto_6
 
-    .line 99
+    .line 95
     .end local v7           #iss:Ljava/io/InputStream;
     .end local v10           #oss:Ljava/io/FileOutputStream;
     .restart local v3       #e:Ljava/io/FileNotFoundException;
@@ -675,10 +675,10 @@
     .parameter "destName"
 
     .prologue
-    .line 159
+    .line 156
     const/4 v0, 0x0
 
-    .line 160
+    .line 157
     .local v0, installed:Z
     new-instance v1, Ljava/io/File;
 
@@ -708,7 +708,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 161
+    .line 158
     .local v1, mf:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -716,10 +716,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 162
+    .line 159
     const/4 v0, 0x1
 
-    .line 165
+    .line 162
     :cond_0
     return v0
 .end method

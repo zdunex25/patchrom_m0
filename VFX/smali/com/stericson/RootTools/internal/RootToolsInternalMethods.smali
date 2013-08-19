@@ -12,10 +12,10 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
+    .line 61
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->instantiated:Z
@@ -48,25 +48,25 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 352
+    .line 327
     invoke-static {p1}, Lcom/stericson/RootTools/RootTools;->findBinary(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 355
+    .line 329
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 356
+    .line 330
     .local v0, binaryPaths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     sget-object v6, Lcom/stericson/RootTools/RootTools;->lastFoundBinaryPaths:Ljava/util/List;
 
     invoke-interface {v0, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 358
+    .line 332
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -85,7 +85,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 360
+    .line 333
     .local v2, path:Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -113,11 +113,11 @@
 
     move-result-object v4
 
-    .line 363
+    .line 336
     .local v4, permissions:Lcom/stericson/RootTools/containers/Permissions;
     if-eqz v4, :cond_0
 
-    .line 367
+    .line 339
     invoke-virtual {v4}, Lcom/stericson/RootTools/containers/Permissions;->getPermissions()I
 
     move-result v6
@@ -134,7 +134,7 @@
 
     if-le v6, v7, :cond_2
 
-    .line 368
+    .line 340
     invoke-virtual {v4}, Lcom/stericson/RootTools/containers/Permissions;->getPermissions()I
 
     move-result v6
@@ -147,7 +147,7 @@
 
     move-result-object v3
 
-    .line 372
+    .line 344
     .local v3, permission:Ljava/lang/String;
     :goto_0
     const-string v6, "755"
@@ -174,7 +174,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 375
+    .line 346
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     sput-object v6, Lcom/stericson/RootTools/RootTools;->utilPath:Ljava/lang/String;
 
-    .line 382
+    .line 353
     .end local v0           #binaryPaths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #path:Ljava/lang/String;
@@ -209,7 +209,7 @@
     :goto_1
     return v5
 
-    .line 370
+    .line 342
     .restart local v0       #binaryPaths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .restart local v1       #i$:Ljava/util/Iterator;
     .restart local v2       #path:Ljava/lang/String;
@@ -226,7 +226,7 @@
     .restart local v3       #permission:Ljava/lang/String;
     goto :goto_0
 
-    .line 382
+    .line 353
     .end local v0           #binaryPaths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #path:Ljava/lang/String;
@@ -246,20 +246,20 @@
     .parameter "preserveFileAttributes"
 
     .prologue
-    .line 269
+    .line 248
     const/4 v4, 0x1
 
-    .line 273
+    .line 252
     .local v4, result:Z
     if-eqz p3, :cond_0
 
-    .line 274
+    .line 253
     :try_start_0
     const-string v5, "RW"
 
     invoke-static {p2, v5}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 278
+    .line 257
     :cond_0
     const-string v5, "cp"
 
@@ -269,15 +269,15 @@
 
     if-eqz v5, :cond_4
 
-    .line 279
+    .line 258
     const-string v5, "cp command is available!"
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 281
+    .line 260
     if-eqz p4, :cond_3
 
-    .line 282
+    .line 261
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v5, 0x0
@@ -320,7 +320,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 283
+    .line 262
     .local v0, command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -332,23 +332,23 @@
 
     invoke-virtual {v5}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 328
+    .line 307
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :cond_1
     :goto_0
     if-eqz p3, :cond_2
 
-    .line 329
+    .line 308
     const-string v5, "RO"
 
     invoke-static {p2, v5}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 336
+    .line 315
     :cond_2
     :goto_1
     return v4
 
-    .line 285
+    .line 264
     :cond_3
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
@@ -392,7 +392,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 286
+    .line 265
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -408,21 +408,21 @@
 
     goto :goto_0
 
-    .line 331
+    .line 310
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :catch_0
     move-exception v1
 
-    .line 332
+    .line 311
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 333
+    .line 312
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 289
+    .line 268
     .end local v1           #e:Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -444,15 +444,15 @@
 
     if-eqz v5, :cond_6
 
-    .line 290
+    .line 269
     const-string v5, "busybox cp command is available!"
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 292
+    .line 271
     if-eqz p4, :cond_5
 
-    .line 293
+    .line 272
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v5, 0x0
@@ -495,7 +495,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 294
+    .line 273
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -509,7 +509,7 @@
 
     goto/16 :goto_0
 
-    .line 296
+    .line 275
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :cond_5
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
@@ -554,7 +554,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 297
+    .line 276
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -568,7 +568,7 @@
 
     goto/16 :goto_0
 
-    .line 301
+    .line 280
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :cond_6
     const-string v5, "cat"
@@ -579,30 +579,30 @@
 
     if-eqz v5, :cond_8
 
-    .line 302
+    .line 281
     const-string v5, "cp is not available, use cat!"
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 304
+    .line 283
     const/4 v2, -0x1
 
-    .line 305
+    .line 284
     .local v2, filePermission:I
     if-eqz p4, :cond_7
 
-    .line 307
+    .line 286
     invoke-virtual {p0, p1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getFilePermissionsSymlinks(Ljava/lang/String;)Lcom/stericson/RootTools/containers/Permissions;
 
     move-result-object v3
 
-    .line 308
+    .line 287
     .local v3, permissions:Lcom/stericson/RootTools/containers/Permissions;
     invoke-virtual {v3}, Lcom/stericson/RootTools/containers/Permissions;->getPermissions()I
 
     move-result v2
 
-    .line 313
+    .line 292
     .end local v3           #permissions:Lcom/stericson/RootTools/containers/Permissions;
     :cond_7
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
@@ -647,7 +647,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 314
+    .line 293
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -659,10 +659,10 @@
 
     invoke-virtual {v5}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 316
+    .line 295
     if-eqz p4, :cond_1
 
-    .line 318
+    .line 297
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
@@ -706,7 +706,7 @@
 
     invoke-direct {v0, v5, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 319
+    .line 298
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -722,7 +722,7 @@
 
     goto/16 :goto_0
 
-    .line 322
+    .line 301
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .end local v2           #filePermission:I
     :cond_8
@@ -737,20 +737,20 @@
     .parameter "remountAsRw"
 
     .prologue
-    .line 396
+    .line 365
     const/4 v2, 0x1
 
-    .line 400
+    .line 369
     .local v2, result:Z
     if-eqz p2, :cond_0
 
-    .line 401
+    .line 370
     :try_start_0
     const-string v3, "RW"
 
     invoke-static {p1, v3}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 404
+    .line 373
     :cond_0
     const-string v3, "rm"
 
@@ -762,12 +762,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 405
+    .line 374
     const-string v3, "rm command is available!"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 407
+    .line 376
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v3, 0x0
@@ -800,7 +800,7 @@
 
     invoke-direct {v0, v3, v4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 408
+    .line 377
     .local v0, command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -812,38 +812,38 @@
 
     invoke-virtual {v3}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 409
+    .line 378
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/CommandCapture;->exitCode()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 410
+    .line 379
     const-string v3, "target not exist or unable to delete file"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 411
+    .line 380
     const/4 v2, 0x0
 
-    .line 427
+    .line 396
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :cond_1
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 428
+    .line 397
     const-string v3, "RO"
 
     invoke-static {p1, v3}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 435
+    .line 404
     :cond_2
     :goto_1
     return v2
 
-    .line 414
+    .line 383
     :cond_3
     const-string v3, "busybox"
 
@@ -863,12 +863,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 415
+    .line 384
     const-string v3, "busybox cp command is available!"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 417
+    .line 386
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v3, 0x0
@@ -901,7 +901,7 @@
 
     invoke-direct {v0, v3, v4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 418
+    .line 387
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -913,35 +913,35 @@
 
     invoke-virtual {v3}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 419
+    .line 388
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/CommandCapture;->exitCode()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 420
+    .line 389
     const-string v3, "target not exist or unable to delete file"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 421
+    .line 390
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 430
+    .line 399
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :catch_0
     move-exception v1
 
-    .line 431
+    .line 400
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 432
+    .line 401
     const/4 v2, 0x0
 
     goto :goto_1
@@ -956,12 +956,12 @@
 
     const/4 v7, 0x0
 
-    .line 450
+    .line 415
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 452
+    .line 417
     .local v5, result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;
 
@@ -989,7 +989,7 @@
 
     invoke-direct {v0, p0, v7, v8, v5}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/util/List;)V
 
-    .line 465
+    .line 427
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     :try_start_0
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->isAnyShellOpen()Z
@@ -998,7 +998,7 @@
 
     if-nez v8, :cond_1
 
-    .line 466
+    .line 428
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startShell()Lcom/stericson/RootTools/execution/Shell;
 
     move-result-object v8
@@ -1011,7 +1011,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 475
+    .line 435
     :goto_0
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1031,7 +1031,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 477
+    .line 436
     .local v4, line:Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1043,13 +1043,13 @@
 
     if-eqz v8, :cond_0
 
-    .line 510
+    .line 463
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v4           #line:Ljava/lang/String;
     :goto_1
     return v6
 
-    .line 468
+    .line 430
     :cond_1
     :try_start_1
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->getOpenShell()Lcom/stericson/RootTools/execution/Shell;
@@ -1066,17 +1066,17 @@
 
     goto :goto_0
 
-    .line 470
+    .line 431
     :catch_0
     move-exception v1
 
     .local v1, e:Ljava/lang/Exception;
     move v6, v7
 
-    .line 472
+    .line 432
     goto :goto_1
 
-    .line 485
+    .line 442
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v3       #i$:Ljava/util/Iterator;
     :cond_2
@@ -1087,11 +1087,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 488
+    .line 446
     :goto_2
     invoke-interface {v5}, Ljava/util/List;->clear()V
 
-    .line 491
+    .line 448
     :try_start_3
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -1105,16 +1105,16 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 499
+    .line 454
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 500
+    .line 455
     .local v2, final_result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v2, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 502
+    .line 457
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1132,7 +1132,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 504
+    .line 458
     .restart local v4       #line:Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1146,7 +1146,7 @@
 
     goto :goto_1
 
-    .line 493
+    .line 449
     .end local v2           #final_result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .end local v4           #line:Ljava/lang/String;
     :catch_1
@@ -1155,7 +1155,7 @@
     .restart local v1       #e:Ljava/lang/Exception;
     move v6, v7
 
-    .line 495
+    .line 450
     goto :goto_1
 
     .end local v1           #e:Ljava/lang/Exception;
@@ -1163,10 +1163,10 @@
     :cond_4
     move v6, v7
 
-    .line 510
+    .line 463
     goto :goto_1
 
-    .line 486
+    .line 443
     .end local v2           #final_result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     :catch_2
     move-exception v8
@@ -1179,21 +1179,21 @@
     .parameter "binaryName"
 
     .prologue
-    .line 596
+    .line 539
     const/4 v3, 0x0
 
-    .line 597
+    .line 540
     .local v3, found:Z
     sget-object v11, Lcom/stericson/RootTools/RootTools;->lastFoundBinaryPaths:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->clear()V
 
-    .line 599
+    .line 542
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 601
+    .line 544
     .local v6, list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1215,13 +1215,13 @@
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 604
+    .line 547
     :try_start_0
     invoke-static {}, Lcom/stericson/RootTools/RootTools;->getPath()Ljava/util/Set;
 
     move-result-object v8
 
-    .line 605
+    .line 548
     .local v8, paths:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v8}, Ljava/util/Set;->size()I
 
@@ -1229,7 +1229,7 @@
 
     if-lez v11, :cond_1
 
-    .line 607
+    .line 549
     invoke-interface {v8}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1248,7 +1248,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 608
+    .line 550
     .local v7, path:Ljava/lang/String;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1278,7 +1278,7 @@
 
     if-eqz v11, :cond_0
 
-    .line 609
+    .line 551
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1303,15 +1303,15 @@
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 610
+    .line 552
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 611
+    .line 553
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 613
+    .line 555
     :cond_0
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1342,31 +1342,31 @@
 
     goto :goto_0
 
-    .line 617
+    .line 559
     .end local v4           #i$:Ljava/util/Iterator;
     .end local v7           #path:Ljava/lang/String;
     .end local v8           #paths:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     :catch_0
     move-exception v2
 
-    .line 618
+    .line 560
     .local v2, ex:Ljava/util/concurrent/TimeoutException;
     const-string v11, "TimeoutException!!!"
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 623
+    .line 565
     .end local v2           #ex:Ljava/util/concurrent/TimeoutException;
     :cond_1
     :goto_1
     if-nez v3, :cond_3
 
-    .line 624
+    .line 566
     const-string v11, "Trying second method"
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 625
+    .line 567
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1387,7 +1387,7 @@
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 626
+    .line 568
     const/16 v11, 0x8
 
     new-array v9, v11, [Ljava/lang/String;
@@ -1440,7 +1440,7 @@
 
     aput-object v12, v9, v11
 
-    .line 628
+    .line 570
     .local v9, places:[Ljava/lang/String;
     move-object v0, v9
 
@@ -1456,7 +1456,7 @@
 
     aget-object v10, v0, v4
 
-    .line 629
+    .line 571
     .local v10, where:Ljava/lang/String;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1480,7 +1480,7 @@
 
     if-eqz v11, :cond_2
 
-    .line 630
+    .line 572
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1505,19 +1505,19 @@
 
     invoke-static {v11}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 631
+    .line 573
     invoke-interface {v6, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 632
+    .line 574
     const/4 v3, 0x1
 
-    .line 628
+    .line 570
     :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 619
+    .line 561
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v5           #len$:I
@@ -1526,7 +1526,7 @@
     :catch_1
     move-exception v1
 
-    .line 620
+    .line 562
     .local v1, e:Ljava/lang/Exception;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1550,7 +1550,7 @@
 
     goto/16 :goto_1
 
-    .line 634
+    .line 576
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v0       #arr$:[Ljava/lang/String;
     .restart local v4       #i$:I
@@ -1584,7 +1584,7 @@
 
     goto :goto_3
 
-    .line 639
+    .line 581
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v5           #len$:I
@@ -1595,7 +1595,7 @@
 
     if-eqz v11, :cond_4
 
-    .line 641
+    .line 582
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1614,7 +1614,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 643
+    .line 583
     .restart local v7       #path:Ljava/lang/String;
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1638,18 +1638,18 @@
 
     goto :goto_4
 
-    .line 647
+    .line 587
     .end local v4           #i$:Ljava/util/Iterator;
     .end local v7           #path:Ljava/lang/String;
     :cond_4
     invoke-static {v6}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
-    .line 649
+    .line 589
     sget-object v11, Lcom/stericson/RootTools/RootTools;->lastFoundBinaryPaths:Ljava/util/List;
 
     invoke-interface {v11, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 651
+    .line 591
     return v3
 .end method
 
@@ -1659,7 +1659,7 @@
     .parameter "utilPath"
 
     .prologue
-    .line 528
+    .line 479
     :try_start_0
     const-string v4, "/system"
 
@@ -1667,25 +1667,25 @@
 
     invoke-static {v4, v5}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 530
+    .line 481
     invoke-static {p1}, Lcom/stericson/RootTools/RootTools;->findBinary(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 531
+    .line 482
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 532
+    .line 483
     .local v3, paths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     sget-object v4, Lcom/stericson/RootTools/RootTools;->lastFoundBinaryPaths:Ljava/util/List;
 
     invoke-interface {v3, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 533
+    .line 484
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1704,7 +1704,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 535
+    .line 485
     .local v2, path:Ljava/lang/String;
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
@@ -1752,7 +1752,7 @@
 
     invoke-direct {v0, v4, v5}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 536
+    .line 486
     .local v0, command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -1766,7 +1766,7 @@
 
     goto :goto_0
 
-    .line 544
+    .line 494
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #path:Ljava/lang/String;
@@ -1774,11 +1774,11 @@
     :catch_0
     move-exception v4
 
-    .line 545
+    .line 496
     :goto_1
     return-void
 
-    .line 539
+    .line 489
     .restart local v1       #i$:Ljava/util/Iterator;
     .restart local v3       #paths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
@@ -1854,7 +1854,7 @@
 
     invoke-direct {v0, v4, v5}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 540
+    .line 490
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -1866,7 +1866,7 @@
 
     invoke-virtual {v4}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 543
+    .line 493
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v3           #paths:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -1892,7 +1892,7 @@
     .end annotation
 
     .prologue
-    .line 564
+    .line 511
     move-object v0, p1
 
     .local v0, arr$:[Ljava/lang/String;
@@ -1907,7 +1907,7 @@
 
     aget-object v3, v0, v1
 
-    .line 565
+    .line 512
     .local v3, util:Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->checkUtil(Ljava/lang/String;)Z
 
@@ -1915,7 +1915,7 @@
 
     if-nez v4, :cond_0
 
-    .line 566
+    .line 513
     const-string v4, "busybox"
 
     invoke-virtual {p0, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->checkUtil(Ljava/lang/String;)Z
@@ -1924,7 +1924,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 567
+    .line 514
     const-string v4, "busybox"
 
     invoke-virtual {p0, v3, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->hasUtil(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1933,19 +1933,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 568
+    .line 515
     sget-object v4, Lcom/stericson/RootTools/RootTools;->utilPath:Ljava/lang/String;
 
     invoke-virtual {p0, v3, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->fixUtil(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 564
+    .line 511
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 571
+    .line 518
     :cond_1
     const-string v4, "toolbox"
 
@@ -1955,7 +1955,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 572
+    .line 519
     const-string v4, "toolbox"
 
     invoke-virtual {p0, v3, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->hasUtil(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1964,18 +1964,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 573
+    .line 520
     sget-object v4, Lcom/stericson/RootTools/RootTools;->utilPath:Ljava/lang/String;
 
     invoke-virtual {p0, v3, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->fixUtil(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 576
+    .line 523
     :cond_2
     const/4 v4, 0x0
 
-    .line 582
+    .line 529
     .end local v3           #util:Ljava/lang/String;
     :goto_2
     return v4
@@ -2008,7 +2008,7 @@
     .end annotation
 
     .prologue
-    .line 668
+    .line 603
     if-eqz p1, :cond_1
 
     const-string v2, "/"
@@ -2027,7 +2027,7 @@
 
     if-nez v2, :cond_1
 
-    .line 669
+    .line 604
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2046,13 +2046,13 @@
 
     move-result-object p1
 
-    .line 675
+    .line 610
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 677
+    .line 612
     .local v1, results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$2;
 
@@ -2086,7 +2086,7 @@
 
     invoke-direct {v0, p0, v2, v3, v1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$2;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/util/List;)V
 
-    .line 689
+    .line 624
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -2094,19 +2094,19 @@
 
     invoke-virtual {v2, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 690
+    .line 625
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 692
+    .line 627
     return-object v1
 
-    .line 670
+    .line 605
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     .end local v1           #results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     if-nez p1, :cond_0
 
-    .line 672
+    .line 607
     new-instance v2, Ljava/lang/Exception;
 
     const-string v3, "Path is null, please specifiy a path"
@@ -2121,7 +2121,7 @@
     .parameter "path"
 
     .prologue
-    .line 700
+    .line 635
     const-string v2, ""
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2138,7 +2138,7 @@
 
     if-nez v2, :cond_0
 
-    .line 702
+    .line 636
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2157,18 +2157,18 @@
 
     move-result-object p1
 
-    .line 705
+    .line 639
     :cond_0
     const-string v2, "Getting BusyBox Version"
 
     invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 706
+    .line 640
     const-string v2, ""
 
     sput-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->busyboxVersion:Ljava/lang/String;
 
-    .line 708
+    .line 642
     :try_start_0
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$3;
 
@@ -2202,7 +2202,7 @@
 
     invoke-direct {v0, p0, v2, v3}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$3;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
 
-    .line 723
+    .line 654
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -2210,29 +2210,29 @@
 
     invoke-virtual {v2, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 724
+    .line 655
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 731
+    .line 662
     sget-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->busyboxVersion:Ljava/lang/String;
 
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :goto_0
     return-object v2
 
-    .line 726
+    .line 657
     :catch_0
     move-exception v1
 
-    .line 727
+    .line 658
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "BusyBox was not found, more information MAY be available with Debugging on."
 
     invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 728
+    .line 659
     const-string v2, ""
 
     goto :goto_0
@@ -2243,17 +2243,17 @@
     .parameter "spaceStr"
 
     .prologue
-    .line 741
+    .line 670
     const-wide/high16 v3, 0x3ff0
 
-    .line 743
+    .line 672
     .local v3, multiplier:D
     :try_start_0
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 744
+    .line 673
     .local v5, sb:Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
@@ -2265,12 +2265,12 @@
 
     if-ge v2, v6, :cond_1
 
-    .line 746
+    .line 674
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 747
+    .line 675
     .local v0, c:C
     invoke-static {v0}, Ljava/lang/Character;->isDigit(C)Z
 
@@ -2282,7 +2282,7 @@
 
     if-eq v0, v6, :cond_4
 
-    .line 749
+    .line 676
     const/16 v6, 0x6d
 
     if-eq v0, v6, :cond_0
@@ -2291,11 +2291,11 @@
 
     if-ne v0, v6, :cond_2
 
-    .line 751
+    .line 677
     :cond_0
     const-wide/high16 v3, 0x4090
 
-    .line 761
+    .line 685
     .end local v0           #c:C
     :cond_1
     :goto_1
@@ -2319,13 +2319,13 @@
 
     double-to-long v6, v6
 
-    .line 765
+    .line 687
     .end local v2           #i:I
     .end local v5           #sb:Ljava/lang/StringBuffer;
     :goto_2
     return-wide v6
 
-    .line 753
+    .line 678
     .restart local v0       #c:C
     .restart local v2       #i:I
     .restart local v5       #sb:Ljava/lang/StringBuffer;
@@ -2338,13 +2338,13 @@
 
     if-ne v0, v6, :cond_1
 
-    .line 755
+    .line 679
     :cond_3
     const-wide/high16 v3, 0x4130
 
     goto :goto_1
 
-    .line 759
+    .line 683
     :cond_4
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -2354,19 +2354,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 744
+    .line 673
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 763
+    .line 686
     .end local v0           #c:C
     .end local v2           #i:I
     .end local v5           #sb:Ljava/lang/StringBuffer;
     :catch_0
     move-exception v1
 
-    .line 765
+    .line 687
     .local v1, e:Ljava/lang/Exception;
     const-wide/16 v6, -0x1
 
@@ -2380,7 +2380,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 895
+    .line 799
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2401,14 +2401,14 @@
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 896
+    .line 800
     invoke-static {p1}, Lcom/stericson/RootTools/RootTools;->exists(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 898
+    .line 801
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2429,7 +2429,7 @@
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 902
+    .line 804
     :try_start_0
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$6;
 
@@ -2529,7 +2529,7 @@
 
     invoke-direct {v0, p0, v3, v4}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$6;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
 
-    .line 952
+    .line 842
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -2537,25 +2537,25 @@
 
     invoke-virtual {v3, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 953
+    .line 843
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 955
+    .line 845
     sget-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->permissions:Lcom/stericson/RootTools/containers/Permissions;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 965
+    .line 853
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 958
+    .line 847
     :catch_0
     move-exception v1
 
-    .line 960
+    .line 848
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -2571,7 +2571,7 @@
     .parameter "file"
 
     .prologue
-    .line 781
+    .line 700
     :try_start_0
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$4;
 
@@ -2605,7 +2605,7 @@
 
     invoke-direct {v0, p0, v2, v3}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$4;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
 
-    .line 796
+    .line 711
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -2613,24 +2613,24 @@
 
     invoke-virtual {v2, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 797
+    .line 712
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 799
+    .line 714
     sget-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->inode:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 803
+    .line 716
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :goto_0
     return-object v2
 
-    .line 801
+    .line 715
     :catch_0
     move-exception v1
 
-    .line 803
+    .line 716
     .local v1, ignore:Ljava/lang/Exception;
     const-string v2, ""
 
@@ -2649,19 +2649,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1015
+    .line 908
     invoke-virtual {p0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getMounts()Ljava/util/ArrayList;
 
     move-result-object v2
 
     sput-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
-    .line 1016
+    .line 909
     sget-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_2
 
-    .line 1017
+    .line 910
     sget-object v2, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2682,7 +2682,7 @@
 
     check-cast v1, Lcom/stericson/RootTools/containers/Mount;
 
-    .line 1019
+    .line 911
     .local v1, mount:Lcom/stericson/RootTools/containers/Mount;
     invoke-virtual {v1}, Lcom/stericson/RootTools/containers/Mount;->getMountPoint()Ljava/io/File;
 
@@ -2698,7 +2698,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1021
+    .line 912
     invoke-virtual {v1}, Lcom/stericson/RootTools/containers/Mount;->getFlags()Ljava/util/Set;
 
     move-result-object v2
@@ -2713,7 +2713,7 @@
 
     invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1022
+    .line 913
     invoke-virtual {v1}, Lcom/stericson/RootTools/containers/Mount;->getFlags()Ljava/util/Set;
 
     move-result-object v2
@@ -2728,7 +2728,7 @@
 
     return-object v2
 
-    .line 1026
+    .line 917
     .end local v1           #mount:Lcom/stericson/RootTools/containers/Mount;
     :cond_1
     new-instance v2, Ljava/lang/Exception;
@@ -2737,7 +2737,7 @@
 
     throw v2
 
-    .line 1030
+    .line 919
     .end local v0           #i$:Ljava/util/Iterator;
     :cond_2
     new-instance v2, Ljava/lang/Exception;
@@ -2748,7 +2748,7 @@
 .end method
 
 .method public getMounts()Ljava/util/ArrayList;
-    .locals 9
+    .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -2766,104 +2766,132 @@
     .end annotation
 
     .prologue
-    .line 980
-    const/4 v2, 0x0
+    const/4 v13, 0x2
 
-    .line 981
-    .local v2, lnr:Ljava/io/LineNumberReader;
-    new-instance v2, Ljava/io/LineNumberReader;
+    const/4 v12, 0x1
 
-    .end local v2           #lnr:Ljava/io/LineNumberReader;
-    new-instance v4, Ljava/io/FileReader;
+    const/4 v11, 0x0
 
-    const-string v5, "/proc/mounts"
+    .line 867
+    invoke-static {v12}, Lcom/stericson/RootTools/RootTools;->getShell(Z)Lcom/stericson/RootTools/execution/Shell;
 
-    invoke-direct {v4, v5}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+    move-result-object v5
 
-    invoke-direct {v2, v4}, Ljava/io/LineNumberReader;-><init>(Ljava/io/Reader;)V
+    .line 869
+    .local v5, shell:Lcom/stericson/RootTools/execution/Shell;
+    new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
-    .line 983
-    .restart local v2       #lnr:Ljava/io/LineNumberReader;
-    new-instance v3, Ljava/util/ArrayList;
+    new-array v6, v13, [Ljava/lang/String;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    const-string v7, "cat /proc/mounts > /data/local/RootToolsMounts"
 
-    .line 984
-    .local v3, mounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Mount;>;"
+    aput-object v7, v6, v11
+
+    const-string v7, "chmod 0777 /data/local/RootToolsMounts"
+
+    aput-object v7, v6, v12
+
+    invoke-direct {v0, v11, v6}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
+
+    .line 872
+    .local v0, cmd:Lcom/stericson/RootTools/execution/CommandCapture;
+    invoke-virtual {v5, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
+
+    .line 873
+    invoke-virtual {v0}, Lcom/stericson/RootTools/execution/CommandCapture;->waitForFinish()V
+
+    .line 875
+    const/4 v3, 0x0
+
+    .line 876
+    .local v3, lnr:Ljava/io/LineNumberReader;
+    new-instance v3, Ljava/io/LineNumberReader;
+
+    .end local v3           #lnr:Ljava/io/LineNumberReader;
+    new-instance v6, Ljava/io/FileReader;
+
+    const-string v7, "/data/local/RootToolsMounts"
+
+    invoke-direct {v6, v7}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v3, v6}, Ljava/io/LineNumberReader;-><init>(Ljava/io/Reader;)V
+
+    .line 878
+    .restart local v3       #lnr:Ljava/io/LineNumberReader;
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    .line 879
+    .local v4, mounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Mount;>;"
     :goto_0
-    invoke-virtual {v2}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
+
+    move-result-object v2
+
+    .local v2, line:Ljava/lang/String;
+    if-eqz v2, :cond_0
+
+    .line 881
+    invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+
+    .line 883
+    const-string v6, " "
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .local v1, line:Ljava/lang/String;
-    if-eqz v1, :cond_0
+    .line 884
+    .local v1, fields:[Ljava/lang/String;
+    new-instance v6, Lcom/stericson/RootTools/containers/Mount;
 
-    .line 987
-    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+    new-instance v7, Ljava/io/File;
 
-    .line 989
-    const-string v4, " "
+    aget-object v8, v1, v11
 
-    invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-direct {v7, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    new-instance v8, Ljava/io/File;
 
-    .line 990
-    .local v0, fields:[Ljava/lang/String;
-    new-instance v4, Lcom/stericson/RootTools/containers/Mount;
+    aget-object v9, v1, v12
 
-    new-instance v5, Ljava/io/File;
+    invoke-direct {v8, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const/4 v6, 0x0
+    aget-object v9, v1, v13
 
-    aget-object v6, v0, v6
+    const/4 v10, 0x3
 
-    invoke-direct {v5, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    aget-object v10, v1, v10
 
-    new-instance v6, Ljava/io/File;
+    invoke-direct {v6, v7, v8, v9, v10}, Lcom/stericson/RootTools/containers/Mount;-><init>(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v7, 0x1
-
-    aget-object v7, v0, v7
-
-    invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    const/4 v7, 0x2
-
-    aget-object v7, v0, v7
-
-    const/4 v8, 0x3
-
-    aget-object v8, v0, v8
-
-    invoke-direct {v4, v5, v6, v7, v8}, Lcom/stericson/RootTools/containers/Mount;-><init>(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 996
-    .end local v0           #fields:[Ljava/lang/String;
+    .line 890
+    .end local v1           #fields:[Ljava/lang/String;
     :cond_0
-    sput-object v3, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
+    sput-object v4, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
-    .line 998
-    sget-object v4, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
+    .line 892
+    sget-object v6, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
-    if-eqz v4, :cond_1
+    if-eqz v6, :cond_1
 
-    .line 999
-    sget-object v4, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
+    .line 893
+    sget-object v6, Lcom/stericson/RootTools/internal/InternalVariables;->mounts:Ljava/util/ArrayList;
 
-    return-object v4
+    return-object v6
 
-    .line 1001
+    .line 895
     :cond_1
-    new-instance v4, Ljava/lang/Exception;
+    new-instance v6, Ljava/lang/Exception;
 
-    invoke-direct {v4}, Ljava/lang/Exception;-><init>()V
+    invoke-direct {v6}, Ljava/lang/Exception;-><init>()V
 
-    throw v4
+    throw v6
 .end method
 
 .method public getPath()Ljava/util/Set;
@@ -2885,19 +2913,19 @@
     .end annotation
 
     .prologue
-    .line 1042
+    .line 930
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->path:Ljava/util/Set;
 
     if-eqz v0, :cond_0
 
-    .line 1043
+    .line 931
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->path:Ljava/util/Set;
 
-    .line 1046
+    .line 934
     :goto_0
     return-object v0
 
-    .line 1045
+    .line 933
     :cond_0
     invoke-virtual {p0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->returnPath()Z
 
@@ -2905,12 +2933,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1046
+    .line 934
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->path:Ljava/util/Set;
 
     goto :goto_0
 
-    .line 1048
+    .line 936
     :cond_1
     new-instance v0, Ljava/lang/Exception;
 
@@ -2934,18 +2962,18 @@
 
     const/4 v6, 0x0
 
-    .line 161
+    .line 147
     const-string v4, " "
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 162
+    .line 148
     .local v1, lineArray:[Ljava/lang/String;
     aget-object v3, v1, v6
 
-    .line 164
+    .line 150
     .local v3, rawPermissions:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -3007,16 +3035,16 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 171
+    .line 156
     :cond_2
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 173
+    .line 158
     new-instance v2, Lcom/stericson/RootTools/containers/Permissions;
 
     invoke-direct {v2}, Lcom/stericson/RootTools/containers/Permissions;-><init>()V
 
-    .line 175
+    .line 160
     .local v2, permissions:Lcom/stericson/RootTools/containers/Permissions;
     invoke-virtual {v3, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -3024,28 +3052,28 @@
 
     invoke-virtual {v2, v4}, Lcom/stericson/RootTools/containers/Permissions;->setType(Ljava/lang/String;)V
 
-    .line 177
+    .line 162
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getType()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 179
+    .line 164
     invoke-virtual {v3, v7, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Lcom/stericson/RootTools/containers/Permissions;->setUserPermissions(Ljava/lang/String;)V
 
-    .line 181
+    .line 166
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getUserPermissions()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 183
+    .line 168
     const/4 v4, 0x7
 
     invoke-virtual {v3, v10, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -3054,14 +3082,14 @@
 
     invoke-virtual {v2, v4}, Lcom/stericson/RootTools/containers/Permissions;->setGroupPermissions(Ljava/lang/String;)V
 
-    .line 185
+    .line 170
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getGroupPermissions()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 187
+    .line 172
     const/4 v4, 0x7
 
     const/16 v5, 0xa
@@ -3072,19 +3100,19 @@
 
     invoke-virtual {v2, v4}, Lcom/stericson/RootTools/containers/Permissions;->setOtherPermissions(Ljava/lang/String;)V
 
-    .line 189
+    .line 174
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getOtherPermissions()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 191
+    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 192
+    .line 177
     .local v0, finalPermissions:Ljava/lang/StringBuilder;
     invoke-virtual {p0, v3}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->parseSpecialPermissions(Ljava/lang/String;)I
 
@@ -3092,7 +3120,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 193
+    .line 178
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getUserPermissions()Ljava/lang/String;
 
     move-result-object v4
@@ -3103,7 +3131,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 194
+    .line 179
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getGroupPermissions()Ljava/lang/String;
 
     move-result-object v4
@@ -3114,7 +3142,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 195
+    .line 180
     invoke-virtual {v2}, Lcom/stericson/RootTools/containers/Permissions;->getOtherPermissions()Ljava/lang/String;
 
     move-result-object v4
@@ -3125,7 +3153,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 197
+    .line 182
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -3136,7 +3164,7 @@
 
     invoke-virtual {v2, v4}, Lcom/stericson/RootTools/containers/Permissions;->setPermissions(I)V
 
-    .line 202
+    .line 187
     .end local v0           #finalPermissions:Ljava/lang/StringBuilder;
     .end local v2           #permissions:Lcom/stericson/RootTools/containers/Permissions;
     :goto_0
@@ -3155,19 +3183,19 @@
     .prologue
     const/4 v13, 0x0
 
-    .line 1063
+    .line 950
     sput-object p1, Lcom/stericson/RootTools/internal/InternalVariables;->getSpaceFor:Ljava/lang/String;
 
-    .line 1064
+    .line 951
     const/4 v3, 0x0
 
-    .line 1065
+    .line 952
     .local v3, found:Z
     const-string v8, "Looking for Space"
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1067
+    .line 954
     :try_start_0
     new-instance v1, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$7;
 
@@ -3201,7 +3229,7 @@
 
     invoke-direct {v1, p0, v8, v9}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$7;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
 
-    .line 1082
+    .line 966
     .local v1, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -3209,24 +3237,24 @@
 
     invoke-virtual {v8, v1}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 1083
+    .line 967
     invoke-virtual {v1}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1086
+    .line 971
     .end local v1           #command:Lcom/stericson/RootTools/execution/Command;
     :goto_0
     sget-object v8, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
 
     if-eqz v8, :cond_6
 
-    .line 1087
+    .line 972
     const-string v8, "First Method"
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1089
+    .line 974
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
 
     .local v0, arr$:[Ljava/lang/String;
@@ -3241,19 +3269,19 @@
 
     aget-object v6, v0, v4
 
-    .line 1091
+    .line 976
     .local v6, spaceSearch:Ljava/lang/String;
     invoke-static {v6}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1093
+    .line 978
     if-eqz v3, :cond_0
 
-    .line 1094
+    .line 979
     invoke-virtual {p0, v6}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getConvertedSpace(Ljava/lang/String;)J
 
     move-result-wide v8
 
-    .line 1122
+    .line 1007
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v5           #len$:I
@@ -3261,7 +3289,7 @@
     :goto_2
     return-wide v8
 
-    .line 1095
+    .line 980
     .restart local v0       #arr$:[Ljava/lang/String;
     .restart local v4       #i$:I
     .restart local v5       #len$:I
@@ -3275,16 +3303,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 1096
+    .line 981
     const/4 v3, 0x1
 
-    .line 1089
+    .line 974
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 1101
+    .line 986
     .end local v6           #spaceSearch:Ljava/lang/String;
     :cond_2
     const/4 v2, 0x0
@@ -3292,13 +3320,13 @@
     .local v2, count:I
     const/4 v7, 0x3
 
-    .line 1103
+    .line 988
     .local v7, targetCount:I
     const-string v8, "Second Method"
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1105
+    .line 990
     sget-object v8, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
 
     aget-object v8, v8, v13
@@ -3311,10 +3339,10 @@
 
     if-gt v8, v9, :cond_3
 
-    .line 1106
+    .line 991
     const/4 v7, 0x2
 
-    .line 1109
+    .line 994
     :cond_3
     sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
 
@@ -3327,18 +3355,18 @@
 
     aget-object v6, v0, v4
 
-    .line 1111
+    .line 996
     .restart local v6       #spaceSearch:Ljava/lang/String;
     invoke-static {v6}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1112
+    .line 997
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v8
 
     if-lez v8, :cond_5
 
-    .line 1113
+    .line 998
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -3359,27 +3387,27 @@
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1114
+    .line 999
     if-ne v2, v7, :cond_4
 
-    .line 1115
+    .line 1000
     invoke-virtual {p0, v6}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getConvertedSpace(Ljava/lang/String;)J
 
     move-result-wide v8
 
     goto :goto_2
 
-    .line 1117
+    .line 1002
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
-    .line 1109
+    .line 994
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 1121
+    .line 1006
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v2           #count:I
     .end local v4           #i$:I
@@ -3391,12 +3419,12 @@
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1122
+    .line 1007
     const-wide/16 v8, -0x1
 
     goto :goto_2
 
-    .line 1084
+    .line 968
     :catch_0
     move-exception v8
 
@@ -3423,10 +3451,10 @@
     .end annotation
 
     .prologue
-    .line 133
+    .line 124
     const/4 v2, 0x0
 
-    .line 136
+    .line 126
     .local v2, lnr:Ljava/io/LineNumberReader;
     :try_start_0
     new-instance v3, Ljava/io/LineNumberReader;
@@ -3441,7 +3469,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 139
+    .line 129
     .end local v2           #lnr:Ljava/io/LineNumberReader;
     .local v3, lnr:Ljava/io/LineNumberReader;
     :try_start_1
@@ -3449,7 +3477,7 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 140
+    .line 130
     .local v4, symlink:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Symlink;>;"
     :goto_0
     invoke-virtual {v3}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
@@ -3459,17 +3487,17 @@
     .local v1, line:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 143
+    .line 132
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 145
+    .line 134
     const-string v5, " "
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 146
+    .line 135
     .local v0, fields:[Ljava/lang/String;
     new-instance v5, Lcom/stericson/RootTools/containers/Symlink;
 
@@ -3501,7 +3529,7 @@
 
     goto :goto_0
 
-    .line 153
+    .line 140
     .end local v0           #fields:[Ljava/lang/String;
     .end local v1           #line:Ljava/lang/String;
     .end local v4           #symlink:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Symlink;>;"
@@ -3515,7 +3543,7 @@
     :goto_1
     throw v5
 
-    .line 150
+    .line 139
     .end local v2           #lnr:Ljava/io/LineNumberReader;
     .restart local v1       #line:Ljava/lang/String;
     .restart local v3       #lnr:Ljava/io/LineNumberReader;
@@ -3523,7 +3551,7 @@
     :cond_0
     return-object v4
 
-    .line 153
+    .line 140
     .end local v1           #line:Ljava/lang/String;
     .end local v3           #lnr:Ljava/io/LineNumberReader;
     .end local v4           #symlink:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/stericson/RootTools/containers/Symlink;>;"
@@ -3539,7 +3567,7 @@
     .parameter "file"
 
     .prologue
-    .line 1136
+    .line 1019
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3560,13 +3588,13 @@
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1139
+    .line 1022
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1141
+    .line 1024
     .local v3, results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;
 
@@ -3600,7 +3628,7 @@
 
     invoke-direct {v0, p0, v5, v6, v3}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/util/List;)V
 
-    .line 1157
+    .line 1036
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -3608,10 +3636,10 @@
 
     invoke-virtual {v5, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 1158
+    .line 1037
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 1160
+    .line 1039
     const/4 v5, 0x0
 
     invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3626,7 +3654,7 @@
 
     move-result-object v4
 
-    .line 1161
+    .line 1040
     .local v4, symlink:[Ljava/lang/String;
     array-length v5, v4
 
@@ -3642,15 +3670,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 1162
+    .line 1041
     const-string v5, "Symlink found."
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1164
+    .line 1043
     const-string v2, ""
 
-    .line 1165
+    .line 1044
     .local v2, final_symlink:Ljava/lang/String;
     array-length v5, v4
 
@@ -3680,7 +3708,7 @@
 
     if-nez v5, :cond_1
 
-    .line 1168
+    .line 1046
     array-length v5, v4
 
     add-int/lit8 v5, v5, -0x1
@@ -3689,7 +3717,7 @@
 
     invoke-virtual {p0, v5}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->findBinary(Ljava/lang/String;)Z
 
-    .line 1169
+    .line 1047
     sget-object v5, Lcom/stericson/RootTools/RootTools;->lastFoundBinaryPaths:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
@@ -3698,7 +3726,7 @@
 
     if-lez v5, :cond_0
 
-    .line 1172
+    .line 1049
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3737,7 +3765,7 @@
 
     move-result-object v2
 
-    .line 1193
+    .line 1066
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     .end local v2           #final_symlink:Ljava/lang/String;
     .end local v3           #results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -3745,7 +3773,7 @@
     :goto_0
     return-object v2
 
-    .line 1177
+    .line 1052
     .restart local v0       #command:Lcom/stericson/RootTools/execution/Command;
     .restart local v2       #final_symlink:Ljava/lang/String;
     .restart local v3       #results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -3759,7 +3787,7 @@
 
     goto :goto_0
 
-    .line 1182
+    .line 1055
     :cond_1
     array-length v5, v4
 
@@ -3771,7 +3799,7 @@
 
     goto :goto_0
 
-    .line 1187
+    .line 1060
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     .end local v2           #final_symlink:Ljava/lang/String;
     .end local v3           #results:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
@@ -3779,23 +3807,23 @@
     :catch_0
     move-exception v1
 
-    .line 1188
+    .line 1061
     .local v1, e:Ljava/lang/Exception;
     sget-boolean v5, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v5, :cond_2
 
-    .line 1189
+    .line 1062
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1192
+    .line 1065
     .end local v1           #e:Ljava/lang/Exception;
     :cond_2
     const-string v5, "Symlink not found"
 
     invoke-static {v5}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1193
+    .line 1066
     const-string v2, ""
 
     goto :goto_0
@@ -3825,7 +3853,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1212
+    .line 1082
     const-string v1, "find"
 
     invoke-virtual {p0, v1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->checkUtil(Ljava/lang/String;)Z
@@ -3834,14 +3862,14 @@
 
     if-nez v1, :cond_0
 
-    .line 1213
+    .line 1083
     new-instance v1, Ljava/lang/Exception;
 
     invoke-direct {v1}, Ljava/lang/Exception;-><init>()V
 
     throw v1
 
-    .line 1216
+    .line 1086
     :cond_0
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
@@ -3877,7 +3905,7 @@
 
     invoke-direct {v0, v4, v1}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(I[Ljava/lang/String;)V
 
-    .line 1217
+    .line 1087
     .local v0, command:Lcom/stericson/RootTools/execution/CommandCapture;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -3885,27 +3913,27 @@
 
     invoke-virtual {v1, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 1218
+    .line 1088
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/CommandCapture;->waitForFinish()V
 
-    .line 1220
+    .line 1090
     invoke-virtual {p0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getSymLinks()Ljava/util/ArrayList;
 
     move-result-object v1
 
     sput-object v1, Lcom/stericson/RootTools/internal/InternalVariables;->symlinks:Ljava/util/ArrayList;
 
-    .line 1221
+    .line 1091
     sget-object v1, Lcom/stericson/RootTools/internal/InternalVariables;->symlinks:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_1
 
-    .line 1222
+    .line 1092
     sget-object v1, Lcom/stericson/RootTools/internal/InternalVariables;->symlinks:Ljava/util/ArrayList;
 
     return-object v1
 
-    .line 1224
+    .line 1094
     :cond_1
     new-instance v1, Ljava/lang/Exception;
 
@@ -3918,7 +3946,7 @@
     .locals 1
 
     .prologue
-    .line 1236
+    .line 1106
     const-string v0, "busybox"
 
     invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->checkUtil(Ljava/lang/String;)Z
@@ -3927,14 +3955,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1237
+    .line 1107
     const-string v0, "busybox"
 
-    .line 1241
+    .line 1111
     :goto_0
     return-object v0
 
-    .line 1238
+    .line 1108
     :cond_0
     const-string v0, "toolbox"
 
@@ -3944,12 +3972,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1239
+    .line 1109
     const-string v0, "toolbox"
 
     goto :goto_0
 
-    .line 1241
+    .line 1111
     :cond_1
     const-string v0, ""
 
@@ -3963,17 +3991,17 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1255
+    .line 1124
     const-string v8, "Checking SDcard size and that it is mounted as RW"
 
     invoke-static {v8}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1256
+    .line 1125
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1257
+    .line 1126
     .local v6, status:Ljava/lang/String;
     const-string v8, "mounted"
 
@@ -3983,18 +4011,18 @@
 
     if-nez v8, :cond_1
 
-    .line 1264
+    .line 1133
     :cond_0
     :goto_0
     return v7
 
-    .line 1260
+    .line 1129
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v4
 
-    .line 1261
+    .line 1130
     .local v4, path:Ljava/io/File;
     new-instance v5, Landroid/os/StatFs;
 
@@ -4004,7 +4032,7 @@
 
     invoke-direct {v5, v8}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 1262
+    .line 1131
     .local v5, stat:Landroid/os/StatFs;
     invoke-virtual {v5}, Landroid/os/StatFs;->getBlockSize()I
 
@@ -4012,7 +4040,7 @@
 
     int-to-long v2, v8
 
-    .line 1263
+    .line 1132
     .local v2, blockSize:J
     invoke-virtual {v5}, Landroid/os/StatFs;->getAvailableBlocks()I
 
@@ -4020,7 +4048,7 @@
 
     int-to-long v0, v8
 
-    .line 1264
+    .line 1133
     .local v0, availableBlocks:J
     mul-long v8, v0, v2
 
@@ -4043,10 +4071,10 @@
 
     const/4 v7, 0x0
 
-    .line 1277
+    .line 1145
     sput-boolean v7, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
 
-    .line 1280
+    .line 1148
     const-string v1, "toolbox"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -4065,11 +4093,11 @@
 
     move v1, v7
 
-    .line 1316
+    .line 1183
     :goto_0
     return v1
 
-    .line 1286
+    .line 1154
     :cond_0
     :try_start_0
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;
@@ -4123,7 +4151,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$9;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1305
+    .line 1172
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     const/4 v1, 0x1
 
@@ -4139,12 +4167,12 @@
 
     invoke-virtual {v1, v2}, Lcom/stericson/RootTools/execution/Command;->waitForFinish(I)V
 
-    .line 1307
+    .line 1174
     sget-boolean v1, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
 
     if-eqz v1, :cond_2
 
-    .line 1308
+    .line 1175
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4173,10 +4201,10 @@
 
     move v1, v8
 
-    .line 1309
+    .line 1176
     goto :goto_0
 
-    .line 1286
+    .line 1154
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4199,7 +4227,7 @@
 
     goto :goto_1
 
-    .line 1311
+    .line 1178
     .restart local v0       #command:Lcom/stericson/RootTools/execution/Command;
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4232,15 +4260,15 @@
 
     move v1, v7
 
-    .line 1312
+    .line 1179
     goto/16 :goto_0
 
-    .line 1314
+    .line 1181
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :catch_0
     move-exception v6
 
-    .line 1315
+    .line 1182
     .local v6, e:Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -4250,7 +4278,7 @@
 
     move v1, v7
 
-    .line 1316
+    .line 1183
     goto/16 :goto_0
 .end method
 
@@ -4262,7 +4290,7 @@
     .parameter "mode"
 
     .prologue
-    .line 1340
+    .line 1203
     :try_start_0
     new-instance v1, Lcom/stericson/RootTools/internal/Installer;
 
@@ -4270,7 +4298,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1348
+    .line 1211
     .local v1, installer:Lcom/stericson/RootTools/internal/Installer;
     invoke-virtual {v1, p2, p3, p4}, Lcom/stericson/RootTools/internal/Installer;->installBinary(ILjava/lang/String;Ljava/lang/String;)Z
 
@@ -4280,20 +4308,20 @@
     :goto_0
     return v2
 
-    .line 1341
+    .line 1204
     :catch_0
     move-exception v0
 
-    .line 1342
+    .line 1205
     .local v0, ex:Ljava/io/IOException;
     sget-boolean v2, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v2, :cond_0
 
-    .line 1343
+    .line 1206
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1345
+    .line 1208
     :cond_0
     const/4 v2, 0x0
 
@@ -4308,18 +4336,18 @@
 
     const/4 v3, 0x0
 
-    .line 814
+    .line 726
     :try_start_0
     const-string v4, "Checking for Root access"
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 815
+    .line 727
     const/4 v4, 0x0
 
     sput-boolean v4, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
 
-    .line 817
+    .line 729
     new-instance v0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$5;
 
     const/4 v4, 0x2
@@ -4336,7 +4364,7 @@
 
     invoke-direct {v0, p0, v4, v5}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$5;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
 
-    .line 841
+    .line 750
     .local v0, command:Lcom/stericson/RootTools/execution/Command;
     invoke-static {}, Lcom/stericson/RootTools/execution/Shell;->startRootShell()Lcom/stericson/RootTools/execution/Shell;
 
@@ -4344,10 +4372,10 @@
 
     invoke-virtual {v4, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 842
+    .line 751
     invoke-virtual {v0}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 845
+    .line 754
     sget-boolean v4, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4355,7 +4383,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 855
+    .line 764
     sput v3, Lcom/stericson/RootTools/RootTools;->shellDelay:I
 
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
@@ -4370,19 +4398,19 @@
 
     goto :goto_0
 
-    .line 851
+    .line 760
     .end local v0           #command:Lcom/stericson/RootTools/execution/Command;
     :catch_0
     move-exception v1
 
-    .line 852
+    .line 761
     .local v1, e:Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 855
+    .line 764
     sput v3, Lcom/stericson/RootTools/RootTools;->shellDelay:I
 
     move v2, v3
@@ -4406,7 +4434,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1361
+    .line 1223
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getBusyBoxApplets(Ljava/lang/String;)Ljava/util/List;
 
@@ -4430,7 +4458,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1362
+    .line 1224
     .local v0, aplet:Ljava/lang/String;
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_0
@@ -4440,21 +4468,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 1363
+    .line 1225
     const/4 v3, 0x1
 
-    .line 1369
+    .line 1231
     .end local v0           #aplet:Ljava/lang/String;
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_1
     :goto_0
     return v3
 
-    .line 1367
+    .line 1229
     :catch_0
     move-exception v1
 
-    .line 1368
+    .line 1230
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
@@ -4473,15 +4501,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 860
+    .line 769
     const-string v3, "Preparing Native Tools"
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 861
+    .line 770
     sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->nativeToolsReady:Z
 
-    .line 865
+    .line 774
     :try_start_0
     new-instance v1, Lcom/stericson/RootTools/internal/Installer;
 
@@ -4489,7 +4517,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 873
+    .line 782
     .local v1, installer:Lcom/stericson/RootTools/internal/Installer;
     const-string v2, "nativetools"
 
@@ -4499,12 +4527,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 874
+    .line 783
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->nativeToolsReady:Z
 
-    .line 879
+    .line 788
     :goto_0
     sget-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->nativeToolsReady:Z
 
@@ -4513,22 +4541,22 @@
     :goto_1
     return v2
 
-    .line 866
+    .line 775
     :catch_0
     move-exception v0
 
-    .line 867
+    .line 776
     .local v0, ex:Ljava/io/IOException;
     sget-boolean v3, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v3, :cond_0
 
-    .line 868
+    .line 777
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 876
+    .line 785
     .end local v0           #ex:Ljava/io/IOException;
     .restart local v1       #installer:Lcom/stericson/RootTools/internal/Installer;
     :cond_1
@@ -4550,7 +4578,7 @@
     .parameter "processName"
 
     .prologue
-    .line 1383
+    .line 1243
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4571,17 +4599,17 @@
 
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1385
+    .line 1245
     const/4 v1, 0x0
 
-    .line 1387
+    .line 1247
     .local v1, processRunning:Z
     :try_start_0
     new-instance v2, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;
 
     invoke-direct {v2, p0, p1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;Ljava/lang/String;)V
 
-    .line 1409
+    .line 1269
     .local v2, result:Lcom/stericson/RootTools/RootTools$Result;
     const/4 v3, 0x1
 
@@ -4599,14 +4627,14 @@
 
     invoke-static {v3, v4, v2, v5}, Lcom/stericson/RootTools/RootTools;->sendShell([Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;I)Ljava/util/List;
 
-    .line 1411
+    .line 1271
     invoke-virtual {v2}, Lcom/stericson/RootTools/RootTools$Result;->getError()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1413
+    .line 1273
     invoke-virtual {v2}, Lcom/stericson/RootTools/RootTools$Result;->getData()Ljava/io/Serializable;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -4615,20 +4643,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 1414
+    .line 1274
     const/4 v1, 0x1
 
-    .line 1421
+    .line 1281
     .end local v2           #result:Lcom/stericson/RootTools/RootTools$Result;
     :cond_0
     :goto_0
     return v1
 
-    .line 1417
+    .line 1277
     :catch_0
     move-exception v0
 
-    .line 1418
+    .line 1278
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -4644,7 +4672,7 @@
     .parameter "processName"
 
     .prologue
-    .line 1433
+    .line 1291
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4665,17 +4693,17 @@
 
     invoke-static {v4}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1435
+    .line 1293
     const/4 v2, 0x0
 
-    .line 1438
+    .line 1295
     .local v2, processKilled:Z
     :try_start_0
     new-instance v3, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$11;
 
     invoke-direct {v3, p0, p1}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$11;-><init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;Ljava/lang/String;)V
 
-    .line 1494
+    .line 1336
     .local v3, result:Lcom/stericson/RootTools/RootTools$Result;
     const/4 v4, 0x1
 
@@ -4693,14 +4721,14 @@
 
     invoke-static {v4, v5, v3, v6}, Lcom/stericson/RootTools/RootTools;->sendShell([Ljava/lang/String;ILcom/stericson/RootTools/RootTools$Result;I)Ljava/util/List;
 
-    .line 1496
+    .line 1338
     invoke-virtual {v3}, Lcom/stericson/RootTools/RootTools$Result;->getError()I
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1499
+    .line 1340
     invoke-virtual {v3}, Lcom/stericson/RootTools/RootTools$Result;->getData()Ljava/io/Serializable;
 
     move-result-object v1
@@ -4709,11 +4737,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1502
+    .line 1343
     .local v1, pids:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1507
+    .line 1346
     const/4 v4, 0x1
 
     :try_start_1
@@ -4749,23 +4777,23 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1508
+    .line 1347
     const/4 v2, 0x1
 
-    .line 1522
+    .line 1357
     .end local v1           #pids:Ljava/lang/String;
     .end local v3           #result:Lcom/stericson/RootTools/RootTools$Result;
     :cond_0
     :goto_0
     return v2
 
-    .line 1510
+    .line 1348
     .restart local v1       #pids:Ljava/lang/String;
     .restart local v3       #result:Lcom/stericson/RootTools/RootTools$Result;
     :catch_0
     move-exception v0
 
-    .line 1512
+    .line 1349
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -4778,14 +4806,14 @@
 
     goto :goto_0
 
-    .line 1517
+    .line 1353
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #pids:Ljava/lang/String;
     .end local v3           #result:Lcom/stericson/RootTools/RootTools$Result;
     :catch_1
     move-exception v0
 
-    .line 1519
+    .line 1354
     .restart local v0       #e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -4802,12 +4830,12 @@
     .parameter "requestCode"
 
     .prologue
-    .line 1549
+    .line 1381
     const-string v1, "Launching Market for BusyBox"
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1550
+    .line 1382
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -4820,11 +4848,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1552
+    .line 1384
     .local v0, i:Landroid/content/Intent;
     invoke-virtual {p1, v0, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 1553
+    .line 1385
     return-object v0
 .end method
 
@@ -4833,12 +4861,12 @@
     .parameter "activity"
 
     .prologue
-    .line 1532
+    .line 1366
     const-string v1, "Launching Market for BusyBox"
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1533
+    .line 1367
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -4851,11 +4879,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1535
+    .line 1369
     .local v0, i:Landroid/content/Intent;
     invoke-virtual {p1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1536
+    .line 1370
     return-void
 .end method
 
@@ -4865,12 +4893,12 @@
     .parameter "requestCode"
 
     .prologue
-    .line 1580
+    .line 1409
     const-string v1, "Launching Market for SuperUser"
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1581
+    .line 1410
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -4883,11 +4911,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1583
+    .line 1412
     .local v0, i:Landroid/content/Intent;
     invoke-virtual {p1, v0, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 1584
+    .line 1413
     return-object v0
 .end method
 
@@ -4896,12 +4924,12 @@
     .parameter "activity"
 
     .prologue
-    .line 1563
+    .line 1394
     const-string v1, "Launching Market for SuperUser"
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 1564
+    .line 1395
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -4914,11 +4942,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1566
+    .line 1397
     .local v0, i:Landroid/content/Intent;
     invoke-virtual {p1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1567
+    .line 1398
     return-void
 .end method
 
@@ -4933,7 +4961,7 @@
 
     const/4 v3, 0x0
 
-    .line 208
+    .line 192
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -4942,12 +4970,130 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 209
+    .line 193
     const/4 v0, 0x4
 
-    .line 213
+    .line 197
     .local v0, tmp:I
     :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "permission "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+
+    .line 198
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "character "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+
+    .line 200
+    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result v1
+
+    const/16 v2, 0x77
+
+    if-ne v1, v2, :cond_1
+
+    .line 201
+    add-int/lit8 v0, v0, 0x2
+
+    .line 205
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "permission "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+
+    .line 206
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "character "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
+
+    .line 208
+    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
+
+    move-result v1
+
+    const/16 v2, 0x78
+
+    if-ne v1, v2, :cond_2
+
+    .line 209
+    add-int/lit8 v0, v0, 0x1
+
+    .line 213
+    :goto_2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4979,7 +5125,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
@@ -4994,127 +5140,9 @@
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
     .line 216
-    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x77
-
-    if-ne v1, v2, :cond_1
-
-    .line 217
-    add-int/lit8 v0, v0, 0x2
-
-    .line 221
-    :goto_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "permission "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 222
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "character "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 224
-    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x78
-
-    if-ne v1, v2, :cond_2
-
-    .line 225
-    add-int/lit8 v0, v0, 0x1
-
-    .line 229
-    :goto_2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "permission "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 230
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "character "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 232
     return v0
 
-    .line 211
+    .line 195
     .end local v0           #tmp:I
     :cond_0
     const/4 v0, 0x0
@@ -5122,13 +5150,13 @@
     .restart local v0       #tmp:I
     goto/16 :goto_0
 
-    .line 219
+    .line 203
     :cond_1
     add-int/lit8 v0, v0, 0x0
 
     goto :goto_1
 
-    .line 227
+    .line 211
     :cond_2
     add-int/lit8 v0, v0, 0x0
 
@@ -5142,10 +5170,10 @@
     .prologue
     const/16 v2, 0x73
 
-    .line 237
+    .line 220
     const/4 v0, 0x0
 
-    .line 238
+    .line 221
     .local v0, tmp:I
     const/4 v1, 0x2
 
@@ -5155,10 +5183,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 239
+    .line 222
     add-int/lit8 v0, v0, 0x4
 
-    .line 241
+    .line 224
     :cond_0
     const/4 v1, 0x5
 
@@ -5168,10 +5196,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 242
+    .line 225
     add-int/lit8 v0, v0, 0x2
 
-    .line 244
+    .line 227
     :cond_1
     const/16 v1, 0x8
 
@@ -5183,10 +5211,10 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 245
+    .line 228
     add-int/lit8 v0, v0, 0x1
 
-    .line 247
+    .line 230
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5208,7 +5236,7 @@
 
     invoke-static {v1}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 249
+    .line 232
     return v0
 .end method
 
@@ -5225,10 +5253,10 @@
 
     const/4 v8, 0x0
 
-    .line 75
+    .line 74
     const/4 v0, 0x0
 
-    .line 79
+    .line 77
     .local v0, command:Lcom/stericson/RootTools/execution/CommandCapture;
     :try_start_0
     const-string v9, "/data/local/tmp"
@@ -5239,7 +5267,7 @@
 
     if-nez v9, :cond_3
 
-    .line 81
+    .line 78
     new-instance v1, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v9, 0x0
@@ -5258,7 +5286,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 82
+    .line 79
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .local v1, command:Lcom/stericson/RootTools/execution/CommandCapture;
     :try_start_1
@@ -5272,7 +5300,7 @@
 
     invoke-virtual {v9}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 85
+    .line 82
     :goto_0
     new-instance v9, Ljava/util/HashSet;
 
@@ -5280,10 +5308,10 @@
 
     sput-object v9, Lcom/stericson/RootTools/internal/InternalVariables;->path:Ljava/util/Set;
 
-    .line 87
+    .line 84
     const/4 v4, 0x0
 
-    .line 89
+    .line 86
     .local v4, lnr:Ljava/io/LineNumberReader;
     const-string v9, "/"
 
@@ -5291,7 +5319,7 @@
 
     move-result-object v5
 
-    .line 90
+    .line 87
     .local v5, mountedas:Ljava/lang/String;
     const-string v9, "/"
 
@@ -5299,7 +5327,7 @@
 
     invoke-static {v9, v10}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 92
+    .line 89
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v9, 0x0
@@ -5318,7 +5346,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 93
+    .line 90
     .end local v1           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :try_start_2
@@ -5328,7 +5356,7 @@
 
     invoke-virtual {v9, v0}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 94
+    .line 91
     new-instance v1, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v9, 0x0
@@ -5347,7 +5375,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 96
+    .line 93
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .restart local v1       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :try_start_3
@@ -5357,7 +5385,7 @@
 
     invoke-virtual {v9, v1}, Lcom/stericson/RootTools/execution/Shell;->add(Lcom/stericson/RootTools/execution/Command;)Lcom/stericson/RootTools/execution/Command;
 
-    .line 97
+    .line 94
     new-instance v0, Lcom/stericson/RootTools/execution/CommandCapture;
 
     const/4 v9, 0x0
@@ -5376,7 +5404,7 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 99
+    .line 96
     .end local v1           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .restart local v0       #command:Lcom/stericson/RootTools/execution/CommandCapture;
     :try_start_4
@@ -5390,12 +5418,12 @@
 
     invoke-virtual {v9}, Lcom/stericson/RootTools/execution/Command;->waitForFinish()V
 
-    .line 101
+    .line 98
     const-string v9, "/"
 
     invoke-static {v9, v5}, Lcom/stericson/RootTools/RootTools;->remount(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 103
+    .line 100
     new-instance v4, Ljava/io/LineNumberReader;
 
     .end local v4           #lnr:Ljava/io/LineNumberReader;
@@ -5407,7 +5435,7 @@
 
     invoke-direct {v4, v9}, Ljava/io/LineNumberReader;-><init>(Ljava/io/Reader;)V
 
-    .line 106
+    .line 103
     .restart local v4       #lnr:Ljava/io/LineNumberReader;
     :cond_0
     invoke-virtual {v4}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
@@ -5417,10 +5445,10 @@
     .local v3, line:Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 108
+    .line 104
     invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 109
+    .line 105
     const-string v9, "export PATH"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -5429,14 +5457,14 @@
 
     if-eqz v9, :cond_0
 
-    .line 111
+    .line 106
     const-string v9, "/"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 112
+    .line 107
     .local v6, tmp:I
     new-instance v9, Ljava/util/HashSet;
 
@@ -5460,7 +5488,7 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 126
+    .line 118
     .end local v3           #line:Ljava/lang/String;
     .end local v4           #lnr:Ljava/io/LineNumberReader;
     .end local v5           #mountedas:Ljava/lang/String;
@@ -5474,24 +5502,24 @@
     :cond_1
     move v7, v8
 
-    .line 117
+    .line 112
     goto :goto_1
 
-    .line 119
+    .line 113
     .end local v3           #line:Ljava/lang/String;
     .end local v4           #lnr:Ljava/io/LineNumberReader;
     .end local v5           #mountedas:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 121
+    .line 114
     .local v2, e:Ljava/lang/Exception;
     :goto_2
     sget-boolean v7, Lcom/stericson/RootTools/RootTools;->debugMode:Z
 
     if-eqz v7, :cond_2
 
-    .line 123
+    .line 115
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -5516,16 +5544,16 @@
 
     invoke-static {v7}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 124
+    .line 116
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
     move v7, v8
 
-    .line 126
+    .line 118
     goto :goto_1
 
-    .line 119
+    .line 113
     .end local v0           #command:Lcom/stericson/RootTools/execution/CommandCapture;
     .end local v2           #e:Ljava/lang/Exception;
     .restart local v1       #command:Lcom/stericson/RootTools/execution/CommandCapture;

@@ -73,7 +73,7 @@
 
     .line 790
     .local v7, tv:Landroid/widget/TextView;
-    const v9, 0x7f06009f
+    const v9, 0x7f0600a6
 
     invoke-virtual {v7, v9}, Landroid/widget/TextView;->setText(I)V
 
@@ -117,7 +117,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007b
+    const v10, 0x7f060082
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -142,7 +142,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007c
+    const v10, 0x7f060083
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007b
+    const v10, 0x7f060082
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -179,7 +179,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007c
+    const v10, 0x7f060083
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -191,7 +191,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007d
+    const v10, 0x7f060084
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -216,7 +216,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007e
+    const v10, 0x7f060085
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -228,7 +228,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007b
+    const v10, 0x7f060082
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -253,7 +253,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06007c
+    const v10, 0x7f060083
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -265,7 +265,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f060075
+    const v10, 0x7f06007c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -293,7 +293,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f060076
+    const v10, 0x7f06007d
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -310,7 +310,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f06009e
+    const v10, 0x7f0600a5
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -473,7 +473,7 @@
 
     .line 805
     .restart local v7       #tv:Landroid/widget/TextView;
-    const v9, 0x7f06009f
+    const v9, 0x7f0600a6
 
     invoke-virtual {v7, v9}, Landroid/widget/TextView;->setText(I)V
 
@@ -509,7 +509,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f060078
+    const v10, 0x7f06007f
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

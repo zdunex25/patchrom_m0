@@ -27,7 +27,7 @@
     .line 1
     iput-object p1, p0, Lcom/vipercn/viper4android/service/HeadsetService$2;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
-    .line 384
+    .line 387
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
@@ -39,18 +39,18 @@
     .locals 2
 
     .prologue
-    .line 389
+    .line 392
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 390
+    .line 393
     .local v0, message:Landroid/os/Message;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 391
+    .line 394
     iget-object v1, p0, Lcom/vipercn/viper4android/service/HeadsetService$2;->this$0:Lcom/vipercn/viper4android/service/HeadsetService;
 
     #getter for: Lcom/vipercn/viper4android/service/HeadsetService;->hDrvStatusCommTimer:Landroid/os/Handler;
@@ -60,6 +60,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 392
+    .line 395
     return-void
 .end method
