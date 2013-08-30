@@ -4,15 +4,9 @@
 	<PublicName>GT-I9300</PublicName>
 	</MobileData>
 	<CustomerDataSet>
-	<CSCName>I9300OXA</CSCName>
+	<CSCName>I9300XEO</CSCName>
 	<CSCVersion>DLJ4</CSCVersion>
-	<NbCustomer>7</NbCustomer>
-	<CustomerData src="/Customer/CPW/customer.xml" />
-	<CustomerData src="/Customer/DBT/customer.xml" />
-	<CustomerData src="/Customer/ITV/customer.xml" />
-	<CustomerData src="/Customer/KOR/customer.xml" />
+	<NbCustomer>1</NbCustomer>
 	<CustomerData src="/Customer/XEO/customer.xml" />
-	<CustomerData src="/Customer/XEF/customer.xml" />
-	<CustomerData src="/Customer/BTU/customer.xml" />
 	</CustomerDataSet>
 </SW-Configuration>

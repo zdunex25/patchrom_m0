@@ -51,19 +51,19 @@
         <NbWbAmr>4</NbWbAmr>
         <WbAmr>
           <NetworkName>Plus</NetworkName>
-          <WbAmrCodec>on</WbAmrCodec>
+          <WbAmrCodec>off</WbAmrCodec>
         </WbAmr>
         <WbAmr>
           <NetworkName>T-Mobile.pl</NetworkName>
-          <WbAmrCodec>on</WbAmrCodec>
+          <WbAmrCodec>off</WbAmrCodec>
         </WbAmr>
         <WbAmr>
           <NetworkName>Orange</NetworkName>
-          <WbAmrCodec>on</WbAmrCodec>
+          <WbAmrCodec>off</WbAmrCodec>
         </WbAmr>
         <WbAmr>
           <NetworkName>Play</NetworkName>
-          <WbAmrCodec>on</WbAmrCodec>
+          <WbAmrCodec>off</WbAmrCodec>
         </WbAmr>
         <NbSOSNumber>2</NbSOSNumber>
         <SOSNumber>112</SOSNumber>
@@ -75,7 +75,7 @@
         <AutoLink>off</AutoLink>
         <AutoSyncML>off</AutoSyncML>
         <AutoFastDormancy>on</AutoFastDormancy>
-        <AutoWbAmr>on</AutoWbAmr>
+        <AutoWbAmr>off</AutoWbAmr>
         <AutoFOTA>off</AutoFOTA>
       </Network>
       <Sound>
