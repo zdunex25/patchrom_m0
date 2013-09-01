@@ -65,7 +65,7 @@
 
     invoke-direct {v1, v0}, Lcom/golgorz/hoveringcontrols/d;-><init>(Lcom/golgorz/hoveringcontrols/CarouselList;)V
 
-    const v0, 0x7f0b0026
+    const v0, 0x7f0b002d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     iput-object v0, v1, Lcom/golgorz/hoveringcontrols/d;->b:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b0028
+    const v0, 0x7f0b002f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -85,7 +85,7 @@
 
     iput-object v0, v1, Lcom/golgorz/hoveringcontrols/d;->c:Landroid/widget/CheckBox;
 
-    const v0, 0x7f0b0027
+    const v0, 0x7f0b002e
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

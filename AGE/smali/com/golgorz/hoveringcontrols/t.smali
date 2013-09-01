@@ -45,7 +45,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->I(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->M(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->I(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->M(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->k(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->m(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->J(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->N(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     :cond_1
     :goto_1
@@ -120,7 +120,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->k(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->m(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/t;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->K(Lcom/golgorz/hoveringcontrols/MyService;)V
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->O(Lcom/golgorz/hoveringcontrols/MyService;)V
 
     goto :goto_1
 

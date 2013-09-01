@@ -38,13 +38,14 @@
             </LinearLayout>
         </LinearLayout>
         <!--TextView android:gravity="fill" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="If you find this app usefull to you, please consider buying it in Google Play to support new updates, thank you!" android:drawableLeft="@android:drawable/ic_menu_info_details" android:layout_below="@id/linearLayout3" android:layout_alignParentLeft="true" /-->
-		<LinearLayout android:orientation="vertical" android:id="@id/servicebuttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5.0dip" android:layout_alignParentBottom="true">
-    		<Button android:id="@id/menu_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ustawienia" android:layout_weight="1.0" android:paddingBottom="5.0dip" android:onClick="settingo" />
-            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
-                <Button android:id="@id/button4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Uruchom" android:layout_weight="1.0" android:onClick="arrancarServicio" />
-                <!--TextView android:gravity="center" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XDA version" android:layout_weight="1.0" /-->
-                <Button android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Zatrzymaj" android:layout_weight="1.0" android:layout_toRightOf="@id/button4" android:onClick="pararServicio" />
+        <!--LinearLayout android:gravity="center" android:id="@id/admob" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/linearLayout3" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" /-->
+            <LinearLayout android:orientation="vertical" android:id="@id/servicebuttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5.0dip" android:layout_alignParentBottom="true">
+                <Button android:id="@id/menu_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ustawienia" android:layout_weight="1.0" android:paddingBottom="5.0dip" android:onClick="settingo" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                    <Button android:id="@id/button4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Uruchom" android:layout_weight="1.0" android:onClick="arrancarServicio" />
+                    <!--TextView android:gravity="center" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XDA version" android:layout_weight="1.0" /-->
+                    <Button android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Zatrzymaj" android:layout_weight="1.0" android:layout_toRightOf="@id/button4" android:onClick="pararServicio" />
+                </LinearLayout>
             </LinearLayout>
-		</LinearLayout>
     </RelativeLayout>
 </ScrollView>

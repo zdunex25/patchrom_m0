@@ -23,11 +23,9 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/o;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
-
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->finish()V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

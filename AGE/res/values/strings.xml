@@ -30,19 +30,19 @@
     <string name="_carousel_mode_">-Carousel Mode-</string>
     <string name="set_">"Set  "</string>
     <string name="proximity_sensor_configuration">Proximity Sensor Configuration</string>
-    <string name="info_proximity">Learn how to wave your hand for your phone. You can change to aleternate sensor and change the delay to make it easier detection for you.</string>
+    <string name="info_proximity">Learn how to wave your hand for your phone. You can change to alternate sensor and change the delay to make it easier detection for you.</string>
     <string name="alternative_detector">Alternative Detector</string>
-    <string name="delay_in_miliseconds_between_slides">Delay in miliseconds between slides</string>
+    <string name="delay_in_miliseconds_between_slides">Delay in milliseconds between slides</string>
     <string name="shake_system_configuration">Shake System Configuration</string>
     <string name="shake_info">Shake your phone and find how to shake it to activate speakerphone while in a call (help: make 4 movements like if you were knocking the door)</string>
     <string name="waiting_for_shake">Waiting for shake</string>
-    <string name="shake_sensi_info">Change Shake Sensibility (will use when real Shakes), recomended values betwen 400-550</string>
+    <string name="shake_sensi_info">Change Shake Sensibility (will use when real Shakes), recommended values between 400-550</string>
     <string name="info_menu">Info</string>
     <string name="quickglance_example">QuickGlance Example</string>
     <string name="type_of_sensor_detection">Type of sensor detection</string>
     <string name="sensor_detection">Sensor Detection</string>
     <string name="use_alternative_hand_detection_mode">Use alternative hand detection mode</string>
-    <string name="configue_different_options">Configue different options</string>
+    <string name="configue_different_options">Configure different options</string>
     <string name="configuration_options">Configuration Options</string>
     <string name="run_hovering_controls_when_booting">Run Hovering Controls when booting</string>
     <string name="start_at_boot">Start at Boot</string>
@@ -50,7 +50,7 @@
     <string name="vibrate">Vibrate</string>
     <string name="stop_detecting_when_screen_off_quickglance_and_music_controls_will_stop_">Stop detecting when screen off, QuickGlance and Music controls will stop.</string>
     <string name="stop_screen_off">Stop Screen Off</string>
-    <string name="if_active_android_may_stop_the_service_to_free_memory_if_needed_it_will_restart_automatically_">If active, android may stop the service to free memory if needed (it will restart automatically)</string>
+    <string name="if_active_android_may_stop_the_service_to_free_memory_if_needed_it_will_restart_automatically_">If active, Android may stop the service to free memory if needed (it will restart automatically)</string>
     <string name="hide_notification_icon">Hide Notification Icon</string>
     <string name="_beta_allows_to_control_music_and_video_players_even_with_screen_off_feature_not_yet_finished">(Beta)Allows to control music and video players, even with screen off. Feature not yet finished</string>
     <string name="_beta_music_video_controls">(Beta)Music/Video Controls</string>
@@ -87,4 +87,6 @@
     <string name="allow_slide_up_down_with_browser_1_slide_down_2_slide_up">Allow slide up/down with browser, 1 slide: down; 2 slide: up</string>
     <string name="gallery_slider">Gallery Slider</string>
     <string name="allow_image_slide_with_gallery_1_slide_next_2_slide_previous">Allow image slide with Gallery. 1 slide: next; 2 slide: previous</string>
+    <string name="app_uses_proximity_sensor_better_beheaviour_with_high_sensibility_sensors_configure_settings_and_test_sensors_before_use_found_an_error_please_email_me_">App uses proximity sensor, better beheaviour with high sensibility sensors. Configure Settings and Test Sensors before use. Found an error? please email me.</string>
+    <string name="slide_minimum_duration_miliseconds_">Slide minimum duration(milliseconds, 0 for default)</string>
 </resources>

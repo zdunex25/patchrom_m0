@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/a/a/a/a/m;
+.implements Lcom/google/a/a/a/m;
 
 
 # instance fields
