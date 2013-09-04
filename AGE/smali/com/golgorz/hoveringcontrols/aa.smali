@@ -34,7 +34,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/aa;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->M(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->I(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 

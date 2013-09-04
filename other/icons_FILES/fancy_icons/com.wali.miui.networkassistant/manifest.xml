@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- network -->
+<Icon version="1" frameRate="0" width="136" height="136" screenWidth="720" useVariableUpdater="none">
+
+    <VariableBinders>
+         <ContentProviderBinder 
+	    name="network_binder" 
+            uri="content://datahub/network" 
+            columns="total_limit,month_used,today_used"
+            countName="hasNetwork" updateInterval="300">
+             <Variable name="total_limit" type="long" column="total_limit"/>
+             <Variable name="month_used" type="long" column="month_used"/>
+         </ContentProviderBinder>
+	<BroadcastBinder action="com.android.action.NETWORK_POLICY_UPDATE" >
+	    <Trigger>
+		<BinderCommand name="network_binder" command="refresh"/>
+	    </Trigger>
+	</BroadcastBinder>
+        <BroadcastBinder action="android.intent.action.SIM_STATE_CHANGED" >
+	    <Trigger>
+		<BinderCommand name="network_binder" command="refresh"/>
+	    </Trigger>
+	</BroadcastBinder>
+
+    </VariableBinders>
+    <Group>
+        <Var name="is_over_limit" expression="ge(#month_used, #total_limit)" />
+        <Var name="is_over_half" expression="ge(#month_used*2, #total_limit)" />
+        <Var name="degree" expression="360*#month_used/#total_limit" />
+
+        <Image x="68" y="68" align="center" alignV="center" src="network/network_bg.png" />
+        <Image name="over_limit_image" visibility="#is_over_limit" x="68" y="68" align="center" alignV="center" src="network/over_limit.png" />
+        <Image name="left_circle" visibility="not(#is_over_limit)*#is_over_half" x="50" y="68" align="center" alignV="center" src="network/left_circle.png"> 
+            <Mask src="network/mask.png"  pivotX="37" pivotY="37" rotation="#degree-180"/>
+        </Image>
+        <Image name="right_circle" visibility="not(#is_over_limit)" x="86" y="68" align="center" alignV="center" src="network/right_circle.png" > 
+            <Mask src="network/mask.png"  pivotX="0" pivotY="37" rotation="ifelse(ge(#degree,180),180,#degree)"/>
+        </Image>
+        <Image visibility="#is_over_limit" x="68" y="68" align="center" alignV="center" src="network/warning.png" />
+        <ImageNumber name="number" x="68" y="68" visibility="not(#is_over_limit)" number="int(100*#month_used/#total_limit+0.5)" src="network/percent.png" align="center" alignV="center" >
+        </ImageNumber>
+        <Image visibility="not(#is_over_limit)" x="70+#number.bmp_width/2" y="60" src="network/percent.png"/>
+    </Group>    
+</Icon>

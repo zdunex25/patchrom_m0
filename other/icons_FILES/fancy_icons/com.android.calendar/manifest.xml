@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- calendar -->
+<Icon version="1" frameRate="0" width="136" height="136" screenWidth="720" useVariableUpdater="DateTime.Day">
+    <VariableBinders>
+	    <BroadcastBinder action="android.intent.action.TIME_SET" />
+        <BroadcastBinder action="android.intent.action.DATE_CHANGED" />
+    </VariableBinders>
+
+    <Group pivotX="68" pivotY="68">
+       <Image x="68" y="68" align="center" alignV="center" src="calendar_icon.png" srcid="#date" />
+    </Group>
+</Icon>

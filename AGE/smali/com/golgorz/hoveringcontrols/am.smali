@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/am;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->g(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->e(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
 
     move-result-object v0
 

@@ -4,11 +4,11 @@
     <string name="menu_settings">Ustawienia</string>
     <string name="title_activity_main">Kontrola gestami</string>
     <string name="action_settings">Ustawienia</string>
+    <string name="add_widget">Dodaj widżet</string>
     <string name="title_activity_list_apps">Wybierz aplikację</string>
+    <string name="title_activitylistvideoplayer">Wybierz aplikację odtwarzacza</string>
     <string name="title_activity_carousel_list">Wybierz aplikacje</string>
     <string name="title_activity_sensor_test">Test sensorów</string>
-    <string name="add_widget">Dodaj widżet</string>
-    <string name="title_activitylistvideoplayer">Wybierz aplikację odtwarzacza</string>
     <string name="title_activity_quick_glance">Szybki podgląd</string>
     <string name="title_activity_tilted">Tilted</string>
     <string name="title_activity_test">Testuj</string>

@@ -47,22 +47,6 @@
 
     move-result-object v1
 
-    const-string v2, "--"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -71,7 +55,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->e(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
 
     move-result v0
 
@@ -93,7 +77,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020008
+    const v1, 0x7f020005
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -116,16 +100,6 @@
 
     invoke-static {v0, v4}, Lcom/golgorz/hoveringcontrols/SensorTest;->c(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v0, v3}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    const-string v1, ""
-
-    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/SensorTest;->a(Lcom/golgorz/hoveringcontrols/SensorTest;Ljava/lang/String;)V
-
     return-void
 
     :cond_0
@@ -136,14 +110,6 @@
     move-result v0
 
     if-ne v0, v4, :cond_1
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -157,25 +123,7 @@
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Slide Once. Slide duration:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/SensorTest;->f(Lcom/golgorz/hoveringcontrols/SensorTest;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "Slide Once"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -185,7 +133,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020010
+    const v1, 0x7f02000d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -200,17 +148,8 @@
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_2
+    if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->d(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_2
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "TWO SLIDERRRRS"
@@ -223,17 +162,46 @@
 
     move-result-object v0
 
+    const-string v1, "Slide Twice"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
+
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->b(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    const v1, 0x7f020011
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
+
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->a(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
+
+    move-result-object v0
+
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "Slide Twice. Slides duration:"
+    const-string v2, "You made "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
 
-    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/SensorTest;->f(Lcom/golgorz/hoveringcontrols/SensorTest;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/SensorTest;->c(Lcom/golgorz/hoveringcontrols/SensorTest;)I
 
-    move-result-object v2
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " hand slides, this is for future updates :P"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -251,40 +219,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f020015
+    const v1, 0x7f020003
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->a(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "No action recognized. Slide(s) duration:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/al;->a:Lcom/golgorz/hoveringcontrols/SensorTest;
-
-    invoke-static {v2}, Lcom/golgorz/hoveringcontrols/SensorTest;->f(Lcom/golgorz/hoveringcontrols/SensorTest;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_0
 .end method

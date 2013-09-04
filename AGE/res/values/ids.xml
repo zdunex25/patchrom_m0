@@ -22,29 +22,22 @@
     <item type="id" name="linearLayout3">false</item>
     <item type="id" name="slidetwice">false</item>
     <item type="id" name="twiceapp">false</item>
-    <item type="id" name="admob">false</item>
     <item type="id" name="textView3">false</item>
-    <item type="id" name="time">false</item>
-    <item type="id" name="date">false</item>
     <item type="id" name="missedCall">false</item>
     <item type="id" name="imageView2">false</item>
     <item type="id" name="bateryLevel">false</item>
     <item type="id" name="imageView3">false</item>
     <item type="id" name="missedSMS">false</item>
-    <item type="id" name="wifiimage">false</item>
-    <item type="id" name="ringtone">false</item>
-    <item type="id" name="bluetoothimage">false</item>
-    <item type="id" name="gpsimage">false</item>
+    <item type="id" name="time">false</item>
+    <item type="id" name="date">false</item>
     <item type="id" name="gotShake">false</item>
     <item type="id" name="shakeSensi">false</item>
     <item type="id" name="sensorValue">false</item>
     <item type="id" name="hoverType">false</item>
     <item type="id" name="eventImage">false</item>
     <item type="id" name="imageEventType">false</item>
-    <item type="id" name="delaytime">false</item>
-    <item type="id" name="TextView01">false</item>
-    <item type="id" name="waveduration">false</item>
     <item type="id" name="textView6">false</item>
+    <item type="id" name="delaytime">false</item>
     <item type="id" name="image">false</item>
     <item type="id" name="text">false</item>
     <item type="id" name="checkUsed">false</item>

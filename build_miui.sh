@@ -17,6 +17,10 @@ for i in * ; do cp -r "$i" "../../../m0/temp/pl/${i//\.apk/}" ; done
 cd ../../../m0/temp
 find pl -name "*-hdpi" | xargs rm -rf
 find pl -name "hdpi" | xargs rm -rf
+#'../../tools/apktool' --quiet d -t miui -f '../../miui/XHDPI/system/app/Bluetooth.apk'
+#cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/android:style\/Theme.Holo.Light.DialogWhenLarge/miui:style\/V5.Theme.Light/g" \
+#				| sed -e "s/android:style\/Theme.Holo.Dialog/miui:style\/V5.Theme.Light.Dialog/g" \
+#				| sed -e "s/android:style\/Theme.Holo.Dialog.Alert/miui:style\/V5.Theme.Light.Dialog.Alert/g" > '../Bluetooth/AndroidManifest.xml'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Mms.apk'
 cat 'Mms/AndroidManifest.xml' | sed -e "s/android:screenOrientation=\"portrait\" //g" \
 				| sed -e "s/ android:screenOrientation=\"portrait\"//g" > '../Mms/AndroidManifest.xml'
@@ -330,6 +334,7 @@ fi
 cd m0
 rm -rf AntiSpam
 rm -rf Backup
+#rm -f Bluetooth/AndroidManifest.xml
 rm -rf Bluetooth/res/values-pl
 rm -rf Browser
 rm -rf BugReport

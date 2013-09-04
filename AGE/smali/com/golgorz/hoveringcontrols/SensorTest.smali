@@ -6,37 +6,29 @@
 
 
 # static fields
-.field private static y:I
+.field private static u:I
 
 
 # instance fields
-.field private A:F
+.field private A:J
 
-.field private B:F
+.field private B:J
 
-.field private C:J
+.field private C:Landroid/widget/TextView;
 
-.field private D:I
+.field private D:Landroid/content/SharedPreferences;
 
-.field private E:J
+.field private E:I
 
-.field private F:J
+.field private F:Ljava/lang/Runnable;
 
-.field private G:Landroid/widget/TextView;
+.field private G:Landroid/os/Handler;
 
-.field private H:Landroid/content/SharedPreferences;
+.field private H:Ljava/lang/Runnable;
 
-.field private I:I
+.field private I:Landroid/os/Handler;
 
 .field private J:Ljava/lang/Runnable;
-
-.field private K:Landroid/os/Handler;
-
-.field private L:Ljava/lang/Runnable;
-
-.field private M:Landroid/os/Handler;
-
-.field private N:Ljava/lang/Runnable;
 
 .field a:Landroid/widget/SeekBar;
 
@@ -60,33 +52,33 @@
 
 .field private k:Landroid/os/Handler;
 
-.field private l:Landroid/os/Handler;
+.field private l:Z
 
 .field private m:Z
 
-.field private n:Z
+.field private n:J
 
 .field private o:Z
 
-.field private p:J
+.field private p:Z
 
-.field private q:Z
+.field private q:I
 
-.field private r:Z
+.field private r:Landroid/widget/CheckBox;
 
-.field private s:I
+.field private s:Landroid/content/SharedPreferences;
 
-.field private t:Ljava/lang/String;
+.field private t:Landroid/widget/EditText;
 
-.field private u:Landroid/widget/CheckBox;
+.field private v:F
 
-.field private v:Landroid/content/SharedPreferences;
+.field private w:F
 
-.field private w:Landroid/widget/EditText;
+.field private x:F
 
-.field private x:Landroid/widget/EditText;
+.field private y:J
 
-.field private z:F
+.field private z:I
 
 
 # direct methods
@@ -95,7 +87,7 @@
 
     const/16 v0, 0x1f4
 
-    sput v0, Lcom/golgorz/hoveringcontrols/SensorTest;->y:I
+    sput v0, Lcom/golgorz/hoveringcontrols/SensorTest;->u:I
 
     return-void
 .end method
@@ -115,71 +107,59 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->k:Landroid/os/Handler;
 
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Landroid/os/Handler;
-
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:Z
-
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
+    iput-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:J
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
 
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
-    const-string v0, ""
+    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:F
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Ljava/lang/String;
+    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:F
 
-    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:F
+    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:F
 
-    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->A:F
-
-    iput v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->B:F
-
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:I
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/aj;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/aj;-><init>(Lcom/golgorz/hoveringcontrols/SensorTest;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->J:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->F:Ljava/lang/Runnable;
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->K:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/os/Handler;
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/ak;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/ak;-><init>(Lcom/golgorz/hoveringcontrols/SensorTest;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->L:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->H:Ljava/lang/Runnable;
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->M:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:Landroid/os/Handler;
 
     new-instance v0, Lcom/golgorz/hoveringcontrols/al;
 
     invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/al;-><init>(Lcom/golgorz/hoveringcontrols/SensorTest;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->N:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->J:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -219,7 +199,7 @@
 .method static synthetic a(I)V
     .locals 0
 
-    sput p0, Lcom/golgorz/hoveringcontrols/SensorTest;->y:I
+    sput p0, Lcom/golgorz/hoveringcontrols/SensorTest;->u:I
 
     return-void
 .end method
@@ -227,15 +207,7 @@
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/SensorTest;I)V
     .locals 0
 
-    iput p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/golgorz/hoveringcontrols/SensorTest;Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Ljava/lang/String;
+    iput p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
     return-void
 .end method
@@ -243,7 +215,7 @@
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Z
 
     return-void
 .end method
@@ -259,7 +231,7 @@
 .method static synthetic b(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
 
     return-void
 .end method
@@ -267,7 +239,7 @@
 .method static synthetic c(Lcom/golgorz/hoveringcontrols/SensorTest;)I
     .locals 1
 
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
+    iget v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
     return v0
 .end method
@@ -275,15 +247,7 @@
 .method static synthetic c(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:Z
-
-    return-void
-.end method
-
-.method static synthetic d(Lcom/golgorz/hoveringcontrols/SensorTest;Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
+    iput-boolean p1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
 
     return-void
 .end method
@@ -291,28 +255,12 @@
 .method static synthetic d(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
 
     return v0
 .end method
 
-.method static synthetic e(Lcom/golgorz/hoveringcontrols/SensorTest;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:Z
-
-    return v0
-.end method
-
-.method static synthetic f(Lcom/golgorz/hoveringcontrols/SensorTest;)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
+.method static synthetic e(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
     .locals 1
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->f:Landroid/widget/TextView;
@@ -320,18 +268,18 @@
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/content/SharedPreferences;
+.method static synthetic f(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/content/SharedPreferences;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->H:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
+.method static synthetic g(Lcom/golgorz/hoveringcontrols/SensorTest;)Landroid/widget/TextView;
     .locals 1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -353,9 +301,9 @@
 
     if-eqz v0, :cond_0
 
-    iput-boolean v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    iput-boolean v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -369,11 +317,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
-
-    invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
@@ -381,9 +325,9 @@
     return-void
 
     :cond_0
-    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    iput-boolean v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -397,11 +341,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setEnabled(Z)V
 
@@ -419,9 +359,9 @@
 
     const/4 v5, 0x3
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -463,7 +403,7 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->b:Landroid/hardware/SensorManager;
 
-    invoke-virtual {v0, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-virtual {v0, v4}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v0
 
@@ -481,7 +421,7 @@
 
     invoke-virtual {v0, p0, v1, v5}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    const v0, 0x7f0b0026
+    const v0, 0x7f0b0021
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +431,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->e:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0023
+    const v0, 0x7f0b001e
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -501,7 +441,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0027
+    const v0, 0x7f0b0022
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +451,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->g:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b0028
+    const v0, 0x7f0b0023
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -521,7 +461,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->h:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b0024
+    const v0, 0x7f0b001f
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -533,13 +473,13 @@
 
     const-string v0, "shakeSense"
 
-    invoke-virtual {p0, v0, v4}, Lcom/golgorz/hoveringcontrols/SensorTest;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v3}, Lcom/golgorz/hoveringcontrols/SensorTest;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->H:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:Landroid/content/SharedPreferences;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->H:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:Landroid/content/SharedPreferences;
 
     const-string v1, "sensibility"
 
@@ -549,15 +489,15 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:I
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->E:I
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->a:Landroid/widget/SeekBar;
 
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:I
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->E:I
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    const v0, 0x7f0b0025
+    const v0, 0x7f0b0020
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -565,19 +505,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0029
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
-
-    const v0, 0x7f0b002b
+    const v0, 0x7f0b0025
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/SensorTest;->findViewById(I)Landroid/view/View;
 
@@ -585,13 +515,7 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    const-string v1, "1000"
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
     const v0, 0x7f0b0001
 
@@ -601,42 +525,38 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->u:Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Landroid/widget/CheckBox;
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     const-string v1, "sensorDetector"
 
-    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->u:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Landroid/widget/CheckBox;
 
-    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
-    invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iput-boolean v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    iput-boolean v4, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
     :goto_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     const-string v2, "delaytime"
 
@@ -652,25 +572,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
-
-    const-string v2, "waveduration"
-
-    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/widget/TextView;
-
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:I
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->E:I
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -689,19 +593,15 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->u:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Landroid/widget/CheckBox;
 
-    invoke-virtual {v0, v4}, Landroid/widget/CheckBox;->setChecked(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
-    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iput-boolean v4, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    iput-boolean v3, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
     goto :goto_0
 .end method
@@ -757,7 +657,7 @@
 
     :goto_0
     :try_start_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -765,7 +665,7 @@
 
     const-string v1, "delaytime"
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -792,42 +692,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
     :goto_1
-    :try_start_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "waveduration"
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Landroid/text/Editable;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-    :try_end_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_2
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/SensorTest;->getBaseContext()Landroid/content/Context;
@@ -861,7 +725,7 @@
     :catch_1
     move-exception v0
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -880,29 +744,6 @@
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string v2, "waveduration"
-
-    const/4 v3, 0x0
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
-
-    goto :goto_2
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
@@ -930,7 +771,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->F:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->B:J
 
     sub-long v2, v0, v2
 
@@ -940,10 +781,10 @@
 
     if-lez v2, :cond_0
 
-    iput v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:I
+    iput v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:I
 
     :cond_0
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->y:J
 
     sub-long v2, v0, v2
 
@@ -951,7 +792,7 @@
 
     if-lez v2, :cond_3
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->y:J
 
     sub-long v2, v0, v2
 
@@ -971,15 +812,15 @@
 
     add-float/2addr v4, v5
 
-    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:F
+    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:F
 
     sub-float/2addr v4, v5
 
-    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->A:F
+    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:F
 
     sub-float/2addr v4, v5
 
-    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->B:F
+    iget v5, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:F
 
     sub-float/2addr v4, v5
 
@@ -995,7 +836,7 @@
 
     mul-float/2addr v2, v3
 
-    sget v3, Lcom/golgorz/hoveringcontrols/SensorTest;->y:I
+    sget v3, Lcom/golgorz/hoveringcontrols/SensorTest;->u:I
 
     int-to-float v3, v3
 
@@ -1003,17 +844,17 @@
 
     if-lez v2, :cond_2
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:I
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:I
+    iput v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:I
 
     const/4 v3, 0x4
 
     if-lt v2, v3, :cond_1
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->E:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->A:J
 
     sub-long v2, v0, v2
 
@@ -1021,73 +862,41 @@
 
     if-lez v2, :cond_1
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->E:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->A:J
 
-    iput v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->D:I
+    iput v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:I
 
     invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/SensorTest;->a()V
 
     :cond_1
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->F:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->B:J
 
     :cond_2
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->C:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->y:J
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v0, v6
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->z:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->v:F
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v0, v7
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->A:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:F
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v0, v8
 
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->B:F
+    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:F
 
     :cond_3
     :goto_0
     return-void
 
     :cond_4
-    :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Landroid/os/Handler;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_1
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "PROX SENSOR:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v2, v2, v6
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v0, v6
@@ -1100,27 +909,21 @@
 
     cmpg-float v0, v0, v1
 
-    if-gez v0, :cond_7
+    if-gez v0, :cond_6
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->g:Landroid/widget/ImageView;
 
-    const v1, 0x7f02000a
+    const v1, 0x7f020007
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    :goto_2
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->r:Z
+    :goto_1
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:Z
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_8
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
-
-    :try_start_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->w:Landroid/widget/EditText;
+    :try_start_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1135,32 +938,12 @@
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/text/Editable;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-    :try_end_1
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :goto_3
+    :goto_2
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1193,39 +976,41 @@
 
     if-gez v1, :cond_5
 
-    iput-boolean v7, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:Z
+    iput-boolean v7, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
 
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    const-string v2, "FIRST IFF"
+    const-string v2, "one true"
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
-    iput-wide v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->j:J
+    add-int/lit8 v1, v1, 0x1
 
-    :try_start_2
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->M:Landroid/os/Handler;
+    iput v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
+
+    :try_start_1
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    :goto_4
-    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
+    :goto_3
+    iget v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
-    if-lt v1, v8, :cond_8
+    if-lt v1, v8, :cond_7
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->M:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->N:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->J:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :goto_5
+    :goto_4
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1234,7 +1019,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
+    iget v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1261,97 +1046,24 @@
 
     if-ltz v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->q:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
 
     if-eqz v0, :cond_3
 
-    iput-boolean v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:Z
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->j:J
-
-    sub-long/2addr v0, v2
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ","
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->t:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Landroid/text/Editable;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-ltz v0, :cond_9
-
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
-
-    :cond_6
-    :goto_6
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v1, "SECOND IFF"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    iput-boolean v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
 
     goto/16 :goto_0
 
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto/16 :goto_1
-
-    :cond_7
+    :cond_6
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->g:Landroid/widget/ImageView;
 
-    const v1, 0x7f02000b
+    const v1, 0x7f020008
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :catch_1
+    :catch_0
     move-exception v0
 
     move-object v1, v0
@@ -1360,36 +1072,27 @@
 
     invoke-virtual {v1}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
-    goto/16 :goto_3
+    goto :goto_2
 
-    :catch_2
+    :catch_1
     move-exception v1
 
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto/16 :goto_4
+    goto :goto_3
 
-    :cond_8
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->M:Landroid/os/Handler;
+    :cond_7
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->I:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->N:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->J:Ljava/lang/Runnable;
 
     int-to-long v3, v0
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto/16 :goto_5
+    goto :goto_4
 
-    :cond_9
-    iget v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->s:I
-
-    if-lt v0, v7, :cond_6
-
-    iput-boolean v7, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->o:Z
-
-    goto :goto_6
-
-    :cond_a
+    :cond_8
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
@@ -1422,7 +1125,7 @@
 
     cmpl-float v0, v0, v1
 
-    if-ltz v0, :cond_d
+    if-ltz v0, :cond_b
 
     iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
 
@@ -1434,19 +1137,19 @@
 
     cmp-long v0, v0, v2
 
-    if-gtz v0, :cond_d
+    if-gtz v0, :cond_b
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->k:Landroid/os/Handler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
+    iget-boolean v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_a
 
     iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
 
-    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:J
+    iget-wide v2, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:J
 
     sub-long/2addr v0, v2
 
@@ -1454,17 +1157,17 @@
 
     cmp-long v0, v0, v2
 
-    if-gtz v0, :cond_c
+    if-gtz v0, :cond_a
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->K:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/os/Handler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iput-boolean v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
+    iput-boolean v6, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Z
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:J
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->e:Landroid/widget/TextView;
 
@@ -1474,40 +1177,40 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->h:Landroid/widget/ImageView;
 
-    const v1, 0x7f020015
+    const v1, 0x7f020011
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    :cond_b
-    :goto_7
+    :cond_9
+    :goto_5
     iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
 
     iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->j:J
 
     goto/16 :goto_0
 
-    :cond_c
-    iput-boolean v7, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->m:Z
+    :cond_a
+    iput-boolean v7, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->l:Z
 
     iget-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->i:J
 
-    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->p:J
+    iput-wide v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->n:J
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->K:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/os/Handler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->K:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->G:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->L:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->H:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_7
+    goto :goto_5
 
-    :cond_d
+    :cond_b
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v0, v6
@@ -1520,7 +1223,7 @@
 
     cmpg-float v0, v0, v1
 
-    if-gez v0, :cond_b
+    if-gez v0, :cond_9
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->k:Landroid/os/Handler;
 
@@ -1528,11 +1231,11 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->k:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->J:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/SensorTest;->F:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x5dc
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_7
+    goto :goto_5
 .end method

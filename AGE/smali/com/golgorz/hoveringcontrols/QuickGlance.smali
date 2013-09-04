@@ -38,9 +38,7 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 9
-
-    const v8, 0x7f020017
+    .locals 8
 
     const/4 v4, 0x0
 
@@ -58,7 +56,7 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->setContentView(I)V
 
-    const v0, 0x7f0b001a
+    const v0, 0x7f0b0017
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +66,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0b001c
+    const v0, 0x7f0b0019
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
 
@@ -78,7 +76,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0b001e
+    const v0, 0x7f0b001b
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +86,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->h:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0018
+    const v0, 0x7f0b001c
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +96,7 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0019
+    const v0, 0x7f0b001d
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
 
@@ -264,112 +262,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0b001f
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    const-string v1, "wifi"
-
-    invoke-virtual {p0, v1}, Lcom/golgorz/hoveringcontrols/QuickGlance;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/net/wifi/WifiManager;
-
-    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const v1, 0x7f020019
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    :cond_0
-    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f0b0021
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    const v1, 0x7f020003
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    :cond_1
-    const-string v0, "location"
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/location/LocationManager;
-
-    const-string v1, "gps"
-
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x7f0b0022
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    const v1, 0x7f020007
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    const v1, 0x7f0b0020
-
-    invoke-virtual {p0, v1}, Lcom/golgorz/hoveringcontrols/QuickGlance;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -411,32 +303,6 @@
     invoke-virtual {p0, v1, v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
-
-    :pswitch_0
-    const v0, 0x7f020018
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    goto :goto_0
-
-    :pswitch_2
-    invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method protected onDestroy()V

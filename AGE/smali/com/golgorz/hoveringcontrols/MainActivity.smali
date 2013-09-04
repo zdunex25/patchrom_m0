@@ -33,9 +33,9 @@
 
 .field private l:Ljava/util/ArrayList;
 
-.field private o:Lcom/google/a/a/a/i;
+.field private o:Lcom/a/a/a/a/i;
 
-.field private p:Lcom/google/a/a/a/m;
+.field private p:Lcom/a/a/a/a/m;
 
 .field private q:Landroid/os/Handler;
 
@@ -261,11 +261,11 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setProgressBarIndeterminateVisibility(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/a/a/a/a/i;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/google/a/a/a/m;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/a/a/a/a/m;
 
-    invoke-virtual {v0, v1}, Lcom/google/a/a/a/i;->a(Lcom/google/a/a/a/m;)V
+    invoke-virtual {v0, v1}, Lcom/a/a/a/a/i;->a(Lcom/a/a/a/a/m;)V
 
     return-void
 .end method
@@ -305,30 +305,6 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setContentView(I)V
 
-    const v0, 0x7f0b0016
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/google/ads/h;
-
-    sget-object v2, Lcom/google/ads/g;->b:Lcom/google/ads/g;
-
-    const-string v3, "ca-app-pub-5329768029722103/3989485684"
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/h;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    new-instance v0, Lcom/google/ads/d;
-
-    invoke-direct {v0}, Lcom/google/ads/d;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/google/ads/h;->a(Lcom/google/ads/d;)V
-
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -341,7 +317,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/r;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Lcom/golgorz/hoveringcontrols/r;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/google/a/a/a/m;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/a/a/a/a/m;
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -367,11 +343,11 @@
 
     move-result-object v0
 
-    new-instance v2, Lcom/google/a/a/a/i;
+    new-instance v2, Lcom/a/a/a/a/i;
 
-    new-instance v3, Lcom/google/a/a/a/t;
+    new-instance v3, Lcom/a/a/a/a/t;
 
-    new-instance v4, Lcom/google/a/a/a/a;
+    new-instance v4, Lcom/a/a/a/a/a;
 
     sget-object v5, Lcom/golgorz/hoveringcontrols/MainActivity;->n:[B
 
@@ -395,15 +371,15 @@
 
     move-result-object v0
 
-    invoke-direct {v4, v5, v6, v0}, Lcom/google/a/a/a/a;-><init>([BLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v5, v6, v0}, Lcom/a/a/a/a/a;-><init>([BLjava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v3, p0, v4}, Lcom/google/a/a/a/t;-><init>(Landroid/content/Context;Lcom/google/a/a/a/p;)V
+    invoke-direct {v3, p0, v4}, Lcom/a/a/a/a/t;-><init>(Landroid/content/Context;Lcom/a/a/a/a/p;)V
 
     sget-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Ljava/lang/String;
 
-    invoke-direct {v2, p0, v3, v0}, Lcom/google/a/a/a/i;-><init>(Landroid/content/Context;Lcom/google/a/a/a/q;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v3, v0}, Lcom/a/a/a/a/i;-><init>(Landroid/content/Context;Lcom/a/a/a/a/q;Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/a/a/a/a/i;
 
     const v0, 0x7f0b0012
 
@@ -548,16 +524,22 @@
 
     const/4 v0, 0x1
 
+    const/4 v1, 0x0
+
     if-ne p1, v0, :cond_0
 
     :goto_0
-    new-instance v1, Landroid/app/AlertDialog$Builder;
+    new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const-string v2, "License Error"
+    const-string v3, "License Error"
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
@@ -583,13 +565,13 @@
 
     move-result-object v0
 
-    const-string v1, "Continue"
+    const v1, 0x7f070012
 
     new-instance v2, Lcom/golgorz/hoveringcontrols/o;
 
     invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/o;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -600,7 +582,7 @@
     return-object v0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v1
 
     goto :goto_0
 
@@ -636,9 +618,9 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/a/a/a/a/i;
 
-    invoke-virtual {v0}, Lcom/google/a/a/a/i;->a()V
+    invoke-virtual {v0}, Lcom/a/a/a/a/i;->a()V
 
     return-void
 .end method
@@ -652,7 +634,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0033
+    const v1, 0x7f0b002c
 
     if-ne v0, v1, :cond_0
 
@@ -785,7 +767,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0031
+    const v1, 0x7f0b002a
 
     if-ne v0, v1, :cond_1
 
@@ -810,7 +792,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0034
+    const v1, 0x7f0b002d
 
     if-ne v0, v1, :cond_3
 
@@ -855,7 +837,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0032
+    const v1, 0x7f0b002b
 
     if-ne v0, v1, :cond_2
 
@@ -1277,6 +1259,28 @@
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
     goto :goto_0
+.end method
+
+.method public settingo(Landroid/view/View;)V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-class v2, Lcom/golgorz/hoveringcontrols/Settings;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    return-void
 .end method
 
 .method public toogle(Landroid/view/View;)V
