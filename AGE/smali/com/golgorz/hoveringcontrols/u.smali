@@ -48,7 +48,7 @@
 
     iget-object v1, p0, Lcom/golgorz/hoveringcontrols/u;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/MyService;->j(Lcom/golgorz/hoveringcontrols/MyService;)I
+    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/MyService;->l(Lcom/golgorz/hoveringcontrols/MyService;)B
 
     move-result v1
 

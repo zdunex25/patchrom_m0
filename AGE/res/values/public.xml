@@ -5,21 +5,29 @@
     <public type="drawable" name="back" id="0x7f020000" />
     <public type="drawable" name="battery" id="0x7f020001" />
     <public type="drawable" name="batteryusage" id="0x7f020002" />
-    <public type="drawable" name="carousel" id="0x7f020003" />
-    <public type="drawable" name="film" id="0x7f020004" />
-    <public type="drawable" name="hold" id="0x7f020005" />
-    <public type="drawable" name="mensajes" id="0x7f02000a" />
-    <public type="drawable" name="missedcall" id="0x7f02000b" />
-    <public type="drawable" name="missedcallother" id="0x7f02000c" />
-    <public type="drawable" name="oneslideother" id="0x7f02000d" />
-    <public type="drawable" name="sectionborder" id="0x7f02000e" />
-    <public type="drawable" name="sms" id="0x7f02000f" />
-    <public type="drawable" name="switchbutton" id="0x7f020010" />
-    <public type="drawable" name="twoslide" id="0x7f020011" />
-    <public type="drawable" name="ic_action_search" id="0x7f020006" />
-    <public type="drawable" name="ic_launcher_running" id="0x7f020007" />
-    <public type="drawable" name="ic_launcher_stopped" id="0x7f020008" />
-    <public type="drawable" name="ic_launchernew" id="0x7f020009" />
+    <public type="drawable" name="bluetooth" id="0x7f020003" />
+    <public type="drawable" name="broadband" id="0x7f020004" />
+    <public type="drawable" name="carousel" id="0x7f020005" />
+    <public type="drawable" name="gps" id="0x7f020007" />
+    <public type="drawable" name="hold" id="0x7f020008" />
+    <public type="drawable" name="mensajes" id="0x7f02000d" />
+    <public type="drawable" name="missedcall" id="0x7f02000e" />
+    <public type="drawable" name="missedcallother" id="0x7f02000f" />
+    <public type="drawable" name="oneslideother" id="0x7f020010" />
+    <public type="drawable" name="plane" id="0x7f020011" />
+    <public type="drawable" name="sectionborder" id="0x7f020012" />
+    <public type="drawable" name="sms" id="0x7f020013" />
+    <public type="drawable" name="switchbutton" id="0x7f020014" />
+    <public type="drawable" name="twoslide" id="0x7f020015" />
+    <public type="drawable" name="usb" id="0x7f020016" />
+    <public type="drawable" name="volumeoff" id="0x7f020017" />
+    <public type="drawable" name="volumeon" id="0x7f020018" />
+    <public type="drawable" name="wifi" id="0x7f020019" />
+    <public type="drawable" name="film" id="0x7f020006" />
+    <public type="drawable" name="ic_action_search" id="0x7f020009" />
+    <public type="drawable" name="ic_launcher_running" id="0x7f02000a" />
+    <public type="drawable" name="ic_launcher_stopped" id="0x7f02000b" />
+    <public type="drawable" name="ic_launchernew" id="0x7f02000c" />
     <public type="layout" name="activity_carousel_list" id="0x7f030000" />
     <public type="layout" name="activity_list_apps" id="0x7f030001" />
     <public type="layout" name="activity_listvideoplayers" id="0x7f030002" />
@@ -126,6 +134,8 @@
     <public type="string" name="allow_slide_up_down_with_browser_1_slide_down_2_slide_up" id="0x7f070054" />
     <public type="string" name="gallery_slider" id="0x7f070055" />
     <public type="string" name="allow_image_slide_with_gallery_1_slide_next_2_slide_previous" id="0x7f070056" />
+    <public type="string" name="app_uses_proximity_sensor_better_beheaviour_with_high_sensibility_sensors_configure_settings_and_test_sensors_before_use_found_an_error_please_email_me_" id="0x7f070057" />
+    <public type="string" name="slide_minimum_duration_miliseconds_" id="0x7f070058" />
     <public type="style" name="AppTheme" id="0x7f080000" />
     <public type="style" name="Theme.Transparent" id="0x7f080001" />
     <public type="style" name="EmptyActivity" id="0x7f080002" />
@@ -162,28 +172,35 @@
     <public type="id" name="linearLayout3" id="0x7f0b0013" />
     <public type="id" name="slidetwice" id="0x7f0b0014" />
     <public type="id" name="twiceapp" id="0x7f0b0015" />
-    <public type="id" name="textView3" id="0x7f0b0016" />
-    <public type="id" name="missedCall" id="0x7f0b0017" />
-    <public type="id" name="imageView2" id="0x7f0b0018" />
-    <public type="id" name="bateryLevel" id="0x7f0b0019" />
-    <public type="id" name="imageView3" id="0x7f0b001a" />
-    <public type="id" name="missedSMS" id="0x7f0b001b" />
-    <public type="id" name="time" id="0x7f0b001c" />
-    <public type="id" name="date" id="0x7f0b001d" />
-    <public type="id" name="gotShake" id="0x7f0b001e" />
-    <public type="id" name="shakeSensi" id="0x7f0b001f" />
-    <public type="id" name="sensorValue" id="0x7f0b0020" />
-    <public type="id" name="hoverType" id="0x7f0b0021" />
-    <public type="id" name="eventImage" id="0x7f0b0022" />
-    <public type="id" name="imageEventType" id="0x7f0b0023" />
-    <public type="id" name="textView6" id="0x7f0b0024" />
-    <public type="id" name="delaytime" id="0x7f0b0025" />
-    <public type="id" name="image" id="0x7f0b0026" />
-    <public type="id" name="text" id="0x7f0b0027" />
-    <public type="id" name="checkUsed" id="0x7f0b0028" />
-    <public type="id" name="widgeticon" id="0x7f0b0029" />
-    <public type="id" name="menu_settings" id="0x7f0b002a" />
-    <public type="id" name="testSensor" id="0x7f0b002b" />
-    <public type="id" name="info" id="0x7f0b002c" />
-    <public type="id" name="quickglance" id="0x7f0b002d" />
+    <public type="id" name="admob" id="0x7f0b0016" />
+    <public type="id" name="textView3" id="0x7f0b0017" />
+    <public type="id" name="time" id="0x7f0b0018" />
+    <public type="id" name="date" id="0x7f0b0019" />
+    <public type="id" name="missedCall" id="0x7f0b001a" />
+    <public type="id" name="imageView2" id="0x7f0b001b" />
+    <public type="id" name="bateryLevel" id="0x7f0b001c" />
+    <public type="id" name="imageView3" id="0x7f0b001d" />
+    <public type="id" name="missedSMS" id="0x7f0b001e" />
+    <public type="id" name="wifiimage" id="0x7f0b001f" />
+    <public type="id" name="ringtone" id="0x7f0b0020" />
+    <public type="id" name="bluetoothimage" id="0x7f0b0021" />
+    <public type="id" name="gpsimage" id="0x7f0b0022" />
+    <public type="id" name="gotShake" id="0x7f0b0023" />
+    <public type="id" name="shakeSensi" id="0x7f0b0024" />
+    <public type="id" name="sensorValue" id="0x7f0b0025" />
+    <public type="id" name="hoverType" id="0x7f0b0026" />
+    <public type="id" name="eventImage" id="0x7f0b0027" />
+    <public type="id" name="imageEventType" id="0x7f0b0028" />
+    <public type="id" name="delaytime" id="0x7f0b0029" />
+    <public type="id" name="TextView01" id="0x7f0b002a" />
+    <public type="id" name="waveduration" id="0x7f0b002b" />
+    <public type="id" name="textView6" id="0x7f0b002c" />
+    <public type="id" name="image" id="0x7f0b002d" />
+    <public type="id" name="text" id="0x7f0b002e" />
+    <public type="id" name="checkUsed" id="0x7f0b002f" />
+    <public type="id" name="widgeticon" id="0x7f0b0030" />
+    <public type="id" name="menu_settings" id="0x7f0b0031" />
+    <public type="id" name="testSensor" id="0x7f0b0032" />
+    <public type="id" name="info" id="0x7f0b0033" />
+    <public type="id" name="quickglance" id="0x7f0b0034" />
 </resources>
