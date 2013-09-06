@@ -1,0 +1,7 @@
+version: 1.4.3
+apkFileName: Hovering_Controls_XDA_v1_3_2.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 6
