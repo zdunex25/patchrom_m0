@@ -2,10 +2,8 @@
 <resources>
     <item type="id" name="botonera">false</item>
     <item type="id" name="alterdetect">false</item>
-    <item type="id" name="servicebuttons">false</item>
-    <item type="id" name="button4">false</item>
-    <item type="id" name="textView4">false</item>
     <item type="id" name="textView1">false</item>
+    <item type="id" name="servicebuttons">false</item>
     <item type="id" name="linearLayout1">false</item>
     <item type="id" name="imageView1">false</item>
     <item type="id" name="textView2">false</item>
@@ -24,6 +22,8 @@
     <item type="id" name="twiceapp">false</item>
     <item type="id" name="admob">false</item>
     <item type="id" name="textView3">false</item>
+    <item type="id" name="button4">false</item>
+    <item type="id" name="textView4">false</item>
     <item type="id" name="time">false</item>
     <item type="id" name="date">false</item>
     <item type="id" name="missedCall">false</item>
@@ -42,9 +42,13 @@
     <item type="id" name="eventImage">false</item>
     <item type="id" name="imageEventType">false</item>
     <item type="id" name="delaytime">false</item>
-    <item type="id" name="TextView01">false</item>
-    <item type="id" name="waveduration">false</item>
     <item type="id" name="textView6">false</item>
+    <item type="id" name="TextView01">false</item>
+    <item type="id" name="TextView02">false</item>
+    <item type="id" name="holdduration">false</item>
+    <item type="id" name="waveduration">false</item>
+    <item type="id" name="enable">false</item>
+    <item type="id" name="disable">false</item>
     <item type="id" name="image">false</item>
     <item type="id" name="text">false</item>
     <item type="id" name="checkUsed">false</item>
@@ -53,4 +57,5 @@
     <item type="id" name="testSensor">false</item>
     <item type="id" name="info">false</item>
     <item type="id" name="quickglance">false</item>
+    <item type="id" name="action_settings">false</item>
 </resources>

@@ -1,32 +1,35 @@
 .class Lcom/golgorz/hoveringcontrols/ad;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field a:I
-
-.field b:Ljava/lang/String;
-
-.field c:Ljava/lang/CharSequence;
-
-.field d:Landroid/content/Intent;
-
-.field e:I
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;II)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/ad;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcom/golgorz/hoveringcontrols/ad;->b:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p4, p0, Lcom/golgorz/hoveringcontrols/ad;->c:Ljava/lang/CharSequence;
 
-    iput p5, p0, Lcom/golgorz/hoveringcontrols/ad;->a:I
+# virtual methods
+.method public run()V
+    .locals 2
 
-    iput p6, p0, Lcom/golgorz/hoveringcontrols/ad;->e:I
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/ad;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/golgorz/hoveringcontrols/MyService;->g(Lcom/golgorz/hoveringcontrols/MyService;Z)V
 
     return-void
 .end method

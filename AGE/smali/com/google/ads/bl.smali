@@ -44,7 +44,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/google/ads/e/g;->a(Z)V
+    invoke-static {v0}, Lcom/google/ads/e/g;->b(Z)V
 
     iput-object p1, p0, Lcom/google/ads/bl;->f:Lcom/google/ads/be;
 
@@ -97,11 +97,11 @@
 
     invoke-static {v0, v1}, Lcom/google/ads/e/g;->a(ZLjava/lang/String;)V
 
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -145,11 +145,11 @@
 
     iput-boolean v1, p0, Lcom/google/ads/bl;->h:Z
 
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v1, v1, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -161,7 +161,7 @@
 
     move-object v7, v0
 
-    new-instance v1, Lcom/google/ads/bn;
+    new-instance v1, Lcom/google/ads/bo;
 
     iget-object v4, p0, Lcom/google/ads/bl;->k:Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/ads/bn;-><init>(Lcom/google/ads/bl;Landroid/app/Activity;Ljava/lang/String;Lcom/google/ads/d;Ljava/util/HashMap;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/ads/bo;-><init>(Lcom/google/ads/bl;Landroid/app/Activity;Ljava/lang/String;Lcom/google/ads/d;Ljava/util/HashMap;)V
 
     invoke-virtual {v7, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -356,7 +356,74 @@
     throw v0
 .end method
 
-.method public declared-synchronized f()Ljava/lang/String;
+.method public declared-synchronized f()V
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/ads/bl;->a:Lcom/google/ads/b/ac;
+
+    invoke-virtual {v0}, Lcom/google/ads/b/ac;->a()Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/ads/e/g;->a(Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget-object v0, p0, Lcom/google/ads/bl;->g:Lcom/google/ads/c/b;
+
+    check-cast v0, Lcom/google/ads/c/e;
+
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
+
+    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/os/Handler;
+
+    new-instance v2, Lcom/google/ads/bn;
+
+    invoke-direct {v2, p0, v0}, Lcom/google/ads/bn;-><init>(Lcom/google/ads/bl;Lcom/google/ads/c/e;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    const-string v1, "In Ambassador.show(): ambassador.adapter does not implement the MediationInterstitialAdapter interface."
+
+    invoke-static {v1, v0}, Lcom/google/ads/e/i;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized g()Ljava/lang/String;
     .locals 1
 
     monitor-enter p0
@@ -399,7 +466,7 @@
     throw v0
 .end method
 
-.method declared-synchronized g()V
+.method declared-synchronized h()V
     .locals 1
 
     monitor-enter p0
@@ -423,7 +490,7 @@
     throw v0
 .end method
 
-.method declared-synchronized h()Z
+.method declared-synchronized i()Z
     .locals 1
 
     monitor-enter p0

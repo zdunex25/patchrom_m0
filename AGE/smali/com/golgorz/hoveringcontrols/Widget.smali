@@ -60,7 +60,7 @@
 
     const/4 v5, 0x1
 
-    const v4, 0x7f0b0030
+    const v4, 0x7f0b0034
 
     const/4 v3, 0x0
 
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f03000a
+    const v2, 0x7f03000b
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 

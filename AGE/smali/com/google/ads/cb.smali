@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -17,51 +17,35 @@
 
 # virtual methods
 .method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
-    .locals 4
+    .locals 2
 
-    const-string v0, "u"
+    instance-of v0, p3, Lcom/google/ads/b/e;
 
-    invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    check-cast p3, Lcom/google/ads/b/e;
 
-    check-cast v0, Ljava/lang/String;
+    const-string v0, "1"
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const-string v1, "custom_close"
 
-    move-result v1
+    invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
 
-    const-string v0, "Could not get URL from track gmsg."
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Lcom/google/ads/e/i;->e(Ljava/lang/String;)V
+    move-result v0
+
+    invoke-virtual {p3, v0}, Lcom/google/ads/b/e;->setCustomClose(Z)V
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    const-string v0, "Trying to set a custom close icon on a WebView that isn\'t an AdWebView"
 
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/google/ads/bu;->f:Lcom/google/ads/e/af;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Context;
-
-    new-instance v2, Ljava/lang/Thread;
-
-    new-instance v3, Lcom/google/ads/p;
-
-    invoke-direct {v3, v0, v1}, Lcom/google/ads/p;-><init>(Ljava/lang/String;Landroid/content/Context;)V
-
-    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+    invoke-static {v0}, Lcom/google/ads/e/i;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

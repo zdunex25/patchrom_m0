@@ -1,178 +1,188 @@
 .class Lcom/golgorz/hoveringcontrols/k;
-.super Landroid/widget/ArrayAdapter;
+.super Landroid/os/AsyncTask;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/i;
+.field a:Landroid/widget/ArrayAdapter;
+
+.field final synthetic b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/i;Landroid/content/Context;ILjava/util/List;)V
+.method private constructor <init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
-    invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;Lcom/golgorz/hoveringcontrols/k;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/golgorz/hoveringcontrols/k;-><init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/golgorz/hoveringcontrols/k;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+    .locals 1
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method protected varargs a([Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 6
 
-    if-eqz p2, :cond_0
+    const/4 v5, 0x0
 
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    new-instance v1, Landroid/content/Intent;
 
-    instance-of v0, v0, Lcom/golgorz/hoveringcontrols/l;
+    const-string v2, "android.intent.action.MEDIA_BUTTON"
 
-    if-nez v0, :cond_2
+    invoke-direct {v1, v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    :cond_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f030008
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p2
-
-    new-instance v1, Lcom/golgorz/hoveringcontrols/l;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lcom/golgorz/hoveringcontrols/l;-><init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)V
-
-    const v0, 0x7f0b002d
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v1, Lcom/golgorz/hoveringcontrols/l;->b:Landroid/widget/ImageView;
-
-    const v0, 0x7f0b002e
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/golgorz/hoveringcontrols/l;->a:Landroid/widget/TextView;
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    :goto_0
-    iget-object v2, v1, Lcom/golgorz/hoveringcontrols/l;->a:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->a(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
-
-    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
-
-    move-result-object v3
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
     invoke-virtual {v3}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    invoke-virtual {v3, v1, v0}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-static {v2, v1}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->a(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;Ljava/util/List;)V
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->a(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/List;
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+    new-instance v2, Lcom/golgorz/hoveringcontrols/l;
 
-    move-result-object v0
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/l;-><init>(Lcom/golgorz/hoveringcontrols/k;)V
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->b(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/ArrayList;
+    invoke-static {v1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->a(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    iget-object v1, v1, Lcom/golgorz/hoveringcontrols/l;->b:Landroid/widget/ImageView;
+    return-object v5
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Lcom/golgorz/hoveringcontrols/i;
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/i;->a(Lcom/golgorz/hoveringcontrols/i;)Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->b(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/ArrayList;
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->b(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v4, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    invoke-virtual {v4}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/content/pm/ActivityInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    add-int/lit8 v0, v1, 0x1
 
-    :cond_1
-    return-object p2
-
-    :cond_2
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/golgorz/hoveringcontrols/l;
-
-    move-object v1, v0
+    move v1, v0
 
     goto :goto_0
+.end method
+
+.method protected a(Ljava/lang/Integer;)V
+    .locals 4
+
+    new-instance v0, Lcom/golgorz/hoveringcontrols/m;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    invoke-virtual {v1}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f030009
+
+    iget-object v3, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    invoke-static {v3}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->a(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/golgorz/hoveringcontrols/m;-><init>(Lcom/golgorz/hoveringcontrols/k;Landroid/content/Context;ILjava/util/List;)V
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->a:Landroid/widget/ArrayAdapter;
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/k;->b:Lcom/golgorz/hoveringcontrols/ListVideoPlayers;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/k;->a:Landroid/widget/ArrayAdapter;
+
+    invoke-virtual {v0, v1}, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->setListAdapter(Landroid/widget/ListAdapter;)V
+
+    invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Lcom/golgorz/hoveringcontrols/k;->a([Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected synthetic onPostExecute(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p0, p1}, Lcom/golgorz/hoveringcontrols/k;->a(Ljava/lang/Integer;)V
+
+    return-void
 .end method

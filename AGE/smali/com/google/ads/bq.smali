@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/c/f;
+.implements Lcom/google/ads/c/d;
 
 
 # instance fields
@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/ads/bl;)V
+.method public constructor <init>(Lcom/google/ads/bl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

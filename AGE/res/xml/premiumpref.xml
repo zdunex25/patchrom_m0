@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/sensor_detection" android:summary="@string/type_of_sensor_detection">
-        <CheckBoxPreference android:title="@string/alternative_detector" android:key="sensorDetector" android:summary="@string/use_alternative_hand_detection_mode" android:defaultValue="false" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/configuration_options" android:summary="@string/configue_different_options">
         <CheckBoxPreference android:title="@string/start_at_boot" android:key="autoinicio" android:summary="@string/run_hovering_controls_when_booting" android:defaultValue="false" />
         <CheckBoxPreference android:title="@string/vibrate" android:key="vibrate" android:summary="@string/vibrate_when_action_is_detected" android:defaultValue="true" />
@@ -23,6 +20,7 @@
         <CheckBoxPreference android:title="@string/show_lockscreen_info" android:key="screenoffInfo" android:summary="@string/show_lockscreen_without_unlocking_with_1_wave" android:defaultValue="false" />
         <CheckBoxPreference android:enabled="false" android:title="@string/show_quickglance" android:key="quickGlance" android:summary="@string/show_quickglance_window_instead_of_lockscreen" android:defaultValue="false" />
         <CheckBoxPreference android:title="@string/unlock_phone" android:key="screenoffUnlock" android:summary="@string/unlock_phone_with_two_slides" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/lock_screen_with_hover_hold" android:key="screenLock" android:summary="@string/locks_the_screen_this_will_override_hover_hold_app_and_media_player_pause_" android:defaultValue="false" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/orientation_camera_pause">
         <CheckBoxPreference android:title="@string/pause_in_camera" android:key="pauseCamera" android:summary="@string/pause_events_when_in_camera_app_music_controls_not_affected_" android:defaultValue="false" />

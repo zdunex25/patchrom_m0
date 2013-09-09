@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lcom/google/ads/b/b;->b:Lcom/google/ads/b/a;
 
-    iget-object v0, v0, Lcom/google/ads/b/a;->a:Lcom/google/ads/bu;
+    iget-object v0, v0, Lcom/google/ads/b/a;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->j:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->j:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 

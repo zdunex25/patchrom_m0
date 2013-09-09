@@ -17,7 +17,7 @@
             <TextView android:textColor="#ff000000"  android:gravity="center" android:id="@id/missedSMS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" />
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/linearLayout1" android:layout_alignParentLeft="true">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/linearLayout1" android:layout_alignParentLeft="true">
         <ImageView android:id="@id/wifiimage" android:layout_width="70.0px" android:layout_height="70.0px" android:layout_marginLeft="10.0dip" android:scaleType="centerCrop" android:tint="#ffffffff" />
         <ImageView android:id="@id/ringtone" android:layout_width="70.0px" android:layout_height="70.0px" android:scaleType="centerCrop" android:tint="#ffffffff" />
         <ImageView android:id="@id/bluetoothimage" android:layout_width="70.0px" android:layout_height="70.0px" android:scaleType="centerCrop" android:tint="#ffffffff" />

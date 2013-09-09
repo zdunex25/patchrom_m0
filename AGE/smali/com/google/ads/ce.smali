@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -14,461 +14,329 @@
     return-void
 .end method
 
-.method private a(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Lcom/google/ads/e/ag;->a(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Could not parse \""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\" constant."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method private b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Lcom/google/ads/e/ag;->a(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Could not parse \""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\" constant."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method private c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-    .locals 2
-
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p3, v0}, Lcom/google/ads/e/ag;->a(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
 
 # virtual methods
 .method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
-    .locals 8
+    .locals 12
 
-    const/4 v4, 0x0
+    const/4 v11, 0x1
 
-    const/4 v3, 0x1
+    const/4 v6, 0x0
 
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    const-string v0, "url"
 
-    move-result-object v5
-
-    iget-object v0, v5, Lcom/google/ads/bu;->d:Lcom/google/ads/e/af;
-
-    invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/ads/bs;
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/google/ads/bs;->b:Lcom/google/ads/e/af;
+    const-string v1, "type"
 
-    invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/ads/bt;
-
-    const-string v1, "as_domains"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->a:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "bad_ad_report_path"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->h:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "min_hwa_banner"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->b:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->a(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "min_hwa_activation_overlay"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->a(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "min_hwa_overlay"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->d:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->a(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "mraid_banner_path"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->e:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "mraid_expanded_banner_path"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->f:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "mraid_interstitial_path"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->g:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "ac_max_size"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->i:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "ac_padding"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->j:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "ac_total_quota"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->k:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "db_total_quota"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->l:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "db_quota_per_origin"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->m:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    const-string v1, "db_quota_step_size"
-
-    iget-object v2, v0, Lcom/google/ads/bt;->n:Lcom/google/ads/e/ag;
-
-    invoke-direct {p0, p2, v1, v2}, Lcom/google/ads/ce;->b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/e/ag;)V
-
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->k()Lcom/google/ads/b/e;
-
-    move-result-object v2
-
-    sget v1, Lcom/google/ads/e/a;->a:I
-
-    const/16 v6, 0xb
-
-    if-lt v1, v6, :cond_0
-
-    invoke-virtual {v2}, Lcom/google/ads/b/e;->getSettings()Landroid/webkit/WebSettings;
-
-    move-result-object v1
-
-    invoke-static {v1, v5}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
-
-    invoke-virtual {p3}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
-
-    move-result-object v1
-
-    invoke-static {v1, v5}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
-
-    :cond_0
-    iget-object v1, v5, Lcom/google/ads/bu;->g:Lcom/google/ads/e/af;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/ads/b/ac;
-
-    invoke-virtual {v1}, Lcom/google/ads/b/ac;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {v2}, Lcom/google/ads/b/e;->k()Z
-
-    move-result v6
-
-    sget v7, Lcom/google/ads/e/a;->a:I
-
-    iget-object v1, v0, Lcom/google/ads/bt;->b:Lcom/google/ads/e/ag;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-ge v7, v1, :cond_4
-
-    move v1, v3
-
-    :goto_0
-    if-nez v1, :cond_5
-
-    if-eqz v6, :cond_5
-
-    const-string v1, "Re-enabling hardware acceleration for a banner after reading constants."
-
-    invoke-static {v1}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Lcom/google/ads/b/e;->h()V
-
-    :cond_1
-    :goto_1
-    iget-object v1, v5, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/ads/b/a;
-
-    iget-object v2, v5, Lcom/google/ads/bu;->g:Lcom/google/ads/e/af;
-
-    invoke-virtual {v2}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/google/ads/b/ac;
-
-    invoke-virtual {v2}, Lcom/google/ads/b/ac;->b()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lcom/google/ads/b/a;->k()Z
-
-    move-result v6
-
-    sget v7, Lcom/google/ads/e/a;->a:I
-
-    iget-object v2, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/ag;
-
-    invoke-virtual {v2}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    if-ge v7, v2, :cond_6
-
-    move v2, v3
-
-    :goto_2
-    if-nez v2, :cond_7
-
-    if-eqz v6, :cond_7
-
-    const-string v2, "Re-enabling hardware acceleration for an activation overlay after reading constants."
-
-    invoke-static {v2}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/google/ads/b/a;->h()V
-
-    :cond_2
-    :goto_3
-    iget-object v1, v0, Lcom/google/ads/bt;->a:Lcom/google/ads/e/ag;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
+    invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    iget-object v2, v5, Lcom/google/ads/bu;->s:Lcom/google/ads/e/ag;
+    const-string v2, "afma_notify_dt"
 
-    invoke-virtual {v2}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
+    invoke-virtual {p2, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/google/ads/al;
+    check-cast v2, Ljava/lang/String;
 
-    if-eqz v2, :cond_3
+    const-string v3, "activation_overlay_url"
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v4
+    move-result-object v3
 
-    if-nez v4, :cond_3
+    check-cast v3, Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/google/ads/al;->a(Ljava/lang/String;)V
+    const-string v4, "check_packages"
 
-    :cond_3
-    iget-object v0, v0, Lcom/google/ads/bt;->o:Lcom/google/ads/e/ag;
+    invoke-virtual {p2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    const-string v5, "1"
+
+    const-string v7, "drt_include"
+
+    invoke-virtual {p2, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    const-string v5, "request_scenario"
+
+    invoke-virtual {p2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    const-string v8, "1"
+
+    const-string v9, "use_webview_loadurl"
+
+    invoke-virtual {p2, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    sget-object v9, Lcom/google/ads/b/u;->d:Lcom/google/ads/b/u;
+
+    iget-object v9, v9, Lcom/google/ads/b/u;->e:Ljava/lang/String;
+
+    invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    sget-object v5, Lcom/google/ads/b/u;->d:Lcom/google/ads/b/u;
+
+    :goto_0
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "Received ad url: <url: \""
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\" type: \""
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/ads/e/ag;->a(Ljava/lang/Object;)V
+    const-string v9, "\" afmaNotifyDt: \""
 
-    return-void
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
-    move v1, v4
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_5
-    if-eqz v1, :cond_1
+    move-result-object v1
 
-    if-nez v6, :cond_1
+    const-string v2, "\" activationOverlayUrl: \""
 
-    const-string v1, "Disabling hardware acceleration for a banner after reading constants."
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/google/ads/b/e;->g()V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\" useWebViewLoadUrl: \""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\">"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/ads/e/i;->c(Ljava/lang/String;)V
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    new-instance v1, Ljava/math/BigInteger;
+
+    new-array v2, v11, [B
+
+    invoke-direct {v1, v2}, Ljava/math/BigInteger;-><init>([B)V
+
+    const-string v2, ","
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v9
+
+    move v2, v6
+
+    move-object v4, v1
+
+    :goto_1
+    array-length v1, v9
+
+    if-ge v2, v1, :cond_4
+
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/google/ads/bv;->c:Lcom/google/ads/e/ah;
+
+    invoke-virtual {v1}, Lcom/google/ads/e/ah;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    aget-object v10, v9, v2
+
+    invoke-static {v1, v10}, Lcom/google/ads/e/a;->a(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v4, v2}, Ljava/math/BigInteger;->setBit(I)Ljava/math/BigInteger;
+
+    move-result-object v4
+
+    :cond_0
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
 
     goto :goto_1
 
+    :cond_1
+    sget-object v9, Lcom/google/ads/b/u;->c:Lcom/google/ads/b/u;
+
+    iget-object v9, v9, Lcom/google/ads/b/u;->e:Ljava/lang/String;
+
+    invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_2
+
+    sget-object v5, Lcom/google/ads/b/u;->c:Lcom/google/ads/b/u;
+
+    goto/16 :goto_0
+
+    :cond_2
+    sget-object v9, Lcom/google/ads/b/u;->a:Lcom/google/ads/b/u;
+
+    iget-object v9, v9, Lcom/google/ads/b/u;->e:Ljava/lang/String;
+
+    invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    sget-object v5, Lcom/google/ads/b/u;->a:Lcom/google/ads/b/u;
+
+    goto/16 :goto_0
+
+    :cond_3
+    sget-object v5, Lcom/google/ads/b/u;->b:Lcom/google/ads/b/u;
+
+    goto/16 :goto_0
+
+    :cond_4
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v2, "%X"
+
+    new-array v9, v11, [Ljava/lang/Object;
+
+    aput-object v4, v9, v6
+
+    invoke-static {v1, v2, v9}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "%40installed_markets%40"
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/google/ads/bt;->a:Lcom/google/ads/e/ag;
+
+    invoke-virtual {v2, v1}, Lcom/google/ads/e/ag;->a(Ljava/lang/Object;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Ad url modified to "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/ads/e/i;->c(Ljava/lang/String;)V
+
+    :cond_5
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->j()Lcom/google/ads/b/n;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1, v7}, Lcom/google/ads/b/n;->d(Z)V
+
+    invoke-virtual {v1, v5}, Lcom/google/ads/b/n;->a(Lcom/google/ads/b/u;)V
+
+    invoke-virtual {v1, v8}, Lcom/google/ads/b/n;->e(Z)V
+
+    invoke-virtual {v1, v3}, Lcom/google/ads/b/n;->e(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Lcom/google/ads/b/n;->d(Ljava/lang/String;)V
+
     :cond_6
-    move v2, v4
-
-    goto :goto_2
-
-    :cond_7
-    if-eqz v2, :cond_2
-
-    if-nez v6, :cond_2
-
-    const-string v2, "Disabling hardware acceleration for an activation overlay after reading constants."
-
-    invoke-static {v2}, Lcom/google/ads/e/i;->a(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/google/ads/b/a;->g()V
-
-    goto :goto_3
+    return-void
 .end method

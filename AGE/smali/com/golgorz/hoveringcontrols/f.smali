@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/e;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/e;)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/e;
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,62 +22,22 @@
 
 
 # virtual methods
-.method public a(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/e;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
-    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/e;->a(Lcom/golgorz/hoveringcontrols/e;)Lcom/golgorz/hoveringcontrols/ListApps;
+    iget-object v0, v0, Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;->a:Landroid/app/admin/DevicePolicyManager;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/ListApps;->getPackageManager()Landroid/content/pm/PackageManager;
+    iget-object v1, v1, Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;->c:Landroid/content/ComponentName;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/app/admin/DevicePolicyManager;->removeActiveAdmin(Landroid/content/ComponentName;)V
 
-    invoke-virtual {p1, v0}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;->a()V
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/f;->a:Lcom/golgorz/hoveringcontrols/e;
-
-    invoke-static {v1}, Lcom/golgorz/hoveringcontrols/e;->a(Lcom/golgorz/hoveringcontrols/e;)Lcom/golgorz/hoveringcontrols/ListApps;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/golgorz/hoveringcontrols/ListApps;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v1}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Landroid/content/pm/ResolveInfo;
-
-    check-cast p2, Landroid/content/pm/ResolveInfo;
-
-    invoke-virtual {p0, p1, p2}, Lcom/golgorz/hoveringcontrols/f;->a(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

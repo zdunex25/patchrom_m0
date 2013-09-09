@@ -9,10 +9,10 @@
 
 
 # direct methods
-.method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
+.method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/bv;)V
     .locals 1
 
-    invoke-static {p0, p1}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
+    invoke-static {p0, p1}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bv;)V
 
     const/4 v0, 0x0
 

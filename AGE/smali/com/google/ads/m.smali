@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -166,7 +166,7 @@
 
     move-object v0, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/google/ads/b/w;->a(Lcom/google/ads/br;ZIIII)V
+    invoke-virtual/range {v0 .. v6}, Lcom/google/ads/b/w;->a(Lcom/google/ads/bs;ZIIII)V
 
     :goto_3
     return-void
@@ -209,7 +209,7 @@
 
     move-object v0, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/google/ads/b/w;->a(Lcom/google/ads/br;ZIIII)V
+    invoke-virtual/range {v0 .. v6}, Lcom/google/ads/b/w;->a(Lcom/google/ads/bs;ZIIII)V
 
     goto :goto_3
 

@@ -108,9 +108,9 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->j:Landroid/widget/TextView;
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/af;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/ak;
 
-    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/af;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/ak;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->d:Landroid/content/BroadcastReceiver;
 
@@ -370,33 +370,47 @@
     packed-switch v0, :pswitch_data_0
 
     :goto_0
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "power"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    const v1, 0x1000001a
+
+    const-string v2, "Hovering Controls"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->k:Landroid/os/PowerManager$WakeLock;
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->k:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/ag;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/al;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ag;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
-
-    const-wide/16 v2, 0x12c
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/golgorz/hoveringcontrols/ah;
-
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ah;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/al;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     const-wide/16 v2, 0xfa0
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/ai;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/am;
 
-    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/ai;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/am;-><init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/QuickGlance;->e:Landroid/content/BroadcastReceiver;
 
@@ -428,8 +442,6 @@
     invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

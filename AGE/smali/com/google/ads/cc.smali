@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 .method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
     .locals 4
 
-    const-string v0, "type"
+    const-string v0, "u"
 
     invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -27,54 +27,41 @@
 
     check-cast v0, Ljava/lang/String;
 
-    const-string v1, "errors"
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v1
+    if-eqz v1, :cond_0
 
-    check-cast v1, Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Invalid "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " request error: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Could not get URL from track gmsg."
 
     invoke-static {v0}, Lcom/google/ads/e/i;->e(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->j()Lcom/google/ads/b/n;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lcom/google/ads/e;->a:Lcom/google/ads/e;
-
-    invoke-virtual {v0, v1}, Lcom/google/ads/b/n;->a(Lcom/google/ads/e;)V
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/google/ads/bv;->f:Lcom/google/ads/e/af;
+
+    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    new-instance v2, Ljava/lang/Thread;
+
+    new-instance v3, Lcom/google/ads/p;
+
+    invoke-direct {v3, v0, v1}, Lcom/google/ads/p;-><init>(Ljava/lang/String;Landroid/content/Context;)V
+
+    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+
+    goto :goto_0
 .end method

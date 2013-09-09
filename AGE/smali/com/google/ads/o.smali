@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # static fields

@@ -70,15 +70,15 @@
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/ListVideoPlayers;->b:Ljava/util/ArrayList;
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/i;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/k;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/i;-><init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;Lcom/golgorz/hoveringcontrols/i;)V
+    invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/k;-><init>(Lcom/golgorz/hoveringcontrols/ListVideoPlayers;Lcom/golgorz/hoveringcontrols/k;)V
 
     new-array v1, v2, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/golgorz/hoveringcontrols/i;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/golgorz/hoveringcontrols/k;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method

@@ -1,172 +1,73 @@
 .class Lcom/golgorz/hoveringcontrols/af;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field a:I
-
-.field b:I
-
-.field c:I
-
-.field d:I
-
-.field final synthetic e:Lcom/golgorz/hoveringcontrols/QuickGlance;
+.field final synthetic a:Lcom/golgorz/hoveringcontrols/MyService;
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
-    .locals 1
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MyService;)V
+    .locals 0
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/af;->e:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->a:I
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->b:I
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->c:I
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+.method public run()V
+    .locals 2
 
-    const/4 v1, -0x1
+    :try_start_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/MyService;
 
-    const-string v0, "level"
+    invoke-static {v0}, Lcom/golgorz/hoveringcontrols/MyService;->M(Lcom/golgorz/hoveringcontrols/MyService;)Landroid/os/PowerManager$WakeLock;
 
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    move-result-object v0
 
-    move-result v0
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->b:I
-
-    const-string v0, "scale"
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->a:I
-
-    const-string v0, "temperature"
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->d:I
-
-    const-string v0, "voltage"
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/golgorz/hoveringcontrols/af;->c:I
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/af;->e:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/af;->b:I
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "%"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/golgorz/hoveringcontrols/QuickGlance;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/af;->e:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    iget-object v0, v0, Lcom/golgorz/hoveringcontrols/QuickGlance;->g:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/af;->e:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    iget-object v1, v1, Lcom/golgorz/hoveringcontrols/QuickGlance;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "BatteryManager level is "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/af;->b:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/af;->a:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", temp is "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/af;->d:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", voltage is "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/golgorz/hoveringcontrols/af;->c:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "wakelock released"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    iget-object v0, v0, Lcom/golgorz/hoveringcontrols/MyService;->a:Landroid/app/admin/DevicePolicyManager;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    iget-object v1, v1, Lcom/golgorz/hoveringcontrols/MyService;->b:Landroid/content/ComponentName;
+
+    invoke-virtual {v0, v1}, Landroid/app/admin/DevicePolicyManager;->isAdminActive(Landroid/content/ComponentName;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/af;->a:Lcom/golgorz/hoveringcontrols/MyService;
+
+    iget-object v0, v0, Lcom/golgorz/hoveringcontrols/MyService;->a:Landroid/app/admin/DevicePolicyManager;
+
+    invoke-virtual {v0}, Landroid/app/admin/DevicePolicyManager;->lockNow()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

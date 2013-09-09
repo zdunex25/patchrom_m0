@@ -1,21 +1,12 @@
 .class Lcom/google/ads/bp;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/ads/c/d;
-
-
-# instance fields
-.field private final a:Lcom/google/ads/bl;
+.super Ljava/lang/Exception;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/ads/bl;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/ads/bp;->a:Lcom/google/ads/bl;
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

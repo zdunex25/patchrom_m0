@@ -317,11 +317,11 @@
     :try_start_1
     iget-object v0, p0, Lcom/google/ads/b/ad;->a:Lcom/google/ads/b/w;
 
-    invoke-virtual {v0}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v0}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v1
 
-    iget-object v0, v1, Lcom/google/ads/bu;->f:Lcom/google/ads/e/af;
+    iget-object v0, v1, Lcom/google/ads/bv;->f:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -329,7 +329,7 @@
 
     check-cast v0, Landroid/content/Context;
 
-    iget-object v1, v1, Lcom/google/ads/bu;->s:Lcom/google/ads/e/ag;
+    iget-object v1, v1, Lcom/google/ads/bv;->s:Lcom/google/ads/e/ag;
 
     invoke-virtual {v1}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 

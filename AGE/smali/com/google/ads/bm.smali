@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/google/ads/bm;->a:Lcom/google/ads/bl;
 
-    invoke-virtual {v0}, Lcom/google/ads/bl;->h()Z
+    invoke-virtual {v0}, Lcom/google/ads/bl;->i()Z
 
     move-result v0
 
@@ -105,7 +105,7 @@
 
     iget-object v2, p0, Lcom/google/ads/bm;->a:Lcom/google/ads/bl;
 
-    invoke-virtual {v2}, Lcom/google/ads/bl;->f()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/google/ads/bl;->g()Ljava/lang/String;
 
     move-result-object v2
 

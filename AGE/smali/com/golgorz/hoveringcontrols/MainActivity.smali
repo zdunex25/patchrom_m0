@@ -1,43 +1,54 @@
 .class public Lcom/golgorz/hoveringcontrols/MainActivity;
 .super Landroid/app/Activity;
 
+# interfaces
+.implements Lcom/google/ads/c;
+
 
 # static fields
-.field private static m:Ljava/lang/String;
+.field private static p:Ljava/lang/String;
 
-.field private static final n:[B
+.field private static final q:[B
 
 
 # instance fields
-.field private a:Landroid/content/SharedPreferences;
+.field a:Landroid/widget/TextView;
 
-.field private b:Landroid/widget/TextView;
+.field b:Landroid/app/admin/DevicePolicyManager;
 
-.field private c:Landroid/widget/TextView;
+.field c:Landroid/content/ComponentName;
 
-.field private d:Landroid/widget/TextView;
+.field private d:Landroid/content/SharedPreferences;
 
-.field private e:Landroid/widget/ToggleButton;
+.field private e:Landroid/widget/TextView;
 
-.field private f:Landroid/widget/ToggleButton;
+.field private f:Landroid/widget/TextView;
 
-.field private g:Landroid/widget/ToggleButton;
+.field private g:Landroid/widget/TextView;
 
 .field private h:Landroid/widget/ToggleButton;
 
-.field private i:Landroid/widget/Button;
+.field private i:Landroid/widget/ToggleButton;
 
-.field private j:Landroid/widget/Button;
+.field private j:Landroid/widget/ToggleButton;
 
-.field private k:Landroid/widget/Spinner;
+.field private k:Landroid/widget/ToggleButton;
 
-.field private l:Ljava/util/ArrayList;
+.field private l:Landroid/widget/Button;
 
-.field private o:Lcom/google/a/a/a/i;
+.field private m:Landroid/widget/Button;
 
-.field private p:Lcom/google/a/a/a/m;
+.field private n:Landroid/widget/Spinner;
 
-.field private q:Landroid/os/Handler;
+.field private o:Ljava/util/ArrayList;
+
+.field private r:Lcom/google/a/a/a/i;
+
+.field private s:Lcom/google/a/a/a/m;
+
+.field private t:Landroid/os/Handler;
+
+.field private u:Lcom/google/ads/j;
 
 
 # direct methods
@@ -46,7 +57,7 @@
 
     const-string v0, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtinFNIYAPVJXAwYCASAwwKYjhhOUVc50CF9lM5AOQik6FsBJ3C10O6EySsB/usgEnUpPyEwI4Xljyoo9jIrxexz5OdQrqtdjj6sLzRwiChpsZBJ2n15zQ5nQ3WmR+xvrnjS19wHiNPbW9FCqxM8TRhZH8wjjHObfub0yHmzM9jG5m6WRtw1RpOp6YldsG7dt6/z8NJKrlAmlawO05gZKap8YZigffplTm6zEgCZvBDo0q5T1uIxPCHJvWG2TMtP+LC6p629Ff6iRAVtrxsPzbOXgAPiPloxEuyMxW10o1gqfTIHAX8IbslC+E0vyYvTAlAcBmcHsv8XWBYOPWFARvQIDAQAB"
 
-    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Ljava/lang/String;
+    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Ljava/lang/String;
 
     const/16 v0, 0x14
 
@@ -54,7 +65,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->n:[B
+    sput-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:[B
 
     return-void
 
@@ -91,58 +102,10 @@
     return-void
 .end method
 
-.method private a()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->b:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
-
-    const-string v2, "hoverholdname"
-
-    const-string v3, "Not set"
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->c:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
-
-    const-string v2, "slideoncename"
-
-    const-string v3, "Not set"
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
-
-    const-string v2, "slidetwicename"
-
-    const-string v3, "Not set"
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
 .method static synthetic a(Lcom/golgorz/hoveringcontrols/MainActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->c()V
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->d()V
 
     return-void
 .end method
@@ -166,11 +129,11 @@
 .method private a(Ljava/lang/String;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/p;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/t;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/p;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/t;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -180,18 +143,163 @@
 .method private a(Z)V
     .locals 2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/q;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/u;
 
-    invoke-direct {v1, p0, p1}, Lcom/golgorz/hoveringcontrols/q;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/golgorz/hoveringcontrols/u;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
+.method private a()Z
+    .locals 3
+
+    const-string v0, "activity"
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    const v1, 0x7fffffff
+
+    invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getRunningServices(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager$RunningServiceInfo;
+
+    const-class v2, Lcom/golgorz/hoveringcontrols/MyService;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningServiceInfo;->service:Landroid/content/ComponentName;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
 .method private b()V
+    .locals 4
+
+    const/4 v2, 0x0
+
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "screenLock"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/TextView;
+
+    const v1, 0x7f070062
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ToggleButton;->setEnabled(Z)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "slideoncename"
+
+    const-string v3, "Not set"
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->g:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "slidetwicename"
+
+    const-string v3, "Not set"
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "hoverholdname"
+
+    const-string v3, "Not set"
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ToggleButton;->setEnabled(Z)V
+
+    goto :goto_0
+.end method
+
+.method private c()V
     .locals 3
 
     new-instance v0, Ljava/io/File;
@@ -223,7 +331,7 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Ljava/util/ArrayList;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -232,11 +340,11 @@
 
     const v1, 0x1090008
 
-    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Ljava/util/ArrayList;
 
     invoke-direct {v0, p0, v1, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/Spinner;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->n:Landroid/widget/Spinner;
 
     invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
@@ -249,21 +357,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Ljava/util/ArrayList;
 
     goto :goto_0
 .end method
 
-.method private c()V
+.method private d()V
     .locals 2
 
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setProgressBarIndeterminateVisibility(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->r:Lcom/google/a/a/a/i;
 
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/google/a/a/a/m;
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->s:Lcom/google/a/a/a/m;
 
     invoke-virtual {v0, v1}, Lcom/google/a/a/a/i;->a(Lcom/google/a/a/a/m;)V
 
@@ -272,6 +380,33 @@
 
 
 # virtual methods
+.method public a(Lcom/google/ads/a;)V
+    .locals 2
+
+    const-string v0, "OK"
+
+    const-string v1, "Received ad"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->u:Lcom/google/ads/j;
+
+    if-ne p1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->u:Lcom/google/ads/j;
+
+    invoke-virtual {v0}, Lcom/google/ads/j;->a()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Lcom/google/ads/a;Lcom/google/ads/e;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public arrancarServicio(Landroid/view/View;)V
     .locals 3
 
@@ -287,7 +422,85 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070063
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070064
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_0
+.end method
+
+.method public b(Lcom/google/ads/a;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Lcom/google/ads/a;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d(Lcom/google/ads/a;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected onActivityResult(IILandroid/content/Intent;)V
+    .locals 2
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    const/4 v0, -0x1
+
+    if-ne p2, v0, :cond_0
+
+    const-string v0, "DeviceAdminSample"
+
+    const-string v1, "Admin enabled!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "DeviceAdminSample"
+
+    const-string v1, "Admin enable FAILED!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -305,7 +518,7 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setContentView(I)V
 
-    const v0, 0x7f0b0016
+    const v0, 0x7f0b0014
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -329,19 +542,49 @@
 
     invoke-virtual {v1, v0}, Lcom/google/ads/h;->a(Lcom/google/ads/d;)V
 
+    new-instance v0, Lcom/google/ads/j;
+
+    const-string v1, "ca-app-pub-5329768029722103/4129086486"
+
+    invoke-direct {v0, p0, v1}, Lcom/google/ads/j;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->u:Lcom/google/ads/j;
+
+    new-instance v0, Lcom/google/ads/d;
+
+    invoke-direct {v0}, Lcom/google/ads/d;-><init>()V
+
+    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->u:Lcom/google/ads/j;
+
+    invoke-virtual {v1, v0}, Lcom/google/ads/j;->a(Lcom/google/ads/d;)V
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->u:Lcom/google/ads/j;
+
+    invoke-virtual {v0, p0}, Lcom/google/ads/j;->a(Lcom/google/ads/c;)V
+
+    const v0, 0x7f0b0017
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->q:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->t:Landroid/os/Handler;
 
-    new-instance v0, Lcom/golgorz/hoveringcontrols/r;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/w;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/r;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Lcom/golgorz/hoveringcontrols/r;)V
+    invoke-direct {v0, p0, v1}, Lcom/golgorz/hoveringcontrols/w;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Lcom/golgorz/hoveringcontrols/w;)V
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Lcom/google/a/a/a/m;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->s:Lcom/google/a/a/a/m;
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -373,7 +616,7 @@
 
     new-instance v4, Lcom/google/a/a/a/a;
 
-    sget-object v5, Lcom/golgorz/hoveringcontrols/MainActivity;->n:[B
+    sget-object v5, Lcom/golgorz/hoveringcontrols/MainActivity;->q:[B
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getPackageName()Ljava/lang/String;
 
@@ -399,13 +642,31 @@
 
     invoke-direct {v3, p0, v4}, Lcom/google/a/a/a/t;-><init>(Landroid/content/Context;Lcom/google/a/a/a/p;)V
 
-    sget-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Ljava/lang/String;
+    sget-object v0, Lcom/golgorz/hoveringcontrols/MainActivity;->p:Ljava/lang/String;
 
     invoke-direct {v2, p0, v3, v0}, Lcom/google/a/a/a/i;-><init>(Landroid/content/Context;Lcom/google/a/a/a/q;Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iput-object v2, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->r:Lcom/google/a/a/a/i;
 
-    const v0, 0x7f0b0012
+    const-string v0, "device_policy"
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/admin/DevicePolicyManager;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->b:Landroid/app/admin/DevicePolicyManager;
+
+    new-instance v0, Landroid/content/ComponentName;
+
+    const-class v1, Lcom/golgorz/hoveringcontrols/v;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->c:Landroid/content/ComponentName;
+
+    const v0, 0x7f0b0010
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -413,7 +674,17 @@
 
     check-cast v0, Landroid/widget/Spinner;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/Spinner;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->n:Landroid/widget/Spinner;
+
+    const v0, 0x7f0b000d
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     const v0, 0x7f0b000f
 
@@ -423,17 +694,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
-
-    const v0, 0x7f0b0011
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     const-string v0, "target"
 
@@ -441,7 +702,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
+
+    const v0, 0x7f0b0008
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/TextView;
 
     const v0, 0x7f0b000a
 
@@ -451,19 +722,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->b:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0b000c
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->c:Landroid/widget/TextView;
-
-    const v0, 0x7f0b0015
+    const v0, 0x7f0b0013
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -471,39 +732,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0009
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ToggleButton;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/ToggleButton;
-
-    const v0, 0x7f0b000d
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ToggleButton;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/ToggleButton;
-
-    const v0, 0x7f0b0014
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ToggleButton;
-
-    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->g:Landroid/widget/ToggleButton;
-
-    const v0, 0x7f0b0010
+    const v0, 0x7f0b0007
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -512,6 +743,36 @@
     check-cast v0, Landroid/widget/ToggleButton;
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+
+    const v0, 0x7f0b000b
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ToggleButton;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/ToggleButton;
+
+    const v0, 0x7f0b0012
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ToggleButton;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/ToggleButton;
+
+    const v0, 0x7f0b000e
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ToggleButton;
+
+    iput-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getIntent()Landroid/content/Intent;
 
@@ -540,7 +801,89 @@
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->finish()V
 
     :cond_0
+    const-string v0, "device_policy"
+
+    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/admin/DevicePolicyManager;
+
+    new-instance v1, Landroid/content/ComponentName;
+
+    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-class v3, Lcom/golgorz/hoveringcontrols/DeviceAdminSample;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/admin/DevicePolicyManager;->isAdminActive(Landroid/content/ComponentName;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "should ask for"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v1, 0x7f07005e
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f07005f
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f070060
+
+    new-instance v2, Lcom/golgorz/hoveringcontrols/p;
+
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/p;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f070061
+
+    new-instance v2, Lcom/golgorz/hoveringcontrols/q;
+
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/q;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+
+    :goto_0
     return-void
+
+    :cond_1
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "is active"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
@@ -575,9 +918,9 @@
     const v1, 0x7f070011
 
     :goto_2
-    new-instance v3, Lcom/golgorz/hoveringcontrols/n;
+    new-instance v3, Lcom/golgorz/hoveringcontrols/r;
 
-    invoke-direct {v3, p0, v0}, Lcom/golgorz/hoveringcontrols/n;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+    invoke-direct {v3, p0, v0}, Lcom/golgorz/hoveringcontrols/r;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
 
     invoke-virtual {v2, v1, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -585,9 +928,9 @@
 
     const-string v1, "Continue"
 
-    new-instance v2, Lcom/golgorz/hoveringcontrols/o;
+    new-instance v2, Lcom/golgorz/hoveringcontrols/s;
 
-    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/o;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/s;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -636,7 +979,7 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->o:Lcom/google/a/a/a/i;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->r:Lcom/google/a/a/a/i;
 
     invoke-virtual {v0}, Lcom/google/a/a/a/i;->a()V
 
@@ -652,7 +995,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0033
+    const v1, 0x7f0b0037
 
     if-ne v0, v1, :cond_0
 
@@ -754,9 +1097,9 @@
 
     const-string v1, "Ok"
 
-    new-instance v2, Lcom/golgorz/hoveringcontrols/m;
+    new-instance v2, Lcom/golgorz/hoveringcontrols/o;
 
-    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/m;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
+    invoke-direct {v2, p0}, Lcom/golgorz/hoveringcontrols/o;-><init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -785,7 +1128,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0031
+    const v1, 0x7f0b0035
 
     if-ne v0, v1, :cond_1
 
@@ -810,21 +1153,9 @@
 
     move-result v0
 
-    const v1, 0x7f0b0034
+    const v1, 0x7f0b0038
 
     if-ne v0, v1, :cond_3
-
-    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "This is a demo of QuickGlance, for now the lock screen will be shown when used"
-
-    invoke-static {v0, v1, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -834,7 +1165,7 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/golgorz/hoveringcontrols/QuickGlance;
+    const-class v2, Lcom/golgorz/hoveringcontrols/DeviceAdminSample$Controller;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -855,7 +1186,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b0032
+    const v1, 0x7f0b0036
 
     if-ne v0, v1, :cond_2
 
@@ -893,9 +1224,9 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->b()V
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->c()V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     const-string v1, "hoverhold"
 
@@ -913,12 +1244,12 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     :goto_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     const-string v1, "singleActive"
 
@@ -928,16 +1259,16 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v4}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     :goto_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     const-string v1, "slidetwice"
 
@@ -955,12 +1286,12 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->g:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     :goto_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     const-string v1, "carousel"
 
@@ -970,16 +1301,16 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v4}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     :goto_3
-    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->a()V
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->b()V
 
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getIntent()Landroid/content/Intent;
 
@@ -1008,45 +1339,81 @@
     invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->finish()V
 
     :cond_0
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070063
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    :goto_4
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->e:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v4}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->g:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v4}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto :goto_2
 
     :cond_4
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
     goto :goto_3
+
+    :cond_5
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070064
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_4
+.end method
+
+.method protected onStart()V
+    .locals 2
+
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "onstart"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    invoke-super {p0}, Landroid/app/Activity;->onStart()V
+
+    return-void
 .end method
 
 .method public pararServicio(Landroid/view/View;)V
@@ -1064,7 +1431,29 @@
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->stopService(Landroid/content/Intent;)Z
 
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070063
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/widget/TextView;
+
+    const v1, 0x7f070064
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_0
 .end method
 
 .method public selectApp(Landroid/view/View;)V
@@ -1138,7 +1527,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1152,7 +1541,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1166,15 +1555,15 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->f:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v2}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1182,7 +1571,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1196,7 +1585,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1210,15 +1599,15 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->h:Landroid/widget/ToggleButton;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->k:Landroid/widget/ToggleButton;
 
     invoke-virtual {v0, v2}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1237,7 +1626,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1251,14 +1640,14 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->j:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->m:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1272,33 +1661,11 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->i:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
     goto :goto_0
-.end method
-
-.method public settingo(Landroid/view/View;)V
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lcom/golgorz/hoveringcontrols/Settings;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
 .end method
 
 .method public toogle(Landroid/view/View;)V
@@ -1437,7 +1804,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1459,7 +1826,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1499,12 +1866,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->a()V
+    invoke-direct {p0}, Lcom/golgorz/hoveringcontrols/MainActivity;->b()V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->a:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/MainActivity;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 

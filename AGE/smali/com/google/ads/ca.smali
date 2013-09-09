@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
 # virtual methods
 .method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
-    .locals 2
+    .locals 1
 
     instance-of v0, p3, Lcom/google/ads/b/e;
 
@@ -25,25 +25,13 @@
 
     check-cast p3, Lcom/google/ads/b/e;
 
-    const-string v0, "1"
-
-    const-string v1, "custom_close"
-
-    invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    invoke-virtual {p3, v0}, Lcom/google/ads/b/e;->setCustomClose(Z)V
+    invoke-virtual {p3}, Lcom/google/ads/b/e;->f()V
 
     :goto_0
     return-void
 
     :cond_0
-    const-string v0, "Trying to set a custom close icon on a WebView that isn\'t an AdWebView"
+    const-string v0, "Trying to close WebView that isn\'t an AdWebView"
 
     invoke-static {v0}, Lcom/google/ads/e/i;->b(Ljava/lang/String;)V
 

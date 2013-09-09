@@ -46,7 +46,7 @@
 
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/high16 v0, 0x7f04
+    const v0, 0x7f040001
 
     invoke-virtual {p0, v0}, Lcom/golgorz/hoveringcontrols/Settings;->addPreferencesFromResource(I)V
 
@@ -125,9 +125,9 @@
     invoke-virtual {v0, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     :goto_2
-    new-instance v0, Lcom/golgorz/hoveringcontrols/ao;
+    new-instance v0, Lcom/golgorz/hoveringcontrols/aq;
 
-    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/ao;-><init>(Lcom/golgorz/hoveringcontrols/Settings;)V
+    invoke-direct {v0, p0}, Lcom/golgorz/hoveringcontrols/aq;-><init>(Lcom/golgorz/hoveringcontrols/Settings;)V
 
     iput-object v0, p0, Lcom/golgorz/hoveringcontrols/Settings;->a:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
@@ -147,9 +147,9 @@
 
     iget-object v0, p0, Lcom/golgorz/hoveringcontrols/Settings;->d:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/golgorz/hoveringcontrols/ap;
+    new-instance v1, Lcom/golgorz/hoveringcontrols/ar;
 
-    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ap;-><init>(Lcom/golgorz/hoveringcontrols/Settings;)V
+    invoke-direct {v1, p0}, Lcom/golgorz/hoveringcontrols/ar;-><init>(Lcom/golgorz/hoveringcontrols/Settings;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 

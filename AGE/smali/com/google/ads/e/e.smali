@@ -3,10 +3,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/ads/bu;Lcom/google/ads/g;)V
+.method public constructor <init>(Lcom/google/ads/bv;Lcom/google/ads/g;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/google/ads/b/e;-><init>(Lcom/google/ads/bu;Lcom/google/ads/g;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/ads/b/e;-><init>(Lcom/google/ads/bv;Lcom/google/ads/g;)V
 
     return-void
 .end method
@@ -16,9 +16,9 @@
 .method public canScrollHorizontally(I)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bu;
+    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->e:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -26,9 +26,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bu;
+    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->e:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -63,9 +63,9 @@
 .method public canScrollVertically(I)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bu;
+    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->e:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -73,9 +73,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bu;
+    iget-object v0, p0, Lcom/google/ads/e/e;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->e:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 

@@ -36,11 +36,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bu;->c:Lcom/google/ads/e/ah;
+    iget-object v0, v0, Lcom/google/ads/bv;->c:Lcom/google/ads/e/ah;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ah;->a()Ljava/lang/Object;
 

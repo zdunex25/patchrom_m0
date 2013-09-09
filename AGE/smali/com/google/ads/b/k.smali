@@ -10,21 +10,13 @@
 
     const-string v0, "/invalidRequest"
 
-    new-instance v1, Lcom/google/ads/cc;
-
-    invoke-direct {v1}, Lcom/google/ads/cc;-><init>()V
-
-    invoke-virtual {p0, v0, v1}, Lcom/google/ads/b/k;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "/loadAdURL"
-
     new-instance v1, Lcom/google/ads/cd;
 
     invoke-direct {v1}, Lcom/google/ads/cd;-><init>()V
 
     invoke-virtual {p0, v0, v1}, Lcom/google/ads/b/k;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "/loadSdkConstants"
+    const-string v0, "/loadAdURL"
 
     new-instance v1, Lcom/google/ads/ce;
 
@@ -32,11 +24,19 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/google/ads/b/k;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "/log"
+    const-string v0, "/loadSdkConstants"
 
     new-instance v1, Lcom/google/ads/cf;
 
     invoke-direct {v1}, Lcom/google/ads/cf;-><init>()V
+
+    invoke-virtual {p0, v0, v1}, Lcom/google/ads/b/k;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "/log"
+
+    new-instance v1, Lcom/google/ads/cg;
+
+    invoke-direct {v1}, Lcom/google/ads/cg;-><init>()V
 
     invoke-virtual {p0, v0, v1}, Lcom/google/ads/b/k;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

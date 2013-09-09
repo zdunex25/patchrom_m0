@@ -130,6 +130,24 @@
 .end method
 
 .method public static a(Z)V
+    .locals 1
+
+    const-string v0, "Assertion failed."
+
+    invoke-static {p0, v0}, Lcom/google/ads/e/g;->c(ZLjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static a(ZLjava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/ads/e/g;->c(ZLjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static b(Z)V
     .locals 2
 
     if-nez p0, :cond_0
@@ -147,14 +165,6 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public static a(ZLjava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/ads/e/g;->c(ZLjava/lang/String;)V
-
-    return-void
 .end method
 
 .method public static b(ZLjava/lang/String;)V

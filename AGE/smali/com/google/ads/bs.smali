@@ -1,82 +1,54 @@
-.class public Lcom/google/ads/bs;
+.class public final Lcom/google/ads/bs;
 .super Lcom/google/ads/e/ac;
 
 
-# static fields
-.field private static final d:Lcom/google/ads/bs;
-
-
 # instance fields
-.field public final a:Lcom/google/ads/e/ag;
+.field public final a:Lcom/google/ads/e/af;
 
-.field public final b:Lcom/google/ads/e/af;
+.field public final b:Lcom/google/ads/e/ag;
 
-.field public final c:Lcom/google/ads/e/af;
+.field public final c:Lcom/google/ads/e/ag;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/google/ads/bs;
-
-    invoke-direct {v0}, Lcom/google/ads/bs;-><init>()V
-
-    sput-object v0, Lcom/google/ads/bs;->d:Lcom/google/ads/bs;
-
-    return-void
-.end method
-
-.method private constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lcom/google/ads/bv;)V
+    .locals 3
 
     invoke-direct {p0}, Lcom/google/ads/e/ac;-><init>()V
 
     new-instance v0, Lcom/google/ads/e/ag;
 
-    const-string v1, "marketPackages"
+    const-string v1, "disableNativeScroll"
 
     const/4 v2, 0x0
 
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
     invoke-direct {v0, p0, v1, v2}, Lcom/google/ads/e/ag;-><init>(Lcom/google/ads/e/ac;Ljava/lang/String;Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/google/ads/bs;->a:Lcom/google/ads/e/ag;
+    iput-object v0, p0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/ag;
 
     new-instance v0, Lcom/google/ads/e/af;
 
-    const-string v1, "constants"
+    const-string v1, "slotState"
 
-    new-instance v2, Lcom/google/ads/bt;
+    invoke-direct {v0, p0, v1, p1}, Lcom/google/ads/e/af;-><init>(Lcom/google/ads/e/ac;Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v2}, Lcom/google/ads/bt;-><init>()V
+    iput-object v0, p0, Lcom/google/ads/bs;->a:Lcom/google/ads/e/af;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/google/ads/e/af;-><init>(Lcom/google/ads/e/ac;Ljava/lang/String;Ljava/lang/Object;)V
+    new-instance v0, Lcom/google/ads/e/ag;
 
-    iput-object v0, p0, Lcom/google/ads/bs;->b:Lcom/google/ads/e/af;
+    const-string v1, "adLoader"
 
-    new-instance v0, Lcom/google/ads/e/af;
+    new-instance v2, Lcom/google/ads/b/n;
 
-    const-string v1, "uiHandler"
+    invoke-direct {v2, p0}, Lcom/google/ads/b/n;-><init>(Lcom/google/ads/bs;)V
 
-    new-instance v2, Landroid/os/Handler;
+    invoke-direct {v0, p0, v1, v2}, Lcom/google/ads/e/ag;-><init>(Lcom/google/ads/e/ac;Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/google/ads/e/af;-><init>(Lcom/google/ads/e/ac;Ljava/lang/String;Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iput-object v0, p0, Lcom/google/ads/bs;->b:Lcom/google/ads/e/ag;
 
     return-void
-.end method
-
-.method public static a()Lcom/google/ads/bs;
-    .locals 1
-
-    sget-object v0, Lcom/google/ads/bs;->d:Lcom/google/ads/bs;
-
-    return-object v0
 .end method

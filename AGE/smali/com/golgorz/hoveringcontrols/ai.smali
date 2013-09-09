@@ -1,47 +1,32 @@
 .class Lcom/golgorz/hoveringcontrols/ai;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+.field a:I
+
+.field b:Ljava/lang/String;
+
+.field c:Ljava/lang/CharSequence;
+
+.field d:Landroid/content/Intent;
+
+.field e:I
 
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/QuickGlance;)V
+.method public constructor <init>(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    iput-object p1, p0, Lcom/golgorz/hoveringcontrols/ai;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p3, p0, Lcom/golgorz/hoveringcontrols/ai;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/golgorz/hoveringcontrols/ai;->c:Ljava/lang/CharSequence;
+
+    iput p5, p0, Lcom/golgorz/hoveringcontrols/ai;->a:I
+
+    iput p6, p0, Lcom/golgorz/hoveringcontrols/ai;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lcom/golgorz/hoveringcontrols/ai;->a:Lcom/golgorz/hoveringcontrols/QuickGlance;
-
-    invoke-virtual {v0}, Lcom/golgorz/hoveringcontrols/QuickGlance;->finish()V
-
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v1, "QUICKGLANCE KILLED"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

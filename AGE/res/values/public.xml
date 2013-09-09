@@ -36,11 +36,13 @@
     <public type="layout" name="activity_sensor_test" id="0x7f030005" />
     <public type="layout" name="activity_tilted" id="0x7f030006" />
     <public type="layout" name="activity_unlock_normal" id="0x7f030007" />
-    <public type="layout" name="listitem" id="0x7f030008" />
-    <public type="layout" name="listitemcheckbox" id="0x7f030009" />
-    <public type="layout" name="widget" id="0x7f03000a" />
-    <public type="xml" name="premiumpref" id="0x7f040000" />
-    <public type="xml" name="widget_info" id="0x7f040001" />
+    <public type="layout" name="device_admin_sample" id="0x7f030008" />
+    <public type="layout" name="listitem" id="0x7f030009" />
+    <public type="layout" name="listitemcheckbox" id="0x7f03000a" />
+    <public type="layout" name="widget" id="0x7f03000b" />
+    <public type="xml" name="policies" id="0x7f040000" />
+    <public type="xml" name="premiumpref" id="0x7f040001" />
+    <public type="xml" name="widget_info" id="0x7f040002" />
     <public type="color" name="red" id="0x7f050000" />
     <public type="color" name="green" id="0x7f050001" />
     <public type="color" name="black_overlay" id="0x7f050002" />
@@ -136,6 +138,18 @@
     <public type="string" name="allow_image_slide_with_gallery_1_slide_next_2_slide_previous" id="0x7f070056" />
     <public type="string" name="app_uses_proximity_sensor_better_beheaviour_with_high_sensibility_sensors_configure_settings_and_test_sensors_before_use_found_an_error_please_email_me_" id="0x7f070057" />
     <public type="string" name="slide_minimum_duration_miliseconds_" id="0x7f070058" />
+    <public type="string" name="recomended_values_n_fast_sensors_duration_0_200_delay_500_n_slow_sensors_duration_0_200_delay_1500" id="0x7f070059" />
+    <public type="string" name="needed_to_lock_the_screen" id="0x7f07005a" />
+    <public type="string" name="lock_screen_with_hover_hold" id="0x7f07005b" />
+    <public type="string" name="locks_the_screen_this_will_override_hover_hold_app_and_media_player_pause_" id="0x7f07005c" />
+    <public type="string" name="hover_hold_duration" id="0x7f07005d" />
+    <public type="string" name="activate_admin_options" id="0x7f07005e" />
+    <public type="string" name="please_allow_device_admin_to_lock_the_screen_this_will_allow_some_features_like_lock_the_phone_flipcover_lock_and_a_better_quickglance_" id="0x7f07005f" />
+    <public type="string" name="yes_" id="0x7f070060" />
+    <public type="string" name="no_" id="0x7f070061" />
+    <public type="string" name="lock_screen" id="0x7f070062" />
+    <public type="string" name="pro_version_service_started" id="0x7f070063" />
+    <public type="string" name="pro_version_service_stopped" id="0x7f070064" />
     <public type="style" name="AppTheme" id="0x7f080000" />
     <public type="style" name="Theme.Transparent" id="0x7f080001" />
     <public type="style" name="EmptyActivity" id="0x7f080002" />
@@ -150,30 +164,31 @@
     <public type="array" name="avisos" id="0x7f090002" />
     <public type="array" name="keyavisos" id="0x7f090003" />
     <public type="menu" name="activity_main" id="0x7f0a0000" />
+    <public type="menu" name="device_admin_receiver" id="0x7f0a0001" />
     <public type="id" name="botonera" id="0x7f0b0000" />
     <public type="id" name="alterdetect" id="0x7f0b0001" />
-    <public type="id" name="servicebuttons" id="0x7f0b0002" />
-    <public type="id" name="button4" id="0x7f0b0003" />
-    <public type="id" name="textView4" id="0x7f0b0004" />
-    <public type="id" name="textView1" id="0x7f0b0005" />
-    <public type="id" name="linearLayout1" id="0x7f0b0006" />
-    <public type="id" name="imageView1" id="0x7f0b0007" />
-    <public type="id" name="textView2" id="0x7f0b0008" />
-    <public type="id" name="hoverhold" id="0x7f0b0009" />
-    <public type="id" name="holdapp" id="0x7f0b000a" />
-    <public type="id" name="linearLayout2" id="0x7f0b000b" />
-    <public type="id" name="onceapp" id="0x7f0b000c" />
-    <public type="id" name="slideonce" id="0x7f0b000d" />
-    <public type="id" name="textView5" id="0x7f0b000e" />
-    <public type="id" name="button1" id="0x7f0b000f" />
-    <public type="id" name="carousel" id="0x7f0b0010" />
-    <public type="id" name="Button01" id="0x7f0b0011" />
-    <public type="id" name="spinnerCarro" id="0x7f0b0012" />
-    <public type="id" name="linearLayout3" id="0x7f0b0013" />
-    <public type="id" name="slidetwice" id="0x7f0b0014" />
-    <public type="id" name="twiceapp" id="0x7f0b0015" />
-    <public type="id" name="admob" id="0x7f0b0016" />
-    <public type="id" name="textView3" id="0x7f0b0017" />
+    <public type="id" name="textView1" id="0x7f0b0002" />
+    <public type="id" name="servicebuttons" id="0x7f0b0003" />
+    <public type="id" name="linearLayout1" id="0x7f0b0004" />
+    <public type="id" name="imageView1" id="0x7f0b0005" />
+    <public type="id" name="textView2" id="0x7f0b0006" />
+    <public type="id" name="hoverhold" id="0x7f0b0007" />
+    <public type="id" name="holdapp" id="0x7f0b0008" />
+    <public type="id" name="linearLayout2" id="0x7f0b0009" />
+    <public type="id" name="onceapp" id="0x7f0b000a" />
+    <public type="id" name="slideonce" id="0x7f0b000b" />
+    <public type="id" name="textView5" id="0x7f0b000c" />
+    <public type="id" name="button1" id="0x7f0b000d" />
+    <public type="id" name="carousel" id="0x7f0b000e" />
+    <public type="id" name="Button01" id="0x7f0b000f" />
+    <public type="id" name="spinnerCarro" id="0x7f0b0010" />
+    <public type="id" name="linearLayout3" id="0x7f0b0011" />
+    <public type="id" name="slidetwice" id="0x7f0b0012" />
+    <public type="id" name="twiceapp" id="0x7f0b0013" />
+    <public type="id" name="admob" id="0x7f0b0014" />
+    <public type="id" name="textView3" id="0x7f0b0015" />
+    <public type="id" name="button4" id="0x7f0b0016" />
+    <public type="id" name="textView4" id="0x7f0b0017" />
     <public type="id" name="time" id="0x7f0b0018" />
     <public type="id" name="date" id="0x7f0b0019" />
     <public type="id" name="missedCall" id="0x7f0b001a" />
@@ -192,15 +207,20 @@
     <public type="id" name="eventImage" id="0x7f0b0027" />
     <public type="id" name="imageEventType" id="0x7f0b0028" />
     <public type="id" name="delaytime" id="0x7f0b0029" />
-    <public type="id" name="TextView01" id="0x7f0b002a" />
-    <public type="id" name="waveduration" id="0x7f0b002b" />
-    <public type="id" name="textView6" id="0x7f0b002c" />
-    <public type="id" name="image" id="0x7f0b002d" />
-    <public type="id" name="text" id="0x7f0b002e" />
-    <public type="id" name="checkUsed" id="0x7f0b002f" />
-    <public type="id" name="widgeticon" id="0x7f0b0030" />
-    <public type="id" name="menu_settings" id="0x7f0b0031" />
-    <public type="id" name="testSensor" id="0x7f0b0032" />
-    <public type="id" name="info" id="0x7f0b0033" />
-    <public type="id" name="quickglance" id="0x7f0b0034" />
+    <public type="id" name="textView6" id="0x7f0b002a" />
+    <public type="id" name="TextView01" id="0x7f0b002b" />
+    <public type="id" name="TextView02" id="0x7f0b002c" />
+    <public type="id" name="holdduration" id="0x7f0b002d" />
+    <public type="id" name="waveduration" id="0x7f0b002e" />
+    <public type="id" name="enable" id="0x7f0b002f" />
+    <public type="id" name="disable" id="0x7f0b0030" />
+    <public type="id" name="image" id="0x7f0b0031" />
+    <public type="id" name="text" id="0x7f0b0032" />
+    <public type="id" name="checkUsed" id="0x7f0b0033" />
+    <public type="id" name="widgeticon" id="0x7f0b0034" />
+    <public type="id" name="menu_settings" id="0x7f0b0035" />
+    <public type="id" name="testSensor" id="0x7f0b0036" />
+    <public type="id" name="info" id="0x7f0b0037" />
+    <public type="id" name="quickglance" id="0x7f0b0038" />
+    <public type="id" name="action_settings" id="0x7f0b0039" />
 </resources>

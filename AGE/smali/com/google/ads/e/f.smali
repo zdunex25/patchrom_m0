@@ -3,10 +3,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/ads/bu;)V
+.method public constructor <init>(Lcom/google/ads/bv;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/ads/e/t;-><init>(Lcom/google/ads/bu;)V
+    invoke-direct {p0, p1}, Lcom/google/ads/e/t;-><init>(Lcom/google/ads/bv;)V
 
     return-void
 .end method

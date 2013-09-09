@@ -29,11 +29,11 @@
 .method public a()V
     .locals 3
 
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -71,11 +71,11 @@
     :cond_0
     invoke-virtual {v0}, Lcom/google/ads/b/c;->f()V
 
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 

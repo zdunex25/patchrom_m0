@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field protected final a:Lcom/google/ads/bu;
+.field protected final a:Lcom/google/ads/bv;
 
 .field private b:Ljava/lang/ref/WeakReference;
 
@@ -17,14 +17,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/ads/bu;Lcom/google/ads/g;)V
+.method public constructor <init>(Lcom/google/ads/bv;Lcom/google/ads/g;)V
     .locals 4
 
     const/16 v3, 0xb
 
     const/4 v2, 0x0
 
-    iget-object v0, p1, Lcom/google/ads/bu;->f:Lcom/google/ads/e/af;
+    iget-object v0, p1, Lcom/google/ads/bv;->f:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -34,7 +34,7 @@
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/google/ads/b/e;->a:Lcom/google/ads/bu;
+    iput-object p1, p0, Lcom/google/ads/b/e;->a:Lcom/google/ads/bv;
 
     iput-object p2, p0, Lcom/google/ads/b/e;->c:Lcom/google/ads/g;
 
@@ -76,7 +76,7 @@
 
     if-lt v1, v2, :cond_2
 
-    invoke-static {v0, p1}, Lcom/google/ads/e/ab;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
+    invoke-static {v0, p1}, Lcom/google/ads/e/ab;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bv;)V
 
     :cond_0
     :goto_0
@@ -92,7 +92,7 @@
 
     new-instance v0, Lcom/google/ads/e/f;
 
-    invoke-direct {v0, p1}, Lcom/google/ads/e/f;-><init>(Lcom/google/ads/bu;)V
+    invoke-direct {v0, p1}, Lcom/google/ads/e/f;-><init>(Lcom/google/ads/bv;)V
 
     invoke-virtual {p0, v0}, Lcom/google/ads/b/e;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -105,7 +105,7 @@
 
     if-lt v1, v3, :cond_0
 
-    invoke-static {v0, p1}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
+    invoke-static {v0, p1}, Lcom/google/ads/e/r;->a(Landroid/webkit/WebSettings;Lcom/google/ads/bv;)V
 
     goto :goto_0
 
@@ -116,7 +116,7 @@
 
     new-instance v0, Lcom/google/ads/e/t;
 
-    invoke-direct {v0, p1}, Lcom/google/ads/e/t;-><init>(Lcom/google/ads/bu;)V
+    invoke-direct {v0, p1}, Lcom/google/ads/e/t;-><init>(Lcom/google/ads/bv;)V
 
     invoke-virtual {p0, v0}, Lcom/google/ads/b/e;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -542,9 +542,9 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/ads/b/e;->a:Lcom/google/ads/bu;
+    iget-object v0, p0, Lcom/google/ads/b/e;->a:Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->r:Lcom/google/ads/e/ag;
+    iget-object v0, v0, Lcom/google/ads/bv;->r:Lcom/google/ads/e/ag;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 

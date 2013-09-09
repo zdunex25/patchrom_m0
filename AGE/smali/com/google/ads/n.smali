@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/ads/bv;
+.implements Lcom/google/ads/bw;
 
 
 # direct methods
@@ -19,11 +19,11 @@
 .method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
     .locals 4
 
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bu;->c:Lcom/google/ads/e/ah;
+    iget-object v0, v0, Lcom/google/ads/bv;->c:Lcom/google/ads/e/ah;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ah;->a()Ljava/lang/Object;
 
@@ -79,11 +79,11 @@
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bu;->r:Lcom/google/ads/e/ag;
+    iget-object v0, v0, Lcom/google/ads/bv;->r:Lcom/google/ads/e/ag;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 

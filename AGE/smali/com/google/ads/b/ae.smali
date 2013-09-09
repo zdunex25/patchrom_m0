@@ -77,19 +77,19 @@
 .method public run()V
     .locals 3
 
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bs;->b:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bt;->b:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/ads/bt;
+    check-cast v0, Lcom/google/ads/bu;
 
-    iget-object v0, v0, Lcom/google/ads/bt;->h:Lcom/google/ads/e/ag;
+    iget-object v0, v0, Lcom/google/ads/bu;->h:Lcom/google/ads/e/ag;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 

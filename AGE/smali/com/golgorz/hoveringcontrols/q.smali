@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
 .field final synthetic a:Lcom/golgorz/hoveringcontrols/MainActivity;
 
-.field private final synthetic b:Z
-
 
 # direct methods
-.method constructor <init>(Lcom/golgorz/hoveringcontrols/MainActivity;Z)V
+.method constructor <init>(Lcom/golgorz/hoveringcontrols/MainActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
-
-    iput-boolean p2, p0, Lcom/golgorz/hoveringcontrols/q;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,25 +22,10 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
-
-    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->setProgressBarIndeterminateVisibility(Z)V
-
-    iget-object v1, p0, Lcom/golgorz/hoveringcontrols/q;->a:Lcom/golgorz/hoveringcontrols/MainActivity;
-
-    iget-boolean v2, p0, Lcom/golgorz/hoveringcontrols/q;->b:Z
-
-    if-eqz v2, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    invoke-virtual {v1, v0}, Lcom/golgorz/hoveringcontrols/MainActivity;->showDialog(I)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

@@ -1,51 +1,7 @@
-.class public Lcom/google/ads/bw;
+.class public interface abstract Lcom/google/ads/bw;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/ads/bv;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
-    .locals 2
-
-    const-string v0, "name"
-
-    invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Error: App event with no name parameter."
-
-    invoke-static {v0}, Lcom/google/ads/e/i;->b(Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const-string v1, "info"
-
-    invoke-virtual {p2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/ads/b/w;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+.method public abstract a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
 .end method

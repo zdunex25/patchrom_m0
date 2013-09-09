@@ -27,19 +27,19 @@
 
     iget-object v0, p0, Lcom/google/ads/b/o;->a:Lcom/google/ads/b/n;
 
-    invoke-static {v0}, Lcom/google/ads/b/n;->b(Lcom/google/ads/b/n;)Lcom/google/ads/br;
+    invoke-static {v0}, Lcom/google/ads/b/n;->b(Lcom/google/ads/b/n;)Lcom/google/ads/bs;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/br;->a:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bs;->a:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/ads/bu;
+    check-cast v0, Lcom/google/ads/bv;
 
-    iget-object v0, v0, Lcom/google/ads/bu;->e:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->e:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 

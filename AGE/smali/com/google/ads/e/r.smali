@@ -31,12 +31,12 @@
     return-void
 .end method
 
-.method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/bu;)V
+.method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/bv;)V
     .locals 5
 
     const/4 v4, 0x1
 
-    iget-object v0, p1, Lcom/google/ads/bu;->f:Lcom/google/ads/e/af;
+    iget-object v0, p1, Lcom/google/ads/bv;->f:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -44,15 +44,7 @@
 
     check-cast v0, Landroid/content/Context;
 
-    iget-object v1, p1, Lcom/google/ads/bu;->d:Lcom/google/ads/e/af;
-
-    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/ads/bs;
-
-    iget-object v1, v1, Lcom/google/ads/bs;->b:Lcom/google/ads/e/af;
+    iget-object v1, p1, Lcom/google/ads/bv;->d:Lcom/google/ads/e/af;
 
     invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -60,9 +52,17 @@
 
     check-cast v1, Lcom/google/ads/bt;
 
+    iget-object v1, v1, Lcom/google/ads/bt;->b:Lcom/google/ads/e/af;
+
+    invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/ads/bu;
+
     invoke-virtual {p0, v4}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
 
-    iget-object v1, v1, Lcom/google/ads/bt;->i:Lcom/google/ads/e/ag;
+    iget-object v1, v1, Lcom/google/ads/bu;->i:Lcom/google/ads/e/ag;
 
     invoke-virtual {v1}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 

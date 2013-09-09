@@ -1398,11 +1398,11 @@
     :cond_1
     sput-object p0, Lcom/google/ads/AdActivity;->f:Lcom/google/ads/AdActivity;
 
-    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/bu;->a()Z
+    invoke-virtual {v0}, Lcom/google/ads/bv;->a()Z
 
     move-result v0
 
@@ -1413,11 +1413,11 @@
     if-eq v0, p0, :cond_3
 
     :cond_2
-    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/bu;->b()Z
+    invoke-virtual {v0}, Lcom/google/ads/bv;->b()Z
 
     move-result v0
 
@@ -1437,19 +1437,11 @@
 
     move-result v9
 
-    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bu;->d:Lcom/google/ads/e/af;
-
-    invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/ads/bs;
-
-    iget-object v0, v0, Lcom/google/ads/bs;->b:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->d:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -1457,9 +1449,17 @@
 
     check-cast v0, Lcom/google/ads/bt;
 
+    iget-object v0, v0, Lcom/google/ads/bt;->b:Lcom/google/ads/e/af;
+
+    invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/ads/bu;
+
     sget v3, Lcom/google/ads/e/a;->a:I
 
-    iget-object v1, v0, Lcom/google/ads/bt;->b:Lcom/google/ads/e/ag;
+    iget-object v1, v0, Lcom/google/ads/bu;->b:Lcom/google/ads/e/ag;
 
     invoke-virtual {v1}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 
@@ -1480,7 +1480,7 @@
 
     sget v1, Lcom/google/ads/e/a;->a:I
 
-    iget-object v0, v0, Lcom/google/ads/bt;->d:Lcom/google/ads/e/ag;
+    iget-object v0, v0, Lcom/google/ads/bu;->d:Lcom/google/ads/e/ag;
 
     invoke-virtual {v0}, Lcom/google/ads/e/ag;->a()Ljava/lang/Object;
 
@@ -1605,11 +1605,11 @@
 
     new-instance v0, Lcom/google/ads/b/e;
 
-    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v8}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, v5}, Lcom/google/ads/b/e;-><init>(Lcom/google/ads/bu;Lcom/google/ads/g;)V
+    invoke-direct {v0, v1, v5}, Lcom/google/ads/b/e;-><init>(Lcom/google/ads/bv;Lcom/google/ads/g;)V
 
     iput-object v0, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/b/e;
 

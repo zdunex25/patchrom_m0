@@ -140,11 +140,11 @@
     return v0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/bu;->b()Z
+    invoke-virtual {v0}, Lcom/google/ads/bv;->b()Z
 
     move-result v0
 
@@ -174,11 +174,11 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {p1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bu;->g:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bv;->g:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -304,11 +304,11 @@
 
     iget-object v1, p0, Lcom/google/ads/be;->a:Lcom/google/ads/b/w;
 
-    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/google/ads/bu;->g:Lcom/google/ads/e/af;
+    iget-object v1, v1, Lcom/google/ads/bv;->g:Lcom/google/ads/e/af;
 
     invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -419,11 +419,11 @@
 
     iget-object v1, p0, Lcom/google/ads/be;->a:Lcom/google/ads/b/w;
 
-    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/ads/bu;->b()Z
+    invoke-virtual {v1}, Lcom/google/ads/bv;->b()Z
 
     move-result v1
 
@@ -434,11 +434,11 @@
     move-object v2, v1
 
     :goto_1
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v1, v1, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v1}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -487,7 +487,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/google/ads/bl;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/google/ads/bl;->g()Ljava/lang/String;
 
     move-result-object v2
 
@@ -668,11 +668,11 @@
 
     iget-object v1, p0, Lcom/google/ads/be;->a:Lcom/google/ads/b/w;
 
-    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bu;
+    invoke-virtual {v1}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/google/ads/bu;->c:Lcom/google/ads/e/ah;
+    iget-object v1, v1, Lcom/google/ads/bv;->c:Lcom/google/ads/e/ah;
 
     invoke-virtual {v1}, Lcom/google/ads/e/ah;->a()Ljava/lang/Object;
 
@@ -735,7 +735,7 @@
 
     if-nez v1, :cond_2
 
-    invoke-direct {p0}, Lcom/google/ads/be;->b()Z
+    invoke-direct {p0}, Lcom/google/ads/be;->c()Z
 
     move-result v1
 
@@ -748,11 +748,11 @@
     goto :goto_2
 
     :cond_6
-    invoke-static {}, Lcom/google/ads/bs;->a()Lcom/google/ads/bs;
+    invoke-static {}, Lcom/google/ads/bt;->a()Lcom/google/ads/bt;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/bs;->c:Lcom/google/ads/e/af;
+    iget-object v0, v0, Lcom/google/ads/bt;->c:Lcom/google/ads/e/af;
 
     invoke-virtual {v0}, Lcom/google/ads/e/af;->a()Ljava/lang/Object;
 
@@ -769,7 +769,47 @@
     goto :goto_2
 .end method
 
-.method private b()Z
+.method private b(Lcom/google/ads/bl;)Z
+    .locals 2
+
+    iget-object v1, p0, Lcom/google/ads/be;->g:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-direct {p0}, Lcom/google/ads/be;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/google/ads/bl;->a()V
+
+    const/4 v0, 0x1
+
+    monitor-exit v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method private c()Z
     .locals 2
 
     iget-object v1, p0, Lcom/google/ads/be;->g:Ljava/lang/Object;
@@ -793,35 +833,19 @@
     throw v0
 .end method
 
-.method private b(Lcom/google/ads/bl;)Z
+.method private d()Lcom/google/ads/bl;
     .locals 2
 
-    iget-object v1, p0, Lcom/google/ads/be;->g:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/google/ads/be;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    invoke-direct {p0}, Lcom/google/ads/be;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lcom/google/ads/bl;->a()V
-
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/google/ads/be;->b:Lcom/google/ads/bl;
 
     monitor-exit v1
 
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    monitor-exit v1
-
-    goto :goto_0
+    return-object v0
 
     :catchall_0
     move-exception v0
@@ -1009,4 +1033,42 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method public b()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/ads/be;->a:Lcom/google/ads/b/w;
+
+    invoke-virtual {v0}, Lcom/google/ads/b/w;->h()Lcom/google/ads/bv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/ads/bv;->b()Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/ads/e/g;->a(Z)V
+
+    invoke-direct {p0}, Lcom/google/ads/be;->d()Lcom/google/ads/bl;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/google/ads/bl;->f()V
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const-string v0, "There is no ad ready to show."
+
+    invoke-static {v0}, Lcom/google/ads/e/i;->b(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -406,7 +406,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/ads/bv;
+    check-cast v0, Lcom/google/ads/bw;
 
     if-nez v0, :cond_2
 
@@ -439,7 +439,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-interface {v0, p1, v1, p4}, Lcom/google/ads/bv;->a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
+    invoke-interface {v0, p1, v1, p4}, Lcom/google/ads/bw;->a(Lcom/google/ads/b/w;Ljava/util/HashMap;Landroid/webkit/WebView;)V
 
     goto :goto_0
 .end method
