@@ -143,17 +143,22 @@ rm -rf pl/Cit
 rm -rf pl/DrmProvider
 rm -rf pl/Ds
 rm -rf pl/DsUI
+rm -rf pl/EngineerMode
 rm -rf pl/GuardProvider
 rm -rf pl/LBESEC_MIUI
 rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
+rm -rf pl/mediatek-res
 rm -rf pl/MIUIStats
 rm -rf pl/MiWallpaper
+rm -rf pl/MtkBt
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
+rm -rf pl/Stk1
 rm -rf pl/TelocationProvider
 rm -rf pl/Updater
+rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
 cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
