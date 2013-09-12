@@ -185,9 +185,9 @@ sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruch
   <string name=\"android_factorytest_download\">Tryb odin<\/string>\
 <\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"volume_ring_description\" id=\"0x060c0256\"\/>/<public type=\"string\" name=\"volume_ring_description\" id=\"0x060c0256\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0257\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0258\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
+sed -i -e 's/<public type=\"string\" name=\"login_website_in_case_forget_password\" id=\"0x060c0257\"\/>/<public type=\"string\" name=\"login_website_in_case_forget_password\" id=\"0x060c0257\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0258\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0259\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/BugReport
 rm -rf pl/MiuiHome
@@ -313,7 +313,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0257\
+    const v3, 0x60c0258\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -323,7 +323,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0258\
+    const v3, 0x60c0259\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 
