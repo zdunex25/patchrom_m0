@@ -30,7 +30,7 @@
     <string name="_carousel_mode_">-Tryb wielozadaniowy-</string>
     <string name="set_">"Ustaw  "</string>
     <string name="proximity_sensor_configuration">Konfiguracja czujnika zbliżeniowego</string>
-    <string name="info_proximity">Learn how to wave your hand for your phone. You can change to aleternate sensor and change the delay to make it easier detection for you.</string>
+    <string name="info_proximity"> </string>
     <string name="alternative_detector">Alternatywna metoda</string>
     <string name="delay_in_miliseconds_between_slides">Odstęp pomiędzy gestami (milisekundy)</string>
     <string name="shake_system_configuration">Shake System Configuration</string>
@@ -92,7 +92,7 @@
     <string name="recomended_values_n_fast_sensors_duration_0_200_delay_500_n_slow_sensors_duration_0_200_delay_1500">"Zalecane wartości (milisekundy):
  Szybkie sensory: czas 0-200, opóźnienie 500 
  Wolne sensory: czas 0-200, opóźnienie 1500-2000"</string>
-    <string name="needed_to_lock_the_screen">Needed to lock the screen</string>
+    <string name="needed_to_lock_the_screen">Blokowanie/odblokowanie ekranu</string>
     <string name="lock_screen_with_hover_hold">Zablokuj ekran zakrywając czujnik</string>
     <string name="locks_the_screen_this_will_override_hover_hold_app_and_media_player_pause_">Blokuje ekran po zakryciu czujnika. Dezaktuwuje aplikację pod zakryciem czujnika oraz pauzę w odtwarzaczu.</string>
     <string name="hover_hold_duration">Czas reakcji na zakrycie czujnika</string>
