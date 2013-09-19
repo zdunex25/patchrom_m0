@@ -16,6 +16,7 @@ cd ../miuipolska/Polish/main
 for i in * ; do cp -r "$i" "../../../m0/temp/pl/${i//\.apk/}" ; done
 cd ../../../m0/temp
 find pl -name "*-hdpi" | xargs rm -rf
+find pl -name "*-xxhdpi" | xargs rm -rf
 find pl -name "hdpi" | xargs rm -rf
 #'../../tools/apktool' --quiet d -t miui -f '../../miui/XHDPI/system/app/Bluetooth.apk'
 #cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/android:style\/Theme.Holo.Light.DialogWhenLarge/miui:style\/V5.Theme.Light/g" \
