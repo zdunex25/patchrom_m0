@@ -40,7 +40,11 @@
     <LinearLayout android:gravity="center" android:id="@id/returnToRecorderScreen" android:background="@drawable/status_bar_red_bar_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <ImageView android:id="@id/recorderIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/status_bar_recorder_icon" />
         <TextView android:textAppearance="@style/TextAppearance.StatusBar.PhoneTicker" android:id="@id/recorderTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" android:layout_weight="1.0" />
-        <Chronometer android:textAppearance="@style/TextAppearance.StatusBar.PhoneTicker" android:id="@id/recorderTimer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+        <Chronometer android:textAppearance="@style/TextAppearance.StatusBar.PhoneTicker" android:id="@id/recorderTimer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="46.0dip" android:singleLine="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <include android:id="@id/recorder_signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view" />
+            <com.android.systemui.statusbar.phone.BatteryStatusIconView android:id="@id/recorder_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout android:gravity="center" android:id="@id/returnToIncallScreen" android:background="@drawable/status_bar_green_bar_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <ImageView android:id="@id/callStateIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/status_bar_ic_return_to_incall_screen_normal" />
