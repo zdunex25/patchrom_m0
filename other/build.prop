@@ -108,6 +108,7 @@ net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
 ro.telephony.call_ring.multiple=false
+ro.telephony.call_ring.delay=200
 ro.miui.ui.version.code=3
 
 #
@@ -121,13 +122,8 @@ ro.media.enc.hprof.vid.bps=8000000
 # Disable HD-Voice
 ro.ril.enable.amr.wideband=0
 
-# Reduce dial-out time
-ro.telephony.call_ring.delay=0
-ring.delay=0
-
 # Saves some battery without reducing performances
 ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.rule=0
 pm.sleep_mode=1
 
 # Disable error reporting and logging
