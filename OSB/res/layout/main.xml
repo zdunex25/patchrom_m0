@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/RelativeLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-	<LinearLayout android:orientation="horizontal" android:layout_marginLeft="15.0px" android:layout_width="690.0px" android:layout_height="wrap_content">
-		<Button android:id="@id/button1" android:clickable="true" android:layout_width="345.0px" android:layout_height="wrap_content" android:layout_marginBottom="25.0px" android:layout_marginTop="25.0px" android:text="@string/mount" android:onClick="enableMSC" />
-		<Button android:id="@id/button2" android:clickable="true" android:layout_width="345.0px" android:layout_height="wrap_content" android:layout_marginBottom="25.0px" android:layout_marginTop="25.0px" android:text="@string/unmount" android:onClick="disableMSC" />
-	</LinearLayout>
-</RelativeLayout>

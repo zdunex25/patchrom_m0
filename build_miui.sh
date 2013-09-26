@@ -8,6 +8,7 @@ mkdir BugReport
 mkdir Mms/smali/com/android/mms/data
 mkdir Mms/smali/com/android/mms/transaction
 mkdir Mms/smali/com/android/mms/ui
+mkdir MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 mkdir Settings/res/xml
 mkdir -p Settings/smali/com/android/settings
 mkdir XiaomiServiceFramework
@@ -18,10 +19,55 @@ cd ../../../m0/temp
 find pl -name "*-hdpi" | xargs rm -rf
 find pl -name "*-xxhdpi" | xargs rm -rf
 find pl -name "hdpi" | xargs rm -rf
+find pl -name "xxhdpi" | xargs rm -rf
 #'../../tools/apktool' --quiet d -t miui -f '../../miui/XHDPI/system/app/Bluetooth.apk'
 #cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/android:style\/Theme.Holo.Light.DialogWhenLarge/miui:style\/V5.Theme.Light/g" \
 #				| sed -e "s/android:style\/Theme.Holo.Dialog/miui:style\/V5.Theme.Light.Dialog/g" \
 #				| sed -e "s/android:style\/Theme.Holo.Dialog.Alert/miui:style\/V5.Theme.Light.Dialog.Alert/g" > '../Bluetooth/AndroidManifest.xml'
+
+'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
+cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030030\" \/>/id=\"0x7f030030\" \/>\
+    <public type=\"layout\" name=\"signal_cluster_view_miui\" id=\"0x7f030031\" \/>\
+    <public type=\"layout\" name=\"status_bar_miui\" id=\"0x7f030032\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_miui\" id=\"0x7f030033\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
+cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali' | sed -e 's/.method private getTabIndicatorPosition(I)I/.method private getStatusBarType(I)I\
+    .locals 6\
+    .parameter\
+\
+    .prologue\
+    const\/4 v0, 0x0\
+\
+    .line 3190\
+    iget-object v1, p0, Lcom\/android\/systemui\/statusbar\/phone\/PhoneStatusBar;->mContext:Landroid\/content\/Context;\
+\
+    invoke-virtual {v1}, Landroid\/content\/Context;->getContentResolver()Landroid\/content\/ContentResolver;\
+\
+    move-result-object v1\
+\
+    const-string v2, \"m7StatusBarType\"\
+\
+    invoke-static {v1, v2, v0}, Landroid\/provider\/Settings$System;->getInt(Landroid\/content\/ContentResolver;Ljava\/lang\/String;I)I\
+\
+    move-result v5\
+\
+    const\/4 v3, 0x1\
+\
+    if-eq v3, v5, :cond_0\
+\
+    return p1\
+\
+    :cond_0\
+    const v4, 0x7f030033\
+\
+    return v4\
+.end method\
+\
+.method private getTabIndicatorPosition(I)I/' > 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali'
+cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali' | sed -e 's/const v0, 0x7f030020/const v0, 0x7f030020\
+\
+    invoke-direct {p0, v0}, Lcom\/android\/systemui\/statusbar\/phone\/PhoneStatusBar;->getStatusBarType(I)I\
+\
+    move-result v0/' > '../MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Mms.apk'
 cat 'Mms/AndroidManifest.xml' | sed -e "s/android:screenOrientation=\"portrait\" //g" \
 				| sed -e "s/ android:screenOrientation=\"portrait\"//g" > '../Mms/AndroidManifest.xml'
@@ -61,8 +107,8 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
     <\/header>\
-    <header android:icon=\"@drawable\/ic_key_settings\" android:title=\"@string\/osb_settings\">\
-        <intent android:action="com.android.settings.OSB\" \/>/' > '../Settings/res/xml/settings_headers.xml'
+    <header android:icon=\"@drawable\/ic_status_bar_settings\" android:title=\"@string\/cp_settings\">\
+        <intent android:action="com.android.settings.M7PARTS\" \/>/' > '../Settings/res/xml/settings_headers.xml'
 cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.player/g" \
 				| sed -e "s/ControlPanelPicker/ui.EqualizerActivity/g" > '../Settings/res/xml/sound_settings.xml'
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
@@ -133,12 +179,10 @@ cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 cp -u -r pl/Mms/* Mms
 cp -f ../Mms/AndroidManifest.xml Mms/AndroidManifest.xml
 '../../tools/apktool' --quiet b -f 'Mms' '../other/unsigned-Mms.apk'
-'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
-cp -u -r pl/MiuiSystemUI/* MiuiSystemUI
-'../../tools/apktool' --quiet b -f 'MiuiSystemUI' '../other/unsigned-MiuiSystemUI.apk'
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
+rm -rf pl/CellConnService
 rm -rf pl/CertInstaller
 rm -rf pl/Cit
 rm -rf pl/DrmProvider
@@ -147,6 +191,7 @@ rm -rf pl/DsUI
 rm -rf pl/EngineerMode
 rm -rf pl/GuardProvider
 rm -rf pl/LBESEC_MIUI
+rm -rf pl/lenovo-res
 rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/mediatek-res
@@ -157,6 +202,7 @@ rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
 rm -rf pl/Stk1
+rm -rf pl/StkSelection
 rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
@@ -172,6 +218,7 @@ sed -i -e 's/>Efekty muzyczne/>Equalizer MIUI/' pl/Settings/res/values-pl/string
 sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
+  <string name=\"cp_settings\">Panel sterowania<\/string>\
 <\/resources>/' pl/Settings/res/values-pl/strings.xml
 cp -u -r pl/Settings/* ../Settings
 cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
@@ -232,15 +279,11 @@ sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/tem
 rm -f out/temp/system/etc/weather_city.db
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-Mms.apk" "other/signed-Mms.apk"
-java -jar 'other/signapk.jar' '../build/security/platform.x509.pem' '../build/security/platform.pk8' "other/unsigned-MiuiSystemUI.apk" "other/signed-MiuiSystemUI.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
 'other/zipalign' -f 4 "other/signed-Mms.apk" "other/Mms.apk"
-'other/zipalign' -f 4 "other/signed-MiuiSystemUI.apk" "other/MiuiSystemUI.apk"
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
 mkdir out/temp/system/usr/extras
 mv -f other/Mms.apk out/temp/system/usr/extras/Mms.apk
-mv -f other/MiuiSystemUI.apk out/temp/system/usr/extras/MiuiSystemUI.apk
-cp -f other/statusbar.sh out/temp/system/bin/statusbar.sh
 cp -f other/unicode.sh out/temp/system/bin/unicode.sh
 find other -name "unsigned-*" | xargs rm -f
 find other -name "signed-*" | xargs rm -f
@@ -249,6 +292,7 @@ cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
 cp -f ../miuipolska/Polish/extras/system/etc/apns-conf.xml out/temp/system/etc/apns-conf.xml
 cp -f ../miuipolska/Polish/extras/system/etc/gps.conf out/temp/system/etc/gps.conf
+cp -f ../miuipolska/Polish/extras/system/etc/hosts out/temp/system/etc/hosts
 cp -f ../miuipolska/Polish/extras/system/etc/spn-conf.xml out/temp/system/etc/spn-conf.xml
 
 mv out/temp/system/media/theme/default/alarmscreen out/temp/system/media/theme/default/alarmscreen.zip
@@ -361,6 +405,8 @@ rm -rf MiuiGallery
 rm -rf MiuiHome/res/drawable-pl-xhdpi
 rm -rf MiuiHome/res/values-pl
 rm -rf MiuiSystemUI/res/values-pl
+rm -rf MiuiSystemUI/res/values/public.xml
+rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 rm -rf MiuiVideoPlayer
 rm -f Mms/AndroidManifest.xml
 rm -rf Mms/res/raw-pl
@@ -394,6 +440,7 @@ rm -rf VpnDialogs
 rm -rf WeatherProvider
 rm -rf XiaomiServiceFramework
 rm -rf YellowPage
+find other -name "unsigned-*" | xargs rm -f
 rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
 mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
