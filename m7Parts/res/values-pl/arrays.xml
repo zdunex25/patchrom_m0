@@ -2,6 +2,7 @@
 <resources>
     <string-array name="NavBarSizeNames">
         <item>Domyślny rozmiar</item>
+        <item>0 dip</item>
         <item>24 dip</item>
         <item>36 dip</item>
         <item>48 dip</item>
