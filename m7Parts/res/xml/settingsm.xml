@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/PowerString">
+        <PreferenceCategory android:title="@string/ExRebootString">
+            <CheckBoxPreference android:title="@string/bShowExtendedRebootOpt" android:key="m7ShowRecoveryOpt" android:summary="@string/sShowExtendedRebootOpt" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/ScreenShotString">
+            <CheckBoxPreference android:title="@string/bShowScreenShotOpt" android:key="m7ShowScreenShotOpt" android:summary="@string/sShowScreenShotOpt" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/TracksString">
+        <PreferenceCategory android:title="@string/sVolumeUp">
+            <CheckBoxPreference android:title="@string/sUseVolumeUp" android:key="m7UseVolumeUp" android:summary="@string/sUseVolumeUpS" android:defaultValue="false" />
+            <ListPreference android:entries="@array/TrackTypes" android:title="@string/sTypePReaction" android:key="m7VolumeUpPReaction" android:defaultValue="2" android:entryValues="@array/ReactValues" />
+            <ListPreference android:entries="@array/RadioTypes" android:title="@string/sTypeRReaction" android:key="m7VolumeUpRReaction" android:defaultValue="1" android:entryValues="@array/RadioValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sVolumeDown">
+            <CheckBoxPreference android:title="@string/sUseVolumeDown" android:key="m7UseVolumeDown" android:summary="@string/sUseVolumeDownS" android:defaultValue="false" />
+            <ListPreference android:entries="@array/TrackTypes" android:title="@string/sTypePReaction" android:key="m7VolumeDownPReaction" android:defaultValue="1" android:entryValues="@array/ReactValues" />
+            <ListPreference android:entries="@array/RadioTypes" android:title="@string/sTypeRReaction" android:key="m7VolumeDownRReaction" android:defaultValue="2" android:entryValues="@array/RadioValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sCamera">
+            <CheckBoxPreference android:title="@string/sUseCamera" android:key="m7UseCamera" android:summary="@string/sUseCameraS" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/CallsString">
+        <PreferenceCategory android:title="@string/CallsString">
+            <CheckBoxPreference android:title="@string/bEndCallByPower" android:key="m7EndCallByPower" android:summary="@string/sEndCallByPower" android:defaultValue="false" />
+            <CheckBoxPreference android:title="@string/bGetCallByVolumeUp" android:key="m7GetCallByVolumeUp" android:summary="@string/sGetCallByVolumeUp" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/CustomString">
+        <PreferenceCategory android:title="@string/sVolumeBeep">
+            <CheckBoxPreference android:title="@string/sVolumeBeepOpt" android:key="m7VolumeBeep" android:summary="@string/sVolumeBeepSum" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sVolumeExt">
+            <CheckBoxPreference android:title="@string/sVolumeExtOpt" android:key="m7VolumeExt" android:summary="@string/sVolumeExtSum" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sStatusBarType">
+            <ListPreference android:entries="@array/StatusBarTypes" android:title="@string/sAlign" android:key="m7StatusBarType" android:defaultValue="0" android:entryValues="@array/StatusBarValues" />
+            <CheckBoxPreference android:title="@string/m7ShowClockOpt" android:key="m7ShowClock" android:summary="@string/m7ShowClockSum" android:defaultValue="true" />
+            <CheckBoxPreference android:title="@string/m7ShowOperatorOpt" android:key="m7ShowOperator" android:summary="@string/m7ShowOperatorSum" android:defaultValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sNetworkName">
+            <EditTextPreference android:key="m7NetworkName" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/sNavBar" android:key="lNavBar">
+        <PreferenceCategory android:title="@string/sNavBarEnable">
+            <ListPreference android:entries="@array/NavBarUses" android:title="@string/sNavBarEnable" android:key="m7NavBarOnOff" android:defaultValue="0" android:entryValues="@array/NavBarUsesValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sNavBarSizeTitle">
+            <ListPreference android:entries="@array/NavBarSizeNames" android:title="@string/sHeight" android:key="m7NavBarHeight" android:defaultValue="0" android:entryValues="@array/NavBarSizeValues" />
+            <ListPreference android:entries="@array/NavBarSizeNames" android:title="@string/sWidth" android:key="m7NavBarWidth" android:defaultValue="0" android:entryValues="@array/NavBarSizeValues" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/sZRamTitle" android:key="lZRam">
+        <ListPreference android:entries="@array/zRams" android:title="@string/sZRamSize" android:key="m7ZRamSize" android:defaultValue="0" android:entryValues="@array/zRamsValues" />
+        <PreferenceScreen android:layout="@layout/zram" android:key="lZRam2" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/AboutString">
+        <PreferenceScreen android:layout="@layout/main" />
+    </PreferenceScreen>
+</PreferenceScreen>
