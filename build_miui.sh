@@ -207,6 +207,15 @@ rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
+sed -i -e 's/<resources>/<resources>\
+    <string-array name=\"baidu\">\
+        <item>Google<\/item>\
+        <item>google.com<\/item>\
+        <item>http:\/\/www.google.com\/favicon.ico<\/item>\
+        <item>http:\/\/www.google.com\/search?hl={language}\&amp;ie={inputEncoding}\&amp;source=android-browser\&amp;q={searchTerms}<\/item>\
+        <item>UTF-8<\/item>\
+        <item>http:\/\/api.bing.com\/osjson.aspx?query={searchTerms}\&amp;language={language}<\/item>\
+    <\/string-array>/' pl/Browser/res/values-pl/arrays.xml
 cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
