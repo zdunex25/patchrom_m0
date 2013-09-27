@@ -216,6 +216,7 @@ sed -i -e 's/<resources>/<resources>\
         <item>UTF-8<\/item>\
         <item>http:\/\/api.bing.com\/osjson.aspx?query={searchTerms}\&amp;language={language}<\/item>\
     <\/string-array>/' pl/Browser/res/values-pl/arrays.xml
+sed -i -e 's/>Baidu</>Google</' pl/Browser/res/values-pl/strings.xml
 cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI

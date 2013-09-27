@@ -31,7 +31,6 @@ fi
 if [ $1 = "Browser" ];then
 	cp -f $2/res/drawable-xhdpi/ic_search_engine_google.png $2/res/drawable-xhdpi/ic_search_engine_baidu.png
 	cp -f $2/res/drawable-xhdpi/ic_search_logo_google.png $2/res/drawable-xhdpi/ic_search_logo_baidu.png
-	sed -i -e 's/>Baidu</>Google</' $2/res/values/strings.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
