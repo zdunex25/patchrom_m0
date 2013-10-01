@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:orientation="vertical" android:id="@id/widget_type" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/widget_type_album" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/widget_type_album" android:layout_weight="1.0" />
+    <RadioButton android:id="@id/widget_type_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/widget_type_photo" android:layout_weight="1.0" />
+    <RadioButton android:id="@id/widget_type_shuffle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/widget_type_shuffle" android:layout_weight="1.0" />
+    <View android:background="?android:dividerHorizontal" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="0.0" />
+    <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@*android:string/cancel" android:layout_weight="0.0" style="?android:attr/buttonBarButtonStyle" />
+</RadioGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/configuration_options" android:summary="@string/configue_different_options">
+        <CheckBoxPreference android:title="@string/start_at_boot" android:key="autoinicio" android:summary="@string/run_hovering_controls_when_booting" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/vibrate" android:key="vibrate" android:summary="@string/vibrate_when_action_is_detected" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/stop_screen_off" android:key="stopScreenOff" android:summary="@string/stop_detecting_when_screen_off_quickglance_and_music_controls_will_stop_" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/hide_notification_icon" android:key="hidenotificon" android:summary="@string/if_active_android_may_stop_the_service_to_free_memory_if_needed_it_will_restart_automatically_" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/_beta_music_video_controls" android:key="musicControls" android:summary="@string/_beta_allows_to_control_music_and_video_players_even_with_screen_off_feature_not_yet_finished" android:defaultValue="false" />
+        <Preference android:title="@string/select_video_player" android:key="videoplayer" android:summary="@string/select_your_default_video_player_for_media_controls" />
+        <CheckBoxPreference android:title="@string/silence_alarm" android:key="silenceAlarm" android:summary="@string/silence_the_alarm_with_one_slide" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/phone_call_options">
+        <CheckBoxPreference android:title="@string/auto_answer" android:key="colgarDescolgar" android:summary="@string/put_your_phone_in_your_ear_to_answer_a_call_it_uses_an_event_similar_to_hover_hold_" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/silence_incoming_call" android:key="silenceCall" android:summary="@string/silence_ringing_call_with_slide_once" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/speakerphone_shake" android:key="shakeAltavoz" android:summary="@string/shake_phone_while_in_a_call_to_set_speakerphone_on_off" android:defaultValue="false" />
+        <CheckBoxPreference android:enabled="false" android:title="Shake to Reject (Disabled)" android:key="shakeReject" android:summary="Shake phone to reject a call: Disabled because it needs a permission i dont like (shows as Services that cost you money)" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/lockscreen_quickglance">
+        <CheckBoxPreference android:title="@string/show_lockscreen_info" android:key="screenoffInfo" android:summary="@string/show_lockscreen_without_unlocking_with_1_wave" android:defaultValue="false" />
+        <CheckBoxPreference android:enabled="false" android:title="@string/show_quickglance" android:key="quickGlance" android:summary="@string/show_quickglance_window_instead_of_lockscreen" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/unlock_phone" android:key="screenoffUnlock" android:summary="@string/unlock_phone_with_two_slides" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/lock_screen_with_hover_hold" android:key="screenLock" android:summary="@string/locks_the_screen_this_will_override_hover_hold_app_and_media_player_pause_" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/orientation_camera_pause">
+        <CheckBoxPreference android:title="@string/pause_in_camera" android:key="pauseCamera" android:summary="@string/pause_events_when_in_camera_app_music_controls_not_affected_" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/pause_in_landscape" android:key="pauseLandscape" android:summary="@string/pause_events_when_screen_orientation_is_landscape" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/only_hover_hold" android:key="pauseOnlyHold" android:summary="@string/only_pause_hover_hold_when_landscape" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/root_options" android:summary="@string/root_needed_options">
+        <CheckBoxPreference android:enabled="false" android:title="@string/camera_autoshoot" android:key="autoCamera" android:summary="@string/shoot_camera_with_hover_hold_disabled_until_future_updates_" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/browser_navigation" android:key="autoBrowser" android:summary="@string/allow_slide_up_down_with_browser_1_slide_down_2_slide_up" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/gallery_slider" android:key="autoGallery" android:summary="@string/allow_image_slide_with_gallery_1_slide_next_2_slide_previous" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

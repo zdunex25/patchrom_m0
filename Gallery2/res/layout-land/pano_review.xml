@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/pano_review_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:text="@string/pano_review_rendering" style="@style/PanoViewHorizontalBar" />
+    <ImageView android:id="@id/pano_reviewarea" android:layout_width="fill_parent" android:layout_height="@dimen/pano_mosaic_surface_height" android:scaleType="fitCenter" />
+    <RelativeLayout style="@style/PanoViewHorizontalBar">
+        <com.android.camera.ui.RotateLayout android:id="@id/pano_saving_progress_bar_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <com.android.camera.PanoProgressBar android:id="@id/pano_saving_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pan_progression" android:layout_centerInParent="true" />
+        </com.android.camera.ui.RotateLayout>
+        <com.android.camera.ui.RotateImageView android:id="@id/pano_review_cancel_button" android:src="@drawable/ic_menu_cancel_holo_light" android:layout_alignParentRight="true" android:layout_centerHorizontal="false" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_review_cancel" style="@style/ReviewControlIcon" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="16" android:versionName="1.0.6" package="com.android.updater"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16" />
+    <permission android:name="com.android.updater.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.updater.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application android:theme="@miui:style/V5.Theme.Light" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:hardwareAccelerated="true">
+        <activity android:label="@string/app_name" android:name=".OTAUpdaterActivity">
+            <intent-filter>
+                <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.android.updater" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.android.updater.GCMIntentService" />
+        <receiver android:name="com.android.updater.UpdateCheckReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/menu_view" android:name=".ListFilesActivity" />
+        <activity android:label="@string/about_title" android:name=".UpdaterAbout" />
+        <activity android:label="@string/contributors_title" android:name=".Contributors" />
+        <activity android:label="@string/license_title" android:name=".License" />
+        <activity android:label="@string/menu_settings" android:name="com.android.updater.UpdaterSettings" />
+    </application>
+</manifest>

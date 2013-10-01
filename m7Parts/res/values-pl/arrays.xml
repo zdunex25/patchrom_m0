@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="NavBarSizeNames">
+        <item>Domyślny rozmiar</item>
+        <item>0 dip</item>
+        <item>24 dip</item>
+        <item>36 dip</item>
+        <item>48 dip</item>
+    </string-array>
+    <string-array name="NavBarUses">
+        <item>Domyślnie dla romu</item>
+        <item>Wyłaczone</item>
+        <item>Włączone</item>
+    </string-array>
+    <string-array name="StatusBarTypes5">
+        <item>Domyślnie dla romu</item>
+        <item>Domyślnie dla miui</item>
+    </string-array>
+    <string-array name="TrackTypes">
+        <item>Następny utwór</item>
+        <item>Poprzedni utwór</item>
+    </string-array>
+</resources>

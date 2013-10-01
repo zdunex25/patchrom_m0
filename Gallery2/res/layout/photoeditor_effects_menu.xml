@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/photoeditor_actionbar_translucent_bottom" style="@style/ActionBarInner"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/toggles" style="@style/EffectsMenuContainer">
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/exposure_button" android:src="@drawable/photoeditor_exposure" android:contentDescription="@string/photoeditor_exposure" style="@style/EffectsMenuActionButton" />
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/artistic_button" android:src="@drawable/photoeditor_artistic" android:contentDescription="@string/photoeditor_artistic" style="@style/EffectsMenuActionButton" />
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/color_button" android:src="@drawable/photoeditor_color" android:contentDescription="@string/photoeditor_color" style="@style/EffectsMenuActionButton" />
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/fix_button" android:src="@drawable/photoeditor_fix" android:contentDescription="@string/photoeditor_fix" style="@style/EffectsMenuActionButton" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/PowerString">
+        <PreferenceCategory android:title="@string/ExRebootString">
+            <CheckBoxPreference android:title="@string/bShowExtendedRebootOpt" android:key="m7ShowRecoveryOpt" android:summary="@string/sShowExtendedRebootOpt" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/ScreenShotString">
+            <CheckBoxPreference android:title="@string/bShowScreenShotOpt" android:key="m7ShowScreenShotOpt" android:summary="@string/sShowScreenShotOpt" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/TracksString">
+        <CheckBoxPreference android:title="@string/sUseVolumeButtons" android:key="m7UseVolumeButtons" android:summary="@string/sUseVolumeButtonsS" android:defaultValue="false" />
+        <PreferenceCategory android:title="@string/sVolumeUp">
+            <ListPreference android:entries="@array/TrackTypes" android:title="@string/sTypePReaction" android:key="m7VolumeUpPReaction" android:defaultValue="2" android:entryValues="@array/ReactValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sVolumeDown">
+            <ListPreference android:entries="@array/TrackTypes" android:title="@string/sTypePReaction" android:key="m7VolumeDownPReaction" android:defaultValue="1" android:entryValues="@array/ReactValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sCamera">
+            <CheckBoxPreference android:title="@string/sUseCamera" android:key="m7UseCamera" android:summary="@string/sUseCameraS" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/CallsString">
+        <PreferenceCategory android:title="@string/CallsString">
+            <CheckBoxPreference android:title="@string/bEndCallByPower" android:key="m7EndCallByPower" android:summary="@string/sEndCallByPower" android:defaultValue="false" />
+            <CheckBoxPreference android:title="@string/bGetCallByVolumeUp" android:key="m7GetCallByVolumeUp" android:summary="@string/sGetCallByVolumeUp" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/CustomString">
+        <PreferenceCategory android:title="@string/sLockScreen">
+            <CheckBoxPreference android:title="@string/bUseExtLockScreen" android:key="m7UseExtLockScreen" android:summary="@string/bUseExtLockScreenS" android:defaultValue="true" />
+            <ListPreference android:entries="@array/LockTypes" android:title="@string/sLockScrenType" android:key="m7LockScreenType" android:defaultValue="1" android:entryValues="@array/LockValues" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sStatusBar">
+            <CheckBoxPreference android:title="@string/sDisableSBonLS" android:key="m7DisableStatusBarOnLockScreen" android:summary="@string/sDisableSBonLSSum" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sVolumeExt">
+            <CheckBoxPreference android:title="@string/sVolumeExtOpt" android:key="m7VolumeExt" android:summary="@string/sVolumeExtSum" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/sNetworkName">
+            <EditTextPreference android:key="m7NetworkName" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/AboutString">
+        <PreferenceScreen android:layout="@layout/main" />
+    </PreferenceScreen>
+</PreferenceScreen>

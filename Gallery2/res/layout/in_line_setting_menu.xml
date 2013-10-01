@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.InLineSettingMenu android:background="@drawable/bg_pressed_exit_fading" style="@style/SettingRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" style="@style/SettingItemTitle" />
+    <TextView android:id="@id/current_setting" style="@style/SettingItemText" />
+</com.android.camera.ui.InLineSettingMenu>

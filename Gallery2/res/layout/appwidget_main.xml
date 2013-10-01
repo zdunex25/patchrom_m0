@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/appwidget_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@drawable/appwidget_photo_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:gravity="center" android:id="@id/appwidget_photo_item" android:layout_width="@dimen/stack_photo_width" android:layout_height="@dimen/stack_photo_height" android:text="@string/appwidget_empty_text" />
+        </FrameLayout>
+    </RelativeLayout>
+    <StackView android:id="@id/appwidget_stack_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:loopViews="true" />
+</FrameLayout>

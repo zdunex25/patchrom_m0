@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_actions">
+        <item>安装</item>
+        <item>改名</item>
+        <item>删除</item>
+    </string-array>
+    <string-array name="install_options">
+        <item>清理 Data分区</item>
+        <item>清理 Cache分区</item>
+    </string-array>
+    <string-array name="file_ages">
+        <item>1 周</item>
+        <item>2 周</item>
+        <item>1 月</item>
+        <item>3 月</item>
+        <item>6 月</item>
+        <item>1 年</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/photoeditor_actionbar_translucent" style="@style/ActionBarInner"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/ActionBarLinearLayout">
+        <LinearLayout android:id="@id/action_bar_back" style="@style/ActionBarBackLinearLayout">
+            <ImageView style="@style/ActionBarArrow" />
+            <ImageView style="@style/ActionBarIcon" />
+        </LinearLayout>
+        <TextView android:id="@id/action_bar_title" android:text="@string/edit" style="@style/ActionBarTitle" />
+    </LinearLayout>
+    <LinearLayout android:layout_alignParentRight="true" style="@style/ActionBarLinearLayout">
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/undo_button" android:src="@drawable/photoeditor_undo" android:contentDescription="@string/photoeditor_undo" style="@style/ImageActionButton" />
+        <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/redo_button" android:src="@drawable/photoeditor_redo" android:contentDescription="@string/photoeditor_redo" style="@style/ImageActionButton" />
+        <ViewSwitcher android:id="@id/save_share_buttons" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <Button android:id="@id/save_button" android:layout_width="fill_parent" android:text="@string/save" style="@style/TextActionButton" />
+            <com.android.gallery3d.photoeditor.ImageActionButton android:id="@id/share_button" android:layout_width="fill_parent" android:src="@drawable/ic_menu_share_holo_light" style="@style/ImageActionButton" />
+        </ViewSwitcher>
+    </LinearLayout>
+</RelativeLayout>

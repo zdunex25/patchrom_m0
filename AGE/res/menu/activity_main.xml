@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:title="@string/menu_settings" />
+    <item android:id="@id/testSensor" android:title="@string/title_activity_sensor_test" />
+    <!--item android:icon="@android:drawable/ic_menu_info_details" android:id="@id/info" android:title="@string/info_menu" />
+    <item android:id="@id/quickglance" android:title="@string/quickglance_example" /-->
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/dockaudio_subcat_title">
+        <CheckBoxPreference android:title="@string/use_dock_audio_title_head" android:key="dock_audio" android:summary="@string/use_dock_audio_summary_head" />
+    </PreferenceCategory>
+</PreferenceScreen>

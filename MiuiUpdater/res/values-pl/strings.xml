@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aktualizacje</string>
+    <string name="notif_text_rom">Aktualizacja ROMu dostępna</string>
+    <string name="notif_source">MIUI Updater</string>
+    <string name="alert_nodata_title">Brak połączenia z internetem!</string>
+    <string name="alert_nodata_message">"Nie masz połączenia z internetem
+Proszę włącz Wi-Fi lub dane mobilne by sprawdzić dostępność aktualizacji OTA."</string>
+    <string name="alert_nowifi_title">Brak połączenia Wi-Fi!</string>
+    <string name="alert_nowifi_message">"Korzystasz z internetu mobilnego
+Ta aplikacja pobiera dużo danych by pozyskać aktualizacje ROMu.
+Zalecane jest korzystanie z Wi-Fi w celu uniknięcia dodatkowych opłat."</string>
+    <string name="alert_wifi_settings">Ustawienia Wi-Fi</string>
+    <string name="alert_ignore">Zignoruj</string>
+    <string name="alert_exit">Wyjdź</string>
+    <string name="alert_options_title">Opcje</string>
+    <string name="alert_rename_title">Zmień nazwę pliku</string>
+    <string name="alert_rename_message">Wprowadź nową nazwę pliku</string>
+    <string name="alert_cancel">Anuluj</string>
+    <string name="alert_rename">Zmień nazwę</string>
+    <string name="alert_install_title">Instaluj z ZIP</string>
+    <string name="alert_install">Instaluj</string>
+    <string name="alert_install_message">Instalator wprowadzi urządzenie w tryb recovery by sflashować plik ZIP. Musisz to zrobić ręcznie i zrestartować telefon.</string>
+    <string name="alert_noinstall_message">"Niestety ROM na twoim urządzeniu musi zostać sflaszowany ręcznie.
+Proszę użyj odpowiedniej dla twojego urządzenia, metody flashowania ROMu
+
+Plik .zip znajduje się w: %1$s"</string>
+    <string name="alert_update_title">Aktualizacja ROMu dostępna!</string>
+    <string name="alert_download">Pobierz</string>
+    <string name="alert_downloading">Pobieranie…</string>
+    <string name="alert_unsupported_title">Niewspierany ROM</string>
+    <string name="alert_unsupported_message">"Deweloper ROMu nie dodał wsparcia OTA Updatera! Zanim użyjesz tej aplikacji!Proszę zapytaj go (grzecznie) czy nie dodałby wsparcia OTA Updatera
+
+(wartość updater.id pusta lub jej brak)"</string>
+    <string name="alert_update_to">Ta aktualizacja zaktualizuje Twój ROM (%1$s) do wersji %2$s</string>
+    <string name="alert_prune_title">Usuń pliki starsze niż</string>
+    <string name="menu_view">Pokaż pobrane</string>
+    <string name="menu_about">O aplikacji</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="menu_refresh">Odśwież</string>
+    <string name="menu_exit">Wyjdź</string>
+    <string name="menu_prune">Usuń stare pliki</string>
+    <string name="menu_donate">Oddaj darowiznę</string>
+    <string name="toast_rename">Pomyślnie zmieniono nazwę pliku</string>
+    <string name="toast_rename_error">Wystąpił problem podczas zmieniania nazwy wybranego pliku</string>
+    <string name="toast_delete">Plik usunięty pomyślnie</string>
+    <string name="toast_delete_error">Wystąpił problem podczas usuwania wybranego pliku</string>
+    <string name="toast_prune">Stary/e plik/i usunięto z powodzeniem</string>
+    <string name="toast_prune_error">Wystąpił problem podczas usuwania jednego lub więcej starych plików</string>
+    <string name="toast_no_updates">Brak dostępnych aktualizacji</string>
+    <string name="toast_fetch_error">Wystąpił błąd podczas pobierania informacji OTA</string>
+    <string name="toast_download_nospace">Zbyt mało miejsca na karcie pamięci!</string>
+    <string name="toast_download_interrupted">Pobieranie zostało przerwane!</string>
+    <string name="toast_download_md5_mismatch">Błąd sumy MD5 - pobrany plik jest nieprawidłowy!</string>
+    <string name="toast_download_error">Podczas pobierania wystąpił błąd!</string>
+    <string name="toast_nosd_shared">Twoja karta pamięci jest niedostępna - zamontowana jako pamięć masowa</string>
+    <string name="toast_nosd_error">Twoja karta pamięci jest niedostępna</string>
+    <string name="about_title">O aplikacji</string>
+    <string name="about_ota_title">OTA Updater</string>
+    <string name="about_version_title">Wersja</string>
+    <string name="about_version_unknown">Wersja nieznana (błąd w menedżerze paczek)</string>
+    <string name="main_device_info">Informacje o urządzeniu</string>
+    <string name="main_device">Urządzenie</string>
+    <string name="main_rom">Android</string>
+    <string name="main_version">Wersja MIUI</string>
+    <string name="main_otaid">ID Updatera</string>
+    <string name="main_updates">Aktualizacje</string>
+    <string name="main_avail_updates">Dostępne aktualizacje</string>
+    <string name="main_updates_none">Brak dostępnych aktualizacji</string>
+    <string name="main_updates_error">Błąd podczas pobierania informacji o aktualizacji: %1$s</string>
+    <string name="main_updates_new">Nowe aktualizacje: %1$s (wersja %2$s)</string>
+    <string name="contributors_title">Osoby wspierające</string>
+    <string name="contributors_error">Błąd podczas ładowania pliku osób wspierających</string>
+    <string name="license_title">Licencja</string>
+    <string name="license_apache_title">Licencja Apache</string>
+    <string name="license_error">Błąd przy ładowaniu pliku licencji</string>
+    <string name="settings_notifications">Ustawienia powiadomień</string>
+    <string name="display_notifications">Pokaż powiadomienia</string>
+    <string name="notify_default">Powiadomienia są włączone.</string>
+    <string name="notify_false">Powiadomienia są wyłączone.</string>
+</resources>

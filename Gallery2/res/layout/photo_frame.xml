@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="23.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/photo" android:background="@drawable/border_photo_frame_widget" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:cropToPadding="true" />
+</FrameLayout>

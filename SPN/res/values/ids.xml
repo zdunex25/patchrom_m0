@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="helloText">false</item>
+    <item type="id" name="editText1">false</item>
+    <item type="id" name="buttonSave">false</item>
+    <item type="id" name="buttonAirplaneOn">false</item>
+    <item type="id" name="buttonAirplaneOff">false</item>
+</resources>

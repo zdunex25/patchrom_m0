@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <bool name="ignore_sim_network_locked_events">true</bool>
+    <bool name="config_download_mms_always">true</bool>
+</resources>

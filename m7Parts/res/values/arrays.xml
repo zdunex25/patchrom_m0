@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="LockTypes">
+        <item>Slide SE</item>
+        <item>Slide</item>
+        <item>MultiWave</item>
+    </string-array>
+    <string-array name="LockValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="NavBarSizeNames">
+        <item>As in ROM</item>
+        <item>0 px</item>
+        <item>48 px</item>
+        <item>72 px</item>
+        <item>96 px</item>
+    </string-array>
+    <string-array name="NavBarSizeValues">
+        <item>-1</item>
+        <item>0</item>
+        <item>48</item>
+        <item>72</item>
+        <item>96</item>
+    </string-array>
+    <string-array name="NavBarUses">
+        <item>As in ROM</item>
+        <item>Disable</item>
+        <item>Enable</item>
+    </string-array>
+    <string-array name="NavBarUsesValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="RadioTypes">
+        <item>Next Station</item>
+        <item>Prev Station</item>
+    </string-array>
+    <string-array name="RadioValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="StatusBarTypes">
+        <item>System</item>
+        <item>Center</item>
+        <item>Right</item>
+    </string-array>
+    <string-array name="StatusBarValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="StatusBarTypes5">
+        <item>System</item>
+        <item>Center</item>
+    </string-array>
+    <string-array name="StatusBarValues5">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="ToggleTitles">
+        <item>Lockscreen_Unlock</item>
+        <item>Ring_Vib_Silent</item>
+        <item>Ring_Silent</item>
+        <item>Ring_Vib</item>
+    </string-array>
+    <string-array name="ToggleNames">
+        <item>com.android.systemui.LockscreenUnlock</item>
+        <item>com.android.systemui.RingVibSilentToggle</item>
+        <item>com.android.systemui.RingSilentToggle</item>
+        <item>com.android.systemui.RingVibToggle</item>
+    </string-array>
+    <string-array name="ToggleIntents">
+        <item>com.android.systemui.INTENT_GO_TO_HOMESCREEN</item>
+        <item>com.android.systemui.INTENT_RING_VIB_SILENT_TOGGLE</item>
+        <item>com.android.systemui.INTENT_RING_SILENT_TOGGLE</item>
+        <item>com.android.systemui.INTENT_RING_VIB_TOGGLE</item>
+    </string-array>
+    <string-array name="TrackTypes">
+        <item>Next Song</item>
+        <item>Prev Song</item>
+    </string-array>
+    <string-array name="ReactValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="rebootArray">
+        <item>Reboot</item>
+        <item>Quick</item>
+        <item>Recovery</item>
+        <item>Bootloader</item>
+    </string-array>
+    <string-array name="zRams">
+        <item>Disabled</item>
+        <item>32 Mb</item>
+        <item>64 Mb</item>
+        <item>96 Mb</item>
+        <item>128 Mb</item>
+        <item>192 Mb</item>
+        <item>256 Mb</item>
+    </string-array>
+    <string-array name="zRamsValues">
+        <item>0</item>
+        <item>32</item>
+        <item>64</item>
+        <item>96</item>
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+</resources>

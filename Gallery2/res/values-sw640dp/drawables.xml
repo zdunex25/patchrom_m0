@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="btn_video_shutter_recording_holo">@drawable/btn_video_shutter_recording_holo_xlarge</item>
+    <item type="drawable" name="btn_video_shutter_recording_pressed_holo">@drawable/btn_video_shutter_recording_pressed_holo_xlarge</item>
+    <item type="drawable" name="ic_effects_holo_light">@drawable/ic_effects_holo_light_xlarge</item>
+    <item type="drawable" name="ic_exposure_holo_light">@drawable/ic_exposure_holo_light_xlarge</item>
+    <item type="drawable" name="ic_flash_auto_holo_light">@drawable/ic_flash_auto_holo_light_xlarge</item>
+    <item type="drawable" name="ic_flash_off_holo_light">@drawable/ic_flash_off_holo_light_xlarge</item>
+    <item type="drawable" name="ic_flash_on_holo_light">@drawable/ic_flash_on_holo_light_xlarge</item>
+    <item type="drawable" name="ic_pan_border_fast">@drawable/ic_pan_border_fast_xlarge</item>
+    <item type="drawable" name="ic_pan_left_indicator">@drawable/ic_pan_left_indicator_xlarge</item>
+    <item type="drawable" name="ic_pan_left_indicator_fast">@drawable/ic_pan_left_indicator_fast_xlarge</item>
+    <item type="drawable" name="ic_pan_progression">@drawable/ic_pan_progression_xlarge</item>
+    <item type="drawable" name="ic_pan_right_indicator">@drawable/ic_pan_right_indicator_xlarge</item>
+    <item type="drawable" name="ic_pan_right_indicator_fast">@drawable/ic_pan_right_indicator_fast_xlarge</item>
+    <item type="drawable" name="ic_scn_holo_light">@drawable/ic_scn_holo_light_xlarge</item>
+    <item type="drawable" name="ic_settings_holo_light">@drawable/ic_settings_holo_light_xlarge</item>
+    <item type="drawable" name="ic_snapshot_border">@drawable/ic_snapshot_border_xlarge</item>
+    <item type="drawable" name="ic_switch_photo_facing_holo_light">@drawable/ic_switch_photo_facing_holo_light_xlarge</item>
+    <item type="drawable" name="ic_switch_video_facing_holo_light">@drawable/ic_switch_video_facing_holo_light_xlarge</item>
+    <item type="drawable" name="ic_timelapse_none">@drawable/ic_timelapse_none_xlarge</item>
+</resources>

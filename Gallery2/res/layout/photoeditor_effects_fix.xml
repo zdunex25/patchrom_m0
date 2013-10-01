@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/EffectsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.gallery3d.photoeditor.actions.CropAction android:tag="@string/crop_tooltip" style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_crop" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/crop" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.CropAction>
+    <com.android.gallery3d.photoeditor.actions.RedEyeAction android:tag="@string/redeye_tooltip" style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_redeye" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/redeye" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.RedEyeAction>
+    <com.android.gallery3d.photoeditor.actions.FaceliftAction style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_facelift" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/facelift" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.FaceliftAction>
+    <com.android.gallery3d.photoeditor.actions.FaceTanAction style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_facetan" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/facetan" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.FaceTanAction>
+    <com.android.gallery3d.photoeditor.actions.StraightenAction android:tag="@string/straighten_tooltip" style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_straighten" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/straighten" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.StraightenAction>
+    <com.android.gallery3d.photoeditor.actions.RotateAction android:tag="@string/rotate_tooltip" style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_rotate" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/rotate" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.RotateAction>
+    <com.android.gallery3d.photoeditor.actions.FlipAction android:tag="@string/flip_tooltip" style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_flip" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/flip" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.FlipAction>
+    <com.android.gallery3d.photoeditor.actions.SharpenAction style="@style/Effect">
+        <ImageView android:src="@drawable/photoeditor_effect_sharpen" style="@style/EffectIcon" />
+        <TextView android:id="@id/effect_label" android:text="@string/sharpen" style="@style/EffectLabel" />
+    </com.android.gallery3d.photoeditor.actions.SharpenAction>
+</LinearLayout>

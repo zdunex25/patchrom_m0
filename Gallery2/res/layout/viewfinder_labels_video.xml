@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/recording_time" android:visibility="gone" android:drawableLeft="@drawable/ic_recording_indicator" android:drawablePadding="5.0dip" style="@style/OnViewfinderLabel" />
+    <TextView android:id="@id/time_lapse_label" android:visibility="gone" android:text="@string/time_lapse_title" style="@style/OnViewfinderLabel" />
+</LinearLayout>

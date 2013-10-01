@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/on_screen_indicators" android:layout_width="80.0dip" android:layout_height="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/menu_hdr_indicator" android:src="@drawable/ic_indicator_hdr_off" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/MenuIndicator" />
+    <ImageView android:id="@id/menu_flash_indicator" android:src="@drawable/ic_indicator_flash_auto" android:layout_toRightOf="@id/menu_hdr_indicator" android:layout_alignTop="@id/menu_hdr_indicator" style="@style/MenuIndicator" />
+    <ImageView android:id="@id/menu_exposure_indicator" android:src="@drawable/ic_indicator_ev_0" android:layout_below="@id/menu_hdr_indicator" android:layout_alignLeft="@id/menu_hdr_indicator" android:layout_alignParentLeft="true" style="@style/MenuIndicator" />
+    <ImageView android:id="@id/menu_scenemode_indicator" android:src="@drawable/ic_indicator_sce_off" android:layout_toRightOf="@id/menu_exposure_indicator" android:layout_alignTop="@id/menu_exposure_indicator" style="@style/MenuIndicator" />
+</RelativeLayout>

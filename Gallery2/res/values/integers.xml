@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_video_recording_length">0</integer>
+    <integer name="softwareHDRExposureSettleTime">800</integer>
+    <integer name="albumset_rows_land">2</integer>
+    <integer name="albumset_rows_port">3</integer>
+    <integer name="album_rows_land">2</integer>
+    <integer name="album_rows_port">4</integer>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/camera_app_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/preview_module_frame_video" />
+    <RelativeLayout android:layout_centerHorizontal="true" style="@style/CameraControls">
+        <View android:id="@id/blocker" android:background="@drawable/switcher_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/switcher_size" android:layout_alignParentBottom="true" />
+        <include android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginRight="-5.0dip" android:layout_marginBottom="-2.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" layout="@layout/menu_indicators" />
+        <include layout="@layout/bg_replacement_training_message" />
+        <include android:layout_marginBottom="2.0dip" layout="@layout/review_module_control" />
+        <View android:id="@id/menu" android:layout_marginBottom="2.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@string/accessibility_menu_button" style="@style/SwitcherButton" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: Gallery2.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '10'
+  targetSdkVersion: '16'
+packageInfo:
+  cur_package: com.android.gallery3d
+  orig_package: com.android.gallery3d
+compressionType: false
