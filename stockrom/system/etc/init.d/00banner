@@ -1,0 +1,3 @@
+#!/system/bin/sh
+log -p i -t start "    SuperNexus - Google's Nexus experience on non-Nexus devices";
+
