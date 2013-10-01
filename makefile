@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_I9300.zip
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := AGE GalaxyS3Settings m7Parts MiuiUpdater VFX SPN #Gallery2
+local-modified-apps := AGE Camera GalaxyS3Settings m7Parts MiuiUpdater VFX SPN
 
 local-modified-jars := #framework_ext
 
