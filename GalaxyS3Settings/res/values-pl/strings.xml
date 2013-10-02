@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Ustawienia Galaxy S III</string>
+    <string name="app_name">Ustawienia galaxy</string>
     <string name="category_dock_title">Stacja dokująca</string>
     <string name="dockaudio_subcat_title">Dźwięk w stacji dokującej</string>
     <string name="use_dock_audio_title_head">Użyj stacji dokującej</string>

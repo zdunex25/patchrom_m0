@@ -24,6 +24,7 @@ name="framework-res.apk" certificate="build/target/product/security/platform.x50
 name="FusedLocation.apk" certificate="PRESIGNED" private_key=""
 name="Galaxy4.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="GalaxyS3Settings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="Gallery2.apk" certificate="PRESIGNED" private_key=""
 name="HoloSpiralWallpaper.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="HTMLViewer.apk" certificate="PRESIGNED" private_key=""
 name="InputDevices.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"

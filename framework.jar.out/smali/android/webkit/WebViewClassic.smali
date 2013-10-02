@@ -15452,6 +15452,65 @@
     goto :goto_2
 .end method
 
+.method public checkIfPrereadAvailable()V
+    .locals 2
+
+    .prologue
+    .line 1321
+    iget-object v0, p0, Landroid/webkit/WebViewClassic;->mWebViewCore:Landroid/webkit/WebViewCore;
+
+    const/16 v1, 0x13ba
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
+
+    .line 1322
+    return-void
+.end method
+
+.method public checkIfReadModeAvailable()V
+    .locals 3
+
+    .prologue
+    .line 1301
+    iget-object v0, p0, Landroid/webkit/WebViewClassic;->mWebViewCore:Landroid/webkit/WebViewCore;
+
+    const/16 v1, 0x1392
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->sendMessage(II)V
+
+    .line 1302
+    return-void
+.end method
+
+.method public checkIfReadModeAvailable(Z)V
+    .locals 3
+    .parameter "inSession"
+
+    .prologue
+    .line 1311
+    iget-object v1, p0, Landroid/webkit/WebViewClassic;->mWebViewCore:Landroid/webkit/WebViewCore;
+
+    const/16 v2, 0x1392
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(II)V
+
+    .line 1312
+    return-void
+
+    .line 1311
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public clearCache(Z)V
     .locals 4
     .parameter "includeDiskFiles"
@@ -16019,9 +16078,7 @@
 
     .line 3864
     :cond_6
-    iget-object v0, p0, Landroid/webkit/WebViewClassic;->mSendScroll:Landroid/webkit/WebViewClassic$SendScrollToWebCore;
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebViewClassic$SendScrollToWebCore;->send(Z)V
+    invoke-virtual {p0}, Landroid/webkit/WebViewClassic;->sendOurVisibleRect()Landroid/graphics/Rect;
 
     goto :goto_1
 
@@ -18228,6 +18285,16 @@
     const/4 v5, 0x0
 
     goto :goto_0
+.end method
+
+.method public isSelectingText()Z
+    .locals 1
+
+    .prologue
+    .line 5495
+    iget-boolean v0, p0, Landroid/webkit/WebViewClassic;->mSelectingText:Z
+
+    return v0
 .end method
 
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -20803,17 +20870,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5708
-    iget-object v1, p0, Landroid/webkit/WebViewClassic;->mSendScroll:Landroid/webkit/WebViewClassic$SendScrollToWebCore;
-
-    invoke-virtual {v1, v3}, Landroid/webkit/WebViewClassic$SendScrollToWebCore;->send(Z)V
-
     .line 5710
     iget-boolean v1, p0, Landroid/webkit/WebViewClassic;->mInOverScrollMode:Z
 
     if-nez v1, :cond_0
 
     .line 5713
+    invoke-virtual {p0}, Landroid/webkit/WebViewClassic;->sendOurVisibleRect()Landroid/graphics/Rect;
+
     invoke-virtual {p0}, Landroid/webkit/WebViewClassic;->getTitleHeight()I
 
     move-result v0
@@ -23969,7 +24033,7 @@
     goto :goto_0
 .end method
 
-.method sendOurVisibleRect()Landroid/graphics/Rect;
+.method public sendOurVisibleRect()Landroid/graphics/Rect;
     .locals 4
 
     .prologue
@@ -25774,11 +25838,7 @@
 
     .line 4728
     :cond_4
-    iget-object v2, p0, Landroid/webkit/WebViewClassic;->mSendScroll:Landroid/webkit/WebViewClassic$SendScrollToWebCore;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Landroid/webkit/WebViewClassic$SendScrollToWebCore;->send(Z)V
+    invoke-virtual {p0}, Landroid/webkit/WebViewClassic;->sendOurVisibleRect()Landroid/graphics/Rect;
 
     goto :goto_0
 .end method

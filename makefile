@@ -27,7 +27,7 @@ local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calenda
 local-density := XHDPI
 
 # All apps need to be removed from original ZIP file
-local-remove-apps   := SystemUI Stk Launcher2 VideoEditor PicoTts VoiceDialer \
+local-remove-apps   := SystemUI Gallery2 Stk Launcher2 VideoEditor PicoTts VoiceDialer \
 		HoloSpiralWallpaper MagicSmokeWallpapers PhaseBeam Galaxy4 NoiseField
 
 # To include the local targets before and after zip the final ZIP file, 
@@ -48,7 +48,7 @@ include $(PORT_BUILD)/porting.mk
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
-#	cp other/boot.img $(ZIP_DIR)/boot.img
+	cp other/boot.img $(ZIP_DIR)/boot.img
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons

@@ -258,8 +258,8 @@ unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
-#sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
-#package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
+sed -i -e 's/show_progress(0.200000, 10);/show_progress(0.200000, 10);\
+package_extract_file(\"boot.img\", \"\/dev\/block\/mmcblk0p5\");/' out/temp/META-INF/com/google/android/updater-script
 
 x=`date +%Y`
 y=`date +.%-m.%-d`
@@ -288,7 +288,7 @@ cp -f other/unicode.sh out/temp/system/bin/unicode.sh
 find other -name "unsigned-*" | xargs rm -f
 find other -name "signed-*" | xargs rm -f
 
-#cp other/extras/gapps/*.apk out/temp/system/app
+cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
 cp -f ../miuipolska/Polish/extras/system/etc/apns-conf.xml out/temp/system/etc/apns-conf.xml
 cp -f ../miuipolska/Polish/extras/system/etc/gps.conf out/temp/system/etc/gps.conf
@@ -359,7 +359,7 @@ rm -rf 'framework_ext.jar.out'
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip" 'data' 'META-INF' 'system' #'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip" 'data' 'META-INF' 'system' 'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
