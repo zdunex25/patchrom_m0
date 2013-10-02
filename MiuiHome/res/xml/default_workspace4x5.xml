@@ -200,7 +200,7 @@
         launcher:y="0" />
 <favorite
         launcher:packageName="com.miui.antispam"
-        launcher:className="com.miui.antispam.firewall.FirewallTab"
+        launcher:className="com.miui.antispam.firewall.AntiSpamTab"
         launcher:container="2"
         launcher:x="0"
         launcher:y="0" />
