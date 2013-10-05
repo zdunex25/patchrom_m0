@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi_direct_dialog_text">Share shot allows you to share photos with connected users via Wi-Fi Direct. Wi-Fi Direct connection required.</string>
+    <string name="editable_shortcut_helptext_message">You can touch and hold shortcuts to edit.</string>
+    <string name="editable_shortcut_helptext">Touch and hold icon, then drag it to edit position of shortcuts</string>
+    <string name="singleshotburst_capture_helptext">Touch and hold the camera button to take a burst shot</string>
+    <string name="PANORAMA_HELPTEXT">Tap the camera button first, and then move the device slowly in one direction.</string>
+    <string name="SHORTCUT_CHANGE_HELPTEXT">To select the shortcuts you want to use, touch and hold an icon and drag it to where you want to put it.</string>
+    <string name="SHORTCUT_RESET_HELPTEXT">Shortcuts will be reset to default settings.</string>
+</resources>

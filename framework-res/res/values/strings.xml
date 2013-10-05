@@ -32,6 +32,9 @@
     <string name="default_wallpaper_component">@null</string>
     <string name="config_networkLocationProviderPackageName">com.google.android.location</string>
     <string name="config_geocodeProviderPackageName">com.google.android.location</string>
+    <string name="config_networkLocationProvider1">com.google.android.location.NetworkLocationProvider</string>
+    <string name="config_networkLocationProvider2">com.android.location.service.NetworkLocationProvider</string>
+    <string name="config_geocodeProvider">com.android.location.service.GeocodeProvider</string>
     <string name="config_datause_iface">pdp0</string>
     <string name="config_default_dns_server">8.8.8.8</string>
     <string name="gsm_alphabet_default_charset" />

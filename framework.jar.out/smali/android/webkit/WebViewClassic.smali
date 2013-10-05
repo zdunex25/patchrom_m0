@@ -428,6 +428,8 @@
 
 .field private mHistoryWidth:I
 
+.field private mHitHandle:Z
+
 .field private mHorizontalScrollBarMode:I
 
 .field private mInOverScrollMode:Z
@@ -1322,6 +1324,8 @@
     invoke-direct {v0, v1, v3}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     iput-object v0, p0, Landroid/webkit/WebViewClassic;->mScrollFilter:Landroid/graphics/DrawFilter;
+
+    iput-boolean v3, p0, Landroid/webkit/WebViewClassic;->mHitHandle:Z
 
     .line 4700
     iput-boolean v3, p0, Landroid/webkit/WebViewClassic;->mDrawHistory:Z
@@ -18123,6 +18127,16 @@
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->invokeZoomPicker()V
 
     goto :goto_0
+.end method
+
+.method public isHitSelectionHandle()Z
+    .locals 1
+
+    .prologue
+    .line 5487
+    iget-boolean v0, p0, Landroid/webkit/WebViewClassic;->mHitHandle:Z
+
+    return v0
 .end method
 
 .method public isPaused()Z

@@ -190,6 +190,11 @@
     <string name="turn_off_radio">Wyłącz połączenia bezprzewodowe</string>
     <string name="screen_lock">Blokada ekranu</string>
     <string name="power_off">Wyłącz</string>
+    <string name="reboot_reboot">Normalnie</string>
+    <string name="reboot_recovery">W Recovery</string>
+    <string name="reboot_download">W trybie Odin</string>
+    <string name="reboot_progress">Ponowne uruchamianie…</string>
+    <string name="reboot_confirm">Telefon zostanie uruchomiony ponownie.</string>
     <string name="silent_mode_silent">Dzwonek wyłączony</string>
     <string name="silent_mode_vibrate">Dzwonek z wibracjami</string>
     <string name="silent_mode_ring">Dzwonek włączony</string>

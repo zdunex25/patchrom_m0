@@ -420,7 +420,7 @@ rm -rf WeatherProvider
 rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
-rm -rf ../miui/src/frameworks/miui/core/res/res/values-pl-rPL
+find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
 mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom

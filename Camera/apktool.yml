@@ -1,13 +1,13 @@
 version: 1.5.2
-apkFileName: Gallery2.apk
+apkFileName: SamsungCamera.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
 sdkInfo:
-  minSdkVersion: '10'
-  targetSdkVersion: '16'
+  minSdkVersion: '17'
+  targetSdkVersion: '17'
 packageInfo:
-  cur_package: com.android.gallery3d
-  orig_package: com.android.gallery3d
+  cur_package: com.android.camera
+  orig_package: com.sec.android.app.camera
 compressionType: false

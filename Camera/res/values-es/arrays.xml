@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="barge_in_commands">
+        <item>Sonrisa</item>
+        <item>Patata</item>
+        <item>Capturar</item>
+        <item>Disparar</item>
+    </string-array>
+</resources>
