@@ -236,8 +236,8 @@
         launcher:x="2"
         launcher:y="0" />
 <favorite
-        launcher:packageName="com.android.camera"
-        launcher:className="com.android.camera.Camera"
+        launcher:packageName="com.sec.android.app.camera"
+        launcher:className="com.sec.android.app.camera.Camera"
         launcher:container="-101"
         launcher:x="3"
         launcher:y="0" />

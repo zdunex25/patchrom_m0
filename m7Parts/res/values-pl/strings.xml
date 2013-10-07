@@ -68,7 +68,7 @@
     <string name="m7ShowClockSum">Pokazuje zegar w pasku statusu</string>
     <string name="m7ShowOperatorOpt">Pokaż operatora</string>
     <string name="m7ShowOperatorSum">Pokazuje nazwę operatora w pasku statusu</string>
-    <string name="sNetworkName">Nazwa sieci</string>
+    <string name="sNetworkName">Android ID</string>
     <string name="sZRamGeneral">WYbierz wielkość ZRam i AKCEPTUJ albo ZAPISZ. AKCEPTUJ działa do kolejnego uruchomienia telefonu. ZAPISZ zapisuje w boot-script.</string>
     <string name="sZRamApply">Akceptuj</string>
     <string name="sZRamWrite">Zapisz</string>

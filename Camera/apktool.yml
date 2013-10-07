@@ -8,6 +8,6 @@ sdkInfo:
   minSdkVersion: '17'
   targetSdkVersion: '17'
 packageInfo:
-  cur_package: com.android.camera
+  cur_package: com.sec.android.app.camera
   orig_package: com.sec.android.app.camera
 compressionType: false

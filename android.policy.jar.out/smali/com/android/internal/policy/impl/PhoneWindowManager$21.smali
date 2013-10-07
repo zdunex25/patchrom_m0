@@ -66,7 +66,7 @@
 
     const/4 v4, 0x3
 
-    invoke-direct {v2, p0, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager$20$1;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager$20;Landroid/content/Context;I)V
+    invoke-direct {v2, p0, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager$21$1;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager$21;Landroid/content/Context;I)V
 
     iput-object v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
