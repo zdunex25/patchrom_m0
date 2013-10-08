@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">7 Parts</string>
+    <string name="app_name">Control panel</string>
     <string name="ShowRebootOpt">Show reboot</string>
     <string name="RebootString">Reboot</string>
     <string name="TracksString">Tracks</string>
     <string name="CallsString">Calls</string>
-    <string name="AboutString">About &amp; Author</string>
+    <string name="AboutString">About</string>
     <string name="RecoveryString">Recovery</string>
     <string name="bShowRebootOpt">Show reboot</string>
     <string name="sShowRebootOpt">If not enabled - framework-res.apk does not contain STRINGS reboot or reboot_system, and ICON ic_lock_reboot.</string>
@@ -28,8 +28,8 @@
     <string name="About1">Mod creator is:</string>
     <string name="About2">7OH @ 4pda.ru</string>
     <string name="About3">7OH @ xda-developers.com</string>
-    <string name="About4">If you like this mod, You can donate for author for future works to:</string>
-    <string name="CustomString">Custom</string>
+    <string name="About4">Clicking here will move you to advanced statistics tab..</string>
+    <string name="CustomString">Statusbar</string>
     <string name="sLockScreen">LockScreen</string>
     <string name="sLockScrenType">LockScreen Type</string>
     <string name="sStatusBar">StatusBar</string>
@@ -43,7 +43,7 @@
     <string name="NavBarResfresh">Refresh</string>
     <string name="NavBarEnable">Enable</string>
     <string name="NavBarDisable">Disable</string>
-    <string name="sNavBar">NavBar Buttons</string>
+    <string name="sNavBar">On screen buttons</string>
     <string name="sNavBarDescr">Changing some options require ROOT rights and Results You can saw ONLY after reboot your phone.</string>
     <string name="PowerString">Power Menu</string>
     <string name="ScreenShotString">ScreenShot</string>
@@ -58,16 +58,17 @@
     <string name="sNavBarSizeTitle">Size of NavBar</string>
     <string name="sHeight">Height</string>
     <string name="sWidth">Width</string>
-    <string name="sStatusBarType">Align of Clock</string>
-    <string name="sAlign">Clock in StatusBar</string>
+    <string name="sStatusBarType">Statusbar layout</string>
+    <string name="sAlign">Icons in statusbar</string>
     <string name="RestartXString">Restart X</string>
     <string name="rebootMenuT">Reboot phone</string>
-    <string name="sNavBarEnable">NavBar On\\Off</string>
+    <string name="sNavBarDesc">Navbar</string>
+    <string name="sNavBarEnable">Navbar state</string>
     <string name="m7ShowClockOpt">Show Clock</string>
     <string name="m7ShowClockSum">Show Clock in StatusBar</string>
     <string name="m7ShowOperatorOpt">Show Operator</string>
     <string name="m7ShowOperatorSum">Show operators name in StatusBar</string>
-    <string name="sNetworkName">NetWork Name</string>
+    <string name="sNetworkName">Android ID</string>
     <string name="sZRamGeneral">Select ZRam size and press APPLY or WRITE. APPLY will try to apply on the fly. WRITE will write to boot-script.</string>
     <string name="sZRamApply">Apply</string>
     <string name="sZRamWrite">Write</string>

@@ -11,11 +11,11 @@
         <item>3</item>
     </string-array>
     <string-array name="NavBarSizeNames">
-        <item>As in ROM</item>
-        <item>0 px</item>
-        <item>48 px</item>
-        <item>72 px</item>
-        <item>96 px</item>
+        <item>Default size</item>
+        <item>0 dip</item>
+        <item>24 dip</item>
+        <item>36 dip</item>
+        <item>48 dip</item>
     </string-array>
     <string-array name="NavBarSizeValues">
         <item>-1</item>
@@ -25,9 +25,9 @@
         <item>96</item>
     </string-array>
     <string-array name="NavBarUses">
-        <item>As in ROM</item>
-        <item>Disable</item>
-        <item>Enable</item>
+        <item>Default for rom</item>
+        <item>Disabled</item>
+        <item>Enabled</item>
     </string-array>
     <string-array name="NavBarUsesValues">
         <item>0</item>
@@ -53,8 +53,8 @@
         <item>2</item>
     </string-array>
     <string-array name="StatusBarTypes5">
-        <item>System</item>
-        <item>Center</item>
+        <item>Default for rom</item>
+        <item>Default for miui</item>
     </string-array>
     <string-array name="StatusBarValues5">
         <item>0</item>
