@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="supported_locale" translatable="false">
+        <item>zh_CN</item>
+        <item>zh_TW</item>
+        <item>en_US</item>
+        <item>pl_PL</item>
+    </string-array>
     <bool name="enable_magnifier_when_input">false</bool>
     <integer name="config_screen_on_proximity_sensor_first_change_delay">1000</integer>
 </resources>

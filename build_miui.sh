@@ -193,7 +193,6 @@ rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/mediatek-res
 rm -rf pl/MIUIStats
-rm -rf pl/MiWallpaper
 rm -rf pl/MtkBt
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
@@ -215,6 +214,8 @@ sed -i -e 's/<resources>/<resources>\
     <\/string-array>/' pl/Browser/res/values-pl/arrays.xml
 sed -i -e 's/>Baidu</>Google</' pl/Browser/res/values-pl/strings.xml
 cp -u -r pl/BugReport/* ../BugReport
+mkdir ../MiuiHome/res/values-pl
+grep -v '        <item>Obrót</item>' 'pl/MiuiHome/res/values-pl/arrays.xml' >> '../MiuiHome/res/values-pl/arrays.xml'
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms
@@ -233,9 +234,6 @@ cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
 cp -u -r pl/XiaomiServiceFramework/* ../XiaomiServiceFramework
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
-cp -f ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml ../other/arrays.xml
-sed -i -e 's/<item>en_US<\/item>/<item>en_US<\/item>\
-        <item>pl_PL<\/item>/' ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml
 rm -rf pl/Bluetooth
 rm -rf pl/BugReport
 rm -rf pl/MiuiHome
@@ -386,8 +384,9 @@ rm -rf MiuiHome/res/drawable-pl-xhdpi
 rm -rf MiuiHome/res/values-pl
 rm -rf MiuiSystemUI/res/values-pl
 rm -rf MiuiSystemUI/res/values/public.xml
-rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
+rm -rf MiuiSystemUI/smali
 rm -rf MiuiVideoPlayer
+rm -rf MiWallpaper
 rm -f Mms/AndroidManifest.xml
 rm -rf Mms/res/raw-pl
 rm -rf Mms/res/values-pl
@@ -421,7 +420,6 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
 find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
-mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip" "miuigalaxy-v5-sgs3-$version-4.2.zip"
@@ -431,9 +429,10 @@ md5=`md5sum miuigalaxy-v5-sgs3-$version-4.2.zip | cut -d" " -f1`
 size=`du -sh md5sum miuigalaxy-v5-sgs3-$version-4.2.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
 LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
-MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version-4.2.zip"
-MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" ota="'$ota'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
+forum="<a href=\"link\">Dyskusja na forum</a>"
+#MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version-4.2.zip"
+#MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
+echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" ota="'$ota'" informacje="'$forum'" status="" link="'$LINK_PL'" mirror1="" mirror2="" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.2.zip has been created in root of m0 directory, copy to sd and flash it!"

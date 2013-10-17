@@ -428,8 +428,6 @@
 
 .field private mHistoryWidth:I
 
-.field private mHitHandle:Z
-
 .field private mHorizontalScrollBarMode:I
 
 .field private mInOverScrollMode:Z
@@ -1324,8 +1322,6 @@
     invoke-direct {v0, v1, v3}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     iput-object v0, p0, Landroid/webkit/WebViewClassic;->mScrollFilter:Landroid/graphics/DrawFilter;
-
-    iput-boolean v3, p0, Landroid/webkit/WebViewClassic;->mHitHandle:Z
 
     .line 4700
     iput-boolean v3, p0, Landroid/webkit/WebViewClassic;->mDrawHistory:Z
@@ -18133,8 +18129,7 @@
     .locals 1
 
     .prologue
-    .line 5487
-    iget-boolean v0, p0, Landroid/webkit/WebViewClassic;->mHitHandle:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -25387,6 +25382,37 @@
     return-void
 .end method
 
+.method public setProxy(Ljava/lang/String;I)V
+    .locals 3
+    .parameter "host"
+    .parameter "port"
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/16 v1, 0xc1
+
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    invoke-static {v1, v2}, Landroid/webkit/WebViewCore;->sendStaticMessage(ILjava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance v0, Landroid/net/ProxyProperties;
+
+    invoke-direct {v0, p1, p2, v2}, Landroid/net/ProxyProperties;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .local v0, pp:Landroid/net/ProxyProperties;
+    invoke-static {v1, v0}, Landroid/webkit/WebViewCore;->sendStaticMessage(ILjava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
 .method public setScrollBarStyle(I)V
     .locals 1
     .parameter "style"
@@ -26370,4 +26396,11 @@
     move-result v0
 
     return v0
+.end method
+
+.method public hideFloatView()V
+    .locals 0
+
+    .prologue
+    return-void
 .end method
