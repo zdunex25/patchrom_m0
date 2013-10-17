@@ -37,6 +37,7 @@ fi
 
 if [ $1 = "BugReport" ];then
 	adjustDpi $1
+	sed -i -e 's/<category android:name=\"android.intent.category.LAUNCHER\" \/>/<!--category android:name=\"android.intent.category.LAUNCHER\" \/-->/' out/$1/AndroidManifest.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -213,6 +214,7 @@ fi
 
 if [ $1 = "XiaomiServiceFramework" ];then
 	adjustDpi $1
+	sed -i -e 's/<category android:name=\"android.intent.category.LAUNCHER\" \/>/<!--category android:name=\"android.intent.category.LAUNCHER\" \/-->/' out/$1/AndroidManifest.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 

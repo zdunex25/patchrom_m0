@@ -5,7 +5,6 @@
         <item>Classic slide (no overshoot)</item>
         <item>Crossfade</item>
         <item>Tumble</item>
-        <item>Page</item>
         <item>Cascade</item>
         <item>Cube</item>
     </string-array>
@@ -14,7 +13,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>5</item>
         <item>7</item>
         <item>4</item>
     </string-array>
