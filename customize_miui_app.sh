@@ -29,12 +29,11 @@ if [ $1 = "Bluetooth" ];then
 fi
 
 if [ $1 = "Browser" ];then
-	cp -f $2/res/drawable-xhdpi/ic_search_engine_google.png $2/res/drawable-xhdpi/ic_search_engine_baidu.png
-	cp -f $2/res/drawable-xhdpi/ic_search_logo_google.png $2/res/drawable-xhdpi/ic_search_logo_baidu.png
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
 if [ $1 = "BugReport" ];then
+	sed -i -e 's/<category android:name=\"android.intent.category.LAUNCHER\" \/>/<!--category android:name=\"android.intent.category.LAUNCHER\" \/-->/' out/$1/AndroidManifest.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -103,13 +102,16 @@ if [ $1 = "MiuiHome" ];then
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
-    sed -i -e 's/config_maxNotificationIcons\">5/config_maxNotificationIcons\">3/' $2/res/values-sw720dp/integers.xml
     $XMLMERGYTOOL $1/res/values $2/res/values
     $XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi
     appendPart $1
 fi
 
 if [ $1 = "MiuiVideoPlayer" ];then
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
+if [ $1 = "MiWallpaper" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -178,6 +180,7 @@ if [ $1 = "WeatherProvider" ];then
 fi
 
 if [ $1 = "XiaomiServiceFramework" ];then
+	sed -i -e 's/<category android:name=\"android.intent.category.LAUNCHER\" \/>/<!--category android:name=\"android.intent.category.LAUNCHER\" \/-->/' out/$1/AndroidManifest.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 

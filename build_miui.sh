@@ -4,14 +4,12 @@ export PATH=$PATH:/home/$USER/android-sdk-linux/tools:/home/$USER/android-sdk-li
 cd patchromv5
 . build/envsetup.sh
 cd m0
-mkdir BugReport
 mkdir Mms/smali/com/android/mms/data
 mkdir Mms/smali/com/android/mms/transaction
 mkdir Mms/smali/com/android/mms/ui
 mkdir MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 mkdir Settings/res/xml
 mkdir -p Settings/smali/com/android/settings
-mkdir XiaomiServiceFramework
 mkdir -p temp/pl
 cd ../miuipolska/Polish/main
 for i in * ; do cp -r "$i" "../../../m0/temp/pl/${i//\.apk/}" ; done
@@ -20,10 +18,6 @@ find pl -name "*-hdpi" | xargs rm -rf
 find pl -name "*-xxhdpi" | xargs rm -rf
 find pl -name "hdpi" | xargs rm -rf
 find pl -name "xxhdpi" | xargs rm -rf
-#'../../tools/apktool' --quiet d -t miui -f '../../miui/XHDPI/system/app/Bluetooth.apk'
-#cat 'Bluetooth/AndroidManifest.xml' | sed -e "s/android:style\/Theme.Holo.Light.DialogWhenLarge/miui:style\/V5.Theme.Light/g" \
-#				| sed -e "s/android:style\/Theme.Holo.Dialog/miui:style\/V5.Theme.Light.Dialog/g" \
-#				| sed -e "s/android:style\/Theme.Holo.Dialog.Alert/miui:style\/V5.Theme.Light.Dialog.Alert/g" > '../Bluetooth/AndroidManifest.xml'
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
 cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030030\" \/>/id=\"0x7f030030\" \/>\
@@ -167,12 +161,6 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 
     move-object\/from16 v2, v23\
 \
     invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/' > '../Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali'
-'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/BugReport.apk'
-grep -v '<action android:name="android.intent.action.MAIN" />' 'BugReport/AndroidManifest.xml' >> 'BugReport/AndroidManifest2.xml'
-grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'BugReport/AndroidManifest2.xml' >> '../BugReport/AndroidManifest.xml'
-'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/XiaomiServiceFramework.apk'
-grep -v '<action android:name="android.intent.action.MAIN" />' 'XiaomiServiceFramework/AndroidManifest.xml' >> 'XiaomiServiceFramework/AndroidManifest2.xml'
-grep -v '<category android:name="android.intent.category.LAUNCHER" />' 'XiaomiServiceFramework/AndroidManifest2.xml' >> '../XiaomiServiceFramework/AndroidManifest.xml'
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
@@ -196,7 +184,6 @@ rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/mediatek-res
 rm -rf pl/MIUIStats
-rm -rf pl/MiWallpaper
 rm -rf pl/MtkBt
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
@@ -207,24 +194,12 @@ rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
-sed -i -e 's/<resources>/<resources>\
-    <string-array name=\"baidu\">\
-        <item>Google<\/item>\
-        <item>google.com<\/item>\
-        <item>http:\/\/www.google.com\/favicon.ico<\/item>\
-        <item>http:\/\/www.google.com\/search?hl={language}\&amp;ie={inputEncoding}\&amp;source=android-browser\&amp;q={searchTerms}<\/item>\
-        <item>UTF-8<\/item>\
-        <item>http:\/\/api.bing.com\/osjson.aspx?query={searchTerms}\&amp;language={language}<\/item>\
-    <\/string-array>/' pl/Browser/res/values-pl/arrays.xml
-sed -i -e 's/>Baidu</>Google</' pl/Browser/res/values-pl/strings.xml
-cp -u -r pl/BugReport/* ../BugReport
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms
 sed -i -e 's/\"no_effect\">Płaski/\"no_effect\">ViPER FX/' pl/Music/res/values-pl/strings.xml
 cp -u -r pl/Music/* ../Music
 cp -u -r pl/Phone/* ../Phone
-sed -i -e 's/>Efekty muzyczne/>Equalizer MIUI/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
@@ -234,11 +209,7 @@ cp -u -r pl/Settings/* ../Settings
 cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
-cp -u -r pl/XiaomiServiceFramework/* ../XiaomiServiceFramework
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
-cp -f ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml ../other/arrays.xml
-sed -i -e 's/<item>en_US<\/item>/<item>en_US<\/item>\
-        <item>pl_PL<\/item>/' ../../miui/src/frameworks/miui/core/res/res/values/arrays.xml
 sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruchom w recovery<\/string>\
   <string name=\"android_factorytest_download\">Tryb odin<\/string>\
 <\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
@@ -247,7 +218,6 @@ sed -i -e 's/<public type=\"string\" name=\"login_website_in_case_forget_passwor
     <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0258\"\/>\
     <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0259\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
-rm -rf pl/BugReport
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
 rm -rf pl/Mms
@@ -255,7 +225,6 @@ rm -rf pl/Music
 rm -rf pl/Phone
 rm -rf pl/Settings
 rm -rf pl/ThemeManager
-rm -rf pl/XiaomiServiceFramework
 rm -rf pl/framework-miui-res
 cp -u -r pl/* ..
 cd ..
@@ -394,7 +363,6 @@ fi
 cd m0
 rm -rf AntiSpam
 rm -rf Backup
-#rm -f Bluetooth/AndroidManifest.xml
 rm -rf Bluetooth/res/values-pl
 rm -rf Browser
 rm -rf BugReport
@@ -418,6 +386,7 @@ rm -rf MiuiSystemUI/res/values-pl
 rm -rf MiuiSystemUI/res/values/public.xml
 rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 rm -rf MiuiVideoPlayer
+rm -rf MiWallpaper
 rm -f Mms/AndroidManifest.xml
 rm -rf Mms/res/raw-pl
 rm -rf Mms/res/values-pl
@@ -452,7 +421,6 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
 find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
-mv -f other/arrays.xml ../miui/src/frameworks/miui/core/res/res/values
 mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom

@@ -145,6 +145,24 @@
     return-object v0
 .end method
 
+.method getViewManager()Landroid/view/ViewManager;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mViewManager:Landroid/view/ViewManager;
+
+    return-object v0
+.end method
+
+.method getKeyguardHost()Landroid/widget/FrameLayout;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mKeyguardHost:Landroid/widget/FrameLayout;
+
+    return-object v0
+.end method
+
 .method public declared-synchronized hide()V
     .locals 5
     .annotation build Landroid/annotation/MiuiHook;
@@ -680,7 +698,7 @@
     const/4 v9, -0x1
 
     .local v9, stretch:I
-    const v4, 0x100900
+    const v4, 0x100800
 
     .local v4, flags:I
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mNeedsInput:Z
@@ -777,11 +795,6 @@
 
     .line 143
     :cond_3
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
-
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit8 v1, v1, 0x8
@@ -985,12 +998,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 199
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mKeyguardHost:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v10}, Landroid/widget/FrameLayout;->setSystemUiVisibility(I)V
 
-    invoke-static {p0}, Lcom/android/internal/policy/impl/KeyguardViewManager$Injector;->updateDisplayDesktopFlag(Lcom/android/internal/policy/impl/KeyguardViewManager;)V
-
+    .line 201
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mViewManager:Landroid/view/ViewManager;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mKeyguardHost:Landroid/widget/FrameLayout;
@@ -1033,7 +1046,7 @@
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    const/4 v2, 0x1
+    const/4 v2, 0x5
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
     :try_end_1
