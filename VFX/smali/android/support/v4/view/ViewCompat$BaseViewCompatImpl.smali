@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .parameter "direction"
 
     .prologue
-    .line 86
+    .line 168
     const/4 v0, 0x0
 
     return v0
@@ -48,7 +48,7 @@
     .parameter "direction"
 
     .prologue
-    .line 89
+    .line 171
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +59,7 @@
     .parameter "view"
 
     .prologue
-    .line 138
+    .line 223
     const/4 v0, 0x0
 
     return-object v0
@@ -69,7 +69,7 @@
     .locals 2
 
     .prologue
-    .line 129
+    .line 211
     const-wide/16 v0, 0xa
 
     return-wide v0
@@ -80,7 +80,40 @@
     .parameter "view"
 
     .prologue
-    .line 132
+    .line 214
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLabelFor(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 232
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLayerType(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 229
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLayoutDirection(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 243
     const/4 v0, 0x0
 
     return v0
@@ -91,10 +124,23 @@
     .parameter "v"
 
     .prologue
-    .line 92
+    .line 174
     const/4 v0, 0x2
 
     return v0
+.end method
+
+.method public getParentForAccessibility(Landroid/view/View;)Landroid/view/ViewParent;
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 253
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public hasTransientState(Landroid/view/View;)Z
@@ -102,7 +148,7 @@
     .parameter "view"
 
     .prologue
-    .line 111
+    .line 193
     const/4 v0, 0x0
 
     return v0
@@ -114,7 +160,7 @@
     .parameter "event"
 
     .prologue
-    .line 105
+    .line 187
     return-void
 .end method
 
@@ -124,7 +170,7 @@
     .parameter "info"
 
     .prologue
-    .line 108
+    .line 190
     return-void
 .end method
 
@@ -134,8 +180,21 @@
     .parameter "event"
 
     .prologue
-    .line 102
+    .line 184
     return-void
+.end method
+
+.method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
+    .parameter "view"
+    .parameter "action"
+    .parameter "arguments"
+
+    .prologue
+    .line 220
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public postInvalidateOnAnimation(Landroid/view/View;)V
@@ -143,14 +202,14 @@
     .parameter "view"
 
     .prologue
-    .line 117
+    .line 199
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/view/View;->postInvalidateDelayed(J)V
 
-    .line 118
+    .line 200
     return-void
 .end method
 
@@ -163,7 +222,7 @@
     .parameter "bottom"
 
     .prologue
-    .line 120
+    .line 202
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v1
@@ -180,7 +239,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/view/View;->postInvalidateDelayed(JIIII)V
 
-    .line 121
+    .line 203
     return-void
 .end method
 
@@ -190,14 +249,14 @@
     .parameter "action"
 
     .prologue
-    .line 123
+    .line 205
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 124
+    .line 206
     return-void
 .end method
 
@@ -208,7 +267,7 @@
     .parameter "delayMillis"
 
     .prologue
-    .line 126
+    .line 208
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
@@ -217,7 +276,7 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 127
+    .line 209
     return-void
 .end method
 
@@ -227,7 +286,7 @@
     .parameter "delegate"
 
     .prologue
-    .line 99
+    .line 181
     return-void
 .end method
 
@@ -237,7 +296,7 @@
     .parameter "hasTransientState"
 
     .prologue
-    .line 115
+    .line 197
     return-void
 .end method
 
@@ -247,7 +306,48 @@
     .parameter "mode"
 
     .prologue
-    .line 136
+    .line 218
+    return-void
+.end method
+
+.method public setLabelFor(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "id"
+
+    .prologue
+    .line 236
+    return-void
+.end method
+
+.method public setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
+    .locals 0
+    .parameter "view"
+    .parameter "p"
+
+    .prologue
+    .line 239
+    return-void
+.end method
+
+.method public setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
+    .locals 0
+    .parameter "view"
+    .parameter "layerType"
+    .parameter "paint"
+
+    .prologue
+    .line 227
+    return-void
+.end method
+
+.method public setLayoutDirection(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "layoutDirection"
+
+    .prologue
+    .line 249
     return-void
 .end method
 
@@ -257,6 +357,6 @@
     .parameter "mode"
 
     .prologue
-    .line 96
+    .line 178
     return-void
 .end method

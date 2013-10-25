@@ -13,11 +13,11 @@
     <item type="id" name="notify">false</item>
     <item type="id" name="loadprofile">false</item>
     <item type="id" name="saveprofile">false</item>
-    <item type="id" name="modeswitch">false</item>
+    <item type="id" name="uiprefer">false</item>
     <item type="id" name="compatible">false</item>
     <item type="id" name="drvinst">false</item>
     <item type="id" name="drvstatus">false</item>
     <item type="id" name="changelog">false</item>
-    <item type="id" name="about">false</item>
     <item type="id" name="checkupdate">false</item>
+    <item type="id" name="about">false</item>
 </resources>

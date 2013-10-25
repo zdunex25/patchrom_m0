@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="2211" android:versionName="2.2.1.1" android:installLocation="auto" package="com.vipercn.viper4android"
+<manifest android:versionCode="2311" android:versionName="2.3.1.1" android:installLocation="auto" package="com.vipercn.viper4android_v2"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-sdk android:minSdkVersion="14" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -20,7 +19,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <service android:name=".service.HeadsetService" android:enabled="true" android:exported="false" />
+        <service android:name=".service.ViPER4AndroidService" android:enabled="true" android:exported="false" />
         <receiver android:name=".receiver.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

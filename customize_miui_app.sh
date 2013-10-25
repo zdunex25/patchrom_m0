@@ -135,6 +135,11 @@ if [ $1 = "PackageInstaller" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
+if [ $1 = "PaymentService" ];then
+	sed -i -e 's/<category android:name=\"android.intent.category.LAUNCHER\" \/>/<!--category android:name=\"android.intent.category.LAUNCHER\" \/-->/' out/$1/AndroidManifest.xml
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
 if [ $1 = "Phone" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi

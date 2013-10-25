@@ -21,9 +21,9 @@
     .parameter "cause"
 
     .prologue
-    .line 334
+    .line 340
     invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 335
+    .line 341
     return-void
 .end method

@@ -615,13 +615,13 @@
 
     .prologue
     .line 715
-    iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
+    const-string v0, "android.intent.action.SEND_MULTIPLE"
 
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const-string v1, "android.intent.action.SEND_MULTIPLE"
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -645,7 +645,7 @@
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.SEND"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -653,7 +653,7 @@
 
     const-string v1, "android.intent.action.SEND_MULTIPLE"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -676,13 +676,13 @@
 
     .prologue
     .line 704
-    iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
+    const-string v0, "android.intent.action.SEND"
 
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const-string v1, "android.intent.action.SEND"
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

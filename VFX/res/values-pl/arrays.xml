@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cpu_platform_fx">
-        <item>Bez VFP (PXA920)</item>
-        <item>Z VFP</item>
-        <item>CortexA8 z NEON</item>
-        <item>CortexA9/15 z NEON</item>
+    <string-array name="drvinst_prefer">
+        <item>B. wysoka jakość dźwięku</item>
+        <item>Wysoka jakość dźwięku</item>
+        <item>Oszczędność baterii</item>
     </string-array>
-    <string-array name="cpu_platform_xhifi">
-        <item>NVIDIA Tegra2</item>
-        <item>CortexAx z NEON</item>
+    <string-array name="ui_prefer">
+        <item>Początkujący</item>
+        <item>Standardowy</item>
+        <item>Zaawansowany</item>
     </string-array>
     <string-array name="compatible_mode">
         <item>Normalny</item>
@@ -37,6 +37,23 @@
         <item>Poziom 8</item>
         <item>Poziom 9</item>
         <item>Mocna</item>
+    </string-array>
+    <string-array name="conv_cross_channel">
+        <item>0 Procent</item>
+        <item>5 Procent</item>
+        <item>10 Procent</item>
+        <item>15 Procent</item>
+        <item>20 Procent</item>
+        <item>25 Procent</item>
+        <item>30 Procent</item>
+        <item>35 Procent</item>
+        <item>40 Procent</item>
+        <item>45 Procent</item>
+        <item>50 Procent</item>
+        <item>55 Procent</item>
+        <item>60 Procent</item>
+        <item>70 Procent</item>
+        <item>80 Procent</item>
     </string-array>
     <string-array name="reverb_roomsize">
         <item>25m2</item>
@@ -83,8 +100,11 @@
         <item>Mocny</item>
     </string-array>
     <string-array name="vhs_qual">
-        <item>Normalna</item>
-        <item>Wysoka</item>
+        <item>Poziom 1</item>
+        <item>Poziom 2</item>
+        <item>Poziom 3</item>
+        <item>Poziom 4</item>
+        <item>Poziom 5</item>
     </string-array>
     <string-array name="playbackgain_ratio">
         <item>Delikatna</item>

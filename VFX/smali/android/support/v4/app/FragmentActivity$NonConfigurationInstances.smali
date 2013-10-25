@@ -42,11 +42,12 @@
     .end annotation
 .end field
 
-.field loaders:Landroid/support/v4/util/SparseArrayCompat;
+.field loaders:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/util/SparseArrayCompat",
+            "Ljava/util/HashMap",
             "<",
+            "Ljava/lang/String;",
             "Landroid/support/v4/app/LoaderManagerImpl;",
             ">;"
         }
@@ -59,7 +60,7 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

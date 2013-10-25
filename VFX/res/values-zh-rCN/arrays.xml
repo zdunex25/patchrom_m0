@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cpu_platform_fx">
-        <item>没有VFP(PXA920)</item>
-        <item>带有VFP的ARM</item>
-        <item>带有NEON的A8</item>
-        <item>带有NEON的A9/15</item>
+    <string-array name="drvinst_prefer">
+        <item>顶级音质</item>
+        <item>高音质</item>
+        <item>省电优先</item>
     </string-array>
-    <string-array name="cpu_platform_xhifi">
-        <item>英伟达图睿2</item>
-        <item>带有NEON的A系列</item>
+    <string-array name="ui_prefer">
+        <item>简单界面</item>
+        <item>复杂界面</item>
+        <item>专家界面</item>
     </string-array>
     <string-array name="compatible_mode">
         <item>正常模式</item>
@@ -37,6 +37,23 @@
         <item>级别8</item>
         <item>级别9</item>
         <item>极端</item>
+    </string-array>
+    <string-array name="conv_cross_channel">
+        <item>0％</item>
+        <item>5％</item>
+        <item>10％</item>
+        <item>15％</item>
+        <item>20％</item>
+        <item>25％</item>
+        <item>30％</item>
+        <item>35％</item>
+        <item>40％</item>
+        <item>45％</item>
+        <item>50％</item>
+        <item>55％</item>
+        <item>60％</item>
+        <item>70％</item>
+        <item>80％</item>
     </string-array>
     <string-array name="reverb_roomsize">
         <item>25平米</item>
@@ -83,8 +100,11 @@
         <item>极端</item>
     </string-array>
     <string-array name="vhs_qual">
-        <item>标准质量</item>
-        <item>高质量(消耗更多的CPU)</item>
+        <item>级别1</item>
+        <item>级别2</item>
+        <item>级别3</item>
+        <item>级别4</item>
+        <item>级别5</item>
     </string-array>
     <string-array name="playbackgain_ratio">
         <item>轻微</item>

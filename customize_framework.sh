@@ -38,3 +38,19 @@ then
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
 	sed -i -e 's/http:\/\/www.miui.com\/res\/doc\/manual.html?lang=%s&miphone=%s/http:\/\/91.205.75.29\/\/zdunex25\/manual\/galaxy\/index.html/' $BUILD_OUT/framework2/smali/com/miui/internal/app/MiuiLicenseActivity.smali
 fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    for file in overlay/android.policy/*.patch
+    do
+        cp $file out/
+        cd out
+        git.apply `basename $file`
+        cd ..
+        for file2 in `find $2 -name *.rej`
+        do
+            echo "$file2 fail"
+            exit 1
+        done
+    done
+fi
