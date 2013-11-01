@@ -40,25 +40,25 @@
     .locals 2
 
     .prologue
-    .line 108
+    .line 99
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x5
 
     if-lt v0, v1, :cond_0
 
-    .line 109
+    .line 100
     new-instance v0, Landroid/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/MotionEventCompat$EclairMotionEventVersionImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
 
-    .line 113
+    .line 104
     :goto_0
     return-void
 
-    .line 111
+    .line 102
     :cond_0
     new-instance v0, Landroid/support/v4/view/MotionEventCompat$BaseMotionEventVersionImpl;
 
@@ -76,7 +76,7 @@
     .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
+    .line 75
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .parameter "pointerId"
 
     .prologue
-    .line 201
+    .line 192
     sget-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;->findPointerIndex(Landroid/view/MotionEvent;I)I
@@ -101,7 +101,7 @@
     .parameter "event"
 
     .prologue
-    .line 191
+    .line 182
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -120,27 +120,12 @@
     .parameter "event"
 
     .prologue
-    .line 183
+    .line 174
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     and-int/lit16 v0, v0, 0xff
-
-    return v0
-.end method
-
-.method public static getPointerCount(Landroid/view/MotionEvent;)I
-    .locals 1
-    .parameter "event"
-
-    .prologue
-    .line 236
-    sget-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;->getPointerCount(Landroid/view/MotionEvent;)I
-
-    move-result v0
 
     return v0
 .end method
@@ -151,7 +136,7 @@
     .parameter "pointerIndex"
 
     .prologue
-    .line 210
+    .line 201
     sget-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;->getPointerId(Landroid/view/MotionEvent;I)I
@@ -167,7 +152,7 @@
     .parameter "pointerIndex"
 
     .prologue
-    .line 219
+    .line 210
     sget-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;->getX(Landroid/view/MotionEvent;I)F
@@ -183,7 +168,7 @@
     .parameter "pointerIndex"
 
     .prologue
-    .line 228
+    .line 219
     sget-object v0, Landroid/support/v4/view/MotionEventCompat;->IMPL:Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/MotionEventCompat$MotionEventVersionImpl;->getY(Landroid/view/MotionEvent;I)F

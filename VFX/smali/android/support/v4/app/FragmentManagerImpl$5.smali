@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 991
+    .line 981
     iput-object p1, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->this$0:Landroid/support/v4/app/FragmentManagerImpl;
 
     iput-object p2, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->val$fragment:Landroid/support/v4/app/Fragment;
@@ -49,21 +49,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 994
+    .line 984
     iget-object v0, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->val$fragment:Landroid/support/v4/app/Fragment;
 
     iget-object v0, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 995
+    .line 985
     iget-object v0, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->val$fragment:Landroid/support/v4/app/Fragment;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
-    .line 996
+    .line 986
     iget-object v0, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->this$0:Landroid/support/v4/app/FragmentManagerImpl;
 
     iget-object v1, p0, Landroid/support/v4/app/FragmentManagerImpl$5;->val$fragment:Landroid/support/v4/app/Fragment;
@@ -78,7 +78,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/support/v4/app/FragmentManagerImpl;->moveToState(Landroid/support/v4/app/Fragment;IIIZ)V
 
-    .line 999
+    .line 989
     :cond_0
     return-void
 .end method
@@ -88,7 +88,7 @@
     .parameter "animation"
 
     .prologue
-    .line 1002
+    .line 992
     return-void
 .end method
 
@@ -97,6 +97,6 @@
     .parameter "animation"
 
     .prologue
-    .line 1005
+    .line 995
     return-void
 .end method

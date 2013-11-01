@@ -18,9 +18,6 @@
 .method public abstract findPointerIndex(Landroid/view/MotionEvent;I)I
 .end method
 
-.method public abstract getPointerCount(Landroid/view/MotionEvent;)I
-.end method
-
 .method public abstract getPointerId(Landroid/view/MotionEvent;I)I
 .end method
 

@@ -20,17 +20,9 @@
 
 .field public static final TYPE_ANNOUNCEMENT:I = 0x4000
 
-.field public static final TYPE_GESTURE_DETECTION_END:I = 0x80000
-
-.field public static final TYPE_GESTURE_DETECTION_START:I = 0x40000
-
 .field public static final TYPE_TOUCH_EXPLORATION_GESTURE_END:I = 0x400
 
 .field public static final TYPE_TOUCH_EXPLORATION_GESTURE_START:I = 0x200
-
-.field public static final TYPE_TOUCH_INTERACTION_END:I = 0x200000
-
-.field public static final TYPE_TOUCH_INTERACTION_START:I = 0x100000
 
 .field public static final TYPE_VIEW_ACCESSIBILITY_FOCUSED:I = 0x8000
 
@@ -87,10 +79,10 @@
     .locals 0
 
     .prologue
-    .line 184
+    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 162
     return-void
 .end method
 
@@ -100,7 +92,7 @@
     .parameter "record"
 
     .prologue
-    .line 206
+    .line 182
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-virtual {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;->getImpl()Ljava/lang/Object;
@@ -109,7 +101,7 @@
 
     invoke-interface {v0, p0, v1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->appendRecord(Landroid/view/accessibility/AccessibilityEvent;Ljava/lang/Object;)V
 
-    .line 207
+    .line 183
     return-void
 .end method
 
@@ -119,7 +111,7 @@
     .parameter "index"
 
     .prologue
-    .line 216
+    .line 192
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;
 
     sget-object v1, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
@@ -138,7 +130,7 @@
     .parameter "event"
 
     .prologue
-    .line 194
+    .line 170
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->getRecordCount(Landroid/view/accessibility/AccessibilityEvent;)I

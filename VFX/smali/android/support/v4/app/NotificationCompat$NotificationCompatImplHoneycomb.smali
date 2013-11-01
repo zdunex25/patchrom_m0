@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public build(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/app/Notification;
+.method public getNotification(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/app/Notification;
     .locals 10
     .parameter "b"
 
     .prologue
-    .line 100
+    .line 57
     iget-object v0, p1, Landroid/support/v4/app/NotificationCompat$Builder;->mContext:Landroid/content/Context;
 
     iget-object v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->mNotification:Landroid/app/Notification;

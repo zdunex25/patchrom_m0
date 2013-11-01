@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 77
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,24 +39,20 @@
     .parameter "options"
 
     .prologue
-    .line 80
-    new-instance v0, Landroid/content/Intent;
-
+    .line 79
     array-length v1, p2
 
     add-int/lit8 v1, v1, -0x1
 
-    aget-object v1, p2, v1
+    aget-object v0, p2, v1
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    .line 81
+    .line 80
     .local v0, topIntent:Landroid/content/Intent;
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 82
+    .line 81
     invoke-static {p1, p3, v0, p4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1

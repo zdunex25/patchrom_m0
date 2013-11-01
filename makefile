@@ -49,6 +49,7 @@ pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons

@@ -7,7 +7,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;,
-        Landroid/support/v4/view/KeyEventCompat$EclairKeyEventVersionImpl;,
         Landroid/support/v4/view/KeyEventCompat$BaseKeyEventVersionImpl;,
         Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
     }
@@ -23,25 +22,25 @@
     .locals 2
 
     .prologue
-    .line 140
+    .line 117
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 141
+    .line 118
     new-instance v0, Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
-    .line 145
+    .line 122
     :goto_0
     return-void
 
-    .line 143
+    .line 120
     :cond_0
     new-instance v0, Landroid/support/v4/view/KeyEventCompat$BaseKeyEventVersionImpl;
 
@@ -59,7 +58,7 @@
     .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 118
+    .line 95
     return-void
 .end method
 
@@ -69,7 +68,7 @@
     .parameter "modifiers"
 
     .prologue
-    .line 162
+    .line 139
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
@@ -88,7 +87,7 @@
     .parameter "event"
 
     .prologue
-    .line 166
+    .line 143
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
@@ -102,28 +101,13 @@
     return v0
 .end method
 
-.method public static isTracking(Landroid/view/KeyEvent;)Z
-    .locals 1
-    .parameter "event"
-
-    .prologue
-    .line 174
-    sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->isTracking(Landroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public static metaStateHasModifiers(II)Z
     .locals 1
     .parameter "metaState"
     .parameter "modifiers"
 
     .prologue
-    .line 154
+    .line 131
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->metaStateHasModifiers(II)Z
@@ -138,7 +122,7 @@
     .parameter "metaState"
 
     .prologue
-    .line 158
+    .line 135
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->metaStateHasNoModifiers(I)Z
@@ -153,7 +137,7 @@
     .parameter "metaState"
 
     .prologue
-    .line 150
+    .line 127
     sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->normalizeMetaState(I)I
@@ -161,18 +145,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public static startTracking(Landroid/view/KeyEvent;)V
-    .locals 1
-    .parameter "event"
-
-    .prologue
-    .line 170
-    sget-object v0, Landroid/support/v4/view/KeyEventCompat;->IMPL:Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;->startTracking(Landroid/view/KeyEvent;)V
-
-    .line 171
-    return-void
 .end method

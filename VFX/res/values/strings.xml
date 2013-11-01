@@ -12,10 +12,6 @@
     <string name="pref_dsp_enable">Enable</string>
     <string name="pref_effect_title">Select Effect Strength</string>
     <string name="dialog_effect">Effect Strength</string>
-    <string name="pref_force_enable_text">Force Enable V4A</string>
-    <string name="pref_force_enable_warn">"Turning on Force-Enable could solve no effect problem. 
-However in certain roms, you may get unexpected results such as no sound and cause battery drain. 
-So, use at your own risks. If such cases happen, please turn this off."</string>
     <string name="pref_fx_master_title">Master Power</string>
     <string name="pref_fx_master_summary_on">V4A-FX is powered on</string>
     <string name="pref_fx_master_summary_off">V4A-FX is powered off</string>
@@ -39,9 +35,6 @@ So, use at your own risks. If such cases happen, please turn this off."</string>
     <string name="pref_xloud_output_amplifer">Output Gain</string>
     <string name="pref_xloud_spk_lowfreq">Low Response</string>
     <string name="pref_xloud_spk_highfreq">High Response</string>
-    <string name="pref_spk_opt_title">Speaker Optimization</string>
-    <string name="pref_spk_opt_summary_on">Speaker optimization is enabled</string>
-    <string name="pref_spk_opt_summary_off">Speaker optimization is disabled</string>
     <string name="pref_equalizer_title">FIREqualizer</string>
     <string name="pref_equalizer_summary_on">FIREqualizer is enabled</string>
     <string name="pref_equalizer_summary_off">FIREqualizer is disabled</string>
@@ -86,14 +79,12 @@ So, use at your own risks. If such cases happen, please turn this off."</string>
     <string name="pref_convolver_enable">Enable</string>
     <string name="pref_convolver_knl">Impulse Response</string>
     <string name="pref_convolver_knl_title">Select Impulse Response</string>
-    <string name="pref_convolver_crosschannel">Cross Channel</string>
-    <string name="pref_convolver_crosschannel_title">Select Cross Channel</string>
     <string name="pref_vhs_title">Headphone Surround +</string>
     <string name="pref_vhs_summary_on">VHS+ is enabled</string>
     <string name="pref_vhs_summary_off">VHS+ is disabled</string>
     <string name="pref_vhs_enable">Enable</string>
-    <string name="pref_select_vhs_qual_title">Select Effect Level</string>
-    <string name="dialog_vhs_qual">Effect Level</string>
+    <string name="pref_select_vhs_qual_title">Select Effect Quality</string>
+    <string name="dialog_vhs_qual">Effect Quality</string>
     <string name="pref_colorfulmusic_title">Field Surround</string>
     <string name="pref_colorfulmusic_summary_on">Field surround is enabled</string>
     <string name="pref_colorfulmusic_summary_off">Field surround is disabled</string>
@@ -131,14 +122,13 @@ So, use at your own risks. If such cases happen, please turn this off."</string>
     <string name="eq_preset_vocal_booster">Vocal Booster</string>
     <string name="eq_preset_custom">Custom</string>
     <string name="text_ir_dir_isempty">ViPER4Android: The IR sample directory %1$s is empty.</string>
-    <string name="text_token_lost">ViPER4Android: Some program has requested the android to disable audio effects, so V4A will be temporarily disabled.</string>
+    <string name="text_token_lost">ViPER4Android: Effect control failure, try to reload the driver.</string>
     <string name="text_enabled">Enabled</string>
     <string name="text_disabled">Disabled</string>
     <string name="text_headset">Headset</string>
     <string name="text_bluetooth">Bluetooth</string>
     <string name="text_speaker">Speaker</string>
     <string name="text_showtrayicon">Show Notification</string>
-    <string name="text_hidetrayicon">Hide Notification</string>
     <string name="text_lockeffect">Lock Effect Mode</string>
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
@@ -155,24 +145,28 @@ Do not include '='"</string>
     <string name="text_profileload_ok">Profile loaded.</string>
     <string name="text_profileload_err">Can not load the profile.</string>
     <string name="text_rwsd_error">Can not read/write external storage.</string>
+    <string name="text_opensafemode">Switch to Safe Mode</string>
+    <string name="text_closesafemode">Switch to Normal Mode</string>
+    <string name="text_modeswitchok">Driver mode switch succeed, please reboot your phone.</string>
+    <string name="text_modeswitchfailed">Driver mode switch failed, please confirm busybox has been installed.</string>
+    <string name="text_su_missing">Root permission (su binary) required.</string>
+    <string name="text_busybox_missing">"Busybox not found. 
+In order to use ViPER4Android, you need to install busybox first."</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Cancel</string>
-    <string name="text_drvinst_prefer">Please choose your preference</string>
-    <string name="text_drvinst_sqdrv">"Super audio quality needs at least dual-core cpu and may speeds up battery drain. 
-Do you want continue?"</string>
+    <string name="text_select_cpu">Please select your CPU</string>
     <string name="text_drvvernotmatch">"In order to use ViPER4Android, you need to install/update the V4A driver. 
 The installation process will be done automatically. 
 Install/update now?"</string>
     <string name="text_drvuninst_confim">Do you really want to uninstall v4a driver?</string>
-    <string name="text_uiprefer">UI Setting</string>
-    <string name="text_uiprefer_dialog">Please choose your preference</string>
+    <string name="text_user_statistics">v4a.active</string>
     <string name="text_commode">FX Compatible Mode</string>
     <string name="text_drv_blank" />
     <string name="text_uninstall">Uninstall Driver</string>
     <string name="text_install">Install Driver</string>
     <string name="text_drvinst_ok">Driver installed, please reboot your phone.</string>
     <string name="text_drvuninst_ok">Driver uninstalled, please reboot your phone.</string>
-    <string name="text_drvinst_failed">Driver install failed, please comfirm your phone has been rooted and su binary installed.</string>
+    <string name="text_drvinst_failed">Driver install failed, please comfirm your phone has been rooted and busybox installed.</string>
     <string name="text_changelog">Changelog</string>
     <string name="text_drv_status">Driver Status</string>
     <string name="text_drv_status_view">"
@@ -204,15 +198,15 @@ Version %1$s (FX), Codename Beautiful.
  
 'Install Driver' - Install/Update ViPER4Android effect driver. 
 'Uninstall Driver' - Uninstall ViPER4Android effect driver. 
+'Switch to Safe Mode' - Switch the driver to compatible with OpenSL arch. 
+'Switch to Normal Mode' - Switch the driver to unique arch. 
 'FX Compatible Mode' - Set effect compatible mode. 
  'Normal' - Make ViPER4Android as a global effect. 
  'Compatible' - Make ViPER4Android as a local effect. 
  
 "<b>Do you got no v4a effect on all/most mediaplayers?</b>" 
- You can switch the fx mode to compatible then restart your phone and try again. 
- 
-"<b>How to change audio quality?</b>" 
- Uninstall driver in menu then restart your phone and choose the quality you want. 
+ You can switch the driver to safe mode (Switch to Safe Mode) and try again. 
+ If still got no effect, you can switch the fx mode to compatible and try again. 
  
 "<b>Forum: http://forum.xda-developers.com/showthread.php?t=2191223</b>" "</string>
     <string name="text_forum_link">http://forum.xda-developers.com/showthread.php?t=2191223</string>

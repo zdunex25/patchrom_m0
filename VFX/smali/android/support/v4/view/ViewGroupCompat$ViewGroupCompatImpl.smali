@@ -17,6 +17,3 @@
 # virtual methods
 .method public abstract onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 .end method
-
-.method public abstract setMotionEventSplittingEnabled(Landroid/view/ViewGroup;Z)V
-.end method

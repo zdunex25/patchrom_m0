@@ -214,9 +214,9 @@ sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruch
   <string name=\"android_factorytest_download\">Tryb odin<\/string>\
 <\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"login_website_in_case_forget_password\" id=\"0x060c0257\"\/>/<public type=\"string\" name=\"login_website_in_case_forget_password\" id=\"0x060c0257\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0258\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0259\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
+sed -i -e 's/<public type=\"string\" name=\"yellow_page_sms_disabled_in_privacy_mode\" id=\"0x060c0263\"\/>/<public type=\"string\" name=\"yellow_page_sms_disabled_in_privacy_mode\" id=\"0x060c0263\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0264\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0265\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -291,16 +291,16 @@ cd ../miuipolska/Polish/extras/clocks
 zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock.zip -q strings/strings_pl.xml
 zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip -q strings/strings_pl.xml
 zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip -q strings/strings_pl.xml
-cd Bateria_Prawy
+cd Prawy
 zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock.zip -q manifest.xml
 cd ../Bateria_Srodek
 zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip -q manifest.xml
-#cd ../left
-#zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip -q manifest.xml
+cd ../Bateria_Prawy
+zip ../../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip -q manifest.xml
 cd ../../../../../m0
 mv out/temp/system/media/theme/.data/content/clock_2x4/clock.zip out/temp/system/media/theme/.data/content/clock_2x4/clock.mrc
 mv out/temp/system/media/theme/.data/content/clock_2x4/clock_center.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_center.mrc
-#mv out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_left.mrc
+mv out/temp/system/media/theme/.data/content/clock_2x4/clock_left.zip out/temp/system/media/theme/.data/content/clock_2x4/clock_left.mrc
 
 mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip
 cd ../miuipolska/Polish/extras/simple_clock
@@ -337,7 +337,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0258\
+    const v3, 0x60c0264\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -347,7 +347,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0259\
+    const v3, 0x60c0265\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 

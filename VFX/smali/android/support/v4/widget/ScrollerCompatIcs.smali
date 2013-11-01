@@ -14,16 +14,13 @@
     return-void
 .end method
 
-.method public static getCurrVelocity(Ljava/lang/Object;)F
+.method public static getCurrVelocity(Landroid/widget/Scroller;)F
     .locals 1
     .parameter "scroller"
 
     .prologue
     .line 26
-    check-cast p0, Landroid/widget/OverScroller;
-
-    .end local p0
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrVelocity()F
+    invoke-virtual {p0}, Landroid/widget/Scroller;->getCurrVelocity()F
 
     move-result v0
 

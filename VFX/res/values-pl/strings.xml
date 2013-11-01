@@ -12,10 +12,6 @@
     <string name="pref_dsp_enable">Główny przełącznik</string>
     <string name="pref_effect_title">Siła efektu</string>
     <string name="dialog_effect">Wybierz siłę efektu</string>
-    <string name="pref_force_enable_text">Wymuś aktywację</string>
-    <string name="pref_force_enable_warn">"Włączenie opcji powinno rozwiązać problem z brakiem efektów.
-Jednak w kilku romach możne doprowadzić do utraty dzwięku lub wysokiego zużycia energii.
-Postępuj z rozwagą. W przypadku problemów wyłącz tą opcję."</string>
     <string name="pref_fx_master_title">ViPER4Android FX</string>
     <string name="pref_fx_master_summary_on">Włączony</string>
     <string name="pref_fx_master_summary_off">Wyłączony</string>
@@ -41,10 +37,6 @@ Postępuj z rozwagą. W przypadku problemów wyłącz tą opcję."</string>
     <string name="pref_xloud_output_amplifer">Wyjściowe wzmocnienie</string>
     <string name="pref_xloud_spk_lowfreq">Niska częstotliwość</string>
     <string name="pref_xloud_spk_highfreq">Wysoka częstotliwość</string>
-    <string name="pref_spk_opt_title">Optymalizacja</string>
-    <string name="pref_spk_opt_summary_on">Aktywna</string>
-    <string name="pref_spk_opt_summary_off">Nieaktywna</string>
-    <string name="pref_spk_opt_enable">Optymalizacja</string>
     <string name="pref_equalizer_title">Equalizer</string>
     <string name="pref_equalizer_summary_on">Aktywny</string>
     <string name="pref_equalizer_summary_off">Nieaktywny</string>
@@ -89,14 +81,12 @@ Postępuj z rozwagą. W przypadku problemów wyłącz tą opcję."</string>
     <string name="pref_convolver_enable">Convolver</string>
     <string name="pref_convolver_knl">Impulsy</string>
     <string name="pref_convolver_knl_title">Wybierz impulsy</string>
-    <string name="pref_convolver_crosschannel">Cross Channel</string>
-    <string name="pref_convolver_crosschannel_title">Wybierz Cross Channel</string>
     <string name="pref_vhs_title">Wirtualny dźwięk przestrzenny+</string>
     <string name="pref_vhs_summary_on">Aktywny</string>
     <string name="pref_vhs_summary_off">Nieaktywny</string>
     <string name="pref_vhs_enable">VHS+</string>
-    <string name="pref_select_vhs_qual_title">Poziom efektu</string>
-    <string name="dialog_vhs_qual">Wybierz poziom efektu</string>
+    <string name="pref_select_vhs_qual_title">Jakość efektu</string>
+    <string name="dialog_vhs_qual">Wybierz jakość efektu</string>
     <string name="pref_colorfulmusic_title">Dźwięk przestrzenny</string>
     <string name="pref_colorfulmusic_summary_on">Aktywny</string>
     <string name="pref_colorfulmusic_summary_off">Nieaktywny</string>
@@ -134,7 +124,7 @@ Postępuj z rozwagą. W przypadku problemów wyłącz tą opcję."</string>
     <string name="eq_preset_vocal_booster">Wzmocnienie wokalu</string>
     <string name="eq_preset_custom">Własny</string>
     <string name="text_ir_dir_isempty">Brak przykładowych impulsów w %1$s.</string>
-    <string name="text_token_lost">Niektóre programy wymagają wyłączenie swoich efektów. Do tego czasu V4A nie będzie aktywny.</string>
+    <string name="text_token_lost">Napotkano błąd, spróbuj ponownie załadować biblioteki.</string>
     <string name="text_enabled">Włączone</string>
     <string name="text_disabled">Domyślna</string>
     <string name="text_headset">Słuchawki</string>
@@ -157,22 +147,25 @@ Unikaj '='"</string>
     <string name="text_profileload_ok">Wczytano profil.</string>
     <string name="text_profileload_err">Nie można wczytać profilu.</string>
     <string name="text_rwsd_error">Nie można odczytać karty SD.</string>
+    <string name="text_opensafemode">Tryb bezpieczny</string>
+    <string name="text_closesafemode">Tryb normalny</string>
+    <string name="text_modeswitchok">Pomyślnie zmieniono tryb, zrestartuj telefon.</string>
+    <string name="text_modeswitchfailed">Błąd przy przełączaniu trybu, upewnij się, że busybox jest poprawnie zainstalowany.</string>
+    <string name="text_su_missing">Brak dostępu do uprawnień roota.</string>
+    <string name="text_busybox_missing">"Brak busyboxa. 
+ViPER4Android do poprawnego działania wymaga zainstalowanego busyboxa."</string>
     <string name="text_ok">Ok</string>
     <string name="text_cancel">Anuluj</string>
-    <string name="text_drvinst_prefer">Wybierz silnik efektów</string>
-    <string name="text_drvinst_sqdrv">"B. wysoka jakość wymaga co najmniej dwurdzeniowego procesora i może zwiększysz zużycie baterii.
-Kontynuować?"</string>
+    <string name="text_select_cpu">Wybierz procesor</string>
     <string name="text_drvvernotmatch">"Do korzystania z ViPER4Android konieczna jest instalacja/aktualizacja dodatkowych bibliotek. 
 Zainstalować/Zaktualizować je teraz?"</string>
     <string name="text_drvuninst_confim">Czy na pewno chcesz usunąć dodatkowe biblioteki?</string>
-    <string name="text_uiprefer">Interfejs</string>
-    <string name="text_uiprefer_dialog">Wybierz interfejs</string>
     <string name="text_commode">Tryb kompatybilności</string>
     <string name="text_uninstall">Usuń biblioteki</string>
     <string name="text_install">Zainstaluj biblioteki</string>
     <string name="text_drvinst_ok">Biblioteki zostały zainstalowane, zrestartuj telefon.</string>
     <string name="text_drvuninst_ok">Biblioteki zostały usunięte, zrestartuj telefon.</string>
-    <string name="text_drvinst_failed">Błąd przy instalacji bibliotek, brak roota.</string>
+    <string name="text_drvinst_failed">Błąd przy instalacji bibliotek, brak roota bądź busyboxa.</string>
     <string name="text_changelog">Lista zmian</string>
     <string name="text_drv_status">Pokaż stan</string>
     <string name="text_drv_status_view">"
@@ -197,20 +190,17 @@ Oficjalne forum: forum.vipersaudio.com
  
 Niewielkie części kodu zostały oparte o DSPManager grupy CyanogenMod. 
  
-Wersja %1$s (FX), Codename Beautiful."</string>
+Wersja %1$s (FX), Codename Beautiful. 
+"</string>
     <string name="text_help_content">"***Mini FAQ*** 
  
 'Zainstaluj biblioteki' - Instaluje/Aktualizuje biblioteki efektów. 
 'Usuń biblioteki' - Odinstalowuje biblioteki efektów. 
+'Tryb bezpieczny' - Przełącza biblioteki w tryb kompatybilny z OpenSL. 
+'Tryb normalny' - Przełącza biblioteki we własny unikatowy tryb. 
 'Tryb kompatybilności' - Wybierz tryb kompatybilności efektów. 
  'Normalny' - Efekty działają globalnie. 
  'Kompatybilny' - Efekty działają lokalnie. 
-
-"<b>Efekty V4A nie działają w Twoich odtwarzaczach?</b>" 
- Przełącz się w tryb kompatybilności i spróbuj ponownie. 
- 
-"<b>Jak zmienić jakość dźwięku?</b>" 
- Odinstaluj biblioteki w menu, zrestartuj telefon i wybierz nowy silnik efektów przy uruchamianiu aplikacji. 
  
 "<b>Masz kłopot z poprawnym działaniem efektów w odtwarzaczach?</b>" 
  Przełącz się do 'Trybu bezpiecznego' i spróbuj ponownie. 
@@ -219,7 +209,4 @@ Wersja %1$s (FX), Codename Beautiful."</string>
 "<b>Forum: http://forum.xda-developers.com/showthread.php?t=2191223</b>" "</string>
     <string name="text_checkupdate">Sprawdź aktualizacje</string>
     <string name="text_updatelink">http://miuipolska.pl/viper4android-fx-dla-miui-pl/</string>
-    <string name="text_su_missing">Brak dostępu do uprawnień roota.</string>
-    <string name="text_busybox_missing">"Brak busyboxa. 
-ViPER4Android do poprawnego działania wymaga zainstalowanego busyboxa."</string>
 </resources>

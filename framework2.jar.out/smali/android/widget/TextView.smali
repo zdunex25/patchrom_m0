@@ -28927,7 +28927,14 @@
     .parameter "tf"
 
     .prologue
-    .line 2468
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lmiui/util/UiUtils;->replaceTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    move-result-object p1
+
     iget-object v0, p0, Landroid/widget/TextView;->mTextPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
@@ -28970,36 +28977,33 @@
 
     const/4 v2, 0x0
 
-    .line 1375
     if-lez p2, :cond_4
 
-    .line 1376
     if-nez p1, :cond_1
 
-    .line 1377
     invoke-static {p2}, Landroid/graphics/Typeface;->defaultFromStyle(I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    .line 1382
     :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 1384
+    invoke-virtual {p0}, Landroid/widget/TextView;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object p1
+
     if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Landroid/graphics/Typeface;->getStyle()I
 
     move-result v1
 
-    .line 1385
     .local v1, typefaceStyle:I
     :goto_1
     xor-int/lit8 v4, v1, -0x1
 
     and-int v0, p2, v4
 
-    .line 1386
     .local v0, need:I
     iget-object v4, p0, Landroid/widget/TextView;->mTextPaint:Landroid/text/TextPaint;
 

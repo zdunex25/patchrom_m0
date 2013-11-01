@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="cpu_platform_fx">
+        <item>Without VFP (PXA920)</item>
+        <item>With VFP</item>
+        <item>CortexA8 with NEON</item>
+        <item>CortexA9/15 with NEON</item>
+    </string-array>
+    <string-array name="cpu_platform_xhifi">
+        <item>NVIDIA Tegra2</item>
+        <item>CortexAx with NEON</item>
+    </string-array>
     <string-array name="compatible_mode">
         <item>Normal</item>
         <item>Compatible</item>
@@ -73,11 +83,8 @@
         <item>Extremo</item>
     </string-array>
     <string-array name="vhs_qual">
-        <item>Nivel 1</item>
-        <item>Nivel 2</item>
-        <item>Nivel 3</item>
-        <item>Nivel 4</item>
-        <item>Nivel 5</item>
+        <item>Normal</item>
+        <item>Alto</item>
     </string-array>
     <string-array name="playbackgain_ratio">
         <item>Leve</item>

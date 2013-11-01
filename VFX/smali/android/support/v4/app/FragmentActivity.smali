@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final FRAGMENTS_TAG:Ljava/lang/String; = "android:support:fragments"
+.field private static final FRAGMENTS_TAG:Ljava/lang/String; = "android:support:fragments"
 
 .field private static final HONEYCOMB:I = 0xb
 
@@ -25,12 +25,11 @@
 
 
 # instance fields
-.field mAllLoaderManagers:Ljava/util/HashMap;
+.field mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashMap",
+            "Landroid/support/v4/util/SparseArrayCompat",
             "<",
-            "Ljava/lang/String;",
             "Landroid/support/v4/app/LoaderManagerImpl;",
             ">;"
         }
@@ -38,8 +37,6 @@
 .end field
 
 .field mCheckedForLoaderManager:Z
-
-.field final mContainer:Landroid/support/v4/app/FragmentContainer;
 
 .field mCreated:Z
 
@@ -67,577 +64,25 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 69
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 81
+    .line 80
     new-instance v0, Landroid/support/v4/app/FragmentActivity$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/app/FragmentActivity$1;-><init>(Landroid/support/v4/app/FragmentActivity;)V
 
     iput-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
-    .line 100
+    .line 99
     new-instance v0, Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-direct {v0}, Landroid/support/v4/app/FragmentManagerImpl;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    .line 101
-    new-instance v0, Landroid/support/v4/app/FragmentActivity$2;
-
-    invoke-direct {v0, p0}, Landroid/support/v4/app/FragmentActivity$2;-><init>(Landroid/support/v4/app/FragmentActivity;)V
-
-    iput-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mContainer:Landroid/support/v4/app/FragmentContainer;
-
-    .line 129
+    .line 122
     return-void
-.end method
-
-.method private dumpViewHierarchy(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/view/View;)V
-    .locals 5
-    .parameter "prefix"
-    .parameter "writer"
-    .parameter "view"
-
-    .prologue
-    .line 739
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 740
-    if-nez p3, :cond_1
-
-    .line 741
-    const-string v3, "null"
-
-    invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 757
-    :cond_0
-    return-void
-
-    .line 744
-    :cond_1
-    invoke-static {p3}, Landroid/support/v4/app/FragmentActivity;->viewToString(Landroid/view/View;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 745
-    instance-of v3, p3, Landroid/view/ViewGroup;
-
-    if-eqz v3, :cond_0
-
-    move-object v1, p3
-
-    .line 748
-    check-cast v1, Landroid/view/ViewGroup;
-
-    .line 749
-    .local v1, grp:Landroid/view/ViewGroup;
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    .line 750
-    .local v0, N:I
-    if-lez v0, :cond_0
-
-    .line 753
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "  "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 754
-    const/4 v2, 0x0
-
-    .local v2, i:I
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    .line 755
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-direct {p0, p1, p2, v3}, Landroid/support/v4/app/FragmentActivity;->dumpViewHierarchy(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/view/View;)V
-
-    .line 754
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-.end method
-
-.method private static viewToString(Landroid/view/View;)Ljava/lang/String;
-    .locals 12
-    .parameter "view"
-
-    .prologue
-    const/16 v9, 0x56
-
-    const/16 v7, 0x46
-
-    const/16 v11, 0x2c
-
-    const/16 v10, 0x20
-
-    const/16 v8, 0x2e
-
-    .line 673
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const/16 v6, 0x80
-
-    invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 674
-    .local v2, out:Ljava/lang/StringBuilder;
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 675
-    const/16 v6, 0x7b
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 676
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 677
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 678
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
-
-    move-result v6
-
-    sparse-switch v6, :sswitch_data_0
-
-    .line 682
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 684
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->isFocusable()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    move v6, v7
-
-    :goto_1
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 685
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    const/16 v6, 0x45
-
-    :goto_2
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 686
-    invoke-virtual {p0}, Landroid/view/View;->willNotDraw()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    move v6, v8
-
-    :goto_3
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 687
-    invoke-virtual {p0}, Landroid/view/View;->isHorizontalScrollBarEnabled()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    const/16 v6, 0x48
-
-    :goto_4
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 688
-    invoke-virtual {p0}, Landroid/view/View;->isVerticalScrollBarEnabled()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_6
-
-    move v6, v9
-
-    :goto_5
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 689
-    invoke-virtual {p0}, Landroid/view/View;->isClickable()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_7
-
-    const/16 v6, 0x43
-
-    :goto_6
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 690
-    invoke-virtual {p0}, Landroid/view/View;->isLongClickable()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_8
-
-    const/16 v6, 0x4c
-
-    :goto_7
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 691
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 692
-    invoke-virtual {p0}, Landroid/view/View;->isFocused()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_9
-
-    :goto_8
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 693
-    invoke-virtual {p0}, Landroid/view/View;->isSelected()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_a
-
-    const/16 v6, 0x53
-
-    :goto_9
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 694
-    invoke-virtual {p0}, Landroid/view/View;->isPressed()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    const/16 v8, 0x50
-
-    :cond_0
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 695
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 696
-    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 697
-    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 698
-    invoke-virtual {p0}, Landroid/view/View;->getTop()I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 699
-    const/16 v6, 0x2d
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 700
-    invoke-virtual {p0}, Landroid/view/View;->getRight()I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 701
-    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 702
-    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 703
-    invoke-virtual {p0}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    .line 704
-    .local v1, id:I
-    const/4 v6, -0x1
-
-    if-eq v1, v6, :cond_1
-
-    .line 705
-    const-string v6, " #"
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 706
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 707
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    .line 708
-    .local v4, r:Landroid/content/res/Resources;
-    if-eqz v1, :cond_1
-
-    if-eqz v4, :cond_1
-
-    .line 711
-    const/high16 v6, -0x100
-
-    and-int/2addr v6, v1
-
-    sparse-switch v6, :sswitch_data_1
-
-    .line 719
-    :try_start_0
-    invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 722
-    .local v3, pkgname:Ljava/lang/String;
-    :goto_a
-    invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 723
-    .local v5, typename:Ljava/lang/String;
-    invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 724
-    .local v0, entryname:Ljava/lang/String;
-    const-string v6, " "
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 725
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 726
-    const-string v6, ":"
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 727
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 728
-    const-string v6, "/"
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 729
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 734
-    .end local v0           #entryname:Ljava/lang/String;
-    .end local v3           #pkgname:Ljava/lang/String;
-    .end local v4           #r:Landroid/content/res/Resources;
-    .end local v5           #typename:Ljava/lang/String;
-    :cond_1
-    :goto_b
-    const-string v6, "}"
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 735
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    return-object v6
-
-    .line 679
-    .end local v1           #id:I
-    :sswitch_0
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_0
-
-    .line 680
-    :sswitch_1
-    const/16 v6, 0x49
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_0
-
-    .line 681
-    :sswitch_2
-    const/16 v6, 0x47
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_0
-
-    :cond_2
-    move v6, v8
-
-    .line 684
-    goto/16 :goto_1
-
-    :cond_3
-    move v6, v8
-
-    .line 685
-    goto/16 :goto_2
-
-    .line 686
-    :cond_4
-    const/16 v6, 0x44
-
-    goto/16 :goto_3
-
-    :cond_5
-    move v6, v8
-
-    .line 687
-    goto/16 :goto_4
-
-    :cond_6
-    move v6, v8
-
-    .line 688
-    goto/16 :goto_5
-
-    :cond_7
-    move v6, v8
-
-    .line 689
-    goto/16 :goto_6
-
-    :cond_8
-    move v6, v8
-
-    .line 690
-    goto/16 :goto_7
-
-    :cond_9
-    move v7, v8
-
-    .line 692
-    goto/16 :goto_8
-
-    :cond_a
-    move v6, v8
-
-    .line 693
-    goto/16 :goto_9
-
-    .line 713
-    .restart local v1       #id:I
-    .restart local v4       #r:Landroid/content/res/Resources;
-    :sswitch_3
-    :try_start_1
-    const-string v3, "app"
-
-    .line 714
-    .restart local v3       #pkgname:Ljava/lang/String;
-    goto :goto_a
-
-    .line 716
-    .end local v3           #pkgname:Ljava/lang/String;
-    :sswitch_4
-    const-string v3, "android"
-    :try_end_1
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 717
-    .restart local v3       #pkgname:Ljava/lang/String;
-    goto :goto_a
-
-    .line 730
-    .end local v3           #pkgname:Ljava/lang/String;
-    :catch_0
-    move-exception v6
-
-    goto :goto_b
-
-    .line 678
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x0 -> :sswitch_0
-        0x4 -> :sswitch_1
-        0x8 -> :sswitch_2
-    .end sparse-switch
-
-    .line 711
-    :sswitch_data_1
-    .sparse-switch
-        0x1000000 -> :sswitch_4
-        0x7f000000 -> :sswitch_3
-    .end sparse-switch
 .end method
 
 
@@ -649,26 +94,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 760
+    .line 635
     iget-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mReallyStopped:Z
 
     if-nez v0, :cond_0
 
-    .line 761
+    .line 636
     iput-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mReallyStopped:Z
 
-    .line 762
+    .line 637
     iput-boolean p1, p0, Landroid/support/v4/app/FragmentActivity;->mRetaining:Z
 
-    .line 763
+    .line 638
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 764
+    .line 639
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->onReallyStop()V
 
-    .line 766
+    .line 641
     :cond_0
     return-void
 .end method
@@ -681,14 +126,14 @@
     .parameter "args"
 
     .prologue
-    .line 646
+    .line 610
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v1, v2, :cond_0
 
-    .line 650
+    .line 614
     :cond_0
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -696,7 +141,7 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 651
+    .line 615
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -707,12 +152,12 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 652
+    .line 616
     const-string v1, " State:"
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 653
+    .line 617
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -731,7 +176,7 @@
 
     move-result-object v0
 
-    .line 654
+    .line 618
     .local v0, innerPrefix:Ljava/lang/String;
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -739,7 +184,7 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 655
+    .line 619
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mCreated:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Z)V
@@ -748,7 +193,7 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 656
+    .line 620
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mResumed:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Z)V
@@ -757,7 +202,7 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 657
+    .line 621
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Z)V
@@ -766,36 +211,36 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 658
+    .line 622
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mReallyStopped:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 659
+    .line 623
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "mLoadersStarted="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 660
+    .line 624
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 661
+    .line 625
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     if-eqz v1, :cond_1
 
-    .line 662
+    .line 626
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "Loader Manager "
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 663
+    .line 627
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
@@ -808,12 +253,12 @@
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 664
+    .line 628
     const-string v1, ":"
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 665
+    .line 629
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -836,49 +281,13 @@
 
     invoke-virtual {v1, v2, p2, p3, p4}, Landroid/support/v4/app/LoaderManagerImpl;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 667
+    .line 631
     :cond_1
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/support/v4/app/FragmentManagerImpl;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 668
-    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v1, "View Hierarchy:"
-
-    invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 669
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "  "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-direct {p0, v1, p3, v2}, Landroid/support/v4/app/FragmentActivity;->dumpViewHierarchy(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/view/View;)V
-
-    .line 670
+    .line 632
     return-void
 .end method
 
@@ -886,14 +295,14 @@
     .locals 2
 
     .prologue
-    .line 612
+    .line 576
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
 
-    .line 614
+    .line 578
     .local v0, nc:Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
     if-eqz v0, :cond_0
 
@@ -908,60 +317,60 @@
     goto :goto_0
 .end method
 
-.method getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;
+.method getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;
     .locals 2
-    .parameter "who"
+    .parameter "index"
     .parameter "started"
     .parameter "create"
 
     .prologue
-    .line 863
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 738
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
     if-nez v1, :cond_0
 
-    .line 864
-    new-instance v1, Ljava/util/HashMap;
+    .line 739
+    new-instance v1, Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v1}, Landroid/support/v4/util/SparseArrayCompat;-><init>()V
 
-    iput-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    iput-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    .line 866
+    .line 741
     :cond_0
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroid/support/v4/util/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/app/LoaderManagerImpl;
 
-    .line 867
+    .line 742
     .local v0, lm:Landroid/support/v4/app/LoaderManagerImpl;
     if-nez v0, :cond_2
 
-    .line 868
+    .line 743
     if-eqz p3, :cond_1
 
-    .line 869
+    .line 744
     new-instance v0, Landroid/support/v4/app/LoaderManagerImpl;
 
     .end local v0           #lm:Landroid/support/v4/app/LoaderManagerImpl;
-    invoke-direct {v0, p1, p0, p2}, Landroid/support/v4/app/LoaderManagerImpl;-><init>(Ljava/lang/String;Landroid/support/v4/app/FragmentActivity;Z)V
+    invoke-direct {v0, p0, p2}, Landroid/support/v4/app/LoaderManagerImpl;-><init>(Landroid/support/v4/app/FragmentActivity;Z)V
 
-    .line 870
+    .line 745
     .restart local v0       #lm:Landroid/support/v4/app/LoaderManagerImpl;
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroid/support/v4/util/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 875
+    .line 750
     :cond_1
     :goto_0
     return-object v0
 
-    .line 873
+    .line 748
     :cond_2
     invoke-virtual {v0, p0}, Landroid/support/v4/app/LoaderManagerImpl;->updateActivity(Landroid/support/v4/app/FragmentActivity;)V
 
@@ -972,7 +381,7 @@
     .locals 1
 
     .prologue
-    .line 805
+    .line 680
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     return-object v0
@@ -984,59 +393,59 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 854
+    .line 729
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 855
+    .line 730
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
-    .line 859
+    .line 734
     :goto_0
     return-object v0
 
-    .line 857
+    .line 732
     :cond_0
     iput-boolean v2, p0, Landroid/support/v4/app/FragmentActivity;->mCheckedForLoaderManager:Z
 
-    .line 858
-    const/4 v0, 0x0
+    .line 733
+    const/4 v0, -0x1
 
     iget-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
-    invoke-virtual {p0, v0, v1, v2}, Landroid/support/v4/app/FragmentActivity;->getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;
+    invoke-virtual {p0, v0, v1, v2}, Landroid/support/v4/app/FragmentActivity;->getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
-    .line 859
+    .line 734
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     goto :goto_0
 .end method
 
-.method invalidateSupportFragment(Ljava/lang/String;)V
+.method invalidateSupportFragmentIndex(I)V
     .locals 2
-    .parameter "who"
+    .parameter "index"
 
     .prologue
-    .line 837
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 712
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
     if-eqz v1, :cond_0
 
-    .line 838
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 713
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroid/support/v4/util/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/app/LoaderManagerImpl;
 
-    .line 839
+    .line 714
     .local v0, lm:Landroid/support/v4/app/LoaderManagerImpl;
     if-eqz v0, :cond_0
 
@@ -1044,15 +453,15 @@
 
     if-nez v1, :cond_0
 
-    .line 840
+    .line 715
     invoke-virtual {v0}, Landroid/support/v4/app/LoaderManagerImpl;->doDestroy()V
 
-    .line 841
-    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 716
+    iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroid/support/v4/util/SparseArrayCompat;->remove(I)V
 
-    .line 844
+    .line 719
     .end local v0           #lm:Landroid/support/v4/app/LoaderManagerImpl;
     :cond_0
     return-void
@@ -1065,22 +474,17 @@
     .parameter "data"
 
     .prologue
-    .line 147
-    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
-
-    invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
-
-    .line 148
+    .line 140
     shr-int/lit8 v1, p1, 0x10
 
-    .line 149
+    .line 141
     .local v1, index:I
     if-eqz v1, :cond_3
 
-    .line 150
+    .line 142
     add-int/lit8 v1, v1, -0x1
 
-    .line 151
+    .line 143
     iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     iget-object v2, v2, Landroid/support/v4/app/FragmentManagerImpl;->mActive:Ljava/util/ArrayList;
@@ -1099,7 +503,7 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 152
+    .line 144
     :cond_0
     const-string v2, "FragmentActivity"
 
@@ -1127,11 +531,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
+    .line 159
     :goto_0
     return-void
 
-    .line 156
+    .line 148
     :cond_1
     iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -1143,11 +547,11 @@
 
     check-cast v0, Landroid/support/v4/app/Fragment;
 
-    .line 157
+    .line 149
     .local v0, frag:Landroid/support/v4/app/Fragment;
     if-nez v0, :cond_2
 
-    .line 158
+    .line 150
     const-string v2, "FragmentActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1176,7 +580,7 @@
 
     goto :goto_0
 
-    .line 161
+    .line 153
     :cond_2
     const v2, 0xffff
 
@@ -1186,7 +590,7 @@
 
     goto :goto_0
 
-    .line 166
+    .line 158
     .end local v0           #frag:Landroid/support/v4/app/Fragment;
     :cond_3
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
@@ -1199,7 +603,7 @@
     .parameter "fragment"
 
     .prologue
-    .line 798
+    .line 673
     return-void
 .end method
 
@@ -1207,7 +611,7 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 166
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->popBackStackImmediate()Z
@@ -1216,10 +620,10 @@
 
     if-nez v0, :cond_0
 
-    .line 175
+    .line 167
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->finish()V
 
-    .line 177
+    .line 169
     :cond_0
     return-void
 .end method
@@ -1229,101 +633,104 @@
     .parameter "newConfig"
 
     .prologue
-    .line 184
+    .line 176
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 185
+    .line 177
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 186
+    .line 178
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 5
+    .locals 4
     .parameter "savedInstanceState"
 
     .prologue
-    const/4 v2, 0x0
+    .line 185
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    .line 193
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    invoke-virtual {v2, p0}, Landroid/support/v4/app/FragmentManagerImpl;->attachActivity(Landroid/support/v4/app/FragmentActivity;)V
 
-    iget-object v4, p0, Landroid/support/v4/app/FragmentActivity;->mContainer:Landroid/support/v4/app/FragmentContainer;
-
-    invoke-virtual {v3, p0, v4, v2}, Landroid/support/v4/app/FragmentManagerImpl;->attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V
-
-    .line 195
+    .line 187
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
+    invoke-virtual {v2}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    .line 196
+    .line 188
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3, p0}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
+    invoke-virtual {v2, p0}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
 
-    .line 199
+    .line 191
     :cond_0
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 201
+    .line 193
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
 
-    .line 203
+    .line 195
     .local v0, nc:Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
     if-eqz v0, :cond_1
 
-    .line 204
-    iget-object v3, v0, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->loaders:Ljava/util/HashMap;
+    .line 196
+    iget-object v2, v0, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->loaders:Landroid/support/v4/util/SparseArrayCompat;
 
-    iput-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    iput-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    .line 206
+    .line 198
     :cond_1
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    .line 207
-    const-string v3, "android:support:fragments"
+    .line 199
+    const-string v2, "android:support:fragments"
 
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 208
+    .line 200
     .local v1, p:Landroid/os/Parcelable;
     iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v2, v0, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->fragments:Ljava/util/ArrayList;
 
-    :cond_2
+    :goto_0
     invoke-virtual {v3, v1, v2}, Landroid/support/v4/app/FragmentManagerImpl;->restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V
 
-    .line 210
+    .line 202
     .end local v1           #p:Landroid/os/Parcelable;
-    :cond_3
+    :cond_2
     iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchCreate()V
 
-    .line 211
+    .line 203
     return-void
+
+    .line 200
+    .restart local v1       #p:Landroid/os/Parcelable;
+    :cond_3
+    const/4 v2, 0x0
+
+    goto :goto_0
 .end method
 
 .method public onCreatePanelMenu(ILandroid/view/Menu;)Z
@@ -1332,15 +739,15 @@
     .parameter "menu"
 
     .prologue
-    .line 218
+    .line 210
     if-nez p1, :cond_1
 
-    .line 219
+    .line 211
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
     move-result v0
 
-    .line 220
+    .line 212
     .local v0, show:Z
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -1354,26 +761,26 @@
 
     or-int/2addr v0, v1
 
-    .line 221
+    .line 213
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v1, v2, :cond_0
 
-    .line 229
+    .line 221
     .end local v0           #show:Z
     :goto_0
     return v0
 
-    .line 227
+    .line 219
     .restart local v0       #show:Z
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 229
+    .line 221
     .end local v0           #show:Z
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onCreatePanelMenu(ILandroid/view/Menu;)Z
@@ -1398,7 +805,7 @@
 
     const/4 v8, -0x1
 
-    .line 237
+    .line 229
     const-string v7, "fragment"
 
     invoke-virtual {v7, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1407,16 +814,16 @@
 
     if-nez v7, :cond_0
 
-    .line 238
+    .line 230
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v7
 
-    .line 312
+    .line 304
     :goto_0
     return-object v7
 
-    .line 241
+    .line 233
     :cond_0
     const-string v7, "class"
 
@@ -1424,7 +831,7 @@
 
     move-result-object v2
 
-    .line 242
+    .line 234
     .local v2, fname:Ljava/lang/String;
     sget-object v7, Landroid/support/v4/app/FragmentActivity$FragmentTag;->Fragment:[I
 
@@ -1432,22 +839,22 @@
 
     move-result-object v0
 
-    .line 243
+    .line 235
     .local v0, a:Landroid/content/res/TypedArray;
     if-nez v2, :cond_1
 
-    .line 244
+    .line 236
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 246
+    .line 238
     :cond_1
     invoke-virtual {v0, v10, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
-    .line 247
+    .line 239
     .local v4, id:I
     const/4 v7, 0x2
 
@@ -1455,14 +862,14 @@
 
     move-result-object v6
 
-    .line 248
+    .line 240
     .local v6, tag:Ljava/lang/String;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 250
+    .line 242
     const/4 v5, 0x0
 
-    .line 251
+    .line 243
     .local v5, parent:Landroid/view/View;
     if-eqz v5, :cond_2
 
@@ -1470,7 +877,7 @@
 
     move-result v1
 
-    .line 252
+    .line 244
     .local v1, containerId:I
     :cond_2
     if-ne v1, v8, :cond_3
@@ -1479,7 +886,7 @@
 
     if-nez v6, :cond_3
 
-    .line 253
+    .line 245
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1512,7 +919,7 @@
 
     throw v7
 
-    .line 260
+    .line 252
     :cond_3
     if-eq v4, v8, :cond_4
 
@@ -1522,34 +929,34 @@
 
     move-result-object v3
 
-    .line 261
+    .line 253
     .local v3, fragment:Landroid/support/v4/app/Fragment;
     :cond_4
     if-nez v3, :cond_5
 
     if-eqz v6, :cond_5
 
-    .line 262
+    .line 254
     iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v7, v6}, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
 
     move-result-object v3
 
-    .line 264
+    .line 256
     :cond_5
     if-nez v3, :cond_6
 
     if-eq v1, v8, :cond_6
 
-    .line 265
+    .line 257
     iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v7, v1}, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentById(I)Landroid/support/v4/app/Fragment;
 
     move-result-object v3
 
-    .line 268
+    .line 260
     :cond_6
     sget-boolean v7, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG:Z
 
@@ -1601,19 +1008,19 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
+    .line 263
     :cond_7
     if-nez v3, :cond_9
 
-    .line 272
+    .line 264
     invoke-static {p0, v2}, Landroid/support/v4/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/app/Fragment;
 
     move-result-object v3
 
-    .line 273
+    .line 265
     iput-boolean v10, v3, Landroid/support/v4/app/Fragment;->mFromLayout:Z
 
-    .line 274
+    .line 266
     if-eqz v4, :cond_8
 
     move v7, v4
@@ -1621,37 +1028,37 @@
     :goto_1
     iput v7, v3, Landroid/support/v4/app/Fragment;->mFragmentId:I
 
-    .line 275
+    .line 267
     iput v1, v3, Landroid/support/v4/app/Fragment;->mContainerId:I
 
-    .line 276
+    .line 268
     iput-object v6, v3, Landroid/support/v4/app/Fragment;->mTag:Ljava/lang/String;
 
-    .line 277
+    .line 269
     iput-boolean v10, v3, Landroid/support/v4/app/Fragment;->mInLayout:Z
 
-    .line 278
+    .line 270
     iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     iput-object v7, v3, Landroid/support/v4/app/Fragment;->mFragmentManager:Landroid/support/v4/app/FragmentManagerImpl;
 
-    .line 279
+    .line 271
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mSavedFragmentState:Landroid/os/Bundle;
 
     invoke-virtual {v3, p0, p3, v7}, Landroid/support/v4/app/Fragment;->onInflate(Landroid/app/Activity;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
-    .line 280
+    .line 272
     iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v7, v3, v10}, Landroid/support/v4/app/FragmentManagerImpl;->addFragment(Landroid/support/v4/app/Fragment;Z)V
 
-    .line 302
+    .line 294
     :goto_2
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     if-nez v7, :cond_c
 
-    .line 303
+    .line 295
     new-instance v7, Ljava/lang/IllegalStateException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1685,16 +1092,16 @@
     :cond_8
     move v7, v1
 
-    .line 274
+    .line 266
     goto :goto_1
 
-    .line 282
+    .line 274
     :cond_9
     iget-boolean v7, v3, Landroid/support/v4/app/Fragment;->mInLayout:Z
 
     if-eqz v7, :cond_a
 
-    .line 285
+    .line 277
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1765,21 +1172,21 @@
 
     throw v7
 
-    .line 292
+    .line 284
     :cond_a
     iput-boolean v10, v3, Landroid/support/v4/app/Fragment;->mInLayout:Z
 
-    .line 296
+    .line 288
     iget-boolean v7, v3, Landroid/support/v4/app/Fragment;->mRetaining:Z
 
     if-nez v7, :cond_b
 
-    .line 297
+    .line 289
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mSavedFragmentState:Landroid/os/Bundle;
 
     invoke-virtual {v3, p0, p3, v7}, Landroid/support/v4/app/Fragment;->onInflate(Landroid/app/Activity;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
-    .line 299
+    .line 291
     :cond_b
     iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -1787,16 +1194,16 @@
 
     goto :goto_2
 
-    .line 306
+    .line 298
     :cond_c
     if-eqz v4, :cond_d
 
-    .line 307
+    .line 299
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     invoke-virtual {v7, v4}, Landroid/view/View;->setId(I)V
 
-    .line 309
+    .line 301
     :cond_d
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
@@ -1806,12 +1213,12 @@
 
     if-nez v7, :cond_e
 
-    .line 310
+    .line 302
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     invoke-virtual {v7, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 312
+    .line 304
     :cond_e
     iget-object v7, v3, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
@@ -1822,30 +1229,30 @@
     .locals 1
 
     .prologue
-    .line 320
+    .line 312
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 322
+    .line 314
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/app/FragmentActivity;->doReallyStop(Z)V
 
-    .line 324
+    .line 316
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchDestroy()V
 
-    .line 325
+    .line 317
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 326
+    .line 318
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/LoaderManagerImpl;->doDestroy()V
 
-    .line 328
+    .line 320
     :cond_0
     return-void
 .end method
@@ -1856,7 +1263,7 @@
     .parameter "event"
 
     .prologue
-    .line 335
+    .line 327
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x5
@@ -1873,13 +1280,13 @@
 
     if-nez v0, :cond_0
 
-    .line 340
+    .line 332
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->onBackPressed()V
 
-    .line 341
+    .line 333
     const/4 v0, 0x1
 
-    .line 344
+    .line 336
     :goto_0
     return v0
 
@@ -1895,15 +1302,15 @@
     .locals 1
 
     .prologue
-    .line 352
+    .line 344
     invoke-super {p0}, Landroid/app/Activity;->onLowMemory()V
 
-    .line 353
+    .line 345
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchLowMemory()V
 
-    .line 354
+    .line 346
     return-void
 .end method
 
@@ -1913,30 +1320,30 @@
     .parameter "item"
 
     .prologue
-    .line 361
+    .line 353
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 362
+    .line 354
     const/4 v0, 0x1
 
-    .line 373
+    .line 365
     :goto_0
     return v0
 
-    .line 365
+    .line 357
     :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 373
+    .line 365
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 367
+    .line 359
     :sswitch_0
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -1946,7 +1353,7 @@
 
     goto :goto_0
 
-    .line 370
+    .line 362
     :sswitch_1
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -1956,7 +1363,7 @@
 
     goto :goto_0
 
-    .line 365
+    .line 357
     nop
 
     :sswitch_data_0
@@ -1966,40 +1373,23 @@
     .end sparse-switch
 .end method
 
-.method protected onNewIntent(Landroid/content/Intent;)V
-    .locals 1
-    .parameter "intent"
-
-    .prologue
-    .line 416
-    invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
-
-    .line 417
-    iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
-
-    .line 418
-    return-void
-.end method
-
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 1
     .parameter "featureId"
     .parameter "menu"
 
     .prologue
-    .line 382
+    .line 374
     packed-switch p1, :pswitch_data_0
 
-    .line 387
+    .line 379
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onPanelClosed(ILandroid/view/Menu;)V
 
-    .line 388
+    .line 380
     return-void
 
-    .line 384
+    .line 376
     :pswitch_0
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -2007,7 +1397,7 @@
 
     goto :goto_0
 
-    .line 382
+    .line 374
     nop
 
     :pswitch_data_0
@@ -2022,15 +1412,15 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 395
+    .line 387
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 396
+    .line 388
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mResumed:Z
 
-    .line 397
+    .line 389
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -2039,21 +1429,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 398
+    .line 390
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 399
+    .line 391
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->onResumeFragments()V
 
-    .line 401
+    .line 393
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchPause()V
 
-    .line 402
+    .line 394
     return-void
 .end method
 
@@ -2061,25 +1451,25 @@
     .locals 2
 
     .prologue
-    .line 442
+    .line 418
     invoke-super {p0}, Landroid/app/Activity;->onPostResume()V
 
-    .line 443
+    .line 419
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 444
+    .line 420
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->onResumeFragments()V
 
-    .line 445
+    .line 421
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions()Z
 
-    .line 446
+    .line 422
     return-void
 .end method
 
@@ -2092,32 +1482,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 463
+    .line 439
     if-nez p1, :cond_2
 
     if-eqz p3, :cond_2
 
-    .line 464
+    .line 440
     iget-boolean v2, p0, Landroid/support/v4/app/FragmentActivity;->mOptionsMenuInvalidated:Z
 
     if-eqz v2, :cond_0
 
-    .line 465
+    .line 441
     iput-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mOptionsMenuInvalidated:Z
 
-    .line 466
+    .line 442
     invoke-interface {p3}, Landroid/view/Menu;->clear()V
 
-    .line 467
+    .line 443
     invoke-virtual {p0, p1, p3}, Landroid/support/v4/app/FragmentActivity;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
-    .line 469
+    .line 445
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
 
     move-result v0
 
-    .line 470
+    .line 446
     .local v0, goforit:Z
     iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
@@ -2127,7 +1517,7 @@
 
     or-int/2addr v0, v2
 
-    .line 471
+    .line 447
     if-eqz v0, :cond_1
 
     invoke-interface {p3}, Landroid/view/Menu;->hasVisibleItems()Z
@@ -2138,7 +1528,7 @@
 
     const/4 v1, 0x1
 
-    .line 473
+    .line 449
     .end local v0           #goforit:Z
     :cond_1
     :goto_0
@@ -2156,42 +1546,42 @@
     .locals 1
 
     .prologue
-    .line 776
+    .line 651
     iget-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 777
+    .line 652
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
-    .line 778
+    .line 653
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 779
+    .line 654
     iget-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mRetaining:Z
 
     if-nez v0, :cond_1
 
-    .line 780
+    .line 655
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/LoaderManagerImpl;->doStop()V
 
-    .line 787
+    .line 662
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchReallyStop()V
 
-    .line 788
+    .line 663
     return-void
 
-    .line 782
+    .line 657
     :cond_1
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
@@ -2204,27 +1594,27 @@
     .locals 2
 
     .prologue
-    .line 431
+    .line 407
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 432
+    .line 408
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 433
+    .line 409
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/FragmentActivity;->mResumed:Z
 
-    .line 434
+    .line 410
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions()Z
 
-    .line 435
+    .line 411
     return-void
 .end method
 
@@ -2232,12 +1622,12 @@
     .locals 1
 
     .prologue
-    .line 455
+    .line 431
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchResume()V
 
-    .line 456
+    .line 432
     return-void
 .end method
 
@@ -2245,154 +1635,139 @@
     .locals 1
 
     .prologue
-    .line 604
+    .line 568
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
 .method public final onRetainNonConfigurationInstance()Ljava/lang/Object;
-    .locals 10
+    .locals 8
 
     .prologue
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    .line 483
-    iget-boolean v8, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
+    .line 459
+    iget-boolean v7, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
 
-    if-eqz v8, :cond_0
+    if-eqz v7, :cond_0
 
-    .line 484
-    const/4 v8, 0x1
+    .line 460
+    const/4 v7, 0x1
 
-    invoke-virtual {p0, v8}, Landroid/support/v4/app/FragmentActivity;->doReallyStop(Z)V
+    invoke-virtual {p0, v7}, Landroid/support/v4/app/FragmentActivity;->doReallyStop(Z)V
 
-    .line 487
+    .line 463
     :cond_0
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentActivity;->onRetainCustomNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 489
+    .line 465
     .local v0, custom:Ljava/lang/Object;
-    iget-object v8, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    invoke-virtual {v8}, Landroid/support/v4/app/FragmentManagerImpl;->retainNonConfig()Ljava/util/ArrayList;
+    invoke-virtual {v7}, Landroid/support/v4/app/FragmentManagerImpl;->retainNonConfig()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 490
+    .line 466
     .local v1, fragments:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/support/v4/app/Fragment;>;"
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    .line 491
-    .local v6, retainLoaders:Z
-    iget-object v8, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 467
+    .local v5, retainLoaders:Z
+    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    if-eqz v8, :cond_2
+    if-eqz v7, :cond_2
 
-    .line 494
-    iget-object v8, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 470
+    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    invoke-virtual {v8}, Ljava/util/HashMap;->size()I
+    invoke-virtual {v7}, Landroid/support/v4/util/SparseArrayCompat;->size()I
 
-    move-result v8
+    move-result v7
 
-    new-array v4, v8, [Landroid/support/v4/app/LoaderManagerImpl;
-
-    .line 495
-    .local v4, loaders:[Landroid/support/v4/app/LoaderManagerImpl;
-    iget-object v8, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
-
-    invoke-virtual {v8}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v8
-
-    invoke-interface {v8, v4}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 496
-    if-eqz v4, :cond_2
-
-    .line 497
-    const/4 v2, 0x0
+    add-int/lit8 v2, v7, -0x1
 
     .local v2, i:I
     :goto_0
-    array-length v8, v4
+    if-ltz v2, :cond_2
 
-    if-ge v2, v8, :cond_2
+    .line 471
+    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    .line 498
-    aget-object v3, v4, v2
+    invoke-virtual {v7, v2}, Landroid/support/v4/util/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
-    .line 499
+    move-result-object v3
+
+    check-cast v3, Landroid/support/v4/app/LoaderManagerImpl;
+
+    .line 472
     .local v3, lm:Landroid/support/v4/app/LoaderManagerImpl;
-    iget-boolean v8, v3, Landroid/support/v4/app/LoaderManagerImpl;->mRetaining:Z
+    iget-boolean v7, v3, Landroid/support/v4/app/LoaderManagerImpl;->mRetaining:Z
 
-    if-eqz v8, :cond_1
+    if-eqz v7, :cond_1
 
-    .line 500
-    const/4 v6, 0x1
+    .line 473
+    const/4 v5, 0x1
 
-    .line 497
+    .line 470
     :goto_1
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 502
+    .line 475
     :cond_1
     invoke-virtual {v3}, Landroid/support/v4/app/LoaderManagerImpl;->doDestroy()V
 
-    .line 503
-    iget-object v8, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 476
+    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    iget-object v9, v3, Landroid/support/v4/app/LoaderManagerImpl;->mWho:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v2}, Landroid/support/v4/util/SparseArrayCompat;->removeAt(I)V
 
     goto :goto_1
 
-    .line 508
+    .line 480
     .end local v2           #i:I
     .end local v3           #lm:Landroid/support/v4/app/LoaderManagerImpl;
-    .end local v4           #loaders:[Landroid/support/v4/app/LoaderManagerImpl;
     :cond_2
     if-nez v1, :cond_3
 
-    if-nez v6, :cond_3
+    if-nez v5, :cond_3
 
     if-nez v0, :cond_3
 
-    move-object v5, v7
+    move-object v4, v6
 
-    .line 518
+    .line 490
     :goto_2
-    return-object v5
+    return-object v4
 
-    .line 512
+    .line 484
     :cond_3
-    new-instance v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
+    new-instance v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
 
-    invoke-direct {v5}, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;-><init>()V
+    invoke-direct {v4}, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;-><init>()V
 
-    .line 513
-    .local v5, nci:Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
-    iput-object v7, v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->activity:Ljava/lang/Object;
+    .line 485
+    .local v4, nci:Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;
+    iput-object v6, v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->activity:Ljava/lang/Object;
 
-    .line 514
-    iput-object v0, v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->custom:Ljava/lang/Object;
+    .line 486
+    iput-object v0, v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->custom:Ljava/lang/Object;
 
-    .line 515
-    iput-object v7, v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->children:Ljava/util/HashMap;
+    .line 487
+    iput-object v6, v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->children:Ljava/util/HashMap;
 
-    .line 516
-    iput-object v1, v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->fragments:Ljava/util/ArrayList;
+    .line 488
+    iput-object v1, v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->fragments:Ljava/util/ArrayList;
 
-    .line 517
-    iget-object v7, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 489
+    iget-object v6, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    iput-object v7, v5, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->loaders:Ljava/util/HashMap;
+    iput-object v6, v4, Landroid/support/v4/app/FragmentActivity$NonConfigurationInstances;->loaders:Landroid/support/v4/util/SparseArrayCompat;
 
     goto :goto_2
 .end method
@@ -2402,195 +1777,166 @@
     .parameter "outState"
 
     .prologue
-    .line 526
+    .line 498
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 527
+    .line 499
     iget-object v1, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManagerImpl;->saveAllState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 528
+    .line 500
     .local v0, p:Landroid/os/Parcelable;
     if-eqz v0, :cond_0
 
-    .line 529
+    .line 501
     const-string v1, "android:support:fragments"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 531
+    .line 503
     :cond_0
     return-void
 .end method
 
 .method protected onStart()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    .line 539
+    .line 511
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 541
-    iput-boolean v6, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
+    .line 513
+    iput-boolean v5, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
 
-    .line 542
-    iput-boolean v6, p0, Landroid/support/v4/app/FragmentActivity;->mReallyStopped:Z
+    .line 514
+    iput-boolean v5, p0, Landroid/support/v4/app/FragmentActivity;->mReallyStopped:Z
 
-    .line 543
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
+    .line 515
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v3, v5}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v2, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 545
-    iget-boolean v3, p0, Landroid/support/v4/app/FragmentActivity;->mCreated:Z
+    .line 517
+    iget-boolean v2, p0, Landroid/support/v4/app/FragmentActivity;->mCreated:Z
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    .line 546
-    iput-boolean v5, p0, Landroid/support/v4/app/FragmentActivity;->mCreated:Z
+    .line 518
+    iput-boolean v4, p0, Landroid/support/v4/app/FragmentActivity;->mCreated:Z
 
-    .line 547
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    .line 519
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    invoke-virtual {v3}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchActivityCreated()V
+    invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchActivityCreated()V
 
-    .line 550
+    .line 522
     :cond_0
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    invoke-virtual {v3}, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
+    invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
 
-    .line 551
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    .line 523
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    invoke-virtual {v3}, Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions()Z
+    invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions()Z
 
-    .line 553
-    iget-boolean v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
+    .line 525
+    iget-boolean v2, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
-    if-nez v3, :cond_2
+    if-nez v2, :cond_2
 
-    .line 554
-    iput-boolean v5, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
+    .line 526
+    iput-boolean v4, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
-    .line 555
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
+    .line 527
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
-    if-eqz v3, :cond_3
+    if-eqz v2, :cond_3
 
-    .line 556
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
+    .line 528
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
-    invoke-virtual {v3}, Landroid/support/v4/app/LoaderManagerImpl;->doStart()V
+    invoke-virtual {v2}, Landroid/support/v4/app/LoaderManagerImpl;->doStart()V
 
-    .line 564
+    .line 532
     :cond_1
     :goto_0
-    iput-boolean v5, p0, Landroid/support/v4/app/FragmentActivity;->mCheckedForLoaderManager:Z
+    iput-boolean v4, p0, Landroid/support/v4/app/FragmentActivity;->mCheckedForLoaderManager:Z
 
-    .line 568
+    .line 536
     :cond_2
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
-    invoke-virtual {v3}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchStart()V
+    invoke-virtual {v2}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchStart()V
 
-    .line 569
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
+    .line 537
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    if-eqz v3, :cond_4
-
-    .line 570
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
-
-    move-result v3
-
-    new-array v2, v3, [Landroid/support/v4/app/LoaderManagerImpl;
-
-    .line 571
-    .local v2, loaders:[Landroid/support/v4/app/LoaderManagerImpl;
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Ljava/util/HashMap;
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v3
-
-    invoke-interface {v3, v2}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 572
     if-eqz v2, :cond_4
 
-    .line 573
-    const/4 v0, 0x0
+    .line 538
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
+
+    invoke-virtual {v2}, Landroid/support/v4/util/SparseArrayCompat;->size()I
+
+    move-result v2
+
+    add-int/lit8 v0, v2, -0x1
 
     .local v0, i:I
     :goto_1
-    array-length v3, v2
+    if-ltz v0, :cond_4
 
-    if-ge v0, v3, :cond_4
+    .line 539
+    iget-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mAllLoaderManagers:Landroid/support/v4/util/SparseArrayCompat;
 
-    .line 574
-    aget-object v1, v2, v0
+    invoke-virtual {v2, v0}, Landroid/support/v4/util/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
-    .line 575
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v4/app/LoaderManagerImpl;
+
+    .line 540
     .local v1, lm:Landroid/support/v4/app/LoaderManagerImpl;
     invoke-virtual {v1}, Landroid/support/v4/app/LoaderManagerImpl;->finishRetain()V
 
-    .line 576
+    .line 541
     invoke-virtual {v1}, Landroid/support/v4/app/LoaderManagerImpl;->doReportStart()V
 
-    .line 573
-    add-int/lit8 v0, v0, 0x1
+    .line 538
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 557
+    .line 529
     .end local v0           #i:I
     .end local v1           #lm:Landroid/support/v4/app/LoaderManagerImpl;
-    .end local v2           #loaders:[Landroid/support/v4/app/LoaderManagerImpl;
     :cond_3
-    iget-boolean v3, p0, Landroid/support/v4/app/FragmentActivity;->mCheckedForLoaderManager:Z
+    iget-boolean v2, p0, Landroid/support/v4/app/FragmentActivity;->mCheckedForLoaderManager:Z
 
-    if-nez v3, :cond_1
+    if-nez v2, :cond_1
 
-    .line 558
-    const/4 v3, 0x0
+    .line 530
+    const/4 v2, -0x1
 
-    iget-boolean v4, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
+    iget-boolean v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoadersStarted:Z
 
-    invoke-virtual {p0, v3, v4, v6}, Landroid/support/v4/app/FragmentActivity;->getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;
+    invoke-virtual {p0, v2, v3, v5}, Landroid/support/v4/app/FragmentActivity;->getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
-
-    .line 560
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
-
-    iget-boolean v3, v3, Landroid/support/v4/app/LoaderManagerImpl;->mStarted:Z
-
-    if-nez v3, :cond_1
-
-    .line 561
-    iget-object v3, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
-
-    invoke-virtual {v3}, Landroid/support/v4/app/LoaderManagerImpl;->doStart()V
+    iput-object v2, p0, Landroid/support/v4/app/FragmentActivity;->mLoaderManager:Landroid/support/v4/app/LoaderManagerImpl;
 
     goto :goto_0
 
-    .line 580
+    .line 544
     :cond_4
     return-void
 .end method
@@ -2601,23 +1947,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 587
+    .line 551
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 589
+    .line 553
     iput-boolean v1, p0, Landroid/support/v4/app/FragmentActivity;->mStopped:Z
 
-    .line 590
+    .line 554
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 592
+    .line 556
     iget-object v0, p0, Landroid/support/v4/app/FragmentActivity;->mFragments:Landroid/support/v4/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManagerImpl;->dispatchStop()V
 
-    .line 593
+    .line 557
     return-void
 .end method
 
@@ -2627,7 +1973,7 @@
     .parameter "requestCode"
 
     .prologue
-    .line 814
+    .line 689
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_0
@@ -2638,7 +1984,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 815
+    .line 690
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can only use lower 16 bits for requestCode"
@@ -2647,11 +1993,11 @@
 
     throw v0
 
-    .line 817
+    .line 692
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 818
+    .line 693
     return-void
 .end method
 
@@ -2664,17 +2010,17 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 825
+    .line 700
     if-ne p3, v0, :cond_0
 
-    .line 826
+    .line 701
     invoke-super {p0, p2, v0}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 833
+    .line 708
     :goto_0
     return-void
 
-    .line 829
+    .line 704
     :cond_0
     const/high16 v0, -0x1
 
@@ -2682,7 +2028,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 830
+    .line 705
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can only use lower 16 bits for requestCode"
@@ -2691,7 +2037,7 @@
 
     throw v0
 
-    .line 832
+    .line 707
     :cond_1
     iget v0, p1, Landroid/support/v4/app/Fragment;->mIndex:I
 
@@ -2714,21 +2060,21 @@
     .locals 2
 
     .prologue
-    .line 623
+    .line 587
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 626
+    .line 590
     invoke-static {p0}, Landroid/support/v4/app/ActivityCompatHoneycomb;->invalidateOptionsMenu(Landroid/app/Activity;)V
 
-    .line 633
+    .line 597
     :goto_0
     return-void
 
-    .line 632
+    .line 596
     :cond_0
     const/4 v0, 0x1
 

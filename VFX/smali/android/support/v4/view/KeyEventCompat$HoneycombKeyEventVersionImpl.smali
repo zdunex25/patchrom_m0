@@ -1,6 +1,9 @@
 .class Landroid/support/v4/view/KeyEventCompat$HoneycombKeyEventVersionImpl;
-.super Landroid/support/v4/view/KeyEventCompat$EclairKeyEventVersionImpl;
+.super Ljava/lang/Object;
 .source "KeyEventCompat.java"
+
+# interfaces
+.implements Landroid/support/v4/view/KeyEventCompat$KeyEventVersionImpl;
 
 
 # annotations
@@ -19,8 +22,8 @@
     .locals 0
 
     .prologue
-    .line 118
-    invoke-direct {p0}, Landroid/support/v4/view/KeyEventCompat$EclairKeyEventVersionImpl;-><init>()V
+    .line 95
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -33,7 +36,7 @@
     .parameter "modifiers"
 
     .prologue
-    .line 126
+    .line 103
     invoke-static {p1, p2}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->metaStateHasModifiers(II)Z
 
     move-result v0
@@ -46,7 +49,7 @@
     .parameter "metaState"
 
     .prologue
-    .line 131
+    .line 108
     invoke-static {p1}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->metaStateHasNoModifiers(I)Z
 
     move-result v0
@@ -59,7 +62,7 @@
     .parameter "metaState"
 
     .prologue
-    .line 121
+    .line 98
     invoke-static {p1}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->normalizeMetaState(I)I
 
     move-result v0
