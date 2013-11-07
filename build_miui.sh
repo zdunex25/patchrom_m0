@@ -103,8 +103,6 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
     <\/header>\
     <header android:icon=\"@drawable\/ic_status_bar_settings\" android:title=\"@string\/cp_settings\">\
         <intent android:action="com.android.settings.M7PARTS\" \/>/' > '../Settings/res/xml/settings_headers.xml'
-cat 'Settings/res/xml/sound_settings.xml' | sed -e "s/android.musicfx/miui.player/g" \
-				| sed -e "s/ControlPanelPicker/ui.EqualizerActivity/g" > '../Settings/res/xml/sound_settings.xml'
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/polish_translation\" android:key=\"polish_translation\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
