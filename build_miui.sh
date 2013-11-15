@@ -208,13 +208,6 @@ cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
-sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruchom w recovery<\/string>\
-  <string name=\"android_factorytest_download\">Tryb odin<\/string>\
-<\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
-cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"yellow_page_sms_disabled_in_privacy_mode\" id=\"0x060c0263\"\/>/<public type=\"string\" name=\"yellow_page_sms_disabled_in_privacy_mode\" id=\"0x060c0263\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0264\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0265\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -335,7 +328,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0264\
+    const-string v3, \"Uruchom w recovery\"\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -345,7 +338,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x60c0265\
+    const-string v3, \"Tryb odin\"\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 
@@ -354,7 +347,7 @@ rm -rf 'android.policy.jar.out'
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
-zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version.zip" 'data' 'META-INF' 'system' #'boot.img'
+zip -q -r "../../unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip" 'data' 'META-INF' 'system' #'boot.img'
 cd ../..
 fi
 . ../build/envsetup.sh
@@ -420,19 +413,18 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
 find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
-mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version.zip" "miuigalaxy-v5-sgs3-$version.zip"
-rm -r unsigned-miuigalaxy-v5-sgs3-$version.zip
+java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip" "miuigalaxy-v5-sgs3-$version-4.1.zip"
+rm -r unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip
 
-md5=`md5sum miuigalaxy-v5-sgs3-$version.zip | cut -d" " -f1`
-size=`du -sh md5sum miuigalaxy-v5-sgs3-$version.zip | cut -c1-4`
+md5=`md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -d" " -f1`
+size=`du -sh md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
-LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version.zip"
-MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version.zip"
-MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version.zip"
+LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version-4.1.zip"
+MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version-4.1.zip"
+MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.1.zip"
 echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" ota="'$ota'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
-read -p "Done, miuigalaxy-v5-sgs3-$version.zip has been created in root of m0 directory, copy to sd and flash it!"
+read -p "Done, miuigalaxy-v5-sgs3-$version-4.1.zip has been created in root of m0 directory, copy to sd and flash it!"

@@ -1,0 +1,33 @@
+From 7db5ff5ce43cdd28f707ef446c5234c548847cad Mon Sep 17 00:00:00 2001
+From: ymdzq <233900743@qq.com>
+Date: Sun, 7 Jul 2013 13:42:04 +0800
+Subject: [PATCH] not restore default theme even illegal theme component was
+ found
+
+---
+ framework2/smali/miui/drm/ThemeReceiver.smali | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+--- a/framework2/smali/miui/drm/ThemeReceiver.smali
++++ b/framework2/smali/miui/drm/ThemeReceiver.smali
+@@ -471,13 +471,13 @@
+ 
+     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+ 
+-    new-instance v2, Lmiui/content/res/ThemeRuntimeManager;
++    #new-instance v2, Lmiui/content/res/ThemeRuntimeManager;
+ 
+-    iget-object v3, p0, Lmiui/drm/ThemeReceiver;->mContext:Landroid/content/Context;
++    #iget-object v3, p0, Lmiui/drm/ThemeReceiver;->mContext:Landroid/content/Context;
+ 
+-    invoke-direct {v2, v3}, Lmiui/content/res/ThemeRuntimeManager;-><init>(Landroid/content/Context;)V
++    #invoke-direct {v2, v3}, Lmiui/content/res/ThemeRuntimeManager;-><init>(Landroid/content/Context;)V
+ 
+-    invoke-virtual {v2}, Lmiui/content/res/ThemeRuntimeManager;->restoreDefault()V
++    #invoke-virtual {v2}, Lmiui/content/res/ThemeRuntimeManager;->restoreDefault()V
+ 
+     .end local v0           #i$:Ljava/util/Iterator;
+     .end local v1           #location:Ljava/lang/String;
+-- 
+1.8.1.2
+

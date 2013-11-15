@@ -27,6 +27,18 @@ fi
 
 if [ $2 = "$BUILD_OUT/framework2" ]
 then
+    for file in overlay/framework2/*.patch
+    do
+        cp $file out/
+        cd out
+        git.apply `basename $file`
+        cd ..
+        for file2 in `find $2 -name *.rej`
+        do
+            echo "$file2 fail"
+            exit 1
+        done
+    done
     # remove all files at out/framework1 those exist in framework.jar.out
     for file2 in `find framework.jar.out -name *.smali`; do
             file=${file2/framework.jar.out/$BUILD_OUT\/framework2}

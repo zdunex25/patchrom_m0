@@ -142,6 +142,7 @@ fi
 
 if [ $1 = "Phone" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
+	appendPart $1
 fi
 
 if [ $1 = "Provision" ];then
