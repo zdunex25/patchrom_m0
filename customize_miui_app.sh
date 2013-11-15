@@ -263,9 +263,6 @@ if [ $1 = "Settings" ];then
 	sed -i -e 's/<item>Nie usypiaj<\/item>/<!--item>Nie usypiaj<\/item-->/' out/$1/res/values-pl/arrays.xml
 	sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' out/$1/res/values-pl/strings.xml
 	sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' out/$1/res/values-pl/strings.xml
-	sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
-  <string name=\"cp_settings\">Panel sterowania<\/string>\
-<\/resources>/' out/$1/res/values-pl/strings.xml
 	adjustDpi $1
 	cp -f $1/res/drawable-en-xhdpi/miui_logo.png  out/$1/res/drawable-pl-xhdpi/miui_logo.png
 	$XMLMERGYTOOL $1/res/values $2/res/values
