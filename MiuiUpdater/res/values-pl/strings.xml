@@ -66,7 +66,7 @@ Plik .zip znajduje się w: %1$s"</string>
     <string name="main_otaid">ID Updatera</string>
     <string name="main_updates">Aktualizacje</string>
     <string name="main_avail_updates">Dostępne aktualizacje</string>
-    <string name="main_updates_none">Brak dostępnych aktualizacji</string>
+    <string name="main_updates_none">Używasz najnowszej dostępnej wersji MIUI.</string>
     <string name="main_updates_error">Błąd podczas pobierania informacji o aktualizacji: %1$s</string>
     <string name="main_updates_new">Nowe aktualizacje: %1$s (wersja %2$s)</string>
     <string name="contributors_title">Osoby wspierające</string>

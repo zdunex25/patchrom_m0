@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.gallery3d.photoeditor.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.gallery3d.photoeditor.PhotoView android:id="@id/photo_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.gallery3d.photoeditor.EffectsBar android:id="@id/effects_bar" style="@style/EffectsBar">
+        <com.android.gallery3d.photoeditor.EffectsMenu android:id="@id/effects_menu" style="@style/ActionBarOuter" />
+    </com.android.gallery3d.photoeditor.EffectsBar>
+    <com.android.gallery3d.photoeditor.ActionBar android:id="@id/action_bar" android:layout_alignParentTop="true" style="@style/ActionBarOuter" />
+</com.android.gallery3d.photoeditor.Toolbar>

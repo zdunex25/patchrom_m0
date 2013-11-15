@@ -187,6 +187,20 @@
         launcher:x="0"
         launcher:y="0" />
 <favorite
+        launcher:packageName="com.miui.transfer"
+        launcher:className="cn.kuaipan.mishare.LogoActivity"
+        launcher:retained="true"
+        launcher:container="1"
+        launcher:x="0"
+        launcher:y="0" />
+<favorite
+        launcher:packageName="com.android.updater"
+        launcher:className="com.android.updater.OTAUpdaterActivity"
+        launcher:retained="true"
+        launcher:container="1"
+        launcher:x="0"
+        launcher:y="0" />
+<favorite
         launcher:packageName="com.android.settings"
         launcher:className="com.android.settings.VirusScanActivity"
         launcher:container="2"
@@ -236,8 +250,8 @@
         launcher:x="2"
         launcher:y="0" />
 <favorite
-        launcher:packageName="com.sec.android.app.camera"
-        launcher:className="com.sec.android.app.camera.Camera"
+        launcher:packageName="com.android.gallery3d"
+        launcher:className="com.android.camera.CameraLauncher"
         launcher:container="-101"
         launcher:x="3"
         launcher:y="0" />

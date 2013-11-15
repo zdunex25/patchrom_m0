@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/pano_review_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:text="@string/pano_review_rendering" style="@style/PanoViewHorizontalBar" />
+        <com.android.camera.ui.RotateLayout android:id="@id/pano_rotate_reviewarea" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.5">
+            <ImageView android:id="@id/pano_reviewarea" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+        </com.android.camera.ui.RotateLayout>
+        <View style="@style/PanoViewHorizontalBar" />
+    </LinearLayout>
+    <com.android.camera.ui.RotateLayout android:id="@id/pano_saving_progress_bar_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/shutter_button_placeholder" android:layout_centerHorizontal="true">
+        <com.android.camera.PanoProgressBar android:id="@id/pano_saving_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pan_progression" android:layout_centerInParent="true" />
+    </com.android.camera.ui.RotateLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/shutter_button_placeholder" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/shutter_offset" android:src="@drawable/btn_shutter_default" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.android.camera.ui.RotateImageView android:id="@id/pano_review_cancel_button" android:src="@drawable/ic_menu_cancel_holo_light" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_centerVertical="false" android:contentDescription="@string/accessibility_review_cancel" style="@style/ReviewControlIcon" />
+</RelativeLayout>

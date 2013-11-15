@@ -67,7 +67,7 @@ The .zip file is located at: %1$s"</string>
     <string name="main_otaid">Updater ID</string>
     <string name="main_updates">Updates</string>
     <string name="main_avail_updates">Available Updates</string>
-    <string name="main_updates_none">No updates available</string>
+    <string name="main_updates_none">Latest available MIUI version is in use.</string>
     <string name="main_updates_error">Error fetching update info: %1$s</string>
     <string name="main_updates_new">New updates: %1$s (version %2$s)</string>
     <string name="contributors_title">Contributors</string>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="setting_popup_right_margin">@dimen/setting_popup_right_margin_large</item>
+    <item type="dimen" name="setting_row_height">@dimen/setting_row_height_large</item>
+    <item type="dimen" name="setting_popup_window_width">@dimen/setting_popup_window_width_large</item>
+    <item type="dimen" name="setting_item_icon_width">@dimen/setting_item_icon_width_large</item>
+    <item type="dimen" name="onscreen_indicators_height">@dimen/onscreen_indicators_height_large</item>
+    <dimen name="shutter_offset">-33.0dip</dimen>
+    <dimen name="thumbnail_size">128.0dip</dimen>
+    <dimen name="thumbnail_margin">3.0dip</dimen>
+    <dimen name="effect_label_text_size">13.5sp</dimen>
+    <dimen name="effect_label_width">120.0dip</dimen>
+    <dimen name="effect_label_margin_top">3.0dip</dimen>
+    <dimen name="effect_icon_size">90.0dip</dimen>
+    <dimen name="effect_padding_horizontal">2.0dip</dimen>
+    <dimen name="effects_container_padding">11.0dip</dimen>
+    <dimen name="action_bar_arrow_margin_left">3.0dip</dimen>
+    <dimen name="action_bar_arrow_margin_right">-3.0dip</dimen>
+    <dimen name="action_bar_icon_padding_left">0.0dip</dimen>
+    <dimen name="action_bar_icon_padding_right">5.0dip</dimen>
+    <dimen name="action_button_padding_horizontal">22.0dip</dimen>
+    <dimen name="effects_menu_container_width">400.0dip</dimen>
+    <dimen name="effect_tool_panel_padding_top">4.0dip</dimen>
+    <dimen name="effect_tool_panel_padding_bottom">11.0dip</dimen>
+    <dimen name="seekbar_width">640.0dip</dimen>
+    <dimen name="seekbar_height">57.0dip</dimen>
+    <dimen name="seekbar_padding_horizontal">40.0dip</dimen>
+    <dimen name="seekbar_padding_vertical">11.0dip</dimen>
+    <dimen name="crop_indicator_size">43.0dip</dimen>
+    <dimen name="action_bar_icon_padding_vertical">4.0dip</dimen>
+    <dimen name="action_button_padding_vertical">8.0dip</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:enabled="false" android:id="@id/menu_share" android:title="@string/share" android:showAsAction="always" android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item android:icon="@drawable/filtershow_button_undo" android:id="@id/undoButton" android:title="@string/filtershow_undo" android:showAsAction="never" />
+    <item android:icon="@drawable/filtershow_button_redo" android:id="@id/redoButton" android:title="@string/filtershow_redo" android:showAsAction="never" />
+    <item android:id="@id/resetHistoryButton" android:title="@string/reset" />
+    <item android:icon="@drawable/filtershow_button_operations" android:id="@id/operationsButton" android:visible="true" android:title="@string/show_history_panel" android:showAsAction="never" />
+    <item android:id="@id/showImageStateButton" android:visible="false" android:title="@string/show_imagestate_panel" android:showAsAction="never" />
+</menu>

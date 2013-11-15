@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/frame_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout style="@style/PanoViewHorizontalBar">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center" android:id="@id/pano_capture_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pano_capture_indication" />
+        </FrameLayout>
+        <com.android.camera.ui.LayoutNotifyView android:layout_gravity="center" android:id="@id/pano_preview_area" android:background="@drawable/ic_pan_border_fast" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0" />
+        <RelativeLayout style="@style/PanoViewHorizontalBar">
+            <com.android.camera.ui.RotateLayout android:id="@id/pano_pan_progress_bar_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <com.android.camera.PanoProgressBar android:id="@id/pano_pan_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pan_progression" />
+            </com.android.camera.ui.RotateLayout>
+            <ImageView android:id="@id/pano_pan_left_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/pano_direction_left_indicator" android:layout_toLeftOf="@id/pano_pan_progress_bar_layout" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/pano_pan_right_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/pano_direction_right_indicator" android:layout_toRightOf="@id/pano_pan_progress_bar_layout" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.android.camera.ui.RotateLayout android:id="@id/pano_capture_too_fast_textview_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/pano_capture_too_fast_textview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pano_too_fast_prompt" />
+    </com.android.camera.ui.RotateLayout>
+</RelativeLayout>

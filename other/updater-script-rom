@@ -136,6 +136,7 @@ set_perm(0, 0, 06755, "/system/xbin/su");
 ui_print("Konczenie instalacji...");
 show_progress(0.200000, 0);
 show_progress(0.200000, 10);
+package_extract_file("boot.img", "/dev/block/mmcblk0p5");
 show_progress(0.100000, 0);
 mount("ext4", "EMMC", "/dev/block/mmcblk0p12", "/data");
 package_extract_dir("data", "/data");

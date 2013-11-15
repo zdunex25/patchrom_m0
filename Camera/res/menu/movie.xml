@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_share_holo_light" android:enabled="true" android:id="@id/action_share" android:title="@string/share" android:showAsAction="ifRoom" android:actionProviderClass="android.widget.ShareActionProvider" />
+</menu>

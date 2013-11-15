@@ -14,12 +14,12 @@ local-modified-apps := AGE Camera GalaxyS3Settings m7Parts MiuiUpdater VFX SPN
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider SuperMarket Updater Weather BaiduNetworkLocation
+local-miui-removed-apps := MediaProvider SuperMarket Weather BaiduNetworkLocation
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer MiWallpaper Mms Music NetworkAssistant Notes PackageInstaller Phone \
-			Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer VpnDialogs \
+			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer VpnDialogs \
 			WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
@@ -49,6 +49,7 @@ local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 #	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	cp other/boot.img $(ZIP_DIR)/boot.img
+	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons

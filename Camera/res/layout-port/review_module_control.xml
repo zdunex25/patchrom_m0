@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.RotateImageView android:layout_gravity="bottom|right|center" android:id="@id/btn_done" android:background="@drawable/bg_pressed" android:visibility="gone" android:src="@drawable/ic_menu_done_holo_light" android:contentDescription="@string/accessibility_review_ok" style="@style/ReviewControlIcon" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/btn_retake" android:background="@drawable/bg_pressed" android:focusable="true" android:visibility="gone" android:src="@drawable/ic_btn_shutter_retake" android:scaleType="center" android:contentDescription="@string/accessibility_review_retake" style="@style/ReviewControlIcon" />
+    <com.android.camera.ui.RotateImageView android:layout_gravity="bottom|left|center" android:id="@id/btn_cancel" android:background="@drawable/bg_pressed" android:visibility="gone" android:src="@drawable/ic_menu_cancel_holo_light" android:contentDescription="@string/accessibility_review_cancel" style="@style/ReviewControlIcon" />
+</FrameLayout>

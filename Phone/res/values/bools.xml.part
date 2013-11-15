@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="config_call_stream_recording">true</bool>
-    <bool name="config_preferred_network_type_when_data_enabled">false</bool>
     <bool name="config_smsc_address_encoded">true</bool>
     <bool name="ignore_sim_network_locked_events">true</bool>
     <bool name="config_download_mms_always">true</bool>
+    <bool name="has_in_call_noise_suppression">true</bool>
 </resources>

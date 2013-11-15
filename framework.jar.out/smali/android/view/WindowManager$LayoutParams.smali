@@ -297,6 +297,8 @@
 
 .field public dimAmount:F
 
+.field public extraFlags:I
+
 .field public flags:I
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
         flagMapping = {
@@ -1142,6 +1144,12 @@
 
     move-result v0
 
+    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     .line 1399
@@ -1563,6 +1571,19 @@
 
     .line 1494
     :cond_9
+    iget v1, p0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    iget v2, p1, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    if-eq v1, v2, :cond_miui_0
+
+    iget v1, p1, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    iput v1, p0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    or-int/lit8 v0, v0, 0x4
+
+    :cond_miui_0
     iget v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     iget v2, p1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
@@ -2298,6 +2319,18 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 1619
+    const-string v1, " extfl=#"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget v1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     if-eqz v1, :cond_4
@@ -2627,6 +2660,10 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 1357
+    iget v0, p0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
     iget v0, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V

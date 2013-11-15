@@ -5514,6 +5514,15 @@
     return-void
 .end method
 
+.method public refreshWheel()V
+    .locals 0
+
+    .prologue
+    invoke-direct {p0}, Landroid/widget/NumberPicker;->initializeSelectorWheelIndices()V
+
+    return-void
+.end method
+
 .method protected remeasureMaxWidth()V
     .locals 0
 

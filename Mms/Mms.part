@@ -1,0 +1,60 @@
+
+--- a/Mms/smali/com/android/mms/data/WorkingMessage.smali
++++ b/Mms/smali/com/android/mms/data/WorkingMessage.smali
+@@ -3449,6 +3449,10 @@
+ 
+     move-result-object v3
+ 
++    invoke-static {v3}, Lcom/android/mms/theos0o/GsmEncoding;->seqToGSM(Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v3
++
+     invoke-static {v3, v2}, Landroid/telephony/SmsMessage;->calculateLength(Ljava/lang/CharSequence;Z)[I
+ 
+     move-result-object v1
+
+--- a/Mms/smali/com/android/mms/transaction/SmsMessageSender.smali
++++ b/Mms/smali/com/android/mms/transaction/SmsMessageSender.smali
+@@ -128,6 +128,12 @@
+     .line 77
+     iput-object p3, p0, Lcom/android/mms/transaction/SmsMessageSender;->mMessageText:Ljava/lang/String;
+ 
++    invoke-static {p3}, Lcom/android/mms/theos0o/GsmEncoding;->textToGSM(Ljava/lang/String;)Ljava/lang/String;
++
++    move-result-object v2
++
++    iput-object v2, p0, Lcom/android/mms/transaction/SmsMessageSender;->mMessageText:Ljava/lang/String;
++
+     .line 78
+     if-eqz p2, :cond_0
+ 
+
+--- a/Mms/smali/com/android/mms/ui/MessageUtils.smali
++++ b/Mms/smali/com/android/mms/ui/MessageUtils.smali
+@@ -1857,7 +1857,11 @@
+     const/4 v3, 0x0
+ 
+     .line 1267
+-    invoke-static {p0, v3}, Landroid/telephony/SmsMessage;->calculateLength(Ljava/lang/CharSequence;Z)[I
++    invoke-static {p0}, Lcom/android/mms/theos0o/GsmEncoding;->seqToGSM(Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v2
++
++    invoke-static {v2, v3}, Landroid/telephony/SmsMessage;->calculateLength(Ljava/lang/CharSequence;Z)[I
+ 
+     move-result-object v1
+ 
+
+--- a/Mms/smali/com/android/mms/ui/MessageEditableActivityBase.smali
++++ b/Mms/smali/com/android/mms/ui/MessageEditableActivityBase.smali
+@@ -1958,6 +1958,10 @@
+ 
+     move-result-object v0
+ 
++    invoke-static {v0}, Lcom/android/mms/theos0o/GsmEncoding;->seqToGSM(Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v0
++
+     invoke-static {v0, v1}, Landroid/telephony/SmsMessage;->calculateLength(Ljava/lang/CharSequence;Z)[I
+ 
+     move-result-object v0

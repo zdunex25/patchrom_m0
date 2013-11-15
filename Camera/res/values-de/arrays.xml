@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="barge_in_commands">
-        <item>Lächeln</item>
-        <item>Bitte Lächeln</item>
-        <item>Klick</item>
-        <item>Aufnehme</item>
+    <string-array name="pref_camera_voiceshutter_triggerwords">
+        <item>cheese</item>
     </string-array>
 </resources>

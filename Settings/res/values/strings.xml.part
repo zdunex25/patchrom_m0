@@ -8,6 +8,6 @@
     <string name="galaxy_settings">Galaxy settings</string>
     <string name="cp_settings">Control panel</string>
     <string name="age_settings">Hovering Controls</string>
-    <string name="line_breaking_title">Line breaking title</string>
-    <string name="line_breaking_summary">Line breaking title summary</string>
+    <string name="line_breaking_title">Optimize paragraph text</string>
+    <string name="line_breaking_summary">Optimize paragraphs wrap effect</string>
 </resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selection">
+        <item quantity="other">刪除選取的項目？</item>
+        <item quantity="one">刪除選取的項目？</item>
+    </plurals>
+    <plurals name="number_of_items_selected">
+        <item quantity="other">已選取 %1$d 個</item>
+        <item quantity="zero">已選取 %1$d 個</item>
+        <item quantity="one">已選取 %1$d 個</item>
+    </plurals>
+    <plurals name="number_of_albums_selected">
+        <item quantity="other">已選取 %1$d 本</item>
+        <item quantity="zero">已選取 %1$d 本</item>
+        <item quantity="one">已選取 %1$d 本</item>
+    </plurals>
+    <plurals name="number_of_groups_selected">
+        <item quantity="other">已選取 %1$d 個</item>
+        <item quantity="zero">已選取 %1$d 個</item>
+        <item quantity="one">已選取 %1$d 個</item>
+    </plurals>
+    <plurals name="make_albums_available_offline">
+        <item quantity="other">正在將相簿設為可離線瀏覽。</item>
+        <item quantity="one">正在將相簿設為可離線瀏覽。</item>
+    </plurals>
+</resources>

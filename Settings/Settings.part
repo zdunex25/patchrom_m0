@@ -1,0 +1,99 @@
+
+--- a/Settings/res/xml/device_info_settings.xml
++++ b/Settings/res/xml/device_info_settings.xml
+@@ -11,6 +11,8 @@
+         <miui.preference.ValuePreference android:title="@string/device_internal_memory" android:key="device_internal_memory" />
+         <miui.preference.ValuePreference android:title="@string/baseband_version" android:key="baseband_version" />
+         <miui.preference.ValuePreference android:title="@string/kernel_version" android:key="kernel_version" />
++        <miui.preference.ValuePreference android:title="@string/build_author" android:key="build_author" />
++        <miui.preference.ValuePreference android:title="@string/polish_translation" android:key="polish_translation" />
+         <PreferenceScreen android:title="@string/device_status" android:key="status_info" android:summary="@string/device_status_summary">
+             <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.deviceinfo.Status" />
+         </PreferenceScreen>
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -51,9 +51,22 @@
+     <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
+         <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
+     </header>
+-    <header android:id="@id/manufacturer_settings">
++    <header android:title="@string/header_category_galaxy" />
++    <header android:icon="@drawable/ic_ringer_volume_settings" android:title="@string/viper_settings">
++        <intent android:action="com.android.settings.VIPER" />
++    </header>
++    <header android:icon="@drawable/ic_mobile_network_settings" android:title="@string/carrier_settings">
++        <intent android:action="com.android.settings.CARRIER" />
++    </header>
++    <header android:icon="@drawable/ic_accessibility_settings" android:title="@string/age_settings">
++        <intent android:action="com.android.settings.GESTURE" />
++    </header>
++    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings" android:title="@string/galaxy_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
++    <header android:icon="@drawable/ic_status_bar_settings" android:title="@string/cp_settings">
++        <intent android:action="com.android.settings.M7PARTS" />
++    </header>
+     <header android:id="@id/system_section" android:title="@string/header_category_system" />
+     <header android:icon="@drawable/ic_oldman_mode_settings" android:id="@id/oldman_mode_settings" android:title="@string/oldman_mode_entry_name">
+         <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.OldmanModeSettings" />
+
+--- a/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali
++++ b/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali
+@@ -1532,6 +1532,56 @@
+ 
+     invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
+ 
++    .line 116
++    const-string v22, "build_author"
++
++    new-instance v23, Ljava/lang/StringBuilder;
++
++    invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v24, "ZduneX25"
++
++    invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v23
++
++    invoke-virtual/range {v23 .. v23}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v23
++
++    move-object/from16 v0, p0
++
++    move-object/from16 v1, v22
++
++    move-object/from16 v2, v23
++
++    invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
++
++    .line 118
++    const-string v22, "polish_translation"
++
++    new-instance v23, Ljava/lang/StringBuilder;
++
++    invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v24, "Acid (MIUI Polska)"
++
++    invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v23
++
++    invoke-virtual/range {v23 .. v23}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v23
++
++    move-object/from16 v0, p0
++
++    move-object/from16 v1, v22
++
++    move-object/from16 v2, v23
++
++    invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
++
+     .line 128
+     const-string v22, "device_cpu"
+ 

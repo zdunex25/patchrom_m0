@@ -1,0 +1,58 @@
+
+
+--- a/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
+@@ -825,40 +825,19 @@
+ 
+     .line 345
+     .local v12, height:I
+-    div-int/lit8 v2, v15, 0x3
+-
+-    div-int/lit8 v3, v12, 0x3
+-
+-    invoke-static {v2, v3}, Landroid/view/Surface;->screenshot(II)Landroid/graphics/Bitmap;
++    invoke-static {v15, v12}, Landroid/view/Surface;->screenshot(II)Landroid/graphics/Bitmap;
+ 
+     move-result-object v8
+ 
+     .line 346
+     .local v8, backgroundOriginal:Landroid/graphics/Bitmap;
+-    invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
+-
+-    move-result v2
+-
+-    invoke-virtual {v8}, Landroid/graphics/Bitmap;->getHeight()I
+-
+-    move-result v3
+-
+     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+ 
+-    invoke-static {v2, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+-
+-    move-result-object v1
+-
+-    .line 347
+-    .local v1, blurBgBitmap:Landroid/graphics/Bitmap;
+-    const/high16 v2, -0x100
+-
+-    invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
++    const/4 v2, 0x1
+ 
+-    .line 348
+-    const/16 v2, 0xa
++    invoke-virtual {v8, v4, v2}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
+ 
+-    invoke-static {v8, v1, v2}, Lmiui/util/ImageUtils;->fastBlur(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)V
++    move-result-object v1
+ 
+     .line 350
+     invoke-interface/range {v16 .. v16}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+@@ -964,7 +943,7 @@
+     return-void
+ 
+     .line 324
+-    .end local v1           #blurBgBitmap:Landroid/graphics/Bitmap;
++    .end local v1
+     .end local v8           #backgroundOriginal:Landroid/graphics/Bitmap;
+     .end local v9           #currentScreenRotationDegree:I
+     .end local v10           #defaultDisplay:Landroid/view/Display;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/camera_shutter_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/controls" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CameraControls" />
+    <com.android.camera.ShutterButton android:id="@id/shutter_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/shutter_offset" android:src="@drawable/btn_new_shutter" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_shutter_button" />
+    <com.android.camera.ui.CameraSwitcher android:id="@id/camera_switcher" android:layout_marginRight="2.0dip" android:layout_alignBottom="@id/controls" android:layout_alignParentRight="true" android:contentDescription="@string/accessibility_mode_picker" style="@style/SwitcherButton" />
+</RelativeLayout>
