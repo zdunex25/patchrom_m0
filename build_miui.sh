@@ -200,9 +200,6 @@ cp -u -r pl/Music/* ../Music
 cp -u -r pl/Phone/* ../Phone
 sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
 sed -i -e 's/>Szybkie zdjęcie/>Wstecz to skrót aparatu/' pl/Settings/res/values-pl/strings.xml
-sed -i -e 's/<\/resources>/  <string name=\"polish_translation\">Spolszczenie<\/string>\
-  <string name=\"cp_settings\">Panel sterowania<\/string>\
-<\/resources>/' pl/Settings/res/values-pl/strings.xml
 cp -u -r pl/Settings/* ../Settings
 cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-pl-xhdpi/miui_logo.png
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
