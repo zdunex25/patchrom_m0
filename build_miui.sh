@@ -205,6 +205,10 @@ cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
+cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
+sed -i -e 's/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c026c\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c026d\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -325,7 +329,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const-string v3, \"Uruchom w recovery\"\
+    const v3, 0x060c026c\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -335,7 +339,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const-string v3, \"Tryb odin\"\
+    const v3, 0x060c026d\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 
@@ -410,6 +414,7 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
 find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
+mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip" "miuigalaxy-v5-sgs3-$version-4.1.zip"

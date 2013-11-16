@@ -17,6 +17,8 @@ function appendPart() {
 }
 
 if [ $1 = "AntiSpam" ];then
+	sed -i -e 's/<action android:name=\"android.intent.action.MAIN\" \/>/<action android:name=\"android.intent.action.MAIN\" \/>\
+                <category android:name=\"android.intent.category.LAUNCHER\" \/>/' out/$1/AndroidManifest.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
