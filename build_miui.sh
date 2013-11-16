@@ -205,6 +205,9 @@ cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
+sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruchom w recovery<\/string>\
+  <string name=\"android_factorytest_download\">Tryb odin<\/string>\
+<\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
 sed -i -e 's/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>\
     <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c026c\"\/>\
