@@ -209,9 +209,9 @@ sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruch
   <string name=\"android_factorytest_download\">Tryb odin<\/string>\
 <\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
 cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>/<public type=\"string\" name=\"grant_permissions_account\" id=\"0x060c026b\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c026c\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c026d\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
+sed -i -e 's/<public type=\"string\" name=\"easter\" id=\"0x060c0270\"\/>/<public type=\"string\" name=\"easter\" id=\"0x060c0270\"\/>\
+    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0271\"\/>\
+    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0272\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -302,6 +302,7 @@ cd ../miuipolska/Polish/extras/simple_clock
 zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip -q images_pl/*.png
 cd ../../../../m0
 mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc
+cp -f ../miuipolska/Polish/extras/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc
 
 for DIR in out/temp/system/app/; do
 	cd $DIR;
@@ -332,7 +333,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x060c026c\
+    const v3, 0x060c0271\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -342,7 +343,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x060c026d\
+    const v3, 0x060c0272\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 

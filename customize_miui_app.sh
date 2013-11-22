@@ -5,6 +5,7 @@
 #
 
 XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
+GIT_APPLY=$PORT_ROOT/tools/git.apply
 
 function appendPart() {
     for file in `find $1/smali -name *.part`
