@@ -93,6 +93,7 @@ cd ../miuipolska/Polish/extras/simple_clock
 zip ../../../../m0/out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip -q images_pl/*.png
 cd ../../../../m0
 mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc
+cp -f ../miuipolska/Polish/extras/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc
 
 cd out/temp
 
@@ -114,7 +115,7 @@ rm -r unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip
 
 echo $ota
 md5=`md5sum miuigalaxy-v5-sgs3-$version-4.2.zip | cut -d" " -f1`
-size=`du -sh md5sum miuigalaxy-v5-sgs3-$version-4.2.zip | cut -c1-4`
+size=`du -sh miuigalaxy-v5-sgs3-$version-4.2.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
 LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
 forum="<a href='http://bit.ly/1as1Xao'>Dyskusja na forum</a>"
@@ -122,5 +123,5 @@ MIRROR1_PL="http://goo.im/devs/mikegapinski/miuiv5/4.2.2/m0/miuigalaxy-v5-sgs3-$
 #MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
 echo '[dwl producent="'samsung'" board="'m0'" tytul="Samsung&nbsp;Galaxy&nbsp;S3" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" datapl="'$data'" md5pl="'\$md5_ota1'" informacje="'$forum'" status="" statuspl="" link="'$LINK_PL'" linkpl="'\$LINK_OTA1'" rozmiar="'$size'" rozmiarpl="'\$size_ota1'" rodzaj="" mirror1="'$MIRROR1_PL'" mirror2="" ota="'\$OTA1'"]
     
-    ' > ../download_v5.txt
+    ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.2.zip has been created in root of m0 directory, copy to sd and flash it!"
