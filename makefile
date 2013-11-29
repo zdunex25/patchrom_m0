@@ -14,13 +14,13 @@ local-modified-apps := AGE Camera GalaxyS3Settings m7Parts MiuiUpdater VFX SPN
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider SuperMarket Weather BaiduNetworkLocation
+local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist BaiduNetworkLocation
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer MiWallpaper Mms Music NetworkAssistant Notes PackageInstaller Phone \
 			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer VpnDialogs \
-			WeatherProvider XiaomiServiceFramework YellowPage
+			Weather WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch

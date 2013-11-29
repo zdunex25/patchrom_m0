@@ -4,17 +4,12 @@ export PATH=$PATH:/home/$USER/android-sdk-linux/tools:/home/$USER/android-sdk-li
 cd patchromv542
 . build/envsetup.sh
 cd m0
-mkdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs WeatherProvider XiaomiServiceFramework YellowPage temp
+mkdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage temp
 cd temp
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r ../../miuipolska/Polish/main/LBESEC_MIUI.apk/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
-'../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/Mms.apk'
-sed -i -e 's/android:screenOrientation=\"portrait\" //' Mms/AndroidManifest.xml
-sed -i -e 's/ android:screenOrientation=\"portrait\"//' Mms/AndroidManifest.xml
-cp -u -r ../../miuipolska/Polish/main/Mms.apk/* Mms
-'../../tools/apktool' --quiet b -f 'Mms' '../other/unsigned-Mms.apk'
 
 cd ..
 rm -r temp
@@ -25,8 +20,6 @@ then
 unzip -q out/fullota.zip -d out/temp
 echo -e "\nPreparing flashable zips.."
 
-cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
-
 x=`date +%Y`
 y=`date +.%-m.%-d`
 z=${x: -1:1}
@@ -34,6 +27,8 @@ version=$z$y
 time=`date +%c`
 utc=`date +%s`
 ota=`date +%Y%m%d-%H%M`
+
+cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
 
 sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
@@ -46,16 +41,10 @@ sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=m0_z25/g" out/te
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-Mms.apk" "other/signed-Mms.apk"
-'other/zipalign' -f 4 "other/signed-Mms.apk" "other/Mms.apk"
-mkdir out/temp/system/usr/extras
-mv -f other/Mms.apk out/temp/system/usr/extras/Mms.apk
-cp -f other/unicode.sh out/temp/system/bin/unicode.sh
 
 find other -name "unsigned-*" | xargs rm -f
 find other -name "signed-*" | xargs rm -f
 
-rm -f out/temp/system/etc/weather_city.db
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
 cp -f ../miuipolska/Polish/extras/system/etc/* out/temp/system/etc
@@ -106,7 +95,7 @@ fi
 . ../build/envsetup.sh
 cd m0
 
-rmdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs WeatherProvider XiaomiServiceFramework YellowPage
+rmdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage
 find other -name "unsigned-*" | xargs rm -f
 make clean
 echo Signing rom
@@ -123,5 +112,5 @@ MIRROR1_PL="http://goo.im/devs/mikegapinski/miuiv5/4.2.2/m0/miuigalaxy-v5-sgs3-$
 #MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
 echo '[dwl producent="'samsung'" board="'m0'" tytul="Samsung&nbsp;Galaxy&nbsp;S3" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" datapl="'$data'" md5pl="'\$md5_ota1'" informacje="'$forum'" status="" statuspl="" link="'$LINK_PL'" linkpl="'\$LINK_OTA1'" rozmiar="'$size'" rozmiarpl="'\$size_ota1'" rodzaj="" mirror1="'$MIRROR1_PL'" mirror2="" ota="'\$OTA1'"]
     
-    ' > download_v5.txt
+    ' >> ../download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.2.zip has been created in root of m0 directory, copy to sd and flash it!"

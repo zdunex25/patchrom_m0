@@ -147,6 +147,8 @@ fi
 
 if [ $1 = "MiuiHome" ];then
 	addPolish $1
+	sed -i -e 's/<item>4x5<\/item>/<item>4x5<\/item>\
+        <item>5x5<\/item>/' out/$1/res/values/arrays.xml
 	sed -i -e 's/<item>Strona<\/item>/<!--item>Strona<\/item-->/' out/$1/res/values-pl/arrays.xml
 	sed -i -e 's/<item>Obrót<\/item>/<!--item>Obrót<\/item-->/' out/$1/res/values-pl/arrays.xml
 	adjustDpi $1
@@ -202,7 +204,7 @@ fi
 
 if [ $1 = "Music" ];then
 	addPolish $1
-	sed -i -e 's/\"no_effect\">Płaski/\"no_effect\">ViPER FX/' out/$1/res/values-pl/strings.xml
+	sed -i -e 's/\"no_effect\">Wyłączone/\"no_effect\">ViPER FX/' out/$1/res/values-pl/strings.xml
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
@@ -302,6 +304,12 @@ fi
 #fi
 #
 if [ $1 = "VpnDialogs" ];then
+	addPolish $1
+	adjustDpi $1
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
+if [ $1 = "Weather" ];then
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
