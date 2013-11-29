@@ -190,7 +190,7 @@ rm -rf pl/Updater
 rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
 sed -i -e 's/<item>4x5<\/item>/<item>4x5<\/item>\
-        <item>5x5<\/item>/' pl/MiuiHome/res/values/arrays.xml
+        <item>5x5<\/item>/' ../out/MiuiHome/res/values/arrays.xml
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms

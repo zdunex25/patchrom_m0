@@ -195,8 +195,6 @@ if [ $1 = "VpnDialogs" ];then
 fi
 
 if [ $1 = "Weather" ];then
-	addPolish $1
-	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
