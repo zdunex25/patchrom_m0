@@ -106,9 +106,9 @@ cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id
 cat 'Settings/res/xml/device_info_settings.xml' | sed -e 's/android:key=\"kernel_version\" \/>/android:key=\"kernel_version\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/build_author\" android:key=\"build_author\" \/>\
 	<miui.preference.ValuePreference android:title=\"@string\/polish_translation\" android:key=\"polish_translation\" \/>/' > '../Settings/res/xml/device_info_settings.xml'
-#cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
-#    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
-cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
+cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 's/MenuInflater;)V/MenuInflater;)V \
+    return-void/' > 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali'
+cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali' | sed -e 's/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V/invoke-direct {v0, v1, v2}, Lcom\/android\/settings\/MiuiDeviceInfoSettings;->setStringSummary(Ljava\/lang\/String;Ljava\/lang\/String;)V\
 \
     .line 116\
     const-string v22, \"build_author\"\
@@ -162,9 +162,6 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali' | sed -e 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
-cp -u -r pl/Mms/* Mms
-cp -f ../Mms/AndroidManifest.xml Mms/AndroidManifest.xml
-'../../tools/apktool' --quiet b -f 'Mms' '../other/unsigned-Mms.apk'
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
@@ -192,10 +189,12 @@ rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
+sed -i -e 's/<item>4x5<\/item>/<item>4x5<\/item>\
+        <item>5x5<\/item>/' pl/MiuiHome/res/values/arrays.xml
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms
-sed -i -e 's/\"no_effect\">Płaski/\"no_effect\">ViPER FX/' pl/Music/res/values-pl/strings.xml
+sed -i -e 's/\"no_effect\">Wyłączone/\"no_effect\">ViPER FX/' pl/Music/res/values-pl/strings.xml
 cp -u -r pl/Music/* ../Music
 cp -u -r pl/Phone/* ../Phone
 sed -i -e 's/>Wyłącz okno Zasilania/>Wyłącz okno zasilania/' pl/Settings/res/values-pl/strings.xml
@@ -241,24 +240,16 @@ z=${x: -1:1}
 version=$z$y
 time=`date +%c`
 utc=`date +%s`
-ota=`date +%Y%m%d-%H%M`
 
 sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" out/temp/system/build.prop
-sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
-sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
 sed -i -e "s/ro\.goo\.version=.*/ro\.goo\.version=$version/g" out/temp/system/build.prop
-sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=i9300/g" out/temp/system/build.prop
-rm -f out/temp/system/etc/weather_city.db
+sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=m0_z25/g" out/temp/system/build.prop
+
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
-java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-Mms.apk" "other/signed-Mms.apk"
 'other/zipalign' -f 4 "other/signed-LBESEC_MIUI.apk" "other/LBESEC_MIUI.apk"
-'other/zipalign' -f 4 "other/signed-Mms.apk" "other/Mms.apk"
 mv -f other/LBESEC_MIUI.apk out/temp/system/app/LBESEC_MIUI.apk
-mkdir out/temp/system/usr/extras
-mv -f other/Mms.apk out/temp/system/usr/extras/Mms.apk
-cp -f other/unicode.sh out/temp/system/bin/unicode.sh
 find other -name "unsigned-*" | xargs rm -f
 find other -name "signed-*" | xargs rm -f
 
@@ -304,23 +295,6 @@ cd ../../../../m0
 mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc
 cp -f ../miuipolska/Polish/extras/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc
 
-for DIR in out/temp/system/app/; do
-	cd $DIR;
-	for APK in *.apk; do
-		ZIPCHECK=`../../../../other/zipalign -c -v 4 $APK | grep FAILED | wc -l`;
-		if [ $ZIPCHECK == "1" ]; then
-			echo "Now aligning: $DIR/$APK" >> ../../../../zipalign_app.log;
-			mkdir ../app_done
-			../../../../other/zipalign -v -f 4 $APK ../app_done/$APK;
-			cp -f -p ../app_done/$APK $APK;
-			rm -rf ../app_done
-		else
-			echo "Already aligned: $DIR/$APK" >> ../../../../zipalign_app.log;
-		fi;
-	done;
-	cd ../../../..
-done;
-
 cd out/temp
 '../../../tools/apktool' --quiet d -f 'system/framework/android.policy.jar'
 cp -rf '../../other/extras/advanved-reboot/impl' 'android.policy.jar.out/smali/com/android/internal/policy'
@@ -333,7 +307,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x060c0271\
+    const v3, 0x60c0271\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
 \
@@ -343,7 +317,7 @@ sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/im
 \
     const v2, 0x6020074\
 \
-    const v3, 0x060c0272\
+    const v3, 0x60c0272\
 \
     invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
 
@@ -413,6 +387,7 @@ rm -rf ThemeManager/res/drawable-pl-xhdpi
 rm -rf ThemeManager/res/values-pl
 rm -rf Transfer
 rm -rf VpnDialogs
+rm -rf Weather
 rm -rf WeatherProvider
 rm -rf XiaomiServiceFramework
 rm -rf YellowPage
@@ -427,10 +402,10 @@ rm -r unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip
 md5=`md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -d" " -f1`
 size=`du -sh md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
-LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version-4.1.zip"
-MIRROR1_PL="http://goo.im/devs/mikegapinski/miuigalaxy-v5-sgs3-$version-4.1.zip"
+LINK_PL="http://goo.im/devs/mikegapinski/4.1.1/miuigalaxy-v5-sgs3-$version-4.1.zip"
+MIRROR1_PL="http://91.205.75.29//zdunex25/wip/miuigalaxy-v5-sgs3-$version-4.1.zip"
 MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.1.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" ota="'$ota'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="'$MIRROR1_PL'" mirror2="'$MIRROR2_PL'" rozmiar="'$size'" rodzaj="pelna"]
+echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="" mirror2="" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.1.zip has been created in root of m0 directory, copy to sd and flash it!"

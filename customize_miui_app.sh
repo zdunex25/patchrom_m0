@@ -173,6 +173,16 @@ if [ $1 = "TelephonyProvider" ];then
 fi
 
 if [ $1 = "ThemeManager" ];then
+#    cp $1/*.part out/
+#    cd out
+#    $GIT_APPLY ThemeManager.part
+#    cd ..
+#    for file in `find $2 -name *.rej`
+#    do
+#	echo "Fatal error: ThemeManager patch fail"
+#        exit 1
+#    done
+#
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -181,6 +191,12 @@ if [ $1 = "Transfer" ];then
 fi
 
 if [ $1 = "VpnDialogs" ];then
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
+if [ $1 = "Weather" ];then
+	addPolish $1
+	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 

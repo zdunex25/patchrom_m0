@@ -65,11 +65,6 @@ ro.config.media_sound=FadeIn.ogg
 # Miui version
 ro.miui.ui.version.name=V5
 
-# Updater
-updater.id=miuigalaxy-v5
-updater.time=20121019-1822
-updater.ver=eng.20121019.182247
-
 # GooManager
 ro.goo.developerid=mikegapinski
 ro.goo.rom=miuigalaxyv5
