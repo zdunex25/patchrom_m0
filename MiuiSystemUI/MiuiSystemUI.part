@@ -1,20 +1,22 @@
 
 --- a/MiuiSystemUI/res/values/public.xml
 +++ b/MiuiSystemUI/res/values/public.xml
-@@ -440,6 +440,9 @@
+@@ -440,6 +440,11 @@
      <public type="layout" name="task_item_view" id="0x7f03002f" />
      <public type="layout" name="task_manager" id="0x7f030030" />
      <public type="layout" name="torch_main" id="0x7f030031" />
-+    <public type="layout" name="signal_cluster_view_miui" id="0x7f030032" />
-+    <public type="layout" name="status_bar_miui" id="0x7f030033" />
-+    <public type="layout" name="super_status_bar_miui" id="0x7f030034" />
++    <public type="layout" name="status_bar_center" id="0x7f030032" />
++    <public type="layout" name="super_status_bar_center" id="0x7f030033" />
++    <public type="layout" name="signal_cluster_view_ios" id="0x7f030034" />
++    <public type="layout" name="status_bar_ios" id="0x7f030035" />
++    <public type="layout" name="super_status_bar_ios" id="0x7f030036" />
      <public type="layout" name="status_bar_search_panel" id="0x7f03001b" />
      <public type="anim" name="notification_final_disappear" id="0x7f040000" />
      <public type="anim" name="priority_alert_enter" id="0x7f040001" />
 
 --- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
 +++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
-@@ -2550,6 +2550,38 @@
+@@ -2550,6 +2550,47 @@
      return-void
  .end method
  
@@ -42,10 +44,19 @@
 +
 +    if-eq v3, v5, :cond_0
 +
++    const/4 v3, 0x2
++
++    if-eq v3, v5, :cond_1
++
 +    return p1
 +
 +    :cond_0
-+    const v4, 0x7f030034
++    const v4, 0x7f030033
++
++    return v4
++
++    :cond_1
++    const v4, 0x7f030036
 +
 +    return v4
 +.end method
