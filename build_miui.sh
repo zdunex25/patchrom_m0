@@ -21,9 +21,11 @@ find pl -name "xxhdpi" | xargs rm -rf
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
 cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030031\" \/>/id=\"0x7f030031\" \/>\
-    <public type=\"layout\" name=\"signal_cluster_view_miui\" id=\"0x7f030032\" \/>\
-    <public type=\"layout\" name=\"status_bar_miui\" id=\"0x7f030033\" \/>\
-    <public type=\"layout\" name=\"super_status_bar_miui\" id=\"0x7f030034\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
+    <public type=\"layout\" name=\"status_bar_center\" id=\"0x7f030032\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_center\" id=\"0x7f030033\" \/>\
+    <public type=\"layout\" name=\"signal_cluster_view_ios\" id=\"0x7f030034\" \/>\
+    <public type=\"layout\" name=\"status_bar_ios\" id=\"0x7f030035\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_ios\" id=\"0x7f030036\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
 cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali' | sed -e 's/.method private getTabIndicatorPosition(I)I/.method private getStatusBarType(I)I\
     .locals 6\
     .parameter\
@@ -48,10 +50,19 @@ cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smal
 \
     if-eq v3, v5, :cond_0\
 \
+    const\/4 v3, 0x2\
+\
+    if-eq v3, v5, :cond_1\
+\
     return p1\
 \
     :cond_0\
-    const v4, 0x7f030034\
+    const v4, 0x7f030033\
+\
+    return v4\
+\
+    :cond_1\
+    const v4, 0x7f030036\
 \
     return v4\
 .end method\
@@ -189,8 +200,6 @@ rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
 cp -u -r pl/Bluetooth/* ../Bluetooth
-sed -i -e 's/<item>4x5<\/item>/<item>4x5<\/item>\
-        <item>5x5<\/item>/' ../out/MiuiHome/res/values/arrays.xml
 cp -u -r pl/MiuiHome/* ../MiuiHome
 cp -u -r pl/MiuiSystemUI/* ../MiuiSystemUI
 cp -u -r pl/Mms/* ../Mms
@@ -204,13 +213,6 @@ cp -f ../Settings/res/drawable-en-xhdpi/miui_logo.png  ../Settings/res/drawable-
 cp -u -r ../../miuipolska/Polish/device/m0/Settings.apk/* ../Settings
 cp -u -r pl/ThemeManager/* ../ThemeManager
 cp -u -r pl/framework-miui-res/res/* ../../miui/src/frameworks/miui/core/res/res
-sed -i -e 's/<\/resources>/  <string name=\"android_factorytest_recovery\">Uruchom w recovery<\/string>\
-  <string name=\"android_factorytest_download\">Tryb odin<\/string>\
-<\/resources>/' ../../miui/src/frameworks/miui/core/res/res/values-pl-rPL/strings.xml
-cp -f ../../miui/src/frameworks/miui/core/res/res/values/public.xml ../other/public.xml
-sed -i -e 's/<public type=\"string\" name=\"easter\" id=\"0x060c0270\"\/>/<public type=\"string\" name=\"easter\" id=\"0x060c0270\"\/>\
-    <public type=\"string\" name=\"android_factorytest_recovery\" id=\"0x060c0271\"\/>\
-    <public type=\"string\" name=\"android_factorytest_download\" id=\"0x060c0272\"\/>/' ../../miui/src/frameworks/miui/core/res/res/values/public.xml
 rm -rf pl/Bluetooth
 rm -rf pl/MiuiHome
 rm -rf pl/MiuiSystemUI
@@ -296,33 +298,6 @@ mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp
 cp -f ../miuipolska/Polish/extras/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc
 
 cd out/temp
-'../../../tools/apktool' --quiet d -f 'system/framework/android.policy.jar'
-cp -rf '../../other/extras/advanved-reboot/impl' 'android.policy.jar.out/smali/com/android/internal/policy'
-
-sed -i -e 's/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$4;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$4;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
-\
-    invoke-virtual {v0, v1}, Ljava\/util\/ArrayList;->add(Ljava\/lang\/Object;)Z\
-\
-    new-instance v1, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;\
-\
-    const v2, 0x6020074\
-\
-    const v3, 0x60c0271\
-\
-    invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$10;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V\
-\
-    invoke-virtual {v0, v1}, Ljava\/util\/ArrayList;->add(Ljava\/lang\/Object;)Z\
-\
-    new-instance v1, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;\
-\
-    const v2, 0x6020074\
-\
-    const v3, 0x60c0272\
-\
-    invoke-direct {v1, p0, v2, v3}, Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions$11;-><init>(Lcom\/android\/internal\/policy\/impl\/MiuiGlobalActions;II)V/' android.policy.jar.out/smali/com/android/internal/policy/impl/MiuiGlobalActions.smali
-
-'../../../tools/apktool' --quiet b -f 'android.policy.jar.out' 'system/framework/android.policy.jar'
-rm -rf 'android.policy.jar.out'
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
 rm META-INF/MANIFEST.MF
@@ -393,14 +368,13 @@ rm -rf XiaomiServiceFramework
 rm -rf YellowPage
 find other -name "unsigned-*" | xargs rm -f
 find ../miui/src/frameworks/miui/core/res/res -name "*-pl-*" | xargs rm -rf
-mv -f other/public.xml ../miui/src/frameworks/miui/core/res/res/values
 make clean
 echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip" "miuigalaxy-v5-sgs3-$version-4.1.zip"
 rm -r unsigned-miuigalaxy-v5-sgs3-$version-4.1.zip
 
 md5=`md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -d" " -f1`
-size=`du -sh md5sum miuigalaxy-v5-sgs3-$version-4.1.zip | cut -c1-4`
+size=`du -sh miuigalaxy-v5-sgs3-$version-4.1.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
 LINK_PL="http://goo.im/devs/mikegapinski/4.1.1/miuigalaxy-v5-sgs3-$version-4.1.zip"
 MIRROR1_PL="http://91.205.75.29//zdunex25/wip/miuigalaxy-v5-sgs3-$version-4.1.zip"
@@ -408,4 +382,8 @@ MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy
 echo '[dwl producent="'samsung'" board="'m0'" tytul="'Samsung Galaxy S3'" android="'4.1.1'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="ROM Kamila Z" status="" link="'$LINK_PL'" mirror1="" mirror2="" rozmiar="'$size'" rodzaj="pelna"]
     
     ' > download_v5.txt
+
+grep -v 'aapt: warning: string*' 'miui_log.log' >> 'miui_log_s3.log'
+rm miui_log.log
+
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.1.zip has been created in root of m0 directory, copy to sd and flash it!"

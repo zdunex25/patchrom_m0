@@ -59,7 +59,7 @@
     <string name="sHeight">Rozmiar w pionie</string>
     <string name="sWidth">Rozmiar w poziomie</string>
     <string name="sStatusBarType">Układ statusbara</string>
-    <string name="sAlign">Ikony w pasku statusu</string>
+    <string name="sAlign">Styl rozmieszczenia w pasku statusu</string>
     <string name="RestartXString">Restart X</string>
     <string name="rebootMenuT">Restart telefonu</string>
     <string name="sNavBarDesc">Pasek nawigacji</string>

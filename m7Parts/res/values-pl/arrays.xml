@@ -13,8 +13,9 @@
         <item>Włączone</item>
     </string-array>
     <string-array name="StatusBarTypes5">
-        <item>Domyślnie dla romu</item>
-        <item>Domyślnie dla miui</item>
+        <item>Domyślny</item>
+        <item>Wyśrodkowany</item>
+        <item>iOS7</item>
     </string-array>
     <string-array name="TrackTypes">
         <item>Następny utwór</item>

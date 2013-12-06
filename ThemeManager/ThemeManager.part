@@ -1,0 +1,47 @@
+From 98e7186b4657d4c069fd61434e6006740dd64c5c Mon Sep 17 00:00:00 2001
+From: ymdzq <233900743@qq.com>
+Date: Sat, 6 Jul 2013 21:27:45 +0800
+Subject: [PATCH] patch for ThemeManager
+
+---
+ .../smali/miui/resourcebrowser/controller/online/DrmService.smali       | 2 +-
+ .../smali/miui/resourcebrowser/view/ResourceOperationHandler.smali      | 2 +-
+ .../smali/miui/resourcebrowser/view/ResourceOperationView.smali         | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+--- a/ThemeManager/smali/miui/resourcebrowser/controller/online/DrmService.smali
++++ b/ThemeManager/smali/miui/resourcebrowser/controller/online/DrmService.smali
+@@ -484,7 +484,7 @@
+     .parameter "resource"
+ 
+     .prologue
+-    const/4 v10, 0x0
++    const/4 v10, 0x1
+ 
+     new-instance v9, Lmiui/drm/DrmManager;
+ 
+--- a/ThemeManager/smali/miui/resourcebrowser/view/ResourceOperationHandler.smali
++++ b/ThemeManager/smali/miui/resourcebrowser/view/ResourceOperationHandler.smali
+@@ -211,7 +211,7 @@
+     .locals 1
+ 
+     .prologue
+-    const/4 v0, 0x0
++    const/4 v0, 0x1
+ 
+     iput-boolean v0, p0, Lmiui/resourcebrowser/view/ResourceOperationHandler;->mIsLegal:Z
+ 
+--- a/ThemeManager/smali/miui/resourcebrowser/view/ResourceOperationView.smali
++++ b/ThemeManager/smali/miui/resourcebrowser/view/ResourceOperationView.smali
+@@ -91,7 +91,7 @@
+     .parameter "x0"
+ 
+     .prologue
+-    invoke-direct {p0}, Lmiui/resourcebrowser/view/ResourceOperationView;->notifyBuyEventPerformed()V
++    invoke-direct {p0}, Lmiui/resourcebrowser/view/ResourceOperationView;->notifyDownloadEventPerformed()V
+ 
+     return-void
+ .end method
+-- 
+1.8.1.2
+
