@@ -56,19 +56,19 @@ then
     cp -u -r $BUILD_OUT/$SEP_FRAME/*  $BUILD_OUT/framework_ext
     rm -rf $BUILD_OUT/$SEP_FRAME
 fi
-
-if [ $2 = "$BUILD_OUT/android.policy" ]
-then
-    for file in overlay/android.policy/*.patch
-    do
-        cp $file out/
-        cd out
-        git.apply `basename $file`
-        cd ..
-        for file2 in `find $2 -name *.rej`
-        do
-            echo "$file2 fail"
-            exit 1
-        done
-    done
-fi
+#
+#if [ $2 = "$BUILD_OUT/android.policy" ]
+#then
+#    for file in overlay/android.policy/*.patch
+#    do
+#        cp $file out/
+#        cd out
+#        git.apply `basename $file`
+#        cd ..
+#        for file2 in `find $2 -name *.rej`
+#        do
+#            echo "$file2 fail"
+#            exit 1
+#        done
+#    done
+#fi
