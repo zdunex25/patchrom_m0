@@ -233,6 +233,16 @@ if [ $1 = "PaymentService" ];then
 fi
 
 if [ $1 = "Phone" ];then
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY Phone.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: Phone patch fail"
+        exit 1
+    done
+
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values

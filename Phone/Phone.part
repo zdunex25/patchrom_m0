@@ -1,0 +1,65 @@
+
+--- a/Phone/smali/com/android/phone/MiuiCdmaCallForwardOptions.smali
++++ b/Phone/smali/com/android/phone/MiuiCdmaCallForwardOptions.smali
+@@ -414,11 +414,11 @@
+ 
+     move-result-object v1
+ 
+-    invoke-interface {v1}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCard$State;
++    invoke-interface {v1}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     move-result-object v1
+ 
+-    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
++    sget-object v2, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     if-ne v1, v2, :cond_0
+ 
+--- a/Phone/smali/com/android/phone/MiuiEditPinDialog$IccPinStateHelper.smali
++++ b/Phone/smali/com/android/phone/MiuiEditPinDialog$IccPinStateHelper.smali
+@@ -301,11 +301,11 @@
+ 
+     move-result-object v0
+ 
+-    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCard$State;
++    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     move-result-object v0
+ 
+-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
++    sget-object v1, Lcom/android/internal/telephony/IccCardConstants$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     if-ne v0, v1, :cond_0
+ 
+--- a/Phone/smali/com/android/phone/MiuiGsmUmtsCallerIdSetting.smali
++++ b/Phone/smali/com/android/phone/MiuiGsmUmtsCallerIdSetting.smali
+@@ -117,11 +117,11 @@
+ 
+     move-result-object v0
+ 
+-    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCard$State;
++    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     move-result-object v0
+ 
+-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
++    sget-object v1, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     if-ne v0, v1, :cond_0
+ 
+--- a/Phone/smali/com/android/phone/MiuiGsmUmtsCallWaitingSetting.smali
++++ b/Phone/smali/com/android/phone/MiuiGsmUmtsCallWaitingSetting.smali
+@@ -117,11 +117,11 @@
+ 
+     move-result-object v0
+ 
+-    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCard$State;
++    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getState()Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     move-result-object v0
+ 
+-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
++    sget-object v1, Lcom/android/internal/telephony/IccCardConstants$State;->READY:Lcom/android/internal/telephony/IccCardConstants$State;
+ 
+     if-ne v0, v1, :cond_0
+ 
