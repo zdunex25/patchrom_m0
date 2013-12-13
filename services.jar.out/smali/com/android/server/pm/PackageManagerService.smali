@@ -4165,19 +4165,21 @@
     goto :goto_0
 
     :cond_4
-    iget-object v6, p0, Lcom/android/server/pm/PackageManagerService;->mResolveInfo:Landroid/content/pm/ResolveInfo;
+    iget-object v7, p0, Lcom/android/server/pm/PackageManagerService;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     move-object v1, p0
 
-    move-object v2, p1
+    move-object/from16 v2, p4
 
-    move-object v3, p2
+    move-object v3, p1
 
-    move v4, p3
+    move-object v4, p2
 
-    move/from16 v5, p5
+    move v5, p3
 
-    invoke-static/range {v1 .. v6}, Lcom/android/server/pm/PackageManagerService$Injector;->checkMiuiIntent(Lcom/android/server/pm/PackageManagerService;Landroid/content/Intent;Ljava/lang/String;IILandroid/content/pm/ResolveInfo;)Landroid/content/pm/ResolveInfo;
+    move/from16 v6, p5
+
+    invoke-static/range {v1 .. v7}, Lcom/android/server/pm/PackageManagerService$Injector;->checkMiuiIntent(Lcom/android/server/pm/PackageManagerService;Ljava/util/List;Landroid/content/Intent;Ljava/lang/String;IILandroid/content/pm/ResolveInfo;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
 
@@ -10644,6 +10646,14 @@
 
     .line 7580
     :cond_4
+    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v1, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v2, p0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/pm/ExtraPackageManagerServices;->postProcessNewInstall(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Lcom/android/server/pm/Settings;)V
+
     move-object/from16 v0, p5
 
     move-object/from16 v1, p6

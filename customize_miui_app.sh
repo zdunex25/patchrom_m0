@@ -31,8 +31,6 @@ function addPolish() {
 }
 
 if [ $1 = "AntiSpam" ];then
-	sed -i -e 's/<action android:name=\"android.intent.action.MAIN\" \/>/<action android:name=\"android.intent.action.MAIN\" \/>\
-                <category android:name=\"android.intent.category.LAUNCHER\" \/>/' out/$1/AndroidManifest.xml
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
@@ -185,16 +183,16 @@ if [ $1 = "MiWallpaper" ];then
 fi
 
 if [ $1 = "Mms" ];then
-    cp $1/*.part out/
-    cd out
-    $GIT_APPLY Mms.part
-    cd ..
-    for file in `find $2 -name *.rej`
-    do
-	echo "Fatal error: Mms patch fail"
-        exit 1
-    done
-
+#    cp $1/*.part out/
+#    cd out
+#    $GIT_APPLY Mms.part
+#    cd ..
+#    for file in `find $2 -name *.rej`
+#    do
+#	echo "Fatal error: Mms patch fail"
+#        exit 1
+#    done
+#
 	addPolish $1
 	adjustDpi $1
 	sed -i -e 's/android:screenOrientation=\"portrait\" //' out/$1/AndroidManifest.xml
