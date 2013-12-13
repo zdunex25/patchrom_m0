@@ -16,8 +16,12 @@
     <application android:theme="@miui:style/V5.Theme.Light" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:hardwareAccelerated="true">
         <activity android:label="@string/app_name" android:name=".OTAUpdaterActivity">
             <intent-filter>
-                <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
