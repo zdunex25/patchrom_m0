@@ -240,9 +240,7 @@
     .line 209
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mKeyguardView:Lcom/android/internal/policy/impl/KeyguardViewBase;
 
-    invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->isGlanceViewVisible()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     .line 212
     :goto_0
