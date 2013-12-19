@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Landroid/view/WindowManagerPolicy;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -13098,6 +13099,17 @@
     .end local v16           #kioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
     :cond_1
     :goto_2
+    and-int/lit8 v0, v19, 0x4
+
+    if-eqz v0, :cond_2xx
+
+    and-int/lit8 v19, v19, -0x5
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sleepDelay()V
+
+    :cond_2xx
     return v19
 
     .line 4864
@@ -22644,5 +22656,46 @@
     .parameter "msg"
 
     .prologue
+    return-void
+.end method
+
+.method public sleepDelay()V
+    .locals 10
+
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    const-wide v2, 0x64
+
+    check-cast p0, Ljava/lang/Runnable;
+
+    invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public run()V
+    .locals 10
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    const-string v1, "power"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    const-wide/16 v6, 0x3e8
+
+    add-long/2addr v2, v6
+
+    invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->goToSleep(J)V
+
     return-void
 .end method
