@@ -16,7 +16,7 @@
 
 --- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
 +++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
-@@ -2550,6 +2550,47 @@
+@@ -2464,6 +2464,47 @@
      return-void
  .end method
  
@@ -64,7 +64,7 @@
  .method private getTabIndicatorPosition(I)I
      .locals 5
      .parameter "tabIndex"
-@@ -9964,6 +9964,10 @@
+@@ -9422,6 +9422,10 @@
      .line 633
      const v0, 0x7f030021
  
