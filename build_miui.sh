@@ -84,7 +84,28 @@ cd ../../../../m0
 mv out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.zip out/temp/system/media/theme/.data/content/clock_2x4/simple_clock.mrc
 cp -f ../miuipolska/Polish/extras/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc out/temp/system/media/theme/.data/content/clock_2x4/clock_2x4.mrc
 
-cd out/temp
+cd out/temp/system/framework
+$PORT_ROOT/tools/apktool --quiet d -f framework-miui-res.apk
+pl=$PORT_ROOT/miuipolska/Polish/main
+xhdpi=( $(ls framework-miui-res/res/drawable-xhdpi) )
+
+for PNG in "${xhdpi[@]}"; do
+     rm -f framework-miui-res/res/drawable-hdpi/$PNG
+     rm -f framework-miui-res/res/drawable-xxhdpi/$PNG
+done
+
+rm -rf framework-miui-res/res/drawable-land-hdpi
+rm -rf framework-miui-res/res/drawable-largeui-hdpi
+rm -rf framework-miui-res/res/drawable-land-xxhdpi
+cp -u -r $pl/framework-miui-res.apk/res/* framework-miui-res/res
+rm framework-miui-res.apk
+sed -i "s/- 1/- 1\n  - 2\n  - 3\n  - 4\n  - 5/g" framework-miui-res/apktool.yml
+$PORT_ROOT/tools/apktool --quiet b -f framework-miui-res unsigned-framework-miui-res.apk
+rm -rf framework-miui-res
+java -jar "$PORT_ROOT/tools/signapk.jar" "$PORT_ROOT/build/security/platform.x509.pem" "$PORT_ROOT/build/security/platform.pk8" "unsigned-framework-miui-res.apk" "unaligned-framework-miui-res.apk"
+$PORT_ROOT/m0/other/zipalign -f 4 "unaligned-framework-miui-res.apk" "framework-miui-res.apk"
+find -name "un*" | xargs rm -f
+cd ../..
 
 rm META-INF/CERT.RSA
 rm META-INF/CERT.SF
