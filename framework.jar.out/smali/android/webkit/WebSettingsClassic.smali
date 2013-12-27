@@ -54,6 +54,8 @@
 
 .field private mAutoFillProfile:Landroid/webkit/WebSettingsClassic$AutoFillProfile;
 
+.field private mBlockFloatPopupWindows:Z
+
 .field private mBlockNetworkImage:Z
 
 .field private mBlockNetworkLoads:Z
@@ -443,6 +445,8 @@
 
     .line 128
     iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mPasswordEchoEnabled:Z
+
+    iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mBlockFloatPopupWindows:Z
 
     .line 129
     iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mWebGLEnabled:Z
@@ -1466,6 +1470,29 @@
     monitor-exit p0
 
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized getBlockFloatPopupWindows()Z
+    .locals 1
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Landroid/webkit/WebSettingsClassic;->mBlockFloatPopupWindows:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
 
     :catchall_0
     move-exception v0
@@ -3022,6 +3049,37 @@
     return-void
 
     .line 1091
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized setBlockFloatPopupWindows(Z)V
+    .locals 1
+    .parameter "flag"
+
+    .prologue
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Landroid/webkit/WebSettingsClassic;->mBlockFloatPopupWindows:Z
+
+    if-eq v0, p1, :cond_0
+
+    iput-boolean p1, p0, Landroid/webkit/WebSettingsClassic;->mBlockFloatPopupWindows:Z
+
+    invoke-direct {p0}, Landroid/webkit/WebSettingsClassic;->postSync()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
     :catchall_0
     move-exception v0
 
