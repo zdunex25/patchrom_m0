@@ -194,6 +194,7 @@ rm -rf pl/MtkBt
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
+rm -rf pl/PicoTts
 rm -rf pl/Stk1
 rm -rf pl/StkSelection
 rm -rf pl/TelocationProvider
