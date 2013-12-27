@@ -81,11 +81,11 @@
 @@ -1272,7 +1272,7 @@
      iput-boolean p1, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mIsShow:Z
  
-     .line 342
+     .line 348
 -    if-eqz p1, :cond_2
 +    if-eqz p1, :cond_1
  
-     .line 343
+     .line 349
      iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mDefaultDisplay:Landroid/view/Display;
 @@ -1315,63 +1315,21 @@
  
@@ -96,7 +96,7 @@
  
      move-result-object v1
  
--    .line 346
+-    .line 352
 -    .local v1, backgroundOriginal:Landroid/graphics/Bitmap;
 -    if-eqz v1, :cond_3
 -
@@ -112,12 +112,12 @@
 -
 -    if-eqz v8, :cond_3
 -
--    .line 347
+-    .line 354
 -    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
 -
 -    if-nez v8, :cond_1
 -
--    .line 348
+-    .line 355
 -    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 -
 -    move-result v8
@@ -134,7 +134,7 @@
 -
 -    iput-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
 -
--    .line 349
+-    .line 357
 -    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
 -
 -    const/high16 v9, -0x100
@@ -142,7 +142,7 @@
 -    invoke-virtual {v8, v9}, Landroid/graphics/Bitmap;->eraseColor(I)V
 +    const/4 v8, 0x1
  
--    .line 352
+-    .line 360
 -    :cond_1
 -    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
 +    invoke-virtual {v1, v10, v8}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
@@ -154,13 +154,13 @@
 +    iput-object v1, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
  
 +    .line 349
-     .line 353
+     .line 361
      new-instance v2, Landroid/graphics/Canvas;
  
 @@ -1394,13 +1352,13 @@
      invoke-virtual {v2, v8}, Landroid/graphics/Canvas;->drawColor(I)V
  
-     .line 359
+     .line 367
 -    .end local v1           #backgroundOriginal:Landroid/graphics/Bitmap;
 +    .end local v1
      .end local v2           #canvas:Landroid/graphics/Canvas;
@@ -186,11 +186,11 @@
 @@ -1436,7 +1394,7 @@
      invoke-virtual {v8}, Landroid/animation/ObjectAnimator;->start()V
  
-     .line 364
+     .line 372
 -    if-eqz p1, :cond_6
 +    if-eqz p1, :cond_4
  
-     .line 365
+     .line 373
      const/4 v8, 0x0
 @@ -1556,13 +1514,12 @@
      .end local v0           #adapter:Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;
@@ -206,12 +206,12 @@
 -    if-eqz v8, :cond_2
 +    if-eqz v8, :cond_1
  
-     .line 356
+     .line 364
      iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
 @@ -1574,22 +1531,22 @@
      goto/16 :goto_1
  
-     .line 359
+     .line 367
 -    .end local v1           #backgroundOriginal:Landroid/graphics/Bitmap;
 +    .end local v1
      .end local v5           #height:I
@@ -222,16 +222,16 @@
  
      goto/16 :goto_2
  
-     .line 360
+     .line 368
 -    :cond_5
 +    :cond_3
      const/4 v8, 0x0
  
      goto/16 :goto_3
  
-     .line 408
+     .line 416
 -    :cond_6
 +    :cond_4
      invoke-direct {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->dismissUserGuide()V
  
-     .line 409
+     .line 417
