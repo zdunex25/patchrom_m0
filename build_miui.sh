@@ -4,7 +4,7 @@ export PATH=$PATH:/home/$USER/android-sdk-linux/tools:/home/$USER/android-sdk-li
 cd patchromv542
 . build/envsetup.sh -p m0
 cd m0
-mkdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage temp
+mkdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage temp
 cd temp
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
@@ -95,7 +95,7 @@ fi
 . ../build/envsetup.sh
 cd m0
 
-rmdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage
+rmdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass MiuiGallery MiuiVideoPlayer MiWallpaper NetworkAssistant Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage
 find other -name "unsigned-*" | xargs rm -f
 make clean
 echo Signing rom
@@ -110,7 +110,7 @@ LINK_PL="http://91.205.75.29//zdunex25/$version/miuigalaxy-v5-sgs3-$version-4.2.
 forum="<a href='http://bit.ly/1as1Xao'>Dyskusja na forum</a>"
 MIRROR1_PL="http://goo.im/devs/mikegapinski/miuiv5/4.2.2/m0/miuigalaxy-v5-sgs3-$version-4.2.zip"
 #MIRROR2_PL="http://htcfanboys.com/download/acid/files/MIUIv5/$version/miuigalaxy-v5-sgs3-$version-4.2.zip"
-echo '[dwl producent="'samsung'" board="'m0'" tytul="Samsung&nbsp;Galaxy&nbsp;S3" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" datapl="'$data'" md5pl="'\$md5_ota1'" informacje="'$forum'" status="" statuspl="" link="'$LINK_PL'" linkpl="'\$LINK_OTA1'" rozmiar="'$size'" rozmiarpl="'\$size_ota1'" rodzaj="" mirror1="'$MIRROR1_PL'" mirror2="" ota="'\$OTA1'"]
+echo '[dwl producent="'samsung'" board="'m0'" tytul="Samsung&nbsp;Galaxy&nbsp;S3" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="'$forum'" status="" link="'$LINK_PL'" rozmiar="'$size'" mirror1="'$MIRROR1_PL'" mirror2="" rodzaj="'pelna'"]
     
     ' >> ../download_v5.txt
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.2.zip has been created in root of m0 directory, copy to sd and flash it!"
