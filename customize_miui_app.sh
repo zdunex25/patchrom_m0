@@ -202,6 +202,7 @@ fi
 
 if [ $1 = "Music" ];then
 	addPolish $1
+	sed -i 's#@string/app_class#com.miui.player.Application#g' out/$1/AndroidManifest.xml
 	sed -i -e 's/\"no_effect\">Wyłączone/\"no_effect\">ViPER FX/' out/$1/res/values-pl/strings.xml
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
