@@ -68,7 +68,7 @@
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 167
+    .line 164
     :cond_0
     :goto_0
     return-void
@@ -87,16 +87,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 136
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/CeRequestQueue;->completeRequest()V
-
-    goto :goto_0
-
-    .line 139
+    .line 137
     :sswitch_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getCameraEngine()Lcom/sec/android/app/camera/CameraEngine;
 
@@ -104,7 +95,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraEngine;->resumeAudioplayback_TimerBgm()V
 
-    .line 140
+    .line 138
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
     move-result-object v0
@@ -113,7 +104,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 141
     :sswitch_2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getCameraEngine()Lcom/sec/android/app/camera/CameraEngine;
 
@@ -123,7 +114,7 @@
 
     goto :goto_0
 
-    .line 146
+    .line 144
     :sswitch_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
@@ -133,7 +124,7 @@
 
     goto :goto_0
 
-    .line 149
+    .line 147
     :sswitch_4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
@@ -143,7 +134,7 @@
 
     goto :goto_0
 
-    .line 152
+    .line 150
     :sswitch_5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
@@ -153,7 +144,7 @@
 
     goto :goto_0
 
-    .line 155
+    .line 153
     :sswitch_6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
@@ -163,7 +154,7 @@
 
     goto :goto_0
 
-    .line 158
+    .line 156
     :sswitch_7
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 
@@ -177,16 +168,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/CeRequestQueue;->completeRequest()V
-
-    goto :goto_0
-
-    .line 164
+    .line 161
     :sswitch_8
     invoke-virtual {p0}, Lcom/sec/android/app/camera/CeStatePreviewing;->getRequestQueue()Lcom/sec/android/app/camera/CeRequestQueue;
 

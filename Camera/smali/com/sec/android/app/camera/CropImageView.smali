@@ -94,7 +94,7 @@
     .local v3, thisHeight:F
     div-float v9, v4, v5
 
-    const v10, 0x3ee66666
+    const v10, 0x3f19999a
 
     mul-float v6, v9, v10
 
@@ -102,7 +102,7 @@
     .local v6, z1:F
     div-float v9, v3, v2
 
-    const v10, 0x3ee66666
+    const v10, 0x3f19999a
 
     mul-float v7, v9, v10
 
@@ -549,7 +549,7 @@
     invoke-super/range {p0 .. p5}, Lcom/sec/android/app/camera/ImageViewTouchBase;->onLayout(ZIIII)V
 
     .line 840
-    iget-object v2, p0, Lcom/sec/android/app/camera/ImageViewTouchBase;->mBitmapDisplayed:Lcom/sec/android/app/camera/RotateBitmap;
+    iget-object v2, p0, Lcom/sec/android/app/camera/CropImageView;->mBitmapDisplayed:Lcom/sec/android/app/camera/RotateBitmap;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/RotateBitmap;->getBitmap()Landroid/graphics/Bitmap;
 

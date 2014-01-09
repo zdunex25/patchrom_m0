@@ -33,7 +33,7 @@
 
     .prologue
     .line 31
-    const v0, 0x7f08000a
+    const v0, 0x7f080009
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -42,7 +42,7 @@
     sput v0, Lcom/sec/android/app/camera/gallery/IImage;->THUMBNAIL_TARGET_SIZE:I
 
     .line 32
-    const v0, 0x7f08000b
+    const v0, 0x7f08000a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -51,7 +51,7 @@
     sput v0, Lcom/sec/android/app/camera/gallery/IImage;->MINI_THUMB_TARGET_SIZE:I
 
     .line 33
-    const v0, 0x7f08000c
+    const v0, 0x7f08000b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -60,7 +60,7 @@
     sput v0, Lcom/sec/android/app/camera/gallery/IImage;->THUMBNAIL_MAX_NUM_PIXELS:I
 
     .line 34
-    const v0, 0x7f08000d
+    const v0, 0x7f08000c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 

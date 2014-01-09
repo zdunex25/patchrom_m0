@@ -63,14 +63,12 @@ under en samtale"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Svart/hvitt</string>
+    <string name="E_BW">Svart-hvitt</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negativ</string>
     <string name="E_EMBOSS">Relieff</string>
     <string name="E_OUTLINE">Utkast</string>
     <string name="E_WATERCOLOR">Vannfarge</string>
-    <string name="E_MONOCHROME">Monokrom</string>
-    <string name="E_SKETCH">Skisse</string>
     <string name="E_WASHED">Utvasket</string>
     <string name="E_POSTERIZE">Lag plakat</string>
     <string name="E_SOLARIZE">Gi sollys</string>
@@ -133,7 +131,6 @@ under en samtale"</string>
     <string name="Title_Timer">Selvutløser</string>
     <string name="Title_Resolution">Oppløsning</string>
     <string name="Title_ShootAndShare">Del bilde-innst.</string>
-    <string name="Title_DeviceList">Enhetsliste</string>
     <string name="Title_WhiteBalance">Hvitbalanse</string>
     <string name="Title_Effects">Effekter</string>
     <string name="Title_Focus">Fokus</string>
@@ -155,12 +152,11 @@ under en samtale"</string>
     <string name="Title_AutoContrast">Autokontrast</string>
     <string name="Title_GPS">GPS-tagg</string>
     <string name="Title_Review">Gjennomgang</string>
-    <string name="Title_AutoShareShot">Del bilde automatisk</string>
     <string name="Title_Guideline">Hjelpelinjer</string>
     <string name="Title_VideoQuality">Videokvalitet</string>
     <string name="Title_AudioRecording">Lydopptak</string>
     <string name="Title_Storage">Lagring</string>
-    <string name="Title_Reset">Nullstill</string>
+    <string name="Title_Reset">Nullstilling</string>
     <string name="Title_Mode">Modus</string>
     <string name="Title_Back">Tilbake</string>
     <string name="Title_ImageViewer">Bildevisning</string>
@@ -178,10 +174,7 @@ under en samtale"</string>
     <string name="HDR_Helptext">Vær forsiktig så du ikke rister på enheten mens du tar bilder</string>
     <string name="help_text_panorama">Trykk på kameratasten og beveg telefonen sakte i én retning</string>
     <string name="help_text_panorama_device">Trykk på kameratasten og beveg enheten sakte i én retning</string>
-    <string name="message_DefaultLayout">Snarveioppsettet vil bli tilbakestilt</string>
     <string name="message_EULA_GPS">Aktivering av GPS-tagg vil legge ved, inkludere og lagre geografisk plasseringsdata i hvert bilde. Vær forsiktig når du sender, deler, distribuerer, overfører eller kopierer disse bildene i og med at de inneholder informasjon om hvor bildet ble tatt</string>
-    <string name="message_Auto_ShareShot">"Del bilde automatisk lar deg enkelt koble til enhetene du ønsker å dele bilder med.
-Aktiver del bilde automatisk og før enhetene sammen (vanligvis bakside mot bakside) for å koble dem sammen"</string>
     <string name="GPS_msg">GPS av</string>
     <string name="message_enable_GPS">Slå på GPS i Innstillinger for å bruke GPS-tagg</string>
     <string name="cancel">Avbryt</string>
@@ -248,11 +241,9 @@ Aktiver del bilde automatisk og før enhetene sammen (vanligvis bakside mot baks
     <string name="profile_user_default_name">Ukjent</string>
     <string name="shareshot_no_user">Ingen personer å dele med</string>
     <string name="snapshot_saved">%s lagret</string>
-    <string name="editable_shortcut_reset">Nullstill</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Trykk på og hold snarveier for å redigere dem</string>
     <string name="editable_shortcut_helptext">Trykk på og hold ikonet og dra det for å redigere posisjonen til snarveiene</string>
-    <string name="sbeam_helptext">Ta og del bilder med andre enheter. Bring enhetene sammen for å legge til enheter du ønsker å dele med, ved bruk av S Beam</string>
     <string name="storage_setting_dialog_title">Lagringssted</string>
     <string name="storage_setting_dialog_message">SD-kort satt inn. Endre lagringssted til SD-kort?</string>
     <string name="do_not_ask_again">Ikke vis igjen</string>
@@ -261,8 +252,6 @@ Aktiver del bilde automatisk og før enhetene sammen (vanligvis bakside mot baks
     <string name="bestpic">Beste bilde</string>
     <string name="bestpic_on">På</string>
     <string name="bestpic_off">Av</string>
-    <string name="bestgroup">Beste gruppeposering</string>
-    <string name="bestgroup_title">Velg beste ansikter og lagre</string>
     <string name="battery_low">Lukk Kamera. Batteritemperaturen er for lav</string>
     <string name="buddy_photo_share_helptext">Ta og del bilder med venner via ansiktgjenkjenning</string>
     <string name="face_zoom_helptext">Dobbelttrykk på et ansikt for å zoome inn eller ut</string>
@@ -272,7 +261,6 @@ Aktiver del bilde automatisk og før enhetene sammen (vanligvis bakside mot baks
     <string name="on_device_help_camcorder">Bytt til videokameramodus</string>
     <string name="on_device_help_self">Bytt til selvportrettmodus</string>
     <string name="on_device_help_editable">Trykk på og hold snarveien du ønsker å flytte. Deretter drar du den dit du ønsker</string>
-    <string name="on_device_help_voicecommand">"Du kan ta bilder med talekommandoer som 'Ta bilde', 'Film', 'Smil' og 'Cheese'"</string>
     <string name="Title_VideoSpeed">Hastighet</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x raskere</string>
@@ -294,7 +282,4 @@ Aktiver del bilde automatisk og før enhetene sammen (vanligvis bakside mot baks
     <string name="self_recording_open_warning_popup">Selvopptak kan bare brukes når telefonen er åpen</string>
     <string name="contextual_filename">Kontekstuelt filnavn</string>
     <string name="enable_gps_dialog">GPS-tagg må aktiveres. Aktivere GPS-tagg?</string>
-    <string name="gallery_disable">Galleri er deaktivert</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Sterk</string>
 </resources>

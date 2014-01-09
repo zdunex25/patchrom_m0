@@ -67,8 +67,6 @@ durante chamadas"</string>
     <string name="E_EMBOSS">Relevo</string>
     <string name="E_OUTLINE">Contorno</string>
     <string name="E_WATERCOLOR">Aguarelas</string>
-    <string name="E_MONOCHROME">Monocromático</string>
-    <string name="E_SKETCH">Esboço</string>
     <string name="E_WASHED">Desbotado</string>
     <string name="E_POSTERIZE">Criar poster</string>
     <string name="E_SOLARIZE">Solarizar</string>
@@ -79,7 +77,7 @@ durante chamadas"</string>
     <string name="E_POINT_RED_YELLOW">Ponto vermelho-amarelado</string>
     <string name="E_CARTOONIZE">Personag. BD</string>
     <string name="F_AUTO_FLASH">Flash automático</string>
-    <string name="F_AUTOFOCUS">Foc. aut.</string>
+    <string name="F_AUTOFOCUS">Focagem automática</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detecção de rosto</string>
     <string name="F_PANFOCUS">Foc. pan.</string>
@@ -131,7 +129,6 @@ durante chamadas"</string>
     <string name="Title_Timer">Temporizador</string>
     <string name="Title_Resolution">Resolução</string>
     <string name="Title_ShootAndShare">Defs Share shot</string>
-    <string name="Title_DeviceList">Lista de dispositivos</string>
     <string name="Title_WhiteBalance">Equilíbrio de brancos</string>
     <string name="Title_Effects">Efeitos</string>
     <string name="Title_Focus">Focagem</string>
@@ -153,11 +150,10 @@ durante chamadas"</string>
     <string name="Title_AutoContrast">Contraste automático</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Rever</string>
-    <string name="Title_AutoShareShot">Share shot automático</string>
     <string name="Title_Guideline">Directrizes</string>
     <string name="Title_VideoQuality">Qualidade de vídeo</string>
     <string name="Title_AudioRecording">Grav. áudio</string>
-    <string name="Title_Storage">Memória</string>
+    <string name="Title_Storage">Armazenamento</string>
     <string name="Title_Reset">Repor</string>
     <string name="Title_Mode">Modo</string>
     <string name="Title_Back">Voltar</string>
@@ -176,10 +172,7 @@ durante chamadas"</string>
     <string name="HDR_Helptext">Tenha cuidado e não agite o dispositivo ao tirar fotografias</string>
     <string name="help_text_panorama">Prima a tecla da câmara e mova o telefone lentamente numa direcção</string>
     <string name="help_text_panorama_device">Prima a tecla da câmara e mova o dispositivo lentamente numa direcção</string>
-    <string name="message_DefaultLayout">A disposição dos atalhos será reposta</string>
     <string name="message_EULA_GPS">A activação da etiqueta GPS irá anexar, incorporar e guardar dados de localização geográfica em cada fotografia. Tenha cuidado quando enviar, partilhar, distribuir, transmitir e copiar essas fotos, uma vez que contêm o local onde foram tiradas</string>
-    <string name="message_Auto_ShareShot">"O Share shot automático permite-lhe ligar-se facilmente aos dispositivos com os quais pretende partilhar imagens.
-Active o Share shot automático e aproxime os dispositivos (de modo típico, costas com costas) para os ligar"</string>
     <string name="GPS_msg">GPS desligado</string>
     <string name="message_enable_GPS">Ligar GPS em Definições para utilizar a etiqueta GPS</string>
     <string name="cancel">Cancelar</string>
@@ -245,11 +238,9 @@ Active o Share shot automático e aproxime os dispositivos (de modo típico, cos
     <string name="profile_user_default_name">Desconhecido</string>
     <string name="shareshot_no_user">Sem pessoas para partilhar</string>
     <string name="snapshot_saved">%s guardado</string>
-    <string name="editable_shortcut_reset">Repor</string>
     <string name="editable_shortcut_helptext_title">Dicas</string>
     <string name="editable_shortcut_helptext_message">Toque sem soltar os atalhos para os editar</string>
     <string name="editable_shortcut_helptext">Toque no item sem o soltar, depois arraste-o para modificar a posição dos atalhos</string>
-    <string name="sbeam_helptext">Tirar e partilhar fotos com outros dispositivos. Aproxime os dispositivos para adicionar os dispositivos com que pretende fazer a partilha via S Beam</string>
     <string name="storage_setting_dialog_title">Localização do armazenamento</string>
     <string name="storage_setting_dialog_message">Cartão SD inserido. Mudar a localização do armazenamento para o cartão SD?</string>
     <string name="do_not_ask_again">Não mostrar novamente</string>
@@ -258,8 +249,6 @@ Active o Share shot automático e aproxime os dispositivos (de modo típico, cos
     <string name="bestpic">Melhor fotografia</string>
     <string name="bestpic_on">Lig.</string>
     <string name="bestpic_off">Desl.</string>
-    <string name="bestgroup">Melhor pose de grupo</string>
-    <string name="bestgroup_title">Selec. melhor rosto p/ guardar</string>
     <string name="battery_low">Fechar a Câmara. Temperatura da bateria demasiado baixa</string>
     <string name="buddy_photo_share_helptext">Tire e partilhe fotografias com amigos por detecção de rosto</string>
     <string name="face_zoom_helptext">Toque duas vezes num rosto para ampliar e reduzir</string>
@@ -269,7 +258,6 @@ Active o Share shot automático e aproxime os dispositivos (de modo típico, cos
     <string name="on_device_help_camcorder">Mudar para o modo de câmara de vídeo</string>
     <string name="on_device_help_self">Mudar para o modo de auto-retrato</string>
     <string name="on_device_help_editable">Toque sem soltar no atalho que quer mover. Depois, arraste-o para o local pretendido</string>
-    <string name="on_device_help_voicecommand">Pode tirar fotografias com comandos de voz como ‘Capturar’, ‘Disparar’ e ou ‘Sorrir‘ e ‘Rir’</string>
     <string name="Title_VideoSpeed">Velocidade</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x mais rápida</string>
@@ -291,7 +279,4 @@ Active o Share shot automático e aproxime os dispositivos (de modo típico, cos
     <string name="self_recording_open_warning_popup">A auto-gravação só pode ser utilizada quando o telefone está aberto</string>
     <string name="contextual_filename">Nome de ficheiro contextual</string>
     <string name="enable_gps_dialog">A etiqueta GPS tem de estar activa. Activar etiqueta GPS?</string>
-    <string name="gallery_disable">A galeria foi desactivada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Forte</string>
 </resources>

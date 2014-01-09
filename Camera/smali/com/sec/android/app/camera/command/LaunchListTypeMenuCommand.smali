@@ -209,7 +209,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mSlideDirection:I
 
@@ -235,19 +235,19 @@
 
     .line 92
     :cond_5
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mZOrder:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setZorder(I)V
 
     .line 93
-    iget-object v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v1, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setAnchor(Lcom/sec/android/glview/TwGLImage;)V
 
     .line 94
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchX:F
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mLaunchX:F
 
-    iget v2, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchY:F
+    iget v2, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mLaunchY:F
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/MenuBase;->setLaunchPosition(FF)V
 
@@ -297,7 +297,7 @@
 
     .prologue
     .line 51
-    iput p1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iput p1, p0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->mZOrder:I
 
     .line 52
     return-void

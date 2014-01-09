@@ -35,7 +35,7 @@
     <string name="SM_SMILE">Фото-насмевка</string>
     <string name="SM_FRAME">Кадар по кадар</string>
     <string name="SM_BEAUTY">Убавина</string>
-    <string name="SM_VINTAGE">Ретро</string>
+    <string name="SM_VINTAGE">Стара берба</string>
     <string name="SM_ADDME">Додај ме</string>
     <string name="SM_ACTION">Сликање акција</string>
     <string name="SM_STOPMOTION">Стоп-движење</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Релјеф</string>
     <string name="E_OUTLINE">Обрабено</string>
     <string name="E_WATERCOLOR">Водени бои</string>
-    <string name="E_MONOCHROME">Еднобојно</string>
-    <string name="E_SKETCH">Илустрација</string>
     <string name="E_WASHED">Измиено</string>
     <string name="E_POSTERIZE">Постеризирај</string>
     <string name="E_SOLARIZE">Осончено</string>
@@ -80,7 +78,7 @@
     <string name="E_POINT_RED_YELLOW">Црвено-жолта точка</string>
     <string name="E_CARTOONIZE">Карикатура</string>
     <string name="F_AUTO_FLASH">Автоматски блиц</string>
-    <string name="F_AUTOFOCUS">Авто.фокус</string>
+    <string name="F_AUTOFOCUS">Автоматско изострување</string>
     <string name="F_MACRO">Макро</string>
     <string name="F_FACE">Откривање лица</string>
     <string name="F_PANFOCUS">Пан.фокус</string>
@@ -117,7 +115,7 @@
     <string name="SCN_NIGHT_SHOT">Ноќе</string>
     <string name="SCN_FIREWORK">Огномет</string>
     <string name="SCN_TEXT">Текст</string>
-    <string name="SCN_CANDLE_LIGHT">Светло на свеќи</string>
+    <string name="SCN_CANDLE_LIGHT">На свеќи</string>
     <string name="SCN_BACK_LIGHT">Заднинско светло</string>
     <string name="OPTION_ON">Вклучено</string>
     <string name="OPTION_OFF">Исклучено</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">Тајмер</string>
     <string name="Title_Resolution">Резолуција</string>
     <string name="Title_ShootAndShare">Опц. за спод.снимка</string>
-    <string name="Title_DeviceList">Листа уреди</string>
     <string name="Title_WhiteBalance">Баланс на бело</string>
     <string name="Title_Effects">Ефекти</string>
     <string name="Title_Focus">Фокус</string>
@@ -154,7 +151,6 @@
     <string name="Title_AutoContrast">Автоматски контраст</string>
     <string name="Title_GPS">Ознака GPS</string>
     <string name="Title_Review">Ревизија</string>
-    <string name="Title_AutoShareShot">Автом. споделување снимка</string>
     <string name="Title_Guideline">Со водилки</string>
     <string name="Title_VideoQuality">Квалитет на видео</string>
     <string name="Title_AudioRecording">Снимање звук</string>
@@ -177,10 +173,7 @@
     <string name="HDR_Helptext">Внимавајте да не го тресете уредот додека фотографирате</string>
     <string name="help_text_panorama">Притиснете го копчето за камера и движете го телефонот бавно во една насока</string>
     <string name="help_text_panorama_device">Притиснете го копчето за камера и движете го уредот бавно во една насока</string>
-    <string name="message_DefaultLayout">Распоредот на кратенки ќе се ресетира</string>
     <string name="message_EULA_GPS">Вклучувањето ознаки GPS ќе приложува, придружува и чува податоци за географско лоцирање со секоја фотографија. Бидете претпазливи кога ги праќате, споделувате, дистрибуирате, емитувате или копирате овие фотографии затоа што ја содржат локацијата каде што било фотографирано</string>
-    <string name="message_Auto_ShareShot">"Auto share shot enables you to easily connect to the devices you want to share pictures with.
-Enable auto share shot, then bring the devices together (typically back to back) to connect them"</string>
     <string name="GPS_msg">Исклучи GPS</string>
     <string name="message_enable_GPS">Вклучете GPS во Опции за да користите ознаки GPS</string>
     <string name="cancel">Откажи</string>
@@ -247,11 +240,9 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="profile_user_default_name">Непозната</string>
     <string name="shareshot_no_user">Нема луѓе за споделување</string>
     <string name="snapshot_saved">%s е меморирано</string>
-    <string name="editable_shortcut_reset">Ресетирај</string>
     <string name="editable_shortcut_helptext_title">Совети</string>
     <string name="editable_shortcut_helptext_message">Допрете и држете кратенка за да ја измените</string>
     <string name="editable_shortcut_helptext">Допрете и држете икона, па одвлечете ја за да ја измените положбата на кратенките</string>
-    <string name="sbeam_helptext">Фотографирајте и споделувајте фотографии со други уреди. Приближете ги уредите со коишто сакате да споделувате за да ги додадете преку S Beam</string>
     <string name="storage_setting_dialog_title">Место за меморирање</string>
     <string name="storage_setting_dialog_message">Вметната е SD-картичка. Да се смени местото за меморирање на SD-картичка?</string>
     <string name="do_not_ask_again">Не прикажувај веќе</string>
@@ -260,8 +251,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="bestpic">Најдобра фотографија</string>
     <string name="bestpic_on">Вк</string>
     <string name="bestpic_off">Иск</string>
-    <string name="bestgroup">Најдобра групна поза</string>
-    <string name="bestgroup_title">Изб. најдобри лица за зачув.</string>
     <string name="battery_low">Затворете ја камерата. Темп. на батеријата е прениска</string>
     <string name="buddy_photo_share_helptext">Фотографирајте и делете фотографии со пријателите преку откривањето лица</string>
     <string name="face_zoom_helptext">Допрете лице двапати за да приближите или оддалечите</string>
@@ -271,7 +260,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="on_device_help_camcorder">Префрли во камера</string>
     <string name="on_device_help_self">Префрли во режим за автопортрет</string>
     <string name="on_device_help_editable">Допрете и држете ја кратенката што сакате да ја преместите. Потоа довлечете ја каде сакате</string>
-    <string name="on_device_help_voicecommand">Може да фотографирате со говорни команди како Сликај, Фотографирај, Насмеј се и Зејтин</string>
     <string name="Title_VideoSpeed">Брзина</string>
     <string name="SPEED_OFF">Нормално</string>
     <string name="SPEED_2X_FASTER">2x побрзо</string>
@@ -293,7 +281,4 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="self_recording_open_warning_popup">Снимање автопортрет може да се користи само кога телефонот е отворен</string>
     <string name="contextual_filename">Контекстуално име на фајл</string>
     <string name="enable_gps_dialog">Треба да се вклучени ознаки GPS. Да се вклучат ознаки GPS?</string>
-    <string name="gallery_disable">Галеријата е оневозможена</string>
-    <string name="HDR_Normal">Нормално</string>
-    <string name="HDR_Strong">Јак</string>
 </resources>

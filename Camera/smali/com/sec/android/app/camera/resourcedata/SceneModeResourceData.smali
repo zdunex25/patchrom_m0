@@ -138,7 +138,7 @@
 
     .line 89
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -189,7 +189,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 43
+    .line 42
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x1f7
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 44
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1f8
@@ -200,7 +211,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1f9
@@ -211,7 +222,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 49
+    .line 50
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1fa
@@ -222,7 +233,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1fb
@@ -233,7 +244,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 53
+    .line 54
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1fc
@@ -244,7 +255,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 56
+    .line 57
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1fd
@@ -255,29 +266,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 59
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x1ff
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 62
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x200
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 65
+    .line 60
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x1fe
@@ -288,10 +277,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 68
+    .line 63
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x201
+    const/16 v1, 0x1ff
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -299,10 +288,21 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 70
+    .line 66
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x1f7
+    const/16 v1, 0x200
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 69
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x201
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -321,7 +321,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/SceneModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

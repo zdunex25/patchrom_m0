@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">რელიეფი</string>
     <string name="E_OUTLINE">კონტური</string>
     <string name="E_WATERCOLOR">აკვარელი</string>
-    <string name="E_MONOCHROME">ერთ ფერში</string>
-    <string name="E_SKETCH">ესკიზი</string>
     <string name="E_WASHED">გადარეცხილი</string>
     <string name="E_POSTERIZE">კონტურების შემოვლება</string>
     <string name="E_SOLARIZE">მზის დასხივება</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">წითელ-ყვითელი წერტილი</string>
     <string name="E_CARTOONIZE">კარიკატურა</string>
     <string name="F_AUTO_FLASH">ავტო. ნათება</string>
-    <string name="F_AUTOFOCUS">ავტოფოკუსი</string>
+    <string name="F_AUTOFOCUS">ავტომატური ფოკუსი</string>
     <string name="F_MACRO">მაკრო</string>
     <string name="F_FACE">სახის დადგენა</string>
     <string name="F_PANFOCUS">სრ.ფოკუსი</string>
@@ -110,7 +108,7 @@
     <string name="SCN_PARTY_INDOOR">წვეულებაზე/შენობაში</string>
     <string name="SCN_BEACH_SNOW">სანაპირო/თოვლი</string>
     <string name="SCN_SUNSET">მზის ჩასვლა</string>
-    <string name="SCN_DAWN_DUSK">ქვემოთ</string>
+    <string name="SCN_DAWN_DUSK">განთიადი</string>
     <string name="SCN_FALL_COLOR">შემოდგომის ფერი</string>
     <string name="SCN_NIGHT_SHOT">ღამე</string>
     <string name="SCN_FIREWORK">ფეიერვერკი</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">ტაიმერი</string>
     <string name="Title_Resolution">გარჩევადობა</string>
     <string name="Title_ShootAndShare">გადაღების გაზიარება</string>
-    <string name="Title_DeviceList">მოწყობილობების სია</string>
     <string name="Title_WhiteBalance">თეთრის ბალანსი</string>
     <string name="Title_Effects">ეფექტები</string>
     <string name="Title_Focus">ფოკუსი</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">ავტომატური კონტრასტი</string>
     <string name="Title_GPS">GPS იარლიყი</string>
     <string name="Title_Review">დათვალიერება</string>
-    <string name="Title_AutoShareShot">გადაღების ავტოგაზიარება</string>
     <string name="Title_Guideline">მითითებები</string>
     <string name="Title_VideoQuality">ვიდეოს ხარისხი</string>
     <string name="Title_AudioRecording">აუდიოს ჩაწერა</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">შეეცადეთ არ შეარხიოთ აპარატი ფოტოების გადაღების დროს</string>
     <string name="help_text_panorama">დააჭირეთ კამერის ღილაკს და ტელეფონი ნელა ამოძრავეთ ერთი მიმართულებით</string>
     <string name="help_text_panorama_device">დააჭირეთ კამერის ღილაკს და აპარატი ნელა ამოძრავეთ ერთი მიმართულებით</string>
-    <string name="message_DefaultLayout">ღილაკის განლაგება შეიცვლება</string>
     <string name="message_EULA_GPS">თუ გაააქტიურებთ GPS იარლიყს, თითოეულ ფოტოზე მიმაგრდება, ჩაშენდება და შეინახება გეოგრაფიული ლოკაციის მონაცემები. სიფრთხილე გმართებთ, როდესაც აგზავნით, აზიარებთ, არიგებთ, გადასცემთ ან აკოპირებთ ფოტოებს, რადგან ისინი შეიცავს სურათის გადაღების ადგილის ინფორმაციას</string>
-    <string name="message_Auto_ShareShot">"გადაღების ავტომატური გაზიარება საშუალებას გაძლევთ მარტივად დააკავშიროთ აპარატები სურათების გასაზიარებლად.
-ჩართეთ გადაღების ავტომატური გაზიარება, შემდეგ ერთმანეთს მიადეთ აპარატები (ჩვეულებრივ, ზურგებით) და დააკავშირეთ ისინი"</string>
     <string name="GPS_msg">GPS გამორთულია</string>
     <string name="message_enable_GPS">ჩართეთ GPS პარამეტრებში, თუ გსურთ გამოიყენოთ GPS იარლიყი</string>
     <string name="cancel">გაუქმება</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">უცნობი</string>
     <string name="shareshot_no_user">ხალხი არ არის, რომ გაუზიაროთ</string>
     <string name="snapshot_saved">%s შენახულია</string>
-    <string name="editable_shortcut_reset">განულება</string>
     <string name="editable_shortcut_helptext_title">მინიშნება</string>
     <string name="editable_shortcut_helptext_message">ხანგრძლივად დააჭირეთ ღილაკებს, რომ შეასწოროთ ისინი</string>
     <string name="editable_shortcut_helptext">ხანგრძლივად დააჭირეთ ნიშანს, შემდეგ კი გადაიტანეთ იგი ღილაკების პოზიციის შესაცვლელად</string>
-    <string name="sbeam_helptext">გადაიღეთ და გააზიარეთ ფოტოები სხვა აპარატებთან. ერთად მოათავსეთ აპარატები, რომ დაამატოთ ისინი S Beam-ით გაზიარებულ აპარატებს</string>
     <string name="storage_setting_dialog_title">შენახვის ადგილი</string>
     <string name="storage_setting_dialog_message">SD ბარათი დევს. შეცვლით შენახვის ადგილს SD ბარათით?</string>
     <string name="do_not_ask_again">აღარ მაჩვენო</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">საუკეთესო ფოტო</string>
     <string name="bestpic_on">ჩრ</string>
     <string name="bestpic_off">გამ</string>
-    <string name="bestgroup">ჯგუფის საუკეთესო პოზა</string>
-    <string name="bestgroup_title">აირჩიეთ თითო სახე და შეინახეთ</string>
     <string name="battery_low">დახურეთ კამერა. კვების ელემენტის ტემპერატურა ძალიან დაბალია</string>
     <string name="buddy_photo_share_helptext">გადაიღეთ ფოტოები და გაუზიარეთ ისინი მეგობრებს, სახის ამოცნობის ფუნქციის გამოყენებით</string>
     <string name="face_zoom_helptext">ორჯერ შეეხეთ სახეს, ზომის გასაზრდელად ან შესამცირებლად</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">ვიდეოკამერის რეჟიმზე გადართვა</string>
     <string name="on_device_help_self">ავტოპორტრეტის რეჟიმზე გადართვა</string>
     <string name="on_device_help_editable">ხანგრძლივად შეეხეთ ღილაკს, რომლის გადატანაც გსურთ. შემდეგ კი გადაიტანეთ, სადაც გსურთ</string>
-    <string name="on_device_help_voicecommand">შეგიძლიათ ფოტო გადაიღოთ ხმოვანი ისეთი ბრძანებით, როგორიცაა გადაიღე, ჩააჩხაკუნე, გაიღიმე და ფოტო</string>
     <string name="Title_VideoSpeed">სიჩქარე</string>
     <string name="SPEED_OFF">ნორმალური</string>
     <string name="SPEED_2X_FASTER">2-ჯერ უფრო სწრაფად</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">ავტომატური ჩაწერა მხოლოდ მაშინაა შესაძლებელი, როდესაც ტელეფონი გახსნილია</string>
     <string name="contextual_filename">კონტექსტუალური ფაილის სახელი</string>
     <string name="enable_gps_dialog">GPS იარლიყი აქტიური უნდა იყოს. გააქტიურდეს GPS იარლიყი?</string>
-    <string name="gallery_disable">გალერეა გამორთულია</string>
-    <string name="HDR_Normal">ნორმალური</string>
-    <string name="HDR_Strong">ძლიერი</string>
 </resources>

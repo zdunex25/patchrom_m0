@@ -18,7 +18,6 @@
     <dimen name="cafbutton_height">84.0px</dimen>
     <dimen name="cafbutton_pos_y">580.0px</dimen>
     <dimen name="camcorder_recording_menu_shift">0.0px</dimen>
-    <dimen name="stopbutton_pos_y">480.0px</dimen>
     <dimen name="speed_indicator_width">270.0px</dimen>
     <dimen name="speed_indicator_height">48.0px</dimen>
     <dimen name="smileshot_help_text_width">700.0px</dimen>
@@ -110,16 +109,12 @@
     <dimen name="camera_crop_outline_width">3.0px</dimen>
     <dimen name="distance_swipe_to_go_gallery">200.0px</dimen>
     <dimen name="velocity_swipe_to_go_gallery">250.0px</dimen>
-    <dimen name="app_defaultsize_w">650.0px</dimen>
-    <dimen name="app_defaultsize_h">424.0px</dimen>
-    <dimen name="app_minimumsize_w">650.0px</dimen>
-    <dimen name="app_minimumsize_h">424.0px</dimen>
+    <item type="dimen" name="APKTOOL_DUMMY_00a2">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a3">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a4">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a5">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a6">false</item>
     <item type="dimen" name="APKTOOL_DUMMY_00a7">false</item>
     <item type="dimen" name="APKTOOL_DUMMY_00a8">false</item>
     <item type="dimen" name="APKTOOL_DUMMY_00a9">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00aa">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00ab">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00ac">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00ad">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00ae">false</item>
 </resources>

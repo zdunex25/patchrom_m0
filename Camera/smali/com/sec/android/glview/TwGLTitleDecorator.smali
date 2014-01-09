@@ -339,7 +339,7 @@
 
     .line 65
     :cond_0
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLTitleDecorator;->mGLViews:Ljava/util/List;
 
     monitor-enter v1
 
@@ -348,7 +348,7 @@
     iput-object p0, p1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 67
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLTitleDecorator;->mGLViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

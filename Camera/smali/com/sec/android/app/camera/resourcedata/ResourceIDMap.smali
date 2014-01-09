@@ -63,11 +63,11 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02023d
+    const v3, 0x7f020226
 
-    const v4, 0x7f02023d
+    const v4, 0x7f020226
 
-    const v5, 0x7f02023d
+    const v5, 0x7f020226
 
     const/high16 v6, 0x7f09
 
@@ -90,9 +90,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02023b
+    const v3, 0x7f020224
 
-    const v4, 0x7f02023b
+    const v4, 0x7f020224
 
     const/4 v5, 0x0
 
@@ -117,13 +117,13 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02023b
+    const v3, 0x7f020224
 
-    const v4, 0x7f02023b
+    const v4, 0x7f020224
 
     const/4 v5, 0x0
 
-    const v6, 0x7f0900f2
+    const v6, 0x7f0900f0
 
     move-object/from16 v2, p0
 
@@ -144,13 +144,13 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02018a
+    const v3, 0x7f020180
 
-    const v4, 0x7f02018b
+    const v4, 0x7f020181
 
     const/4 v5, 0x0
 
-    const v6, 0x7f0900ca
+    const v6, 0x7f0900c9
 
     move-object/from16 v2, p0
 
@@ -171,9 +171,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f0200ef
+    const v3, 0x7f0200e5
 
-    const v4, 0x7f0200f0
+    const v4, 0x7f0200e6
 
     const/4 v5, 0x0
 
@@ -198,9 +198,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02023b
+    const v3, 0x7f020224
 
-    const v4, 0x7f02023b
+    const v4, 0x7f020224
 
     const/4 v5, 0x0
 
@@ -225,9 +225,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f0201b2
+    const v3, 0x7f0201a8
 
-    const v4, 0x7f0201b3
+    const v4, 0x7f0201a9
 
     const/4 v5, 0x0
 
@@ -252,9 +252,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f020144
+    const v3, 0x7f02013a
 
-    const v4, 0x7f020144
+    const v4, 0x7f02013a
 
     const/4 v5, 0x0
 
@@ -279,9 +279,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02018c
+    const v3, 0x7f020182
 
-    const v4, 0x7f02018d
+    const v4, 0x7f020183
 
     const/4 v5, 0x0
 
@@ -306,9 +306,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f0200b3
+    const v3, 0x7f0200ab
 
-    const v4, 0x7f0200b3
+    const v4, 0x7f0200ab
 
     const/4 v5, 0x0
 
@@ -333,9 +333,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f02023b
+    const v3, 0x7f020224
 
-    const v4, 0x7f02023b
+    const v4, 0x7f020224
 
     const/4 v5, 0x0
 
@@ -364,9 +364,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f0200e7
+    const v3, 0x7f0200dd
 
-    const v4, 0x7f0200ea
+    const v4, 0x7f0200e0
 
     const/4 v5, 0x0
 
@@ -389,9 +389,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200cb
+    const v9, 0x7f0200c1
 
-    const v10, 0x7f0200cc
+    const v10, 0x7f0200c2
 
     const/4 v11, 0x0
 
@@ -416,9 +416,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -443,9 +443,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020098
+    const v9, 0x7f020094
 
-    const v10, 0x7f020098
+    const v10, 0x7f020094
 
     const/4 v11, 0x0
 
@@ -470,9 +470,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -497,9 +497,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -524,9 +524,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -551,9 +551,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -578,13 +578,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900be
+    const v12, 0x7f0900bd
 
     move-object/from16 v8, p0
 
@@ -597,7 +597,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x14
+    const/16 v2, 0x3c
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -605,13 +605,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900bb
+    const v12, 0x7f0900c7
 
     move-object/from16 v8, p0
 
@@ -624,7 +624,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x33
+    const/16 v2, 0x14
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -632,13 +632,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c9
+    const v12, 0x7f0900bb
 
     move-object/from16 v8, p0
 
@@ -651,7 +651,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x11
+    const/16 v2, 0x33
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -659,13 +659,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900bc
+    const v12, 0x7f0900c8
 
     move-object/from16 v8, p0
 
@@ -678,7 +678,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x35
+    const/16 v2, 0x11
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -686,13 +686,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900a6
+    const v12, 0x7f0900bc
 
     move-object/from16 v8, p0
 
@@ -705,7 +705,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x36
+    const/16 v2, 0x35
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -713,13 +713,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020277
+    const v9, 0x7f020224
 
-    const v10, 0x7f020278
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900a7
+    const v12, 0x7f0900a6
 
     move-object/from16 v8, p0
 
@@ -732,7 +732,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x43
+    const/16 v2, 0x36
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -740,13 +740,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f02025c
 
-    const v10, 0x7f02023b
+    const v10, 0x7f02025d
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900cc
+    const v12, 0x7f0900a7
 
     move-object/from16 v8, p0
 
@@ -767,9 +767,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -794,13 +794,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c1
+    const v12, 0x7f0900c0
 
     move-object/from16 v8, p0
 
@@ -821,13 +821,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c2
+    const v12, 0x7f0900c1
 
     move-object/from16 v8, p0
 
@@ -848,13 +848,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02013e
+    const v9, 0x7f020134
 
-    const v10, 0x7f02013f
+    const v10, 0x7f020135
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c3
+    const v12, 0x7f0900c2
 
     move-object/from16 v8, p0
 
@@ -875,13 +875,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c7
+    const v12, 0x7f0900c6
 
     move-object/from16 v8, p0
 
@@ -902,9 +902,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200bd
+    const v9, 0x7f0200b3
 
-    const v10, 0x7f0200c0
+    const v10, 0x7f0200b6
 
     const/4 v11, 0x0
 
@@ -929,13 +929,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020186
+    const v9, 0x7f02017c
 
-    const v10, 0x7f020187
+    const v10, 0x7f02017d
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900cb
+    const v12, 0x7f0900ca
 
     move-object/from16 v8, p0
 
@@ -956,9 +956,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -983,9 +983,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020131
+    const v9, 0x7f020127
 
-    const v10, 0x7f020131
+    const v10, 0x7f020127
 
     const/4 v11, 0x0
 
@@ -1010,9 +1010,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1037,9 +1037,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018c
+    const v9, 0x7f020182
 
-    const v10, 0x7f02018d
+    const v10, 0x7f020183
 
     const/4 v11, 0x0
 
@@ -1064,9 +1064,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200ef
+    const v9, 0x7f0200e5
 
-    const v10, 0x7f0200f0
+    const v10, 0x7f0200e6
 
     const/4 v11, 0x0
 
@@ -1091,9 +1091,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1118,9 +1118,9 @@
 
     new-instance v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v3, 0x7f0200e7
+    const v3, 0x7f0200dd
 
-    const v4, 0x7f0200ea
+    const v4, 0x7f0200e0
 
     const/4 v5, 0x0
 
@@ -1143,13 +1143,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c7
+    const v12, 0x7f0900c6
 
     move-object/from16 v8, p0
 
@@ -1170,9 +1170,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1197,9 +1197,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200cb
+    const v9, 0x7f0200c1
 
-    const v10, 0x7f0200cc
+    const v10, 0x7f0200c2
 
     const/4 v11, 0x0
 
@@ -1224,9 +1224,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1251,13 +1251,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900bf
+    const v12, 0x7f0900be
 
     move-object/from16 v8, p0
 
@@ -1278,13 +1278,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090141
+    const v12, 0x7f090137
 
     move-object/from16 v8, p0
 
@@ -1305,13 +1305,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900be
+    const v12, 0x7f0900bd
 
     move-object/from16 v8, p0
 
@@ -1332,9 +1332,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1359,13 +1359,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c1
+    const v12, 0x7f0900c0
 
     move-object/from16 v8, p0
 
@@ -1386,13 +1386,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02013e
+    const v9, 0x7f020134
 
-    const v10, 0x7f02013f
+    const v10, 0x7f020135
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c2
+    const v12, 0x7f0900c1
 
     move-object/from16 v8, p0
 
@@ -1413,13 +1413,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02013e
+    const v9, 0x7f020134
 
-    const v10, 0x7f02013f
+    const v10, 0x7f020135
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c3
+    const v12, 0x7f0900c2
 
     move-object/from16 v8, p0
 
@@ -1440,13 +1440,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900c0
+    const v12, 0x7f0900bf
 
     move-object/from16 v8, p0
 
@@ -1467,9 +1467,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1494,13 +1494,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090158
+    const v12, 0x7f09014e
 
     move-object/from16 v8, p0
 
@@ -1521,13 +1521,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090163
+    const v12, 0x7f090159
 
     move-object/from16 v8, p0
 
@@ -1540,7 +1540,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xbde
+    const/16 v2, 0xbdb
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1548,13 +1548,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
-    const v12, 0x7f0900cc
+    const v12, 0x7f090159
 
     move-object/from16 v8, p0
 
@@ -1567,33 +1567,6 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xbdb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090163
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 265
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
     const/16 v2, 0xbdc
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1602,9 +1575,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1616,34 +1589,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x42
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f0900bd
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 272
+    .line 266
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1656,9 +1602,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1670,7 +1616,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 273
+    .line 267
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1683,9 +1629,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1697,7 +1643,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 285
+    .line 271
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1710,9 +1656,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018a
+    const v9, 0x7f020180
 
-    const v10, 0x7f02018b
+    const v10, 0x7f020181
 
     const/4 v11, 0x0
 
@@ -1724,7 +1670,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 286
+    .line 272
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1737,9 +1683,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018a
+    const v9, 0x7f02017e
 
-    const v10, 0x7f02018b
+    const v10, 0x7f02017f
 
     const/4 v11, 0x0
 
@@ -1751,7 +1697,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 289
+    .line 275
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1764,9 +1710,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020186
+    const v9, 0x7f02017c
 
-    const v10, 0x7f020187
+    const v10, 0x7f02017d
 
     const/4 v11, 0x0
 
@@ -1778,7 +1724,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 290
+    .line 276
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1791,9 +1737,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020186
+    const v9, 0x7f02017a
 
-    const v10, 0x7f020187
+    const v10, 0x7f02017b
 
     const/4 v11, 0x0
 
@@ -1805,7 +1751,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 294
+    .line 288
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1818,9 +1764,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201b4
+    const v9, 0x7f0201aa
 
-    const v10, 0x7f0201b5
+    const v10, 0x7f0201ab
 
     const/4 v11, 0x0
 
@@ -1832,7 +1778,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 295
+    .line 289
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1845,9 +1791,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02019c
+    const v9, 0x7f020192
 
-    const v10, 0x7f02019d
+    const v10, 0x7f020193
 
     const/4 v11, 0x0
 
@@ -1859,12 +1805,39 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 296
+    .line 290
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x12e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0201a2
+
+    const v10, 0x7f0201a3
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090023
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 291
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x12f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1878,33 +1851,6 @@
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090023
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 297
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x12f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201b6
-
-    const v10, 0x7f0201b7
-
-    const/4 v11, 0x0
-
     const v12, 0x7f090024
 
     move-object/from16 v8, p0
@@ -1913,7 +1859,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 298
+    .line 292
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1926,9 +1872,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1940,7 +1886,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 299
+    .line 293
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1953,9 +1899,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -1967,7 +1913,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 300
+    .line 294
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -1980,9 +1926,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020196
+    const v9, 0x7f02018c
 
-    const v10, 0x7f020197
+    const v10, 0x7f02018d
 
     const/4 v11, 0x0
 
@@ -1994,7 +1940,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 301
+    .line 295
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2007,9 +1953,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020224
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
@@ -2021,12 +1967,66 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 302
+    .line 296
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x136
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020186
+
+    const v10, 0x7f020187
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090029
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 297
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x137
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020224
+
+    const v10, 0x7f020224
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09002a
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 298
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x139
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2040,60 +2040,6 @@
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090029
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 303
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x137
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09002a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 304
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x139
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02019a
-
-    const v10, 0x7f02019b
-
-    const/4 v11, 0x0
-
     const v12, 0x7f09002b
 
     move-object/from16 v8, p0
@@ -2102,7 +2048,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 305
+    .line 299
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2115,9 +2061,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020107
+    const v9, 0x7f0200fd
 
-    const v10, 0x7f020108
+    const v10, 0x7f0200fe
 
     const/4 v11, 0x0
 
@@ -2129,7 +2075,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 306
+    .line 300
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2142,9 +2088,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018e
+    const v9, 0x7f020184
 
-    const v10, 0x7f02018f
+    const v10, 0x7f020185
 
     const/4 v11, 0x0
 
@@ -2156,7 +2102,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 307
+    .line 301
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2169,9 +2115,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200bd
+    const v9, 0x7f0200b3
 
-    const v10, 0x7f0200c0
+    const v10, 0x7f0200b6
 
     const/4 v11, 0x0
 
@@ -2183,7 +2129,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 308
+    .line 302
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2196,9 +2142,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201a8
+    const v9, 0x7f02019e
 
-    const v10, 0x7f0201a9
+    const v10, 0x7f02019f
 
     const/4 v11, 0x0
 
@@ -2210,7 +2156,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 309
+    .line 303
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2237,7 +2183,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 310
+    .line 304
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2250,9 +2196,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200f9
+    const v9, 0x7f0200ef
 
-    const v10, 0x7f0200fa
+    const v10, 0x7f0200f0
 
     const/4 v11, 0x0
 
@@ -2264,7 +2210,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
+    .line 305
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2277,13 +2223,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200b4
+    const v9, 0x7f0200ac
 
-    const v10, 0x7f0200b5
+    const v10, 0x7f0200ad
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090131
+    const v12, 0x7f09012b
 
     move-object/from16 v8, p0
 
@@ -2291,34 +2237,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 312
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x141
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200b6
-
-    const v10, 0x7f0200b7
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090134
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 315
+    .line 308
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2331,9 +2250,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201b2
+    const v9, 0x7f0201a8
 
-    const v10, 0x7f0201b3
+    const v10, 0x7f0201a9
 
     const/4 v11, 0x0
 
@@ -2345,39 +2264,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 316
+    .line 309
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x1f5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201b0
-
-    const v10, 0x7f0201b1
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09008d
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 317
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1f6
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2391,6 +2283,33 @@
 
     const/4 v11, 0x0
 
+    const v12, 0x7f09008d
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 310
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1f6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02019c
+
+    const v10, 0x7f02019d
+
+    const/4 v11, 0x0
+
     const v12, 0x7f09008e
 
     move-object/from16 v8, p0
@@ -2399,174 +2318,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 318
+    .line 311
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x1f7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201aa
-
-    const v10, 0x7f0201ab
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090095
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 319
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1f8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201b8
-
-    const v10, 0x7f0201b9
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09008f
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 320
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1f9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201ae
-
-    const v10, 0x7f0201af
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090090
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 321
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1fa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020194
-
-    const v10, 0x7f020195
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090091
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 322
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1fb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201ba
-
-    const v10, 0x7f0201bb
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090092
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 323
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1fc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02019e
-
-    const v10, 0x7f02019f
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090093
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 324
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1fd
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2580,6 +2337,168 @@
 
     const/4 v11, 0x0
 
+    const v12, 0x7f090095
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 312
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1f8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0201ae
+
+    const v10, 0x7f0201af
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09008f
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 313
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1f9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0201a4
+
+    const v10, 0x7f0201a5
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090090
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 314
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1fa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02018a
+
+    const v10, 0x7f02018b
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090091
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 315
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1fb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0201b0
+
+    const v10, 0x7f0201b1
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090092
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 316
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1fc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020194
+
+    const v10, 0x7f020195
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090093
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 317
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1fd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020196
+
+    const v10, 0x7f020197
+
+    const/4 v11, 0x0
+
     const v12, 0x7f090094
 
     move-object/from16 v8, p0
@@ -2588,66 +2507,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 325
+    .line 318
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x1fe
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201a2
-
-    const v10, 0x7f0201a3
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090096
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 326
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x1ff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0201bc
-
-    const v10, 0x7f0201bd
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090097
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 327
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x200
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2661,6 +2526,60 @@
 
     const/4 v11, 0x0
 
+    const v12, 0x7f090096
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 319
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1ff
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0201b2
+
+    const v10, 0x7f0201b3
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090097
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 320
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x200
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02018e
+
+    const v10, 0x7f02018f
+
+    const/4 v11, 0x0
+
     const v12, 0x7f090098
 
     move-object/from16 v8, p0
@@ -2669,7 +2588,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 328
+    .line 321
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2682,9 +2601,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020192
+    const v9, 0x7f020188
 
-    const v10, 0x7f020193
+    const v10, 0x7f020189
 
     const/4 v11, 0x0
 
@@ -2696,7 +2615,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 331
+    .line 324
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2709,9 +2628,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200ed
+    const v9, 0x7f0200e3
 
-    const v10, 0x7f0200ee
+    const v10, 0x7f0200e4
 
     const/4 v11, 0x0
 
@@ -2723,7 +2642,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 332
+    .line 325
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2736,9 +2655,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200ef
+    const v9, 0x7f0200e5
 
-    const v10, 0x7f0200f0
+    const v10, 0x7f0200e6
 
     const/4 v11, 0x0
 
@@ -2750,7 +2669,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 333
+    .line 326
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2763,9 +2682,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200eb
+    const v9, 0x7f0200e1
 
-    const v10, 0x7f0200ec
+    const v10, 0x7f0200e2
 
     const/4 v11, 0x0
 
@@ -2777,7 +2696,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 334
+    .line 327
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -2790,9 +2709,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200f1
+    const v9, 0x7f0200e7
 
-    const v10, 0x7f0200f2
+    const v10, 0x7f0200e8
 
     const/4 v11, 0x0
 
@@ -2804,12 +2723,120 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 337
+    .line 330
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x25c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0200e3
+
+    const v10, 0x7f0200e4
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009b
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 331
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x25d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0200e5
+
+    const v10, 0x7f0200e6
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009a
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 332
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x25e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0200e1
+
+    const v10, 0x7f0200e2
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090072
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 333
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x25f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0200e7
+
+    const v10, 0x7f0200e8
+
+    const/4 v11, 0x0
+
+    const/high16 v12, 0x7f09
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 336
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x2bc
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2831,66 +2858,39 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 337
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x2bd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f0200ed
+
+    const v10, 0x7f0200ee
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090073
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 338
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x25d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200ef
-
-    const v10, 0x7f0200f0
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 339
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x25e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200eb
-
-    const v10, 0x7f0200ec
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090072
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 340
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x25f
+    const/16 v2, 0x2be
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2904,87 +2904,6 @@
 
     const/4 v11, 0x0
 
-    const/high16 v12, 0x7f09
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 343
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x2bc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200f7
-
-    const v10, 0x7f0200f8
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 344
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x2bd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200f7
-
-    const v10, 0x7f0200f8
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090073
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 345
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x2be
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200fb
-
-    const v10, 0x7f0200fc
-
-    const/4 v11, 0x0
-
     const v12, 0x7f090074
 
     move-object/from16 v8, p0
@@ -2993,7 +2912,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 346
+    .line 339
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3006,9 +2925,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200f7
+    const v9, 0x7f0200ed
 
-    const v10, 0x7f0200f8
+    const v10, 0x7f0200ee
 
     const/4 v11, 0x0
 
@@ -3020,7 +2939,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 349
+    .line 342
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3033,9 +2952,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e3
+    const v9, 0x7f0201d8
 
-    const v10, 0x7f0201e4
+    const v10, 0x7f0201d9
 
     const/4 v11, 0x0
 
@@ -3047,7 +2966,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 350
+    .line 343
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3060,9 +2979,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201df
+    const v9, 0x7f0201d4
 
-    const v10, 0x7f0201e0
+    const v10, 0x7f0201d5
 
     const/4 v11, 0x0
 
@@ -3074,7 +2993,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 351
+    .line 344
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3087,9 +3006,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e1
+    const v9, 0x7f0201d6
 
-    const v10, 0x7f0201e2
+    const v10, 0x7f0201d7
 
     const/4 v11, 0x0
 
@@ -3101,7 +3020,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 352
+    .line 345
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3114,9 +3033,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201dd
+    const v9, 0x7f0201d2
 
-    const v10, 0x7f0201de
+    const v10, 0x7f0201d3
 
     const/4 v11, 0x0
 
@@ -3128,7 +3047,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 355
+    .line 348
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3141,9 +3060,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e3
+    const v9, 0x7f0201d8
 
-    const v10, 0x7f0201e4
+    const v10, 0x7f0201d9
 
     const/4 v11, 0x0
 
@@ -3155,7 +3074,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 356
+    .line 349
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3168,9 +3087,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201df
+    const v9, 0x7f0201d4
 
-    const v10, 0x7f0201e0
+    const v10, 0x7f0201d5
 
     const/4 v11, 0x0
 
@@ -3182,7 +3101,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 357
+    .line 350
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3195,9 +3114,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e1
+    const v9, 0x7f0201d6
 
-    const v10, 0x7f0201e2
+    const v10, 0x7f0201d7
 
     const/4 v11, 0x0
 
@@ -3209,7 +3128,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 358
+    .line 351
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3222,9 +3141,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201dd
+    const v9, 0x7f0201d2
 
-    const v10, 0x7f0201de
+    const v10, 0x7f0201d3
 
     const/4 v11, 0x0
 
@@ -3236,7 +3155,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 361
+    .line 354
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3249,9 +3168,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e9
+    const v9, 0x7f0201da
 
-    const v10, 0x7f0201ea
+    const v10, 0x7f0201db
 
     const/4 v11, 0x0
 
@@ -3263,7 +3182,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 362
+    .line 355
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3276,9 +3195,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201ed
+    const v9, 0x7f0201de
 
-    const v10, 0x7f0201ee
+    const v10, 0x7f0201df
 
     const/4 v11, 0x0
 
@@ -3290,7 +3209,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
+    .line 356
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3303,9 +3222,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201eb
+    const v9, 0x7f0201dc
 
-    const v10, 0x7f0201ec
+    const v10, 0x7f0201dd
 
     const/4 v11, 0x0
 
@@ -3317,7 +3236,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 364
+    .line 357
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3330,9 +3249,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f3
+    const v9, 0x7f0201e4
 
-    const v10, 0x7f0201f4
+    const v10, 0x7f0201e5
 
     const/4 v11, 0x0
 
@@ -3344,7 +3263,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
+    .line 358
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3357,9 +3276,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201ef
+    const v9, 0x7f0201e0
 
-    const v10, 0x7f0201f0
+    const v10, 0x7f0201e1
 
     const/4 v11, 0x0
 
@@ -3371,7 +3290,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
+    .line 359
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3384,9 +3303,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f5
+    const v9, 0x7f0201e6
 
-    const v10, 0x7f0201f6
+    const v10, 0x7f0201e7
 
     const/4 v11, 0x0
 
@@ -3398,7 +3317,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
+    .line 360
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3411,9 +3330,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f1
+    const v9, 0x7f0201e2
 
-    const v10, 0x7f0201f2
+    const v10, 0x7f0201e3
 
     const/4 v11, 0x0
 
@@ -3425,7 +3344,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 370
+    .line 363
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3438,9 +3357,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e9
+    const v9, 0x7f0201da
 
-    const v10, 0x7f0201ea
+    const v10, 0x7f0201db
 
     const/4 v11, 0x0
 
@@ -3452,7 +3371,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
+    .line 364
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3465,9 +3384,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201ed
+    const v9, 0x7f0201de
 
-    const v10, 0x7f0201ee
+    const v10, 0x7f0201df
 
     const/4 v11, 0x0
 
@@ -3479,7 +3398,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 372
+    .line 365
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3492,9 +3411,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201eb
+    const v9, 0x7f0201dc
 
-    const v10, 0x7f0201ec
+    const v10, 0x7f0201dd
 
     const/4 v11, 0x0
 
@@ -3506,7 +3425,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
+    .line 366
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3519,9 +3438,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f3
+    const v9, 0x7f0201e4
 
-    const v10, 0x7f0201f4
+    const v10, 0x7f0201e5
 
     const/4 v11, 0x0
 
@@ -3533,7 +3452,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 374
+    .line 367
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3546,9 +3465,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201ef
+    const v9, 0x7f0201e0
 
-    const v10, 0x7f0201f0
+    const v10, 0x7f0201e1
 
     const/4 v11, 0x0
 
@@ -3560,7 +3479,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 375
+    .line 368
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3573,9 +3492,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f5
+    const v9, 0x7f0201e6
 
-    const v10, 0x7f0201f6
+    const v10, 0x7f0201e7
 
     const/4 v11, 0x0
 
@@ -3587,7 +3506,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 376
+    .line 369
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3600,9 +3519,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201f1
+    const v9, 0x7f0201e2
 
-    const v10, 0x7f0201f2
+    const v10, 0x7f0201e3
 
     const/4 v11, 0x0
 
@@ -3614,7 +3533,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 379
+    .line 372
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3633,7 +3552,7 @@
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09015a
+    const v12, 0x7f090150
 
     move-object/from16 v8, p0
 
@@ -3641,7 +3560,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
+    .line 373
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3668,7 +3587,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 381
+    .line 374
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3695,7 +3614,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
+    .line 375
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3708,9 +3627,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02021a
+    const v9, 0x7f020207
 
-    const v10, 0x7f02021b
+    const v10, 0x7f020208
 
     const/4 v11, 0x0
 
@@ -3722,7 +3641,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 383
+    .line 376
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3749,7 +3668,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 384
+    .line 377
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3776,7 +3695,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 385
+    .line 378
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3803,7 +3722,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 386
+    .line 379
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3830,7 +3749,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 387
+    .line 380
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3857,7 +3776,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 388
+    .line 381
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3884,7 +3803,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 389
+    .line 382
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3911,7 +3830,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 390
+    .line 383
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3938,7 +3857,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 391
+    .line 384
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3965,7 +3884,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 392
+    .line 385
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -3992,7 +3911,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 393
+    .line 386
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4019,7 +3938,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 394
+    .line 387
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4046,7 +3965,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 395
+    .line 388
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4073,7 +3992,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 396
+    .line 389
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4100,7 +4019,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 397
+    .line 390
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4127,7 +4046,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 398
+    .line 391
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4154,7 +4073,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 401
+    .line 394
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4173,7 +4092,7 @@
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09015a
+    const v12, 0x7f090150
 
     move-object/from16 v8, p0
 
@@ -4181,7 +4100,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 402
+    .line 395
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4208,7 +4127,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 403
+    .line 396
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4235,7 +4154,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 404
+    .line 397
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4248,9 +4167,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02021a
+    const v9, 0x7f020207
 
-    const v10, 0x7f02021b
+    const v10, 0x7f020208
 
     const/4 v11, 0x0
 
@@ -4262,7 +4181,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 405
+    .line 398
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4289,7 +4208,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 406
+    .line 399
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4316,7 +4235,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 407
+    .line 400
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4343,7 +4262,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 408
+    .line 401
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4370,7 +4289,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 409
+    .line 402
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4397,7 +4316,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 410
+    .line 403
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4424,7 +4343,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 411
+    .line 404
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4451,7 +4370,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 412
+    .line 405
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4478,7 +4397,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 413
+    .line 406
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4505,7 +4424,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 414
+    .line 407
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4532,7 +4451,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 415
+    .line 408
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4559,7 +4478,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 416
+    .line 409
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4586,7 +4505,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 417
+    .line 410
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4613,7 +4532,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 418
+    .line 411
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4640,7 +4559,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 419
+    .line 412
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4667,7 +4586,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 420
+    .line 413
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -4694,93 +4613,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 423
+    .line 416
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x44c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02011b
-
-    const v10, 0x7f02011c
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090036
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 424
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x44d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020115
-
-    const v10, 0x7f020116
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09003d
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 425
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x44e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02010f
-
-    const v10, 0x7f020110
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09003e
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 426
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x44f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4794,7 +4632,277 @@
 
     const/4 v11, 0x0
 
+    const v12, 0x7f090036
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 417
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x44d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02010b
+
+    const v10, 0x7f02010c
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09003d
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 418
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x44e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020105
+
+    const v10, 0x7f020106
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09003e
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 419
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x44f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020107
+
+    const v10, 0x7f020108
+
+    const/4 v11, 0x0
+
     const v12, 0x7f09003f
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 420
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x450
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020109
+
+    const v10, 0x7f02010a
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090040
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 421
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x451
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02010f
+
+    const v10, 0x7f020110
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090041
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 422
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x452
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020224
+
+    const v10, 0x7f020224
+
+    const/4 v11, 0x0
+
+    const/high16 v12, 0x7f09
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 423
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x453
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020224
+
+    const v10, 0x7f020224
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090042
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 424
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x454
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020224
+
+    const v10, 0x7f020224
+
+    const/4 v11, 0x0
+
+    const/high16 v12, 0x7f09
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 425
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x455
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020224
+
+    const v10, 0x7f020224
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090043
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 426
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x456
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020115
+
+    const v10, 0x7f020116
+
+    const/4 v11, 0x0
+
+    const/high16 v12, 0x7f09
 
     move-object/from16 v8, p0
 
@@ -4807,7 +4915,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x450
+    const/16 v2, 0x457
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4821,7 +4929,7 @@
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090040
+    const/high16 v12, 0x7f09
 
     move-object/from16 v8, p0
 
@@ -4834,7 +4942,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x451
+    const/16 v2, 0x458
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4842,67 +4950,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020119
+    const v9, 0x7f020224
 
-    const v10, 0x7f02011a
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090041
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 429
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x452
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
+    const v10, 0x7f020224
 
     const/4 v11, 0x0
 
     const/high16 v12, 0x7f09
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 430
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x453
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090042
 
     move-object/from16 v8, p0
 
@@ -4915,7 +4969,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x454
+    const/16 v2, 0x4b0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4923,13 +4977,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02023b
+    const v9, 0x7f020117
 
-    const v10, 0x7f02023b
+    const v10, 0x7f020118
 
     const/4 v11, 0x0
 
-    const/high16 v12, 0x7f09
+    const v12, 0x7f09007f
 
     move-object/from16 v8, p0
 
@@ -4942,61 +4996,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x455
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090043
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 433
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x456
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02011f
-
-    const v10, 0x7f020120
-
-    const/4 v11, 0x0
-
-    const/high16 v12, 0x7f09
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 434
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x457
+    const/16 v2, 0x4b1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5010,87 +5010,6 @@
 
     const/4 v11, 0x0
 
-    const/high16 v12, 0x7f09
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 435
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x458
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02023b
-
-    const v10, 0x7f02023b
-
-    const/4 v11, 0x0
-
-    const/high16 v12, 0x7f09
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 438
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x4b0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020121
-
-    const v10, 0x7f020122
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09007f
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 439
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x4b1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020127
-
-    const v10, 0x7f020128
-
-    const/4 v11, 0x0
-
     const v12, 0x7f090081
 
     move-object/from16 v8, p0
@@ -5099,7 +5018,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 440
+    .line 433
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5112,9 +5031,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020123
+    const v9, 0x7f020119
 
-    const v10, 0x7f020124
+    const v10, 0x7f02011a
 
     const/4 v11, 0x0
 
@@ -5126,7 +5045,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 443
+    .line 436
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5139,9 +5058,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02009d
+    const v9, 0x7f020099
 
-    const v10, 0x7f02009e
+    const v10, 0x7f02009a
 
     const/4 v11, 0x0
 
@@ -5153,7 +5072,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 444
+    .line 437
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5166,9 +5085,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02009f
+    const v9, 0x7f02009b
 
-    const v10, 0x7f0200a0
+    const v10, 0x7f02009c
 
     const/4 v11, 0x0
 
@@ -5180,12 +5099,66 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 447
+    .line 440
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x57a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020099
+
+    const v10, 0x7f02009a
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009b
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 441
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x57b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f02009b
+
+    const v10, 0x7f02009c
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009a
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 444
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x5dc
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5207,12 +5180,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 448
+    .line 445
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x57b
+    const/16 v2, 0x5dd
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5234,61 +5207,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 451
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x5dc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200a1
-
-    const v10, 0x7f0200a2
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 452
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x5dd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200a3
-
-    const v10, 0x7f0200a4
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 455
+    .line 448
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5301,9 +5220,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200a1
+    const v9, 0x7f02009d
 
-    const v10, 0x7f0200a2
+    const v10, 0x7f02009e
 
     const/4 v11, 0x0
 
@@ -5315,7 +5234,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 456
+    .line 449
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5328,9 +5247,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200a3
+    const v9, 0x7f02009f
 
-    const v10, 0x7f0200a4
+    const v10, 0x7f0200a0
 
     const/4 v11, 0x0
 
@@ -5342,7 +5261,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 459
+    .line 452
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5355,9 +5274,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200b9
+    const v9, 0x7f0200af
 
-    const v10, 0x7f0200ba
+    const v10, 0x7f0200b0
 
     const/4 v11, 0x0
 
@@ -5369,7 +5288,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 460
+    .line 453
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5382,9 +5301,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0200bb
+    const v9, 0x7f0200b1
 
-    const v10, 0x7f0200bc
+    const v10, 0x7f0200b2
 
     const/4 v11, 0x0
 
@@ -5396,7 +5315,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 463
+    .line 456
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5409,9 +5328,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
@@ -5423,7 +5342,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 464
+    .line 457
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5436,9 +5355,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020109
+    const v9, 0x7f0200ff
 
-    const v10, 0x7f02010a
+    const v10, 0x7f020100
 
     const/4 v11, 0x0
 
@@ -5450,7 +5369,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 465
+    .line 458
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5463,9 +5382,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010b
+    const v9, 0x7f020101
 
-    const v10, 0x7f02010c
+    const v10, 0x7f020102
 
     const/4 v11, 0x0
 
@@ -5477,7 +5396,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 468
+    .line 461
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5490,9 +5409,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
@@ -5504,7 +5423,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 469
+    .line 462
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5517,9 +5436,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020109
+    const v9, 0x7f0200ff
 
-    const v10, 0x7f02010a
+    const v10, 0x7f020100
 
     const/4 v11, 0x0
 
@@ -5531,7 +5450,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 470
+    .line 463
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5544,9 +5463,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010b
+    const v9, 0x7f020101
 
-    const v10, 0x7f02010c
+    const v10, 0x7f020102
 
     const/4 v11, 0x0
 
@@ -5558,7 +5477,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 473
+    .line 466
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5571,13 +5490,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014d
+    const v12, 0x7f090143
 
     move-object/from16 v8, p0
 
@@ -5585,7 +5504,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 474
+    .line 467
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5598,13 +5517,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090150
+    const v12, 0x7f090146
 
     move-object/from16 v8, p0
 
@@ -5612,7 +5531,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 475
+    .line 468
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5625,13 +5544,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014f
+    const v12, 0x7f090145
 
     move-object/from16 v8, p0
 
@@ -5639,7 +5558,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 476
+    .line 469
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5652,13 +5571,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014e
+    const v12, 0x7f090144
 
     move-object/from16 v8, p0
 
@@ -5666,7 +5585,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 477
+    .line 470
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5679,13 +5598,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014a
+    const v12, 0x7f090140
 
     move-object/from16 v8, p0
 
@@ -5693,7 +5612,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 478
+    .line 471
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5706,13 +5625,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014b
+    const v12, 0x7f090141
 
     move-object/from16 v8, p0
 
@@ -5720,7 +5639,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 479
+    .line 472
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5733,13 +5652,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02010d
+    const v9, 0x7f020103
 
-    const v10, 0x7f02010e
+    const v10, 0x7f020104
 
     const/4 v11, 0x0
 
-    const v12, 0x7f09014c
+    const v12, 0x7f090142
 
     move-object/from16 v8, p0
 
@@ -5747,7 +5666,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 482
+    .line 475
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5760,9 +5679,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020101
+    const v9, 0x7f0200f7
 
-    const v10, 0x7f020102
+    const v10, 0x7f0200f8
 
     const/4 v11, 0x0
 
@@ -5774,7 +5693,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 483
+    .line 476
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5787,9 +5706,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020103
+    const v9, 0x7f0200f9
 
-    const v10, 0x7f020104
+    const v10, 0x7f0200fa
 
     const/4 v11, 0x0
 
@@ -5801,7 +5720,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 486
+    .line 479
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5814,9 +5733,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020101
+    const v9, 0x7f0200f7
 
-    const v10, 0x7f020102
+    const v10, 0x7f0200f8
 
     const/4 v11, 0x0
 
@@ -5828,7 +5747,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 487
+    .line 480
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5841,9 +5760,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020103
+    const v9, 0x7f0200f9
 
-    const v10, 0x7f020104
+    const v10, 0x7f0200fa
 
     const/4 v11, 0x0
 
@@ -5855,7 +5774,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 490
+    .line 483
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -5868,9 +5787,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f020180
+    const v9, 0x7f020176
 
-    const v10, 0x7f020181
+    const v10, 0x7f020177
 
     const/4 v11, 0x0
 
@@ -5882,12 +5801,66 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
+    .line 484
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x76d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020178
+
+    const v10, 0x7f020179
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009a
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 487
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xfa0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020182
+
+    const v10, 0x7f020183
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f09009b
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 488
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xfa1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5909,12 +5882,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 494
+    .line 489
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x1326
+    const/16 v2, 0x37
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5922,9 +5895,63 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e5
+    const v9, 0x7f020182
 
-    const v10, 0x7f0201e6
+    const v10, 0x7f020183
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f0900fe
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 490
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x38
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020182
+
+    const v10, 0x7f020183
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f0900ff
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 491
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xfa4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020182
+
+    const v10, 0x7f020183
 
     const/4 v11, 0x0
 
@@ -5936,12 +5963,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 495
+    .line 492
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x1327
+    const/16 v2, 0xfa5
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5949,9 +5976,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e7
+    const v9, 0x7f020182
 
-    const v10, 0x7f0201e8
+    const v10, 0x7f020183
 
     const/4 v11, 0x0
 
@@ -5963,12 +5990,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 498
+    .line 493
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x1324
+    const/16 v2, 0x39
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5976,9 +6003,36 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e5
+    const v9, 0x7f020182
 
-    const v10, 0x7f0201e6
+    const v10, 0x7f020183
+
+    const/4 v11, 0x0
+
+    const v12, 0x7f090100
+
+    move-object/from16 v8, p0
+
+    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 496
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x76f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v9, 0x7f020176
+
+    const v10, 0x7f020177
 
     const/4 v11, 0x0
 
@@ -5990,12 +6044,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 499
+    .line 497
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x1325
+    const/16 v2, 0x770
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6003,9 +6057,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201e7
+    const v9, 0x7f020178
 
-    const v10, 0x7f0201e8
+    const v10, 0x7f020179
 
     const/4 v11, 0x0
 
@@ -6017,12 +6071,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 502
+    .line 500
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xfa0
+    const/16 v2, 0x7d0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6030,9 +6084,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018c
+    const v9, 0x7f0200f3
 
-    const v10, 0x7f02018d
+    const v10, 0x7f0200f4
 
     const/4 v11, 0x0
 
@@ -6044,12 +6098,12 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 503
+    .line 501
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xfa1
+    const/16 v2, 0x7d1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6057,9 +6111,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018c
+    const v9, 0x7f0200f5
 
-    const v10, 0x7f02018d
+    const v10, 0x7f0200f6
 
     const/4 v11, 0x0
 
@@ -6076,7 +6130,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x37
+    const/16 v2, 0x7d3
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6084,13 +6138,13 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018c
+    const v9, 0x7f0200f3
 
-    const v10, 0x7f02018d
+    const v10, 0x7f0200f4
 
     const/4 v11, 0x0
 
-    const v12, 0x7f090100
+    const v12, 0x7f09009b
 
     move-object/from16 v8, p0
 
@@ -6103,7 +6157,7 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x38
+    const/16 v2, 0x7d4
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6111,63 +6165,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f02018c
+    const v9, 0x7f0200f5
 
-    const v10, 0x7f02018d
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090101
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 506
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xfa4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02018c
-
-    const v10, 0x7f02018d
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 507
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xfa5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02018c
-
-    const v10, 0x7f02018d
+    const v10, 0x7f0200f6
 
     const/4 v11, 0x0
 
@@ -6184,195 +6184,6 @@
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x39
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f02018c
-
-    const v10, 0x7f02018d
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f090102
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 511
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x76f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020180
-
-    const v10, 0x7f020181
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 512
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x770
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f020182
-
-    const v10, 0x7f020183
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 515
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x7d0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200fd
-
-    const v10, 0x7f0200fe
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 516
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x7d1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200ff
-
-    const v10, 0x7f020100
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 519
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x7d3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200fd
-
-    const v10, 0x7f0200fe
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009b
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 520
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x7d4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v9, 0x7f0200ff
-
-    const v10, 0x7f020100
-
-    const/4 v11, 0x0
-
-    const v12, 0x7f09009a
-
-    move-object/from16 v8, p0
-
-    invoke-direct/range {v7 .. v12}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 523
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
     const/16 v2, 0x834
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6381,9 +6192,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201cc
+    const v9, 0x7f0201c1
 
-    const v10, 0x7f0201cd
+    const v10, 0x7f0201c2
 
     const/4 v11, 0x0
 
@@ -6395,7 +6206,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 524
+    .line 509
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -6408,9 +6219,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201ce
+    const v9, 0x7f0201c3
 
-    const v10, 0x7f0201d1
+    const v10, 0x7f0201c6
 
     const/4 v11, 0x0
 
@@ -6422,10 +6233,10 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 527
+    .line 512
     const v12, 0x7f090083
 
-    .line 528
+    .line 513
     .local v12, storageString:I
     move-object/from16 v0, p0
 
@@ -6439,9 +6250,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201d6
+    const v9, 0x7f0201cb
 
-    const v10, 0x7f0201d7
+    const v10, 0x7f0201cc
 
     const/4 v11, 0x0
 
@@ -6451,7 +6262,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 529
+    .line 514
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -6464,9 +6275,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0201d8
+    const v15, 0x7f0201cd
 
-    const v16, 0x7f0201d9
+    const v16, 0x7f0201ce
 
     const/16 v17, 0x0
 
@@ -6478,7 +6289,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 532
+    .line 517
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -6491,9 +6302,9 @@
 
     new-instance v7, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v9, 0x7f0201d6
+    const v9, 0x7f0201cb
 
-    const v10, 0x7f0201d7
+    const v10, 0x7f0201cc
 
     const/4 v11, 0x0
 
@@ -6503,7 +6314,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 533
+    .line 518
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -6516,9 +6327,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0201d8
+    const v15, 0x7f0201cd
 
-    const v16, 0x7f0201d9
+    const v16, 0x7f0201ce
 
     const/16 v17, 0x0
 
@@ -6530,282 +6341,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 536
+    .line 521
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0x8fc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020162
-
-    const v16, 0x7f020163
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090055
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 537
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x8fd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02017c
-
-    const v16, 0x7f02017d
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090056
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 538
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x8fe
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02017e
-
-    const v16, 0x7f02017f
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090057
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 539
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x911
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02017e
-
-    const v16, 0x7f02017f
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090058
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 540
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x8ff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020160
-
-    const v16, 0x7f020161
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090059
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 541
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x900
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02017a
-
-    const v16, 0x7f02017b
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09005a
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 542
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x916
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02015a
-
-    const v16, 0x7f02015b
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09005b
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 543
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x901
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02015a
-
-    const v16, 0x7f02015b
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09005c
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 544
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x902
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020178
-
-    const v16, 0x7f020179
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09005d
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 545
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x912
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020176
-
-    const v16, 0x7f020177
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09005e
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 546
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x903
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6819,7 +6360,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09005f
+    const v18, 0x7f090055
 
     move-object/from16 v14, p0
 
@@ -6827,66 +6368,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 547
+    .line 522
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x904
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020174
-
-    const v16, 0x7f020175
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090060
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 548
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x914
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020174
-
-    const v16, 0x7f020175
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090061
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 549
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x917
+    const/16 v2, 0x8fd
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6900,7 +6387,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090062
+    const v18, 0x7f090056
 
     move-object/from16 v14, p0
 
@@ -6908,12 +6395,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 550
+    .line 523
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x905
+    const/16 v2, 0x8fe
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6921,13 +6408,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020152
+    const v15, 0x7f020174
 
-    const v16, 0x7f020153
+    const v16, 0x7f020175
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090065
+    const v18, 0x7f090057
 
     move-object/from16 v14, p0
 
@@ -6935,12 +6422,66 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 551
+    .line 524
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x906
+    const/16 v2, 0x911
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020174
+
+    const v16, 0x7f020175
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090058
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 525
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x8ff
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020156
+
+    const v16, 0x7f020157
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090059
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 526
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x900
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6954,7 +6495,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090066
+    const v18, 0x7f09005a
 
     move-object/from16 v14, p0
 
@@ -6962,12 +6503,66 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 552
+    .line 527
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x918
+    const/16 v2, 0x916
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020150
+
+    const v16, 0x7f020151
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09005b
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 528
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x901
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020150
+
+    const v16, 0x7f020151
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09005c
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 529
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x902
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6981,7 +6576,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090064
+    const v18, 0x7f09005d
 
     move-object/from16 v14, p0
 
@@ -6989,12 +6584,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 553
+    .line 530
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x919
+    const/16 v2, 0x912
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7008,7 +6603,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090067
+    const v18, 0x7f09005e
 
     move-object/from16 v14, p0
 
@@ -7016,12 +6611,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 554
+    .line 531
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x915
+    const/16 v2, 0x903
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7035,7 +6630,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090068
+    const v18, 0x7f09005f
 
     move-object/from16 v14, p0
 
@@ -7043,12 +6638,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 555
+    .line 532
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x907
+    const/16 v2, 0x904
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7056,13 +6651,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02014c
+    const v15, 0x7f02016a
 
-    const v16, 0x7f02014d
+    const v16, 0x7f02016b
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090069
+    const v18, 0x7f090060
 
     move-object/from16 v14, p0
 
@@ -7070,12 +6665,39 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 556
+    .line 533
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x913
+    const/16 v2, 0x914
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02016a
+
+    const v16, 0x7f02016b
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090061
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 534
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x917
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7089,7 +6711,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09006a
+    const v18, 0x7f090062
 
     move-object/from16 v14, p0
 
@@ -7097,120 +6719,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 557
+    .line 535
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x91a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020166
-
-    const v16, 0x7f020167
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09006b
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 558
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x908
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020142
-
-    const v16, 0x7f020143
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09006e
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 559
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x909
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020164
-
-    const v16, 0x7f020165
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09006c
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 560
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x91b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020140
-
-    const v16, 0x7f020141
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090070
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 562
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x90a
+    const/16 v2, 0x905
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7224,7 +6738,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090063
+    const v18, 0x7f090065
 
     move-object/from16 v14, p0
 
@@ -7232,12 +6746,93 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 563
+    .line 536
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x90b
+    const/16 v2, 0x906
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020166
+
+    const v16, 0x7f020167
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090066
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 537
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x918
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020164
+
+    const v16, 0x7f020165
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090064
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 538
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x919
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020162
+
+    const v16, 0x7f020163
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090067
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 539
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x915
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7251,7 +6846,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09006a
+    const v18, 0x7f090068
 
     move-object/from16 v14, p0
 
@@ -7259,12 +6854,39 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 564
+    .line 540
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x90c
+    const/16 v2, 0x907
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020142
+
+    const v16, 0x7f020143
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090069
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 541
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x913
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7278,7 +6900,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09006d
+    const v18, 0x7f09006a
 
     move-object/from16 v14, p0
 
@@ -7286,12 +6908,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 565
+    .line 542
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x90d
+    const/16 v2, 0x91a
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7305,7 +6927,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09006e
+    const v18, 0x7f09006b
 
     move-object/from16 v14, p0
 
@@ -7313,93 +6935,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 566
+    .line 543
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0x90e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f02023b
-
-    const v16, 0x7f02023b
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09006f
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 567
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x90f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020154
-
-    const v16, 0x7f020155
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090070
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 568
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x910
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f020146
-
-    const v16, 0x7f020147
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f090071
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 571
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xc1c
+    const/16 v2, 0x908
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7413,7 +6954,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090086
+    const v18, 0x7f09006e
 
     move-object/from16 v14, p0
 
@@ -7421,12 +6962,39 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 572
+    .line 544
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xc1d
+    const/16 v2, 0x909
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02015a
+
+    const v16, 0x7f02015b
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09006c
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 545
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x91b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7440,7 +7008,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090087
+    const v18, 0x7f090070
 
     move-object/from16 v14, p0
 
@@ -7448,12 +7016,39 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 573
+    .line 547
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xc1e
+    const/16 v2, 0x90a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02013e
+
+    const v16, 0x7f02013f
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090063
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 548
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x90b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7467,6 +7062,222 @@
 
     const/16 v17, 0x0
 
+    const v18, 0x7f09006a
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 549
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x90c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020154
+
+    const v16, 0x7f020155
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09006d
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 550
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x90d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020152
+
+    const v16, 0x7f020153
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09006e
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 551
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x90e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020224
+
+    const v16, 0x7f020224
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09006f
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 552
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x90f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02014a
+
+    const v16, 0x7f02014b
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090070
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 553
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x910
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02013c
+
+    const v16, 0x7f02013d
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090071
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 556
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xc1c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02012e
+
+    const v16, 0x7f02012f
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090086
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 557
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xc1d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f02012c
+
+    const v16, 0x7f02012d
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f090087
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 558
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xc1e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f020130
+
+    const v16, 0x7f020131
+
+    const/16 v17, 0x0
+
     const v18, 0x7f090089
 
     move-object/from16 v14, p0
@@ -7475,7 +7286,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 574
+    .line 559
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7488,9 +7299,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020132
+    const v15, 0x7f020128
 
-    const v16, 0x7f020133
+    const v16, 0x7f020129
 
     const/16 v17, 0x0
 
@@ -7502,7 +7313,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 575
+    .line 560
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7515,9 +7326,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020134
+    const v15, 0x7f02012a
 
-    const v16, 0x7f020135
+    const v16, 0x7f02012b
 
     const/16 v17, 0x0
 
@@ -7529,7 +7340,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 578
+    .line 563
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7542,9 +7353,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7556,7 +7367,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 579
+    .line 564
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7569,9 +7380,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7583,7 +7394,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 582
+    .line 567
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7596,9 +7407,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7610,7 +7421,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 583
+    .line 568
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7623,9 +7434,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7637,7 +7448,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 586
+    .line 571
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7650,9 +7461,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02012d
+    const v15, 0x7f020123
 
-    const v16, 0x7f02012e
+    const v16, 0x7f020124
 
     const/16 v17, 0x0
 
@@ -7664,7 +7475,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 587
+    .line 572
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7677,9 +7488,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02012f
+    const v15, 0x7f020125
 
-    const v16, 0x7f020130
+    const v16, 0x7f020126
 
     const/16 v17, 0x0
 
@@ -7691,7 +7502,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 590
+    .line 575
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7704,9 +7515,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02012d
+    const v15, 0x7f020123
 
-    const v16, 0x7f02012e
+    const v16, 0x7f020124
 
     const/16 v17, 0x0
 
@@ -7718,7 +7529,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 591
+    .line 576
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7731,9 +7542,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02012f
+    const v15, 0x7f020125
 
-    const v16, 0x7f020130
+    const v16, 0x7f020126
 
     const/16 v17, 0x0
 
@@ -7745,7 +7556,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 594
+    .line 579
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7758,9 +7569,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7772,7 +7583,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 595
+    .line 580
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7785,9 +7596,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f02023b
+    const v15, 0x7f020224
 
-    const v16, 0x7f02023b
+    const v16, 0x7f020224
 
     const/16 v17, 0x0
 
@@ -7799,7 +7610,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 598
+    .line 583
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -7812,13 +7623,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200d3
+    const v15, 0x7f0200c9
 
-    const v16, 0x7f0200d4
+    const v16, 0x7f0200ca
 
     const/16 v17, 0x0
 
-    const v18, 0x7f0900f3
+    const v18, 0x7f0900f1
 
     move-object/from16 v14, p0
 
@@ -7826,174 +7637,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 599
+    .line 584
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     const/16 v2, 0xe11
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200e3
-
-    const v16, 0x7f0200e4
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900fb
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 600
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe12
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200e3
-
-    const v16, 0x7f0200e4
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900fb
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 601
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe13
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200e1
-
-    const v16, 0x7f0200e2
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900fa
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 602
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe14
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200df
-
-    const v16, 0x7f0200e0
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900f9
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 603
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe15
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200dd
-
-    const v16, 0x7f0200de
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900f8
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 604
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe16
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200db
-
-    const v16, 0x7f0200dc
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f0900f7
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 605
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0xe17
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8007,7 +7656,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f0900f6
+    const v18, 0x7f0900f9
 
     move-object/from16 v14, p0
 
@@ -8015,12 +7664,39 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 606
+    .line 585
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xe18
+    const/16 v2, 0xe12
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200d9
+
+    const v16, 0x7f0200da
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f0900f9
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 586
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe13
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8034,7 +7710,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f0900f5
+    const v18, 0x7f0900f8
 
     move-object/from16 v14, p0
 
@@ -8042,12 +7718,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 607
+    .line 587
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xe19
+    const/16 v2, 0xe14
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8061,7 +7737,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x7f0900f4
+    const v18, 0x7f0900f7
 
     move-object/from16 v14, p0
 
@@ -8069,12 +7745,12 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 608
+    .line 588
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
-    const/16 v2, 0xe1a
+    const/16 v2, 0xe15
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8088,6 +7764,87 @@
 
     const/16 v17, 0x0
 
+    const v18, 0x7f0900f6
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 589
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe16
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200d1
+
+    const v16, 0x7f0200d2
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f0900f5
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 590
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe17
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200cf
+
+    const v16, 0x7f0200d0
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f0900f4
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 591
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe18
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200cd
+
+    const v16, 0x7f0200ce
+
+    const/16 v17, 0x0
+
     const v18, 0x7f0900f3
 
     move-object/from16 v14, p0
@@ -8096,7 +7853,61 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 611
+    .line 592
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe19
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200cb
+
+    const v16, 0x7f0200cc
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f0900f2
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 593
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0xe1a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200c9
+
+    const v16, 0x7f0200ca
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f0900f1
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 596
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8109,13 +7920,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020248
+    const v15, 0x7f02022f
 
-    const v16, 0x7f020248
+    const v16, 0x7f02022f
 
     const/16 v17, 0x0
 
-    const v18, 0x7f0900f2
+    const v18, 0x7f0900f0
 
     move-object/from16 v14, p0
 
@@ -8123,7 +7934,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 614
+    .line 599
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8136,9 +7947,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200a6
+    const v15, 0x7f0200a2
 
-    const v16, 0x7f0200a7
+    const v16, 0x7f0200a3
 
     const/16 v17, 0x0
 
@@ -8150,7 +7961,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 615
+    .line 600
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8163,9 +7974,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200a8
+    const v15, 0x7f0200a4
 
-    const v16, 0x7f0200a9
+    const v16, 0x7f0200a5
 
     const/16 v17, 0x0
 
@@ -8177,7 +7988,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 618
+    .line 603
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8190,9 +8001,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200f3
+    const v15, 0x7f0200e9
 
-    const v16, 0x7f0200f4
+    const v16, 0x7f0200ea
 
     const/16 v17, 0x0
 
@@ -8204,7 +8015,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 619
+    .line 604
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8217,9 +8028,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200f5
+    const v15, 0x7f0200eb
 
-    const v16, 0x7f0200f6
+    const v16, 0x7f0200ec
 
     const/16 v17, 0x0
 
@@ -8231,7 +8042,61 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 622
+    .line 607
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1004
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200fb
+
+    const v16, 0x7f0200fc
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09009b
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 608
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
+
+    const/16 v2, 0x1005
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
+
+    const v15, 0x7f0200fd
+
+    const v16, 0x7f0200fe
+
+    const/16 v17, 0x0
+
+    const v18, 0x7f09009a
+
+    move-object/from16 v14, p0
+
+    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
+
+    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 611
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8244,13 +8109,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090159
+    const v18, 0x7f09014f
 
     move-object/from16 v14, p0
 
@@ -8258,7 +8123,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 623
+    .line 612
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8271,13 +8136,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09015b
+    const v18, 0x7f090151
 
     move-object/from16 v14, p0
 
@@ -8285,7 +8150,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 624
+    .line 613
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8298,13 +8163,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09015c
+    const v18, 0x7f090152
 
     move-object/from16 v14, p0
 
@@ -8312,7 +8177,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 625
+    .line 614
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8325,13 +8190,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09015d
+    const v18, 0x7f090153
 
     move-object/from16 v14, p0
 
@@ -8339,7 +8204,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 626
+    .line 615
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8352,13 +8217,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09015e
+    const v18, 0x7f090154
 
     move-object/from16 v14, p0
 
@@ -8366,7 +8231,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 627
+    .line 616
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8379,13 +8244,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f09015f
+    const v18, 0x7f090155
 
     move-object/from16 v14, p0
 
@@ -8393,7 +8258,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 628
+    .line 617
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8406,13 +8271,13 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200cb
+    const v15, 0x7f0200c1
 
-    const v16, 0x7f0200cc
+    const v16, 0x7f0200c2
 
     const/16 v17, 0x0
 
-    const v18, 0x7f090160
+    const v18, 0x7f090156
 
     move-object/from16 v14, p0
 
@@ -8420,7 +8285,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 631
+    .line 620
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8433,9 +8298,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200be
+    const v15, 0x7f0200b4
 
-    const v16, 0x7f0200bf
+    const v16, 0x7f0200b5
 
     const/16 v17, 0x0
 
@@ -8447,7 +8312,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 632
+    .line 621
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8460,9 +8325,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f0200bd
+    const v15, 0x7f0200b3
 
-    const v16, 0x7f0200c0
+    const v16, 0x7f0200b6
 
     const/16 v17, 0x0
 
@@ -8474,7 +8339,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 635
+    .line 624
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8487,9 +8352,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020235
+    const v15, 0x7f020123
 
-    const v16, 0x7f020236
+    const v16, 0x7f020124
 
     const/16 v17, 0x0
 
@@ -8501,7 +8366,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 636
+    .line 625
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8514,9 +8379,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020237
+    const v15, 0x7f020125
 
-    const v16, 0x7f020238
+    const v16, 0x7f020126
 
     const/16 v17, 0x0
 
@@ -8528,7 +8393,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 638
+    .line 627
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8541,9 +8406,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020235
+    const v15, 0x7f020123
 
-    const v16, 0x7f020236
+    const v16, 0x7f020124
 
     const/16 v17, 0x0
 
@@ -8555,7 +8420,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 639
+    .line 628
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8568,63 +8433,9 @@
 
     new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    const v15, 0x7f020237
+    const v15, 0x7f020125
 
-    const v16, 0x7f020238
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09009a
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 642
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x12c0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200b0
-
-    const v16, 0x7f0200b1
-
-    const/16 v17, 0x0
-
-    const v18, 0x7f09009b
-
-    move-object/from16 v14, p0
-
-    invoke-direct/range {v13 .. v18}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;-><init>(Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;IIII)V
-
-    invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 643
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
-
-    const/16 v2, 0x12c1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    new-instance v13, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-
-    const v15, 0x7f0200af
-
-    const v16, 0x7f0200b2
+    const v16, 0x7f020126
 
     const/16 v17, 0x0
 
@@ -8636,7 +8447,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 644
+    .line 629
     return-void
 .end method
 
@@ -8646,12 +8457,12 @@
     .locals 1
 
     .prologue
-    .line 660
+    .line 645
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 661
+    .line 646
     return-void
 .end method
 
@@ -8660,7 +8471,7 @@
     .parameter "commandId"
 
     .prologue
-    .line 647
+    .line 632
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8680,7 +8491,7 @@
     .locals 1
 
     .prologue
-    .line 651
+    .line 636
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -8695,7 +8506,7 @@
     .parameter "index"
 
     .prologue
-    .line 655
+    .line 640
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Ljava/util/HashMap;
@@ -8706,7 +8517,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 656
+    .line 641
     .local v0, list:Ljava/util/List;,"Ljava/util/List<Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;>;"
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 

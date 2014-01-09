@@ -33,7 +33,7 @@
     <string name="SM_SMILE">笑脸拍摄</string>
     <string name="SM_FRAME">相框拍摄</string>
     <string name="SM_BEAUTY">美肌</string>
-    <string name="SM_VINTAGE">仿旧</string>
+    <string name="SM_VINTAGE">葡萄酒</string>
     <string name="SM_ADDME">添加自己</string>
     <string name="SM_ACTION">动态照片</string>
     <string name="SM_STOPMOTION">停止运动</string>
@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">浮雕</string>
     <string name="E_OUTLINE">略图</string>
     <string name="E_WATERCOLOR">水蓝色</string>
-    <string name="E_MONOCHROME">单色</string>
-    <string name="E_SKETCH">草图</string>
     <string name="E_WASHED">曝光过度</string>
     <string name="E_POSTERIZE">色调分离</string>
     <string name="E_SOLARIZE">曝光</string>
@@ -101,7 +99,7 @@
     <string name="RM_MMS">彩信限制</string>
     <string name="RM_EMAIL">电子邮件限制</string>
     <string name="RM_SLOW">慢动作</string>
-    <string name="RM_FAST">快动作</string>
+    <string name="RM_FAST">快速动作</string>
     <string name="CS_PROGRESS_TEXT">正在新建图像。请稍等…</string>
     <string name="SCN_NONE">无</string>
     <string name="SCN_PORTRAIT">肖像</string>
@@ -115,7 +113,7 @@
     <string name="SCN_NIGHT_SHOT">夜间拍摄</string>
     <string name="SCN_FIREWORK">焰火</string>
     <string name="SCN_TEXT">文本</string>
-    <string name="SCN_CANDLE_LIGHT">烛火</string>
+    <string name="SCN_CANDLE_LIGHT">烛光</string>
     <string name="SCN_BACK_LIGHT">背光</string>
     <string name="OPTION_ON">开</string>
     <string name="OPTION_OFF">关</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">定时器</string>
     <string name="Title_Resolution">分辨率</string>
     <string name="Title_ShootAndShare">共享拍摄设置</string>
-    <string name="Title_DeviceList">设备类表</string>
     <string name="Title_WhiteBalance">白平衡</string>
     <string name="Title_Effects">效果</string>
     <string name="Title_Focus">聚焦</string>
@@ -152,17 +149,16 @@
     <string name="Title_AutoContrast">自动调整对比度</string>
     <string name="Title_GPS">GPS标签</string>
     <string name="Title_Review">查看</string>
-    <string name="Title_AutoShareShot">自动共享拍摄</string>
     <string name="Title_Guideline">构图线</string>
     <string name="Title_VideoQuality">视频质量</string>
     <string name="Title_AudioRecording">录音</string>
-    <string name="Title_Storage">存储</string>
+    <string name="Title_Storage">存储器</string>
     <string name="Title_Reset">重置</string>
     <string name="Title_Mode">模式</string>
     <string name="Title_Back">返回</string>
     <string name="Title_ImageViewer">图片浏览器</string>
-    <string name="Title_Outdoor_Visibility">户外能见度</string>
-    <string name="Title_Flip">另存为翻版</string>
+    <string name="Title_Outdoor_Visibility">室外可见性</string>
+    <string name="Title_Flip">保存为倒置</string>
     <string name="Title_Self_Portrait">自拍</string>
     <string name="Title_Self_Recording">自拍</string>
     <string name="Title_Voice_Capture">使用语音拍照</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">拍摄相片时请注意不要摇晃设备</string>
     <string name="help_text_panorama">按下相机键并朝一个方向缓慢移动手机</string>
     <string name="help_text_panorama_device">按下照相机键并在一个方向缓慢地移动设备</string>
-    <string name="message_DefaultLayout">将重置快捷方式布局</string>
     <string name="message_EULA_GPS">启用 GPS 标签将在每张照片内附加、嵌入和储存地理位置数据。当您发送、共享、分发、传输或复制这些照片时请谨慎，因为其含有照片拍摄的位置</string>
-    <string name="message_Auto_ShareShot">"自动共享截图能轻松连接至您想要与其共享图片的设备。
-启用自动共享截图，然后将设备放在一起（通常背对背）以进行连接"</string>
     <string name="GPS_msg">GPS 关</string>
     <string name="message_enable_GPS">在设置中打开GPS以使用GPS标签</string>
     <string name="cancel">取消</string>
@@ -218,7 +211,7 @@
     <string name="wifi_dialog_text">需要 Wi-Fi 连接</string>
     <string name="wifi_dialog_text_chn">需要 WLAN 连接</string>
     <string name="wifi_direct_dialog_title">共享拍摄</string>
-    <string name="wifi_direct_dialog_text">共享拍摄使您能够通过 Wi-Fi直连 与其他用户共享照片。需要 Wi-Fi直连 连接</string>
+    <string name="wifi_direct_dialog_text">共享拍摄使您能够通过 WLAN直连 与其他用户共享照片。需要 WLAN直连 连接</string>
     <string name="wifi_direct_dialog_text_chn">需要 WLAN 直连请求</string>
     <string name="wifi_dialog_yes">确定</string>
     <string name="wifi_dialog_no">取消</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">未知</string>
     <string name="shareshot_no_user">不与任何人分享</string>
     <string name="snapshot_saved">已储存 %s</string>
-    <string name="editable_shortcut_reset">重置</string>
     <string name="editable_shortcut_helptext_title">帮助</string>
     <string name="editable_shortcut_helptext_message">点击并按住快捷方式以编辑它们</string>
     <string name="editable_shortcut_helptext">点击并按住图标，然后将其拖拽至想要放置的位置上</string>
-    <string name="sbeam_helptext">拍摄和与其他设备共享照片。将设备放在一起以添加您想要通过 S 传送与其共享的设备</string>
     <string name="storage_setting_dialog_title">存储位置</string>
     <string name="storage_setting_dialog_message">SD 卡已插入。是否将存储位置更改为 SD 卡？</string>
     <string name="do_not_ask_again">不要再显示</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">最佳拍摄</string>
     <string name="bestpic_on">打开</string>
     <string name="bestpic_off">关闭</string>
-    <string name="bestgroup">最佳群组姿势</string>
-    <string name="bestgroup_title">选择最好的面部以保存</string>
     <string name="battery_low">关闭摄像头。电池温度过低</string>
     <string name="buddy_photo_share_helptext">通过面部检测拍摄并与好友分享照片</string>
     <string name="face_zoom_helptext">双击面部以放大或缩小</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">切换至摄像机模式</string>
     <string name="on_device_help_self">切换至自拍模式</string>
     <string name="on_device_help_editable">轻敲并按住您要移动的快捷方式。然后将其拖动至您想要的地方</string>
-    <string name="on_device_help_voicecommand">您可用捕捉、拍摄、微笑和茄子等语音命令拍照</string>
     <string name="Title_VideoSpeed">速度</string>
     <string name="SPEED_OFF">正常</string>
     <string name="SPEED_2X_FASTER">快 2 倍</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">自录仅可在手机打开时使用</string>
     <string name="contextual_filename">上下文文件名</string>
     <string name="enable_gps_dialog">需要启用 GPS 标签。是否启用 GPS 标签？</string>
-    <string name="gallery_disable">图库已禁用</string>
-    <string name="HDR_Normal">正常</string>
-    <string name="HDR_Strong">强</string>
 </resources>

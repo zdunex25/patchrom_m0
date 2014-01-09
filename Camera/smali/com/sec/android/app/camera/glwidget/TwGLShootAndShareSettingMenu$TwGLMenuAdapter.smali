@@ -30,7 +30,7 @@
     .line 124
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -96,21 +96,21 @@
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v2}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->access$200(Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
     invoke-static {v3}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->access$300(Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;)Lcom/sec/android/glview/TwGLViewGroup;
 
     move-result-object v3
 
     iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
     invoke-static {v6}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->access$400(Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;)Lcom/sec/android/app/camera/MenuResourceDepot;
 
     move-result-object v6
@@ -121,9 +121,6 @@
 
     .line 132
     .local v5, command:Lcom/sec/android/app/camera/command/MenuCommand;
-    if-eqz v5, :cond_0
-
-    .line 133
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->getZorder()I
@@ -134,16 +131,15 @@
 
     invoke-virtual {v5, v1}, Lcom/sec/android/app/camera/command/MenuCommand;->setZOrder(I)V
 
-    .line 135
-    :cond_0
-    if-nez p2, :cond_2
+    .line 134
+    if-nez p2, :cond_1
 
-    .line 137
+    .line 136
     new-instance v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v1}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->access$500(Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v1
@@ -160,14 +156,14 @@
 
     int-to-float v3, v3
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
     const/4 v6, 0x0
 
     :goto_0
     invoke-direct/range {v0 .. v6}, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;FFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;I)V
 
-    .line 138
+    .line 137
     .local v0, item:Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
@@ -178,7 +174,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->setOnTouchListener(Lcom/sec/android/glview/TwGLView$OnTouchListener;)V
 
-    .line 139
+    .line 138
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareSettingMenu;->getZorder()I
@@ -189,21 +185,21 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->setZOrder(I)V
 
-    .line 142
+    .line 141
     .end local v0           #item:Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;
     :goto_1
     return-object v0
 
-    .line 137
-    :cond_1
+    .line 136
+    :cond_0
     const/4 v6, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     move-object v0, p2
 
-    .line 142
+    .line 141
     goto :goto_1
 .end method
 
@@ -211,6 +207,6 @@
     .locals 0
 
     .prologue
-    .line 147
+    .line 146
     return-void
 .end method

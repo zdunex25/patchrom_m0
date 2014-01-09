@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 247
+    .line 230
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$2;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,16 +39,16 @@
     .parameter "msg"
 
     .prologue
-    .line 249
+    .line 232
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 255
+    .line 238
     :goto_0
     return-void
 
-    .line 251
+    .line 234
     :pswitch_0
     const-string v0, "AbstractCameraActivity"
 
@@ -56,14 +56,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
+    .line 235
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$2;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finish()V
 
     goto :goto_0
 
-    .line 249
+    .line 232
     nop
 
     :pswitch_data_0

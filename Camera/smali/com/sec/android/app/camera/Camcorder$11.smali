@@ -3,12 +3,12 @@
 .source "Camcorder.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/Camcorder;->handlePluggedLowBattery(Z)V
+    value = Lcom/sec/android/app/camera/Camcorder;->showSnapshotLimitationDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,69 +27,70 @@
     .parameter
 
     .prologue
-    .line 3973
+    .line 3605
     iput-object p1, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 2
-    .parameter "dialog"
-    .parameter "keyCode"
-    .parameter "event"
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 4
+    .parameter "arg0"
+    .parameter "arg1"
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v1, 0x0
 
-    .line 3975
-    const/16 v1, 0x1b
+    .line 3607
+    iget-object v2, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    if-ne p2, v1, :cond_0
-
-    .line 3984
-    :goto_0
-    return v0
-
-    .line 3979
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq p2, v1, :cond_1
-
-    const/16 v1, 0x52
-
-    if-ne p2, v1, :cond_2
-
-    .line 3981
-    :cond_1
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    iput-boolean v0, v1, Lcom/sec/android/app/camera/Camcorder;->mLowBatteryDisableFlashPopupDisplayed:Z
-
-    goto :goto_0
-
-    .line 3984
-    :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camcorder;->getWindow()Landroid/view/Window;
+    const-string v3, "audio"
+
+    invoke-virtual {v0, v3}, Lcom/sec/android/app/camera/Camcorder;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    check-cast v0, Landroid/media/AudioManager;
 
-    move-result v0
+    #setter for: Lcom/sec/android/app/camera/Camcorder;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {v2, v0}, Lcom/sec/android/app/camera/Camcorder;->access$2302(Lcom/sec/android/app/camera/Camcorder;Landroid/media/AudioManager;)Landroid/media/AudioManager;
 
+    .line 3608
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$2300(Lcom/sec/android/app/camera/Camcorder;)Landroid/media/AudioManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->playSoundEffect(I)V
+
+    .line 3609
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$11;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camcorder;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+
+    move-result-object v2
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v2, v0}, Lcom/sec/android/app/camera/CameraSettings;->setSnapshotLimitationDialog(I)V
+
+    .line 3610
+    return-void
+
+    :cond_0
+    move v0, v1
+
+    .line 3609
     goto :goto_0
 .end method

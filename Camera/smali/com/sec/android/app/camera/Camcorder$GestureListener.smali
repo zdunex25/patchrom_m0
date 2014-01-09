@@ -32,17 +32,17 @@
     .parameter
 
     .prologue
-    .line 259
+    .line 213
     iput-object p1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
+    .line 214
     const/16 v0, 0xc8
 
     iput v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->DISTANCE:I
 
-    .line 261
+    .line 215
     const/16 v0, 0xfa
 
     iput v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->VELOCITY:I
@@ -56,7 +56,7 @@
     .parameter "x1"
 
     .prologue
-    .line 259
+    .line 213
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/Camcorder$GestureListener;-><init>(Lcom/sec/android/app/camera/Camcorder;)V
 
     return-void
@@ -69,7 +69,7 @@
     .parameter "event"
 
     .prologue
-    .line 264
+    .line 218
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +80,7 @@
     .parameter "e"
 
     .prologue
-    .line 268
+    .line 222
     const/4 v0, 0x0
 
     return v0
@@ -91,73 +91,165 @@
     .parameter "e"
 
     .prologue
-    .line 277
+    .line 231
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 2
+    .locals 3
     .parameter "e1"
     .parameter "e2"
     .parameter "velocityX"
     .parameter "velocityY"
 
     .prologue
-    .line 281
-    const-string v0, "Camcorder"
-
-    const-string v1, "onFling"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 282
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camcorder;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f06006c
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    iput v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->DISTANCE:I
-
-    .line 283
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camcorder;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f06006d
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    iput v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->VELOCITY:I
-
-    .line 286
     const/4 v0, 0x0
 
+    .line 235
+    const-string v1, "Camcorder"
+
+    const-string v2, "onFling"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 236
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/Camcorder;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f06006b
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    iput v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->DISTANCE:I
+
+    .line 237
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/Camcorder;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f06006c
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    iput v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->VELOCITY:I
+
+    .line 242
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/Camcorder;->isRecording()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 254
+    :cond_0
+    :goto_0
     return v0
+
+    .line 245
+    :cond_1
+    if-eqz p1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    .line 248
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    iget v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->VELOCITY:I
+
+    int-to-float v1, v1
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_4
+
+    .line 249
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    iget v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->DISTANCE:I
+
+    int-to-float v1, v1
+
+    cmpl-float v0, v0, v1
+
+    if-gtz v0, :cond_2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    iget v1, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->DISTANCE:I
+
+    int-to-float v1, v1
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_3
+
+    .line 250
+    :cond_2
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$GestureListener;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    const-string v1, "quickview"
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camcorder;->onLaunchGallery(Ljava/lang/String;)V
+
+    .line 254
+    :cond_3
+    :goto_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 253
+    :cond_4
+    const-string v0, "Camcorder"
+
+    const-string v1, "Fling slow"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
 .end method
 
 .method public onLongPress(Landroid/view/MotionEvent;)V
@@ -165,7 +257,7 @@
     .parameter "e"
 
     .prologue
-    .line 304
+    .line 258
     return-void
 .end method
 
@@ -177,7 +269,7 @@
     .parameter "distanceY"
 
     .prologue
-    .line 307
+    .line 261
     const/4 v0, 0x0
 
     return v0
@@ -188,7 +280,7 @@
     .parameter "e"
 
     .prologue
-    .line 311
+    .line 265
     return-void
 .end method
 
@@ -197,7 +289,7 @@
     .parameter "e"
 
     .prologue
-    .line 272
+    .line 226
     const/4 v0, 0x0
 
     return v0
@@ -208,7 +300,7 @@
     .parameter "e"
 
     .prologue
-    .line 314
+    .line 268
     const/4 v0, 0x0
 
     return v0

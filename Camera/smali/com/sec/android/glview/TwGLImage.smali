@@ -74,7 +74,7 @@
     .line 206
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 207
     :cond_1
@@ -139,7 +139,7 @@
     .line 149
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 150
     :cond_1
@@ -209,7 +209,7 @@
     .line 92
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 93
     :cond_1
@@ -284,7 +284,7 @@
     .line 263
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 264
     :cond_1
@@ -337,7 +337,7 @@
     .line 66
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 67
     :cond_1
@@ -390,7 +390,7 @@
     .line 185
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 186
     :cond_1
@@ -443,7 +443,7 @@
     .line 128
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 129
     :cond_1
@@ -496,7 +496,7 @@
     .line 242
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 243
     :cond_1
@@ -547,7 +547,7 @@
     .line 166
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 167
     :cond_1
@@ -598,7 +598,7 @@
     .line 109
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 110
     :cond_1
@@ -649,7 +649,7 @@
     .line 223
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 224
     :cond_1
@@ -927,7 +927,7 @@
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLImage;->mPressed:Z
 
     .line 361
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLImage;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     if-eqz v2, :cond_0
 
@@ -953,7 +953,7 @@
     invoke-virtual {v0, v4}, Landroid/media/AudioManager;->playSoundEffect(I)V
 
     .line 364
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLImage;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     invoke-interface {v2, p0}, Lcom/sec/android/glview/TwGLView$OnClickListener;->onClick(Lcom/sec/android/glview/TwGLView;)Z
 
@@ -1051,7 +1051,7 @@
     .line 433
     iget-object v0, p0, Lcom/sec/android/glview/TwGLImage;->mImage:Lcom/sec/android/glview/TwGLTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 435
     :cond_1

@@ -140,7 +140,7 @@
 
     .line 58
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/FrontEffectResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -172,7 +172,7 @@
     .line 37
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x3ea
+    const/16 v1, 0x3e9
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -183,7 +183,7 @@
     .line 38
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x3eb
+    const/16 v1, 0x3ea
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -194,7 +194,7 @@
     .line 39
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x3e9
+    const/16 v1, 0x3eb
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -213,7 +213,7 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontEffectResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

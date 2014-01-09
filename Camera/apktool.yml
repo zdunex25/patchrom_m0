@@ -1,6 +1,13 @@
-version: 1.4.3
-apkFileName: SamsungCamera.apk
+version: 1.5.2
+apkFileName: Camera.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '16'
+packageInfo:
+  cur_package: com.sec.android.app.camera
+  orig_package: com.sec.android.app.camera
+compressionType: false

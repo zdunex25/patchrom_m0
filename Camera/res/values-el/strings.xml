@@ -36,7 +36,7 @@
     <string name="SM_SMILE">Λήψη χαμόγ.</string>
     <string name="SM_FRAME">Λήψη πλαισίου</string>
     <string name="SM_BEAUTY">Ομορφιά</string>
-    <string name="SM_VINTAGE">Παλαιά</string>
+    <string name="SM_VINTAGE">Χρονιά παραγωγής</string>
     <string name="SM_ADDME">Προσθήκη εμού</string>
     <string name="SM_ACTION">Λήψη ενέργειας</string>
     <string name="SM_STOPMOTION">Καρέ-καρέ</string>
@@ -69,8 +69,6 @@
     <string name="E_EMBOSS">Ανάγλυφο</string>
     <string name="E_OUTLINE">Διάρθρωση</string>
     <string name="E_WATERCOLOR">Υδατογραφία</string>
-    <string name="E_MONOCHROME">Μονόχρωμο</string>
-    <string name="E_SKETCH">Περίγραμμα</string>
     <string name="E_WASHED">Αποχρωματισμός</string>
     <string name="E_POSTERIZE">Δημιουργία αφίσας</string>
     <string name="E_SOLARIZE">Έκθεση στον ήλιο</string>
@@ -81,7 +79,7 @@
     <string name="E_POINT_RED_YELLOW">Κόκκινο-κίτρινο σημείο</string>
     <string name="E_CARTOONIZE">Καρτούν</string>
     <string name="F_AUTO_FLASH">Αυτόματο φλας</string>
-    <string name="F_AUTOFOCUS">Αυτόμ.εστ.</string>
+    <string name="F_AUTOFOCUS">Αυτόματη εστίαση</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Ανίχνευση προσώπου</string>
     <string name="F_PANFOCUS">Εστ.παν.λ</string>
@@ -104,7 +102,7 @@
     <string name="RM_MMS">Όριο γιαMMS</string>
     <string name="RM_EMAIL">Όριο για email</string>
     <string name="RM_SLOW">Αργή ταχύτητα</string>
-    <string name="RM_FAST">Γρήγορη ταχύτητα</string>
+    <string name="RM_FAST">Γρήγορη κίνηση</string>
     <string name="CS_PROGRESS_TEXT">Δημιουργία εικόνας. Περιμένετε...</string>
     <string name="SCN_NONE">Κανένα</string>
     <string name="SCN_PORTRAIT">Πορτραίτο</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Χρονομετρητής</string>
     <string name="Title_Resolution">Ανάλυση</string>
     <string name="Title_ShootAndShare">Ρυθμ.κοιν. χρ.λήψ.</string>
-    <string name="Title_DeviceList">Λίστα συσκευής</string>
     <string name="Title_WhiteBalance">Εξισορρόπηση λευκού</string>
     <string name="Title_Effects">Εφέ</string>
     <string name="Title_Focus">Εστίαση</string>
@@ -155,16 +152,15 @@
     <string name="Title_AutoContrast">Αυτόματη αντίθεση</string>
     <string name="Title_GPS">Ετικέτα GPS</string>
     <string name="Title_Review">Εξέταση</string>
-    <string name="Title_AutoShareShot">Αυτόμ. κοινή χρήση λήψης</string>
     <string name="Title_Guideline">Οδηγίες</string>
     <string name="Title_VideoQuality">Ποιότητα βίντεο</string>
     <string name="Title_AudioRecording">Εγγρ. ήχου</string>
-    <string name="Title_Storage">Χώρος αποθήκευσης</string>
+    <string name="Title_Storage">Αποθήκευση</string>
     <string name="Title_Reset">Επαναφορά</string>
     <string name="Title_Mode">Λειτουργία</string>
     <string name="Title_Back">Πίσω</string>
     <string name="Title_ImageViewer">Προβολή εικόνων</string>
-    <string name="Title_Outdoor_Visibility">Ορατότητα εξωτερικού χώρου</string>
+    <string name="Title_Outdoor_Visibility">Ορατότητα εξωτ. χώρου</string>
     <string name="Title_Flip">Αποθήκευση ως ανεστραμμένης εικόνας</string>
     <string name="Title_Self_Portrait">Αυτοφωτογράφηση</string>
     <string name="Title_Self_Recording">Εγγρ. χρήστη σε βίντεο</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Φροντίστε να κρατάτε τη συσκευή σταθερή κατά τη λήψη φωτογραφιών</string>
     <string name="help_text_panorama">Πατήστε το πλήκτρο κάμερας και μετακινήστε το τηλέφωνο αργά προς μια κατεύθυνση</string>
     <string name="help_text_panorama_device">Πατήστε το πλήκτρο κάμερας και μετακινήστε τη συσκευή αργά προς μία κατεύθυνση</string>
-    <string name="message_DefaultLayout">Θα γίνει επαναφορά της διάταξης συντομεύσεων</string>
     <string name="message_EULA_GPS">Η ενεργοποίηση της ετικέτας GPS θα επισυνάψει, θα ενσωματώσει και θα αποθηκεύσει τα δεδομένα γεωγραφικής θέσης σε κάθε φωτογραφία. Να είστε προσεκτικοί, όταν στέλνετε, κάνετε κοινή χρήση, διανείμετε, μεταδίδετε ή αντιγράφετε αυτές τις φωτογραφίες, γιατί περιέχουν την τοποθεσία όπου έγινε λήψη της φωτογραφίας</string>
-    <string name="message_Auto_ShareShot">"Η δυνατότητα αυτόματης κοινής χρήσης λήψης σάς επιτρέπει να συνδεθείτε εύκολα στις συσκευές με τις οποίες θέλετε να μοιραστείτε εικόνες.
-Ενεργοποιήστε την αυτόματη κοινή χρήση λήψης και, στη συνέχεια, μετακινήστε τις συσκευές τη μία κοντά στην άλλη (συνήθως πλάτη με πλάτη) για σύνδεση"</string>
     <string name="GPS_msg">Απενεργοποιημένο GPS</string>
     <string name="message_enable_GPS">Για να χρησιμοποιήσετε την ετικέτα GPS, ενεργοποιήστε το GPS στις Ρυθμίσεις</string>
     <string name="cancel">Ακύρωση</string>
@@ -248,11 +241,9 @@
     <string name="profile_user_default_name">Άγνωστο</string>
     <string name="shareshot_no_user">Δεν υπάρχουν άτομα για κοινή χρήση</string>
     <string name="snapshot_saved">Αποθήκευση: %s</string>
-    <string name="editable_shortcut_reset">Μηδενισμός</string>
     <string name="editable_shortcut_helptext_title">Συμβουλές</string>
     <string name="editable_shortcut_helptext_message">Πατήστε παρατεταμένα συντομεύσεις για να τις επεξεργαστείτε</string>
     <string name="editable_shortcut_helptext">Πατήστε παρατεταμένα το εικονίδιο, κατόπιν σύρετέ το για να αλλάξετε τη θέση των συντομεύσεων</string>
-    <string name="sbeam_helptext">Κάντε λήψη και κοινή χρήση των φωτογραφιών με άλλες συσκευές. Τοποθετήσετε τις συσκευές σε κοντινή απόσταση, για να προσθέσετε συσκευές με τις οποίες θέλετε να κάνετε κοινή χρήση μέσω S Beam</string>
     <string name="storage_setting_dialog_title">Θέση αποθήκευσης</string>
     <string name="storage_setting_dialog_message">Τοποθετήθηκε κάρτα SD. Να γίνει αλλαγή της θέσης αποθήκευσης σε κάρτα SD;</string>
     <string name="do_not_ask_again">Να μην εμφανιστεί ξανά</string>
@@ -261,8 +252,6 @@
     <string name="bestpic">Καλύτερη φωτογραφία</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Καλύτερη ομαδική πόζα</string>
-    <string name="bestgroup_title">Επιλέξτε τα πρόσωπα για αποθ.</string>
     <string name="battery_low">Κλείστε την κάμερα. Η θερμοκρ. μπαταρίας είναι πολύ χαμηλή</string>
     <string name="buddy_photo_share_helptext">Τραβήξτε και μοιραστείτε φωτογραφίες με φίλους μέσω της λειτουργίας εντοπισμού προσώπου</string>
     <string name="face_zoom_helptext">Πατήστε δύο φορές σε ένα πρόσωπο για μεγέθυνση ή σμίκρυνση</string>
@@ -272,7 +261,6 @@
     <string name="on_device_help_camcorder">Μετάβαση στη λειτουργία Βιντεοκάμερας</string>
     <string name="on_device_help_self">Μετάβαση στη λειτουργία Αυτοφωτογράφησης</string>
     <string name="on_device_help_editable">Πατήστε παρατεταμένα τη συντόμευση που θέλετε να μετακινήσετε. Κατόπιν σύρετέ την στο σημείο που θέλετε</string>
-    <string name="on_device_help_voicecommand">Μπορείτε να τραβήξετε φωτογραφίες με φωνητικές εντολές όπως, Λήψη, Φωτογράφιση και Χαμογελάστε</string>
     <string name="Title_VideoSpeed">Ταχύτητα</string>
     <string name="SPEED_OFF">Κανονική</string>
     <string name="SPEED_2X_FASTER">2x ταχύτερα</string>
@@ -294,7 +282,4 @@
     <string name="self_recording_open_warning_popup">Η δυνατότητα εγγραφής βίντεο χρήστη μπορεί να χρησιμοποιηθεί μόνο όταν το τηλέφωνο είναι ανοιχτό</string>
     <string name="contextual_filename">Αυτόματη ονομασία αρχείου βάσει συσχετισμών</string>
     <string name="enable_gps_dialog">Η ετικέτα GPS πρέπει να ενεργοποιηθεί. Ενεργοποίηση ετικέτας GPS;</string>
-    <string name="gallery_disable">Η Συλλογή είναι απενεργοποιημένη</string>
-    <string name="HDR_Normal">Κανονική</string>
-    <string name="HDR_Strong">Ισχυρό</string>
 </resources>

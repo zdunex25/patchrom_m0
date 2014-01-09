@@ -76,7 +76,7 @@
 
     .prologue
     .line 47
-    const v0, 0x7f060109
+    const v0, 0x7f060104
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -85,7 +85,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BG_IMAGE_POS_X:F
 
     .line 48
-    const v0, 0x7f06010a
+    const v0, 0x7f060105
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -94,7 +94,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SELECTED_IMAGE_POS_X:F
 
     .line 49
-    const v0, 0x7f06010b
+    const v0, 0x7f060106
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -103,7 +103,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->CELL_PADDING_WIDTH:F
 
     .line 50
-    const v0, 0x7f06010c
+    const v0, 0x7f060107
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -112,7 +112,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->CELL_PADDING_HEIGHT:F
 
     .line 51
-    const v0, 0x7f06010d
+    const v0, 0x7f060108
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -123,7 +123,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     .line 52
-    const v0, 0x7f060110
+    const v0, 0x7f06010b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -134,7 +134,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->TOUCH_PADDING:I
 
     .line 53
-    const v0, 0x7f060111
+    const v0, 0x7f06010c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -145,7 +145,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_SELECT_AREA_WIDTH:I
 
     .line 54
-    const v0, 0x7f060112
+    const v0, 0x7f06010d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -206,7 +206,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setFocusable(Z)V
+    invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setFocusable(I)V
 
     .line 86
     return-void
@@ -270,7 +270,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mThis:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mThis:Lcom/sec/android/glview/TwGLView;
 
     return-object v0
 .end method
@@ -302,7 +302,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mThis:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mThis:Lcom/sec/android/glview/TwGLView;
 
     return-object v0
 .end method
@@ -332,7 +332,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f0200c5
+    const v4, 0x7f0200bb
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -359,7 +359,7 @@
 
     move-result v3
 
-    const v4, 0x7f0200b8
+    const v4, 0x7f0200ae
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -394,7 +394,7 @@
 
     add-float/2addr v3, v4
 
-    const v4, 0x7f0200c3
+    const v4, 0x7f0200b9
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -433,7 +433,7 @@
 
     int-to-float v5, v5
 
-    const v7, 0x7f0200c1
+    const v7, 0x7f0200b7
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
@@ -452,29 +452,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setResourceOffset(FF)Z
 
-    .line 137
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
-
-    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0900c4
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setTitle(Ljava/lang/String;)V
-
     .line 138
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
-
-    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setClickable(Z)V
-
-    .line 140
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getTop()F
 
     move-result v0
@@ -495,97 +473,97 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosTop:I
 
-    .line 142
+    .line 140
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotatable(Z)V
 
-    .line 143
+    .line 141
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setCenterPivot(Z)V
 
-    .line 144
+    .line 142
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotateAnimation(Z)V
+
+    .line 144
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
+
+    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotatable(Z)V
+
+    .line 145
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
+
+    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setCenterPivot(Z)V
 
     .line 146
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
-    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotatable(Z)V
-
-    .line 147
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
-
-    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setCenterPivot(Z)V
+    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotateAnimation(Z)V
 
     .line 148
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
-    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLImage;->setRotateAnimation(Z)V
+    invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnDragListener(Lcom/sec/android/glview/TwGLView$OnDragListener;)V
+
+    .line 149
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
+
+    invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragSensitivity(I)V
 
     .line 150
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
-    invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnDragListener(Lcom/sec/android/glview/TwGLView$OnDragListener;)V
+    invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragVibration(Z)V
 
     .line 151
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
-    invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragSensitivity(I)V
-
-    .line 152
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
-
-    invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragVibration(Z)V
-
-    .line 153
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
-
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnTouchListener(Lcom/sec/android/glview/TwGLView$OnTouchListener;)V
 
-    .line 155
+    .line 153
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBackground:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnDragListener(Lcom/sec/android/glview/TwGLView$OnDragListener;)V
 
-    .line 156
+    .line 154
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBackground:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragSensitivity(I)V
 
-    .line 157
+    .line 155
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBackground:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v6}, Lcom/sec/android/glview/TwGLImage;->setDragVibration(Z)V
 
-    .line 158
+    .line 156
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBackground:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnTouchListener(Lcom/sec/android/glview/TwGLView$OnTouchListener;)V
 
-    .line 160
+    .line 158
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 161
+    .line 159
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBackground:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 162
+    .line 160
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 163
+    .line 161
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 164
+    .line 162
     return-void
 .end method
 
@@ -675,24 +653,24 @@
 
     const/4 v2, 0x0
 
-    .line 242
+    .line 240
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v0, :cond_1
 
-    .line 243
+    .line 241
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return mButtonLocked is true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
+    .line 283
     :cond_0
     :goto_0
     return-void
 
-    .line 247
+    .line 245
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -702,7 +680,7 @@
 
     if-nez v0, :cond_2
 
-    .line 248
+    .line 246
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return isStartPreview.."
@@ -711,7 +689,7 @@
 
     goto :goto_0
 
-    .line 252
+    .line 250
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -721,7 +699,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 253
+    .line 251
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return getIsLaunchGallery.."
@@ -730,7 +708,7 @@
 
     goto :goto_0
 
-    .line 257
+    .line 255
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -738,7 +716,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 258
+    .line 256
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -749,7 +727,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 259
+    .line 257
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return isCapturing.."
@@ -758,7 +736,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 262
     :cond_4
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -772,7 +750,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 266
+    .line 264
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getLeft()F
 
     move-result v0
@@ -789,7 +767,7 @@
 
     if-gtz v0, :cond_0
 
-    .line 271
+    .line 269
     :cond_5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getTop()F
 
@@ -799,10 +777,10 @@
 
     if-gez v0, :cond_6
 
-    .line 272
+    .line 270
     iput v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 284
+    .line 282
     :goto_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
@@ -814,7 +792,7 @@
 
     goto :goto_0
 
-    .line 273
+    .line 271
     :cond_6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getBottom()F
 
@@ -824,14 +802,14 @@
 
     if-lez v0, :cond_7
 
-    .line 274
+    .line 272
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     goto :goto_1
 
-    .line 276
+    .line 274
     :cond_7
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -843,12 +821,12 @@
 
     if-gez v0, :cond_8
 
-    .line 277
+    .line 275
     iput v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     goto :goto_1
 
-    .line 278
+    .line 276
     :cond_8
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -864,14 +842,14 @@
 
     if-lez v0, :cond_9
 
-    .line 279
+    .line 277
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     goto :goto_1
 
-    .line 281
+    .line 279
     :cond_9
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -893,24 +871,24 @@
     .parameter "y"
 
     .prologue
-    .line 289
+    .line 287
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v1, :cond_1
 
-    .line 290
+    .line 288
     const-string v1, "TwGLModeSwitchButton"
 
     const-string v2, "return mButtonLocked is true"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 356
+    .line 354
     :cond_0
     :goto_0
     return-void
 
-    .line 294
+    .line 292
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -920,7 +898,7 @@
 
     if-nez v1, :cond_2
 
-    .line 295
+    .line 293
     const-string v1, "TwGLModeSwitchButton"
 
     const-string v2, "return isStartPreview.."
@@ -929,7 +907,7 @@
 
     goto :goto_0
 
-    .line 299
+    .line 297
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -939,7 +917,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 300
+    .line 298
     const-string v1, "TwGLModeSwitchButton"
 
     const-string v2, "return getIsLaunchGallery.."
@@ -948,7 +926,7 @@
 
     goto :goto_0
 
-    .line 304
+    .line 302
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -956,7 +934,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 305
+    .line 303
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v1, Lcom/sec/android/app/camera/Camera;
@@ -967,7 +945,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 306
+    .line 304
     const-string v1, "TwGLModeSwitchButton"
 
     const-string v2, "return isCapturing.."
@@ -976,7 +954,7 @@
 
     goto :goto_0
 
-    .line 311
+    .line 309
     :cond_4
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -986,7 +964,7 @@
 
     if-le v1, v2, :cond_5
 
-    .line 312
+    .line 310
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;
@@ -995,13 +973,13 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 332
+    .line 330
     .local v0, t:Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 333
+    .line 331
     .end local v0           #t:Ljava/lang/Thread;
     :cond_5
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
@@ -1012,7 +990,7 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 334
+    .line 332
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$4;
@@ -1021,7 +999,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 354
+    .line 352
     .restart local v0       #t:Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
@@ -1035,24 +1013,24 @@
     .parameter "y"
 
     .prologue
-    .line 217
+    .line 215
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v0, :cond_1
 
-    .line 218
+    .line 216
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return mButtonLocked is true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 236
     :cond_0
     :goto_0
     return-void
 
-    .line 222
+    .line 220
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1062,7 +1040,7 @@
 
     if-nez v0, :cond_2
 
-    .line 223
+    .line 221
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return isStartPreview.."
@@ -1071,7 +1049,7 @@
 
     goto :goto_0
 
-    .line 227
+    .line 225
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1081,7 +1059,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 228
+    .line 226
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return getIsLaunchGallery.."
@@ -1090,7 +1068,7 @@
 
     goto :goto_0
 
-    .line 232
+    .line 230
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1098,7 +1076,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 233
+    .line 231
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -1109,7 +1087,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 234
+    .line 232
     const-string v0, "TwGLModeSwitchButton"
 
     const-string v1, "return isCapturing.."
@@ -1127,7 +1105,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 193
+    .line 191
     const/16 v1, 0x17
 
     if-eq p1, v1, :cond_0
@@ -1136,17 +1114,17 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 194
+    .line 192
     :cond_0
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v1, :cond_1
 
-    .line 204
+    .line 202
     :goto_0
     return v0
 
-    .line 197
+    .line 195
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1160,18 +1138,18 @@
 
     if-nez v1, :cond_2
 
-    .line 198
+    .line 196
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setCamcorderSelected()V
 
     goto :goto_0
 
-    .line 200
+    .line 198
     :cond_2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setCameraSelected()V
 
     goto :goto_0
 
-    .line 204
+    .line 202
     :cond_3
     invoke-super {p0, p1, p2}, Lcom/sec/android/glview/TwGLViewGroup;->onKeyDownEvent(ILandroid/view/KeyEvent;)Z
 
@@ -1186,7 +1164,7 @@
     .parameter "event"
 
     .prologue
-    .line 208
+    .line 206
     const/16 v0, 0x17
 
     if-eq p1, v0, :cond_0
@@ -1195,16 +1173,16 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 209
+    .line 207
     :cond_0
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v0, :cond_1
 
-    .line 210
+    .line 208
     const/4 v0, 0x1
 
-    .line 212
+    .line 210
     :goto_0
     return v0
 
@@ -1224,17 +1202,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 360
+    .line 358
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mButtonLocked:Z
 
     if-eqz v0, :cond_1
 
-    .line 427
+    .line 425
     :cond_0
     :goto_0
     return v3
 
-    .line 363
+    .line 361
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1244,14 +1222,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 367
+    .line 365
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     instance-of v0, v0, Lcom/sec/android/app/camera/Camera;
 
     if-eqz v0, :cond_2
 
-    .line 368
+    .line 366
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -1262,7 +1240,7 @@
 
     if-nez v0, :cond_0
 
-    .line 373
+    .line 371
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1270,7 +1248,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 374
+    .line 372
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camcorder;
@@ -1281,7 +1259,7 @@
 
     if-nez v0, :cond_0
 
-    .line 379
+    .line 377
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1291,14 +1269,14 @@
 
     if-nez v0, :cond_0
 
-    .line 383
+    .line 381
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     instance-of v0, v0, Lcom/sec/android/app/camera/Camera;
 
     if-eqz v0, :cond_4
 
-    .line 384
+    .line 382
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -1309,7 +1287,7 @@
 
     if-nez v0, :cond_0
 
-    .line 389
+    .line 387
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1317,7 +1295,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 390
+    .line 388
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camcorder;
@@ -1328,7 +1306,7 @@
 
     if-nez v0, :cond_0
 
-    .line 395
+    .line 393
     :cond_5
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1338,7 +1316,7 @@
 
     goto :goto_0
 
-    .line 397
+    .line 395
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -1358,15 +1336,15 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 398
+    .line 396
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     if-gez v0, :cond_7
 
-    .line 399
+    .line 397
     iput v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 403
+    .line 401
     :cond_6
     :goto_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
@@ -1379,10 +1357,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->translateAbsolute(FF)V
 
-    .line 404
+    .line 402
     iput v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mMoveSum:I
 
-    .line 405
+    .line 403
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -1393,7 +1371,7 @@
 
     goto :goto_0
 
-    .line 400
+    .line 398
     :cond_7
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -1401,14 +1379,14 @@
 
     if-lt v0, v1, :cond_6
 
-    .line 401
+    .line 399
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     goto :goto_1
 
-    .line 408
+    .line 406
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -1428,7 +1406,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 410
+    .line 408
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mMoveSum:I
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
@@ -1449,7 +1427,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mMoveSum:I
 
-    .line 411
+    .line 409
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -1460,13 +1438,13 @@
 
     goto/16 :goto_0
 
-    .line 414
+    .line 412
     :pswitch_2
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
     if-gtz v0, :cond_8
 
-    .line 415
+    .line 413
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -1481,12 +1459,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 416
+    .line 414
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setCameraSelected()V
 
     goto/16 :goto_0
 
-    .line 418
+    .line 416
     :cond_8
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
@@ -1494,12 +1472,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 419
+    .line 417
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 420
+    .line 418
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -1512,12 +1490,12 @@
 
     if-nez v0, :cond_0
 
-    .line 421
+    .line 419
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setCamcorderSelected()V
 
     goto/16 :goto_0
 
-    .line 395
+    .line 393
     nop
 
     :pswitch_data_0
@@ -1532,12 +1510,12 @@
     .locals 3
 
     .prologue
-    .line 180
+    .line 178
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->SWITCH_BALL_MAX_MOVEMENT:I
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 181
+    .line 179
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x0
@@ -1548,12 +1526,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->translateAbsolute(FF)V
 
-    .line 183
+    .line 181
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mOnModeChangedListener:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$OnModeChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 184
+    .line 182
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v0
@@ -1568,7 +1546,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 190
+    .line 188
     :cond_0
     return-void
 .end method
@@ -1577,22 +1555,22 @@
     .locals 2
 
     .prologue
-    .line 167
+    .line 165
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBallPosition:I
 
-    .line 168
+    .line 166
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->resetTranslate()V
 
-    .line 170
+    .line 168
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mOnModeChangedListener:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$OnModeChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 171
+    .line 169
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v0
@@ -1607,7 +1585,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 177
+    .line 175
     :cond_0
     return-void
 .end method
@@ -1626,21 +1604,21 @@
     .line 107
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c6
+    const v1, 0x7f0200bc
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 
     .line 108
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c4
+    const v1, 0x7f0200ba
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 
     .line 109
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c2
+    const v1, 0x7f0200b8
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 
@@ -1665,21 +1643,21 @@
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCameraSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c5
+    const v1, 0x7f0200bb
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 
     .line 113
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mCamcorderSelectedImage:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c3
+    const v1, 0x7f0200b9
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 
     .line 114
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
 
-    const v1, 0x7f0200c1
+    const v1, 0x7f0200b7
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setImageResources(I)V
 

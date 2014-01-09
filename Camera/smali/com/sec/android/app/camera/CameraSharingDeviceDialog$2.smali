@@ -33,14 +33,14 @@
     .parameter
 
     .prologue
-    .line 167
+    .line 165
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
     iput p2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceCount:I
 
     iput-object p3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -48,243 +48,218 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 6
+    .locals 5
     .parameter "dialog"
     .parameter "whichButton"
 
     .prologue
-    .line 169
+    .line 167
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
-    iget v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceCount:I
+    iget v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceCount:I
 
-    if-ge v1, v3, :cond_2
+    if-ge v1, v2, :cond_2
 
-    .line 170
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    .line 168
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
     #getter for: Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->DeviceCheckStatus:[Z
-    invoke-static {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->access$000(Lcom/sec/android/app/camera/CameraSharingDeviceDialog;)[Z
+    invoke-static {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->access$000(Lcom/sec/android/app/camera/CameraSharingDeviceDialog;)[Z
 
-    move-result-object v3
+    move-result-object v2
 
-    aget-boolean v3, v3, v1
+    aget-boolean v2, v2, v1
 
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 171
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    .line 169
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
+
+    .line 170
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
+
+    aget-object v2, v2, v1
+
+    invoke-virtual {v2}, Lcom/samsung/shareshot/User;->onSelected()V
 
     .line 172
+    :try_start_0
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
+
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+
     iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
 
     aget-object v3, v3, v1
 
-    invoke-virtual {v3}, Lcom/samsung/shareshot/User;->onSelected()V
-
-    .line 174
-    :try_start_0
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
-
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/samsung/shareshot/User;->getUserInfo()Lcom/samsung/dmc/ux/db/UserInfo;
 
     move-result-object v3
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v3}, Lcom/samsung/dmc/ux/db/UserInfo;->getMacAddress()Ljava/lang/String;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+    move-result-object v3
 
-    iget-object v4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
-
-    aget-object v4, v4, v1
-
-    invoke-virtual {v4}, Lcom/samsung/shareshot/User;->getUserInfo()Lcom/samsung/dmc/ux/db/UserInfo;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/samsung/dmc/ux/db/UserInfo;->getMacAddress()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v3, v4}, Lcom/samsung/shareshot/IShareShotService;->activateUser(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/samsung/shareshot/IShareShotService;->activateUser(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 179
+    .line 177
     :goto_1
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
 
-    iget-object v4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
+    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
 
-    aget-object v4, v4, v1
+    aget-object v3, v3, v1
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    invoke-virtual {v3, v4, v5}, Lcom/sec/android/app/camera/Camera$UserWrapper;->selectUser(Lcom/samsung/shareshot/User;Z)V
+    invoke-virtual {v2, v3, v4}, Lcom/sec/android/app/camera/Camera$UserWrapper;->selectUser(Lcom/samsung/shareshot/User;Z)V
 
-    .line 193
+    .line 167
     :cond_0
     :goto_2
-    new-instance v2, Landroid/os/Message;
-
-    invoke-direct {v2}, Landroid/os/Message;-><init>()V
-
-    .line 194
-    .local v2, msg:Landroid/os/Message;
-    const/16 v3, 0xcf
-
-    iput v3, v2, Landroid/os/Message;->what:I
-
-    .line 195
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
-
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
-
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->mActivieUserHandler:Landroid/os/Handler;
-
-    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 169
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 175
-    .end local v2           #msg:Landroid/os/Message;
+    .line 173
     :catch_0
     move-exception v0
 
-    .line 177
+    .line 175
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 181
+    .line 179
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
     #getter for: Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->DeviceCheckStatus:[Z
-    invoke-static {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->access$000(Lcom/sec/android/app/camera/CameraSharingDeviceDialog;)[Z
+    invoke-static {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->access$000(Lcom/sec/android/app/camera/CameraSharingDeviceDialog;)[Z
 
-    move-result-object v3
+    move-result-object v2
 
-    aget-boolean v3, v3, v1
+    aget-boolean v2, v2, v1
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    .line 182
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    .line 180
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
+
+    .line 181
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
+
+    aget-object v2, v2, v1
+
+    invoke-virtual {v2}, Lcom/samsung/shareshot/User;->onUnSelected()V
 
     .line 183
+    :try_start_1
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
+
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+
     iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
 
     aget-object v3, v3, v1
 
-    invoke-virtual {v3}, Lcom/samsung/shareshot/User;->onUnSelected()V
-
-    .line 185
-    :try_start_1
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
-
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/samsung/shareshot/User;->getUserInfo()Lcom/samsung/dmc/ux/db/UserInfo;
 
     move-result-object v3
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v3}, Lcom/samsung/dmc/ux/db/UserInfo;->getMacAddress()Ljava/lang/String;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
+    move-result-object v3
 
-    iget-object v4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
-
-    aget-object v4, v4, v1
-
-    invoke-virtual {v4}, Lcom/samsung/shareshot/User;->getUserInfo()Lcom/samsung/dmc/ux/db/UserInfo;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/samsung/dmc/ux/db/UserInfo;->getMacAddress()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v3, v4}, Lcom/samsung/shareshot/IShareShotService;->cancelActivateUser(Ljava/lang/String;)V
+    invoke-interface {v2, v3}, Lcom/samsung/shareshot/IShareShotService;->cancelActivateUser(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 190
+    .line 188
     :goto_3
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/sec/android/app/camera/Camera;
+    check-cast v2, Lcom/sec/android/app/camera/Camera;
 
-    iget-object v3, v3, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
+    iget-object v2, v2, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
 
-    iget-object v4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
+    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->val$mDeviceData:[Lcom/samsung/shareshot/User;
 
-    aget-object v4, v4, v1
+    aget-object v3, v3, v1
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v3, v4, v5}, Lcom/sec/android/app/camera/Camera$UserWrapper;->selectUser(Lcom/samsung/shareshot/User;Z)V
+    invoke-virtual {v2, v3, v4}, Lcom/sec/android/app/camera/Camera$UserWrapper;->selectUser(Lcom/samsung/shareshot/User;Z)V
 
     goto :goto_2
 
-    .line 186
+    .line 184
     :catch_1
     move-exception v0
 
-    .line 188
+    .line 186
     .restart local v0       #e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 197
+    .line 193
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_2
-    iget-object v3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
+    iget-object v2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$2;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->dismiss()V
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->dismiss()V
 
-    .line 198
+    .line 194
     return-void
 .end method

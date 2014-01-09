@@ -15,15 +15,11 @@
 
 
 # static fields
-.field public static final alpha_in_scale:I = 0x7f040000
+.field public static final blinkanimation:I = 0x7f040000
 
-.field public static final alpha_out:I = 0x7f040001
+.field public static final gpsanimation:I = 0x7f040001
 
-.field public static final blinkanimation:I = 0x7f040002
-
-.field public static final gpsanimation:I = 0x7f040003
-
-.field public static final tw30_camera_indicator_smile_shot_blink:I = 0x7f040004
+.field public static final tw30_camera_indicator_smile_shot_blink:I = 0x7f040002
 
 
 # direct methods
@@ -32,7 +28,7 @@
 
     .prologue
     .line 11
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 192
+    .line 191
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,20 +43,20 @@
     .parameter "event"
 
     .prologue
-    .line 194
+    .line 193
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$200(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 195
+    .line 194
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$300(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0
@@ -67,7 +67,7 @@
 
     move-result v0
 
-    .line 197
+    .line 196
     :goto_0
     return v0
 

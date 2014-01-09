@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2060
+    .line 1948
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$34;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,13 +43,13 @@
     .parameter "which"
 
     .prologue
-    .line 2063
+    .line 1951
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$34;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 2064
+    .line 1952
     return-void
 .end method

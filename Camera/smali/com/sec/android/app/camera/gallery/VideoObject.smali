@@ -85,7 +85,7 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mDataPath:Ljava/lang/String;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/VideoObject;->mDataPath:Ljava/lang/String;
 
     const/4 v1, 0x1
 
@@ -102,7 +102,7 @@
     .prologue
     .line 72
     :try_start_0
-    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/VideoObject;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/gallery/VideoObject;->fullSizeImageUri()Landroid/net/Uri;
 
@@ -134,7 +134,7 @@
 
     .prologue
     .line 82
-    iget-wide v0, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mId:J
+    iget-wide v0, p0, Lcom/sec/android/app/camera/gallery/VideoObject;->mId:J
 
     return-wide v0
 .end method
@@ -205,7 +205,7 @@
     .prologue
     .line 114
     :try_start_0
-    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mDataPath:Ljava/lang/String;
+    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/VideoObject;->mDataPath:Ljava/lang/String;
 
     const/4 v2, 0x3
 
@@ -276,7 +276,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mId:J
+    iget-wide v1, p0, Lcom/sec/android/app/camera/gallery/VideoObject;->mId:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

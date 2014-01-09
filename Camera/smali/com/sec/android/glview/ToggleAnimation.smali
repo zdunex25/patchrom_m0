@@ -106,6 +106,11 @@
 
     invoke-virtual {p0, v0}, Lcom/sec/android/glview/ToggleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
+    .line 719
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/sec/android/glview/ToggleAnimation;->setFillAfter(Z)V
+
     .line 720
     return-void
 .end method

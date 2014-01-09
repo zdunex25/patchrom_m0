@@ -119,7 +119,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 64
-    iget v0, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v0, p0, Lcom/sec/android/app/camera/command/SnSSettingMenuSelectCommand;->mZOrder:I
 
     const/4 v1, 0x2
 
@@ -174,7 +174,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v2, p0, Lcom/sec/android/app/camera/command/SnSSettingMenuSelectCommand;->mZOrder:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

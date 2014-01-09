@@ -35,7 +35,7 @@
     <string name="SM_SMILE">Snim. osmeha</string>
     <string name="SM_FRAME">Uokvireni snimak</string>
     <string name="SM_BEAUTY">Lepota</string>
-    <string name="SM_VINTAGE">Vintidž</string>
+    <string name="SM_VINTAGE">Berba</string>
     <string name="SM_ADDME">Dodaj me</string>
     <string name="SM_ACTION">Akcioni snimak</string>
     <string name="SM_STOPMOTION">Zaustavi pokret</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Utisnuto</string>
     <string name="E_OUTLINE">Oiviči</string>
     <string name="E_WATERCOLOR">Akvarel</string>
-    <string name="E_MONOCHROME">Monohromatska</string>
-    <string name="E_SKETCH">Kroki</string>
     <string name="E_WASHED">Isprano</string>
     <string name="E_POSTERIZE">Posterizuj</string>
     <string name="E_SOLARIZE">Osunčaj</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">Tajmer</string>
     <string name="Title_Resolution">Rezolucija</string>
     <string name="Title_ShootAndShare">Podeš. delj. snimka</string>
-    <string name="Title_DeviceList">Lista uređaja</string>
     <string name="Title_WhiteBalance">Balans bele boje</string>
     <string name="Title_Effects">Efekti</string>
     <string name="Title_Focus">Fokus</string>
@@ -154,7 +151,6 @@
     <string name="Title_AutoContrast">Automatski kontrast</string>
     <string name="Title_GPS">GPS oznaka</string>
     <string name="Title_Review">Pregled</string>
-    <string name="Title_AutoShareShot">Automatski deli snimak</string>
     <string name="Title_Guideline">Smernice</string>
     <string name="Title_VideoQuality">Kvalitet video zapisa</string>
     <string name="Title_AudioRecording">Snimanje zv.</string>
@@ -177,10 +173,7 @@
     <string name="HDR_Helptext">Pazi da se uređaj ne drma kada snimaš fotografije</string>
     <string name="help_text_panorama">Pritisni taster kamere i polako pomeraj telefon u jednom pravcu</string>
     <string name="help_text_panorama_device">Pritisni taster kamere i polako pomeraj uređaj u jednom pravcu</string>
-    <string name="message_DefaultLayout">Izgled prečica će biti resetovan</string>
     <string name="message_EULA_GPS">Omogućavanje GPS oznake će priložiti, ugraditi i sačuvati podatke o geografskoj lokaciji na kojoj je snimljena svaka fotografija. Budi obazriv(a) tokom slanja, deljenja, distribucije, prenosa ili kopiranja ovih fotografija budući da sadrže informacije o lokaciji gde su snimljene</string>
-    <string name="message_Auto_ShareShot">"Auto share shot enables you to easily connect to the devices you want to share pictures with.
-Enable auto share shot, then bring the devices together (typically back to back) to connect them"</string>
     <string name="GPS_msg">GPS isključen</string>
     <string name="message_enable_GPS">Za korišćenje GPS oznaka uključi GPS u Podešavanjima</string>
     <string name="cancel">Poništi</string>
@@ -247,11 +240,9 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="profile_user_default_name">Nepoznato</string>
     <string name="shareshot_no_user">Nema osoba sa kojima bi delio</string>
     <string name="snapshot_saved">%s sačuvano</string>
-    <string name="editable_shortcut_reset">Resetuj</string>
     <string name="editable_shortcut_helptext_title">Saveti</string>
     <string name="editable_shortcut_helptext_message">Kucni i zadrži prečice radi njihove izmene</string>
     <string name="editable_shortcut_helptext">Kucni i zadrži ikonu, a zatim je prevuci da bi izmenio poziciju prečice</string>
-    <string name="sbeam_helptext">Snimi i podeli fotografije sa drugim uređajima. Putem S Beam-a poveži uređaje da bi dodao/la uređaje sa kojima želiš da deliš fotografije</string>
     <string name="storage_setting_dialog_title">Skladišna lokacija</string>
     <string name="storage_setting_dialog_message">SD kartica nije umetnuta. Promeniti skladišnu lokaciju na SD karticu?</string>
     <string name="do_not_ask_again">Ne prikazuj ponovo</string>
@@ -260,8 +251,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="bestpic">Najbolja fotografija</string>
     <string name="bestpic_on">Uk</string>
     <string name="bestpic_off">Isk</string>
-    <string name="bestgroup">Najbolja grupna poza</string>
-    <string name="bestgroup_title">Izab. svako najb. lice za mem.</string>
     <string name="battery_low">Zatvori kameru. Temperatura baterije je previsoka</string>
     <string name="buddy_photo_share_helptext">Snimi i deli fotografije sa prijateljima pomoću detekcije lica</string>
     <string name="face_zoom_helptext">Dvaput kucni na lice za uvećanje ili umanjenje</string>
@@ -271,7 +260,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="on_device_help_camcorder">Pređi u režim kamkodera</string>
     <string name="on_device_help_self">Pređi na režim autoportreta</string>
     <string name="on_device_help_editable">Kucni i zadrži prečicu koju želiš da premestiš. Zatim je prevuci na željeno mesto</string>
-    <string name="on_device_help_voicecommand">Fotografije možeš da snimaš pomoću govornih komandi kao što su Zabeleži, Snimi, Osmeh i Ptičica</string>
     <string name="Title_VideoSpeed">Brzina</string>
     <string name="SPEED_OFF">Normalan</string>
     <string name="SPEED_2X_FASTER">dvaput brže</string>
@@ -293,7 +281,4 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="self_recording_open_warning_popup">Režim snimanje sebe može da se koristi samo kada je telefon otvoren</string>
     <string name="contextual_filename">Kontekstualni naziv fajla</string>
     <string name="enable_gps_dialog">GPS oznaka mora da se omogući. Omogućiti GPS oznaku?</string>
-    <string name="gallery_disable">Galerija nije omogućena</string>
-    <string name="HDR_Normal">Normalan</string>
-    <string name="HDR_Strong">Jako</string>
 </resources>

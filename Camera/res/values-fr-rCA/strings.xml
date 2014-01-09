@@ -33,7 +33,7 @@
     <string name="SM_SMILE">Sourire</string>
     <string name="SM_FRAME">Cadre</string>
     <string name="SM_BEAUTY">Beauté</string>
-    <string name="SM_VINTAGE">Rétro</string>
+    <string name="SM_VINTAGE">Millésime</string>
     <string name="SM_ADDME">Ajoutez-moi</string>
     <string name="SM_ACTION">Action</string>
     <string name="SM_STOPMOTION">Ralenti</string>
@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">Relief</string>
     <string name="E_OUTLINE">Contour</string>
     <string name="E_WATERCOLOR">Aquarelle</string>
-    <string name="E_MONOCHROME">Monochrome</string>
-    <string name="E_SKETCH">Croquis</string>
     <string name="E_WASHED">Délavé</string>
     <string name="E_POSTERIZE">Postériser</string>
     <string name="E_SOLARIZE">Solariser</string>
@@ -101,7 +99,7 @@
     <string name="RM_MMS">Limite MMS</string>
     <string name="RM_EMAIL">Limite pour courriel</string>
     <string name="RM_SLOW">Ralenti</string>
-    <string name="RM_FAST">Enreg. en accéléré</string>
+    <string name="RM_FAST">Accéléré</string>
     <string name="CS_PROGRESS_TEXT">"Création de l'image. Veuillez patienter..."</string>
     <string name="SCN_NONE">Aucun</string>
     <string name="SCN_PORTRAIT">Portrait</string>
@@ -115,7 +113,7 @@
     <string name="SCN_NIGHT_SHOT">Nuit</string>
     <string name="SCN_FIREWORK">"Feu d'artifice"</string>
     <string name="SCN_TEXT">Texte</string>
-    <string name="SCN_CANDLE_LIGHT">Chandelles</string>
+    <string name="SCN_CANDLE_LIGHT">Bougie</string>
     <string name="SCN_BACK_LIGHT">Rétroéclairage</string>
     <string name="OPTION_ON">Activé</string>
     <string name="OPTION_OFF">Désactivé</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">Retardateur</string>
     <string name="Title_Resolution">Résolution</string>
     <string name="Title_ShootAndShare">Param partage photo</string>
-    <string name="Title_DeviceList">Liste des appareils</string>
     <string name="Title_WhiteBalance">Équilibre des blancs</string>
     <string name="Title_Effects">Effets</string>
     <string name="Title_Focus">Mise au point</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">Contraste auto</string>
     <string name="Title_GPS">Balise GPS</string>
     <string name="Title_Review">Aperçu</string>
-    <string name="Title_AutoShareShot">Partage automatique photo</string>
     <string name="Title_Guideline">Grille repère</string>
     <string name="Title_VideoQuality">Qualité de la vidéo</string>
     <string name="Title_AudioRecording">Enreg. audio</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">Veillez à ne pas bouger pendant que vous prenez des photos</string>
     <string name="help_text_panorama">Pressez la touche Appareil photo et déplacez lentement le téléphone dans une direction</string>
     <string name="help_text_panorama_device">"Appuyez sur la touche de l'appareil photo et déplacez lentement l'appareil dans une direction"</string>
-    <string name="message_DefaultLayout">Les raccourcis seront réinitialisés</string>
     <string name="message_EULA_GPS">"L'activation du balisage GPS va joindre, intégrer et stocker des données de localisation géographique dans chaque photo. Soyez prudent lorsque vous envoyez, partagez, distribuez, transmettez ou copiez des photos, car elles peuvent contenir le lieu où elles ont été prises"</string>
-    <string name="message_Auto_ShareShot">"La fonction Partage automatique photo vous permet de vous connecter aisément aux périphériques de votre choix et de partager ainsi des photos.
-Activez cette fonction, puis rapprochez les périphériques (en général dos contre dos) pour les connecter"</string>
     <string name="GPS_msg">Désactiver GPS</string>
     <string name="message_enable_GPS">Activez le GPS dans Paramètres pour utiliser la balise GPS</string>
     <string name="cancel">Annuler</string>
@@ -244,11 +237,9 @@ Activez cette fonction, puis rapprochez les périphériques (en général dos co
     <string name="profile_user_default_name">Inconnu</string>
     <string name="shareshot_no_user">Personne avec qui partager</string>
     <string name="snapshot_saved">%s enregistré</string>
-    <string name="editable_shortcut_reset">Réinitialiser</string>
     <string name="editable_shortcut_helptext_title">Astuces</string>
     <string name="editable_shortcut_helptext_message">Touchez longuement le raccourci pour le modifier</string>
     <string name="editable_shortcut_helptext">"Touchez longuement l'icône, puis faites-la glisser pour modifier la position des raccourcis"</string>
-    <string name="sbeam_helptext">"Prenez des photos et partagez-les avec d'autres périphériques. Rapprochez les périphériques pour ajouter les périphériques que vous souhaitez ajouter via S Beam"</string>
     <string name="storage_setting_dialog_title">Emplacement de stockage</string>
     <string name="storage_setting_dialog_message">"Carte SD insérée. Modifier l'emplacement de stockage vers la carte SD ?"</string>
     <string name="do_not_ask_again">Ne plus afficher</string>
@@ -257,8 +248,6 @@ Activez cette fonction, puis rapprochez les périphériques (en général dos co
     <string name="bestpic">Meilleure photo</string>
     <string name="bestpic_on">Act</string>
     <string name="bestpic_off">Dés</string>
-    <string name="bestgroup">Meilleure photo de groupe</string>
-    <string name="bestgroup_title">Sélect. meill. poses à enreg.</string>
     <string name="battery_low">"Fermez l'appareil photo. Température de la pile trop basse"</string>
     <string name="buddy_photo_share_helptext">Prenez des photos et partagez-les avec vos amis avec la détection des visages</string>
     <string name="face_zoom_helptext">Touchez deux fois un visage pour effectuer un zoom avant ou arrière</string>
@@ -268,7 +257,6 @@ Activez cette fonction, puis rapprochez les périphériques (en général dos co
     <string name="on_device_help_camcorder">Passer en mode Appareil vidéo</string>
     <string name="on_device_help_self">Passer en mode Autoportrait</string>
     <string name="on_device_help_editable">"Touchez longuement le raccourci à déplacer. Puis faites-le glisser vers l'emplacement souhaité"</string>
-    <string name="on_device_help_voicecommand">Vous pouvez prendre des photos avec des commandes vocales telles que Capturer, Prise de vue, Souriez et Dites cheese</string>
     <string name="Title_VideoSpeed">Vitesse</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x plus rapide</string>
@@ -290,7 +278,4 @@ Activez cette fonction, puis rapprochez les périphériques (en général dos co
     <string name="self_recording_open_warning_popup">"L'autoportrait ne peut être utilisé que lorsque le téléphone est ouvert"</string>
     <string name="contextual_filename">Nom de fichier contextuel</string>
     <string name="enable_gps_dialog">Le balisage GPS doit être activé. Activer le balisage GPS ?</string>
-    <string name="gallery_disable">La Galerie est désactivée</string>
-    <string name="HDR_Normal">Normale</string>
-    <string name="HDR_Strong">Fort</string>
 </resources>

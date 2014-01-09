@@ -29,20 +29,20 @@
     .parameter "settingsValue"
 
     .prologue
-    .line 139
+    .line 114
     iput-object p1, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->this$0:Lcom/sec/android/app/camera/MenuDimController;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 137
+    .line 112
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
-    .line 140
+    .line 115
     iput p2, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mSettingValue:I
 
-    .line 141
+    .line 116
     return-void
 .end method
 
@@ -52,19 +52,19 @@
     .locals 3
 
     .prologue
-    .line 157
+    .line 132
     iget v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
     if-lez v0, :cond_0
 
-    .line 158
+    .line 133
     iget v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
-    .line 160
+    .line 135
     :cond_0
     const-string v0, "MenuDimController"
 
@@ -90,7 +90,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
+    .line 136
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 148
+    .line 123
     iget v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
     return v0
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 119
     iget v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mSettingValue:I
 
     return v0
@@ -118,14 +118,14 @@
     .locals 3
 
     .prologue
-    .line 152
+    .line 127
     iget v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/sec/android/app/camera/MenuDimController$SettingValueReference;->mReferenceCount:I
 
-    .line 153
+    .line 128
     const-string v0, "MenuDimController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,6 +150,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
+    .line 129
     return-void
 .end method

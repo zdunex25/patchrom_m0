@@ -3,7 +3,7 @@
 .source "AbstractCameraActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # annotations
@@ -27,41 +27,54 @@
     .parameter
 
     .prologue
-    .line 1713
+    .line 1599
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$26;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 3
     .parameter "dialog"
-    .parameter "which"
+    .parameter "keyCode"
+    .parameter "event"
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    .line 1715
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$26;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 1601
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setGpsPopupDisplayed(Z)V
+    move-result v1
 
-    .line 1716
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$26;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    if-ne v1, v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onGpsChanged(I)V
+    const/4 v1, 0x4
 
-    .line 1717
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$26;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    if-eq p2, v1, :cond_0
 
-    const/16 v1, 0x9
+    const/16 v1, 0x17
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
+    if-ne p2, v1, :cond_1
 
-    .line 1718
-    return-void
+    .line 1603
+    :cond_0
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$26;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
+
+    .line 1606
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 68
+    .line 66
     iput-object p1, p0, Lcom/sec/android/app/camera/Weather$1;->this$0:Lcom/sec/android/app/camera/Weather;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,16 +39,16 @@
     .parameter "msg"
 
     .prologue
-    .line 71
+    .line 69
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 77
+    .line 75
     :goto_0
     return-void
 
-    .line 74
+    .line 72
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Weather$1;->this$0:Lcom/sec/android/app/camera/Weather;
 
@@ -56,7 +56,7 @@
 
     goto :goto_0
 
-    .line 71
+    .line 69
     :pswitch_data_0
     .packed-switch 0x12c0
         :pswitch_0

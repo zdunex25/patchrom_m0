@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2274
+    .line 2154
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$41;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,15 +44,15 @@
     .parameter "event"
 
     .prologue
-    .line 2276
+    .line 2156
     const/16 v0, 0x1b
 
     if-ne p2, v0, :cond_0
 
-    .line 2277
+    .line 2157
     const/4 v0, 0x1
 
-    .line 2279
+    .line 2159
     :goto_0
     return v0
 

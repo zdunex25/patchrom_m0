@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 574
+    .line 568
     iput-object p1, p0, Lcom/sec/android/app/camera/Util$2;->val$activity:Landroid/app/Activity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,11 +43,11 @@
     .parameter "which"
 
     .prologue
-    .line 576
+    .line 570
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 577
+    .line 571
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1457
+    .line 1568
     iput-object p1, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -46,7 +46,7 @@
 
     const/4 v2, 0x0
 
-    .line 1486
+    .line 1597
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #getter for: Lcom/sec/android/glview/TwGLList;->mScroll:I
@@ -60,7 +60,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1487
+    .line 1598
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     div-float v1, p4, v3
@@ -68,7 +68,7 @@
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
     invoke-static {v0, v1}, Lcom/sec/android/glview/TwGLList;->access$202(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1488
+    .line 1599
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #calls: Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
@@ -78,13 +78,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1490
+    .line 1601
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
     invoke-static {v0, v2}, Lcom/sec/android/glview/TwGLList;->access$202(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1493
+    .line 1604
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
@@ -99,7 +99,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1494
+    .line 1605
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     div-float v1, p3, v3
@@ -107,7 +107,7 @@
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
     invoke-static {v0, v1}, Lcom/sec/android/glview/TwGLList;->access$302(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1495
+    .line 1606
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #calls: Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
@@ -117,19 +117,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1497
+    .line 1608
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
     invoke-static {v0, v2}, Lcom/sec/android/glview/TwGLList;->access$302(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1501
+    .line 1612
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLList;->showScrollBar()V
 
-    .line 1502
+    .line 1613
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result v0
@@ -149,7 +149,7 @@
 
     const/high16 v6, 0x4120
 
-    .line 1468
+    .line 1579
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v1
@@ -162,11 +162,11 @@
 
     if-nez v1, :cond_0
 
-    .line 1478
+    .line 1589
     :goto_0
     return v0
 
-    .line 1471
+    .line 1582
     :cond_0
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
@@ -179,7 +179,7 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 1472
+    .line 1583
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     mul-float v1, p4, v6
@@ -203,7 +203,7 @@
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
     invoke-static {v0, v1}, Lcom/sec/android/glview/TwGLList;->access$202(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1474
+    .line 1585
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
@@ -218,7 +218,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1475
+    .line 1586
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     mul-float v1, p3, v6
@@ -242,13 +242,13 @@
     #setter for: Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
     invoke-static {v0, v1}, Lcom/sec/android/glview/TwGLList;->access$302(Lcom/sec/android/glview/TwGLList;F)F
 
-    .line 1477
+    .line 1588
     :cond_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$TwGLListGestureDetectorListener;->this$0:Lcom/sec/android/glview/TwGLList;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLList;->showScrollBar()V
 
-    .line 1478
+    .line 1589
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result v0

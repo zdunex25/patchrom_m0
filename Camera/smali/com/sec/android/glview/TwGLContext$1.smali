@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 773
+    .line 657
     iput-object p1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -40,23 +40,23 @@
     .parameter "orientation"
 
     .prologue
-    .line 775
+    .line 659
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 794
+    .line 675
     :cond_0
     :goto_0
     return-void
 
-    .line 781
+    .line 662
     :cond_1
     invoke-static {p1}, Lcom/sec/android/glview/TwGLUtil;->getGLOrientationBySystemOrientation(I)I
 
     move-result v0
 
-    .line 783
+    .line 664
     .local v0, newOrientation:I
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
@@ -67,7 +67,7 @@
 
     if-eq v1, v0, :cond_0
 
-    .line 784
+    .line 665
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
     #getter for: Lcom/sec/android/glview/TwGLContext;->mRootView:Lcom/sec/android/glview/TwGLViewGroup;
@@ -77,7 +77,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 785
+    .line 666
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
     #getter for: Lcom/sec/android/glview/TwGLContext;->mOrientationEnabled:Z
@@ -87,7 +87,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 786
+    .line 667
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
     #getter for: Lcom/sec/android/glview/TwGLContext;->mRootView:Lcom/sec/android/glview/TwGLViewGroup;
@@ -97,7 +97,7 @@
 
     invoke-virtual {v1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->onOrientationChanged(I)V
 
-    .line 790
+    .line 671
     :goto_1
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 792
+    .line 673
     :cond_2
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 788
+    .line 669
     :cond_3
     iget-object v1, p0, Lcom/sec/android/glview/TwGLContext$1;->this$0:Lcom/sec/android/glview/TwGLContext;
 

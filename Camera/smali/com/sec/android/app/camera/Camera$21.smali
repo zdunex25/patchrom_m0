@@ -1,11 +1,14 @@
 .class Lcom/sec/android/app/camera/Camera$21;
-.super Ljava/util/TimerTask;
+.super Ljava/lang/Object;
 .source "Camera.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/Camera;->onRespondSharewithNotify()V
+    value = Lcom/sec/android/app/camera/Camera;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,63 +20,69 @@
 # instance fields
 .field final synthetic this$0:Lcom/sec/android/app/camera/Camera;
 
-.field final synthetic val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
+.field final synthetic val$et:Landroid/widget/EditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/sec/android/app/camera/Camera;Lcom/samsung/dmc/ux/db/UserInfo;)V
+.method constructor <init>(Lcom/sec/android/app/camera/Camera;Landroid/widget/EditText;)V
     .locals 0
     .parameter
     .parameter
 
     .prologue
-    .line 6006
+    .line 5830
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    iput-object p2, p0, Lcom/sec/android/app/camera/Camera$21;->val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
+    iput-object p2, p0, Lcom/sec/android/app/camera/Camera$21;->val$et:Landroid/widget/EditText;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onClick(Landroid/view/View;)V
+    .locals 2
+    .parameter "image"
 
     .prologue
-    .line 6011
-    new-instance v0, Landroid/content/Intent;
+    .line 5835
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    const/4 v1, 0x6
 
-    .line 6012
-    .local v0, intent:Landroid/content/Intent;
-    new-instance v1, Landroid/content/ComponentName;
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera;->dismissDialog(I)V
 
-    const-string v2, "com.samsung.shareshot"
+    .line 5836
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const-string v3, "com.samsung.shareshot.ShareWithRequestDialog"
+    const/4 v1, 0x7
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera;->showDialog(I)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    .line 5837
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 6013
-    const-string v1, "UserInfo"
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/Camera$21;->val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
+    iput-boolean v1, v0, Lcom/sec/android/app/camera/Camera;->mNameChanged:Z
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 5838
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 6014
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$21;->val$et:Landroid/widget/EditText;
 
-    const/16 v2, 0x7d6
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    invoke-virtual {v1, v0, v2}, Lcom/sec/android/app/camera/Camera;->startActivityForResult(Landroid/content/Intent;I)V
+    move-result-object v1
 
-    .line 6015
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/sec/android/app/camera/Camera;->mName:Ljava/lang/String;
+
+    .line 5839
     return-void
 .end method

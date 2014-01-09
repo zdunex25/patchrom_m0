@@ -3,12 +3,12 @@
 .source "Camcorder.java"
 
 # interfaces
-.implements Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/Camcorder;->startPostRecordingSnapAnimation(I)V
+    value = Lcom/sec/android/app/camera/Camcorder;->handlePluggedLowBattery(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,87 +27,29 @@
     .parameter
 
     .prologue
-    .line 3819
+    .line 3507
     iput-object p1, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onProgress(I)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "step"
+    .parameter "dialog"
+    .parameter "which"
 
     .prologue
-    .line 3822
-    packed-switch p1, :pswitch_data_0
+    .line 3509
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    .line 3833
-    :cond_0
-    :goto_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/sec/android/app/camera/Camcorder;->mLowBatteryDisableFlashPopupDisplayed:Z
+
+    .line 3510
     return-void
-
-    .line 3824
-    :pswitch_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    #getter for: Lcom/sec/android/app/camera/Camcorder;->mPostRecordingSnapImage:Lcom/sec/android/glview/TwGLAniViewGroup;
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$2500(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/glview/TwGLAniViewGroup;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 3825
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
-
-    if-eqz v0, :cond_1
-
-    .line 3826
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
-
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    #getter for: Lcom/sec/android/app/camera/Camcorder;->mPostRecordingSnapImage:Lcom/sec/android/glview/TwGLAniViewGroup;
-    invoke-static {v1}, Lcom/sec/android/app/camera/Camcorder;->access$2500(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/glview/TwGLAniViewGroup;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
-
-    .line 3828
-    :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    #getter for: Lcom/sec/android/app/camera/Camcorder;->mPostRecordingSnapImage:Lcom/sec/android/glview/TwGLAniViewGroup;
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$2500(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/glview/TwGLAniViewGroup;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLAniViewGroup;->clear()V
-
-    .line 3829
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$9;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    const/4 v1, 0x0
-
-    #setter for: Lcom/sec/android/app/camera/Camcorder;->mPostRecordingSnapImage:Lcom/sec/android/glview/TwGLAniViewGroup;
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camcorder;->access$2502(Lcom/sec/android/app/camera/Camcorder;Lcom/sec/android/glview/TwGLAniViewGroup;)Lcom/sec/android/glview/TwGLAniViewGroup;
-
-    goto :goto_0
-
-    .line 3822
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0xffff
-        :pswitch_0
-    .end packed-switch
 .end method

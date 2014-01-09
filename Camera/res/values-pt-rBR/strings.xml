@@ -34,7 +34,7 @@ durante chamadas"</string>
     <string name="SM_SMILE">Detector de sorriso</string>
     <string name="SM_FRAME">Moldura</string>
     <string name="SM_BEAUTY">Beleza</string>
-    <string name="SM_VINTAGE">Época</string>
+    <string name="SM_VINTAGE">Vinhedos</string>
     <string name="SM_ADDME">Adicionar-me</string>
     <string name="SM_ACTION">Disparo de ação</string>
     <string name="SM_STOPMOTION">Movimento parado</string>
@@ -67,8 +67,6 @@ durante chamadas"</string>
     <string name="E_EMBOSS">Relevo</string>
     <string name="E_OUTLINE">Contorno</string>
     <string name="E_WATERCOLOR">Cor de água</string>
-    <string name="E_MONOCHROME">Monocromático</string>
-    <string name="E_SKETCH">Esboço</string>
     <string name="E_WASHED">Desbotado</string>
     <string name="E_POSTERIZE">Posterizar</string>
     <string name="E_SOLARIZE">Solarizar</string>
@@ -131,7 +129,6 @@ durante chamadas"</string>
     <string name="Title_Timer">Temporizador</string>
     <string name="Title_Resolution">Resolução</string>
     <string name="Title_ShootAndShare">Config. comp. fotos</string>
-    <string name="Title_DeviceList">Lista de dispositivos</string>
     <string name="Title_WhiteBalance">Controle do branco</string>
     <string name="Title_Effects">Efeitos</string>
     <string name="Title_Focus">Foco</string>
@@ -153,7 +150,6 @@ durante chamadas"</string>
     <string name="Title_AutoContrast">Contraste automático</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Rever</string>
-    <string name="Title_AutoShareShot">Comp. foto automat.</string>
     <string name="Title_Guideline">Guias</string>
     <string name="Title_VideoQuality">Qualidade de vídeo</string>
     <string name="Title_AudioRecording">Grav. áudio</string>
@@ -176,10 +172,7 @@ durante chamadas"</string>
     <string name="HDR_Helptext">Cuidado para não agitar o dispositivo enquanto tira fotos</string>
     <string name="help_text_panorama">Pressione a tecla câmera e mova o telefone lentamente em uma direção</string>
     <string name="help_text_panorama_device">Pressione a tecla de câmera e mova o dispositivo lentamente em uma direção</string>
-    <string name="message_DefaultLayout">O layout do atalho será redefinido</string>
     <string name="message_EULA_GPS">A ativação da identificação pelo GPS irá anexar, incorporar e armazenar dados da localização geográfica dentro de cada foto. Tenha cuidado ao enviar, compartilhar, distribuir, transmitir ou copiar essas fotos uma vez que elas contém a localização de onde a foto foi tirada</string>
-    <string name="message_Auto_ShareShot">"A ativação do compartilhamento automático de foto permite que você se conecte com facilidade aos dispositivos com os quais deseja compartilhar fotos.
-Ative compartilhamento automático de foto, e aproxime os dispositivos (normalmente com a parte traseira) para conectá-los"</string>
     <string name="GPS_msg">GPS desligado</string>
     <string name="message_enable_GPS">Ligar GPS em Configurações para utilizar a etiqueta GPS</string>
     <string name="cancel">Cancelar</string>
@@ -246,11 +239,9 @@ Ative compartilhamento automático de foto, e aproxime os dispositivos (normalme
     <string name="profile_user_default_name">Desconhecido</string>
     <string name="shareshot_no_user">Ninguém para compartilhar</string>
     <string name="snapshot_saved">%s salvo</string>
-    <string name="editable_shortcut_reset">Zerar</string>
     <string name="editable_shortcut_helptext_title">Dicas</string>
     <string name="editable_shortcut_helptext_message">Toque e segure os atalhos para editá-los</string>
     <string name="editable_shortcut_helptext">Toque e segure o ícone, arrastando-o em seguida para a posição de edição dos atalhos</string>
-    <string name="sbeam_helptext">Tire e compartilhe fotos com outros dispositivos. Aproxime os dispositivos para adicionar os dispositivos que deseja compartilhar via S Beam</string>
     <string name="storage_setting_dialog_title">Local armazenamento</string>
     <string name="storage_setting_dialog_message">Cartão SD inserido. Alterar local de armazenamento para o cartão SD?</string>
     <string name="do_not_ask_again">Não mostrar novamente</string>
@@ -259,8 +250,6 @@ Ative compartilhamento automático de foto, e aproxime os dispositivos (normalme
     <string name="bestpic">Melhor foto</string>
     <string name="bestpic_on">ON</string>
     <string name="bestpic_off">OFF</string>
-    <string name="bestgroup">Melhor foto do grupo</string>
-    <string name="bestgroup_title">Sel. melhores rostos p/ salvar</string>
     <string name="battery_low">Fechar Câmera. Temperatura da bateria muito baixa</string>
     <string name="buddy_photo_share_helptext">Tire e compartilhe fotos com amigos através da detecção de rosto</string>
     <string name="face_zoom_helptext">Toque duas vezes em um rosto para ampliá-lo ou reduzí-lo</string>
@@ -270,7 +259,6 @@ Ative compartilhamento automático de foto, e aproxime os dispositivos (normalme
     <string name="on_device_help_camcorder">Alternar para o modo Camcorder</string>
     <string name="on_device_help_self">Alterar para modo retrato</string>
     <string name="on_device_help_editable">Toque e segure o atalho que deseja mover. Em seguida arraste-o para onde desejar</string>
-    <string name="on_device_help_voicecommand">É possível tirar fotos com os comandos de voz como ‘Capturar’, ‘Fotografar’, ‘Sorria’ e ‘Xis’</string>
     <string name="Title_VideoSpeed">Velocidade</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x mais rápido</string>
@@ -292,7 +280,4 @@ Ative compartilhamento automático de foto, e aproxime os dispositivos (normalme
     <string name="self_recording_open_warning_popup">A gravação com a câmera frontal só pode ser usada quando o celular está aberto</string>
     <string name="contextual_filename">Nome do arquivo contextual</string>
     <string name="enable_gps_dialog">A identificação pelo GPS precisa ser ativada. Ativar identificação pelo GPS?</string>
-    <string name="gallery_disable">A Galeria está desativada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Forte</string>
 </resources>

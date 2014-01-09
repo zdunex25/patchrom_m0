@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2373
+    .line 2076
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$5;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 2376
+    .line 2079
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$5;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -49,11 +49,11 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2380
+    .line 2083
     :goto_0
     return-void
 
-    .line 2377
+    .line 2080
     :catch_0
     move-exception v0
 

@@ -110,7 +110,7 @@
     if-ne v2, v1, :cond_2
 
     .line 98
-    iget-boolean v2, p0, Lcom/sec/android/glview/TwGLSelectButton;->mSelected:Z
+    iget-boolean v2, p0, Lcom/sec/android/glview/TwGLRadioButton;->mSelected:Z
 
     if-nez v2, :cond_0
 
@@ -118,7 +118,7 @@
     invoke-virtual {p0, v1}, Lcom/sec/android/glview/TwGLRadioButton;->setSelected(Z)V
 
     .line 101
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLRadioButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     if-eqz v2, :cond_0
 
@@ -146,7 +146,7 @@
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->playSoundEffect(I)V
 
     .line 104
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLRadioButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     invoke-interface {v2, p0}, Lcom/sec/android/glview/TwGLView$OnClickListener;->onClick(Lcom/sec/android/glview/TwGLView;)Z
 

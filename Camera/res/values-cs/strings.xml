@@ -36,7 +36,7 @@ spustit fotoaparát"</string>
     <string name="SM_SMILE">Úsměv</string>
     <string name="SM_FRAME">Fotografování snímků</string>
     <string name="SM_BEAUTY">Krása</string>
-    <string name="SM_VINTAGE">Vintage</string>
+    <string name="SM_VINTAGE">Výběrová vína</string>
     <string name="SM_ADDME">Přidat mě</string>
     <string name="SM_ACTION">Akční snímek</string>
     <string name="SM_STOPMOTION">Zastavit pohyb</string>
@@ -63,14 +63,12 @@ spustit fotoaparát"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Černobílý</string>
+    <string name="E_BW">Černobílá</string>
     <string name="E_SEPIA">Sépie</string>
     <string name="E_NEGATIVE">Negativní</string>
     <string name="E_EMBOSS">Reliéf</string>
     <string name="E_OUTLINE">Obrys</string>
     <string name="E_WATERCOLOR">Vodovka</string>
-    <string name="E_MONOCHROME">Monochromatické</string>
-    <string name="E_SKETCH">Náčrt</string>
     <string name="E_WASHED">Vyplaveno</string>
     <string name="E_POSTERIZE">Efektový filtr</string>
     <string name="E_SOLARIZE">Solarizace</string>
@@ -81,7 +79,7 @@ spustit fotoaparát"</string>
     <string name="E_POINT_RED_YELLOW">Červenožlutý bod</string>
     <string name="E_CARTOONIZE">Kreslené</string>
     <string name="F_AUTO_FLASH">Automatický blesk</string>
-    <string name="F_AUTOFOCUS">Aut. zaos.</string>
+    <string name="F_AUTOFOCUS">Automatické zaostření</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Rozpoznání obličeje</string>
     <string name="F_PANFOCUS">P. zaos.</string>
@@ -133,7 +131,6 @@ spustit fotoaparát"</string>
     <string name="Title_Timer">Časovač</string>
     <string name="Title_Resolution">Rozlišení</string>
     <string name="Title_ShootAndShare">Nast. sdílení sním.</string>
-    <string name="Title_DeviceList">Seznam zařízení</string>
     <string name="Title_WhiteBalance">Vyvážení bílé</string>
     <string name="Title_Effects">Efekty</string>
     <string name="Title_Focus">Zaostření</string>
@@ -155,7 +152,6 @@ spustit fotoaparát"</string>
     <string name="Title_AutoContrast">Automatický kontrast</string>
     <string name="Title_GPS">Značka GPS</string>
     <string name="Title_Review">Kontrola</string>
-    <string name="Title_AutoShareShot">Automaticky sdílet snímek</string>
     <string name="Title_Guideline">Vodící linky</string>
     <string name="Title_VideoQuality">Kvalita videa</string>
     <string name="Title_AudioRecording">Nahr. zvuku</string>
@@ -178,10 +174,7 @@ spustit fotoaparát"</string>
     <string name="HDR_Helptext">Dávejte pozor, abyste při fotografování zařízením netřásli</string>
     <string name="help_text_panorama">Stiskněte tlačítko fotoaparátu a pomalu pohybujte telefonem jedním směrem</string>
     <string name="help_text_panorama_device">Stiskněte tlačítko fotoaparátu a pomalu pohybujte zařízením jedním směrem</string>
-    <string name="message_DefaultLayout">Rozložení zástupců bude obnoveno</string>
     <string name="message_EULA_GPS">Po zapnutí značky GPS se ke každé fotografii připojí, vloží a uloží zeměpisné údaje o poloze. Při odesílání, sdílení, distribuování, přenášení nebo kopírování těchto fotografií buďte opatrní, neboť fotografie obsahují informace o místě, kde byly pořízeny</string>
-    <string name="message_Auto_ShareShot">"Funkce Automaticky sdílet snímek vám umožní snadno se připojit k zařízením, se kterými chcete sdílet obrázky.
-Zapněte funkci Automaticky sdílet snímek a spojte zařízení tak, že je přiložíte k sobě (obvykle zadními stranami)"</string>
     <string name="GPS_msg">GPS vypnuto</string>
     <string name="message_enable_GPS">Chcete-li použít značku GPS, zapněte GPS v Nastavení</string>
     <string name="cancel">Zrušit</string>
@@ -248,11 +241,9 @@ Zapněte funkci Automaticky sdílet snímek a spojte zařízení tak, že je př
     <string name="profile_user_default_name">Neznámý</string>
     <string name="shareshot_no_user">Žádní uživatelé pro sdílení</string>
     <string name="snapshot_saved">Soubor %s uložen</string>
-    <string name="editable_shortcut_reset">Vynulovat</string>
     <string name="editable_shortcut_helptext_title">Tipy</string>
     <string name="editable_shortcut_helptext_message">Zástupce můžete upravit, když na ně klepnete a podržíte je</string>
     <string name="editable_shortcut_helptext">Klepněte na ikonu a držte ji, a potom ji přetáhněte na místo, kde se upravují zástupci</string>
-    <string name="sbeam_helptext">Můžete fotografovat a sdílet fotografie s dalšími zařízeními. Dejte zařízení k sobě a tím přidáte zařízení, se kterými chcete sdílet fotografie prostřednictvím S Beam</string>
     <string name="storage_setting_dialog_title">Místo uložení</string>
     <string name="storage_setting_dialog_message">Byla vložena SD karta. Chcete změnit úložiště na SD kartu?</string>
     <string name="do_not_ask_again">Znovu nezobrazovat</string>
@@ -261,8 +252,6 @@ Zapněte funkci Automaticky sdílet snímek a spojte zařízení tak, že je př
     <string name="bestpic">Nejlepší fotografie</string>
     <string name="bestpic_on">I</string>
     <string name="bestpic_off">O</string>
-    <string name="bestgroup">Nejlepší sestava skupiny</string>
-    <string name="bestgroup_title">Uložte nejlepší obličeje</string>
     <string name="battery_low">Ukončí Fotoaparát. Teplota baterie je příliš nízká</string>
     <string name="buddy_photo_share_helptext">Fotografovat a sdílet fotografie s přáteli prostřednictvím rozpoznávání obličeje</string>
     <string name="face_zoom_helptext">Poklepáním na obličej zvětšíte nebo zmenšíte obraz</string>
@@ -272,7 +261,6 @@ Zapněte funkci Automaticky sdílet snímek a spojte zařízení tak, že je př
     <string name="on_device_help_camcorder">Přepnout do režimu videokamery</string>
     <string name="on_device_help_self">Přepnout do režimu autoportrétu</string>
     <string name="on_device_help_editable">Klepněte na zástupce, kterého chcete přesunout, a držte ho. Potom ho přetáhněte na požadované místo</string>
-    <string name="on_device_help_voicecommand">Můžete fotografovat pomocí hlasových příkazů, např. Vyfotografovat, Zachytit, Úsměv nebo Sýr</string>
     <string name="Title_VideoSpeed">Rychlost</string>
     <string name="SPEED_OFF">Normální</string>
     <string name="SPEED_2X_FASTER">2x rychleji</string>
@@ -294,7 +282,4 @@ Zapněte funkci Automaticky sdílet snímek a spojte zařízení tak, že je př
     <string name="self_recording_open_warning_popup">Samočinné nahrávání lze použít pouze když je telefon otevřený</string>
     <string name="contextual_filename">Kontextový název souboru</string>
     <string name="enable_gps_dialog">Je potřeba zapnout značku GPS. Zapnout značku GPS?</string>
-    <string name="gallery_disable">Galerie je vypnutá</string>
-    <string name="HDR_Normal">Normální</string>
-    <string name="HDR_Strong">Silný</string>
 </resources>

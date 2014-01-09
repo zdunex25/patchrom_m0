@@ -30,7 +30,7 @@
     .line 80
     iput-object p1, p0, Lcom/sec/android/app/camera/HistoryActivity$2;->this$0:Lcom/sec/android/app/camera/HistoryActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -62,9 +62,9 @@
 
     .line 86
     .local v8, intent:Landroid/content/Intent;
-    const-string v0, "com.miui.gallery"
+    const-string v0, "com.sec.android.gallery3d"
 
-    const-string v1, "com.miui.gallery.app.Gallery"
+    const-string v1, "com.sec.android.gallery3d.app.Gallery"
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

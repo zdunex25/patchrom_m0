@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2061
+    .line 2035
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView$3;->this$0:Lcom/sec/android/glview/TwGLView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 2063
+    .line 2037
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView$3;->this$0:Lcom/sec/android/glview/TwGLView;
 
     iget-object v0, v0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
@@ -55,6 +55,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;->onAnimationStart(Landroid/view/animation/Animation;)Z
 
-    .line 2064
+    .line 2038
     return-void
 .end method

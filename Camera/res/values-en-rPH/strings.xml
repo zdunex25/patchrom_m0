@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">Emboss</string>
     <string name="E_OUTLINE">Outline</string>
     <string name="E_WATERCOLOR">Watercolor</string>
-    <string name="E_MONOCHROME">Monochrome</string>
-    <string name="E_SKETCH">Sketch</string>
     <string name="E_WASHED">Washed out</string>
     <string name="E_POSTERIZE">Posterize</string>
     <string name="E_SOLARIZE">Solarize</string>
@@ -131,7 +129,6 @@ weighted"</string>
     <string name="Title_Timer">Timer</string>
     <string name="Title_Resolution">Resolution</string>
     <string name="Title_ShootAndShare">Share shot settings</string>
-    <string name="Title_DeviceList">Device list</string>
     <string name="Title_WhiteBalance">White balance</string>
     <string name="Title_Effects">Effects</string>
     <string name="Title_Focus">Focus</string>
@@ -153,7 +150,6 @@ weighted"</string>
     <string name="Title_AutoContrast">Auto contrast</string>
     <string name="Title_GPS">GPS tag</string>
     <string name="Title_Review">Review</string>
-    <string name="Title_AutoShareShot">Auto share shot</string>
     <string name="Title_Guideline">Guidelines</string>
     <string name="Title_VideoQuality">Video quality</string>
     <string name="Title_AudioRecording">Audio recording</string>
@@ -176,10 +172,7 @@ weighted"</string>
     <string name="HDR_Helptext">Be careful not to shake the device while taking photos</string>
     <string name="help_text_panorama">Press the camera key and move phone slowly in one direction</string>
     <string name="help_text_panorama_device">Press the camera key and move device slowly in one direction</string>
-    <string name="message_DefaultLayout">The shortcut layout will be reset</string>
     <string name="message_EULA_GPS">Enabling GPS tag will attach, embed and store geographical location data within each photo. Use caution when you send, share, distribute, transmit, or copy these photos since they contain the location where the photo was taken</string>
-    <string name="message_Auto_ShareShot">"Auto share shot enables you to easily connect to the devices you want to share pictures with.
-Enable auto share shot, then bring the devices together (typically back to back) to connect them"</string>
     <string name="GPS_msg">GPS off</string>
     <string name="message_enable_GPS">Turn on GPS in Settings to use GPS tag</string>
     <string name="cancel">Cancel</string>
@@ -246,11 +239,9 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="profile_user_default_name">Unknown</string>
     <string name="shareshot_no_user">No people to share with</string>
     <string name="snapshot_saved">%s saved</string>
-    <string name="editable_shortcut_reset">Reset</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Tap and hold shortcuts to edit them</string>
     <string name="editable_shortcut_helptext">Tap and hold icon, then drag it to edit position of shortcuts</string>
-    <string name="sbeam_helptext">Take and share photos with other devices. Bring the devices together to add devices you want to share with via S Beam</string>
     <string name="storage_setting_dialog_title">Storage location</string>
     <string name="storage_setting_dialog_message">SD card inserted. Change storage location to SD card?</string>
     <string name="do_not_ask_again">Do not show again</string>
@@ -259,8 +250,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="bestpic">Best photo</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Best group pose</string>
-    <string name="bestgroup_title">Select each best face to save</string>
     <string name="battery_low">Close Camera. Battery temperature too low</string>
     <string name="buddy_photo_share_helptext">Take and share photos with friends via face detection</string>
     <string name="face_zoom_helptext">Double tap on a face to zoom in or out</string>
@@ -270,7 +259,6 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="on_device_help_camcorder">You can switch between pictures and video</string>
     <string name="on_device_help_self">You can tap here to switch to self-portrait mode</string>
     <string name="on_device_help_editable">You can tap and hold shortcuts to edit</string>
-    <string name="on_device_help_voicecommand">"You can take photos with voice commands like 'Capture', 'Shoot', 'Smile' and 'Cheese'"</string>
     <string name="Title_VideoSpeed">Speed</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x faster</string>
@@ -292,7 +280,4 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="self_recording_open_warning_popup">Self recording can only be used when the phone is open</string>
     <string name="contextual_filename">Contextual filename</string>
     <string name="enable_gps_dialog">GPS tag needs to be enabled. Enable GPS tag?</string>
-    <string name="gallery_disable">Gallery is disabled</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Strong</string>
 </resources>

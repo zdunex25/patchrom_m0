@@ -142,7 +142,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onBurstModeSelectCommand(I)V
 
     .line 69
-    iget v0, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v0, p0, Lcom/sec/android/app/camera/command/BurstModeSelectCommand;->mZOrder:I
 
     const/4 v1, 0x2
 

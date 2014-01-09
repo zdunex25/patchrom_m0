@@ -36,7 +36,7 @@ Anruf nicht möglich"</string>
     <string name="SM_SMILE">Smile</string>
     <string name="SM_FRAME">Rahmenaufnahme</string>
     <string name="SM_BEAUTY">Beauty</string>
-    <string name="SM_VINTAGE">Klassik</string>
+    <string name="SM_VINTAGE">Jahrgang</string>
     <string name="SM_ADDME">Coupling Shot</string>
     <string name="SM_ACTION">Actionaufnahme</string>
     <string name="SM_STOPMOTION">Bewegung anhalten</string>
@@ -63,14 +63,12 @@ Anruf nicht möglich"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Schwarz/Weiß</string>
+    <string name="E_BW">Schwarz &amp; weiß</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negativ</string>
     <string name="E_EMBOSS">Prägen</string>
     <string name="E_OUTLINE">Umriss</string>
     <string name="E_WATERCOLOR">Wasserfarbe</string>
-    <string name="E_MONOCHROME">Monochrom</string>
-    <string name="E_SKETCH">Zeichnung</string>
     <string name="E_WASHED">Verwaschen</string>
     <string name="E_POSTERIZE">Farbtontrennung</string>
     <string name="E_SOLARIZE">Solarisation</string>
@@ -113,7 +111,7 @@ Anruf nicht möglich"</string>
     <string name="SCN_PARTY_INDOOR">Party/Innen</string>
     <string name="SCN_BEACH_SNOW">Strand/Schnee</string>
     <string name="SCN_SUNSET">Sonnenuntergang</string>
-    <string name="SCN_DAWN_DUSK">Morgendämmerung</string>
+    <string name="SCN_DAWN_DUSK">Morgendämm.</string>
     <string name="SCN_FALL_COLOR">Herbstfarbe</string>
     <string name="SCN_NIGHT_SHOT">Nacht</string>
     <string name="SCN_FIREWORK">Feuerwerk</string>
@@ -133,7 +131,6 @@ Anruf nicht möglich"</string>
     <string name="Title_Timer">Selbstauslöser</string>
     <string name="Title_Resolution">Auflösung</string>
     <string name="Title_ShootAndShare">Sendeeinstellungen</string>
-    <string name="Title_DeviceList">Geräteliste</string>
     <string name="Title_WhiteBalance">Weißabgleich</string>
     <string name="Title_Effects">Effekte</string>
     <string name="Title_Focus">Fokus</string>
@@ -155,7 +152,6 @@ Anruf nicht möglich"</string>
     <string name="Title_AutoContrast">Automatischer Kontrast</string>
     <string name="Title_GPS">GPS-Tag</string>
     <string name="Title_Review">Überprüfen</string>
-    <string name="Title_AutoShareShot">Aufnahme autom. senden</string>
     <string name="Title_Guideline">Hilfslinien</string>
     <string name="Title_VideoQuality">Videoqualität</string>
     <string name="Title_AudioRecording">Audioaufna.</string>
@@ -168,7 +164,7 @@ Anruf nicht möglich"</string>
     <string name="Title_Flip">Spiegelverkehrt speichern</string>
     <string name="Title_Self_Portrait">Selbstporträt</string>
     <string name="Title_Self_Recording">Selbstaufnahme</string>
-    <string name="Title_Voice_Capture">Fotografieren mit Sprachbefehlen</string>
+    <string name="Title_Voice_Capture">Fotos mithilfe von Sprachbefehlen aufnehmen</string>
     <string name="Dialog_Yes">Ja</string>
     <string name="Dialog_No">Nein</string>
     <string name="Add_Me_Helptext">Visu. Komposition durch Kombi. von Personen mit Hintergrund erstellen</string>
@@ -178,10 +174,7 @@ Anruf nicht möglich"</string>
     <string name="HDR_Helptext">Achten Sie darauf das Gerät nicht zu sehr zu bewegen, während Sie Fotos machen.</string>
     <string name="help_text_panorama">Drücken Sie die Kamerataste und bewegen Sie das Telefon langsam in eine Richtung</string>
     <string name="help_text_panorama_device">Drücken Sie die Kamerataste und bewegen Sie das Gerät langsam in eine Richtung.</string>
-    <string name="message_DefaultLayout">Das Shortcut-Layout wird zurückgesetzt.</string>
     <string name="message_EULA_GPS">Durch die Aktivierung von GPS-Tag werden für jedes Foto Daten zur geographischen Position hinzugefügt, eingebettet und gespeichert. Lassen Sie Vorsicht walten, wenn Sie diese Fotos versenden, freigeben, verteilen, übertragen oder kopieren, da sie die Position enthalten, an der das Foto aufgenommen wurde.</string>
-    <string name="message_Auto_ShareShot">"Mit Aufnahme automatisch senden können Sie auf einfache Art und Weise die Geräte verbinden, mit denen Sie Bilder teilen möchten.
-Aktivieren Sie die Funktion Aufnahme automatisch senden und halten Sie die Geräte aneinander (im Allgemeinen Rückseite gegen Rückseite), um eine Verbindung herzustellen."</string>
     <string name="GPS_msg">GPS aus</string>
     <string name="message_enable_GPS">GPS in Einstellungen aktivieren, um GPS-Tag zu verwenden.</string>
     <string name="cancel">Abbruch</string>
@@ -248,11 +241,9 @@ Aktivieren Sie die Funktion Aufnahme automatisch senden und halten Sie die Gerä
     <string name="profile_user_default_name">Unbekannt</string>
     <string name="shareshot_no_user">Keine Personen zum Freigeben</string>
     <string name="snapshot_saved">%s gespeichert</string>
-    <string name="editable_shortcut_reset">Zurücks.</string>
     <string name="editable_shortcut_helptext_title">Tipps</string>
     <string name="editable_shortcut_helptext_message">Tippen und halten Sie die Schnellzugriffe, um sie zu bearbeiten.</string>
     <string name="editable_shortcut_helptext">Tippen und halten Sie das Symbol und ziehen Sie es dann, um die Position der Schnellzugriffe zu bearbeiten.</string>
-    <string name="sbeam_helptext">Fotos aufnehmen und für anderen Geräten freigeben. Legen Sie die Geräte aneinander, um die gewünschten Geräte für die Freigabe über S Beam hinzuzufügen.</string>
     <string name="storage_setting_dialog_title">Speicherort</string>
     <string name="storage_setting_dialog_message">SD-Karte eingesetzt. Standardspeicherort auf SD-Karte ändern?</string>
     <string name="do_not_ask_again">Nicht mehr anzeigen</string>
@@ -261,8 +252,6 @@ Aktivieren Sie die Funktion Aufnahme automatisch senden und halten Sie die Gerä
     <string name="bestpic">Bestes Foto</string>
     <string name="bestpic_on">An</string>
     <string name="bestpic_off">Aus</string>
-    <string name="bestgroup">Beste Gruppenpose</string>
-    <string name="bestgroup_title">Beste Gesichter zum Speichern</string>
     <string name="battery_low">Kamera schließen. Akku zu kalt</string>
     <string name="buddy_photo_share_helptext">Fotos aufnehmen und für Freunde über die Gesichtserkennung freigeben</string>
     <string name="face_zoom_helptext">Tippen Sie zweimal auf ein Gesicht, um es heran- oder wegzuzoomen.</string>
@@ -272,7 +261,6 @@ Aktivieren Sie die Funktion Aufnahme automatisch senden und halten Sie die Gerä
     <string name="on_device_help_camcorder">In den Camcorder-Modus wechseln</string>
     <string name="on_device_help_self">Zum Selbstporträt-Modus wechseln</string>
     <string name="on_device_help_editable">Tippen und halten Sie den Schnellzugriff, den Sie verschieben möchten. Ziehen Sie ihn dann an die gewünschte Stelle.</string>
-    <string name="on_device_help_voicecommand">Sie können Fotos mit Sprachbefehlen wie Aufnehmen, Klick, Lächeln und Bitte lächeln aufnehmen.</string>
     <string name="Title_VideoSpeed">Geschw.</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x schneller</string>
@@ -292,9 +280,6 @@ Aktivieren Sie die Funktion Aufnahme automatisch senden und halten Sie die Gerä
     <string name="ER_EFFECT_SMALL_MOUTH">Kleiner Mund</string>
     <string name="self_shot_open_warning_popup">Selbstauslöser kann nur bei geöffnetem Telefon verwendet werden.</string>
     <string name="self_recording_open_warning_popup">Selbstaufnahme kann nur bei geöffnetem Telefon verwendet werden.</string>
-    <string name="contextual_filename">Kontextabhängige Dateinamen</string>
+    <string name="contextual_filename">Kontextabhängiger Dateiname</string>
     <string name="enable_gps_dialog">GPS-Tags müssen aktiviert sein. GPS-Tag aktivieren?</string>
-    <string name="gallery_disable">Galerie deaktiviert</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Gut</string>
 </resources>

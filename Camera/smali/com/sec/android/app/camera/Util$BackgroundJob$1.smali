@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 487
+    .line 481
     iput-object p1, p0, Lcom/sec/android/app/camera/Util$BackgroundJob$1;->this$0:Lcom/sec/android/app/camera/Util$BackgroundJob;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 489
+    .line 483
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob$1;->this$0:Lcom/sec/android/app/camera/Util$BackgroundJob;
 
     #getter for: Lcom/sec/android/app/camera/Util$BackgroundJob;->mActivity:Lcom/sec/android/app/camera/MonitoredActivity;
@@ -53,6 +53,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MonitoredActivity;->removeLifeCycleListener(Lcom/sec/android/app/camera/MonitoredActivity$LifeCycleListener;)V
 
-    .line 490
+    .line 484
     return-void
 .end method

@@ -33,21 +33,21 @@
     .parameter "mDeviceCheck"
 
     .prologue
-    .line 105
+    .line 104
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
+    .line 105
     iput-object p2, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceImage:Landroid/graphics/Bitmap;
 
-    .line 107
+    .line 106
     iput-object p3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceName:Ljava/lang/String;
 
-    .line 108
+    .line 107
     iput-boolean p4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceCheck:Z
 
-    .line 109
+    .line 108
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 119
     iget-boolean v0, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceCheck:Z
 
     return v0
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 112
+    .line 111
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceImage:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 115
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->DeviceName:Ljava/lang/String;
 
     return-object v0

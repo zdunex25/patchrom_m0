@@ -41,7 +41,7 @@
 
 .field public static final ondevicehelp_preview:I = 0x7f03000c
 
-.field public static final sbeam_helptext_dialog:I = 0x7f03000d
+.field public static final selfshotview:I = 0x7f03000d
 
 .field public static final sharingdevicelist:I = 0x7f03000e
 
@@ -55,8 +55,8 @@
     .locals 0
 
     .prologue
-    .line 2531
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 2390
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

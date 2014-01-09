@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">浮雕</string>
     <string name="E_OUTLINE">外框</string>
     <string name="E_WATERCOLOR">水彩</string>
-    <string name="E_MONOCHROME">單色</string>
-    <string name="E_SKETCH">素描</string>
     <string name="E_WASHED">洗舊</string>
     <string name="E_POSTERIZE">海報效果</string>
     <string name="E_SOLARIZE">太陽效果</string>
@@ -117,9 +115,9 @@
     <string name="SCN_NIGHT_SHOT">夜間</string>
     <string name="SCN_FIREWORK">煙火</string>
     <string name="SCN_TEXT">文字</string>
-    <string name="SCN_CANDLE_LIGHT">燭光下</string>
+    <string name="SCN_CANDLE_LIGHT">燭光</string>
     <string name="SCN_BACK_LIGHT">背光</string>
-    <string name="OPTION_ON">開</string>
+    <string name="OPTION_ON">開啟</string>
     <string name="OPTION_OFF">關</string>
     <string name="EXPOSURE_METER">曝光測量</string>
     <string name="ADJUST">調整</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">計時器</string>
     <string name="Title_Resolution">解析度</string>
     <string name="Title_ShootAndShare">分享拍攝設定</string>
-    <string name="Title_DeviceList">裝置清單</string>
     <string name="Title_WhiteBalance">白平衡</string>
     <string name="Title_Effects">效果</string>
     <string name="Title_Focus">對焦</string>
@@ -154,7 +151,6 @@
     <string name="Title_AutoContrast">自動對比</string>
     <string name="Title_GPS">GPS 標籤</string>
     <string name="Title_Review">查看</string>
-    <string name="Title_AutoShareShot">自動分享拍攝</string>
     <string name="Title_Guideline">指引線</string>
     <string name="Title_VideoQuality">影片品質</string>
     <string name="Title_AudioRecording">錄音</string>
@@ -177,10 +173,7 @@
     <string name="HDR_Helptext">拍照時請小心不要搖晃裝置</string>
     <string name="help_text_panorama">按下相機鍵並以一個方向緩慢移動手機</string>
     <string name="help_text_panorama_device">輕觸相機鍵並朝一個方向慢慢移動裝置</string>
-    <string name="message_DefaultLayout">捷徑版面將被重設</string>
     <string name="message_EULA_GPS">啟用 GPS 標籤將附加、嵌入並儲存每一張照片的地理位置資料。發送、發佈、傳輸或複製這些照片時請謹慎使用，因其中包含照片拍攝地點的位置資訊</string>
-    <string name="message_Auto_ShareShot">"自動攝影分享可讓您輕鬆連接想要與之分享照片的裝置。
-啟用自動攝影分享，然後將兩台裝置靠近彼此（通常為背對背）以進行連接"</string>
     <string name="GPS_msg">GPS 關閉</string>
     <string name="message_enable_GPS">在設定中開啟 GPS 以使用 GPS 標籤</string>
     <string name="cancel">取消</string>
@@ -207,7 +200,6 @@
     <string name="default_storage_changed_to_memory_card">預設儲存位置已更改為記憶卡</string>
     <string name="context_menu_edit">編輯快捷鍵</string>
     <string name="not_supported_zoom">錄製 Full HD 影片時不支援縮放</string>
-    <string name="zoom_not_available">圖片大小設為最大時無法縮放</string>
     <string name="plugged_low_batt_msg">無法使用閃光燈.電量過低</string>
     <string name="low_temp_msg">低溫環境無法使用閃光燈</string>
     <string name="user_profile_title">使用設定檔</string>
@@ -247,11 +239,9 @@
     <string name="profile_user_default_name">未知</string>
     <string name="shareshot_no_user">無可分享的人</string>
     <string name="snapshot_saved">%s 已儲存</string>
-    <string name="editable_shortcut_reset">重設</string>
     <string name="editable_shortcut_helptext_title">提示</string>
     <string name="editable_shortcut_helptext_message">輕觸並按住捷徑以進行編輯</string>
     <string name="editable_shortcut_helptext">輕觸並按住圖示，然後拖曳以編輯捷徑位置</string>
-    <string name="sbeam_helptext">拍照並與其他裝置分享照片。將裝置互相靠近以新增想要透過 S Beam 分享的裝置</string>
     <string name="storage_setting_dialog_title">儲存裝置位置</string>
     <string name="storage_setting_dialog_message">已插入 SD 卡。將儲存裝置位置變更到 SD 卡嗎？</string>
     <string name="do_not_ask_again">不再顯示</string>
@@ -260,18 +250,14 @@
     <string name="bestpic">最佳照片</string>
     <string name="bestpic_on">開啟</string>
     <string name="bestpic_off">關閉</string>
-    <string name="bestgroup">最佳團體姿勢</string>
-    <string name="bestgroup_title">選擇最佳臉部以儲存</string>
     <string name="battery_low">關閉相機。電池溫度過低</string>
     <string name="buddy_photo_share_helptext">透過臉部偵測拍攝並與好友分享照片</string>
     <string name="face_zoom_helptext">輕觸兩下臉孔以放大或縮小</string>
     <string name="burst_shot_guidetext">連續快拍將儲存至裝置記憶體</string>
-    <string name="snap_shot_limitation_dialog">防手震啟用時無法使用錄製快照功能</string>
     <string name="on_device_help_focus">輕觸以設定相機對焦</string>
     <string name="on_device_help_camcorder">切換至攝錄影機模式</string>
     <string name="on_device_help_self">切換至自拍模式</string>
     <string name="on_device_help_editable">輕觸並按住想要移動的捷徑。然後拖曳至想要的地方</string>
-    <string name="on_device_help_voicecommand">您可以『擷取』、『拍攝』、『微笑』與『笑一個』等語音命令進行拍照</string>
     <string name="Title_VideoSpeed">速率</string>
     <string name="SPEED_OFF">正常</string>
     <string name="SPEED_2X_FASTER">2 倍快速</string>
@@ -293,7 +279,4 @@
     <string name="self_recording_open_warning_popup">自錄功能僅可於手機開啟時使用</string>
     <string name="contextual_filename">關聯式檔名</string>
     <string name="enable_gps_dialog">需啟用 GPS 標籤。 啟用 GPS 標籤嗎？</string>
-    <string name="gallery_disable">媒體瀏覽器已停用</string>
-    <string name="HDR_Normal">正常</string>
-    <string name="HDR_Strong">強</string>
 </resources>

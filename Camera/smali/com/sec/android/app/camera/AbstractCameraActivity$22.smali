@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1663
+    .line 1551
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$22;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     const/4 v2, 0x0
 
-    .line 1665
+    .line 1553
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -67,23 +67,23 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 1667
+    .line 1555
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$22;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->removeDialog(I)V
 
-    .line 1668
+    .line 1556
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$22;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iput-boolean v2, v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWifiDialog:Z
 
-    .line 1669
+    .line 1557
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$22;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iput-boolean v2, v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsFromSNS:Z
 
-    .line 1672
+    .line 1560
     :goto_0
     return v0
 

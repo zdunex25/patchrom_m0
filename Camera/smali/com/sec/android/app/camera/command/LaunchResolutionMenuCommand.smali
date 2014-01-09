@@ -227,7 +227,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mSlideDirection:I
 
@@ -251,19 +251,19 @@
     if-eqz v0, :cond_0
 
     .line 119
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mZOrder:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setZorder(I)V
 
     .line 120
-    iget-object v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v1, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setAnchor(Lcom/sec/android/glview/TwGLImage;)V
 
     .line 121
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchX:F
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mLaunchX:F
 
-    iget v2, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchY:F
+    iget v2, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mLaunchY:F
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/MenuBase;->setLaunchPosition(FF)V
 
@@ -328,7 +328,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mSlideDirection:I
 
@@ -420,7 +420,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mSlideDirection:I
 
@@ -484,7 +484,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchResolutionMenuCommand;->mSlideDirection:I
 

@@ -37,7 +37,7 @@ under samtal"</string>
     <string name="SM_SMILE">Leendebild</string>
     <string name="SM_FRAME">Rambild</string>
     <string name="SM_BEAUTY">Skönhet</string>
-    <string name="SM_VINTAGE">Antik</string>
+    <string name="SM_VINTAGE">Årgång</string>
     <string name="SM_ADDME">Lägg till mig</string>
     <string name="SM_ACTION">Action-bild</string>
     <string name="SM_STOPMOTION">Sportläge</string>
@@ -70,8 +70,6 @@ under samtal"</string>
     <string name="E_EMBOSS">Relief</string>
     <string name="E_OUTLINE">Kontur</string>
     <string name="E_WATERCOLOR">Vattenfärg</string>
-    <string name="E_MONOCHROME">Svartvitt</string>
-    <string name="E_SKETCH">Skiss</string>
     <string name="E_WASHED">Urblekt</string>
     <string name="E_POSTERIZE">Färgreduktion</string>
     <string name="E_SOLARIZE">Solarisering</string>
@@ -134,7 +132,6 @@ under samtal"</string>
     <string name="Title_Timer">Självutlösare</string>
     <string name="Title_Resolution">Upplösning</string>
     <string name="Title_ShootAndShare">Inställn. Dela bild</string>
-    <string name="Title_DeviceList">Enhetslista</string>
     <string name="Title_WhiteBalance">Vitbalans</string>
     <string name="Title_Effects">Effekter</string>
     <string name="Title_Focus">Fokus</string>
@@ -156,7 +153,6 @@ under samtal"</string>
     <string name="Title_AutoContrast">Automatisk kontrast</string>
     <string name="Title_GPS">GPS-tagg</string>
     <string name="Title_Review">Granska</string>
-    <string name="Title_AutoShareShot">Dela bild automatiskt</string>
     <string name="Title_Guideline">Riktlinjer</string>
     <string name="Title_VideoQuality">Videokvalitet</string>
     <string name="Title_AudioRecording">Ljudinspelning</string>
@@ -179,10 +175,7 @@ under samtal"</string>
     <string name="HDR_Helptext">Se till att inte skaka enheten när du tar foton</string>
     <string name="help_text_panorama">Tryck på kameraknappen och flytta telefonen långsamt i en riktning</string>
     <string name="help_text_panorama_device">Tryck på kameraknappen och flytta enheten långsamt i en riktning</string>
-    <string name="message_DefaultLayout">Layouten för genvägen kommer att återställas</string>
     <string name="message_EULA_GPS">Om du aktiverar GPS-tagg kommer geografiska platsdata att bifogas, bäddas in och sparas med varje foto. Var försiktig när du skickar, delar, distribuerar, överför eller kopierar dessa foton eftersom de innehåller information om var fotot togs</string>
-    <string name="message_Auto_ShareShot">"Med Bild för automatisk delning kan du enkelt ansluta till enheter som du vill använda för att dela bilder.
-Aktivera Bild för automatisk delning och placera enheterna bredvid varandra (normalt med baksidorna mot varandra) när du vill ansluta dem"</string>
     <string name="GPS_msg">GPS av</string>
     <string name="message_enable_GPS">Slå på GPS i Inställningarna för att använda GPS-tagg</string>
     <string name="cancel">Avbryt</string>
@@ -249,11 +242,9 @@ Aktivera Bild för automatisk delning och placera enheterna bredvid varandra (no
     <string name="profile_user_default_name">Okänd</string>
     <string name="shareshot_no_user">Det finns inga personer att dela med</string>
     <string name="snapshot_saved">%s sparat</string>
-    <string name="editable_shortcut_reset">Nollställ</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Tryck på och håll ned genvägar för att redigera dem</string>
     <string name="editable_shortcut_helptext">Tryck på och håll ned ikonen och dra den sedan för att redigera genvägarnas positioner</string>
-    <string name="sbeam_helptext">Ta och dela foton med andra enheter. För samman enheterna för att lägga till enheter som du vill dela med via S Beam</string>
     <string name="storage_setting_dialog_title">Lagringsplats</string>
     <string name="storage_setting_dialog_message">SD-kortet har satts i. Ändra lagringsplatsen till SD-kortet?</string>
     <string name="do_not_ask_again">Visa inte igen</string>
@@ -262,8 +253,6 @@ Aktivera Bild för automatisk delning och placera enheterna bredvid varandra (no
     <string name="bestpic">Bästa foto</string>
     <string name="bestpic_on">På</string>
     <string name="bestpic_off">Av</string>
-    <string name="bestgroup">Bästa pose</string>
-    <string name="bestgroup_title">Välj ansikten som ska sparas</string>
     <string name="battery_low">Stäng kamera. För låg batteritemperatur</string>
     <string name="buddy_photo_share_helptext">Ta och dela foton med kompisar via ansiktsigenkänning</string>
     <string name="face_zoom_helptext">Dubbeltryck på ett ansikte för att zooma in eller ut</string>
@@ -273,7 +262,6 @@ Aktivera Bild för automatisk delning och placera enheterna bredvid varandra (no
     <string name="on_device_help_camcorder">Växla till videokameraläget</string>
     <string name="on_device_help_self">Växla till läget för självporträtt</string>
     <string name="on_device_help_editable">Tryck på den genväg som du vill flytta och håll den nedtryckt. Dra den därefter dit du vill</string>
-    <string name="on_device_help_voicecommand">Du kan fotografera med röstkommandon som Fota, Ta bild, Le och Omelett</string>
     <string name="Title_VideoSpeed">Hastighet</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2 x snabbare</string>
@@ -295,7 +283,4 @@ Aktivera Bild för automatisk delning och placera enheterna bredvid varandra (no
     <string name="self_recording_open_warning_popup">Självinspelning kan endast användas när telefonen är öppen</string>
     <string name="contextual_filename">Kontextuellt filnamn</string>
     <string name="enable_gps_dialog">GPS-tagg måste aktiveras. Aktivera GPS-tagg?</string>
-    <string name="gallery_disable">Galleri är inaktiverat</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Stark</string>
 </resources>

@@ -34,7 +34,7 @@ durante unha chamada"</string>
     <string name="SM_SMILE">Disp. Sorriso</string>
     <string name="SM_FRAME">Captura do marco</string>
     <string name="SM_BEAUTY">Fermosura</string>
-    <string name="SM_VINTAGE">Vintage</string>
+    <string name="SM_VINTAGE">Colleita</string>
     <string name="SM_ADDME">Engádeme</string>
     <string name="SM_ACTION">Foto de acción</string>
     <string name="SM_STOPMOTION">Deter movemento</string>
@@ -67,8 +67,6 @@ durante unha chamada"</string>
     <string name="E_EMBOSS">Relevo</string>
     <string name="E_OUTLINE">Contorno</string>
     <string name="E_WATERCOLOR">Acuarela</string>
-    <string name="E_MONOCHROME">Monocromo</string>
-    <string name="E_SKETCH">Bosquexo</string>
     <string name="E_WASHED">Lavado</string>
     <string name="E_POSTERIZE">Posterizar</string>
     <string name="E_SOLARIZE">Solarizar</string>
@@ -79,7 +77,7 @@ durante unha chamada"</string>
     <string name="E_POINT_RED_YELLOW">Punto verdeamarelo</string>
     <string name="E_CARTOONIZE">Debux. anim.</string>
     <string name="F_AUTO_FLASH">Flash automático</string>
-    <string name="F_AUTOFOCUS">Enf. auto.</string>
+    <string name="F_AUTOFOCUS">Enfoque automático</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detección de cara</string>
     <string name="F_PANFOCUS">Enf panor</string>
@@ -116,9 +114,9 @@ durante unha chamada"</string>
     <string name="SCN_NIGHT_SHOT">Noite</string>
     <string name="SCN_FIREWORK">Fogos de artificio</string>
     <string name="SCN_TEXT">Texto</string>
-    <string name="SCN_CANDLE_LIGHT">Velas</string>
+    <string name="SCN_CANDLE_LIGHT">Á luz dunha candea</string>
     <string name="SCN_BACK_LIGHT">Contraluz</string>
-    <string name="OPTION_ON">Activado</string>
+    <string name="OPTION_ON">Activada</string>
     <string name="OPTION_OFF">Desactivado</string>
     <string name="EXPOSURE_METER">Medición da exposición</string>
     <string name="ADJUST">Axustar</string>
@@ -131,7 +129,6 @@ durante unha chamada"</string>
     <string name="Title_Timer">Temporizador</string>
     <string name="Title_Resolution">Resolución</string>
     <string name="Title_ShootAndShare">Axustes comp. foto</string>
-    <string name="Title_DeviceList">Lista de dispositivos</string>
     <string name="Title_WhiteBalance">Balance de brancos</string>
     <string name="Title_Effects">Efectos</string>
     <string name="Title_Focus">Enfocar</string>
@@ -153,7 +150,6 @@ durante unha chamada"</string>
     <string name="Title_AutoContrast">Contraste automático</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Revisar</string>
-    <string name="Title_AutoShareShot">Compartir foto auto.</string>
     <string name="Title_Guideline">Pautas</string>
     <string name="Title_VideoQuality">Calidade de vídeo</string>
     <string name="Title_AudioRecording">Gravación audio</string>
@@ -162,7 +158,7 @@ durante unha chamada"</string>
     <string name="Title_Mode">Modo</string>
     <string name="Title_Back">Atrás</string>
     <string name="Title_ImageViewer">Visor de imaxes</string>
-    <string name="Title_Outdoor_Visibility">Visibilidade no exterior</string>
+    <string name="Title_Outdoor_Visibility">Visibilidade exteriores</string>
     <string name="Title_Flip">Gardar imaxe volteada</string>
     <string name="Title_Self_Portrait">Autorretrato</string>
     <string name="Title_Self_Recording">Gravación automática</string>
@@ -176,10 +172,7 @@ durante unha chamada"</string>
     <string name="HDR_Helptext">Ten coidado de non mover o dispositivo mentres tiras fotos</string>
     <string name="help_text_panorama">Prema a tecla da cámara e mova o teléfono nunha dirección</string>
     <string name="help_text_panorama_device">Pulsa a tecla da cámara e mova o dispositivo lentamente nunha dirección</string>
-    <string name="message_DefaultLayout">Restablecerase o deseño do atallo</string>
     <string name="message_EULA_GPS">A activación das etiquetas GPS achegará, inserirá e almacenará datos da situación xeográfica en cada foto. Ten coidado ao enviar, compartir, distribuír, transmitir ou copiar estas fotos, xa que conteñen a situación na que se capturaron</string>
-    <string name="message_Auto_ShareShot">"Compartir foto automaticamente permíteche conectarte facilmente aos dispositivos cos que desexas compartir imaxes.
-Activa a función de compartir fotos automaticamente e, a continuación, xunta os dispositivos (pola parte posterior) para conectalos"</string>
     <string name="GPS_msg">GPS apagado</string>
     <string name="message_enable_GPS">Activa o GPS en Axustes para utilizar a etiqueta de GPS</string>
     <string name="cancel">Cancelar</string>
@@ -245,11 +238,9 @@ Activa a función de compartir fotos automaticamente e, a continuación, xunta o
     <string name="profile_user_default_name">Descoñecido</string>
     <string name="shareshot_no_user">Non hai usuarios cos que compartir contidos</string>
     <string name="snapshot_saved">%s gardada</string>
-    <string name="editable_shortcut_reset">Restablecer</string>
     <string name="editable_shortcut_helptext_title">Suxestións</string>
     <string name="editable_shortcut_helptext_message">Mantén tocados os accesos directos para editalos</string>
     <string name="editable_shortcut_helptext">Mantén tocada a icona e, a continuación, arrástraa para editar a posición dos atallos</string>
-    <string name="sbeam_helptext">Toma e comparte fotos con outros dispositivos. Xunta os dispositivos para engadir os dispositivos cos que desexes compartir a través de S Beam</string>
     <string name="storage_setting_dialog_title">Localización de almacenamento</string>
     <string name="storage_setting_dialog_message">Tarxeta SD inserida. Desexas cambiar a localización de almacenamento á tarxeta SD?</string>
     <string name="do_not_ask_again">Non volver mostrar</string>
@@ -258,8 +249,6 @@ Activa a función de compartir fotos automaticamente e, a continuación, xunta o
     <string name="bestpic">Mellor foto</string>
     <string name="bestpic_on">Ac</string>
     <string name="bestpic_off">Des</string>
-    <string name="bestgroup">Mellor pose do grupo</string>
-    <string name="bestgroup_title">Selec. mellores caras a gardar</string>
     <string name="battery_low">Pecha a cámara. A temperatura da batería é demasiado baixa</string>
     <string name="buddy_photo_share_helptext">Toma e comparte fotos cos teus amigos a través da detección de caras</string>
     <string name="face_zoom_helptext">Toca dúas veces nunha cara para ampliala ou reducila</string>
@@ -269,7 +258,6 @@ Activa a función de compartir fotos automaticamente e, a continuación, xunta o
     <string name="on_device_help_camcorder">Cambia ao modo de videocámara</string>
     <string name="on_device_help_self">Cambia ao modo de autorretrato</string>
     <string name="on_device_help_editable">Mantén tocado o atallo que desexes mover. Logo, arrástrao ata onde queiras</string>
-    <string name="on_device_help_voicecommand">Podes tirar fotos mediante comandos de voz como Capturar, Disparar, Sorriso e Pataca</string>
     <string name="Title_VideoSpeed">Velocidade</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">Dobre velocidade</string>
@@ -291,7 +279,4 @@ Activa a función de compartir fotos automaticamente e, a continuación, xunta o
     <string name="self_recording_open_warning_popup">A gravación automática só se pode usar co teléfono aberto</string>
     <string name="contextual_filename">Nome de arquivo contextual</string>
     <string name="enable_gps_dialog">Cómpre activar a etiqueta GPS. Desexas activar a etiqueta GPS?</string>
-    <string name="gallery_disable">A galería está desactivada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Forte</string>
 </resources>

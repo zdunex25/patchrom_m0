@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 286
+    .line 270
     iput-object p1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
 
     const/4 v4, 0x1
 
-    .line 291
+    .line 275
     const-string v1, "CamcorderEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -82,7 +82,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
+    .line 277
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -99,16 +99,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 336
+    .line 320
     :cond_0
     :goto_0
     return-void
 
-    .line 296
+    .line 280
     :cond_1
     sparse-switch p1, :sswitch_data_0
 
-    .line 333
+    .line 317
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -119,7 +119,7 @@
 
     goto :goto_0
 
-    .line 298
+    .line 282
     :sswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -131,7 +131,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 299
+    .line 283
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/CamcorderEngine;->mRequestQueue:Lcom/sec/android/app/camera/CeRequestQueue;
@@ -140,7 +140,7 @@
 
     goto :goto_0
 
-    .line 302
+    .line 286
     :sswitch_1
     const-string v1, "CamcorderEngine"
 
@@ -148,7 +148,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
+    .line 287
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -161,7 +161,7 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 304
+    .line 288
     .local v0, tm:Landroid/telephony/TelephonyManager;
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -194,7 +194,7 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 305
+    .line 289
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -204,14 +204,14 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finishOnError(I)V
 
-    .line 306
+    .line 290
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iput-boolean v4, v1, Lcom/sec/android/app/camera/CamcorderEngine;->mInformedAboutFirmwareVersion:Z
 
     goto :goto_0
 
-    .line 308
+    .line 292
     :cond_4
     const-string v1, "CamcorderEngine"
 
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 312
+    .line 296
     .end local v0           #tm:Landroid/telephony/TelephonyManager;
     :sswitch_2
     const-string v1, "CamcorderEngine"
@@ -230,7 +230,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
+    .line 297
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->getCurrentStateHandler()Lcom/sec/android/app/camera/AbstractCeState;
@@ -245,7 +245,7 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 314
+    .line 298
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->getVideoRecordingTimeInSecond()I
@@ -254,12 +254,12 @@
 
     if-ge v1, v4, :cond_7
 
-    .line 315
+    .line 299
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->doCancelVideoRecordingSync()V
 
-    .line 321
+    .line 305
     :cond_5
     :goto_1
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
@@ -276,38 +276,38 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 322
+    .line 306
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->releaseMediaRecorder()V
 
-    .line 325
+    .line 309
     :cond_6
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->doStopEngineSync()V
 
-    .line 326
+    .line 310
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->doStartEngineAsync()V
 
-    .line 327
+    .line 311
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->waitForEngineStartingThread()V
 
-    .line 328
+    .line 312
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->doStartPreviewAsync()V
 
-    .line 329
+    .line 313
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CamcorderEngine;->waitForStartPreviewThreadComplete()V
 
-    .line 330
+    .line 314
     const-string v1, "CamcorderEngine"
 
     const-string v2, "!!!Camcorder retry!!! before return"
@@ -316,7 +316,7 @@
 
     goto/16 :goto_0
 
-    .line 317
+    .line 301
     :cond_7
     iget-object v1, p0, Lcom/sec/android/app/camera/CamcorderEngine$ErrorCallback;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -324,7 +324,7 @@
 
     goto :goto_1
 
-    .line 296
+    .line 280
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0

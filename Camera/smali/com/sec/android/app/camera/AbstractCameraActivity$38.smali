@@ -30,12 +30,12 @@
     .parameter
 
     .prologue
-    .line 2204
+    .line 2088
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->val$checkBox:Landroid/widget/CheckBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
     .parameter "image"
 
     .prologue
-    .line 2208
+    .line 2092
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->val$checkBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2209
+    .line 2093
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2210
+    .line 2094
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -76,41 +76,41 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setOnDeviceHelpScreen(Z)V
 
-    .line 2216
+    .line 2100
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     #getter for: Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-    invoke-static {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$200(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$100(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2217
+    .line 2101
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     #getter for: Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-    invoke-static {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$200(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$100(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Dialog;->cancel()V
 
-    .line 2218
+    .line 2102
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$38;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     const/4 v1, 0x0
 
     #setter for: Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$202(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-static {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->access$102(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 2220
+    .line 2104
     :cond_1
     return-void
 
-    .line 2212
+    .line 2096
     :cond_2
     const-string v0, "AbstractCameraActivity"
 

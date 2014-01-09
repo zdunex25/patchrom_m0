@@ -24,10 +24,6 @@
 
 .field public static final AUTOCONTRAST_ON:I = 0x5dd
 
-.field public static final AUTO_SHARESHOT_OFF:I = 0x12c0
-
-.field public static final AUTO_SHARESHOT_ON:I = 0x12c1
-
 .field public static final BLINKDETECTION_OFF:I = 0x640
 
 .field public static final BLINKDETECTION_ON:I = 0x641
@@ -176,10 +172,6 @@
 
 .field public static final CAMCORDER_TIMER_OFF:I = 0x324
 
-.field public static final CAMCORDER_VOICECOMMAND_OFF:I = 0x1324
-
-.field public static final CAMCORDER_VOICECOMMAND_ON:I = 0x1325
-
 .field public static final CAMCORDER_WB_AUTO:I = 0x38b
 
 .field public static final CAMCORDER_WB_CLOUDY:I = 0x38d
@@ -314,6 +306,10 @@
 
 .field public static final GUIDELINE_ON:I = 0x709
 
+.field public static final HDR_OFF:I = 0x1004
+
+.field public static final HDR_ON:I = 0x1005
+
 .field public static final ISO_100:I = 0x44e
 
 .field public static final ISO_1200:I = 0x452
@@ -351,8 +347,6 @@
 .field public static final MENUID_ATTACH_MODE:I = 0x21
 
 .field public static final MENUID_AUTOCONTRAST:I = 0xe
-
-.field public static final MENUID_AUTO_SHARESHOT:I = 0x42
 
 .field public static final MENUID_BACK:I = 0x1c
 
@@ -434,8 +428,6 @@
 
 .field public static final MENUID_CAMCORDER_TIMER:I = 0xbbe
 
-.field public static final MENUID_CAMCORDER_VOICECOMMAND:I = 0xbde
-
 .field public static final MENUID_CAMCORDER_WB:I = 0xbbf
 
 .field public static final MENUID_CAMCORDER_ZOOM:I = 0xbc4
@@ -484,6 +476,8 @@
 
 .field public static final MENUID_HDR:I = 0x2e
 
+.field public static final MENUID_HDR_SETTINGS:I = 0x3c
+
 .field public static final MENUID_IMAGEVIEWER:I = 0x1d
 
 .field public static final MENUID_ISO:I = 0xa
@@ -520,8 +514,6 @@
 
 .field public static final MENUID_SCENEMODE:I = 0x2
 
-.field public static final MENUID_SCENEMODE_BURST:I = 0x44
-
 .field public static final MENUID_SELECTPICTURE:I = 0x3a
 
 .field public static final MENUID_SELF:I = 0x24
@@ -555,8 +547,6 @@
 .field public static final MENUID_USERPROFILE:I = 0x37
 
 .field public static final MENUID_VINTAGE:I = 0x1f
-
-.field public static final MENUID_VOICECOMMAND:I = 0x43
 
 .field public static final MENUID_WB:I = 0x9
 
@@ -688,8 +678,6 @@
 
 .field public static final SHOOTINGMODE_BEST:I = 0x140
 
-.field public static final SHOOTINGMODE_BESTGROUP:I = 0x141
-
 .field public static final SHOOTINGMODE_BUDDY_PHOTOSHARING:I = 0x13d
 
 .field public static final SHOOTINGMODE_BURST:I = 0x13c
@@ -746,10 +734,6 @@
 
 .field public static final USER_PROFILE:I = 0xfa2
 
-.field public static final VOICECOMMAND_OFF:I = 0x1326
-
-.field public static final VOICECOMMAND_ON:I = 0x1327
-
 .field public static final WB_AUTO:I = 0x384
 
 .field public static final WB_CLOUDY:I = 0x386
@@ -794,16 +778,16 @@
     const v5, -0xffff
 
     .line 27
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 518
+    .line 507
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
-    .line 521
+    .line 510
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -812,7 +796,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 522
+    .line 511
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -821,7 +805,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 523
+    .line 512
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -830,7 +814,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 524
+    .line 513
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -843,7 +827,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 525
+    .line 514
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -852,7 +836,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 526
+    .line 515
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -865,7 +849,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 527
+    .line 516
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -878,7 +862,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 528
+    .line 517
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -891,7 +875,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 529
+    .line 518
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -904,7 +888,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 530
+    .line 519
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -917,7 +901,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 531
+    .line 520
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -930,7 +914,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 532
+    .line 521
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -943,7 +927,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 533
+    .line 522
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -956,7 +940,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 534
+    .line 523
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -969,7 +953,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 535
+    .line 524
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -982,7 +966,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 536
+    .line 525
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -995,7 +979,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 537
+    .line 526
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1008,7 +992,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 538
+    .line 527
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1021,7 +1005,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 539
+    .line 528
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1034,7 +1018,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 540
+    .line 529
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1047,7 +1031,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 541
+    .line 530
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1060,7 +1044,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 542
+    .line 531
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1073,7 +1057,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 543
+    .line 532
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1086,7 +1070,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 544
+    .line 533
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1099,7 +1083,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 545
+    .line 534
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1112,7 +1096,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 546
+    .line 535
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1125,7 +1109,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 547
+    .line 536
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1138,7 +1122,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 548
+    .line 537
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1151,7 +1135,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 549
+    .line 538
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1164,7 +1148,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 550
+    .line 539
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1177,7 +1161,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 551
+    .line 540
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1190,7 +1174,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 552
+    .line 541
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1203,7 +1187,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 553
+    .line 542
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1216,7 +1200,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 554
+    .line 543
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1229,7 +1213,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 555
+    .line 544
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1242,7 +1226,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 556
+    .line 545
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1255,7 +1239,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 557
+    .line 546
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1268,7 +1252,20 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 558
+    .line 547
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/16 v2, 0x2d
+
+    const/16 v3, 0x3c
+
+    invoke-direct {v1, p0, v2, v5, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 548
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1281,7 +1278,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 559
+    .line 549
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1294,33 +1291,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 560
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x31
-
-    const/16 v3, 0x42
-
-    invoke-direct {v1, p0, v2, v5, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 561
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x32
-
-    const/16 v3, 0x43
-
-    invoke-direct {v1, p0, v2, v5, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 564
+    .line 553
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1333,7 +1304,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 566
+    .line 555
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1346,7 +1317,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 567
+    .line 556
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1359,7 +1330,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 568
+    .line 557
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1372,7 +1343,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 569
+    .line 558
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1385,7 +1356,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 570
+    .line 559
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1398,7 +1369,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 571
+    .line 560
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1411,7 +1382,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 572
+    .line 561
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1424,7 +1395,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 573
+    .line 562
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1437,7 +1408,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 574
+    .line 563
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1450,7 +1421,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 575
+    .line 564
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1463,7 +1434,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 576
+    .line 565
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1476,7 +1447,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 577
+    .line 566
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1489,7 +1460,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 578
+    .line 567
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1502,7 +1473,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 579
+    .line 568
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1515,7 +1486,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 580
+    .line 569
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1528,7 +1499,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 581
+    .line 570
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1541,7 +1512,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 582
+    .line 571
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1554,7 +1525,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 583
+    .line 572
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1567,7 +1538,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 584
+    .line 573
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1580,7 +1551,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 585
+    .line 574
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1593,7 +1564,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 586
+    .line 575
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1606,7 +1577,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 587
+    .line 576
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1619,7 +1590,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 588
+    .line 577
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1632,7 +1603,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 589
+    .line 578
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1645,7 +1616,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 590
+    .line 579
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1658,20 +1629,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 591
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x84
-
-    const/16 v3, 0xbde
-
-    invoke-direct {v1, p0, v2, v5, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 592
+    .line 580
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1684,7 +1642,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 595
+    .line 583
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1695,7 +1653,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 596
+    .line 584
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1706,7 +1664,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 599
+    .line 587
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1719,7 +1677,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 600
+    .line 588
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1732,7 +1690,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 603
+    .line 591
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1745,7 +1703,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 604
+    .line 592
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1758,7 +1716,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 607
+    .line 595
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1769,7 +1727,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 608
+    .line 596
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1780,7 +1738,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 609
+    .line 597
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1791,7 +1749,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 610
+    .line 598
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1804,7 +1762,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 611
+    .line 599
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1815,7 +1773,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 612
+    .line 600
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1828,7 +1786,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 613
+    .line 601
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1841,7 +1799,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 614
+    .line 602
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1854,7 +1812,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 615
+    .line 603
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1867,7 +1825,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 616
+    .line 604
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1880,7 +1838,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 617
+    .line 605
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1893,7 +1851,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 618
+    .line 606
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1906,7 +1864,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 619
+    .line 607
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1919,7 +1877,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 620
+    .line 608
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1932,7 +1890,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 621
+    .line 609
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1945,7 +1903,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 622
+    .line 610
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1958,7 +1916,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 623
+    .line 611
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1971,7 +1929,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 624
+    .line 612
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -1984,20 +1942,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 625
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x19
-
-    const/16 v3, 0x141
-
-    invoke-direct {v1, p0, v6, v2, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 628
+    .line 615
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2008,7 +1953,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 629
+    .line 616
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2019,7 +1964,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 630
+    .line 617
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2030,7 +1975,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 631
+    .line 618
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2043,7 +1988,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 632
+    .line 619
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2054,7 +1999,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 633
+    .line 620
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2067,7 +2012,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 634
+    .line 621
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2080,7 +2025,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 635
+    .line 622
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2093,7 +2038,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 636
+    .line 623
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2106,7 +2051,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 637
+    .line 624
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2119,7 +2064,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 638
+    .line 625
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2132,7 +2077,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 639
+    .line 626
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2145,7 +2090,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 640
+    .line 627
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2158,7 +2103,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 641
+    .line 628
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2171,7 +2116,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 644
+    .line 631
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2184,7 +2129,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 645
+    .line 632
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2197,7 +2142,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 646
+    .line 633
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2210,7 +2155,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 647
+    .line 634
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2225,7 +2170,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 650
+    .line 637
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2238,7 +2183,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 651
+    .line 638
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2251,7 +2196,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 652
+    .line 639
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2264,7 +2209,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 653
+    .line 640
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2279,7 +2224,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 656
+    .line 643
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2292,7 +2237,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 657
+    .line 644
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2305,7 +2250,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 658
+    .line 645
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2318,7 +2263,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 659
+    .line 646
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2333,7 +2278,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 662
+    .line 649
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2346,7 +2291,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 663
+    .line 650
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2359,7 +2304,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 664
+    .line 651
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2372,7 +2317,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 665
+    .line 652
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2387,7 +2332,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 668
+    .line 655
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2400,7 +2345,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 669
+    .line 656
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2413,7 +2358,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 670
+    .line 657
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2426,7 +2371,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 671
+    .line 658
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2441,7 +2386,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 674
+    .line 661
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2454,7 +2399,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 675
+    .line 662
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2467,7 +2412,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 676
+    .line 663
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2480,7 +2425,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 677
+    .line 664
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2495,7 +2440,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 678
+    .line 665
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2508,7 +2453,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 679
+    .line 666
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2523,7 +2468,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 680
+    .line 667
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2538,7 +2483,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 683
+    .line 670
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2551,7 +2496,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 684
+    .line 671
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2564,7 +2509,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 685
+    .line 672
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2577,7 +2522,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 686
+    .line 673
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2592,7 +2537,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 687
+    .line 674
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2605,7 +2550,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 688
+    .line 675
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2620,7 +2565,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 689
+    .line 676
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2635,7 +2580,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 692
+    .line 679
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2648,7 +2593,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 693
+    .line 680
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2661,7 +2606,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 694
+    .line 681
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2674,7 +2619,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 695
+    .line 682
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2689,7 +2634,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 696
+    .line 683
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2702,7 +2647,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 697
+    .line 684
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2717,7 +2662,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 698
+    .line 685
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2732,7 +2677,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 699
+    .line 686
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2747,7 +2692,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 700
+    .line 687
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2762,7 +2707,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 701
+    .line 688
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2777,7 +2722,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 702
+    .line 689
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2792,7 +2737,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 703
+    .line 690
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2807,7 +2752,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 704
+    .line 691
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2822,7 +2767,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 705
+    .line 692
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2837,7 +2782,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 706
+    .line 693
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2852,7 +2797,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 707
+    .line 694
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2867,7 +2812,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 708
+    .line 695
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2882,7 +2827,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 709
+    .line 696
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2897,7 +2842,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 710
+    .line 697
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2912,7 +2857,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 711
+    .line 698
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2927,7 +2872,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 714
+    .line 701
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2940,7 +2885,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 715
+    .line 702
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2953,7 +2898,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 716
+    .line 703
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2966,7 +2911,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 717
+    .line 704
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2981,7 +2926,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 718
+    .line 705
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -2994,7 +2939,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 719
+    .line 706
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3009,7 +2954,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 720
+    .line 707
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3024,7 +2969,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 721
+    .line 708
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3039,7 +2984,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 722
+    .line 709
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3054,7 +2999,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 723
+    .line 710
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3069,7 +3014,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 724
+    .line 711
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3084,7 +3029,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 725
+    .line 712
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3099,7 +3044,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 726
+    .line 713
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3114,7 +3059,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 727
+    .line 714
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3129,7 +3074,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 728
+    .line 715
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3144,7 +3089,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 729
+    .line 716
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3159,7 +3104,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 730
+    .line 717
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3174,7 +3119,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 731
+    .line 718
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3189,7 +3134,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 732
+    .line 719
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3204,7 +3149,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 733
+    .line 720
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3219,7 +3164,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 736
+    .line 723
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3232,7 +3177,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 737
+    .line 724
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3245,7 +3190,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 738
+    .line 725
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3258,7 +3203,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 739
+    .line 726
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3273,7 +3218,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 740
+    .line 727
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3286,7 +3231,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 741
+    .line 728
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3301,7 +3246,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 742
+    .line 729
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3316,7 +3261,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 743
+    .line 730
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3331,7 +3276,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 744
+    .line 731
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3346,7 +3291,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 745
+    .line 732
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3361,7 +3306,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 746
+    .line 733
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3376,7 +3321,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 747
+    .line 734
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3391,7 +3336,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 748
+    .line 735
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3406,7 +3351,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 751
+    .line 738
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3419,7 +3364,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 752
+    .line 739
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3432,7 +3377,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 753
+    .line 740
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3445,7 +3390,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 756
+    .line 743
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3458,7 +3403,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 757
+    .line 744
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3471,7 +3416,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 758
+    .line 745
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3484,7 +3429,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 759
+    .line 746
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3497,7 +3442,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 762
+    .line 749
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3510,7 +3455,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 763
+    .line 750
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3523,7 +3468,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 766
+    .line 753
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3536,7 +3481,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 767
+    .line 754
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3549,7 +3494,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 770
+    .line 757
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3562,7 +3507,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 771
+    .line 758
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3575,7 +3520,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 772
+    .line 759
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3588,7 +3533,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 775
+    .line 762
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3601,7 +3546,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 776
+    .line 763
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3616,7 +3561,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 777
+    .line 764
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3629,7 +3574,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 778
+    .line 765
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3642,14 +3587,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 779
+    .line 766
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
     const/16 v2, 0x7e
 
-    const/4 v3, 0x6
+    const/4 v3, -0x1
 
     const/16 v4, 0x964
 
@@ -3657,14 +3602,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 780
+    .line 767
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
     const/16 v2, 0x7e
 
-    const/4 v3, 0x7
+    const/4 v3, -0x2
 
     const/16 v4, 0x965
 
@@ -3672,14 +3617,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 781
+    .line 768
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
     const/16 v2, 0x7e
 
-    const/16 v3, 0x8
+    const/4 v3, -0x3
 
     const/16 v4, 0x966
 
@@ -3687,7 +3632,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 784
+    .line 771
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3700,7 +3645,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 785
+    .line 772
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3713,7 +3658,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 786
+    .line 773
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3726,7 +3671,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 789
+    .line 776
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3739,7 +3684,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 790
+    .line 777
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3752,7 +3697,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 793
+    .line 780
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3765,7 +3710,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 794
+    .line 781
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3778,7 +3723,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 797
+    .line 784
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3791,7 +3736,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 798
+    .line 785
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3804,7 +3749,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 801
+    .line 788
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3817,7 +3762,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 802
+    .line 789
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3830,7 +3775,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 803
+    .line 790
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3843,7 +3788,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 804
+    .line 791
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3856,7 +3801,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 805
+    .line 792
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3869,7 +3814,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 807
+    .line 794
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3882,7 +3827,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 808
+    .line 795
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3895,7 +3840,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 809
+    .line 796
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3908,7 +3853,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 810
+    .line 797
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3921,7 +3866,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 812
+    .line 799
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3934,7 +3879,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 813
+    .line 800
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3947,7 +3892,33 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 816
+    .line 803
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/16 v2, 0x2d
+
+    const/16 v3, 0x1004
+
+    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 804
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/16 v2, 0x2d
+
+    const/16 v3, 0x1005
+
+    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 807
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3960,7 +3931,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 817
+    .line 808
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3973,7 +3944,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 820
+    .line 811
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3986,7 +3957,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 821
+    .line 812
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -3999,7 +3970,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 824
+    .line 815
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4012,7 +3983,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 825
+    .line 816
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4025,7 +3996,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 828
+    .line 819
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4038,7 +4009,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 829
+    .line 820
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4051,7 +4022,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 830
+    .line 821
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4064,7 +4035,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 831
+    .line 822
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4079,7 +4050,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 832
+    .line 823
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4092,7 +4063,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 833
+    .line 824
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4107,7 +4078,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 834
+    .line 825
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4122,7 +4093,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 837
+    .line 828
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4135,7 +4106,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 838
+    .line 829
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4148,7 +4119,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 841
+    .line 832
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4161,7 +4132,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 842
+    .line 833
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4174,7 +4145,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 845
+    .line 836
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4187,7 +4158,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 846
+    .line 837
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4200,7 +4171,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 849
+    .line 840
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4211,7 +4182,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 850
+    .line 841
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4222,7 +4193,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 851
+    .line 842
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4235,7 +4206,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 852
+    .line 843
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4248,7 +4219,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 853
+    .line 844
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4259,7 +4230,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 854
+    .line 845
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4272,7 +4243,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 855
+    .line 846
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4285,7 +4256,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 856
+    .line 847
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4296,7 +4267,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 857
+    .line 848
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4309,7 +4280,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 858
+    .line 849
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4322,7 +4293,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 859
+    .line 850
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4335,7 +4306,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 860
+    .line 851
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4348,7 +4319,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 861
+    .line 852
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4361,7 +4332,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 862
+    .line 853
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4374,7 +4345,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 863
+    .line 854
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4387,7 +4358,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 864
+    .line 855
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4400,7 +4371,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 865
+    .line 856
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4413,7 +4384,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 866
+    .line 857
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4426,7 +4397,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 867
+    .line 858
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4439,7 +4410,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 868
+    .line 859
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4452,7 +4423,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 869
+    .line 860
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4465,7 +4436,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 870
+    .line 861
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4478,7 +4449,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 871
+    .line 862
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4491,7 +4462,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 872
+    .line 863
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4504,7 +4475,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 873
+    .line 864
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4517,7 +4488,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 875
+    .line 866
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4532,7 +4503,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 876
+    .line 867
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4547,7 +4518,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 877
+    .line 868
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4562,7 +4533,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 878
+    .line 869
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4577,7 +4548,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 879
+    .line 870
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4592,7 +4563,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 880
+    .line 871
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4607,7 +4578,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 881
+    .line 872
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4622,7 +4593,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 884
+    .line 875
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4635,7 +4606,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 885
+    .line 876
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4648,7 +4619,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 888
+    .line 879
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4661,7 +4632,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 889
+    .line 880
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4674,7 +4645,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 892
+    .line 883
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4687,7 +4658,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 893
+    .line 884
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4700,7 +4671,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 894
+    .line 885
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4713,7 +4684,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 895
+    .line 886
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4728,7 +4699,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 896
+    .line 887
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4741,7 +4712,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 900
+    .line 891
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4754,7 +4725,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 901
+    .line 892
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4767,7 +4738,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 904
+    .line 895
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4782,7 +4753,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 905
+    .line 896
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4792,6 +4763,118 @@
     const/4 v3, -0x3
 
     const/16 v4, 0xe13
+
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 897
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/4 v3, -0x2
+
+    const/16 v4, 0xe14
+
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 898
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/4 v3, -0x1
+
+    const/16 v4, 0xe15
+
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 899
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/16 v3, 0xe16
+
+    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 900
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/16 v3, 0xe17
+
+    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 901
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/16 v3, 0xe18
+
+    invoke-direct {v1, p0, v2, v9, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 902
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/4 v3, 0x3
+
+    const/16 v4, 0xe19
+
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 903
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/4 v2, 0x7
+
+    const/16 v3, 0xe1a
+
+    invoke-direct {v1, p0, v2, v8, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 905
+    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
+
+    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
+
+    const/16 v2, 0x6d
+
+    const/4 v3, -0x4
+
+    const/16 v4, 0xe12
 
     invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
 
@@ -4802,118 +4885,6 @@
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
-    const/4 v2, 0x7
-
-    const/4 v3, -0x2
-
-    const/16 v4, 0xe14
-
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 907
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/4 v3, -0x1
-
-    const/16 v4, 0xe15
-
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 908
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/16 v3, 0xe16
-
-    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 909
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/16 v3, 0xe17
-
-    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 910
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/16 v3, 0xe18
-
-    invoke-direct {v1, p0, v2, v9, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 911
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/4 v3, 0x3
-
-    const/16 v4, 0xe19
-
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 912
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/4 v2, 0x7
-
-    const/16 v3, 0xe1a
-
-    invoke-direct {v1, p0, v2, v8, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 914
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x6d
-
-    const/4 v3, -0x4
-
-    const/16 v4, 0xe12
-
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 915
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
     const/16 v2, 0x6d
 
     const/4 v3, -0x3
@@ -4924,7 +4895,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 916
+    .line 907
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4939,7 +4910,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 917
+    .line 908
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4954,7 +4925,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 918
+    .line 909
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4967,7 +4938,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 919
+    .line 910
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4980,7 +4951,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 920
+    .line 911
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -4993,7 +4964,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 921
+    .line 912
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5008,7 +4979,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 922
+    .line 913
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5021,7 +4992,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 925
+    .line 916
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5034,7 +5005,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 926
+    .line 917
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5047,7 +5018,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 929
+    .line 920
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5060,7 +5031,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 930
+    .line 921
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5073,7 +5044,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 933
+    .line 924
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5086,7 +5057,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 934
+    .line 925
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
@@ -5099,85 +5070,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 937
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x31
-
-    const/16 v3, 0x12c0
-
-    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 938
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x31
-
-    const/16 v3, 0x12c1
-
-    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 940
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x32
-
-    const/16 v3, 0x1326
-
-    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 941
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x32
-
-    const/16 v3, 0x1327
-
-    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 944
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x84
-
-    const/16 v3, 0x1324
-
-    invoke-direct {v1, p0, v2, v7, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 945
-    iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
-
-    new-instance v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
-
-    const/16 v2, 0x84
-
-    const/16 v3, 0x1325
-
-    invoke-direct {v1, p0, v2, v6, v3}, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;-><init>(Lcom/sec/android/app/camera/command/CommandIdMap;III)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 946
+    .line 926
     return-void
 .end method
 
@@ -5187,12 +5080,12 @@
     .locals 1
 
     .prologue
-    .line 949
+    .line 929
     iget-object v0, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 950
+    .line 930
     return-void
 .end method
 
@@ -5201,7 +5094,7 @@
     .parameter "menuid"
 
     .prologue
-    .line 953
+    .line 933
     iget-object v2, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -5222,7 +5115,7 @@
 
     check-cast v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
-    .line 954
+    .line 934
     .local v1, id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mMenuId:I
 
@@ -5234,10 +5127,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 955
+    .line 935
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mCommandId:I
 
-    .line 958
+    .line 938
     .end local v1           #id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     :goto_0
     return v2
@@ -5254,7 +5147,7 @@
     .parameter "modeid"
 
     .prologue
-    .line 962
+    .line 942
     iget-object v2, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -5275,7 +5168,7 @@
 
     check-cast v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
-    .line 963
+    .line 943
     .local v1, id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mMenuId:I
 
@@ -5285,10 +5178,10 @@
 
     if-ne v2, p2, :cond_0
 
-    .line 964
+    .line 944
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mCommandId:I
 
-    .line 967
+    .line 947
     .end local v1           #id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     :goto_0
     return v2
@@ -5304,7 +5197,7 @@
     .parameter "commandid"
 
     .prologue
-    .line 971
+    .line 951
     iget-object v2, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -5325,16 +5218,16 @@
 
     check-cast v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
-    .line 972
+    .line 952
     .local v1, id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mCommandId:I
 
     if-ne v2, p1, :cond_0
 
-    .line 973
+    .line 953
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mMenuId:I
 
-    .line 976
+    .line 956
     .end local v1           #id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     :goto_0
     return v2
@@ -5350,7 +5243,7 @@
     .parameter "commandid"
 
     .prologue
-    .line 980
+    .line 960
     iget-object v2, p0, Lcom/sec/android/app/camera/command/CommandIdMap;->mIDMap:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -5371,16 +5264,16 @@
 
     check-cast v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
 
-    .line 981
+    .line 961
     .local v1, id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mCommandId:I
 
     if-ne v2, p1, :cond_0
 
-    .line 982
+    .line 962
     iget v2, v1, Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;->mModeId:I
 
-    .line 985
+    .line 965
     .end local v1           #id:Lcom/sec/android/app/camera/command/CommandIdMap$SettingID;
     :goto_0
     return v2

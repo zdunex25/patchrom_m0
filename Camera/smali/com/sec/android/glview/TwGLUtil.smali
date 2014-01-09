@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final ANIMATION_DURATION:I = 0xfa
+.field private static final ANIMATION_DURATION:I = 0x12c
 
 .field private static final ANIMATION_DURATION_LONG:I = 0x3e8
 
@@ -25,7 +25,7 @@
 
     .prologue
     .line 65
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     return-void
@@ -245,7 +245,7 @@
 
     .line 268
     .local v0, showAlphaViewAnimation:Landroid/view/animation/AlphaAnimation;
-    const-wide/16 v1, 0xfa
+    const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
@@ -268,7 +268,7 @@
 
     .line 256
     .local v0, showAlphaViewAnimation:Landroid/view/animation/AlphaAnimation;
-    const-wide/16 v1, 0xfa
+    const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
@@ -484,7 +484,7 @@
     .parameter "withAlphaAnimation"
 
     .prologue
-    const-wide/16 v7, 0xfa
+    const-wide/16 v7, 0x12c
 
     const/4 v6, 0x0
 
@@ -543,17 +543,17 @@
 
     move-result v5
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 417
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 418
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 419
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
@@ -571,7 +571,7 @@
 
     .line 422
     .restart local v0       #anim:Landroid/view/animation/Animation;
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 423
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
@@ -657,7 +657,7 @@
     .parameter "withAlphaAnimation"
 
     .prologue
-    const-wide/16 v7, 0xfa
+    const-wide/16 v7, 0x12c
 
     const/4 v6, 0x0
 
@@ -726,17 +726,17 @@
 
     move-result v5
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 378
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 379
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 380
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
@@ -754,7 +754,7 @@
 
     .line 383
     .restart local v0       #anim:Landroid/view/animation/Animation;
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 384
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
@@ -834,7 +834,7 @@
     .parameter "withAlphaAnimation"
 
     .prologue
-    const-wide/16 v7, 0xfa
+    const-wide/16 v7, 0x12c
 
     const/4 v6, 0x0
 
@@ -893,17 +893,17 @@
 
     move-result v5
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 339
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 340
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 341
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
@@ -921,7 +921,7 @@
 
     .line 344
     .restart local v0       #anim:Landroid/view/animation/Animation;
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 345
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
@@ -1007,7 +1007,7 @@
     .parameter "withAlphaAnimation"
 
     .prologue
-    const-wide/16 v7, 0xfa
+    const-wide/16 v7, 0x12c
 
     const/4 v6, 0x0
 
@@ -1076,17 +1076,17 @@
 
     move-result v5
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 300
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 301
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v2}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 302
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
@@ -1104,7 +1104,7 @@
 
     .line 305
     .restart local v0       #anim:Landroid/view/animation/Animation;
-    invoke-virtual {v0, v7, v8}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v7, v8}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 306
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
@@ -1201,15 +1201,9 @@
 
     .line 432
     .local v2, width:F
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getBottom()F
+    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
-    move-result v3
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
-
-    move-result v4
-
-    add-float v1, v3, v4
+    move-result v1
 
     .line 433
     .local v1, height:F

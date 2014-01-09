@@ -35,7 +35,7 @@
     <string name="SM_SMILE">Hymykuvaus</string>
     <string name="SM_FRAME">Kehyskuvaus</string>
     <string name="SM_BEAUTY">Kauneus</string>
-    <string name="SM_VINTAGE">Vuosik.</string>
+    <string name="SM_VINTAGE">Vuosikerta</string>
     <string name="SM_ADDME">Lisää minut</string>
     <string name="SM_ACTION">Toimintakuva</string>
     <string name="SM_STOPMOTION">Pysäytä liike</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Kohokuva</string>
     <string name="E_OUTLINE">Ääriviivat</string>
     <string name="E_WATERCOLOR">Vesiväri</string>
-    <string name="E_MONOCHROME">Yksivärinen</string>
-    <string name="E_SKETCH">Luonnos</string>
     <string name="E_WASHED">Himmennetty</string>
     <string name="E_POSTERIZE">Tee julisteeksi</string>
     <string name="E_SOLARIZE">Solarisaatio</string>
@@ -80,7 +78,7 @@
     <string name="E_POINT_RED_YELLOW">Punakeltainen piste</string>
     <string name="E_CARTOONIZE">Sarjakuvaksi</string>
     <string name="F_AUTO_FLASH">Automaattinen salama</string>
-    <string name="F_AUTOFOCUS">Aut. tark.</string>
+    <string name="F_AUTOFOCUS">Automaattinen tarkennus</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Kasvontunnistus</string>
     <string name="F_PANFOCUS">Pan.tark</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">Ajastin</string>
     <string name="Title_Resolution">Tarkkuus</string>
     <string name="Title_ShootAndShare">Kuvanjaon asetukset</string>
-    <string name="Title_DeviceList">Laiteluettelo</string>
     <string name="Title_WhiteBalance">"Valko-
 tasapaino"</string>
     <string name="Title_Effects">Tehosteet</string>
@@ -152,10 +149,9 @@ tasapaino"</string>
     <string name="Title_ObjectTracking">Kohteen seuranta</string>
     <string name="Title_AntiShake">Tärinänesto</string>
     <string name="Title_BlinkDetection">Räp. tunn.</string>
-    <string name="Title_AutoContrast">Autom. kontrasti</string>
+    <string name="Title_AutoContrast">Autom.kontrasti</string>
     <string name="Title_GPS">GPS-tunniste</string>
     <string name="Title_Review">Tarkista</string>
-    <string name="Title_AutoShareShot">Jaa kuva automaattisesti</string>
     <string name="Title_Guideline">Suuntaviivat</string>
     <string name="Title_VideoQuality">Videokuvan laatu</string>
     <string name="Title_AudioRecording">Äänen tall.</string>
@@ -178,10 +174,7 @@ tasapaino"</string>
     <string name="HDR_Helptext">Varo, ettet ravista laitetta valokuvien ottamisen aikana</string>
     <string name="help_text_panorama">Paina kamerapainiketta ja liikuta kameraa hitaasti yhteen suuntaan</string>
     <string name="help_text_panorama_device">Paina kamerapainiketta ja liikuta laitetta hitaasti yhteen suuntaan</string>
-    <string name="message_DefaultLayout">Pikakuvakkeen asettelu palautetaan</string>
     <string name="message_EULA_GPS">Ottamalla GPS-tunnisteen käyttöön voit liittää, upottaa ja tallentaa jokaiseen valokuvaan maantieteellisiä sijaintitietoja. Ole varovainen, kun lähetät, jaat, jakelet, siirrät tai kopioit tällaisia valokuvia, sillä niihin on tallennettu, missä ne on otettu</string>
-    <string name="message_Auto_ShareShot">"Jaa kuva automaattisesti -toiminnolla voit helposti muodostaa yhteyden laitteisiin, joiden kanssa haluat jakaa kuvia.
-Ota Jaa kuva automaattisesti -toiminto käyttöön ja yhdistä laitteet asettamalla ne lähekkäin (yleensä niiden takaosat vastakkain)"</string>
     <string name="GPS_msg">GPS ei käytössä</string>
     <string name="message_enable_GPS">Ota GPS Asetukset-kohdassa käyttöön GPS-tunnisteen käyttöä varten</string>
     <string name="cancel">Peruuta</string>
@@ -242,17 +235,15 @@ Ota Jaa kuva automaattisesti -toiminto käyttöön ja yhdistä laitteet asettama
     <string name="history">Historia</string>
     <string name="confirm_delete_title">Poista</string>
     <string name="deviceType">Laitteen tyyppi</string>
-    <string name="mobileType">Mobiilidata</string>
+    <string name="mobileType">Matkapuhelin</string>
     <string name="tabletType">Tablettitietokone</string>
     <string name="pcType">Tietokone</string>
     <string name="profile_user_default_name">Tuntematon</string>
     <string name="shareshot_no_user">Ihmisiä, joiden kanssa jakaa, ei ole</string>
     <string name="snapshot_saved">%s tallennettu</string>
-    <string name="editable_shortcut_reset">Nollaa</string>
     <string name="editable_shortcut_helptext_title">Vihjeitä</string>
     <string name="editable_shortcut_helptext_message">Muokkaa pikavalintoja painamalla jonkin aikaa</string>
     <string name="editable_shortcut_helptext">Paina kuvaketta jonkin aikaa ja vedä sitä sen jälkeen pikakuvakkeiden paikkojen muokkaamiseksi</string>
-    <string name="sbeam_helptext">Ota valokuvia ja jaa ne muiden laitteiden kanssa. Aseta laitteet lähelle toisiaan ja lisää laitteet, joiden kanssa haluat jakaa sisältöä S Beamillä</string>
     <string name="storage_setting_dialog_title">Tallennuspaikka</string>
     <string name="storage_setting_dialog_message">SD-kortti on asetettu. Vaihdetaanko tallennussijainniksi SD-kortti?</string>
     <string name="do_not_ask_again">Älä näytä uudestaan</string>
@@ -261,8 +252,6 @@ Ota Jaa kuva automaattisesti -toiminto käyttöön ja yhdistä laitteet asettama
     <string name="bestpic">Paras valokuva</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Ei</string>
-    <string name="bestgroup">Paras ryhmäposeeraus</string>
-    <string name="bestgroup_title">Valitse parhaat kasvot tall.</string>
     <string name="battery_low">Sulje kamera. Akun lämpötila on liian matala</string>
     <string name="buddy_photo_share_helptext">Ota kuvia ja jaa ne ystäviesi kanssa kasvontunnistuksen avulla</string>
     <string name="face_zoom_helptext">Lähennä ja loitonna kaksoisnapauttamalla kasvoja</string>
@@ -272,7 +261,6 @@ Ota Jaa kuva automaattisesti -toiminto käyttöön ja yhdistä laitteet asettama
     <string name="on_device_help_camcorder">Vaihda videokameratilaan</string>
     <string name="on_device_help_self">Siirry omakuvatilaan</string>
     <string name="on_device_help_editable">Paina jonkin aikaa siirrettävää pikavalintaa. Vedä se sitten haluamaasi paikkaan</string>
-    <string name="on_device_help_voicecommand">Voit ottaa valokuvia puhekomennoilla, kuten Tallenna, Kuvaa, Hymyile ja Muikku</string>
     <string name="Title_VideoSpeed">Nopeus</string>
     <string name="SPEED_OFF">Normaali</string>
     <string name="SPEED_2X_FASTER">2 kertaa nopeammin</string>
@@ -294,7 +282,4 @@ Ota Jaa kuva automaattisesti -toiminto käyttöön ja yhdistä laitteet asettama
     <string name="self_recording_open_warning_popup">Itsetallennusta voi käyttää vain silloin, kun kamera on auki</string>
     <string name="contextual_filename">Tilannekohtainen tiedostonimi</string>
     <string name="enable_gps_dialog">GPS-tunniste on otettava käyttöön. Otetaanko GPS-tunniste käyttöön?</string>
-    <string name="gallery_disable">Galleria on poistettu käytöstä</string>
-    <string name="HDR_Normal">Normaali</string>
-    <string name="HDR_Strong">Voimakas</string>
 </resources>

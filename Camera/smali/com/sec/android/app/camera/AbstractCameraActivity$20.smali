@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1636
+    .line 1524
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,14 +45,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1641
+    .line 1529
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->removeDialog(I)V
 
-    .line 1642
+    .line 1530
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -65,7 +65,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1643
+    .line 1531
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -74,7 +74,7 @@
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CameraSettings;->setWifiP2pEnabled()V
 
-    .line 1645
+    .line 1533
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -82,22 +82,22 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1646
+    .line 1534
     .local v0, localIntent:Landroid/content/Intent;
     const-string v1, "AUTO_FINISH"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1648
+    .line 1536
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1649
+    .line 1537
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$20;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iput-boolean v3, v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsFromSNS:Z
 
-    .line 1650
+    .line 1538
     return-void
 .end method

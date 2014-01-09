@@ -50,7 +50,7 @@
     const/4 v1, 0x0
 
     .line 64
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
     new-instance v0, Ljava/util/LinkedList;

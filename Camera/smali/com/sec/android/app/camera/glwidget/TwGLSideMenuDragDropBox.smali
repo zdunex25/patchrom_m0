@@ -27,7 +27,7 @@
 
     .prologue
     .line 37
-    const v0, 0x7f060094
+    const v0, 0x7f06008f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -38,7 +38,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->BG_POS_X:I
 
     .line 38
-    const v0, 0x7f060095
+    const v0, 0x7f060090
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -85,7 +85,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f020099
+    const v4, 0x7f020095
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -108,7 +108,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f02009a
+    const v4, 0x7f020096
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -174,7 +174,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f020099
+    const v4, 0x7f020095
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -197,7 +197,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f02009a
+    const v4, 0x7f020096
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -275,7 +275,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f020099
+    const v4, 0x7f020095
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -298,7 +298,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x7f02009a
+    const v4, 0x7f020096
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -334,7 +334,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -345,7 +345,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -417,19 +417,19 @@
 
     move-result v6
 
-    invoke-virtual {v0, v3, v4, v5, v6}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v3, v4, v5, v6}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 92
     const-wide/16 v3, 0xc8
 
-    invoke-virtual {v0, v3, v4}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v3, v4}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 93
     new-instance v3, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v3}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v3}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 94
     invoke-virtual {p2, v0}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;)V
@@ -633,24 +633,24 @@
 
     .line 129
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_2
 
     .line 130
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
     .line 131
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLView;->setOnDragListener(Lcom/sec/android/glview/TwGLView$OnDragListener;)V
 
     .line 132
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->clear()V
 
@@ -688,7 +688,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->getLayoutX()F
 
@@ -708,7 +708,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->getLayoutY()F
 
@@ -785,7 +785,7 @@
 
     .line 184
     :cond_0
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v3, :cond_2
 
@@ -800,11 +800,11 @@
     if-eq v3, v5, :cond_2
 
     .line 185
-    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     .line 186
     .local v2, viewToRelocate:Lcom/sec/android/glview/TwGLView;
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     check-cast v3, Lcom/sec/android/app/camera/glwidget/TwGLItem;
 
@@ -842,7 +842,7 @@
     .line 196
     .end local v2           #viewToRelocate:Lcom/sec/android/glview/TwGLView;
     :cond_2
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v3, :cond_3
 
@@ -857,7 +857,7 @@
     if-ne v3, v5, :cond_3
 
     .line 197
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     const/high16 v4, 0x3f80
 

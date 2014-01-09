@@ -487,12 +487,12 @@
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->setClipping(Z)V
 
     .line 170
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     if-eqz v0, :cond_4
 
     .line 171
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     move-object v1, p1
 
@@ -580,12 +580,12 @@
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->setClipping(Z)V
 
     .line 224
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     if-eqz v1, :cond_0
 
     .line 225
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-interface {v1, p1, p2, p3}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragEnd(Lcom/sec/android/glview/TwGLView;FF)V
 
@@ -673,12 +673,12 @@
     invoke-virtual {v0, v1, v1}, Lcom/sec/android/glview/TwGLView;->scale(FF)V
 
     .line 140
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     if-eqz v0, :cond_0
 
     .line 141
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragStart(Lcom/sec/android/glview/TwGLView;FF)V
 
@@ -787,7 +787,7 @@
 
     .prologue
     .line 118
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     .line 119
     return-void

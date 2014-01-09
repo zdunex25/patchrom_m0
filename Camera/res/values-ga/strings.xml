@@ -35,7 +35,7 @@
     <string name="SM_SMILE">Seat miongháire</string>
     <string name="SM_FRAME">Seat frama</string>
     <string name="SM_BEAUTY">Áilleacht</string>
-    <string name="SM_VINTAGE">Seanré</string>
+    <string name="SM_VINTAGE">Fómhar an fhíona</string>
     <string name="SM_ADDME">Cuir mise leis</string>
     <string name="SM_ACTION">Seat gnímh</string>
     <string name="SM_STOPMOTION">Stop gluaisne</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Cabhair</string>
     <string name="E_OUTLINE">Imlíne</string>
     <string name="E_WATERCOLOR">Uiscedhath</string>
-    <string name="E_MONOCHROME">Monacrómach</string>
-    <string name="E_SKETCH">Sceitseáil</string>
     <string name="E_WASHED">Tréigthe</string>
     <string name="E_POSTERIZE">Póstaerach</string>
     <string name="E_SOLARIZE">Soilsiú</string>
@@ -80,7 +78,7 @@
     <string name="E_POINT_RED_YELLOW">Pointe dearg-bhuí</string>
     <string name="E_CARTOONIZE">Cuma cartúin</string>
     <string name="F_AUTO_FLASH">Uathsplanc</string>
-    <string name="F_AUTOFOCUS">Uathfhócas</string>
+    <string name="F_AUTOFOCUS">Uathfhocás</string>
     <string name="F_MACRO">Macra</string>
     <string name="F_FACE">Aimsiú aghaidhe</string>
     <string name="F_PANFOCUS">Fócas peanála</string>
@@ -104,7 +102,7 @@ sa lár"</string>
     <string name="RM_MMS">Teorainn MMS</string>
     <string name="RM_EMAIL">Teorainn do r-phost</string>
     <string name="RM_SLOW">Mallghluaisne</string>
-    <string name="RM_FAST">Mearghluaisne</string>
+    <string name="RM_FAST">Gluaisne thapa</string>
     <string name="CS_PROGRESS_TEXT">Ag cruthú íomhá. Fan go fóill...</string>
     <string name="SCN_NONE">Dada</string>
     <string name="SCN_PORTRAIT">Portráid</string>
@@ -133,7 +131,6 @@ sa lár"</string>
     <string name="Title_Timer">Amadóir</string>
     <string name="Title_Resolution">Taifeach</string>
     <string name="Title_ShootAndShare">Soc. comhroinnte seat</string>
-    <string name="Title_DeviceList">Liosta gléasanna</string>
     <string name="Title_WhiteBalance">Leibhéal bán</string>
     <string name="Title_Effects">"Mais
 íochtaí"</string>
@@ -156,7 +153,6 @@ sa lár"</string>
     <string name="Title_AutoContrast">Uathchodarsnacht</string>
     <string name="Title_GPS">Clib GPS</string>
     <string name="Title_Review">Athbhreithniú</string>
-    <string name="Title_AutoShareShot">Uath-chomhroinn seat</string>
     <string name="Title_Guideline">Treoirlínte</string>
     <string name="Title_VideoQuality">Cáilíocht físeáin</string>
     <string name="Title_AudioRecording">Taifead fuaim</string>
@@ -179,10 +175,7 @@ sa lár"</string>
     <string name="HDR_Helptext">Bí cúramach gan an gléas a chroitheadh agus grianghraif á nglacadh agat</string>
     <string name="help_text_panorama">Brúigh an eochair Ceamara agus bog an fón go mall i dtreo amháin</string>
     <string name="help_text_panorama_device">Brúigh cnaipe an cheamara agus bog an gléas go mall i dtreo amháin</string>
-    <string name="message_DefaultLayout">Athshocrófar an leagan amach aicearra</string>
     <string name="message_EULA_GPS">Greamófar, leabófar agus stórálfar sonraí suímh tíreolaíochta laistigh de gach grianghraf nuair a chumasaíonn tú clib GPS. Bí cúramach nuair atá tú ag seoladh, comhroinnt, scaipeadh, nó ag cóipeáil na ngrianghraf seo toisc go léirítear orthu an suíomh inar tógadh an grianghraf</string>
-    <string name="message_Auto_ShareShot">"Cuireann Comhroinn seat go huathoibríoch ar do chumas nascadh go héasca leis na gléasanna ar mian leat pictiúir a chomhroinnt leo.
-Cumasaigh Comhroinn seat go huathoibríoch, ansin cuir na gléasanna le chéile (cúl le cúl de ghnáth) le hiad a nascadh"</string>
     <string name="GPS_msg">GPS as</string>
     <string name="message_enable_GPS">Cas an GPS air sna Socruithe le clib GPS a úsáid</string>
     <string name="cancel">Cealaigh</string>
@@ -249,11 +242,9 @@ Cumasaigh Comhroinn seat go huathoibríoch, ansin cuir na gléasanna le chéile 
     <string name="profile_user_default_name">Anaithnid</string>
     <string name="shareshot_no_user">Níl daoine ann le comhroinnt leo</string>
     <string name="snapshot_saved">%s sábháilte</string>
-    <string name="editable_shortcut_reset">Athshocrú</string>
     <string name="editable_shortcut_helptext_title">Léideanna</string>
     <string name="editable_shortcut_helptext_message">Tapáil agus coinnigh aicearraí lena gcur in eagar</string>
     <string name="editable_shortcut_helptext">Tapáil agus coinnigh an t-íocón, ansin tarraing chuig suíomh eagarthóireachta na n-aicearraí é</string>
-    <string name="sbeam_helptext">Glac agus comhroinn grianghraif le gléasanna eile. Tabhair na gléasanna le chéile le gléasanna is mian leat a chomhroinnt trí S Beam a chur leis</string>
     <string name="storage_setting_dialog_title">Suíomh stórála</string>
     <string name="storage_setting_dialog_message">Cárta SD ionsáite. Athraigh an suíomh stórála chuig an gcárta SD?</string>
     <string name="do_not_ask_again">Ná taispeáin arís</string>
@@ -262,8 +253,6 @@ Cumasaigh Comhroinn seat go huathoibríoch, ansin cuir na gléasanna le chéile 
     <string name="bestpic">Grianghraf is fearr</string>
     <string name="bestpic_on">Air</string>
     <string name="bestpic_off">As</string>
-    <string name="bestgroup">Staidiúir is fearr den ghrúpa</string>
-    <string name="bestgroup_title">Roghn. gach aghaidh is fearr</string>
     <string name="battery_low">Dún an Ceamara. Tá teocht an cheallra ró-íseal</string>
     <string name="buddy_photo_share_helptext">Glac grianghraif agus comhroinn le cairde trí aimsiú aghaidhe iad</string>
     <string name="face_zoom_helptext">Déthapáil ar aghaidh le zúmáil isteach nó amach</string>
@@ -273,7 +262,6 @@ Cumasaigh Comhroinn seat go huathoibríoch, ansin cuir na gléasanna le chéile 
     <string name="on_device_help_camcorder">Aistrigh go Mód ceamthaifeadáin</string>
     <string name="on_device_help_self">Aistrigh go mód féin-portráide</string>
     <string name="on_device_help_editable">Tapáil agus coinnigh an t-aicearra is mian leat a bhogadh. Ansin tarraing chuig áit ar mian leat é</string>
-    <string name="on_device_help_voicecommand">Is féidir leat grianghraif a ghlacadh le horduithe gutha amhail ‘Gabh’, ‘Glac’, ‘Meangadh gáire’ agus ‘Straois’</string>
     <string name="Title_VideoSpeed">Luas</string>
     <string name="SPEED_OFF">Normálta</string>
     <string name="SPEED_2X_FASTER">2x níos tapa</string>
@@ -295,7 +283,4 @@ Cumasaigh Comhroinn seat go huathoibríoch, ansin cuir na gléasanna le chéile 
     <string name="self_recording_open_warning_popup">Ní féidir féintaifeadadh a úsáid ach amháin nuair atá an fón oscailte</string>
     <string name="contextual_filename">Comhadainm comhthéacsúil</string>
     <string name="enable_gps_dialog">Ní mór clib GPS a chumasú. Cumasaigh clib GPS?</string>
-    <string name="gallery_disable">Tá an Gailearaí díchumasaithe</string>
-    <string name="HDR_Normal">Normálta</string>
-    <string name="HDR_Strong">Láidir</string>
 </resources>

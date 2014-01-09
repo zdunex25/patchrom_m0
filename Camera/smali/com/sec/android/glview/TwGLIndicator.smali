@@ -3,6 +3,10 @@
 .source "TwGLIndicator.java"
 
 
+# static fields
+.field private static final TAG:Ljava/lang/String; = "TwGLIndicator"
+
+
 # direct methods
 .method public constructor <init>(Lcom/sec/android/glview/TwGLContext;FFFF)V
     .locals 0
@@ -42,7 +46,7 @@
     iput-object p0, p1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 48
-    iget-object v4, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v4, p0, Lcom/sec/android/glview/TwGLIndicator;->mGLViews:Ljava/util/List;
 
     monitor-enter v4
 
@@ -52,7 +56,7 @@
     .line 51
     .local v1, padding:I
     :try_start_0
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLIndicator;->mGLViews:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -116,7 +120,7 @@
     invoke-virtual {p1, v3, v5}, Lcom/sec/android/glview/TwGLView;->translateAbsolute(FF)V
 
     .line 57
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLIndicator;->mGLViews:Ljava/util/List;
 
     invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -162,7 +166,7 @@
 
     .line 68
     :cond_0
-    iget-object v4, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v4, p0, Lcom/sec/android/glview/TwGLIndicator;->mGLViews:Ljava/util/List;
 
     monitor-enter v4
 
@@ -175,7 +179,7 @@
 
     .line 73
     .local v1, padding:I
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLIndicator;->mGLViews:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

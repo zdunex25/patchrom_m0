@@ -3,12 +3,12 @@
 .source "AbstractCameraActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/AbstractCameraActivity;->showSingleShotBurstHelpTextDialog()V
+    value = Lcom/sec/android/app/camera/AbstractCameraActivity;->displayEULADialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,66 +27,29 @@
     .parameter
 
     .prologue
-    .line 2380
+    .line 2253
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$46;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 4
-    .parameter "arg0"
-    .parameter "arg1"
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
+    .parameter "dialog"
+    .parameter "whichButton"
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 2382
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$46;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
+    .line 2255
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$46;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const-string v3, "audio"
+    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    iput-object v0, v2, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAudioManager:Landroid/media/AudioManager;
-
-    .line 2383
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$46;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAudioManager:Landroid/media/AudioManager;
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->playSoundEffect(I)V
-
-    .line 2384
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$46;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v2
-
-    if-eqz p2, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v2, v0}, Lcom/sec/android/app/camera/CameraSettings;->setSingleShotBurstHelpTextDialog(I)V
-
-    .line 2385
+    .line 2256
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 2384
-    goto :goto_0
 .end method

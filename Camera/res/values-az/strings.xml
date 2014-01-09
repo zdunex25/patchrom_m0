@@ -33,7 +33,7 @@
     <string name="SM_SMILE">Tbsm çəkilişi</string>
     <string name="SM_FRAME">Kadr çəkilişi</string>
     <string name="SM_BEAUTY">Gözəllik</string>
-    <string name="SM_VINTAGE">Vinetka rejimi</string>
+    <string name="SM_VINTAGE">Şərab</string>
     <string name="SM_ADDME">Məni əlavə et</string>
     <string name="SM_ACTION">Hərəkət çəkilişi</string>
     <string name="SM_STOPMOTION">Hərəkət dayanması</string>
@@ -60,14 +60,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Ağ-qara</string>
+    <string name="E_BW">Qara və ağ</string>
     <string name="E_SEPIA">Ala laranlıq</string>
     <string name="E_NEGATIVE">Neqativ</string>
     <string name="E_EMBOSS">Relyef şəkil</string>
     <string name="E_OUTLINE">İcmal</string>
     <string name="E_WATERCOLOR">Su rəngi</string>
-    <string name="E_MONOCHROME">Təkrəng</string>
-    <string name="E_SKETCH">Eskiz</string>
     <string name="E_WASHED">Solmuş</string>
     <string name="E_POSTERIZE">Afişa</string>
     <string name="E_SOLARIZE">İşıqlandır</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">Qırmızı sarı nöqtə</string>
     <string name="E_CARTOONIZE">Cizgi filmi</string>
     <string name="F_AUTO_FLASH">Avto flaş</string>
-    <string name="F_AUTOFOCUS">Avtofokus</string>
+    <string name="F_AUTOFOCUS">Avto fokus</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Üzün göstərilməsi</string>
     <string name="F_PANFOCUS">Panorama fokusu</string>
@@ -98,7 +96,7 @@
     <string name="S_DEVICE">Cihaz</string>
     <string name="S_MMC">Yaddaş kartı</string>
     <string name="RM_NORMAL">Normal</string>
-    <string name="RM_MMS">MMSüç.limit</string>
+    <string name="RM_MMS">MMSüç. limit</string>
     <string name="RM_EMAIL">Elektron poçt üçün limit</string>
     <string name="RM_SLOW">Asta hərəkət</string>
     <string name="RM_FAST">Sürətli hərəkət</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">Taymer</string>
     <string name="Title_Resolution">Rezolyusiya</string>
     <string name="Title_ShootAndShare">Şkl pylş prmtrlri</string>
-    <string name="Title_DeviceList">Cihaz siyahısı</string>
     <string name="Title_WhiteBalance">Ağın balansı</string>
     <string name="Title_Effects">Effektlər</string>
     <string name="Title_Focus">Fokus</string>
@@ -152,11 +149,10 @@
     <string name="Title_AutoContrast">Avtomatik kontrast</string>
     <string name="Title_GPS">GPS etiketi</string>
     <string name="Title_Review">Gözdən keçir</string>
-    <string name="Title_AutoShareShot">Çəkilişi avtomatik paylaş</string>
     <string name="Title_Guideline">Göstərişlər</string>
     <string name="Title_VideoQuality">Video keyfiyyəti</string>
     <string name="Title_AudioRecording">Audio yazma</string>
-    <string name="Title_Storage">Yaddaş</string>
+    <string name="Title_Storage">Ehtiyat</string>
     <string name="Title_Reset">Sıfırlansın</string>
     <string name="Title_Mode">Rejim</string>
     <string name="Title_Back">Geri</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">Şəkillər çəkərkən cihazı silkələməmək üçün diqqətli olun</string>
     <string name="help_text_panorama">Kamera düyməsini basın və telefonu yavaşca bir istiqamətdə hərəkət etdirin</string>
     <string name="help_text_panorama_device">Kamera düyməsini basın və cihazı bir istiqamətdə yavaşca hərəkət etdirin</string>
-    <string name="message_DefaultLayout">Qısayol düzümü sıfırlanacaq</string>
     <string name="message_EULA_GPS">GPS etiketinin aktivləşdirilməsi hər bir şəklə coğrafi məkan məlumatları əlavə edərək saxlayacaq. Bu şəkilləri göndərərkən, paylaşarkən, köçürərkən ehtiyatlı olun, belə ki, onlara çəkildikləri yerə dair məlumat daxildir</string>
-    <string name="message_Auto_ShareShot">"Avto-paylaşma şəkilləri paylaşmaq istədiyiniz cihazlarla asanlıqla qoşulmağa imkan verir.
-Şəklin avto-paylaşmasını aktivləşdirin və sonra qoşmaq üçün cihazları bir yerə gətirin (adətən arxa-arxaya)"</string>
     <string name="GPS_msg">GPS sönülü</string>
     <string name="message_enable_GPS">GPS etiketindən istifadə etmək üçün Parametrlərdə GPS-i yandırın</string>
     <string name="cancel">Ləğv et</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">Naməlum</string>
     <string name="shareshot_no_user">Paylaşmaq üçün heç kim yoxdur</string>
     <string name="snapshot_saved">%s saxlandı</string>
-    <string name="editable_shortcut_reset">Sıfırla</string>
     <string name="editable_shortcut_helptext_title">Məsləhətlr</string>
     <string name="editable_shortcut_helptext_message">Redaktə etmək üçün qısayollara vurub saxlayın</string>
     <string name="editable_shortcut_helptext">Nişana vurub saxlayın sonra qısayolların yerini redaktə etmək üçün sürükləyin</string>
-    <string name="sbeam_helptext">Şəkillər çək və digərləri ilə paylaş. S Beam vasitəsilə paylaşmaq istədiyiniz cihazları əlavə etmək üçün cihazları yaxınlaşdırın</string>
     <string name="storage_setting_dialog_title">Yaddaşın yeri</string>
     <string name="storage_setting_dialog_message">SD kart daxil edilmişdir. Yaddaşın yeri SD karta dəyişdirilsin?</string>
     <string name="do_not_ask_again">Bir daha göstərmə</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">Ən yaxşı şəkil</string>
     <string name="bestpic_on">A.</string>
     <string name="bestpic_off">Q.a</string>
-    <string name="bestgroup">Ən yaxşı qrup pozasıse</string>
-    <string name="bestgroup_title">Saxl. üç. ən yaxşı sif-i seç</string>
     <string name="battery_low">Kameranı bağla. Batareyanın temperaturu çox aşağıdır</string>
     <string name="buddy_photo_share_helptext">Üz aşkarlanması ilə şəkil çəkin və paylaşın</string>
     <string name="face_zoom_helptext">Böyütmək və ya kiçiltmək üçün üzə iki dəfə vurun</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">Videokamera rejiminə keç</string>
     <string name="on_device_help_self">Avtoportret rejiminə keçin</string>
     <string name="on_device_help_editable">Yerini dəyişdirmək istədiyiniz qısayola vurub saxlayın. Daha sonra qoymaq istədiyiniz yerə dartın</string>
-    <string name="on_device_help_voicecommand">Siz \"Çək\", \"Gülümsə\", \"Şəkil çək\" və \"Pendir\" kimi səs əmrləri ilə şəkil çəkə bilərsiniz</string>
     <string name="Title_VideoSpeed">Sürət</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x sürətli</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">Avto-yazılışdan yalnız telefon açıq olduqda istifadə etmək olar</string>
     <string name="contextual_filename">Məzmun fayl adı</string>
     <string name="enable_gps_dialog">GPS etiketi aktivləşdirilməlidir. GPS etiketini aktivləşdirilsin?</string>
-    <string name="gallery_disable">Qalereya qeyri-aktiv edilib</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Güclü</string>
 </resources>

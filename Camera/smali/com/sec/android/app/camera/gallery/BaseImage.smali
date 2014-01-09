@@ -59,7 +59,7 @@
     const/4 v0, -0x1
 
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
     iput v0, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mWidth:I
@@ -226,7 +226,7 @@
     check-cast p1, Lcom/sec/android/app/camera/gallery/Image;
 
     .end local p1
-    iget-object v1, p1, Lcom/sec/android/app/camera/gallery/BaseImage;->mUri:Landroid/net/Uri;
+    iget-object v1, p1, Lcom/sec/android/app/camera/gallery/Image;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 

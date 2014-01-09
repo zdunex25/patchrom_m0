@@ -142,7 +142,7 @@
     .line 52
     iget-object v1, p0, Lcom/sec/android/glview/TwGLTriangle;->mTriangle:Lcom/sec/android/glview/TwGLPolygonTexture;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLPolygonTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 53
     :cond_0

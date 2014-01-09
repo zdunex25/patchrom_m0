@@ -41,7 +41,7 @@
 
     .prologue
     .line 21
-    const v0, 0x7f060217
+    const v0, 0x7f060212
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -52,7 +52,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->TIMER_WIDTH:I
 
     .line 22
-    const v0, 0x7f060218
+    const v0, 0x7f060213
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -63,7 +63,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->TIMER_HEIGHT:I
 
     .line 23
-    const v0, 0x7f060090
+    const v0, 0x7f06008b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -78,7 +78,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->TIMER_WIDTH_DELTA:I
 
     .line 24
-    const v0, 0x7f060072
+    const v0, 0x7f06006d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -89,7 +89,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->SCREEN_WIDTH:I
 
     .line 25
-    const v0, 0x7f060073
+    const v0, 0x7f06006e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -100,7 +100,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->SCREEN_HEIGHT:I
 
     .line 26
-    const v0, 0x7f060219
+    const v0, 0x7f060214
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -111,7 +111,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->TEXT_SIZE:I
 
     .line 27
-    const v0, 0x7f06021a
+    const v0, 0x7f060215
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -122,7 +122,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->TEXT_POS_LEFT:I
 
     .line 28
-    const v0, 0x7f06021b
+    const v0, 0x7f060216
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -183,7 +183,7 @@
     .local v9, top:I
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -202,7 +202,7 @@
 
     new-instance v0, Lcom/sec/android/glview/TwGLImage;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -222,7 +222,7 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x7f02028e
+    const v7, 0x7f020272
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
@@ -323,12 +323,12 @@
     if-lez v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->cancelShutterTimer()V
 
     .line 99
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenu()V
 
@@ -341,7 +341,7 @@
 
     .line 103
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -354,7 +354,7 @@
     if-nez v0, :cond_1
 
     .line 104
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenu()V
 
@@ -480,7 +480,7 @@
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -493,7 +493,7 @@
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideSideMenu()V
 
@@ -556,7 +556,7 @@
     if-nez v0, :cond_1
 
     .line 61
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -576,7 +576,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setText(Ljava/lang/String;)V
 
     .line 64
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -589,7 +589,7 @@
     if-eqz v0, :cond_0
 
     .line 65
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -602,7 +602,7 @@
     if-nez v0, :cond_4
 
     .line 66
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -614,7 +614,7 @@
 
     if-eq v0, v5, :cond_2
 
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -632,7 +632,7 @@
     if-ge v0, v7, :cond_3
 
     .line 69
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0, v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->playCameraSound(II)V
 
@@ -640,7 +640,7 @@
 
     .line 71
     :cond_3
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0, v3, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->playCameraSound(II)V
 
@@ -648,7 +648,7 @@
 
     .line 74
     :cond_4
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -660,7 +660,7 @@
 
     if-eq v0, v5, :cond_5
 
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -678,7 +678,7 @@
     if-ge v0, v7, :cond_6
 
     .line 77
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0, v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->playCameraSound(II)V
 
@@ -686,7 +686,7 @@
 
     .line 79
     :cond_6
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLTimerMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0, v3, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->playCameraSound(II)V
 

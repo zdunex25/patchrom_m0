@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 124
+    .line 121
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -42,10 +42,10 @@
     .parameter "mode"
 
     .prologue
-    .line 126
+    .line 123
     if-nez p1, :cond_0
 
-    .line 127
+    .line 124
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;
 
     #getter for: Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;->mModeButton:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
@@ -57,17 +57,17 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->lockButton(Z)V
 
-    .line 128
+    .line 125
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;->access$100(Lcom/sec/android/app/camera/glwidget/TwGLCamcorderSideMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onModechanged()V
 
-    .line 130
+    .line 127
     :cond_0
     return-void
 .end method

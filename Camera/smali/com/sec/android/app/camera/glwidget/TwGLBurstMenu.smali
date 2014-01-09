@@ -16,8 +16,6 @@
 
 
 # static fields
-.field private static BESTGROUP_MAX_IMAGE_COUNT:I = 0x0
-
 .field public static final BESTPIC_ICON_POX_X:[I = null
 
 .field public static final BESTPIC_ICON_POX_Y:[I = null
@@ -82,6 +80,8 @@
 
 .field private static BURST_MODE:Z = false
 
+.field private static BURST_PROGRESS_X:I = 0x0
+
 #the value of this static final field might be set in the static constructor
 .field public static final Best_Pic_Icon_HEIGHT:I = 0x0
 
@@ -132,10 +132,6 @@
 
 
 # instance fields
-.field private BestPoseFilePath:[Ljava/lang/String;
-
-.field private mBestGroupMode:Z
-
 .field private mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
 .field private mBestPicMode:Z
@@ -143,8 +139,6 @@
 .field private mBestPicNum:I
 
 .field private mBestPicText:Lcom/sec/android/glview/TwGLText;
-
-.field private mBestPosepCount:I
 
 .field private mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
@@ -188,116 +182,26 @@
 
     const/4 v2, 0x1
 
-    .line 74
-    const/4 v0, 0x5
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTGROUP_MAX_IMAGE_COUNT:I
-
-    .line 75
+    .line 73
     const/16 v0, 0x8
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_MAX_IMAGE_COUNT:I
 
-    .line 76
+    .line 74
     const/16 v0, 0x14
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MAX_IMAGE_COUNT:I
 
-    .line 77
+    .line 75
     sput-boolean v2, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MODE:Z
 
-    .line 89
+    .line 77
+    const/16 v0, 0x19
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_PROGRESS_X:I
+
+    .line 87
     new-array v0, v6, [I
-
-    const v1, 0x7f06015c
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v3
-
-    const v1, 0x7f06015d
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v2
-
-    const v1, 0x7f06015e
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v4
-
-    const v1, 0x7f06015f
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v5
-
-    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
-
-    .line 91
-    new-array v0, v6, [I
-
-    const v1, 0x7f060160
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v3
-
-    const v1, 0x7f060161
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v2
-
-    const v1, 0x7f060162
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v4
-
-    const v1, 0x7f060163
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v5
-
-    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_Y:[I
-
-    .line 93
-    new-array v0, v4, [I
 
     const v1, 0x7f060157
 
@@ -319,98 +223,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_WIDTH:[I
-
-    .line 94
-    const v0, 0x7f06015a
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_BAR_HEIGHT:I
-
-    .line 95
-    const v0, 0x7f06015b
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_HEIGHT:I
-
-    .line 96
-    const v0, 0x7f080021
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESSBAR_TEXT_SIZE:F
-
-    .line 97
-    const v0, 0x7f060166
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESSBAR_TEXT_INTERVAL:I
-
-    .line 98
-    const v0, 0x7f060170
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_WIDTH:I
-
-    .line 99
-    const v0, 0x7f060171
-
-    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_HEIGHT:I
-
-    .line 100
-    new-array v0, v6, [I
-
-    const v1, 0x7f060172
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v3
-
-    const v1, 0x7f060173
-
-    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    aput v1, v0, v2
-
-    const v1, 0x7f060174
+    const v1, 0x7f060159
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -420,7 +233,188 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f060175
+    const v1, 0x7f06015a
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v5
+
+    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
+
+    .line 89
+    new-array v0, v6, [I
+
+    const v1, 0x7f06015b
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v3
+
+    const v1, 0x7f06015c
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v2
+
+    const v1, 0x7f06015d
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v4
+
+    const v1, 0x7f06015e
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v5
+
+    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_Y:[I
+
+    .line 91
+    new-array v0, v4, [I
+
+    const v1, 0x7f060152
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v3
+
+    const v1, 0x7f060153
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v2
+
+    sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_WIDTH:[I
+
+    .line 92
+    const v0, 0x7f060155
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_BAR_HEIGHT:I
+
+    .line 93
+    const v0, 0x7f060156
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_HEIGHT:I
+
+    .line 94
+    const v0, 0x7f080020
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESSBAR_TEXT_SIZE:F
+
+    .line 95
+    const v0, 0x7f060161
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESSBAR_TEXT_INTERVAL:I
+
+    .line 96
+    const v0, 0x7f06016b
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_WIDTH:I
+
+    .line 97
+    const v0, 0x7f06016c
+
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_HEIGHT:I
+
+    .line 98
+    new-array v0, v6, [I
+
+    const v1, 0x7f06016d
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v3
+
+    const v1, 0x7f06016e
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v2
+
+    const v1, 0x7f06016f
+
+    invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    aput v1, v0, v4
+
+    const v1, 0x7f060170
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -432,10 +426,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_X:[I
 
-    .line 102
+    .line 100
     new-array v0, v6, [I
 
-    const v1, 0x7f060176
+    const v1, 0x7f060171
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -445,7 +439,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f060177
+    const v1, 0x7f060172
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -455,7 +449,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f060178
+    const v1, 0x7f060173
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -465,7 +459,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f060179
+    const v1, 0x7f060174
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -477,8 +471,8 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_Y:[I
 
-    .line 104
-    const v0, 0x7f080022
+    .line 102
+    const v0, 0x7f080021
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -488,10 +482,10 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_SIZE:F
 
-    .line 105
+    .line 103
     new-array v0, v6, [I
 
-    const v1, 0x7f06019f
+    const v1, 0x7f06019a
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -501,7 +495,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601a0
+    const v1, 0x7f06019b
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -511,7 +505,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601a1
+    const v1, 0x7f06019c
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -521,7 +515,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601a2
+    const v1, 0x7f06019d
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -533,10 +527,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_POS_X:[I
 
-    .line 107
+    .line 105
     new-array v0, v6, [I
 
-    const v1, 0x7f0601a3
+    const v1, 0x7f06019e
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -546,7 +540,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601a4
+    const v1, 0x7f06019f
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -556,7 +550,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601a5
+    const v1, 0x7f0601a0
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -566,7 +560,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601a6
+    const v1, 0x7f0601a1
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -578,8 +572,8 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_POS_Y:[I
 
-    .line 109
-    const v0, 0x7f0601a7
+    .line 107
+    const v0, 0x7f0601a2
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -589,8 +583,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_WIDTH:I
 
-    .line 110
-    const v0, 0x7f0601a8
+    .line 108
+    const v0, 0x7f0601a3
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -600,8 +594,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_HEIGHT:I
 
-    .line 111
-    const v0, 0x7f0601a9
+    .line 109
+    const v0, 0x7f0601a4
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -609,8 +603,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_RESULT_TEXT_POS_X:F
 
-    .line 112
-    const v0, 0x7f0601ad
+    .line 110
+    const v0, 0x7f0601a8
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -618,8 +612,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_RESULT_TEXT_POS_Y:F
 
-    .line 113
-    const v0, 0x7f060155
+    .line 111
+    const v0, 0x7f060150
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -629,8 +623,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_RESULT_TEXT_WIDTH:I
 
-    .line 114
-    const v0, 0x7f060156
+    .line 112
+    const v0, 0x7f060151
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -640,8 +634,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_RESULT_TEXT_HEIGHT:I
 
-    .line 115
-    const v0, 0x7f060167
+    .line 113
+    const v0, 0x7f060162
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -651,8 +645,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_TEXT_X:I
 
-    .line 116
-    const v0, 0x7f060169
+    .line 114
+    const v0, 0x7f060164
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -662,8 +656,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_TEXT_Y:I
 
-    .line 117
-    const v0, 0x7f06016a
+    .line 115
+    const v0, 0x7f060165
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -673,8 +667,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_TEXT_WIDTH:I
 
-    .line 118
-    const v0, 0x7f06016b
+    .line 116
+    const v0, 0x7f060166
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -684,8 +678,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_TEXT_HEIGHT:I
 
-    .line 119
-    const v0, 0x7f080021
+    .line 117
+    const v0, 0x7f080020
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -695,8 +689,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_TEXT_SIZE:F
 
-    .line 120
-    const v0, 0x7f0601b5
+    .line 118
+    const v0, 0x7f0601b0
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -706,8 +700,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_X:I
 
-    .line 121
-    const v0, 0x7f0601b6
+    .line 119
+    const v0, 0x7f0601b1
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -717,8 +711,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_Y:I
 
-    .line 122
-    const v0, 0x7f060159
+    .line 120
+    const v0, 0x7f060154
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -728,8 +722,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_WIDTH:I
 
-    .line 123
-    const v0, 0x7f06015a
+    .line 121
+    const v0, 0x7f060155
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -739,10 +733,10 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_HEIGHT:I
 
-    .line 124
+    .line 122
     new-array v0, v4, [F
 
-    const v1, 0x7f0601b7
+    const v1, 0x7f0601b2
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -750,7 +744,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601b8
+    const v1, 0x7f0601b3
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -760,10 +754,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POSTCAPTURE_PROGRESSBAR_POS_X:[F
 
-    .line 126
+    .line 124
     new-array v0, v4, [F
 
-    const v1, 0x7f0601b9
+    const v1, 0x7f0601b4
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -771,7 +765,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601ba
+    const v1, 0x7f0601b5
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -781,8 +775,8 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POSTCAPTURE_PROGRESSBAR_POS_Y:[F
 
-    .line 128
-    const v0, 0x7f0601bc
+    .line 126
+    const v0, 0x7f0601b7
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -792,8 +786,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->Best_Pic_Icon_WIDTH:I
 
-    .line 129
-    const v0, 0x7f0601bd
+    .line 127
+    const v0, 0x7f0601b8
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -803,8 +797,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->Best_Pic_Icon_HEIGHT:I
 
-    .line 130
-    const v0, 0x7f0601bb
+    .line 128
+    const v0, 0x7f0601b6
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -814,10 +808,10 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->Best_Pic_Icon_TEXT:I
 
-    .line 131
+    .line 129
     new-array v0, v6, [I
 
-    const v1, 0x7f0601be
+    const v1, 0x7f0601b9
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -827,7 +821,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601bf
+    const v1, 0x7f0601ba
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -837,7 +831,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601c0
+    const v1, 0x7f0601bb
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -847,7 +841,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601c1
+    const v1, 0x7f0601bc
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -859,10 +853,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_ICON_POX_X:[I
 
-    .line 133
+    .line 131
     new-array v0, v6, [I
 
-    const v1, 0x7f0601c2
+    const v1, 0x7f0601bd
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -872,7 +866,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601c3
+    const v1, 0x7f0601be
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -882,7 +876,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601c4
+    const v1, 0x7f0601bf
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -892,7 +886,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601c5
+    const v1, 0x7f0601c0
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -904,10 +898,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_ICON_POX_Y:[I
 
-    .line 135
+    .line 133
     new-array v0, v6, [I
 
-    const v1, 0x7f0601c6
+    const v1, 0x7f0601c1
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -917,7 +911,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601c7
+    const v1, 0x7f0601c2
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -927,7 +921,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601c8
+    const v1, 0x7f0601c3
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -937,7 +931,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601c9
+    const v1, 0x7f0601c4
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -949,10 +943,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_TEXT_POX_X:[I
 
-    .line 137
+    .line 135
     new-array v0, v6, [I
 
-    const v1, 0x7f0601ca
+    const v1, 0x7f0601c5
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -962,7 +956,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f0601cb
+    const v1, 0x7f0601c6
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -972,7 +966,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f0601cc
+    const v1, 0x7f0601c7
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -982,7 +976,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f0601cd
+    const v1, 0x7f0601c8
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -994,8 +988,8 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_TEXT_POX_Y:[I
 
-    .line 142
-    const v0, 0x7f0601bc
+    .line 140
+    const v0, 0x7f0601b7
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -1005,8 +999,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_PIC_BUTTON_WIDTH:I
 
-    .line 143
-    const v0, 0x7f0601bd
+    .line 141
+    const v0, 0x7f0601b8
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -1027,7 +1021,7 @@
     .parameter "menuResourceDepot"
 
     .prologue
-    .line 190
+    .line 187
     const/4 v5, 0x5
 
     const/4 v6, 0x1
@@ -1064,46 +1058,29 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mLastOrientationTake:I
 
-    .line 83
-    const/4 v0, 0x5
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    .line 84
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPosepCount:I
-
-    .line 158
+    .line 156
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicNum:I
 
-    .line 161
+    .line 159
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     .line 162
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestGroupMode:Z
-
-    .line 165
     new-instance v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$1;-><init>(Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
-    .line 192
+    .line 189
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->setCaptureEnabled(Z)V
 
-    .line 194
+    .line 191
     new-instance v0, Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1142,9 +1119,9 @@
 
     int-to-float v6, v6
 
-    const v7, 0x7f02029a
+    const v7, 0x7f02027e
 
-    const v8, 0x7f020299
+    const v8, 0x7f02027d
 
     sget v9, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESSBAR_TEXT_INTERVAL:I
 
@@ -1154,7 +1131,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
-    .line 197
+    .line 194
     new-instance v0, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1185,7 +1162,7 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f0900d4
+    const v6, 0x7f0900d3
 
     invoke-virtual {p1, v6}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1197,7 +1174,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
-    .line 200
+    .line 197
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1220,7 +1197,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 203
+    .line 200
     new-instance v0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1269,7 +1246,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
-    .line 206
+    .line 203
     new-instance v0, Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1292,16 +1269,16 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f02029a
+    const v6, 0x7f02027e
 
-    const v7, 0x7f020299
+    const v7, 0x7f02027d
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/glview/TwGLProgressBar;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFII)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
-    .line 208
-    new-instance v0, Lcom/sec/android/glview/TwGLSelectButton;
+    .line 205
+    new-instance v0, Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -1333,11 +1310,11 @@
 
     sget v8, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_PIC_BUTTON_HEIGHT:I
 
-    invoke-direct/range {v0 .. v8}, Lcom/sec/android/glview/TwGLSelectButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIIII)V
+    invoke-direct/range {v0 .. v8}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIIII)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 211
+    .line 208
     new-instance v0, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1372,7 +1349,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mProgressText:Lcom/sec/android/glview/TwGLText;
 
-    .line 215
+    .line 212
     new-instance v0, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1403,7 +1380,7 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f090131
+    const v6, 0x7f09012b
 
     invoke-virtual {p1, v6}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1417,10 +1394,10 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
-    .line 219
+    .line 216
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v1, 0x7f090133
+    const v1, 0x7f09012d
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1444,17 +1421,17 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLButton;->setText(Ljava/lang/String;FIZ)V
 
-    .line 221
+    .line 218
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 219
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 224
+    .line 221
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -1462,168 +1439,158 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setRotatable(Z)V
 
-    .line 225
+    .line 222
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setRotatable(Z)V
 
-    .line 226
+    .line 223
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setRotatable(Z)V
 
-    .line 227
+    .line 224
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setRotatable(Z)V
 
-    .line 228
+    .line 225
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setRotatable(Z)V
 
-    .line 229
+    .line 226
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setRotatable(Z)V
 
-    .line 230
+    .line 227
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setRotatable(Z)V
 
-    .line 231
+    .line 228
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setBypassTouch(Z)V
 
-    .line 233
+    .line 230
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setCenterPivot(Z)V
 
-    .line 235
+    .line 232
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 236
+    .line 233
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 237
+    .line 234
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setVisibility(I)V
 
-    .line 238
+    .line 235
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
 
-    .line 240
+    .line 237
     sget-boolean v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MODE:Z
 
     if-eqz v0, :cond_1
 
-    .line 241
+    .line 238
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 242
+    .line 239
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 247
+    .line 244
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 248
+    .line 245
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 249
+    .line 246
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 250
+    .line 247
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 252
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
-
-    invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
-
     .line 253
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
-
-    invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
-
-    .line 256
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mProgressText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 258
+    .line 255
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLProgressBar;->setOnOrientationChangedListener(Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;)V
 
-    .line 259
+    .line 256
     invoke-direct {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->init()V
 
-    .line 261
+    .line 258
     new-instance v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-direct {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mScannerClient:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;
 
-    .line 262
+    .line 259
     return-void
 
-    .line 244
+    .line 241
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
@@ -1631,7 +1598,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 245
+    .line 242
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
@@ -1646,7 +1613,7 @@
     .parameter "x0"
 
     .prologue
-    .line 71
+    .line 70
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mListener:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$OnBurstCaptureCancelListener;
 
     return-object v0
@@ -1664,31 +1631,31 @@
 
     const/4 v4, 0x1
 
-    .line 265
+    .line 262
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
-    const v1, 0x7f020294
+    const v1, 0x7f020278
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setNinePatchBackground(I)Z
 
-    .line 267
+    .line 264
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v5, v5}, Lcom/sec/android/glview/TwGLText;->setAlign(II)V
 
-    .line 269
+    .line 266
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
 
-    .line 271
+    .line 268
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mProgressText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v4, v5}, Lcom/sec/android/glview/TwGLText;->setAlign(II)V
 
-    .line 273
+    .line 270
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1705,7 +1672,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 274
+    .line 271
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1722,7 +1689,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 275
+    .line 272
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1739,7 +1706,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 277
+    .line 274
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_X:[I
@@ -1756,7 +1723,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 278
+    .line 275
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_X:[I
@@ -1773,7 +1740,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 279
+    .line 276
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->HELP_TEXT_X:[I
@@ -1790,7 +1757,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 281
+    .line 278
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_POS_X:[I
@@ -1807,7 +1774,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setLeftTop(IFF)V
 
-    .line 282
+    .line 279
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_POS_X:[I
@@ -1824,7 +1791,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setLeftTop(IFF)V
 
-    .line 283
+    .line 280
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POST_PROGRESSBAR_POS_X:[I
@@ -1841,7 +1808,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setLeftTop(IFF)V
 
-    .line 285
+    .line 282
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1858,7 +1825,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 286
+    .line 283
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1875,7 +1842,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 287
+    .line 284
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->PROGRESS_X:[I
@@ -1892,7 +1859,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 289
+    .line 286
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POSTCAPTURE_PROGRESSBAR_POS_X:[F
@@ -1905,7 +1872,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 290
+    .line 287
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_X:I
@@ -1920,7 +1887,7 @@
 
     add-float/2addr v1, v2
 
-    const v2, 0x7f060073
+    const v2, 0x7f06006e
 
     invoke-static {v2}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -1934,7 +1901,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 292
+    .line 289
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_POSTCAPTURE_PROGRESSBAR_POS_X:[F
@@ -1947,7 +1914,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setLeftTop(IFF)V
 
-    .line 294
+    .line 291
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_ICON_POX_X:[I
@@ -1964,7 +1931,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 295
+    .line 292
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_ICON_POX_X:[I
@@ -1981,7 +1948,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 296
+    .line 293
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_ICON_POX_X:[I
@@ -1998,7 +1965,7 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 298
+    .line 295
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_TEXT_POX_X:[I
@@ -2015,7 +1982,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 299
+    .line 296
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_TEXT_POX_X:[I
@@ -2032,7 +1999,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 300
+    .line 297
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTPIC_TEXT_POX_X:[I
@@ -2049,19 +2016,19 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 302
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestGroupMode:Z
+    .line 299
+    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 303
+    .line 300
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
-    sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTGROUP_MAX_IMAGE_COUNT:I
+    sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_MAX_IMAGE_COUNT:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
-    .line 309
+    .line 304
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -2069,26 +2036,11 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
-    .line 310
+    .line 305
     return-void
 
-    .line 304
+    .line 302
     :cond_0
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
-
-    if-eqz v0, :cond_1
-
-    .line 305
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
-
-    sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_MAX_IMAGE_COUNT:I
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
-
-    goto :goto_0
-
-    .line 307
-    :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MAX_IMAGE_COUNT:I
@@ -2105,10 +2057,10 @@
     .parameter "orientation"
 
     .prologue
-    .line 990
+    .line 912
     move v0, p1
 
-    .line 991
+    .line 913
     .local v0, rotation:I
     const/16 v1, 0x5a
 
@@ -2118,9 +2070,9 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 992
+    .line 914
     :cond_0
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -2132,19 +2084,19 @@
 
     if-eqz v1, :cond_2
 
-    .line 993
+    .line 915
     add-int/lit16 v1, p1, 0xb4
 
     rem-int/lit16 v0, v1, 0x168
 
-    .line 1000
+    .line 922
     :cond_1
     :goto_0
     return v0
 
-    .line 995
+    .line 917
     :cond_2
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -2158,7 +2110,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 996
+    .line 918
     add-int/lit16 v1, p1, 0xb4
 
     rem-int/lit16 v0, v1, 0x168
@@ -2172,24 +2124,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 314
+    .line 309
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 310
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 316
+    .line 311
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 318
+    .line 313
     :cond_0
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->clear()V
 
-    .line 319
+    .line 314
     return-void
 .end method
 
@@ -2200,42 +2152,42 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 977
+    .line 899
     const/16 v1, 0x5a
 
     if-ne p1, v1, :cond_1
 
-    .line 978
+    .line 900
     const/4 v0, 0x6
 
-    .line 986
+    .line 908
     :cond_0
     :goto_0
     return v0
 
-    .line 979
+    .line 901
     :cond_1
     const/16 v1, 0xb4
 
     if-ne p1, v1, :cond_2
 
-    .line 980
+    .line 902
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 981
+    .line 903
     :cond_2
     const/16 v1, 0x10e
 
     if-ne p1, v1, :cond_3
 
-    .line 982
+    .line 904
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 983
+    .line 905
     :cond_3
     const/16 v1, 0x168
 
@@ -2250,8 +2202,8 @@
     .locals 2
 
     .prologue
-    .line 1004
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 926
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -2265,19 +2217,19 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mLastOrientationTake:I
 
-    .line 1006
+    .line 928
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-nez v1, :cond_1
 
-    .line 1008
+    .line 930
     new-instance v0, Ljava/io/File;
 
     const-string v1, "mnt/sdcard/DCIM"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1009
+    .line 931
     .local v0, directory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -2285,10 +2237,10 @@
 
     if-nez v1, :cond_0
 
-    .line 1010
+    .line 932
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 1012
+    .line 934
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -2297,7 +2249,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1013
+    .line 935
     .restart local v0       #directory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -2305,10 +2257,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1014
+    .line 936
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 1017
+    .line 939
     .end local v0           #directory:Ljava/io/File;
     :cond_1
     const/4 v1, 0x1
@@ -2327,12 +2279,12 @@
     .end annotation
 
     .prologue
-    .line 731
+    .line 666
     const/4 v0, 0x0
 
-    .line 732
+    .line 667
     .local v0, tempBitmap:Landroid/graphics/Bitmap;
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2352,7 +2304,7 @@
 
     move-result-object v0
 
-    .line 734
+    .line 669
     return-object v0
 .end method
 
@@ -2360,7 +2312,7 @@
     .locals 1
 
     .prologue
-    .line 405
+    .line 398
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureCount:I
 
     return v0
@@ -2370,19 +2322,19 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 407
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 415
+    .line 408
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->getProgress()I
 
     move-result v0
 
-    .line 417
+    .line 410
     :goto_0
     return v0
 
@@ -2400,31 +2352,19 @@
     .locals 1
 
     .prologue
-    .line 425
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestGroupMode:Z
+    .line 418
+    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 426
-    sget v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BESTGROUP_MAX_IMAGE_COUNT:I
+    .line 419
+    sget v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_MAX_IMAGE_COUNT:I
 
-    .line 430
+    .line 421
     :goto_0
     return v0
 
-    .line 427
     :cond_0
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
-
-    if-eqz v0, :cond_1
-
-    .line 428
-    sget v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BEST_MAX_IMAGE_COUNT:I
-
-    goto :goto_0
-
-    .line 430
-    :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLProgressBar;->getMax()I
@@ -2440,22 +2380,22 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 468
+    .line 453
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 469
+    .line 454
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 470
+    .line 455
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 471
+    .line 456
     return-void
 .end method
 
@@ -2463,14 +2403,14 @@
     .locals 2
 
     .prologue
-    .line 325
+    .line 320
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 326
+    .line 321
     return-void
 .end method
 
@@ -2480,31 +2420,31 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 435
+    .line 426
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 436
+    .line 427
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setVisibility(I)V
 
-    .line 437
+    .line 428
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 442
+    .line 433
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
 
-    .line 443
+    .line 434
     return-void
 
-    .line 439
+    .line 430
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -2521,24 +2461,24 @@
 
     const/4 v8, 0x0
 
-    .line 914
+    .line 836
     iget-boolean v10, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-nez v10, :cond_1
 
-    .line 915
+    .line 837
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->interruptProcessforBurstShots()Z
 
     move-result v8
 
-    .line 973
+    .line 895
     :cond_0
     :goto_0
     return v8
 
-    .line 920
+    .line 842
     :cond_1
-    iget-object v10, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v10, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -2550,7 +2490,7 @@
 
     if-nez v10, :cond_5
 
-    .line 921
+    .line 843
     new-instance v3, Ljava/io/File;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2575,7 +2515,7 @@
 
     invoke-direct {v3, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 926
+    .line 848
     .local v3, fromBestpic:Ljava/io/File;
     :goto_1
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
@@ -2584,10 +2524,10 @@
 
     if-eqz v10, :cond_0
 
-    .line 929
+    .line 851
     const/4 v0, 0x0
 
-    .line 933
+    .line 855
     .local v0, bMove:Z
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -2596,7 +2536,7 @@
 
     array-length v4, v10
 
-    .line 934
+    .line 856
     .local v4, i:I
     const-string v10, "TwGLBurstMenu"
 
@@ -2628,28 +2568,28 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 940
+    .line 862
     :cond_2
     if-lez v4, :cond_3
 
-    .line 941
+    .line 863
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
 
     array-length v4, v10
 
-    .line 942
+    .line 864
     if-nez v4, :cond_6
 
-    .line 965
+    .line 887
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 967
+    .line 889
     const-string v7, "bucket_id = ?"
 
-    .line 968
+    .line 890
     .local v7, mWhereClause:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -2663,9 +2603,9 @@
 
     move-result v1
 
-    .line 969
+    .line 891
     .local v1, bucketId:I
-    iget-object v10, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v10, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2683,7 +2623,7 @@
 
     invoke-virtual {v10, v11, v7, v12}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 971
+    .line 893
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     .end local v1           #bucketId:I
@@ -2691,10 +2631,10 @@
     :cond_4
     move v8, v9
 
-    .line 973
+    .line 895
     goto :goto_0
 
-    .line 923
+    .line 845
     .end local v0           #bMove:Z
     .end local v3           #fromBestpic:Ljava/io/File;
     .end local v4           #i:I
@@ -2726,12 +2666,12 @@
     .restart local v3       #fromBestpic:Ljava/io/File;
     goto :goto_1
 
-    .line 935
+    .line 857
     .restart local v0       #bMove:Z
     :catch_0
     move-exception v2
 
-    .line 936
+    .line 858
     .local v2, e:Ljava/lang/NullPointerException;
     const-string v9, "TwGLBurstMenu"
 
@@ -2741,13 +2681,13 @@
 
     goto/16 :goto_0
 
-    .line 944
+    .line 866
     .end local v2           #e:Ljava/lang/NullPointerException;
     .restart local v4       #i:I
     :cond_6
     add-int/lit8 v4, v4, -0x1
 
-    .line 946
+    .line 868
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
@@ -2758,7 +2698,7 @@
 
     move-result-object v5
 
-    .line 947
+    .line 869
     .local v5, mFilePath:Ljava/lang/String;
     new-instance v6, Ljava/lang/String;
 
@@ -2774,7 +2714,7 @@
 
     invoke-direct {v6, v10, v8, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 948
+    .line 870
     .local v6, mFilename:Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2794,8 +2734,8 @@
 
     move-result-object v6
 
-    .line 949
-    iget-object v10, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 871
+    iget-object v10, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -2807,7 +2747,7 @@
 
     if-nez v10, :cond_8
 
-    .line 950
+    .line 872
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
@@ -2846,10 +2786,10 @@
 
     move-result v0
 
-    .line 952
+    .line 874
     if-eqz v0, :cond_7
 
-    .line 953
+    .line 875
     sget-object v10, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mScannerClient:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -2878,12 +2818,12 @@
 
     invoke-virtual {v10, v11}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;->scanPath(Ljava/lang/String;)V
 
-    .line 960
+    .line 882
     :cond_7
     :goto_2
     if-nez v0, :cond_2
 
-    .line 961
+    .line 883
     const-string v9, "TwGLBurstMenu"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2908,7 +2848,7 @@
 
     goto/16 :goto_0
 
-    .line 955
+    .line 877
     :cond_8
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -2948,10 +2888,10 @@
 
     move-result v0
 
-    .line 957
+    .line 879
     if-eqz v0, :cond_7
 
-    .line 958
+    .line 880
     sget-object v10, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mScannerClient:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$ScannerClient;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -2987,10 +2927,10 @@
     .locals 5
 
     .prologue
-    .line 893
+    .line 815
     const/4 v1, 0x0
 
-    .line 894
+    .line 816
     .local v1, mDelete:Z
     const/4 v0, 0x0
 
@@ -3000,13 +2940,13 @@
 
     if-gt v0, v3, :cond_4
 
-    .line 895
+    .line 817
     const/16 v3, 0xa
 
     if-ge v0, v3, :cond_2
 
-    .line 896
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 818
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -3018,7 +2958,7 @@
 
     if-nez v3, :cond_1
 
-    .line 897
+    .line 819
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3053,7 +2993,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 905
+    .line 827
     .local v2, mFile:Ljava/io/File;
     :goto_1
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -3062,18 +3002,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 906
+    .line 828
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 894
+    .line 816
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 899
+    .line 821
     .end local v2           #mFile:Ljava/io/File;
     :cond_1
     new-instance v2, Ljava/io/File;
@@ -3113,10 +3053,10 @@
     .restart local v2       #mFile:Ljava/io/File;
     goto :goto_1
 
-    .line 901
+    .line 823
     .end local v2           #mFile:Ljava/io/File;
     :cond_2
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -3128,7 +3068,7 @@
 
     if-nez v3, :cond_3
 
-    .line 902
+    .line 824
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3166,7 +3106,7 @@
     .restart local v2       #mFile:Ljava/io/File;
     goto :goto_1
 
-    .line 904
+    .line 826
     .end local v2           #mFile:Ljava/io/File;
     :cond_3
     new-instance v2, Ljava/io/File;
@@ -3206,27 +3146,17 @@
     .restart local v2       #mFile:Ljava/io/File;
     goto/16 :goto_1
 
-    .line 910
+    .line 832
     .end local v2           #mFile:Ljava/io/File;
     :cond_4
     return v1
-.end method
-
-.method public isBestGroupMode()Z
-    .locals 1
-
-    .prologue
-    .line 601
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestGroupMode:Z
-
-    return v0
 .end method
 
 .method public isBestPicMode()Z
     .locals 1
 
     .prologue
-    .line 597
+    .line 580
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     return v0
@@ -3236,7 +3166,7 @@
     .locals 1
 
     .prologue
-    .line 605
+    .line 584
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
     return v0
@@ -3246,7 +3176,7 @@
     .locals 1
 
     .prologue
-    .line 464
+    .line 449
     const/4 v0, 0x1
 
     return v0
@@ -3256,26 +3186,26 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 324
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureCount:I
 
     if-lez v0, :cond_0
 
-    .line 330
+    .line 325
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mListener:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$OnBurstCaptureCancelListener;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$OnBurstCaptureCancelListener;->onBurstCaptureCancelled()V
 
-    .line 331
+    .line 326
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->reset()V
 
-    .line 335
+    .line 330
     :goto_0
     return-void
 
-    .line 333
+    .line 328
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -3297,19 +3227,19 @@
 
     const/4 v2, 0x0
 
-    .line 643
+    .line 622
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     if-ne p1, v0, :cond_2
 
-    .line 644
+    .line 623
     const-string v0, "TwGLBurstMenu"
 
     const-string v3, "mBestPicButton clicked Change mode"
 
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
+    .line 624
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-nez v0, :cond_0
@@ -3319,8 +3249,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
-    .line 646
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 625
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -3328,17 +3258,22 @@
 
     invoke-virtual {v0, v3}, Lcom/sec/android/app/camera/Camera;->onBurstModeChanged(Z)V
 
-    .line 647
+    .line 626
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-eqz v0, :cond_1
 
-    .line 648
+    .line 627
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setPressed(Z)V
 
-    const v4, 0x7f090132
+    .line 628
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
+
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    const v4, 0x7f09012c
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -3354,34 +3289,39 @@
 
     invoke-virtual {v0, v3, v4, v5, v2}, Lcom/sec/android/glview/TwGLButton;->setText(Ljava/lang/String;FIZ)V
 
-    .line 652
+    .line 633
     :goto_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->reset()V
 
-    .line 653
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 634
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->updateRemainTime()V
 
-    .line 656
+    .line 637
     :goto_2
     return v1
 
     :cond_0
     move v0, v2
 
-    .line 645
+    .line 624
     goto :goto_0
 
-    .line 650
+    .line 630
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLButton;->setPressed(Z)V
 
-    const v4, 0x7f090133
+    .line 631
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
+
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    const v4, 0x7f09012d
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -3402,7 +3342,7 @@
     :cond_2
     move v1, v2
 
-    .line 656
+    .line 637
     goto :goto_2
 .end method
 
@@ -3410,10 +3350,10 @@
     .locals 0
 
     .prologue
-    .line 344
+    .line 339
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->hideCaptureLayout()V
 
-    .line 345
+    .line 340
     return-void
 .end method
 
@@ -3429,7 +3369,7 @@
 
     const/4 v1, 0x1
 
-    .line 493
+    .line 476
     const/16 v2, 0x42
 
     if-eq p1, v2, :cond_0
@@ -3438,12 +3378,12 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 545
+    .line 528
     :cond_0
     :goto_0
     return v1
 
-    .line 497
+    .line 480
     :cond_1
     const/16 v2, 0x18
 
@@ -3453,7 +3393,7 @@
 
     if-ne p1, v2, :cond_4
 
-    .line 498
+    .line 481
     :cond_2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getPostCaptureProgress()I
 
@@ -3465,7 +3405,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 499
+    .line 482
     :cond_3
     const-string v2, "TwGLBurstMenu"
 
@@ -3475,13 +3415,13 @@
 
     goto :goto_0
 
-    .line 504
+    .line 487
     :cond_4
     if-eq p1, v3, :cond_5
 
     if-ne p1, v4, :cond_7
 
-    .line 505
+    .line 488
     :cond_5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getPostCaptureProgress()I
 
@@ -3497,7 +3437,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 506
+    .line 489
     const-string v2, "TwGLBurstMenu"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3532,7 +3472,7 @@
 
     goto :goto_0
 
-    .line 508
+    .line 491
     :cond_6
     iget-boolean v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
@@ -3542,7 +3482,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 509
+    .line 492
     const-string v2, "TwGLBurstMenu"
 
     const-string v3, "onKeyDown - Now Burst capturing"
@@ -3551,16 +3491,16 @@
 
     goto :goto_0
 
-    .line 514
+    .line 497
     :cond_7
     if-ne p1, v3, :cond_8
 
-    .line 515
+    .line 498
     iget-boolean v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
     if-eqz v2, :cond_8
 
-    .line 516
+    .line 499
     const-string v2, "TwGLBurstMenu"
 
     const-string v3, "onKeyDown - Now Burst capturing"
@@ -3569,11 +3509,11 @@
 
     goto :goto_0
 
-    .line 520
+    .line 503
     :cond_8
     if-ne p1, v4, :cond_c
 
-    .line 521
+    .line 504
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getCaptureProgressIncreased()I
 
     move-result v2
@@ -3584,7 +3524,7 @@
 
     if-ne v2, v3, :cond_9
 
-    .line 522
+    .line 505
     const-string v2, "TwGLBurstMenu"
 
     const-string v3, "onKeyDown - BEST_MAX_IMAGE_COUNT"
@@ -3593,13 +3533,13 @@
 
     goto/16 :goto_0
 
-    .line 524
+    .line 507
     :cond_9
     iget-boolean v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
     if-eqz v2, :cond_a
 
-    .line 525
+    .line 508
     const-string v2, "TwGLBurstMenu"
 
     const-string v3, "onKeyDown - Now Burst capturing"
@@ -3608,7 +3548,7 @@
 
     goto/16 :goto_0
 
-    .line 529
+    .line 512
     :cond_a
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mOrientation:I
 
@@ -3616,19 +3556,19 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mLastOrientationTake:I
 
-    .line 530
+    .line 513
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
     if-nez v1, :cond_c
 
-    .line 532
+    .line 515
     new-instance v0, Ljava/io/File;
 
     const-string v1, "mnt/sdcard/DCIM"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 533
+    .line 516
     .local v0, directory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -3636,10 +3576,10 @@
 
     if-nez v1, :cond_b
 
-    .line 534
+    .line 517
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 536
+    .line 519
     :cond_b
     new-instance v0, Ljava/io/File;
 
@@ -3648,7 +3588,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 537
+    .line 520
     .restart local v0       #directory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -3656,10 +3596,10 @@
 
     if-nez v1, :cond_c
 
-    .line 538
+    .line 521
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 545
+    .line 528
     .end local v0           #directory:Ljava/io/File;
     :cond_c
     const/4 v1, 0x0
@@ -3679,7 +3619,7 @@
 
     const/4 v0, 0x1
 
-    .line 549
+    .line 532
     const/16 v1, 0x18
 
     if-eq p1, v1, :cond_0
@@ -3688,7 +3628,7 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 550
+    .line 533
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getPostCaptureProgress()I
 
@@ -3700,7 +3640,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 551
+    .line 534
     :cond_1
     const-string v1, "TwGLBurstMenu"
 
@@ -3708,17 +3648,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 580
+    .line 563
     :goto_0
     return v0
 
-    .line 556
+    .line 539
     :cond_2
     if-eq p1, v2, :cond_3
 
     if-ne p1, v3, :cond_5
 
-    .line 557
+    .line 540
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getPostCaptureProgress()I
 
@@ -3734,7 +3674,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 558
+    .line 541
     const-string v1, "TwGLBurstMenu"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3769,7 +3709,7 @@
 
     goto :goto_0
 
-    .line 560
+    .line 543
     :cond_4
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
@@ -3779,7 +3719,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 561
+    .line 544
     const-string v1, "TwGLBurstMenu"
 
     const-string v2, "onKeyUp - Now Burst capturing"
@@ -3788,16 +3728,16 @@
 
     goto :goto_0
 
-    .line 566
+    .line 549
     :cond_5
     if-ne p1, v2, :cond_6
 
-    .line 567
+    .line 550
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
     if-eqz v1, :cond_6
 
-    .line 568
+    .line 551
     const-string v1, "TwGLBurstMenu"
 
     const-string v2, "onKeyUp - Now Burst capturing"
@@ -3806,11 +3746,11 @@
 
     goto :goto_0
 
-    .line 573
+    .line 556
     :cond_6
     if-ne p1, v3, :cond_7
 
-    .line 574
+    .line 557
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getCaptureProgressIncreased()I
 
     move-result v1
@@ -3821,7 +3761,7 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 575
+    .line 558
     const-string v1, "TwGLBurstMenu"
 
     const-string v2, "onKeyUp - BEST_MAX_IMAGE_COUNT"
@@ -3830,7 +3770,7 @@
 
     goto :goto_0
 
-    .line 580
+    .line 563
     :cond_7
     const/4 v0, 0x0
 
@@ -3842,13 +3782,13 @@
     .parameter "orientation"
 
     .prologue
-    .line 630
+    .line 609
     iput p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mOrientation:I
 
-    .line 631
+    .line 610
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->setSizeForOrientation()V
 
-    .line 632
+    .line 611
     return-void
 .end method
 
@@ -3856,14 +3796,14 @@
     .locals 2
 
     .prologue
-    .line 584
+    .line 567
     const-string v0, "TwGLBurstMenu"
 
     const-string v1, "onPause"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
+    .line 568
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getCaptureProgressIncreased()I
 
     move-result v0
@@ -3874,18 +3814,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 586
+    .line 569
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->onBurstCaptureCancelled()V
 
-    .line 587
+    .line 570
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->reset()V
 
-    .line 589
+    .line 572
     :cond_1
     return-void
 .end method
@@ -3894,8 +3834,8 @@
     .locals 1
 
     .prologue
-    .line 338
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 333
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -3907,10 +3847,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 339
+    .line 334
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->showCaptureLayout()V
 
-    .line 341
+    .line 336
     :cond_0
     return-void
 .end method
@@ -3919,17 +3859,17 @@
     .locals 2
 
     .prologue
-    .line 592
+    .line 575
     const-string v0, "TwGLBurstMenu"
 
     const-string v1, "onStop"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
+    .line 576
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->stopCancelTimer()V
 
-    .line 594
+    .line 577
     return-void
 .end method
 
@@ -3941,39 +3881,39 @@
 
     const/4 v2, 0x0
 
-    .line 348
+    .line 343
     const-string v0, "TwGLBurstMenu"
 
     const-string v1, "Burstshot restart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
+    .line 344
     iput-boolean v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
-    .line 350
+    .line 345
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->resetProgressBar()V
 
-    .line 351
+    .line 346
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setProgress(I)V
 
-    .line 352
+    .line 347
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MAX_IMAGE_COUNT:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
-    .line 353
+    .line 348
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setProgress(I)V
 
-    .line 354
+    .line 349
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->getPostCaptureProgressMax()I
@@ -3982,68 +3922,52 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
-    .line 355
+    .line 350
     iput v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureCount:I
 
-    .line 356
+    .line 351
     iput v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
 
-    .line 357
+    .line 352
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->setTouchHandled(Z)V
 
-    .line 358
+    .line 353
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->stopCancelTimer()V
 
-    .line 359
-    iput v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPosepCount:I
-
-    .line 362
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 356
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_0
 
-    .line 363
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 357
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenuItems()V
 
-    .line 364
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 358
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideStatusIcon()V
 
-    .line 365
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 359
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0, v3}, Lcom/sec/android/app/camera/Camera;->setTouchAutoFocusActive(Z)V
 
-    .line 366
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 360
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->resetTouchFocus()V
 
-    .line 367
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->getShootingMode()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 368
+    .line 362
+    :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->showCaptureLayout()V
 
-    .line 370
-    :cond_0
+    .line 363
     return-void
 .end method
 
@@ -4051,32 +3975,20 @@
     .locals 2
 
     .prologue
-    .line 381
+    .line 374
     const-string v0, "TwGLBurstMenu"
 
     const-string v1, "call restartCancelTimer..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
+    .line 375
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->stopCancelTimer()V
 
-    .line 383
+    .line 376
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->startCancelTimer()V
 
-    .line 384
-    return-void
-.end method
-
-.method public setBestGroupMode(Z)V
-    .locals 0
-    .parameter "bestGroupMode"
-
-    .prologue
-    .line 671
-    iput-boolean p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestGroupMode:Z
-
-    .line 672
+    .line 377
     return-void
 .end method
 
@@ -4085,10 +3997,10 @@
     .parameter "bestpicNum"
 
     .prologue
-    .line 661
+    .line 642
     iput p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicNum:I
 
-    .line 662
+    .line 643
     return-void
 .end method
 
@@ -4097,11 +4009,11 @@
     .parameter "bestPicMode"
 
     .prologue
-    .line 665
+    .line 646
     iput-boolean p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
-    .line 666
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 647
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -4109,14 +4021,14 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera;->onBurstModeChanged(Z)V
 
-    .line 667
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 648
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->updateRemainTime()V
 
-    .line 668
+    .line 649
     return-void
 .end method
 
@@ -4125,10 +4037,10 @@
     .parameter "capture"
 
     .prologue
-    .line 609
+    .line 588
     iput-boolean p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
-    .line 610
+    .line 589
     return-void
 .end method
 
@@ -4138,16 +4050,16 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 394
+    .line 387
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
     if-nez v0, :cond_0
 
-    .line 402
+    .line 395
     :goto_0
     return-void
 
-    .line 398
+    .line 391
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -4159,17 +4071,17 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setProgress(I)V
 
-    .line 399
+    .line 392
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 400
+    .line 393
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 401
+    .line 394
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->setTouchHandled(Z)V
@@ -4182,10 +4094,10 @@
     .parameter "listener"
 
     .prologue
-    .line 489
+    .line 472
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mListener:Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu$OnBurstCaptureCancelListener;
 
-    .line 490
+    .line 473
     return-void
 .end method
 
@@ -4194,7 +4106,7 @@
     .parameter "progress"
 
     .prologue
-    .line 409
+    .line 402
     const-string v0, "TwGLBurstMenu"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4217,7 +4129,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 411
+    .line 404
     return-void
 .end method
 
@@ -4228,17 +4140,17 @@
     .parameter "uri"
 
     .prologue
-    .line 636
+    .line 615
     invoke-static {p1, p2}, Lcom/sec/android/app/camera/Util;->rotate(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 637
+    .line 616
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {v0, p1, p3, p2}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setCaptureProgressIncreased(Landroid/graphics/Bitmap;Landroid/net/Uri;I)V
 
-    .line 638
+    .line 617
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
@@ -4249,7 +4161,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setProgress(I)V
 
-    .line 639
+    .line 618
     return-void
 .end method
 
@@ -4258,12 +4170,12 @@
     .parameter "max"
 
     .prologue
-    .line 421
+    .line 414
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
-    .line 422
+    .line 415
     return-void
 .end method
 
@@ -4271,7 +4183,7 @@
     .locals 3
 
     .prologue
-    .line 614
+    .line 593
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLProgressBar;->getOrientation()I
@@ -4280,11 +4192,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 626
+    .line 605
     :goto_0
     return-void
 
-    .line 617
+    .line 596
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -4302,7 +4214,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setSize(FF)V
 
-    .line 618
+    .line 597
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_WIDTH:I
@@ -4317,7 +4229,7 @@
 
     goto :goto_0
 
-    .line 622
+    .line 601
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
@@ -4335,7 +4247,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setSize(FF)V
 
-    .line 623
+    .line 602
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURSTSHOT_PROGRESS_BAR_WIDTH:I
@@ -4350,7 +4262,7 @@
 
     goto :goto_0
 
-    .line 614
+    .line 593
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -4358,279 +4270,6 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
-.end method
-
-.method public showBestGroupHighlight()V
-    .locals 12
-
-    .prologue
-    const/4 v11, 0x0
-
-    const/4 v10, 0x1
-
-    .line 689
-    iput-boolean v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
-
-    .line 691
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    .line 692
-    .local v1, dateTaken:J
-    iget-object v7, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    check-cast v7, Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->getAddress()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 693
-    .local v0, address:Ljava/lang/String;
-    invoke-static {v1, v2, v0}, Lcom/sec/android/app/camera/ImageSavingUtils;->createName(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 696
-    .local v6, mTempName:Ljava/lang/String;
-    iget-object v7, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
-
-    move-result v7
-
-    if-nez v7, :cond_0
-
-    .line 697
-    sget-object v3, Lcom/sec/android/app/camera/ImageSavingUtils;->CAMERA_IMAGE_BUCKET_NAME_PHONE:Ljava/lang/String;
-
-    .line 702
-    .local v3, directory:Ljava/lang/String;
-    :goto_0
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, "/"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, ".jpg"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 705
-    .local v5, mResultName:Ljava/lang/String;
-    new-instance v4, Landroid/content/Intent;
-
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
-
-    .line 706
-    .local v4, intent:Landroid/content/Intent;
-    const-string v7, "com.arcsoft.picturesbest.app"
-
-    const-string v8, "com.arcsoft.picturesbest.app.ArcPicturesBestActivity"
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 707
-    const-string v7, "android.intent.action.VIEW"
-
-    invoke-virtual {v4, v7}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 710
-    const-string v7, "TwGLBurstMenu"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "Burst Orientation1:"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v9}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Lcom/sec/android/glview/TwGLContext;->getLastOrientation()I
-
-    move-result v9
-
-    mul-int/lit8 v9, v9, 0x5a
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 711
-    const-string v7, "TwGLBurstMenu"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "Burst ResultFilePath:"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 713
-    const-string v7, "Camera-BestPose"
-
-    invoke-virtual {v4, v7, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 714
-    const-string v7, "from-Camera"
-
-    invoke-virtual {v4, v7, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 715
-    const-string v7, "FilePath1"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    aget-object v8, v8, v11
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 716
-    const-string v7, "FilePath2"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    aget-object v8, v8, v10
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 717
-    const-string v7, "FilePath3"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    const/4 v9, 0x2
-
-    aget-object v8, v8, v9
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 718
-    const-string v7, "FilePath4"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    const/4 v9, 0x3
-
-    aget-object v8, v8, v9
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 719
-    const-string v7, "FilePath5"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    const/4 v9, 0x4
-
-    aget-object v8, v8, v9
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 720
-    const-string v7, "ResultFilePath"
-
-    invoke-virtual {v4, v7, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 721
-    const-string v7, "Orientation"
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v8}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lcom/sec/android/glview/TwGLContext;->getLastOrientation()I
-
-    move-result v8
-
-    mul-int/lit8 v8, v8, 0x5a
-
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 725
-    iget-object v7, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    const/16 v8, 0x7d7
-
-    invoke-virtual {v7, v4, v8}, Lcom/sec/android/app/camera/AbstractCameraActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 726
-    iget-object v7, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    const/high16 v8, 0x7f04
-
-    const v9, 0x7f040001
-
-    invoke-virtual {v7, v8, v9}, Lcom/sec/android/app/camera/AbstractCameraActivity;->overridePendingTransition(II)V
-
-    .line 727
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->reset()V
-
-    .line 728
-    return-void
-
-    .line 699
-    .end local v3           #directory:Ljava/lang/String;
-    .end local v4           #intent:Landroid/content/Intent;
-    .end local v5           #mResultName:Ljava/lang/String;
-    :cond_0
-    sget-object v3, Lcom/sec/android/app/camera/ImageSavingUtils;->CAMERA_IMAGE_BUCKET_NAME_MMC:Ljava/lang/String;
-
-    .restart local v3       #directory:Ljava/lang/String;
-    goto/16 :goto_0
 .end method
 
 .method public showCaptureLayout()V
@@ -4641,53 +4280,40 @@
 
     const/4 v1, 0x0
 
-    .line 474
+    .line 459
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 475
+    .line 460
     sget-boolean v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BURST_MODE:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 476
+    .line 461
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 477
+    .line 462
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 482
+    .line 468
     :goto_0
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->isBestGroupMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 483
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mCaptureProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
-
-    invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
-
-    .line 485
-    :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->hidePostCaptureLayout()V
 
-    .line 486
+    .line 469
     return-void
 
-    .line 479
-    :cond_1
+    .line 464
+    :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 480
+    .line 465
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
@@ -4699,14 +4325,14 @@
     .locals 2
 
     .prologue
-    .line 321
+    .line 316
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 322
+    .line 317
     return-void
 .end method
 
@@ -4716,30 +4342,30 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 675
+    .line 652
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mIsBurstCapturing:Z
 
-    .line 677
+    .line 654
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 678
+    .line 655
     .local v0, intent:Landroid/content/Intent;
-    const-string v1, "com.miui.gallery"
+    const-string v1, "com.sec.android.gallery3d"
 
-    const-string v2, "com.miui.gallery.app.Gallery"
+    const-string v2, "com.sec.android.gallery3d.app.Gallery"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 679
+    .line 656
     const-string v1, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 680
+    .line 657
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicNum:I
@@ -4750,90 +4376,70 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 681
+    .line 658
     const-string v1, "Camera-BestPic"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 682
+    .line 659
     const-string v1, "from-Camera"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 683
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 660
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v1, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1, v3}, Lcom/sec/android/app/camera/Camera;->setIsLaunchGallery(Z)V
 
-    .line 684
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 661
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 685
+    .line 662
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->reset()V
 
-    .line 686
+    .line 663
     return-void
 .end method
 
 .method public showPostCaptureLayout()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x4
-
     const/4 v1, 0x0
 
-    .line 446
+    .line 437
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPicMode:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 447
+    .line 438
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestProgressBar:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->setVisibility(I)V
 
-    .line 448
+    .line 439
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
 
-    .line 453
+    .line 444
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
 
-    .line 454
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->isBestGroupMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 456
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
-
-    invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
-
-    .line 457
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
-
-    invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
-
-    .line 460
-    :cond_0
+    .line 445
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->hideCaptureLayout()V
 
-    .line 461
+    .line 446
     return-void
 
-    .line 451
-    :cond_1
+    .line 442
+    :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setVisibility(I)V
@@ -4847,7 +4453,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 373
+    .line 366
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->hasMessages(I)Z
@@ -4856,12 +4462,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 374
+    .line 367
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 377
+    .line 370
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
@@ -4869,7 +4475,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 378
+    .line 371
     return-void
 .end method
 
@@ -4879,14 +4485,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 387
+    .line 380
     const-string v0, "TwGLBurstMenu"
 
     const-string v1, "stopCancelTimer..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
+    .line 381
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -4895,35 +4501,35 @@
 
     if-eqz v0, :cond_0
 
-    .line 389
+    .line 382
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstMsgHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 391
+    .line 384
     :cond_0
     return-void
 .end method
 
 .method public storeBurstStrings([B)V
-    .locals 31
+    .locals 32
     .parameter "data"
 
     .prologue
-    .line 738
-    new-instance v22, Ljava/lang/String;
+    .line 673
+    new-instance v23, Ljava/lang/String;
 
-    move-object/from16 v0, v22
+    move-object/from16 v0, v23
 
     move-object/from16 v1, p1
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([B)V
 
-    .line 739
-    .local v22, mTemp:Ljava/lang/String;
+    .line 674
+    .local v23, mTemp:Ljava/lang/String;
     const-string v3, "jpeg"
 
-    move-object/from16 v0, v22
+    move-object/from16 v0, v23
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -4931,27 +4537,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 890
+    .line 812
     :cond_0
     :goto_0
     return-void
 
-    .line 742
+    .line 678
     :cond_1
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    if-eqz v3, :cond_0
-
-    .line 746
-    new-instance v20, Ljava/lang/String;
+    new-instance v21, Ljava/lang/String;
 
     const/4 v3, 0x0
 
     const-string v4, "jpeg"
 
-    move-object/from16 v0, v22
+    move-object/from16 v0, v23
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
@@ -4959,14 +4558,14 @@
 
     add-int/lit8 v4, v4, 0x4
 
-    move-object/from16 v0, v20
+    move-object/from16 v0, v21
 
     move-object/from16 v1, p1
 
     invoke-direct {v0, v1, v3, v4}, Ljava/lang/String;-><init>([BII)V
 
-    .line 747
-    .local v20, mFilePath:Ljava/lang/String;
+    .line 679
+    .local v21, mFilePath:Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBurstProgressBar:Lcom/sec/android/glview/TwGLProgressBar;
@@ -4983,30 +4582,30 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/android/glview/TwGLProgressBar;->setProgress(I)V
 
-    .line 750
+    .line 682
     new-instance v15, Ljava/io/File;
 
-    move-object/from16 v0, v20
+    move-object/from16 v0, v21
 
     invoke-direct {v15, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 751
+    .line 683
     .local v15, fromPix:Ljava/io/File;
     invoke-virtual {v15}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    move-result-object v19
+    move-result-object v20
 
-    .line 753
-    .local v19, mFileName:Ljava/lang/String;
+    .line 685
+    .local v20, mFileName:Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 754
+    .line 686
     .local v10, dateTaken:J
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
@@ -5014,42 +4613,32 @@
 
     move-result-object v8
 
-    .line 756
+    .line 687
     .local v8, address:Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->isBestGroupMode()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 757
-    const/4 v3, 0x0
-
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
+    iget v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
 
-    invoke-static {v10, v11, v3, v4}, Lcom/sec/android/app/camera/ImageSavingUtils;->createName(JLjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v10, v11, v8, v3}, Lcom/sec/android/app/camera/ImageSavingUtils;->createName(JLjava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v23
+    move-result-object v24
 
-    .line 760
-    .local v23, mTempName:Ljava/lang/String;
-    :goto_1
+    .line 689
+    .local v24, mTempName:Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v24
 
     invoke-virtual {v3, v0}, Lcom/sec/android/app/camera/Camera;->setLastCapturedTitle(Ljava/lang/String;)V
 
-    .line 763
+    .line 692
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -5059,14 +4648,14 @@
 
     move-result v3
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_4
 
-    .line 764
+    .line 693
     sget-object v12, Lcom/sec/android/app/camera/ImageSavingUtils;->CAMERA_IMAGE_BUCKET_NAME_PHONE:Ljava/lang/String;
 
-    .line 769
+    .line 698
     .local v12, directory:Ljava/lang/String;
-    :goto_2
+    :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5081,7 +4670,7 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v24
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5095,17 +4684,17 @@
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v21
+    move-result-object v22
 
-    .line 771
-    .local v21, mTargetName:Ljava/lang/String;
+    .line 700
+    .local v22, mTargetName:Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 772
+    .line 701
     .local v9, bMove:Z
     new-instance v3, Ljava/io/File;
 
-    move-object/from16 v0, v21
+    move-object/from16 v0, v22
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -5113,107 +4702,44 @@
 
     move-result v9
 
-    .line 774
-    invoke-virtual/range {p0 .. p0}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->isBestGroupMode()Z
+    .line 703
+    if-eqz v9, :cond_5
 
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    .line 776
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->BestPoseFilePath:[Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPosepCount:I
-
-    add-int/lit8 v29, v4, 0x1
-
-    move/from16 v0, v29
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mBestPosepCount:I
-
-    new-instance v29, Ljava/lang/String;
-
-    move-object/from16 v0, v29
-
-    move-object/from16 v1, v21
-
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    aput-object v29, v3, v4
-
-    goto/16 :goto_0
-
-    .line 759
-    .end local v9           #bMove:Z
-    .end local v12           #directory:Ljava/lang/String;
-    .end local v21           #mTargetName:Ljava/lang/String;
-    .end local v23           #mTempName:Ljava/lang/String;
-    :cond_2
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
-
-    invoke-static {v10, v11, v8, v3}, Lcom/sec/android/app/camera/ImageSavingUtils;->createName(JLjava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v23
-
-    .restart local v23       #mTempName:Ljava/lang/String;
-    goto :goto_1
-
-    .line 766
-    :cond_3
-    sget-object v12, Lcom/sec/android/app/camera/ImageSavingUtils;->CAMERA_IMAGE_BUCKET_NAME_MMC:Ljava/lang/String;
-
-    .restart local v12       #directory:Ljava/lang/String;
-    goto :goto_2
-
-    .line 779
-    .restart local v9       #bMove:Z
-    .restart local v21       #mTargetName:Ljava/lang/String;
-    :cond_4
-    if-eqz v9, :cond_7
-
-    .line 781
-    new-instance v28, Landroid/content/ContentValues;
+    .line 705
+    new-instance v29, Landroid/content/ContentValues;
 
     const/16 v3, 0x8
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-direct {v0, v3}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 782
-    .local v28, values:Landroid/content/ContentValues;
+    .line 706
+    .local v29, values:Landroid/content/ContentValues;
     const-string v3, "title"
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
-    move-object/from16 v1, v23
+    move-object/from16 v1, v24
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 787
+    .line 711
     const-string v3, "_display_name"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object/from16 v0, v23
+    move-object/from16 v0, v24
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    const-string v29, ".jpg"
+    const-string v30, ".jpg"
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5223,31 +4749,31 @@
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 788
+    .line 712
     const-string v3, "datetaken"
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 789
+    .line 713
     const-string v3, "mime_type"
 
     const-string v4, "image/jpeg"
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 790
+    .line 714
     const-string v3, "orientation"
 
     move-object/from16 v0, p0
@@ -5264,25 +4790,25 @@
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 791
+    .line 715
     const-string v3, "_data"
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
-    move-object/from16 v1, v21
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 792
+    .line 716
     const-string v3, "height"
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v4, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -5300,16 +4826,16 @@
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 793
+    .line 717
     const-string v3, "width"
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v4, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -5327,80 +4853,80 @@
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 795
+    .line 719
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/Camera;->getGpsLocation()Landroid/location/Location;
 
-    move-result-object v18
+    move-result-object v19
 
-    .line 796
-    .local v18, loc:Landroid/location/Location;
-    if-eqz v18, :cond_5
+    .line 720
+    .local v19, loc:Landroid/location/Location;
+    if-eqz v19, :cond_2
 
-    .line 797
+    .line 721
     const-string v3, "latitude"
 
-    invoke-virtual/range {v18 .. v18}, Landroid/location/Location;->getLatitude()D
+    invoke-virtual/range {v19 .. v19}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v29
+    move-result-wide v30
 
-    invoke-static/range {v29 .. v30}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static/range {v30 .. v31}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 798
+    .line 722
     const-string v3, "longitude"
 
-    invoke-virtual/range {v18 .. v18}, Landroid/location/Location;->getLongitude()D
+    invoke-virtual/range {v19 .. v19}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v29
+    move-result-wide v30
 
-    invoke-static/range {v29 .. v30}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static/range {v30 .. v31}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 805
-    :cond_5
+    .line 725
+    :cond_2
     const-string v3, "date_modified"
 
-    const-wide/16 v29, 0x3e8
+    const-wide/16 v30, 0x3e8
 
-    div-long v29, v10, v29
+    div-long v30, v10, v30
 
-    invoke-static/range {v29 .. v30}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v30 .. v31}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 818
+    .line 739
     const/4 v14, 0x0
 
-    .line 821
+    .line 742
     .local v14, fileUri:Landroid/net/Uri;
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
@@ -5410,16 +4936,16 @@
 
     sget-object v4, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     invoke-virtual {v3, v4, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v14
 
-    .line 830
+    .line 752
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
@@ -5429,79 +4955,115 @@
 
     new-instance v4, Ljava/io/File;
 
-    new-instance v29, Ljava/lang/StringBuilder;
+    new-instance v30, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v29 .. v29}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
-    move-object/from16 v1, v23
+    move-object/from16 v1, v24
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v29
+    move-result-object v30
 
-    const-string v30, ".jpg"
+    const-string v31, ".jpg"
 
-    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v30 .. v31}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v29
+    move-result-object v30
 
-    invoke-virtual/range {v29 .. v29}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v30 .. v30}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v29
+    move-result-object v30
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-direct {v4, v12, v0}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/io/File;->length()J
 
-    move-result-wide v29
+    move-result-wide v30
 
-    move-wide/from16 v0, v29
+    move-wide/from16 v0, v30
 
     invoke-static {v3, v14, v0, v1}, Lcom/sec/android/app/camera/ImageSavingUtils;->setImageSize(Landroid/content/ContentResolver;Landroid/net/Uri;J)V
 
-    .line 832
+    .line 754
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v3, v14}, Lcom/sec/android/app/camera/Camera;->setLastContentUri(Landroid/net/Uri;)V
 
-    .line 833
+    .line 755
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_3
 
-    .line 834
+    .line 756
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     new-instance v4, Landroid/content/Intent;
 
-    const-string v29, "com.android.camera.NEW_PICTURE"
+    const-string v30, "com.android.camera.NEW_PICTURE"
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-direct {v4, v0, v14}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 760
+    :cond_3
+    new-instance v16, Landroid/content/Intent;
+
+    const-string v3, "com.sec.android.cloudagent.ACTION_REQUEST_CAPTURED"
+
+    move-object/from16 v0, v16
+
+    invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 761
+    .local v16, i:Landroid/content/Intent;
+    const-string v3, "LOCALPATH"
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, v22
+
+    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 763
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v3, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 765
+    const-string v3, "TwGLBurstMenu"
+
+    const-string v4, "Google drive: Camera auto upload"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteFullException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 885
+    .line 807
     .end local v14           #fileUri:Landroid/net/Uri;
-    .end local v18           #loc:Landroid/location/Location;
-    .end local v28           #values:Landroid/content/ContentValues;
-    :cond_6
-    :goto_3
+    .end local v16           #i:Landroid/content/Intent;
+    .end local v19           #loc:Landroid/location/Location;
+    .end local v29           #values:Landroid/content/ContentValues;
+    :goto_2
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mStoreCount:I
@@ -5512,14 +5074,14 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 886
+    .line 808
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v3, Lcom/sec/android/app/camera/Camera;
 
-    invoke-static/range {v21 .. v21}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static/range {v22 .. v22}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
@@ -5527,47 +5089,59 @@
 
     iget v0, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mLastOrientationTake:I
 
-    move/from16 v29, v0
+    move/from16 v30, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v29
+    move/from16 v1, v30
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->calculateOrientationForPicture(I)I
 
-    move-result v29
+    move-result v30
 
-    move/from16 v0, v29
+    move/from16 v0, v30
 
     invoke-virtual {v3, v4, v0}, Lcom/sec/android/app/camera/Camera;->updateThumbnail(Landroid/graphics/Bitmap;I)V
 
     goto/16 :goto_0
 
-    .line 845
-    .restart local v14       #fileUri:Landroid/net/Uri;
-    .restart local v18       #loc:Landroid/location/Location;
-    .restart local v28       #values:Landroid/content/ContentValues;
-    :catch_0
-    move-exception v26
+    .line 695
+    .end local v9           #bMove:Z
+    .end local v12           #directory:Ljava/lang/String;
+    .end local v22           #mTargetName:Ljava/lang/String;
+    :cond_4
+    sget-object v12, Lcom/sec/android/app/camera/ImageSavingUtils;->CAMERA_IMAGE_BUCKET_NAME_MMC:Ljava/lang/String;
 
-    .line 846
-    .local v26, sfe:Landroid/database/sqlite/SQLiteFullException;
+    .restart local v12       #directory:Ljava/lang/String;
+    goto/16 :goto_1
+
+    .line 767
+    .restart local v9       #bMove:Z
+    .restart local v14       #fileUri:Landroid/net/Uri;
+    .restart local v19       #loc:Landroid/location/Location;
+    .restart local v22       #mTargetName:Ljava/lang/String;
+    .restart local v29       #values:Landroid/content/ContentValues;
+    :catch_0
+    move-exception v27
+
+    .line 768
+    .local v27, sfe:Landroid/database/sqlite/SQLiteFullException;
     const-string v3, "TwGLBurstMenu"
 
     const-string v4, "Not enough space in database"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
+    .line 769
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const v4, 0x7f0900ec
+    const v4, 0x7f0900ea
 
-    const/16 v29, 0x0
+    const/16 v30, 0x0
 
-    move/from16 v0, v29
+    move/from16 v0, v30
 
     invoke-static {v3, v4, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -5575,29 +5149,29 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    goto :goto_3
+    goto :goto_2
 
-    .line 850
+    .line 772
     .end local v14           #fileUri:Landroid/net/Uri;
-    .end local v18           #loc:Landroid/location/Location;
-    .end local v26           #sfe:Landroid/database/sqlite/SQLiteFullException;
-    .end local v28           #values:Landroid/content/ContentValues;
-    :cond_7
+    .end local v19           #loc:Landroid/location/Location;
+    .end local v27           #sfe:Landroid/database/sqlite/SQLiteFullException;
+    .end local v29           #values:Landroid/content/ContentValues;
+    :cond_5
     const-string v3, "TwGLBurstMenu"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v29, "storeBurstStrings moving failed trying to copy. "
+    const-string v30, "storeBurstStrings moving failed trying to copy. "
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5609,52 +5183,52 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 851
-    new-instance v27, Ljava/io/File;
+    .line 773
+    new-instance v28, Ljava/io/File;
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
-    move-object/from16 v1, v20
+    move-object/from16 v1, v21
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 852
-    .local v27, sourceFile:Ljava/io/File;
-    const/16 v16, 0x0
+    .line 774
+    .local v28, sourceFile:Ljava/io/File;
+    const/16 v17, 0x0
 
-    .line 853
-    .local v16, input:Ljava/io/FileInputStream;
-    const/16 v24, 0x0
+    .line 775
+    .local v17, input:Ljava/io/FileInputStream;
+    const/16 v25, 0x0
 
-    .line 854
-    .local v24, output:Ljava/io/FileOutputStream;
+    .line 776
+    .local v25, output:Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 855
+    .line 777
     .local v2, fcin:Ljava/nio/channels/FileChannel;
     const/4 v7, 0x0
 
-    .line 858
+    .line 780
     .local v7, fcout:Ljava/nio/channels/FileChannel;
     :try_start_1
-    new-instance v17, Ljava/io/FileInputStream;
+    new-instance v18, Ljava/io/FileInputStream;
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    move-object/from16 v1, v27
+    move-object/from16 v1, v28
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 859
-    .end local v16           #input:Ljava/io/FileInputStream;
-    .local v17, input:Ljava/io/FileInputStream;
+    .line 781
+    .end local v17           #input:Ljava/io/FileInputStream;
+    .local v18, input:Ljava/io/FileInputStream;
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, v0, Lcom/sec/android/app/camera/glwidget/TwGLBurstMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -5664,10 +5238,10 @@
 
     move-result v3
 
-    if-nez v3, :cond_8
+    if-nez v3, :cond_6
 
-    .line 860
-    new-instance v25, Ljava/io/FileOutputStream;
+    .line 782
+    new-instance v26, Ljava/io/FileOutputStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5685,7 +5259,7 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5695,33 +5269,33 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v26
 
     invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .end local v24           #output:Ljava/io/FileOutputStream;
-    .local v25, output:Ljava/io/FileOutputStream;
-    move-object/from16 v24, v25
-
-    .line 864
     .end local v25           #output:Ljava/io/FileOutputStream;
-    .restart local v24       #output:Ljava/io/FileOutputStream;
-    :goto_4
-    invoke-virtual/range {v17 .. v17}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    .local v26, output:Ljava/io/FileOutputStream;
+    move-object/from16 v25, v26
+
+    .line 786
+    .end local v26           #output:Ljava/io/FileOutputStream;
+    .restart local v25       #output:Ljava/io/FileOutputStream;
+    :goto_3
+    invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v2
 
-    .line 865
-    invoke-virtual/range {v24 .. v24}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    .line 787
+    invoke-virtual/range {v25 .. v25}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v7
 
-    .line 867
+    .line 789
     invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v5
 
-    .line 868
+    .line 790
     .local v5, size:J
     const-wide/16 v3, 0x0
 
@@ -5730,28 +5304,28 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 877
+    .line 799
     :try_start_3
-    invoke-virtual/range {v17 .. v17}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual/range {v18 .. v18}, Ljava/io/FileInputStream;->close()V
 
-    .line 878
-    invoke-virtual/range {v24 .. v24}, Ljava/io/FileOutputStream;->close()V
+    .line 800
+    invoke-virtual/range {v25 .. v25}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 879
+    .line 801
     :catch_1
     move-exception v3
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 862
+    .line 784
     .end local v5           #size:J
-    :cond_8
+    :cond_6
     :try_start_4
-    new-instance v25, Ljava/io/FileOutputStream;
+    new-instance v26, Ljava/io/FileOutputStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5769,7 +5343,7 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5779,49 +5353,49 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v26
 
     invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
 
-    .end local v24           #output:Ljava/io/FileOutputStream;
-    .restart local v25       #output:Ljava/io/FileOutputStream;
-    move-object/from16 v24, v25
-
     .end local v25           #output:Ljava/io/FileOutputStream;
-    .restart local v24       #output:Ljava/io/FileOutputStream;
-    goto :goto_4
+    .restart local v26       #output:Ljava/io/FileOutputStream;
+    move-object/from16 v25, v26
 
-    .line 870
-    .end local v17           #input:Ljava/io/FileInputStream;
-    .restart local v16       #input:Ljava/io/FileInputStream;
+    .end local v26           #output:Ljava/io/FileOutputStream;
+    .restart local v25       #output:Ljava/io/FileOutputStream;
+    goto :goto_3
+
+    .line 792
+    .end local v18           #input:Ljava/io/FileInputStream;
+    .restart local v17       #input:Ljava/io/FileInputStream;
     :catch_2
     move-exception v13
 
-    .line 872
+    .line 794
     .local v13, e:Ljava/lang/Exception;
-    :goto_5
+    :goto_4
     :try_start_5
     invoke-virtual {v13}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 873
+    .line 795
     const-string v3, "TwGLBurstMenu"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v29, "storeBurstStrings copying failed "
+    const-string v30, "storeBurstStrings copying failed "
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5835,69 +5409,69 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 877
+    .line 799
     :try_start_6
-    invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual/range {v17 .. v17}, Ljava/io/FileInputStream;->close()V
 
-    .line 878
-    invoke-virtual/range {v24 .. v24}, Ljava/io/FileOutputStream;->close()V
+    .line 800
+    invoke-virtual/range {v25 .. v25}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 879
+    .line 801
     :catch_3
     move-exception v3
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 876
+    .line 798
     .end local v13           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
-    .line 877
-    :goto_6
+    .line 799
+    :goto_5
     :try_start_7
-    invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual/range {v17 .. v17}, Ljava/io/FileInputStream;->close()V
 
-    .line 878
-    invoke-virtual/range {v24 .. v24}, Ljava/io/FileOutputStream;->close()V
+    .line 800
+    invoke-virtual/range {v25 .. v25}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 881
-    :goto_7
+    .line 803
+    :goto_6
     throw v3
 
-    .line 879
+    .line 801
     :catch_4
     move-exception v4
 
-    goto :goto_7
+    goto :goto_6
 
-    .line 876
-    .end local v16           #input:Ljava/io/FileInputStream;
-    .restart local v17       #input:Ljava/io/FileInputStream;
+    .line 798
+    .end local v17           #input:Ljava/io/FileInputStream;
+    .restart local v18       #input:Ljava/io/FileInputStream;
     :catchall_1
     move-exception v3
 
-    move-object/from16 v16, v17
+    move-object/from16 v17, v18
 
-    .end local v17           #input:Ljava/io/FileInputStream;
-    .restart local v16       #input:Ljava/io/FileInputStream;
-    goto :goto_6
-
-    .line 870
-    .end local v16           #input:Ljava/io/FileInputStream;
+    .end local v18           #input:Ljava/io/FileInputStream;
     .restart local v17       #input:Ljava/io/FileInputStream;
+    goto :goto_5
+
+    .line 792
+    .end local v17           #input:Ljava/io/FileInputStream;
+    .restart local v18       #input:Ljava/io/FileInputStream;
     :catch_5
     move-exception v13
 
-    move-object/from16 v16, v17
+    move-object/from16 v17, v18
 
-    .end local v17           #input:Ljava/io/FileInputStream;
-    .restart local v16       #input:Ljava/io/FileInputStream;
-    goto :goto_5
+    .end local v18           #input:Ljava/io/FileInputStream;
+    .restart local v17       #input:Ljava/io/FileInputStream;
+    goto :goto_4
 .end method

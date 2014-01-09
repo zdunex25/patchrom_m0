@@ -11,7 +11,7 @@
     <string name="change_to_device_memory">外部SDカードに​十分な​容量が​ありません。​標準​保存先を​ユーザーメモリ（本体）に​変更します。</string>
     <string name="video_reach_size_limit">録画​サイズが​最大に​達しました。</string>
     <string name="processing_msg">処理中...</string>
-    <string name="panorama_processing_msg">パノラマ​を​作成​して​います。​お待ち​ください。</string>
+    <string name="panorama_processing_msg">パノラマを​作成​しています。​しばらく​お待ち​ください...</string>
     <string name="battery_overheat">温度上昇を​検知した​ため、​カメラを​終了します。</string>
     <string name="savingImage">保存中...</string>
     <string name="open_hw_failed_msg">カメラを​起動​できませんでした。</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">エンボス</string>
     <string name="E_OUTLINE">アウト​ライン</string>
     <string name="E_WATERCOLOR">水彩画</string>
-    <string name="E_MONOCHROME">モノクロ</string>
-    <string name="E_SKETCH">スケッチ</string>
     <string name="E_WASHED">色あせ</string>
     <string name="E_POSTERIZE">ポスタライズ</string>
     <string name="E_SOLARIZE">露出​オーバー</string>
@@ -103,7 +101,7 @@
     <string name="RM_MMS">MMS​添付用</string>
     <string name="RM_EMAIL">Eメール用​制限</string>
     <string name="RM_SLOW">スロー​モーション</string>
-    <string name="RM_FAST">ファスト​モーション</string>
+    <string name="RM_FAST">速い</string>
     <string name="CS_PROGRESS_TEXT">画像を​作成しています。​しばらく​お待ちください...</string>
     <string name="SCN_NONE">なし</string>
     <string name="SCN_PORTRAIT">ポートレート</string>
@@ -112,12 +110,12 @@
     <string name="SCN_PARTY_INDOOR">パーティー/室内</string>
     <string name="SCN_BEACH_SNOW">ビーチ/​スキー場</string>
     <string name="SCN_SUNSET">夕焼け</string>
-    <string name="SCN_DAWN_DUSK">夜明け</string>
+    <string name="SCN_DAWN_DUSK">夕暮れ/​夜明け</string>
     <string name="SCN_FALL_COLOR">紅葉</string>
     <string name="SCN_NIGHT_SHOT">夜景</string>
     <string name="SCN_FIREWORK">花火</string>
     <string name="SCN_TEXT">テキスト</string>
-    <string name="SCN_CANDLE_LIGHT">キャンドル</string>
+    <string name="SCN_CANDLE_LIGHT">キャンドル​ライト</string>
     <string name="SCN_BACK_LIGHT">逆光</string>
     <string name="OPTION_ON">ON</string>
     <string name="OPTION_OFF">OFF</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">タイマー</string>
     <string name="Title_Resolution">解像度</string>
     <string name="Title_ShootAndShare">共有​ショットを​設定</string>
-    <string name="Title_DeviceList">デバイス​リスト</string>
     <string name="Title_WhiteBalance">ホワイト​バランス</string>
     <string name="Title_Effects">エフェクト</string>
     <string name="Title_Focus">フォーカス</string>
@@ -151,10 +148,9 @@
     <string name="Title_ObjectTracking">被写体​トラッキング</string>
     <string name="Title_AntiShake">手振れ​補正</string>
     <string name="Title_BlinkDetection">まばたき​検出</string>
-    <string name="Title_AutoContrast">コントラ​スト</string>
+    <string name="Title_AutoContrast">コント​ラスト</string>
     <string name="Title_GPS">GPSタグ</string>
     <string name="Title_Review">プレビュー​表示</string>
-    <string name="Title_AutoShareShot">自動​共有​ショット</string>
     <string name="Title_Guideline">補助​グリッド</string>
     <string name="Title_VideoQuality">動画の​画質</string>
     <string name="Title_AudioRecording">音声​録音</string>
@@ -163,8 +159,8 @@
     <string name="Title_Mode">モード</string>
     <string name="Title_Back">戻る</string>
     <string name="Title_ImageViewer">画像​ビューア</string>
-    <string name="Title_Outdoor_Visibility">アウト​ドア​モード</string>
-    <string name="Title_Flip">左右​反転​して​保存</string>
+    <string name="Title_Outdoor_Visibility">アウトドアモード</string>
+    <string name="Title_Flip">反転して保存</string>
     <string name="Title_Self_Portrait">自分​撮り</string>
     <string name="Title_Self_Recording">自分​録り</string>
     <string name="Title_Voice_Capture">音声で​写真を​撮影</string>
@@ -177,15 +173,12 @@
     <string name="HDR_Helptext">撮影中​は、​端末​を​揺らさ​ないで​ください。</string>
     <string name="help_text_panorama">カメラ​キー​を​タップ​して、​端末​を​ゆっくり​と​一方向​に​動か​して​くだ​さい。</string>
     <string name="help_text_panorama_device">カメラ​キー​を​タップ​して、​端末​を​ゆっくり​と​一方向​に​動か​して​くだ​さい。</string>
-    <string name="message_DefaultLayout">ショート​カット​レイ​アウト​が​リセット​され​ます。</string>
     <string name="message_EULA_GPS">GPS​タグ​を​有効​に​する​と、​各​写真​に​地理​的​な​位置​情報​が​埋め​込ま​れ​ます。​送信、​共有、​配布、​転送​また​は​コピー​する​とき​は、​これ​ら​の​写真​に​撮影​場所​の​情報​が​含ま​れ​て​いる​こと​に​注意​して​ください。</string>
-    <string name="message_Auto_ShareShot">"自動​共有​ショット​で、​写真​を​共有​したい​端末​に​簡単​に​接続​でき​ます。
-自動​共有​ショット​を​有効​に​して​から、​端末​を​接続​する​ため​に、​端末​同士​(主に​背面)​を​近づけて​ください。"</string>
     <string name="GPS_msg">GPS OFF</string>
     <string name="message_enable_GPS">GPS​タグを​使用​する​には、​[設定]で​GPSを​ONに​してください。</string>
     <string name="cancel">キャンセル</string>
     <string name="app_name">カメラ</string>
-    <string name="SmileShot_message">カメラ​ボタンを​タップ​して​ください。​被写体​が​笑うと、​自動的​に​写真​を​撮影​します。</string>
+    <string name="SmileShot_message">カメラボタンを​タップ​します。​撮影対象が​笑うと、​自動的に​写真を​撮ります。</string>
     <string name="Title_ResetDailog">カメラ​設定を​出荷時の​状態に​戻します。</string>
     <string name="Title_ChangeMemoryInUseDailog">標準保存先を​外部​SDカードに​変更​しますか？</string>
     <string name="Title_InsertMemoryCardDailog">外部SDカードを​挿入して​カメラを​使用して​ください。</string>
@@ -246,13 +239,11 @@
     <string name="pcType">PC</string>
     <string name="profile_user_default_name">不明</string>
     <string name="shareshot_no_user">共有する​人が​いません。</string>
-    <string name="snapshot_saved">「%s」​を​保存​しました。</string>
-    <string name="editable_shortcut_reset">リセット</string>
+    <string name="snapshot_saved">%s​を​保存​しました。</string>
     <string name="editable_shortcut_helptext_title">ヒント</string>
     <string name="editable_shortcut_helptext_message">ショート​カットを​長押し​すると、​編集​できる​ように​なります。</string>
     <string name="editable_shortcut_helptext">ショート​カットの​位置を​編集​する​には、​アイコンを​長押し後、​ドラッグ​して​ください。</string>
-    <string name="sbeam_helptext">写真​を​撮り、​他​の​端末​と​共有​しましょう。​S Beam​を​使用​して​共有​したい​端末​を​追加​する​には、​端末​同士​を​近づけ​て​ください。</string>
-    <string name="storage_setting_dialog_title">位置​情報​の​保存</string>
+    <string name="storage_setting_dialog_title">保存​場所</string>
     <string name="storage_setting_dialog_message">外部​SDカードが​挿入​されました。​保存​場所を​外部​SDカードに​変更​しますか？</string>
     <string name="do_not_ask_again">今後​​表示​​しない</string>
     <string name="shutter">シャッター</string>
@@ -260,10 +251,8 @@
     <string name="bestpic">ベスト​フォト</string>
     <string name="bestpic_on">ON</string>
     <string name="bestpic_off">OFF</string>
-    <string name="bestgroup">ベスト​グループ​ポーズ</string>
-    <string name="bestgroup_title">保存​する​ベスト​フェイス​を​選択</string>
     <string name="battery_low">カメラを​​終了​​します。​​バッテリーの​​温度​​が低すぎ​​ます。</string>
-    <string name="buddy_photo_share_helptext">顔​認識​を​使っ​て​友達​と​写真​を​撮っ​て​共有​して​くだ​さい。</string>
+    <string name="buddy_photo_share_helptext">顔認識で​友達と​写真を​撮って​共有</string>
     <string name="face_zoom_helptext">ズームイン/​ズームアウト​する​には、​顔​を​ダブルタップ​して​ください。</string>
     <string name="burst_shot_guidetext">連写​写真​は​システム​メモリ（本体）​に​保存​され​ます。</string>
     <string name="snap_shot_limitation_dialog">手​振れ​補正​が​有効​な​とき​は、​スナップ​ショット​記録​機能​を​使用​でき​ません。</string>
@@ -271,7 +260,6 @@
     <string name="on_device_help_camcorder">ビデオカメラモードに切り替えてください。</string>
     <string name="on_device_help_self">自分撮りモードに切り替え</string>
     <string name="on_device_help_editable">移動させたい​​ショートカットを​​長押し​​してください。​​それを​​移動させたい​​場所に​​ドラッグ​​します。</string>
-    <string name="on_device_help_voicecommand">「撮る」、​「撮影」、​「笑って」、​「チーズ」の​ような​音声コマンドで​写真を​撮る​ことが​できます。</string>
     <string name="Title_VideoSpeed">スピード</string>
     <string name="SPEED_OFF">通常</string>
     <string name="SPEED_2X_FASTER">2倍速</string>
@@ -293,7 +281,4 @@
     <string name="self_recording_open_warning_popup">電話​が​開いて​いる​とき​は、​自分​撮り​（動画）​のみ​使用​でき​ます。</string>
     <string name="contextual_filename">ファイル​名​の​自動​生成</string>
     <string name="enable_gps_dialog">GPS​タグ​を​有効​に​する​必要​が​あり​ます。​GPS​タグ​を​有効​に​し​ます​か？</string>
-    <string name="gallery_disable">ギャラリー​が​無効​です。</string>
-    <string name="HDR_Normal">標準</string>
-    <string name="HDR_Strong">強い</string>
 </resources>

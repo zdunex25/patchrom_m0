@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 6495
+    .line 6044
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 6495
+    .line 6044
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;-><init>(Lcom/sec/android/app/camera/Camera;)V
 
     return-void
@@ -60,7 +60,7 @@
 
     const/4 v4, 0x1
 
-    .line 6497
+    .line 6046
     const-string v1, "Camera"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -87,25 +87,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6498
+    .line 6047
     const/4 v0, -0x1
 
-    .line 6499
+    .line 6048
     .local v0, result:I
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mBargeInRecognizer:Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
-    invoke-static {v1}, Lcom/sec/android/app/camera/Camera;->access$2700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
+    invoke-static {v1}, Lcom/sec/android/app/camera/Camera;->access$2600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 6500
+    .line 6049
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mBargeInRecognizer:Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
-    invoke-static {v1}, Lcom/sec/android/app/camera/Camera;->access$2700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
+    invoke-static {v1}, Lcom/sec/android/app/camera/Camera;->access$2600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/IWSpeechRecognizer/BargeInRecognizer;
 
     move-result-object v1
 
@@ -113,16 +113,16 @@
 
     move-result v0
 
-    .line 6503
+    .line 6052
     :cond_0
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 6504
+    .line 6053
     packed-switch v0, :pswitch_data_0
 
-    .line 6514
+    .line 6063
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
@@ -132,7 +132,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 6515
+    .line 6064
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
@@ -142,30 +142,30 @@
 
     invoke-virtual {v1, v4}, Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;->setVoiceStatus(I)V
 
-    .line 6522
+    .line 6071
     :cond_1
     :goto_0
     return-void
 
-    .line 6509
+    .line 6058
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/Camera;->restartInactivityTimer()V
 
-    .line 6510
+    .line 6059
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1, v5, v6}, Lcom/sec/android/app/camera/Camera;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    .line 6511
+    .line 6060
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1, v5, v6}, Lcom/sec/android/app/camera/Camera;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     goto :goto_0
 
-    .line 6519
+    .line 6068
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -176,7 +176,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 6520
+    .line 6069
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$VoiceRecognizer;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
@@ -188,7 +188,7 @@
 
     goto :goto_0
 
-    .line 6504
+    .line 6053
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

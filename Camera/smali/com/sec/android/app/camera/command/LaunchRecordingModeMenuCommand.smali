@@ -210,7 +210,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mSlideDirection:I
 
@@ -234,19 +234,19 @@
     if-eqz v0, :cond_0
 
     .line 98
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mZOrder:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setZorder(I)V
 
     .line 99
-    iget-object v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v1, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setAnchor(Lcom/sec/android/glview/TwGLImage;)V
 
     .line 100
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchX:F
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mLaunchX:F
 
-    iget v2, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchY:F
+    iget v2, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mLaunchY:F
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/MenuBase;->setLaunchPosition(FF)V
 
@@ -311,7 +311,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->mSlideDirection:I
 

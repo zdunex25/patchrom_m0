@@ -64,14 +64,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Чорно-біле</string>
+    <string name="E_BW">Чорно-білий</string>
     <string name="E_SEPIA">Сепія</string>
     <string name="E_NEGATIVE">Негатив</string>
     <string name="E_EMBOSS">Рельєф</string>
     <string name="E_OUTLINE">Схема</string>
     <string name="E_WATERCOLOR">Акварель</string>
-    <string name="E_MONOCHROME">Монохромний</string>
-    <string name="E_SKETCH">Ескіз</string>
     <string name="E_WASHED">Нечітке зображення</string>
     <string name="E_POSTERIZE">Постеризація</string>
     <string name="E_SOLARIZE">Соляризація</string>
@@ -106,7 +104,7 @@
     <string name="RM_MMS">Обм. для MMS</string>
     <string name="RM_EMAIL">Обмеження для Email</string>
     <string name="RM_SLOW">Сповільнення</string>
-    <string name="RM_FAST">Прискорена зйомка</string>
+    <string name="RM_FAST">Прискорення</string>
     <string name="CS_PROGRESS_TEXT">Створення зображення. Зачекайте...</string>
     <string name="SCN_NONE">Немає</string>
     <string name="SCN_PORTRAIT">Портрет</string>
@@ -135,7 +133,6 @@
     <string name="Title_Timer">Таймер</string>
     <string name="Title_Resolution">Роздільна здатність</string>
     <string name="Title_ShootAndShare">Уст.сп.д.до знімків</string>
-    <string name="Title_DeviceList">Список пристроїв</string>
     <string name="Title_WhiteBalance">Баланс білого</string>
     <string name="Title_Effects">Ефекти</string>
     <string name="Title_Focus">Шрифт меню</string>
@@ -157,7 +154,6 @@
     <string name="Title_AutoContrast">Автоконтрастність</string>
     <string name="Title_GPS">Тег GPS</string>
     <string name="Title_Review">Огляд</string>
-    <string name="Title_AutoShareShot">Знімок з автом.сп.дост.</string>
     <string name="Title_Guideline">Вказівки</string>
     <string name="Title_VideoQuality">Якість відео</string>
     <string name="Title_AudioRecording">Запис. звуку</string>
@@ -180,10 +176,7 @@
     <string name="HDR_Helptext">Не рухайте пристрій під час фотографування</string>
     <string name="help_text_panorama">Натисніть клавішу камери та повільно пересувайте телефон у вибраному напрямку</string>
     <string name="help_text_panorama_device">Натисніть клавішу камери та повільно перемістіть пристрій в одному напрямку</string>
-    <string name="message_DefaultLayout">Розташування клавіш швидкого доступу буде скинуто</string>
     <string name="message_EULA_GPS">Увімкнення функції тега GPS надає можливість додавати, прикріплювати та зберігати дані географічного розташування для кожної фотографії. Будьте уважні при надсиланні, відкритті спільного доступу, розповсюдженні, передачі або копіюванні цих фотографій, оскільки вони містять відомості про розташування, де було зроблено знімки</string>
-    <string name="message_Auto_ShareShot">"Знімок з автоматичним спільним доступом дає змогу із легкістю підключатися до пристроїв, яким потрібно надати спільний доступ до фотографій.
-Увімкніть знімок з автоматичним спільним доступом, а потім прикладіть пристрої один до одного (зазвичай має бути суміщено задні панелі), щоб підключити їх"</string>
     <string name="GPS_msg">GPS вимк.</string>
     <string name="message_enable_GPS">Увімкніть GPS в установках, щоб скористатися тегом GPS</string>
     <string name="cancel">Скасув.</string>
@@ -250,11 +243,9 @@
     <string name="profile_user_default_name">Невідома</string>
     <string name="shareshot_no_user">Немає абонентів, яким можна надати спільний доступ</string>
     <string name="snapshot_saved">%s збережено</string>
-    <string name="editable_shortcut_reset">Скинути</string>
     <string name="editable_shortcut_helptext_title">Підказки</string>
     <string name="editable_shortcut_helptext_message">Натисніть і утримуйте клавіші швидкого доступу для їхнього редагування</string>
     <string name="editable_shortcut_helptext">Натисніть і утримуйте значок, а потім перетягніть його, щоб змінити розташування клавіш швидкого доступу</string>
-    <string name="sbeam_helptext">Фотографування та обмін знімками з іншими пристроями. Прикладіть пристрої один до одного, щоб додати пристрої, з якими буде проводитися обмін за допомогою S Beam</string>
     <string name="storage_setting_dialog_title">Розташування місця збереження</string>
     <string name="storage_setting_dialog_message">Вставлено карту пам’яті. Вибрати карту пам’яті для розташування місця збереження?</string>
     <string name="do_not_ask_again">Більше не показувати</string>
@@ -263,8 +254,6 @@
     <string name="bestpic">Найкраща фотографія</string>
     <string name="bestpic_on">Ув</string>
     <string name="bestpic_off">Вим</string>
-    <string name="bestgroup">Найкраще групове фото</string>
-    <string name="bestgroup_title">Вибер.найкр.облич.для збереж.</string>
     <string name="battery_low">Закрийте камеру. Занизька температура акумулятора.</string>
     <string name="buddy_photo_share_helptext">Робіть знімки та обмінюйтеся ними із друзями за допомогою функції розпізнавання обличчя</string>
     <string name="face_zoom_helptext">Двічі натисніть обличчя, щоб збільшити або зменшити масштаб</string>
@@ -274,7 +263,6 @@
     <string name="on_device_help_camcorder">Перехід до режиму відеокамери</string>
     <string name="on_device_help_self">Перехід у режим автопортрету</string>
     <string name="on_device_help_editable">Натисніть і утримуйте клавішу швидкого доступу, яку потрібно перемістити. Потім перетягніть її до потрібної ділянки</string>
-    <string name="on_device_help_voicecommand">Можна фотографувати за допомогою голосових команд \"Зйомка\", \"Знімаю\", \"Посмішка\" та \"Посміхайтесь\"</string>
     <string name="Title_VideoSpeed">Швидкість</string>
     <string name="SPEED_OFF">Звичайна</string>
     <string name="SPEED_2X_FASTER">Вдвічі швидше</string>
@@ -296,7 +284,4 @@
     <string name="self_recording_open_warning_popup">Функція \"Автопортрет\" може використовуватись лише якщо кришку телефона відкрито</string>
     <string name="contextual_filename">Ім’я файла з контексту</string>
     <string name="enable_gps_dialog">Потрібно увімкнути тег GPS. Увімкнути тег GPS?</string>
-    <string name="gallery_disable">Галерею вимкнено</string>
-    <string name="HDR_Normal">Звичайна</string>
-    <string name="HDR_Strong">Сильний</string>
 </resources>

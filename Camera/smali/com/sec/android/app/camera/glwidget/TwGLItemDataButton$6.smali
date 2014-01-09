@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 282
+    .line 279
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$6;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,30 +43,30 @@
     .parameter "focusStatus"
 
     .prologue
-    .line 285
+    .line 282
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$6;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$1400(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 286
+    .line 283
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$6;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$1500(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Lcom/sec/android/glview/TwGLView$OnFocusListener;->onFocusChanged(Lcom/sec/android/glview/TwGLView;I)Z
 
-    .line 287
+    .line 284
     const/4 v0, 0x1
 
-    .line 289
+    .line 286
     :goto_0
     return v0
 

@@ -13,7 +13,7 @@
 
     .prologue
     .line 30
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/command/EmptyCommand;-><init>()V
 
-    .line 510
+    .line 499
     :goto_0
     :sswitch_0
     return-object v0
@@ -80,7 +80,7 @@
 
     .line 47
     .local v4, res:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_12
 
     .line 48
     const/4 v0, 0x0
@@ -371,8 +371,30 @@
 
     goto/16 :goto_0
 
-    .line 90
+    .line 83
     :cond_10
+    const/16 v1, 0xbb9
+
+    if-ne p0, v1, :cond_11
+
+    .line 84
+    new-instance v0, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;
+
+    .end local v0           #command:Lcom/sec/android/app/camera/command/MenuCommand;
+    invoke-direct {v0, p1, p2, p3, v4}, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;)V
+
+    .restart local v0       #command:Lcom/sec/android/app/camera/command/MenuCommand;
+    move-object v1, v0
+
+    .line 85
+    check-cast v1, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;
+
+    invoke-virtual {v1, p4}, Lcom/sec/android/app/camera/command/LaunchRecordingModeMenuCommand;->setZOrder(I)V
+
+    goto/16 :goto_0
+
+    .line 87
+    :cond_11
     new-instance v0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;
 
     .end local v0           #command:Lcom/sec/android/app/camera/command/MenuCommand;
@@ -381,21 +403,21 @@
     .restart local v0       #command:Lcom/sec/android/app/camera/command/MenuCommand;
     move-object v1, v0
 
-    .line 91
+    .line 88
     check-cast v1, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;
 
     invoke-virtual {v1, p4}, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->setZOrder(I)V
 
     goto/16 :goto_0
 
-    .line 96
+    .line 93
     .end local v0           #command:Lcom/sec/android/app/camera/command/MenuCommand;
-    :cond_11
+    :cond_12
     sparse-switch p0, :sswitch_data_0
 
     goto/16 :goto_0
 
-    .line 228
+    .line 224
     :sswitch_1
     new-instance v0, Lcom/sec/android/app/camera/command/ResetSettingsCommand;
 
@@ -403,7 +425,7 @@
 
     goto/16 :goto_0
 
-    .line 98
+    .line 95
     :sswitch_2
     new-instance v0, Lcom/sec/android/app/camera/command/EditModeSelectCommand;
 
@@ -411,7 +433,7 @@
 
     goto/16 :goto_0
 
-    .line 103
+    .line 100
     :sswitch_3
     new-instance v0, Lcom/sec/android/app/camera/command/CameraSelfModeSelectCommand;
 
@@ -419,7 +441,7 @@
 
     goto/16 :goto_0
 
-    .line 108
+    .line 105
     :sswitch_4
     new-instance v0, Lcom/sec/android/app/camera/command/CamcorderSelfModeSelectCommand;
 
@@ -427,7 +449,7 @@
 
     goto/16 :goto_0
 
-    .line 129
+    .line 125
     :sswitch_5
     new-instance v0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;
 
@@ -435,7 +457,7 @@
 
     goto/16 :goto_0
 
-    .line 145
+    .line 141
     :sswitch_6
     new-instance v0, Lcom/sec/android/app/camera/command/SceneModeSelectCommand;
 
@@ -443,7 +465,7 @@
 
     goto/16 :goto_0
 
-    .line 151
+    .line 147
     :sswitch_7
     new-instance v0, Lcom/sec/android/app/camera/command/OutdoorVisibilitySelectCommand;
 
@@ -451,7 +473,7 @@
 
     goto/16 :goto_0
 
-    .line 157
+    .line 153
     :sswitch_8
     new-instance v0, Lcom/sec/android/app/camera/command/FocusModeSelectCommand;
 
@@ -459,7 +481,7 @@
 
     goto/16 :goto_0
 
-    .line 167
+    .line 163
     :sswitch_9
     new-instance v0, Lcom/sec/android/app/camera/command/TimerSelectCommand;
 
@@ -467,7 +489,7 @@
 
     goto/16 :goto_0
 
-    .line 201
+    .line 197
     :sswitch_a
     new-instance v0, Lcom/sec/android/app/camera/command/ResolutionSelectCommand;
 
@@ -475,7 +497,7 @@
 
     goto/16 :goto_0
 
-    .line 225
+    .line 221
     :sswitch_b
     new-instance v0, Lcom/sec/android/app/camera/command/DefaultLayoutSelectCommand;
 
@@ -483,7 +505,7 @@
 
     goto/16 :goto_0
 
-    .line 243
+    .line 239
     :sswitch_c
     new-instance v0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;
 
@@ -492,14 +514,14 @@
     .restart local v0       #command:Lcom/sec/android/app/camera/command/MenuCommand;
     move-object v1, v0
 
-    .line 244
+    .line 240
     check-cast v1, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;
 
     invoke-virtual {v1, p4}, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;->setZOrder(I)V
 
     goto/16 :goto_0
 
-    .line 255
+    .line 251
     .end local v0           #command:Lcom/sec/android/app/camera/command/MenuCommand;
     :sswitch_d
     new-instance v0, Lcom/sec/android/app/camera/command/FlashMenuSelectCommand;
@@ -508,7 +530,7 @@
 
     goto/16 :goto_0
 
-    .line 272
+    .line 268
     :sswitch_e
     new-instance v0, Lcom/sec/android/app/camera/command/WhiteBalanceMenuSelectCommand;
 
@@ -516,7 +538,7 @@
 
     goto/16 :goto_0
 
-    .line 315
+    .line 311
     :sswitch_f
     new-instance v0, Lcom/sec/android/app/camera/command/EffectMenuSelectCommand;
 
@@ -524,7 +546,7 @@
 
     goto/16 :goto_0
 
-    .line 331
+    .line 327
     :sswitch_10
     new-instance v0, Lcom/sec/android/app/camera/command/ISOMenuSelectCommand;
 
@@ -532,7 +554,7 @@
 
     goto/16 :goto_0
 
-    .line 337
+    .line 333
     :sswitch_11
     new-instance v0, Lcom/sec/android/app/camera/command/ExposuremeterMenuSelectCommand;
 
@@ -540,7 +562,7 @@
 
     goto/16 :goto_0
 
-    .line 344
+    .line 340
     :sswitch_12
     new-instance v0, Lcom/sec/android/app/camera/command/AntishakeSelectCommand;
 
@@ -548,7 +570,7 @@
 
     goto/16 :goto_0
 
-    .line 351
+    .line 347
     :sswitch_13
     new-instance v0, Lcom/sec/android/app/camera/command/AutoContrastSelectCommand;
 
@@ -556,7 +578,7 @@
 
     goto/16 :goto_0
 
-    .line 357
+    .line 353
     :sswitch_14
     new-instance v0, Lcom/sec/android/app/camera/command/CameraQualityMenuSelectCommand;
 
@@ -564,7 +586,7 @@
 
     goto/16 :goto_0
 
-    .line 363
+    .line 359
     :sswitch_15
     new-instance v0, Lcom/sec/android/app/camera/command/CamcorderQualityMenuSelectCommand;
 
@@ -572,7 +594,7 @@
 
     goto/16 :goto_0
 
-    .line 372
+    .line 368
     :sswitch_16
     new-instance v0, Lcom/sec/android/app/camera/command/CamcorderSpeedMenuSelectCommand;
 
@@ -580,7 +602,7 @@
 
     goto/16 :goto_0
 
-    .line 379
+    .line 375
     :sswitch_17
     new-instance v0, Lcom/sec/android/app/camera/command/GuidelineSelectCommand;
 
@@ -588,7 +610,7 @@
 
     goto/16 :goto_0
 
-    .line 386
+    .line 382
     :sswitch_18
     new-instance v0, Lcom/sec/android/app/camera/command/ReviewMenuSelectCommand;
 
@@ -596,16 +618,8 @@
 
     goto/16 :goto_0
 
-    .line 393
+    .line 388
     :sswitch_19
-    new-instance v0, Lcom/sec/android/app/camera/command/VoiceCommandMenuSelectCommand;
-
-    invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/VoiceCommandMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
-
-    goto/16 :goto_0
-
-    .line 399
-    :sswitch_1a
     new-instance v5, Lcom/sec/android/app/camera/command/SnSSettingMenuSelectCommand;
 
     move-object v6, p1
@@ -620,57 +634,65 @@
 
     invoke-direct/range {v5 .. v10}, Lcom/sec/android/app/camera/command/SnSSettingMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;I)V
 
-    .line 400
+    .line 389
     .local v5, snsCommand:Lcom/sec/android/app/camera/command/MenuCommand;
     invoke-virtual {v5, p4}, Lcom/sec/android/app/camera/command/MenuCommand;->setZOrder(I)V
 
     move-object v0, v5
 
-    .line 401
+    .line 390
     goto/16 :goto_0
 
-    .line 404
+    .line 393
     .end local v5           #snsCommand:Lcom/sec/android/app/camera/command/MenuCommand;
-    :sswitch_1b
+    :sswitch_1a
     new-instance v0, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;
 
     invoke-direct {v0, p1, p2, p3, v4}, Lcom/sec/android/app/camera/command/LaunchListTypeMenuCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;)V
 
     goto/16 :goto_0
 
-    .line 406
-    :sswitch_1c
+    .line 395
+    :sswitch_1b
     new-instance v0, Lcom/sec/android/app/camera/command/LaunchDeviceListCommand;
 
     invoke-direct {v0, p1, p2, p3, v4}, Lcom/sec/android/app/camera/command/LaunchDeviceListCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;)V
 
     goto/16 :goto_0
 
-    .line 414
-    :sswitch_1d
+    .line 403
+    :sswitch_1c
     new-instance v0, Lcom/sec/android/app/camera/command/GpsSelectCommand;
 
     invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/GpsSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
 
     goto/16 :goto_0
 
-    .line 419
-    :sswitch_1e
+    .line 408
+    :sswitch_1d
     new-instance v0, Lcom/sec/android/app/camera/command/ShutterSoundMenuSelectCommand;
 
     invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/ShutterSoundMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
 
     goto/16 :goto_0
 
-    .line 424
-    :sswitch_1f
+    .line 413
+    :sswitch_1e
     new-instance v0, Lcom/sec/android/app/camera/command/FlipMenuSelectCommand;
 
     invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/FlipMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
 
     goto/16 :goto_0
 
-    .line 433
+    .line 418
+    :sswitch_1f
+    new-instance v0, Lcom/sec/android/app/camera/command/HdrMenuSelectCommand;
+
+    invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/HdrMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
+
+    goto/16 :goto_0
+
+    .line 427
     :sswitch_20
     new-instance v0, Lcom/sec/android/app/camera/command/EffectRecorderMenuSelectCommand;
 
@@ -678,7 +700,7 @@
 
     goto/16 :goto_0
 
-    .line 439
+    .line 433
     :sswitch_21
     new-instance v0, Lcom/sec/android/app/camera/command/StorageMenuSelectCommand;
 
@@ -686,7 +708,7 @@
 
     goto/16 :goto_0
 
-    .line 458
+    .line 452
     :sswitch_22
     new-instance v0, Lcom/sec/android/app/camera/command/DefaultLayoutSelectCommand;
 
@@ -694,7 +716,7 @@
 
     goto/16 :goto_0
 
-    .line 461
+    .line 455
     :sswitch_23
     new-instance v0, Lcom/sec/android/app/camera/command/ResetSettingsCommand;
 
@@ -702,7 +724,7 @@
 
     goto/16 :goto_0
 
-    .line 477
+    .line 471
     :sswitch_24
     new-instance v0, Lcom/sec/android/app/camera/command/RecordingModeSelectCommand;
 
@@ -710,7 +732,7 @@
 
     goto/16 :goto_0
 
-    .line 485
+    .line 479
     :sswitch_25
     new-instance v0, Lcom/sec/android/app/camera/command/AudioRecordingSelectCommand;
 
@@ -718,7 +740,7 @@
 
     goto/16 :goto_0
 
-    .line 490
+    .line 484
     :sswitch_26
     new-instance v0, Lcom/sec/android/app/camera/command/BurstModeSelectCommand;
 
@@ -726,7 +748,7 @@
 
     goto/16 :goto_0
 
-    .line 498
+    .line 492
     :sswitch_27
     new-instance v0, Lcom/sec/android/app/camera/command/ContextualFilenameSelectCommand;
 
@@ -734,15 +756,7 @@
 
     goto/16 :goto_0
 
-    .line 503
-    :sswitch_28
-    new-instance v0, Lcom/sec/android/app/camera/command/AutoShareShotModeSelectCommand;
-
-    invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/AutoShareShotModeSelectCommand;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
-
-    goto/16 :goto_0
-
-    .line 96
+    .line 93
     nop
 
     :sswitch_data_0
@@ -767,15 +781,15 @@
         0x26 -> :sswitch_c
         0x32 -> :sswitch_2
         0x33 -> :sswitch_0
-        0x36 -> :sswitch_1c
-        0x37 -> :sswitch_1a
-        0x38 -> :sswitch_1b
-        0x39 -> :sswitch_1b
-        0x3a -> :sswitch_1a
+        0x36 -> :sswitch_1b
+        0x37 -> :sswitch_19
+        0x38 -> :sswitch_1a
+        0x39 -> :sswitch_1a
+        0x3a -> :sswitch_19
+        0x3c -> :sswitch_0
         0x3e -> :sswitch_b
         0x3f -> :sswitch_0
         0x40 -> :sswitch_0
-        0x42 -> :sswitch_0
         0x64 -> :sswitch_c
         0x65 -> :sswitch_c
         0xc8 -> :sswitch_3
@@ -798,7 +812,6 @@
         0x13e -> :sswitch_5
         0x13f -> :sswitch_5
         0x140 -> :sswitch_5
-        0x141 -> :sswitch_5
         0x1f4 -> :sswitch_6
         0x1f5 -> :sswitch_6
         0x1f6 -> :sswitch_6
@@ -924,12 +937,12 @@
         0x76d -> :sswitch_18
         0x76f -> :sswitch_18
         0x770 -> :sswitch_18
-        0x7d0 -> :sswitch_1d
-        0x7d1 -> :sswitch_1d
-        0x7d3 -> :sswitch_1d
-        0x7d4 -> :sswitch_1d
-        0x834 -> :sswitch_1e
-        0x835 -> :sswitch_1e
+        0x7d0 -> :sswitch_1c
+        0x7d1 -> :sswitch_1c
+        0x7d3 -> :sswitch_1c
+        0x7d4 -> :sswitch_1c
+        0x834 -> :sswitch_1d
+        0x835 -> :sswitch_1d
         0x898 -> :sswitch_21
         0x899 -> :sswitch_21
         0x89a -> :sswitch_21
@@ -1009,8 +1022,10 @@
         0xd4b -> :sswitch_7
         0xdac -> :sswitch_25
         0xdad -> :sswitch_25
-        0xf3c -> :sswitch_1f
-        0xf3d -> :sswitch_1f
+        0xf3c -> :sswitch_1e
+        0xf3d -> :sswitch_1e
+        0x1004 -> :sswitch_1f
+        0x1005 -> :sswitch_1f
         0x1068 -> :sswitch_4
         0x1069 -> :sswitch_4
         0x1130 -> :sswitch_20
@@ -1026,11 +1041,5 @@
         0x11f9 -> :sswitch_27
         0x125c -> :sswitch_27
         0x125d -> :sswitch_27
-        0x12c0 -> :sswitch_28
-        0x12c1 -> :sswitch_28
-        0x1324 -> :sswitch_19
-        0x1325 -> :sswitch_19
-        0x1326 -> :sswitch_19
-        0x1327 -> :sswitch_19
     .end sparse-switch
 .end method

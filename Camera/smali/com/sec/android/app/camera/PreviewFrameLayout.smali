@@ -4,11 +4,7 @@
 
 
 # static fields
-.field public static final NORMAL_RATIO:D = 1.3333333333333333
-
 .field private static final TAG:Ljava/lang/String; = "PreviewFrameLayout"
-
-.field public static final WIDE_SCREEN_RATIO:D = 1.7777777777777777
 
 
 # instance fields
@@ -33,27 +29,27 @@
 
     const/4 v2, 0x0
 
-    .line 39
+    .line 41
     invoke-direct {p0, p1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
 
-    .line 30
+    .line 32
     const-wide v0, 0x3ff5555555555555L
 
     iput-wide v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
-    .line 32
+    .line 34
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHorizontalTileSize:I
 
-    .line 33
+    .line 35
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mVerticalTileSize:I
 
-    .line 35
+    .line 37
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
-    .line 36
+    .line 38
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
-    .line 40
+    .line 42
     return-void
 .end method
 
@@ -67,27 +63,27 @@
 
     const/4 v2, 0x0
 
-    .line 43
+    .line 45
     invoke-direct {p0, p1, p2}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 30
+    .line 32
     const-wide v0, 0x3ff5555555555555L
 
     iput-wide v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
-    .line 32
+    .line 34
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHorizontalTileSize:I
 
-    .line 33
+    .line 35
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mVerticalTileSize:I
 
-    .line 35
+    .line 37
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
-    .line 36
+    .line 38
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
-    .line 44
+    .line 46
     return-void
 .end method
 
@@ -102,27 +98,27 @@
 
     const/4 v2, 0x0
 
-    .line 47
+    .line 49
     invoke-direct {p0, p1, p2, p3}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 30
+    .line 32
     const-wide v0, 0x3ff5555555555555L
 
     iput-wide v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
-    .line 32
+    .line 34
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHorizontalTileSize:I
 
-    .line 33
+    .line 35
     iput v3, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mVerticalTileSize:I
 
-    .line 35
+    .line 37
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
-    .line 36
+    .line 38
     iput v2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
-    .line 48
+    .line 50
     return-void
 .end method
 
@@ -133,7 +129,7 @@
     .parameter "maxDimension"
 
     .prologue
-    .line 117
+    .line 119
     add-int v0, p1, p2
 
     add-int/lit8 v0, v0, -0x1
@@ -155,7 +151,7 @@
     .locals 2
 
     .prologue
-    .line 81
+    .line 83
     iget-wide v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
     return-wide v0
@@ -167,32 +163,32 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 85
+    .line 87
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v4
 
-    .line 86
+    .line 88
     .local v4, widthSpecSize:I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
-    .line 88
+    .line 90
     .local v2, heightSpecSize:I
     move v3, v4
 
-    .line 89
+    .line 91
     .local v3, width:I
     move v1, v2
 
-    .line 91
+    .line 93
     .local v1, height:I
     if-lez v3, :cond_3
 
     if-lez v1, :cond_3
 
-    .line 92
+    .line 94
     iget v5, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
     if-eqz v5, :cond_0
@@ -201,18 +197,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 93
+    .line 95
     iget v5, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
     iget v6, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
     invoke-virtual {p0, v5, v6}, Lcom/sec/android/app/camera/PreviewFrameLayout;->setMeasuredDimension(II)V
 
-    .line 114
+    .line 116
     :goto_0
     return-void
 
-    .line 97
+    .line 99
     :cond_0
     int-to-float v5, v3
 
@@ -220,7 +216,7 @@
 
     div-float v0, v5, v6
 
-    .line 98
+    .line 100
     .local v0, defaultRatio:F
     float-to-double v5, v0
 
@@ -230,7 +226,7 @@
 
     if-gez v5, :cond_2
 
-    .line 100
+    .line 102
     int-to-double v5, v3
 
     iget-wide v7, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
@@ -239,7 +235,7 @@
 
     double-to-int v1, v5
 
-    .line 104
+    .line 106
     :cond_1
     :goto_1
     iget v5, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHorizontalTileSize:I
@@ -248,19 +244,19 @@
 
     move-result v3
 
-    .line 106
+    .line 108
     iget v5, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mVerticalTileSize:I
 
     invoke-direct {p0, v1, v5, v2}, Lcom/sec/android/app/camera/PreviewFrameLayout;->roundUpToTile(III)I
 
     move-result v1
 
-    .line 109
+    .line 111
     invoke-virtual {p0, v3, v1}, Lcom/sec/android/app/camera/PreviewFrameLayout;->setMeasuredDimension(II)V
 
     goto :goto_0
 
-    .line 101
+    .line 103
     :cond_2
     float-to-double v5, v0
 
@@ -270,7 +266,7 @@
 
     if-lez v5, :cond_1
 
-    .line 102
+    .line 104
     int-to-double v5, v1
 
     iget-wide v7, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
@@ -281,7 +277,7 @@
 
     goto :goto_1
 
-    .line 113
+    .line 115
     .end local v0           #defaultRatio:F
     :cond_3
     invoke-super {p0, p1, p2}, Landroid/view/SurfaceView;->onMeasure(II)V
@@ -295,13 +291,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 76
+    .line 78
     iput v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
-    .line 77
+    .line 79
     iput v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
-    .line 78
+    .line 80
     return-void
 .end method
 
@@ -310,7 +306,7 @@
     .parameter "aspectRatio"
 
     .prologue
-    .line 51
+    .line 53
     const-string v0, "PreviewFrameLayout"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -333,29 +329,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
+    .line 54
     invoke-virtual {p0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->resetSize()V
 
-    .line 54
+    .line 56
     iget-wide v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
     cmpl-double v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 55
+    .line 57
     iput-wide p1, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mAspectRatio:D
 
-    .line 56
+    .line 58
     invoke-virtual {p0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->requestLayout()V
 
-    .line 57
+    .line 59
     invoke-virtual {p0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->invalidate()V
 
-    .line 58
+    .line 60
     const/4 v0, 0x1
 
-    .line 60
+    .line 62
     :goto_0
     return v0
 
@@ -371,7 +367,7 @@
     .parameter "height"
 
     .prologue
-    .line 64
+    .line 66
     const-string v0, "PreviewFrameLayout"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -404,7 +400,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
+    .line 67
     iget v0, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
     if-ne v0, p1, :cond_0
@@ -413,23 +409,23 @@
 
     if-eq v0, p2, :cond_1
 
-    .line 66
+    .line 68
     :cond_0
     iput p1, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mWidth:I
 
-    .line 67
+    .line 69
     iput p2, p0, Lcom/sec/android/app/camera/PreviewFrameLayout;->mHeight:I
 
-    .line 68
+    .line 70
     invoke-virtual {p0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->requestLayout()V
 
-    .line 69
+    .line 71
     invoke-virtual {p0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->invalidate()V
 
-    .line 70
+    .line 72
     const/4 v0, 0x1
 
-    .line 72
+    .line 74
     :goto_0
     return v0
 

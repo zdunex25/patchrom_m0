@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1551
+    .line 1441
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$15;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,14 +45,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1553
+    .line 1443
     invoke-static {}, Lcom/sec/android/app/camera/CheckMemory;->isStorageMounted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1554
+    .line 1444
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$15;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -61,12 +61,12 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setStorage(I)V
 
-    .line 1556
+    .line 1446
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$15;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
-    .line 1557
+    .line 1447
     return-void
 .end method

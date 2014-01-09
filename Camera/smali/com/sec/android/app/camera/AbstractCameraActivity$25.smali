@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1719
+    .line 1594
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$25;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,20 +43,13 @@
     .parameter "which"
 
     .prologue
-    .line 1721
+    .line 1596
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$25;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setGpsPopupDisplayed(Z)V
-
-    .line 1722
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$25;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
-    .line 1723
+    .line 1597
     return-void
 .end method

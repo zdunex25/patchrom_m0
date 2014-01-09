@@ -30,7 +30,7 @@
     .line 100
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .line 106
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;
 
-    iget-object v0, v0, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, v0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 

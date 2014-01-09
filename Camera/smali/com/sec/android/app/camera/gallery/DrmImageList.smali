@@ -93,9 +93,9 @@
     const/4 v3, 0x0
 
     .line 54
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/DrmImageList;->mContentResolver:Landroid/content/ContentResolver;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mBaseUri:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/DrmImageList;->mBaseUri:Landroid/net/Uri;
 
     sget-object v2, Lcom/sec/android/app/camera/gallery/DrmImageList;->DRM_IMAGE_PROJECTION:[Ljava/lang/String;
 
@@ -152,7 +152,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v3, v0, Lcom/sec/android/app/camera/gallery/DrmImageList;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->getPosition()I
 

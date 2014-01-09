@@ -35,31 +35,31 @@
     .parameter "handler"
 
     .prologue
-    .line 493
+    .line 487
     invoke-direct {p0}, Lcom/sec/android/app/camera/MonitoredActivity$LifeCycleAdapter;-><init>()V
 
-    .line 487
+    .line 481
     new-instance v0, Lcom/sec/android/app/camera/Util$BackgroundJob$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/Util$BackgroundJob$1;-><init>(Lcom/sec/android/app/camera/Util$BackgroundJob;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mCleanupRunner:Ljava/lang/Runnable;
 
-    .line 494
+    .line 488
     iput-object p1, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mActivity:Lcom/sec/android/app/camera/MonitoredActivity;
 
-    .line 495
+    .line 489
     iput-object p2, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mJob:Ljava/lang/Runnable;
 
-    .line 496
+    .line 490
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mActivity:Lcom/sec/android/app/camera/MonitoredActivity;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/app/camera/MonitoredActivity;->addLifeCycleListener(Lcom/sec/android/app/camera/MonitoredActivity$LifeCycleListener;)V
 
-    .line 497
+    .line 491
     iput-object p3, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mHandler:Landroid/os/Handler;
 
-    .line 498
+    .line 492
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .parameter "x0"
 
     .prologue
-    .line 481
+    .line 475
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mActivity:Lcom/sec/android/app/camera/MonitoredActivity;
 
     return-object v0
@@ -81,19 +81,19 @@
     .parameter "activity"
 
     .prologue
-    .line 512
+    .line 506
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mCleanupRunner:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 513
+    .line 507
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mCleanupRunner:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 514
+    .line 508
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .parameter "activity"
 
     .prologue
-    .line 524
+    .line 518
     return-void
 .end method
 
@@ -111,7 +111,7 @@
     .parameter "activity"
 
     .prologue
-    .line 519
+    .line 513
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 3
 
     .prologue
-    .line 502
+    .line 496
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mJob:Ljava/lang/Runnable;
 
@@ -127,17 +127,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 504
+    .line 498
     iget-object v0, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/Util$BackgroundJob;->mCleanupRunner:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 506
+    .line 500
     return-void
 
-    .line 504
+    .line 498
     :catchall_0
     move-exception v0
 

@@ -67,14 +67,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">ขาวดำ​</string>
+    <string name="E_BW">สี​ดำ​และ​สี​ขาว</string>
     <string name="E_SEPIA">ซีเปีย</string>
     <string name="E_NEGATIVE">เนกาทีฟ</string>
     <string name="E_EMBOSS">นูน</string>
     <string name="E_OUTLINE">กรอบ</string>
     <string name="E_WATERCOLOR">ภาพสี​น้ำ</string>
-    <string name="E_MONOCHROME">โม​โน​โครม</string>
-    <string name="E_SKETCH">ร่าง</string>
     <string name="E_WASHED">วอชท์เอาท์</string>
     <string name="E_POSTERIZE">โพสเตอร์ไรซ์</string>
     <string name="E_SOLARIZE">โซลาไรซ์</string>
@@ -85,8 +83,7 @@
     <string name="E_POINT_RED_YELLOW">เร็ด-เยลโลวพอยต์</string>
     <string name="E_CARTOONIZE">ภาพ​การ์ตูน</string>
     <string name="F_AUTO_FLASH">แฟลช​อัตโนมัติ</string>
-    <string name="F_AUTOFOCUS">"ปรับ​โฟกัส​
-อัตโนมัติ"</string>
+    <string name="F_AUTOFOCUS">ออ​โต้​โฟกัส</string>
     <string name="F_MACRO">มาโคร</string>
     <string name="F_FACE">ตรวจ​จับ​ใบ​หน้า</string>
     <string name="F_PANFOCUS">แพน​โฟกัส</string>
@@ -110,7 +107,8 @@
     <string name="RM_EMAIL">ข้อ​จำกัด​สำหรับ​อี​เมล์</string>
     <string name="RM_SLOW">"เคลื่อน
 ​ไหว​ช้า"</string>
-    <string name="RM_FAST">เคลื่อนไหวเร็ว</string>
+    <string name="RM_FAST">"เคลื่อน
+​ไหว​เร็ว"</string>
     <string name="CS_PROGRESS_TEXT">กำลัง​สร้าง​รูป​ภาพ โปรด​รอ...</string>
     <string name="SCN_NONE">ไม่​มี</string>
     <string name="SCN_PORTRAIT">รูป​คน</string>
@@ -119,7 +117,8 @@
     <string name="SCN_PARTY_INDOOR">ปาร์ตี้/​ใน​ร่ม</string>
     <string name="SCN_BEACH_SNOW">ชาย​หาด/​หิมะ</string>
     <string name="SCN_SUNSET">พระ​อาทิตย์​ตก</string>
-    <string name="SCN_DAWN_DUSK">พระ​อาทิตย์​ขึ้น</string>
+    <string name="SCN_DAWN_DUSK">"พระ​อาทิตย์
+​ขึ้น"</string>
     <string name="SCN_FALL_COLOR">สีสัน​​ฤดู​ใบไม้​ร่วง</string>
     <string name="SCN_NIGHT_SHOT">กลาง​คืน</string>
     <string name="SCN_FIREWORK">พลุ</string>
@@ -139,7 +138,6 @@
     <string name="Title_Timer">การ​ตั้ง​เวลา</string>
     <string name="Title_Resolution">ความ​ละเอียด</string>
     <string name="Title_ShootAndShare">การ​ตั้ง​ค่า​แชร์​ภาพ</string>
-    <string name="Title_DeviceList">รายการอุปกรณ์</string>
     <string name="Title_WhiteBalance">สมดุล​สี​ขาว</string>
     <string name="Title_Effects">เอ​ฟเฟ็ก​ต์</string>
     <string name="Title_Focus">โฟกัส</string>
@@ -161,12 +159,11 @@
     <string name="Title_AutoContrast">ปรับ​ความ​คม​ชัด​อัตโนมัติ</string>
     <string name="Title_GPS">แท็ก GPS</string>
     <string name="Title_Review">แสดง</string>
-    <string name="Title_AutoShareShot">แชร์ภาพอัตโนมัติ</string>
     <string name="Title_Guideline">ไก​ด์​ไลน์</string>
     <string name="Title_VideoQuality">คุณภาพ​วี​ดี​โอ</string>
     <string name="Title_AudioRecording">การ​บันทึก​เสียง</string>
-    <string name="Title_Storage">ที่​จัด​เก็บ</string>
-    <string name="Title_Reset">ตั้ง​ค่า​ใหม่</string>
+    <string name="Title_Storage">ที่​เก็บ</string>
+    <string name="Title_Reset">ตั้ง​​ใหม่</string>
     <string name="Title_Mode">โหมด</string>
     <string name="Title_Back">กลับ</string>
     <string name="Title_ImageViewer">โปรแกรม​ดู​ภาพ</string>
@@ -184,10 +181,7 @@
     <string name="HDR_Helptext">ระวัง​อย่า​เขย่า​อุปกรณ์​ใน​ขณะ​ถ่าย​ภาพ</string>
     <string name="help_text_panorama">กด​ปุ่ม กล้อง​ถ่าย​รูป แล้ว​เลื่อน​โทรศัพท์​ช้าๆ ใน​ทิศ​ทาง​เดียว</string>
     <string name="help_text_panorama_device">กด​ปุ่ม กล้อง​ถ่าย​รูป แล้ว​เลื่อน​อุปกรณ์​ช้าๆ ใน​ทิศ​ทาง​เดียว</string>
-    <string name="message_DefaultLayout">รูปแบบทางลัดจะถูกตั้งค่าใหม่</string>
     <string name="message_EULA_GPS">การเปิดใช้แท็ก GPS จะเป็นการแนบ ฝัง หรือจัดเก็บข้อมูลตำแหน่งทางภูมิศาสตร์ภายในแต่ละภาพ โปรดระมัดระวังเมื่อคุณส่ง แชร์ แจกจ่าย ถ่ายทอด หรือคัดลอกรูปภาพเหล่านี้เนื่องจากภาพจะมีข้อมูลตำแหน่งที่ถ่ายภาพอยู่ด้วย</string>
-    <string name="message_Auto_ShareShot">"แชร์ภาพอัตโนมัติช่วยให้คุณเชื่อมต่อกับอุปกรณ์ที่คุณต้องการแชร์รูปภาพด้วยได้ง่ายดาย
-เปิดใช้งานแชร์ภาพอัตโนมัติ แล้วนำอุปกรณ์มาไว้ใกล้กัน (โดยปกติ ให้หันหลังชนกัน) เพื่อเชื่อมต่ออุปกรณ์ทั้งสอง"</string>
     <string name="GPS_msg">ปิด GPS</string>
     <string name="message_enable_GPS">เปิด GPS ​ใน​การ​ตั้ง​ค่า​เพื่อ​ใช้​แท็ก GPS</string>
     <string name="cancel">ยก​เลิก</string>
@@ -254,12 +248,10 @@
     <string name="profile_user_default_name">ไม่​รู้จัก</string>
     <string name="shareshot_no_user">ไม่​มี​บุคคล​ที่​จะ​แชร์​ด้วย</string>
     <string name="snapshot_saved">บันทึก %s ​เรียบ​ร้อย</string>
-    <string name="editable_shortcut_reset">รีเซ็ท</string>
     <string name="editable_shortcut_helptext_title">เคล็ด​ลับ</string>
     <string name="editable_shortcut_helptext_message">"สัมผัสและกดทางลัดค้างไว้
 เพื่อแก้ไข"</string>
     <string name="editable_shortcut_helptext">สัมผัสไอคอนค้างไว้ แล้วลากไปยังตำแหน่ง เพื่อแก้ไขของทางลัด</string>
-    <string name="sbeam_helptext">รับและแชร์รูปถ่ายกับอุปกรณ์อื่นๆ นำอุปกรณ์มาประกบกันเพื่อเพิ่มอุปกรณ์ที่คุณต้องการแชร์ผ่านทาง S Beam</string>
     <string name="storage_setting_dialog_title">ตำแหน่งที่จัดเก็บ</string>
     <string name="storage_setting_dialog_message">ใส่ SD การ์ดแล้ว เปลี่ยนตำแหน่งที่จัดเก็บไปยัง SD การ์ด?</string>
     <string name="do_not_ask_again">ห้าม​แสดง​อีก</string>
@@ -268,8 +260,6 @@
     <string name="bestpic">รูปภาพที่ดีที่สุด</string>
     <string name="bestpic_on">เปิด</string>
     <string name="bestpic_off">ปิด</string>
-    <string name="bestgroup">โพสที่ดีที่สุดเป็นกลุ่ม</string>
-    <string name="bestgroup_title">เลือกใบหน้าดีที่สุดเพื่อบันทึก</string>
     <string name="battery_low">ปิดกล้องถ่ายรูป อุณหภูมิแบตเตอรี่ต่ำเกินไป</string>
     <string name="buddy_photo_share_helptext">รับและแชร์รูปถ่ายกับเพื่อนๆ ผ่านทางตรวจจับใบหน้า</string>
     <string name="face_zoom_helptext">แตะสองครั้งที่ใบหน้าเพื่อซูมเข้าหรือซูมออก</string>
@@ -279,7 +269,6 @@
     <string name="on_device_help_camcorder">เปลี่ยนเป็นโหมดกล้องวิดีโอ</string>
     <string name="on_device_help_self">สลับเป็นโหมดถ่ายตัวเอง</string>
     <string name="on_device_help_editable">แตะทางลัดที่ต้องการย้ายค้างไว้ แล้วลากไปยังตำแหน่งที่คุณต้องการ</string>
-    <string name="on_device_help_voicecommand">"คุณสามารถถ่ายภาพด้วยคำสั่งเสียง เช่น 'จับภาพ', 'ถ่ายภาพ', 'ยิ้ม' และ 'ชีส'"</string>
     <string name="Title_VideoSpeed">ความ​เร็ว</string>
     <string name="SPEED_OFF">ปกติ</string>
     <string name="SPEED_2X_FASTER">เร็ว​ขึ้น 2 ​เท่า</string>
@@ -301,7 +290,4 @@
     <string name="self_recording_open_warning_popup">สามารถใช้การบันทึกตัวเองได้เมื่อโทรศัพท์เปิดอยู่เท่านั้น</string>
     <string name="contextual_filename">ชื่อไฟล์ในเชิงบริบท</string>
     <string name="enable_gps_dialog">ต้องเปิดใช้แท็ก GPS เปิดใช้แท็ก GPS?</string>
-    <string name="gallery_disable">แกลเลอรี่ถูกปิดใช้งาน</string>
-    <string name="HDR_Normal">ปกติ</string>
-    <string name="HDR_Strong">แรง</string>
 </resources>

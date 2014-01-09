@@ -30,18 +30,18 @@
     .parameter "value"
 
     .prologue
-    .line 371
+    .line 363
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$CeSettingsParameter;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 372
+    .line 364
     iput p2, p0, Lcom/sec/android/app/camera/CameraEngine$CeSettingsParameter;->mKey:I
 
-    .line 373
+    .line 365
     iput p3, p0, Lcom/sec/android/app/camera/CameraEngine$CeSettingsParameter;->mValue:I
 
-    .line 374
+    .line 366
     return-void
 .end method
 
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 377
+    .line 369
     iget v0, p0, Lcom/sec/android/app/camera/CameraEngine$CeSettingsParameter;->mKey:I
 
     return v0
@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 373
     iget v0, p0, Lcom/sec/android/app/camera/CameraEngine$CeSettingsParameter;->mValue:I
 
     return v0

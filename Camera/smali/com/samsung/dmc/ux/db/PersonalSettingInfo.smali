@@ -58,7 +58,7 @@
     const/4 v0, -0x1
 
     .line 45
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
     iput v0, p0, Lcom/samsung/dmc/ux/db/PersonalSettingInfo;->nIconType:I
@@ -76,7 +76,7 @@
 
     .prologue
     .line 50
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I

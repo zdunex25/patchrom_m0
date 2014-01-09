@@ -73,7 +73,7 @@
     const/4 v2, 0x0
 
     .line 36
-    const v0, 0x7f060153
+    const v0, 0x7f06014e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -82,7 +82,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_POPUP_GROUP_X:F
 
     .line 37
-    const v0, 0x7f060154
+    const v0, 0x7f06014f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -91,7 +91,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_POPUP_GROUP_Y:F
 
     .line 38
-    const v0, 0x7f060155
+    const v0, 0x7f060150
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -100,7 +100,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_POPUP_GROUP_WIDTH:F
 
     .line 39
-    const v0, 0x7f060156
+    const v0, 0x7f060151
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -109,7 +109,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_POPUP_GROUP_HEIGHT:F
 
     .line 40
-    const v0, 0x7f060167
+    const v0, 0x7f060162
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -118,7 +118,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESS_TEXT_X:F
 
     .line 41
-    const v0, 0x7f060169
+    const v0, 0x7f060164
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -127,7 +127,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESS_TEXT_Y:F
 
     .line 42
-    const v0, 0x7f06016a
+    const v0, 0x7f060165
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -136,7 +136,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESS_TEXT_WIDTH:F
 
     .line 43
-    const v0, 0x7f06016b
+    const v0, 0x7f060166
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -145,7 +145,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESS_TEXT_HEIGHT:F
 
     .line 44
-    const v0, 0x7f080021
+    const v0, 0x7f080020
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -156,7 +156,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESS_TEXT_SIZE:F
 
     .line 45
-    const v0, 0x7f060159
+    const v0, 0x7f060154
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -165,7 +165,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESSBAR_WIDTH:F
 
     .line 46
-    const v0, 0x7f06015a
+    const v0, 0x7f060155
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -174,7 +174,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESSBAR_HEIGHT:F
 
     .line 47
-    const v0, 0x7f060164
+    const v0, 0x7f06015f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -183,7 +183,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESSBAR_X:F
 
     .line 48
-    const v0, 0x7f060165
+    const v0, 0x7f060160
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -194,7 +194,7 @@
     .line 49
     new-array v0, v4, [F
 
-    const v1, 0x7f06016c
+    const v1, 0x7f060167
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -202,7 +202,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f06016d
+    const v1, 0x7f060168
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -215,7 +215,7 @@
     .line 51
     new-array v0, v4, [F
 
-    const v1, 0x7f06016e
+    const v1, 0x7f060169
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -223,7 +223,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f06016f
+    const v1, 0x7f06016a
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -234,7 +234,7 @@
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_POSTCAPTURE_PROGRESSBAR_POS_Y:[F
 
     .line 53
-    const v0, 0x7f060074
+    const v0, 0x7f06006f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -243,7 +243,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->STATUSBAR_HEIGHT:F
 
     .line 55
-    const v0, 0x7f060170
+    const v0, 0x7f06016b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -252,7 +252,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->HELP_TEXT_WIDTH:F
 
     .line 56
-    const v0, 0x7f060171
+    const v0, 0x7f06016c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -261,7 +261,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->HELP_TEXT_HEIGHT:F
 
     .line 57
-    const v0, 0x7f060072
+    const v0, 0x7f06006d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -275,7 +275,7 @@
 
     div-float/2addr v0, v1
 
-    const v1, 0x7f060090
+    const v1, 0x7f06008b
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -286,7 +286,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->HELP_TEXT_POS_X:F
 
     .line 58
-    const v0, 0x7f060073
+    const v0, 0x7f06006e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -299,7 +299,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->HELP_TEXT_POS_Y:F
 
     .line 59
-    const v0, 0x7f080022
+    const v0, 0x7f080021
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -403,9 +403,9 @@
 
     sget v5, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->CARTOONSHOT_PROGRESSBAR_HEIGHT:F
 
-    const v6, 0x7f02029a
+    const v6, 0x7f02027e
 
-    const v7, 0x7f020299
+    const v7, 0x7f02027d
 
     const/4 v8, 0x1
 
@@ -428,9 +428,9 @@
 
     sget v5, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->HELP_TEXT_HEIGHT:F
 
-    iget-object v6, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const v7, 0x7f0900d2
+    const v7, 0x7f0900d1
 
     invoke-virtual {v6, v7}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -545,7 +545,7 @@
     const/4 v5, 0x1
 
     .line 104
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/MenuResourceDepot;->mMenus:Ljava/util/HashMap;
 
@@ -566,7 +566,7 @@
     .line 107
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mPopupGroup:Lcom/sec/android/glview/TwGLViewGroup;
 
-    const v1, 0x7f020294
+    const v1, 0x7f020278
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->setNinePatchBackground(I)Z
 
@@ -611,7 +611,7 @@
 
     add-float/2addr v1, v2
 
-    const v2, 0x7f060073
+    const v2, 0x7f06006e
 
     invoke-static {v2}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -674,7 +674,7 @@
     .line 123
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
-    const v1, 0x7f060076
+    const v1, 0x7f060071
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -688,7 +688,7 @@
 
     sub-float/2addr v1, v2
 
-    const v2, 0x7f060077
+    const v2, 0x7f060072
 
     invoke-static {v2}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -795,7 +795,7 @@
     if-ne v0, v1, :cond_0
 
     .line 160
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -982,7 +982,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLProgressBar;->setMax(I)V
 
     .line 167
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenuItems()V
 
@@ -1024,7 +1024,7 @@
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->setTouchHandled(Z)V
 
     .line 180
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideSideMenuItems()V
 
@@ -1070,12 +1070,12 @@
 
     .prologue
     .line 131
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v1, :cond_0
 
     .line 132
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuResourceDepot()Lcom/sec/android/app/camera/MenuResourceDepot;
 
@@ -1106,7 +1106,7 @@
     if-eqz v1, :cond_0
 
     .line 134
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLCartoonMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 

@@ -69,8 +69,6 @@
     <string name="E_EMBOSS">Upphleypt</string>
     <string name="E_OUTLINE">Yfirlit</string>
     <string name="E_WATERCOLOR">Vatnslitir</string>
-    <string name="E_MONOCHROME">Einlitt</string>
-    <string name="E_SKETCH">Skissa</string>
     <string name="E_WASHED">Upplitað</string>
     <string name="E_POSTERIZE">Plakat</string>
     <string name="E_SOLARIZE">Sólarísering</string>
@@ -81,7 +79,7 @@
     <string name="E_POINT_RED_YELLOW">Rauðgulpunktur</string>
     <string name="E_CARTOONIZE">Skopgera</string>
     <string name="F_AUTO_FLASH">Sjálfvirkt flass</string>
-    <string name="F_AUTOFOCUS">Sjv. fókus</string>
+    <string name="F_AUTOFOCUS">Sjálfvirkur fókus</string>
     <string name="F_MACRO">Nærmynd</string>
     <string name="F_FACE">Greining andlits</string>
     <string name="F_PANFOCUS">Víðmyndafókus</string>
@@ -104,7 +102,7 @@
     <string name="RM_MMS">MMS-takmörk</string>
     <string name="RM_EMAIL">Mörk fyrir tölvupóst</string>
     <string name="RM_SLOW">Hæghreyfing</string>
-    <string name="RM_FAST">Hraðspilun</string>
+    <string name="RM_FAST">Hröð hreyfing</string>
     <string name="CS_PROGRESS_TEXT">Bý til mynd. Augnablik...</string>
     <string name="SCN_NONE">Ekkert</string>
     <string name="SCN_PORTRAIT">Skammsnið</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Niðurteljari</string>
     <string name="Title_Resolution">Upplausn</string>
     <string name="Title_ShootAndShare">Stillingar deilinga</string>
-    <string name="Title_DeviceList">Tækjalisti</string>
     <string name="Title_WhiteBalance">Ljósgjafi</string>
     <string name="Title_Effects">Áhrif</string>
     <string name="Title_Focus">Fókus</string>
@@ -155,7 +152,6 @@
     <string name="Title_AutoContrast">Sjálfvirk birtuskil</string>
     <string name="Title_GPS">GPS-merki</string>
     <string name="Title_Review">Endurskoða</string>
-    <string name="Title_AutoShareShot">Deila mynd sjálfkrafa</string>
     <string name="Title_Guideline">Leiðbeiningar</string>
     <string name="Title_VideoQuality">Vídeógæði</string>
     <string name="Title_AudioRecording">Hljóðupptaka</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Gættu þess að hrista ekki tækið þegar þú tekur myndir</string>
     <string name="help_text_panorama">Ýttu á myndavélartakkann og hreyfðu símann hægt í eina átt</string>
     <string name="help_text_panorama_device">Ýttu á myndavélahnappinn og færðu tækið hægt í eina átt</string>
-    <string name="message_DefaultLayout">Uppsetning flýtileiðar verður endurstillt</string>
     <string name="message_EULA_GPS">Þegar kveikt er á GPS-merkingu verða landfræðileg staðsetningargögn hengd við, sett inn og geymd í hverri mynd. Farðu varlega þegar þú sendir, deilir, dreifir, flytur eða afritar þessar myndir þar sem þær geyma staðsetningarupplýsingar um myndatökuna</string>
-    <string name="message_Auto_ShareShot">"Sjálfkrafa deiling mynda auðveldar þér að tengjast við tæki sem þú vilt deila myndum með.
-Kveiktu á sjálfkrafa deilingu og færðu tækin saman (yfirleitt bakhlið við bakhlið) til að tengja þau"</string>
     <string name="GPS_msg">Slökkt á GPS</string>
     <string name="message_enable_GPS">Kveiktu á GPS í Stillingum til að nota GPS-merki</string>
     <string name="cancel">Hætta v.</string>
@@ -248,11 +241,9 @@ Kveiktu á sjálfkrafa deilingu og færðu tækin saman (yfirleitt bakhlið við
     <string name="profile_user_default_name">Óþekkt</string>
     <string name="shareshot_no_user">Engir aðilar til að deila með</string>
     <string name="snapshot_saved">%s vistað</string>
-    <string name="editable_shortcut_reset">Endurstilla</string>
     <string name="editable_shortcut_helptext_title">Ábendingar</string>
     <string name="editable_shortcut_helptext_message">Pikkaðu og haltu flýtileiðum inni til að breyta þeim</string>
     <string name="editable_shortcut_helptext">Pikkaðu og haltu merkinu og dragðu það svo til að breyta staðsetningu flýtiskipana</string>
-    <string name="sbeam_helptext">Taktu myndir og deildu þeim með öðrum tækjum. Færðu tækin saman til að bæta tækjum við sem þú vilt deila með um S Beam</string>
     <string name="storage_setting_dialog_title">Geymslustaður</string>
     <string name="storage_setting_dialog_message">SD-kort er í tækinu. Færa geymslustað yfir á SD-kort?</string>
     <string name="do_not_ask_again">Ekki birta aftur</string>
@@ -261,8 +252,6 @@ Kveiktu á sjálfkrafa deilingu og færðu tækin saman (yfirleitt bakhlið við
     <string name="bestpic">Besta mynd</string>
     <string name="bestpic_on">Kv</string>
     <string name="bestpic_off">Sl.</string>
-    <string name="bestgroup">Besta hópuppstilling</string>
-    <string name="bestgroup_title">Veldu andlit til að vista</string>
     <string name="battery_low">Lokaðu myndavél. Rafhlaðan er of köld</string>
     <string name="buddy_photo_share_helptext">Taktu og deildu myndum með vinum með andlitsgreiningu</string>
     <string name="face_zoom_helptext">Tvípikkaðu á andlit til að auka eða minnka aðdrátt</string>
@@ -272,7 +261,6 @@ Kveiktu á sjálfkrafa deilingu og færðu tækin saman (yfirleitt bakhlið við
     <string name="on_device_help_camcorder">Skipta yfir í myndupptöku</string>
     <string name="on_device_help_self">Skipta í sjálfsmyndatöku</string>
     <string name="on_device_help_editable">Pikkaðu á og haltu inni flýtileið sem þú vilt færa. Dragðu hana svo þangað sem þú vilt</string>
-    <string name="on_device_help_voicecommand">Þú getur tekið myndir með raddskipunum eins og Capture, Shoot, Smile og Cheese</string>
     <string name="Title_VideoSpeed">Hraði</string>
     <string name="SPEED_OFF">Venjulegt</string>
     <string name="SPEED_2X_FASTER">2x hraðar</string>
@@ -294,7 +282,4 @@ Kveiktu á sjálfkrafa deilingu og færðu tækin saman (yfirleitt bakhlið við
     <string name="self_recording_open_warning_popup">Sjálfupptaka er aðeins í boði þegar síminn er opinn</string>
     <string name="contextual_filename">Samhengistengt skráarheiti</string>
     <string name="enable_gps_dialog">Kveikja þarf á GPS-merkingu. Kveikja á GPS-merkingu?</string>
-    <string name="gallery_disable">Gallerí er óvirkt</string>
-    <string name="HDR_Normal">Venjulegt</string>
-    <string name="HDR_Strong">Mikill</string>
 </resources>

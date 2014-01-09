@@ -30,7 +30,7 @@
     .line 132
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -60,14 +60,14 @@
     .line 141
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox;
 
-    iget-object v2, v2, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v2, v2, Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v2, :cond_0
 
     .line 142
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox;
 
-    iget-object v1, v1, Lcom/sec/android/app/camera/glwidget/TwGLDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
+    iget-object v1, v1, Lcom/sec/android/app/camera/glwidget/TwGLEditableShortcutMenuDragDropBox;->mView:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->resetClipRect()V
 

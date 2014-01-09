@@ -31,7 +31,7 @@
     .line 40
     const/16 v4, 0x33
 
-    const v5, 0x7f0900c9
+    const v5, 0x7f0900c8
 
     invoke-direct {p0, v4, v5}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;-><init>(II)V
 
@@ -140,7 +140,7 @@
 
     .line 55
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/FlipMenuResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -191,7 +191,7 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FlipMenuResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

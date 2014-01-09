@@ -61,7 +61,7 @@
     .prologue
     .line 33
     .local p0, this:Lcom/sec/android/app/camera/gallery/LruCache;,"Lcom/sec/android/app/camera/gallery/LruCache<TK;TV;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
     new-instance v0, Ljava/util/HashMap;

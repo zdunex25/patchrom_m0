@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 650
+    .line 632
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 650
+    .line 632
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;-><init>(Lcom/sec/android/app/camera/CameraEngine;)V
 
     return-void
@@ -55,14 +55,14 @@
     .prologue
     const/4 v4, 0x7
 
-    .line 652
+    .line 634
     const-string v0, "CameraEngine"
 
     const-string v1, "ShutterCallback.onShutter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 654
+    .line 636
     const-string v0, "AXLOG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,7 +95,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 656
+    .line 638
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mCurrentState:Lcom/sec/android/app/camera/AbstractCeState;
@@ -106,12 +106,12 @@
 
     if-ne v0, v4, :cond_1
 
-    .line 671
+    .line 653
     :cond_0
     :goto_0
     return-void
 
-    .line 663
+    .line 645
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->startBlinkShutterAnimation()V
 
-    .line 665
+    .line 647
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
@@ -132,21 +132,21 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 666
+    .line 648
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideSideMenuItems()V
 
-    .line 667
+    .line 649
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showWaitingAnimation()V
 
-    .line 668
+    .line 650
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ShutterCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     const/4 v1, 0x1

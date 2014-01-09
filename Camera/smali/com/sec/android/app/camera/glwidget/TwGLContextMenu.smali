@@ -79,8 +79,8 @@
     .prologue
     const/16 v1, 0xff
 
-    .line 31
-    const v0, 0x7f060115
+    .line 30
+    const v0, 0x7f060110
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -90,8 +90,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_LANDSCAPE_POS_X:I
 
-    .line 32
-    const v0, 0x7f060116
+    .line 31
+    const v0, 0x7f060111
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -101,8 +101,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_LANDSCAPE_POS_Y:I
 
-    .line 33
-    const v0, 0x7f060117
+    .line 32
+    const v0, 0x7f060112
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -112,8 +112,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_LANDSCAPE_WIDTH:I
 
-    .line 34
-    const v0, 0x7f060118
+    .line 33
+    const v0, 0x7f060113
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -123,8 +123,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_LANDSCAPE_HEIGHT:I
 
-    .line 35
-    const v0, 0x7f060119
+    .line 34
+    const v0, 0x7f060114
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -134,8 +134,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_PORTRAIT_POS_X:I
 
-    .line 36
-    const v0, 0x7f06011a
+    .line 35
+    const v0, 0x7f060115
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -145,8 +145,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_PORTRAIT_POS_Y:I
 
-    .line 37
-    const v0, 0x7f06011b
+    .line 36
+    const v0, 0x7f060116
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -156,8 +156,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_PORTRAIT_WIDTH:I
 
-    .line 38
-    const v0, 0x7f06011c
+    .line 37
+    const v0, 0x7f060117
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -167,8 +167,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_PORTRAIT_HEIGHT:I
 
-    .line 39
-    const v0, 0x7f06011d
+    .line 38
+    const v0, 0x7f060118
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -178,8 +178,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_BUTTON_POS_X:I
 
-    .line 40
-    const v0, 0x7f06011e
+    .line 39
+    const v0, 0x7f060119
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -189,8 +189,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_BUTTON_POS_Y:I
 
-    .line 41
-    const v0, 0x7f060120
+    .line 40
+    const v0, 0x7f06011b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -200,8 +200,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_TEXT_WIDTH:I
 
-    .line 42
-    const v0, 0x7f060121
+    .line 41
+    const v0, 0x7f06011c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -211,8 +211,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_TEXT_HEIGHT:I
 
-    .line 43
-    const v0, 0x7f080015
+    .line 42
+    const v0, 0x7f080014
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -220,15 +220,15 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_FONT_SIZE:I
 
-    .line 44
+    .line 43
     invoke-static {v1, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_FONT_COLOR:I
 
-    .line 45
-    const v0, 0x7f060122
+    .line 44
+    const v0, 0x7f06011d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -238,8 +238,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_BUTTON_RESOURCE_POS_X:I
 
-    .line 46
-    const v0, 0x7f060123
+    .line 45
+    const v0, 0x7f06011e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -249,8 +249,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_BUTTON_RESOURCE_POS_Y:I
 
-    .line 47
-    const v0, 0x7f060124
+    .line 46
+    const v0, 0x7f06011f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -260,8 +260,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_TEXT_POS_X:I
 
-    .line 48
-    const v0, 0x7f060125
+    .line 47
+    const v0, 0x7f060120
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -271,8 +271,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_TEXT_POS_Y:I
 
-    .line 49
-    const v0, 0x7f060126
+    .line 48
+    const v0, 0x7f060121
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -282,8 +282,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_BUTTON_RESOURCE_POS_X:I
 
-    .line 50
-    const v0, 0x7f060127
+    .line 49
+    const v0, 0x7f060122
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -293,8 +293,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_BUTTON_RESOURCE_POS_Y:I
 
-    .line 51
-    const v0, 0x7f060128
+    .line 50
+    const v0, 0x7f060123
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -304,8 +304,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_TEXT_POS_X:I
 
-    .line 52
-    const v0, 0x7f060129
+    .line 51
+    const v0, 0x7f060124
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -315,8 +315,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_TEXT_POS_Y:I
 
-    .line 53
-    const v0, 0x7f060072
+    .line 52
+    const v0, 0x7f06006d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -326,8 +326,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->SCREEN_WIDTH:I
 
-    .line 54
-    const v0, 0x7f060073
+    .line 53
+    const v0, 0x7f06006e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -351,7 +351,7 @@
     .parameter "slideDirection"
 
     .prologue
-    .line 66
+    .line 65
     const/4 v7, 0x1
 
     move-object v1, p0
@@ -368,10 +368,10 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/sec/android/app/camera/MenuBase;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;ILcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;IZ)V
 
-    .line 68
+    .line 67
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 70
+    .line 69
     move-object/from16 v0, p5
 
     iget-object v1, v0, Lcom/sec/android/app/camera/MenuResourceDepot;->mResourceIDMap:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;
@@ -382,7 +382,7 @@
 
     move-result-object v11
 
-    .line 74
+    .line 73
     .local v11, res:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     new-instance v1, Lcom/sec/android/glview/TwGLViewGroup;
 
@@ -410,7 +410,7 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 76
+    .line 75
     new-instance v1, Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -439,13 +439,13 @@
 
     iget v9, v11, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mDim:I
 
-    const v10, 0x7f020297
+    const v10, 0x7f02027b
 
     invoke-direct/range {v1 .. v10}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFIIII)V
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 78
+    .line 77
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_BUTTON_RESOURCE_POS_X:I
@@ -458,7 +458,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLButton;->setResourceOffset(FF)Z
 
-    .line 79
+    .line 78
     new-instance v1, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -497,7 +497,7 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
-    .line 81
+    .line 80
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v2, 0x1
@@ -506,14 +506,14 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLText;->setAlign(II)V
 
-    .line 82
+    .line 81
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setText(Lcom/sec/android/glview/TwGLText;)V
 
-    .line 83
+    .line 82
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_LANDSCAPE_TEXT_POS_X:I
@@ -526,26 +526,26 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLButton;->setTextPosition(FF)V
 
-    .line 84
+    .line 83
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     const/16 v2, 0xe74
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setTag(I)V
 
-    .line 85
+    .line 84
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v1, p0}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 86
+    .line 85
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 88
+    .line 87
     new-instance v1, Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -574,13 +574,13 @@
 
     iget v9, v11, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mDim:I
 
-    const v10, 0x7f020297
+    const v10, 0x7f02027b
 
     invoke-direct/range {v1 .. v10}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFIIII)V
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 90
+    .line 89
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_BUTTON_RESOURCE_POS_X:I
@@ -593,7 +593,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLButton;->setResourceOffset(FF)Z
 
-    .line 91
+    .line 90
     new-instance v1, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -632,7 +632,7 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
-    .line 93
+    .line 92
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v2, 0x1
@@ -641,14 +641,14 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLText;->setAlign(II)V
 
-    .line 94
+    .line 93
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setText(Lcom/sec/android/glview/TwGLText;)V
 
-    .line 95
+    .line 94
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->MENU_EDIT_PORTRAIT_TEXT_POS_X:I
@@ -661,71 +661,71 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLButton;->setTextPosition(FF)V
 
-    .line 96
+    .line 95
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     const/16 v2, 0xe74
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setTag(I)V
 
-    .line 97
+    .line 96
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v1, p0}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 98
+    .line 97
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 99
+    .line 98
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 100
+    .line 99
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
-    const v2, 0x7f020298
+    const v2, 0x7f02027c
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLViewGroup;->setNinePatchBackground(I)Z
 
-    .line 102
+    .line 101
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v1, p2}, Lcom/sec/android/glview/TwGLViewGroup;->setTag(I)V
 
-    .line 103
+    .line 102
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLViewGroup;->setVisibility(I)V
 
-    .line 105
+    .line 104
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setInternalFocus(Z)V
 
-    .line 106
+    .line 105
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLButton;->setInternalFocus(Z)V
 
-    .line 108
+    .line 107
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p3, v1}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 110
+    .line 109
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v2, 0x3
@@ -746,7 +746,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLViewGroup;->setLeftTop(IFF)V
 
-    .line 111
+    .line 110
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v2, 0x2
@@ -765,7 +765,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLViewGroup;->setLeftTop(IFF)V
 
-    .line 112
+    .line 111
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v2, 0x1
@@ -780,19 +780,19 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLViewGroup;->setLeftTop(IFF)V
 
-    .line 114
+    .line 113
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLViewGroup;->setRotatable(Z)V
 
-    .line 115
+    .line 114
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v1, p0}, Lcom/sec/android/glview/TwGLViewGroup;->setOnOrientationChangedListener(Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;)V
 
-    .line 117
+    .line 116
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -805,7 +805,7 @@
 
     invoke-direct {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->initAnimation(I)V
 
-    .line 118
+    .line 117
     return-void
 .end method
 
@@ -822,34 +822,34 @@
 
     const/4 v10, 0x0
 
-    .line 121
+    .line 120
     const/4 v4, 0x0
 
-    .line 123
+    .line 122
     .local v4, slideInAnim:Landroid/view/animation/Animation;
     new-instance v3, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v3, v6}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 124
+    .line 123
     .local v3, ShowAnim:Landroid/view/animation/AnimationSet;
     const/4 v5, 0x0
 
-    .line 126
+    .line 125
     .local v5, slideOutAnim:Landroid/view/animation/Animation;
     new-instance v2, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v2, v6}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 129
+    .line 128
     .local v2, HideAnim:Landroid/view/animation/AnimationSet;
     packed-switch p1, :pswitch_data_0
 
-    .line 148
+    .line 147
     :goto_0
     if-eqz v4, :cond_0
 
-    .line 149
+    .line 148
     iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLButton;->getWidth()F
@@ -886,15 +886,15 @@
 
     move-result v9
 
-    invoke-virtual {v4, v6, v7, v8, v9}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v4, v6, v7, v8, v9}, Landroid/view/animation/Animation;->initialize(IIII)V
+
+    .line 149
+    invoke-virtual {v4, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 150
-    invoke-virtual {v4, v11, v12}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
-
-    .line 151
     invoke-virtual {v3, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 152
+    .line 151
     iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLButton;->getWidth()F
@@ -931,54 +931,54 @@
 
     move-result v9
 
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/view/animation/Animation;->initialize(IIII)V
+
+    .line 152
+    invoke-virtual {v5, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 153
-    invoke-virtual {v5, v11, v12}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
-
-    .line 154
     invoke-virtual {v2, v5}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 157
+    .line 156
     :cond_0
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v1, v10, v13}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 158
+    .line 157
     .local v1, AlphaOnAnimation:Landroid/view/animation/Animation;
-    invoke-virtual {v1, v11, v12}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v1, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 159
+    .line 158
     invoke-virtual {v3, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 161
+    .line 160
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v0, v13, v10}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 162
+    .line 161
     .local v0, AlphaOffAnimation:Landroid/view/animation/Animation;
-    invoke-virtual {v0, v11, v12}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 163
+    .line 162
     invoke-virtual {v2, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 165
+    .line 164
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->setShowAnimation(Landroid/view/animation/Animation;)V
 
-    .line 166
+    .line 165
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->setHideAnimation(Landroid/view/animation/Animation;)V
 
-    .line 167
+    .line 166
     iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenu:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v6, p0}, Lcom/sec/android/glview/TwGLViewGroup;->setOnAnimationEventListener(Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;)V
 
-    .line 168
+    .line 167
     return-void
 
-    .line 131
+    .line 130
     .end local v0           #AlphaOffAnimation:Landroid/view/animation/Animation;
     .end local v1           #AlphaOnAnimation:Landroid/view/animation/Animation;
     :pswitch_0
@@ -993,7 +993,7 @@
 
     invoke-direct {v4, v10, v10, v6, v10}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 132
+    .line 131
     .restart local v4       #slideInAnim:Landroid/view/animation/Animation;
     new-instance v5, Landroid/view/animation/TranslateAnimation;
 
@@ -1006,11 +1006,11 @@
 
     invoke-direct {v5, v10, v10, v10, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 133
+    .line 132
     .restart local v5       #slideOutAnim:Landroid/view/animation/Animation;
     goto/16 :goto_0
 
-    .line 135
+    .line 134
     :pswitch_1
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
@@ -1025,7 +1025,7 @@
 
     invoke-direct {v4, v6, v10, v10, v10}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 136
+    .line 135
     .restart local v4       #slideInAnim:Landroid/view/animation/Animation;
     new-instance v5, Landroid/view/animation/TranslateAnimation;
 
@@ -1040,11 +1040,11 @@
 
     invoke-direct {v5, v10, v6, v10, v10}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 137
+    .line 136
     .restart local v5       #slideOutAnim:Landroid/view/animation/Animation;
     goto/16 :goto_0
 
-    .line 139
+    .line 138
     :pswitch_2
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
@@ -1059,7 +1059,7 @@
 
     invoke-direct {v4, v10, v10, v6, v10}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 140
+    .line 139
     .restart local v4       #slideInAnim:Landroid/view/animation/Animation;
     new-instance v5, Landroid/view/animation/TranslateAnimation;
 
@@ -1074,11 +1074,11 @@
 
     invoke-direct {v5, v10, v10, v10, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 141
+    .line 140
     .restart local v5       #slideOutAnim:Landroid/view/animation/Animation;
     goto/16 :goto_0
 
-    .line 143
+    .line 142
     :pswitch_3
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
@@ -1091,7 +1091,7 @@
 
     invoke-direct {v4, v6, v10, v10, v10}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 144
+    .line 143
     .restart local v4       #slideInAnim:Landroid/view/animation/Animation;
     new-instance v5, Landroid/view/animation/TranslateAnimation;
 
@@ -1107,7 +1107,7 @@
     .restart local v5       #slideOutAnim:Landroid/view/animation/Animation;
     goto/16 :goto_0
 
-    .line 129
+    .line 128
     nop
 
     :pswitch_data_0
@@ -1128,19 +1128,19 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 230
+    .line 225
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 231
+    .line 226
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
-    .line 233
+    .line 228
     :cond_0
     return v1
 .end method
@@ -1150,7 +1150,7 @@
     .parameter "animation"
 
     .prologue
-    .line 225
+    .line 220
     const/4 v0, 0x0
 
     return v0
@@ -1161,124 +1161,112 @@
     .parameter "animation"
 
     .prologue
-    .line 221
+    .line 216
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public onClick(Lcom/sec/android/glview/TwGLView;)Z
-    .locals 5
+    .locals 4
     .parameter "v"
 
     .prologue
-    .line 180
+    .line 179
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getTag()I
 
-    move-result v1
+    move-result v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result v0
 
-    packed-switch v1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    .line 194
-    const/4 v1, 0x0
+    .line 189
+    const/4 v0, 0x0
 
     :goto_0
-    return v1
+    return v0
 
-    .line 183
+    .line 182
     :pswitch_0
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->getMode()I
+
+    move-result v0
+
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCommandIdMap()Lcom/sec/android/app/camera/command/CommandIdMap;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/sec/android/app/camera/CameraSettings;->getMode()I
+    const/16 v2, 0x64
+
+    invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/command/CommandIdMap;->getModeIDByCommandID(I)I
 
     move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    .line 183
+    const/16 v0, 0x28
+
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCommandIdMap()Lcom/sec/android/app/camera/command/CommandIdMap;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getEditableShortcutMenuRoot()Lcom/sec/android/glview/TwGLViewGroup;
 
     move-result-object v2
 
-    const/16 v3, 0x64
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    invoke-virtual {v2, v3}, Lcom/sec/android/app/camera/command/CommandIdMap;->getModeIDByCommandID(I)I
-
-    move-result v2
-
-    if-ne v1, v2, :cond_1
-
-    .line 184
-    const/16 v1, 0x28
-
-    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getEditableShortcutMenuRoot()Lcom/sec/android/glview/TwGLViewGroup;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
-
-    invoke-static {v1, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandBuilder;->buildCommand(ILcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;)Lcom/sec/android/app/camera/command/MenuCommand;
+    invoke-static {v0, v1, v2, v3}, Lcom/sec/android/app/camera/command/CommandBuilder;->buildCommand(ILcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;)Lcom/sec/android/app/camera/command/MenuCommand;
 
     move-result-object v0
 
-    .line 185
-    .local v0, cmd:Lcom/sec/android/app/camera/command/MenuCommand;
-    if-eqz v0, :cond_0
-
-    .line 186
     invoke-virtual {v0}, Lcom/sec/android/app/camera/command/MenuCommand;->execute()V
 
-    .line 192
-    :cond_0
+    .line 187
     :goto_1
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 188
-    .end local v0           #cmd:Lcom/sec/android/app/camera/command/MenuCommand;
-    :cond_1
-    const/16 v1, 0xbd1
+    .line 185
+    :cond_0
+    const/16 v0, 0xbd1
+
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getEditableShortcutMenuRoot()Lcom/sec/android/glview/TwGLViewGroup;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getEditableShortcutMenuRoot()Lcom/sec/android/glview/TwGLViewGroup;
+    move-result-object v2
 
-    move-result-object v3
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget-object v4, p0, Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
-
-    invoke-static {v1, v2, v3, v4}, Lcom/sec/android/app/camera/command/CommandBuilder;->buildCommand(ILcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;)Lcom/sec/android/app/camera/command/MenuCommand;
+    invoke-static {v0, v1, v2, v3}, Lcom/sec/android/app/camera/command/CommandBuilder;->buildCommand(ILcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;)Lcom/sec/android/app/camera/command/MenuCommand;
 
     move-result-object v0
 
-    .line 189
-    .restart local v0       #cmd:Lcom/sec/android/app/camera/command/MenuCommand;
-    if-eqz v0, :cond_0
-
-    .line 190
     invoke-virtual {v0}, Lcom/sec/android/app/camera/command/MenuCommand;->execute()V
 
     goto :goto_1
 
-    .line 180
+    .line 179
     :pswitch_data_0
     .packed-switch 0xe74
         :pswitch_0
@@ -1294,21 +1282,21 @@
 
     const/4 v1, 0x0
 
-    .line 199
+    .line 194
     packed-switch p1, :pswitch_data_0
 
-    .line 211
+    .line 206
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 212
+    .line 207
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 213
+    .line 208
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->isVisible()I
@@ -1317,31 +1305,31 @@
 
     if-nez v0, :cond_0
 
-    .line 214
+    .line 209
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->requestFocus()Z
 
-    .line 217
+    .line 212
     :cond_0
     :goto_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->initAnimation(I)V
 
-    .line 218
+    .line 213
     return-void
 
-    .line 202
+    .line 197
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 203
+    .line 198
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 204
+    .line 199
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->isVisible()I
@@ -1350,14 +1338,14 @@
 
     if-nez v0, :cond_0
 
-    .line 205
+    .line 200
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->requestFocus()Z
 
     goto :goto_0
 
-    .line 199
+    .line 194
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1370,12 +1358,12 @@
     .locals 1
 
     .prologue
-    .line 238
+    .line 233
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
-    .line 239
+    .line 234
     return-void
 .end method
 
@@ -1383,7 +1371,7 @@
     .locals 1
 
     .prologue
-    .line 172
+    .line 171
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->isVisible()I
@@ -1392,17 +1380,17 @@
 
     if-nez v0, :cond_1
 
-    .line 173
+    .line 172
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mLandscapeButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->requestFocus()Z
 
-    .line 177
+    .line 176
     :cond_0
     :goto_0
     return-void
 
-    .line 174
+    .line 173
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
@@ -1412,7 +1400,7 @@
 
     if-nez v0, :cond_0
 
-    .line 175
+    .line 174
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLContextMenu;->mPortraitButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->requestFocus()Z

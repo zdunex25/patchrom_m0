@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/Camera;->wakeupToSnSMod()V
+    value = Lcom/sec/android/app/camera/Camera;->onRespondSharewithNotify()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,15 +17,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/sec/android/app/camera/Camera;
 
+.field final synthetic val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
+
 
 # direct methods
-.method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
+.method constructor <init>(Lcom/sec/android/app/camera/Camera;Lcom/samsung/dmc/ux/db/UserInfo;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 5988
+    .line 5568
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iput-object p2, p0, Lcom/sec/android/app/camera/Camera$20;->val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
@@ -35,27 +40,40 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 5992
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 5573
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChkKeyFromApp:Ljava/lang/String;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    if-nez v0, :cond_0
+    .line 5574
+    .local v0, intent:Landroid/content/Intent;
+    new-instance v1, Landroid/content/ComponentName;
 
-    .line 5993
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
+    const-string v2, "com.samsung.shareshot"
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    const-string v3, "com.samsung.shareshot.ShareWithRequestDialog"
 
-    move-result-object v0
+    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton()V
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 5994
-    :cond_0
+    .line 5575
+    const-string v1, "UserInfo"
+
+    iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->val$userInfo:Lcom/samsung/dmc/ux/db/UserInfo;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 5576
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    const/16 v2, 0x7d6
+
+    invoke-virtual {v1, v0, v2}, Lcom/sec/android/app/camera/Camera;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 5577
     return-void
 .end method

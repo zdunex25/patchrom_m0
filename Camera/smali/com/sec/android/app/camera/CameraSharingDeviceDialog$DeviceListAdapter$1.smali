@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter$1;->val$cb:Landroid/widget/CheckBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

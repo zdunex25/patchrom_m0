@@ -128,7 +128,7 @@
 
     .prologue
     .line 37
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -147,17 +147,17 @@
     .parameter "flashMode"
 
     .prologue
-    .line 100
+    .line 95
     const/4 v4, 0x0
 
-    .line 103
+    .line 98
     .local v4, outputStream:Ljava/io/OutputStream;
     :try_start_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 104
+    .line 99
     .local v0, dir:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -165,16 +165,16 @@
 
     if-nez v6, :cond_0
 
-    .line 105
+    .line 100
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 106
+    .line 101
     :cond_0
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
+    .line 102
     .local v3, file:Ljava/io/File;
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -184,12 +184,12 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 108
+    .line 103
     .end local v4           #outputStream:Ljava/io/OutputStream;
     .local v5, outputStream:Ljava/io/OutputStream;
     if-eqz p6, :cond_4
 
-    .line 109
+    .line 104
     :try_start_1
     sget-object v6, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -197,7 +197,7 @@
 
     invoke-virtual {p6, v6, v7, v5}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 115
+    .line 110
     :cond_1
     :goto_0
     invoke-virtual {v3, p3, p4}, Ljava/io/File;->setLastModified(J)Z
@@ -206,16 +206,16 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 124
+    .line 119
     if-eqz v5, :cond_2
 
-    .line 125
+    .line 120
     :try_start_2
-    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 132
+    .line 127
     :cond_2
     :goto_1
     const/4 v6, 0x1
@@ -230,7 +230,7 @@
     :goto_2
     return v6
 
-    .line 111
+    .line 106
     .end local v4           #outputStream:Ljava/io/OutputStream;
     .restart local v0       #dir:Ljava/io/File;
     .restart local v3       #file:Ljava/io/File;
@@ -240,9 +240,9 @@
 
     if-eqz p7, :cond_1
 
-    .line 112
+    .line 107
     :try_start_3
-    invoke-virtual {v5, p7}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v5, p7}, Ljava/io/OutputStream;->write([B)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
@@ -250,13 +250,13 @@
 
     goto :goto_0
 
-    .line 116
+    .line 111
     :catch_0
     move-exception v2
 
     move-object v4, v5
 
-    .line 117
+    .line 112
     .end local v0           #dir:Ljava/io/File;
     .end local v3           #file:Ljava/io/File;
     .end local v5           #outputStream:Ljava/io/OutputStream;
@@ -270,25 +270,25 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 118
+    .line 113
     const/4 v6, 0x0
 
-    .line 124
+    .line 119
     if-eqz v4, :cond_3
 
-    .line 125
+    .line 120
     :try_start_5
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
     goto :goto_2
 
-    .line 126
+    .line 121
     :catch_1
     move-exception v1
 
-    .line 128
+    .line 123
     .local v1, e:Ljava/io/IOException;
     const-string v7, "ImageSavingUtils"
 
@@ -296,7 +296,7 @@
 
     goto :goto_2
 
-    .line 126
+    .line 121
     .end local v1           #e:Ljava/io/IOException;
     .end local v2           #ex:Ljava/io/FileNotFoundException;
     .end local v4           #outputStream:Ljava/io/OutputStream;
@@ -306,7 +306,7 @@
     :catch_2
     move-exception v1
 
-    .line 128
+    .line 123
     .restart local v1       #e:Ljava/io/IOException;
     const-string v6, "ImageSavingUtils"
 
@@ -314,7 +314,7 @@
 
     goto :goto_1
 
-    .line 119
+    .line 114
     .end local v0           #dir:Ljava/io/File;
     .end local v1           #e:Ljava/io/IOException;
     .end local v3           #file:Ljava/io/File;
@@ -323,7 +323,7 @@
     :catch_3
     move-exception v2
 
-    .line 120
+    .line 115
     .local v2, ex:Ljava/io/IOException;
     :goto_4
     :try_start_6
@@ -333,25 +333,25 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 121
+    .line 116
     const/4 v6, 0x0
 
-    .line 124
+    .line 119
     if-eqz v4, :cond_3
 
-    .line 125
+    .line 120
     :try_start_7
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
     goto :goto_2
 
-    .line 126
+    .line 121
     :catch_4
     move-exception v1
 
-    .line 128
+    .line 123
     .restart local v1       #e:Ljava/io/IOException;
     const-string v7, "ImageSavingUtils"
 
@@ -359,32 +359,32 @@
 
     goto :goto_2
 
-    .line 123
+    .line 118
     .end local v1           #e:Ljava/io/IOException;
     .end local v2           #ex:Ljava/io/IOException;
     :catchall_0
     move-exception v6
 
-    .line 124
+    .line 119
     :goto_5
     if-eqz v4, :cond_5
 
-    .line 125
+    .line 120
     :try_start_8
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 129
+    .line 124
     :cond_5
     :goto_6
     throw v6
 
-    .line 126
+    .line 121
     :catch_5
     move-exception v1
 
-    .line 128
+    .line 123
     .restart local v1       #e:Ljava/io/IOException;
     const-string v7, "ImageSavingUtils"
 
@@ -392,7 +392,7 @@
 
     goto :goto_6
 
-    .line 123
+    .line 118
     .end local v1           #e:Ljava/io/IOException;
     .end local v4           #outputStream:Ljava/io/OutputStream;
     .restart local v0       #dir:Ljava/io/File;
@@ -407,7 +407,7 @@
     .restart local v4       #outputStream:Ljava/io/OutputStream;
     goto :goto_5
 
-    .line 119
+    .line 114
     .end local v4           #outputStream:Ljava/io/OutputStream;
     .restart local v5       #outputStream:Ljava/io/OutputStream;
     :catch_6
@@ -419,7 +419,7 @@
     .restart local v4       #outputStream:Ljava/io/OutputStream;
     goto :goto_4
 
-    .line 116
+    .line 111
     .end local v0           #dir:Ljava/io/File;
     .end local v3           #file:Ljava/io/File;
     :catch_7
@@ -441,12 +441,12 @@
 
     const/4 v10, 0x2
 
-    .line 219
+    .line 214
     invoke-static {p0, p1, v10}, Landroid/location/Location;->convert(DI)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 220
+    .line 215
     .local v4, sec:Ljava/lang/String;
     const-string v6, ":"
 
@@ -454,20 +454,20 @@
 
     move-result-object v5
 
-    .line 221
+    .line 216
     .local v5, value:[Ljava/lang/String;
     array-length v6, v5
 
     if-eq v6, v7, :cond_0
 
-    .line 222
+    .line 217
     const/4 v6, 0x0
 
-    .line 228
+    .line 223
     :goto_0
     return-object v6
 
-    .line 224
+    .line 219
     :cond_0
     aget-object v6, v5, v9
 
@@ -475,7 +475,7 @@
 
     move-result v1
 
-    .line 225
+    .line 220
     .local v1, m:I
     aget-object v6, v5, v11
 
@@ -483,7 +483,7 @@
 
     move-result v0
 
-    .line 226
+    .line 221
     .local v0, d:I
     aget-object v6, v5, v10
 
@@ -491,7 +491,7 @@
 
     move-result-wide v2
 
-    .line 228
+    .line 223
     .local v2, s:D
     const-string v6, "%d/1,%d/1,%d/10000"
 
@@ -735,11 +735,7 @@
 
     move-result-object v0
 
-    invoke-static {p2}, Lcom/sec/android/app/camera/ImageSavingUtils;->removeSpecialChar(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -839,11 +835,7 @@
 
     move-result-object v0
 
-    invoke-static {p2}, Lcom/sec/android/app/camera/ImageSavingUtils;->removeSpecialChar(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -864,25 +856,6 @@
     goto :goto_0
 .end method
 
-.method private static removeSpecialChar(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-    .parameter "str"
-
-    .prologue
-    .line 89
-    const-string v1, "[|?*</]"
-
-    const-string v2, "_"
-
-    invoke-virtual {p0, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 90
-    .local v0, result:Ljava/lang/String;
-    return-object v0
-.end method
-
 .method public static setExif(Ljava/lang/String;JLandroid/location/Location;III)V
     .locals 25
     .parameter "filePath"
@@ -893,10 +866,10 @@
     .parameter "flashMode"
 
     .prologue
-    .line 142
+    .line 137
     const/4 v9, 0x0
 
-    .line 144
+    .line 139
     .local v9, exif:Landroid/media/ExifInterface;
     :try_start_0
     new-instance v10, Landroid/media/ExifInterface;
@@ -907,24 +880,24 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
+    .line 145
     .end local v9           #exif:Landroid/media/ExifInterface;
     .local v10, exif:Landroid/media/ExifInterface;
     if-nez v10, :cond_0
 
     move-object v9, v10
 
-    .line 215
+    .line 210
     .end local v10           #exif:Landroid/media/ExifInterface;
     .restart local v9       #exif:Landroid/media/ExifInterface;
     :goto_0
     return-void
 
-    .line 145
+    .line 140
     :catch_0
     move-exception v8
 
-    .line 146
+    .line 141
     .local v8, ex:Ljava/io/IOException;
     const-string v21, "ImageSavingUtils"
 
@@ -938,7 +911,7 @@
 
     goto :goto_0
 
-    .line 154
+    .line 149
     .end local v8           #ex:Ljava/io/IOException;
     .end local v9           #exif:Landroid/media/ExifInterface;
     .restart local v10       #exif:Landroid/media/ExifInterface;
@@ -953,7 +926,7 @@
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 155
+    .line 150
     .local v17, sdf:Ljava/text/SimpleDateFormat;
     new-instance v21, Ljava/util/Date;
 
@@ -971,7 +944,7 @@
 
     move-result-object v16
 
-    .line 156
+    .line 151
     .local v16, sTaken:Ljava/lang/String;
     const-string v21, "DateTime"
 
@@ -981,25 +954,25 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
+    .line 153
     if-eqz p3, :cond_2
 
-    .line 159
+    .line 154
     invoke-virtual/range {p3 .. p3}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v12
 
-    .line 160
+    .line 155
     .local v12, lat:D
     invoke-static {v12, v13}, Lcom/sec/android/app/camera/ImageSavingUtils;->convertGpsToExif(D)Ljava/lang/String;
 
     move-result-object v18
 
-    .line 161
+    .line 156
     .local v18, slat:Ljava/lang/String;
     if-eqz v18, :cond_1
 
-    .line 162
+    .line 157
     const-string v21, "GPSLatitude"
 
     move-object/from16 v0, v21
@@ -1008,7 +981,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 158
     const-string v22, "GPSLatitudeRef"
 
     const-wide/16 v23, 0x0
@@ -1026,23 +999,23 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
+    .line 161
     :cond_1
     invoke-virtual/range {p3 .. p3}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v14
 
-    .line 167
+    .line 162
     .local v14, lon:D
     invoke-static {v14, v15}, Lcom/sec/android/app/camera/ImageSavingUtils;->convertGpsToExif(D)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 168
+    .line 163
     .local v19, slon:Ljava/lang/String;
     if-eqz v19, :cond_2
 
-    .line 169
+    .line 164
     const-string v21, "GPSLongitude"
 
     move-object/from16 v0, v21
@@ -1051,7 +1024,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
+    .line 165
     const-string v22, "GPSLongitudeRef"
 
     const-wide/16 v23, 0x0
@@ -1069,7 +1042,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 177
+    .line 172
     .end local v12           #lat:D
     .end local v14           #lon:D
     .end local v18           #slat:Ljava/lang/String;
@@ -1087,12 +1060,12 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 179
+    .line 174
     if-nez p5, :cond_5
 
     const/16 v20, 0x0
 
-    .line 181
+    .line 176
     .local v20, wb:I
     :goto_3
     const-string v21, "WhiteBalance"
@@ -1107,33 +1080,33 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
+    .line 178
     const/4 v6, 0x0
 
-    .line 184
+    .line 179
     .local v6, EXIF_FLASH_UNKNOWN:I
     const/16 v5, 0x8
 
-    .line 185
+    .line 180
     .local v5, EXIF_FLASH_ON:I
     const/16 v4, 0x10
 
-    .line 186
+    .line 181
     .local v4, EXIF_FLASH_OFF:I
     const/16 v3, 0x18
 
-    .line 187
+    .line 182
     .local v3, EXIF_FLASH_AUTO:I
     const/16 v7, 0x20
 
-    .line 191
+    .line 186
     .local v7, EXIF_FLASH_UNSUPPORTED:I
     packed-switch p6, :pswitch_data_0
 
-    .line 203
+    .line 198
     const/4 v11, 0x0
 
-    .line 208
+    .line 203
     .local v11, exifFlash:I
     :goto_4
     const-string v21, "Flash"
@@ -1148,7 +1121,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 211
+    .line 206
     :try_start_1
     invoke-virtual {v10}, Landroid/media/ExifInterface;->saveAttributes()V
     :try_end_1
@@ -1157,12 +1130,12 @@
     :goto_5
     move-object v9, v10
 
-    .line 215
+    .line 210
     .end local v10           #exif:Landroid/media/ExifInterface;
     .restart local v9       #exif:Landroid/media/ExifInterface;
     goto/16 :goto_0
 
-    .line 163
+    .line 158
     .end local v3           #EXIF_FLASH_AUTO:I
     .end local v4           #EXIF_FLASH_OFF:I
     .end local v5           #EXIF_FLASH_ON:I
@@ -1179,7 +1152,7 @@
 
     goto :goto_1
 
-    .line 170
+    .line 165
     .restart local v14       #lon:D
     .restart local v19       #slon:Ljava/lang/String;
     :cond_4
@@ -1187,7 +1160,7 @@
 
     goto :goto_2
 
-    .line 179
+    .line 174
     .end local v12           #lat:D
     .end local v14           #lon:D
     .end local v18           #slat:Ljava/lang/String;
@@ -1197,7 +1170,7 @@
 
     goto :goto_3
 
-    .line 194
+    .line 189
     .restart local v3       #EXIF_FLASH_AUTO:I
     .restart local v4       #EXIF_FLASH_OFF:I
     .restart local v5       #EXIF_FLASH_ON:I
@@ -1207,33 +1180,33 @@
     :pswitch_0
     const/16 v11, 0x8
 
-    .line 195
+    .line 190
     .restart local v11       #exifFlash:I
     goto :goto_4
 
-    .line 197
+    .line 192
     .end local v11           #exifFlash:I
     :pswitch_1
     const/16 v11, 0x18
 
-    .line 198
+    .line 193
     .restart local v11       #exifFlash:I
     goto :goto_4
 
-    .line 200
+    .line 195
     .end local v11           #exifFlash:I
     :pswitch_2
     const/16 v11, 0x10
 
-    .line 201
+    .line 196
     .restart local v11       #exifFlash:I
     goto :goto_4
 
-    .line 212
+    .line 207
     :catch_1
     move-exception v8
 
-    .line 213
+    .line 208
     .restart local v8       #ex:Ljava/io/IOException;
     const-string v21, "ImageSavingUtils"
 
@@ -1247,7 +1220,7 @@
 
     goto :goto_5
 
-    .line 191
+    .line 186
     nop
 
     :pswitch_data_0
@@ -1268,12 +1241,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 136
+    .line 131
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 137
+    .line 132
     .local v0, values:Landroid/content/ContentValues;
     const-string v1, "_size"
 
@@ -1283,9 +1256,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 138
+    .line 133
     invoke-virtual {p0, p1, v0, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 139
+    .line 134
     return-void
 .end method

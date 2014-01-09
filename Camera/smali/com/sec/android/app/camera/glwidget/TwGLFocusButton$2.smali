@@ -30,7 +30,7 @@
     .line 304
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLFocusButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLFocusButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

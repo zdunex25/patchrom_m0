@@ -6,7 +6,7 @@
 # static fields
 .field public static final ACTION_SHOT_RESOLUTION:Ljava/lang/String; = "640x480"
 
-.field public static final ACTIVITY_CLASS_NAME_GALLERY3D:Ljava/lang/String; = "com.miui.gallery"
+.field public static final ACTIVITY_CLASS_NAME_GALLERY3D:Ljava/lang/String; = "com.sec.android.gallery3d.app.Gallery"
 
 .field public static final ACTIVITY_CLASS_NAME_VIDEOPLAYER:Ljava/lang/String; = "com.sec.android.app.videoplayer.activity.MoviePlayer"
 
@@ -116,8 +116,6 @@
 
 .field public static final BACK_CAMERA_SHOOTINGMODE_BEAUTY_SHOT:Z = true
 
-.field public static final BACK_CAMERA_SHOOTINGMODE_BESTGROUP_SHOT:Z = false
-
 .field public static final BACK_CAMERA_SHOOTINGMODE_BEST_SHOT:Z = false
 
 .field public static final BACK_CAMERA_SHOOTINGMODE_BUDDY_PHOTOSHARING:Z = true
@@ -129,8 +127,6 @@
 .field public static final BACK_CAMERA_SHOOTINGMODE_CARTOON:Z = true
 
 .field public static final BACK_CAMERA_SHOOTINGMODE_CONTINUOUS_SHOT:Z = false
-
-.field public static final BACK_CAMERA_SHOOTINGMODE_FACE_SHOT:Z = true
 
 .field public static final BACK_CAMERA_SHOOTINGMODE_FRAME_SHOT:Z = false
 
@@ -155,6 +151,8 @@
 .field public static final CAMCORDER_720P_PREVIEW_FPS_MAX:I = 0x7530
 
 .field public static final CAMCORDER_720P_PREVIEW_FPS_MIN:I = 0x3a98
+
+.field public static final CAMCORDER_ADJUST_MENU:Z = false
 
 .field public static final CAMCORDER_ANTISHAKE:Z = true
 
@@ -200,17 +198,27 @@
 
 .field public static final CAMCORDER_TOUCH_AF_MIN_RESOLUTION:Ljava/lang/String; = "176x144"
 
+.field public static final CAMCORDER_USE_INNER_PROFILE:Z = true
+
+.field public static final CAMCORDER_USE_VIDEO_BITRATE_FROM_INNER_PROFILE:Z = true
+
+.field public static final CAMERA_ADJUST_MENU:Z = false
+
 .field public static final CAMERA_ANTISHAKE:Z = true
 
 .field public static final CAMERA_AUTO_CONTRAST:Z = true
 
+.field public static final CAMERA_AUTO_ROTATION_INTERLOCK:Z = false
+
 .field public static final CAMERA_AUTO_UPLOAD:Z = false
+
+.field public static final CAMERA_BACK_KEY:Z = true
+
+.field public static final CAMERA_BOUNCE_ANIMATION:Z = false
 
 .field public static final CAMERA_CONTINUOUS_AF:Z = true
 
 .field public static final CAMERA_DEFAULT_LAYOUT:Z = false
-
-.field public static final CAMERA_DURING_CALL:Z = false
 
 .field public static final CAMERA_EASY_SNAP:Z = false
 
@@ -236,6 +244,12 @@
 
 .field public static final CAMERA_EFFECT_WASHED:Z = true
 
+.field public static final CAMERA_ENABLE_AUDIO_RECORDING:Z = true
+
+.field public static final CAMERA_ENABLE_AUDIO_RECORDING_MENU:Z = false
+
+.field public static final CAMERA_ENABLE_AUTO_ROTATION:Z = true
+
 .field public static final CAMERA_ENABLE_FRONT_SHORTCUT_MENUS:Z = true
 
 .field public static final CAMERA_ENABLE_RECORDING_SPEED_CONTROL:Z = false
@@ -256,7 +270,7 @@
 
 .field public static final CAMERA_FOCUS:Z = true
 
-.field public static final CAMERA_FOCUS_FACE_DETECTION:Z = false
+.field public static final CAMERA_FOCUS_FACE_DETECTION:Z = true
 
 .field public static final CAMERA_FOCUS_INFINITY:Z = true
 
@@ -267,8 +281,6 @@
 .field public static final CAMERA_HARD_KEY:Z = false
 
 .field public static final CAMERA_HAS_KEYPAD:Z = false
-
-.field public static final CAMERA_HDR_MODE_SUPPORT:Z = false
 
 .field public static final CAMERA_HDR_STOP_PREVIEW_CALL:Z = false
 
@@ -303,6 +315,8 @@
 .field public static final CAMERA_MENU_FOR_SELF_FLIP:Z = true
 
 .field public static final CAMERA_MICRO_SD_SLOT:Z = true
+
+.field public static final CAMERA_MMS_ATTACH_MAX_VIDEO_SIZE:I = 0x127
 
 .field public static final CAMERA_NO_SIDEMENU_BG:Z = false
 
@@ -370,9 +384,9 @@
 
 .field public static final CAMERA_SHOW_POST_PROGRESS_POPUP_DURING_PANORAMA:Z = true
 
-.field public static final CAMERA_SMALL_CAPTURE_BITMAP:Z = false
+.field public static final CAMERA_SHUTTER_SOUND_ON_OFF:Z = false
 
-.field public static final CAMERA_SNS_DIRECTCONNECT_SUPPORT:Z = false
+.field public static final CAMERA_SMALL_CAPTURE_BITMAP:Z = false
 
 .field public static final CAMERA_SNS_MENU_CHANGE:Z = false
 
@@ -382,11 +396,7 @@
 
 .field public static final CAMERA_START_ENGINE_SYNC:Z = false
 
-.field public static final CAMERA_SUPPORT_GROUPID_TO_MEDIADB:Z = false
-
-.field public static final CAMERA_SUPPORT_MULTIWINDOW:Z = false
-
-.field public static final CAMERA_SUPPORT_RECORDING_PAUSE_RESUME:Z = true
+.field public static final CAMERA_SUPPORT_GPS_TAG:Z = true
 
 .field public static final CAMERA_SUPPORT_SELF_PREVIEW_FLIP:Z = true
 
@@ -397,8 +407,6 @@
 .field public static final CAMERA_UI_FOCUS:Z = false
 
 .field public static final CAMERA_USE_BRIGHTNESS:Z = false
-
-.field public static final CAMERA_VOICECOMMAND_SETTING:Z = false
 
 .field public static final CAMERA_ZOOM_SUPPORT:Z = true
 
@@ -414,7 +422,7 @@
 
 .field public static final ENABLE_EFFECT_RECORDER:Z = false
 
-.field public static final ENABLE_ENHANCE_SWITCHING_TIME:Z = true
+.field public static final ENABLE_ENHANCE_SWITCHING_TIME:Z = false
 
 .field public static final ENABLE_SETTING_MENU_CUT_OFF:Z = false
 
@@ -558,8 +566,6 @@
 
 .field public static final FRONT_CAMERA_SHOOTINGMODE_CONTINUOUS_SHOT:Z = false
 
-.field public static final FRONT_CAMERA_SHOOTINGMODE_FACE_SHOT:Z = false
-
 .field public static final FRONT_CAMERA_SHOOTINGMODE_FRAME_SHOT:Z = false
 
 .field public static final FRONT_CAMERA_SHOOTINGMODE_HDR:Z = false
@@ -578,13 +584,21 @@
 
 .field public static final FRONT_CAMERA_SHOOTINGMODE_VINTAGE_SHOT:Z = false
 
+.field public static final HDR_IN_CAMERA_SETTINGS:Z = false
+
 .field public static final IMPROVEMENT_SCREEN_QUALITY:Z = true
+
+.field public static final INSERT_MEDIA_DB_DIRECT:Z = true
 
 .field public static final INTERNAL_SD:Z = true
 
+.field public static final ISO_FINAL_DECISION:Z = true
+
 .field public static final MID_SIDEMENU:Z = false
 
-.field public static final PACKAGE_NAME_GALLERY3D:Ljava/lang/String; = "com.miui.gallery"
+.field public static final NORMAL_RATIO:D = 1.3333333333333333
+
+.field public static final PACKAGE_NAME_GALLERY3D:Ljava/lang/String; = "com.sec.android.gallery3d"
 
 .field public static final PACKAGE_NAME_VIDEOPLAYER:Ljava/lang/String; = "com.sec.android.app.videoplayer"
 
@@ -616,9 +630,13 @@
 
 .field public static final TABLET_SIDEMENU:Z = false
 
+.field public static final TEMP_BLOCK_BUDDY_PHOTOSHARING:Z = false
+
 .field public static final USE_EFFECT_MENU_WITH_OK:Z = true
 
-.field public static final VOICE_AUTO_SAVE:Z
+.field public static final VOICE_AUTO_SAVE:Z = false
+
+.field public static final WIDE_SCREEN_RATIO:D = 1.7777777777777777
 
 
 # direct methods
@@ -627,7 +645,7 @@
 
     .prologue
     .line 21
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

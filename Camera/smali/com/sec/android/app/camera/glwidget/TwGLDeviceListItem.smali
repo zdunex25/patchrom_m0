@@ -127,7 +127,7 @@
 
     .prologue
     .line 55
-    const v0, 0x7f06014e
+    const v0, 0x7f060149
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -138,7 +138,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->LIST_TYPE_BUTTON_WIDTH:I
 
     .line 56
-    const v0, 0x7f06014d
+    const v0, 0x7f060148
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -149,7 +149,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->LIST_TYPE_BUTTON_HEIGHT:I
 
     .line 58
-    const v0, 0x7f06001f
+    const v0, 0x7f06001e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -160,7 +160,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->ICON_IMAGE_POS_X:I
 
     .line 59
-    const v0, 0x7f060020
+    const v0, 0x7f06001f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -171,7 +171,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->ICON_IMAGE_POS_Y:I
 
     .line 60
-    const v0, 0x7f060021
+    const v0, 0x7f060020
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -182,7 +182,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->ICON_IMAGE_WIDTH:I
 
     .line 61
-    const v0, 0x7f060022
+    const v0, 0x7f060021
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -193,7 +193,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->ICON_IMAGE_HEIGHT:I
 
     .line 63
-    const v0, 0x7f060027
+    const v0, 0x7f060026
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -204,7 +204,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->LIST_TYPE_TEXT_POS_X:I
 
     .line 64
-    const v0, 0x7f060028
+    const v0, 0x7f060027
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -215,7 +215,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->LIST_TYPE_TEXT_POS_Y:I
 
     .line 65
-    const v0, 0x7f060029
+    const v0, 0x7f060028
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -231,7 +231,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->LIST_TYPE_TEXT_HEIGHT:I
 
     .line 67
-    const v0, 0x7f06002a
+    const v0, 0x7f060029
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -242,7 +242,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->CHECKBOX_X_OFFSET_FROM_RIGHT:I
 
     .line 68
-    const v0, 0x7f06002b
+    const v0, 0x7f06002a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -253,7 +253,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->CHECKBOX_POS_Y:I
 
     .line 70
-    const v0, 0x7f06002c
+    const v0, 0x7f06002b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -264,7 +264,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->SEPARATOR_HEIGHT:I
 
     .line 71
-    const v0, 0x7f06002d
+    const v0, 0x7f06002c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -275,7 +275,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->SEPARATOR_POS_X:I
 
     .line 73
-    const v0, 0x7f060023
+    const v0, 0x7f060022
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -286,7 +286,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->WAITING_ICON_IMAGE_POS_X:I
 
     .line 74
-    const v0, 0x7f060024
+    const v0, 0x7f060023
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -297,7 +297,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->WAITING_ICON_IMAGE_POS_Y:I
 
     .line 75
-    const v0, 0x7f060026
+    const v0, 0x7f060025
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -308,7 +308,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->WAITING_ICON_IMAGE_HEIGHT:I
 
     .line 76
-    const v0, 0x7f060025
+    const v0, 0x7f060024
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -319,7 +319,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->WAITING_ICON_IMAGE_WIDTH:I
 
     .line 78
-    const v0, 0x7f060149
+    const v0, 0x7f060144
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -330,7 +330,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->TITLE_HEIGHT:I
 
     .line 79
-    const v0, 0x7f060147
+    const v0, 0x7f060142
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -341,7 +341,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->MENU_POS_X:I
 
     .line 80
-    const v0, 0x7f060148
+    const v0, 0x7f060143
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -429,7 +429,7 @@
     .parameter "glContext"
 
     .prologue
-    const v4, 0x7f02023d
+    const v4, 0x7f020226
 
     const/4 v7, 0x0
 
@@ -615,7 +615,7 @@
     .line 156
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
+    iget-boolean v1, v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mSizeSpecified:Z
 
     if-eqz v1, :cond_5
 
@@ -642,11 +642,11 @@
 
     move-result v6
 
-    const v7, 0x7f02023d
+    const v7, 0x7f020226
 
-    const v8, 0x7f02023d
+    const v8, 0x7f020226
 
-    const v9, 0x7f02023d
+    const v9, 0x7f020226
 
     const/4 v10, 0x0
 
@@ -750,7 +750,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090122
+    const v2, 0x7f090120
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -858,7 +858,7 @@
 
     int-to-float v13, v1
 
-    const v14, 0x7f020207
+    const v14, 0x7f0201f4
 
     move v12, v5
 
@@ -887,7 +887,7 @@
 
     int-to-float v4, v4
 
-    const v8, 0x7f020280
+    const v8, 0x7f020265
 
     invoke-direct {v1, v2, v3, v4, v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -996,11 +996,11 @@
 
     move-result v6
 
-    const v7, 0x7f02023d
+    const v7, 0x7f020226
 
-    const v8, 0x7f02023d
+    const v8, 0x7f020226
 
-    const v9, 0x7f02023d
+    const v9, 0x7f020226
 
     const/4 v10, 0x0
 
@@ -1037,7 +1037,7 @@
 
     int-to-float v4, v4
 
-    const v8, 0x7f020232
+    const v8, 0x7f02021f
 
     invoke-direct {v1, v2, v3, v4, v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -1551,7 +1551,7 @@
     if-eqz v2, :cond_0
 
     .line 242
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1603,7 +1603,7 @@
 
     .prologue
     .line 383
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     invoke-interface {v0, p1, p2}, Lcom/sec/android/glview/TwGLView$OnTouchListener;->onTouch(Lcom/sec/android/glview/TwGLView;Landroid/view/MotionEvent;)Z
 
@@ -1692,7 +1692,7 @@
     .line 214
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mText:Lcom/sec/android/glview/TwGLText;
 
-    const v1, 0x7f080018
+    const v1, 0x7f080017
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -1870,10 +1870,10 @@
     const/4 v1, 0x0
 
     .line 355
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     .line 356
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     if-nez v0, :cond_5
 

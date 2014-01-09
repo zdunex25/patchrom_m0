@@ -34,7 +34,7 @@ durante la llamada"</string>
     <string name="SM_SMILE">Detec. sonrisa</string>
     <string name="SM_FRAME">Marcos</string>
     <string name="SM_BEAUTY">Belleza</string>
-    <string name="SM_VINTAGE">Antiguo</string>
+    <string name="SM_VINTAGE">Cosecha</string>
     <string name="SM_ADDME">Añadirme</string>
     <string name="SM_ACTION">Toma de acción</string>
     <string name="SM_STOPMOTION">Detener movimiento</string>
@@ -67,10 +67,8 @@ durante la llamada"</string>
     <string name="E_EMBOSS">Estampado</string>
     <string name="E_OUTLINE">Contorno</string>
     <string name="E_WATERCOLOR">Color agua</string>
-    <string name="E_MONOCHROME">Monocromático</string>
-    <string name="E_SKETCH">Boceto</string>
     <string name="E_WASHED">Gastado</string>
-    <string name="E_POSTERIZE">Posterizar</string>
+    <string name="E_POSTERIZE">Postergar</string>
     <string name="E_SOLARIZE">Asolear</string>
     <string name="E_VINTAGE_COLD">Diseño antiguo frío</string>
     <string name="E_VINTAGE_WARM">Diseño antiguo cálido</string>
@@ -79,7 +77,7 @@ durante la llamada"</string>
     <string name="E_POINT_RED_YELLOW">Punto rojo y amarillo</string>
     <string name="E_CARTOONIZE">Caricatura</string>
     <string name="F_AUTO_FLASH">Automático</string>
-    <string name="F_AUTOFOCUS">Auto enfoque</string>
+    <string name="F_AUTOFOCUS">Enfoque automático</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detección de rostro</string>
     <string name="F_PANFOCUS">Enfoq pan</string>
@@ -102,7 +100,7 @@ durante la llamada"</string>
     <string name="RM_MMS">Límite de MMS</string>
     <string name="RM_EMAIL">Límite de correo</string>
     <string name="RM_SLOW">Movimiento lento</string>
-    <string name="RM_FAST">Movimiento rapido</string>
+    <string name="RM_FAST">Cámara rápida</string>
     <string name="CS_PROGRESS_TEXT">Creando imagen. Espere...</string>
     <string name="SCN_NONE">Ninguno</string>
     <string name="SCN_PORTRAIT">Retrato</string>
@@ -116,7 +114,7 @@ durante la llamada"</string>
     <string name="SCN_NIGHT_SHOT">Nocturno</string>
     <string name="SCN_FIREWORK">Pirotecnia</string>
     <string name="SCN_TEXT">Texto</string>
-    <string name="SCN_CANDLE_LIGHT">Luz de vela</string>
+    <string name="SCN_CANDLE_LIGHT">Luz de velas</string>
     <string name="SCN_BACK_LIGHT">Contraluz</string>
     <string name="OPTION_ON">Activado</string>
     <string name="OPTION_OFF">Desactivado</string>
@@ -131,7 +129,6 @@ durante la llamada"</string>
     <string name="Title_Timer">Temporizador</string>
     <string name="Title_Resolution">Resolución</string>
     <string name="Title_ShootAndShare">Comp. conf. de foto</string>
-    <string name="Title_DeviceList">Lista de dispositivos</string>
     <string name="Title_WhiteBalance">Balance de blancos</string>
     <string name="Title_Effects">Efectos</string>
     <string name="Title_Focus">Foco</string>
@@ -153,7 +150,6 @@ durante la llamada"</string>
     <string name="Title_AutoContrast">Contraste automático</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Revisar</string>
-    <string name="Title_AutoShareShot">Compartir foto autom.</string>
     <string name="Title_Guideline">Instrucciones</string>
     <string name="Title_VideoQuality">Calidad de video</string>
     <string name="Title_AudioRecording">Grab. de audio</string>
@@ -173,13 +169,10 @@ durante la llamada"</string>
     <string name="Action_Shot_Helptext">Crear panorámica de objetos en movimiento</string>
     <string name="Stop_Motion_Helptext">Crear animación de instantáneas continuas</string>
     <string name="Cartoon_Helptext">Convertir foto en animación</string>
-    <string name="HDR_Helptext">Tenga cuidado de no sacudir el dispositivo cuando capture fotografías</string>
+    <string name="HDR_Helptext">Tenga cuidado de no sacudir el dispositivo cuando toma fotografías</string>
     <string name="help_text_panorama">Pulse la tecla de la cámara y mueva el teléfono lentamente en una dirección</string>
     <string name="help_text_panorama_device">Pulse la tecla de la cámara y mueva el dispositivo lentamente en una dirección</string>
-    <string name="message_DefaultLayout">Se restablecerá el diseño de atajos</string>
     <string name="message_EULA_GPS">Al activar la Etiqueta GPS, este dispositivo adjuntará, insertará y almacenará los datos de la ubicación geográfica dentro de cada foto. Tenga cuidado cuando envía, comparte, distribuye, transmite o copia esta foto, ya que contienen la ubicación de donde se capturó</string>
-    <string name="message_Auto_ShareShot">"Auto share shot enables you to easily connect to the devices you want to share pictures with.
-Enable auto share shot, then bring the devices together (typically back to back) to connect them"</string>
     <string name="GPS_msg">GPS desactivado</string>
     <string name="message_enable_GPS">Active GPS en Configuración para utilizar la etiqueta GPS</string>
     <string name="cancel">Cancelar</string>
@@ -246,11 +239,9 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="profile_user_default_name">Desconocido</string>
     <string name="shareshot_no_user">No hay nadie con quien compartirlo</string>
     <string name="snapshot_saved">%s guardado</string>
-    <string name="editable_shortcut_reset">Restabl.</string>
     <string name="editable_shortcut_helptext_title">Consejos</string>
     <string name="editable_shortcut_helptext_message">Mantenga pulsados los atajos para editarlos</string>
     <string name="editable_shortcut_helptext">Pulse y mantenga presionado el ícono, luego arrástrelo para editar la posición de los atajos</string>
-    <string name="sbeam_helptext">Capturar y compartir fotografías con otros dispositivos. Junte los dispositivos para añadir dispositivos que desee compartir mediante S Beam</string>
     <string name="storage_setting_dialog_title">Ubicación de almacenamiento</string>
     <string name="storage_setting_dialog_message">Tarjeta de memoria insertada. ¿Cambiar la ubicación de almacenamiento a la tarjeta de memoria?</string>
     <string name="do_not_ask_again">No mostrar de nuevo</string>
@@ -259,18 +250,15 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="bestpic">Mejor foto</string>
     <string name="bestpic_on">Ac</string>
     <string name="bestpic_off">Des</string>
-    <string name="bestgroup">Mejor pose de grupo</string>
-    <string name="bestgroup_title">Selecc. rostro para guardar</string>
     <string name="battery_low">Cámara cerrada. La temperatura de la batería es muy baja</string>
     <string name="buddy_photo_share_helptext">Tomar y compartir fotos con amigos a través de la detección de rostros</string>
-    <string name="face_zoom_helptext">Pulse dos veces sobre el rostro para acercar o alejar</string>
+    <string name="face_zoom_helptext">Presione dos veces sobre el rostro para acercar o alejar</string>
     <string name="burst_shot_guidetext">Los disparos en ráfaga se guardarán en el almacenamiento del dispositivo</string>
     <string name="snap_shot_limitation_dialog">No se puede usar la función de grabación de pantalla mientras la función de anti sacudir está activa</string>
     <string name="on_device_help_focus">Pulse para definir el enfoque de la cámara</string>
     <string name="on_device_help_camcorder">Cambiar a cámara de video</string>
     <string name="on_device_help_self">Cambiar al modo de autoretrato</string>
     <string name="on_device_help_editable">Mantenga pulsado el atajo que desea mover. Luego, arrástrelo a donde desea dejarlo</string>
-    <string name="on_device_help_voicecommand">Puede capturar imágenes con comandos de voz como ‘Capturar’, ‘Disparar’ y ‘Sonrían’</string>
     <string name="Title_VideoSpeed">Velocidad</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2 veces más rápido</string>
@@ -292,7 +280,4 @@ Enable auto share shot, then bring the devices together (typically back to back)
     <string name="self_recording_open_warning_popup">Sólo puede usarse la autograbación cuando el teléfono está abierto</string>
     <string name="contextual_filename">Nombre de archivo contextual</string>
     <string name="enable_gps_dialog">La etiqueta de GPS se debe activar. ¿Activar etiqueta de GPS?</string>
-    <string name="gallery_disable">La galería está desactivada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Fuerte</string>
 </resources>

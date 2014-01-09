@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1537
+    .line 1427
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$13;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .parameter "event"
 
     .prologue
-    .line 1539
+    .line 1429
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
@@ -63,16 +63,16 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 1541
+    .line 1431
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$13;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finish()V
 
-    .line 1542
+    .line 1432
     const/4 v0, 0x1
 
-    .line 1544
+    .line 1434
     :goto_0
     return v0
 

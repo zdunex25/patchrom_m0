@@ -144,7 +144,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onContextualFilenameSelect(I)V
 
     .line 71
-    iget v0, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v0, p0, Lcom/sec/android/app/camera/command/ContextualFilenameSelectCommand;->mZOrder:I
 
     const/4 v1, 0x2
 

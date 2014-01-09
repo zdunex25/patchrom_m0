@@ -87,7 +87,7 @@
 
     .line 53
     .local v0, attr:Landroid/content/res/TypedArray;
-    const v1, 0x7f02005a
+    const v1, 0x7f020057
 
     invoke-virtual {v0, v3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -96,7 +96,7 @@
     invoke-virtual {p0, v3, v1}, Lcom/sec/android/app/camera/widget/TwIndicatorBattery;->addImageId(II)V
 
     .line 55
-    const v1, 0x7f02005b
+    const v1, 0x7f020058
 
     invoke-virtual {v0, v4, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -105,7 +105,7 @@
     invoke-virtual {p0, v4, v1}, Lcom/sec/android/app/camera/widget/TwIndicatorBattery;->addImageId(II)V
 
     .line 57
-    const v1, 0x7f02005c
+    const v1, 0x7f020059
 
     invoke-virtual {v0, v5, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -114,7 +114,7 @@
     invoke-virtual {p0, v5, v1}, Lcom/sec/android/app/camera/widget/TwIndicatorBattery;->addImageId(II)V
 
     .line 59
-    const v1, 0x7f02005d
+    const v1, 0x7f02005a
 
     invoke-virtual {v0, v6, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -123,7 +123,7 @@
     invoke-virtual {p0, v6, v1}, Lcom/sec/android/app/camera/widget/TwIndicatorBattery;->addImageId(II)V
 
     .line 61
-    const v1, 0x7f02005e
+    const v1, 0x7f02005b
 
     invoke-virtual {v0, v7, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -136,7 +136,7 @@
 
     const/4 v2, 0x5
 
-    const v3, 0x7f02005f
+    const v3, 0x7f02005c
 
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 

@@ -1042,7 +1042,7 @@
 
     if-eqz v1, :cond_d
 
-    const v15, 0x7f0900ea
+    const v15, 0x7f0900e8
 
     .line 446
     .local v15, msdId:I
@@ -1703,7 +1703,7 @@
     .parameter "icicle"
 
     .prologue
-    const v13, 0x7f0b0007
+    const v13, 0x7f0b000d
 
     const/4 v12, 0x0
 
@@ -1728,7 +1728,7 @@
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/CropImage;->setContentView(I)V
 
     .line 119
-    const v8, 0x7f0b0006
+    const v8, 0x7f0b000c
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/CropImage;->findViewById(I)Landroid/view/View;
 
@@ -2185,7 +2185,7 @@
     invoke-virtual {v8, v9}, Landroid/view/Window;->addFlags(I)V
 
     .line 212
-    const v8, 0x7f0b000a
+    const v8, 0x7f0b0010
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/CropImage;->findViewById(I)Landroid/view/View;
 
@@ -2205,7 +2205,7 @@
     invoke-virtual {v8, v9}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 222
-    const v8, 0x7f0b000c
+    const v8, 0x7f0b0012
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/CropImage;->findViewById(I)Landroid/view/View;
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 242
+    .line 196
     iput-object p1, p0, Lcom/sec/android/app/camera/Camcorder$1;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,11 +39,11 @@
     .parameter "msg"
 
     .prologue
-    .line 244
+    .line 198
     iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$1;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
     #getter for: Lcom/sec/android/app/camera/Camcorder;->mIsDestroying:Z
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1000(Lcom/sec/android/app/camera/Camcorder;)Z
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$600(Lcom/sec/android/app/camera/Camcorder;)Z
 
     move-result v0
 
@@ -51,11 +51,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 253
+    .line 207
     :goto_0
     return-void
 
-    .line 246
+    .line 200
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -63,16 +63,16 @@
 
     goto :goto_0
 
-    .line 248
+    .line 202
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$1;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
     #calls: Lcom/sec/android/app/camera/Camcorder;->showRecordingModePopup()V
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1100(Lcom/sec/android/app/camera/Camcorder;)V
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$700(Lcom/sec/android/app/camera/Camcorder;)V
 
     goto :goto_0
 
-    .line 246
+    .line 200
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

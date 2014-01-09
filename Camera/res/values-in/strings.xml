@@ -61,14 +61,12 @@ selama panggilan"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Hitam dan putih</string>
+    <string name="E_BW">Hitam dan Putih</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negatif</string>
     <string name="E_EMBOSS">Timbul</string>
     <string name="E_OUTLINE">Outline</string>
     <string name="E_WATERCOLOR">Warna air</string>
-    <string name="E_MONOCHROME">Monokrom</string>
-    <string name="E_SKETCH">Sketsa</string>
     <string name="E_WASHED">Pudar</string>
     <string name="E_POSTERIZE">Posterise</string>
     <string name="E_SOLARIZE">Solarise</string>
@@ -102,7 +100,7 @@ selama panggilan"</string>
     <string name="RM_MMS">Batas MMS</string>
     <string name="RM_EMAIL">Batas untuk email</string>
     <string name="RM_SLOW">Gerak perlahan</string>
-    <string name="RM_FAST">Gerak cepat</string>
+    <string name="RM_FAST">Gerakan cepat</string>
     <string name="CS_PROGRESS_TEXT">Membuat gambar. Harap tunggu...</string>
     <string name="SCN_NONE">Tidak ada</string>
     <string name="SCN_PORTRAIT">Potret</string>
@@ -118,7 +116,7 @@ selama panggilan"</string>
     <string name="SCN_TEXT">Teks</string>
     <string name="SCN_CANDLE_LIGHT">Cahaya lilin</string>
     <string name="SCN_BACK_LIGHT">Cahaya layar</string>
-    <string name="OPTION_ON">Aktif</string>
+    <string name="OPTION_ON">Hidup</string>
     <string name="OPTION_OFF">Tdk aktif</string>
     <string name="EXPOSURE_METER">Pengukuran exposure</string>
     <string name="ADJUST">Penyetelan</string>
@@ -131,7 +129,6 @@ selama panggilan"</string>
     <string name="Title_Timer">Timer</string>
     <string name="Title_Resolution">Resolusi</string>
     <string name="Title_ShootAndShare">Pgtran bagi bidikan</string>
-    <string name="Title_DeviceList">Daftar perangkat</string>
     <string name="Title_WhiteBalance">keseimbangan putih</string>
     <string name="Title_Effects">Efek</string>
     <string name="Title_Focus">Fokus</string>
@@ -153,7 +150,6 @@ selama panggilan"</string>
     <string name="Title_AutoContrast">Kontras otomatis</string>
     <string name="Title_GPS">Tag GPS</string>
     <string name="Title_Review">Tinjauan</string>
-    <string name="Title_AutoShareShot">Bebagi jepretan otomatis</string>
     <string name="Title_Guideline">Garis petunjuk</string>
     <string name="Title_VideoQuality">Kualitas video</string>
     <string name="Title_AudioRecording">Rekam audio</string>
@@ -176,10 +172,7 @@ selama panggilan"</string>
     <string name="HDR_Helptext">Hati-hati agar tidak mengguncang perangkat ketika mengambil foto</string>
     <string name="help_text_panorama">Tekan tombol kamera dan gerakkan telepon perlahan ke satu arah</string>
     <string name="help_text_panorama_device">Tekan tombol kamera dan gerakkan perangkat perlahan ke satu arah</string>
-    <string name="message_DefaultLayout">Tata letak pintasan akan direset</string>
     <string name="message_EULA_GPS">Mengaktifkan tag GPS akan melampirkan, menyisipkan, dan menyimpan data lokasi geografis dalam setiap foto. Harap berhati-hati saat Anda mengirim, berbagi, mendistribusikan, mengirimkan, atau menyalin foto-foto ini karena mengandung lokasi tempat foto itu diambil</string>
-    <string name="message_Auto_ShareShot">"Berbagi jepretan otomatis memungkinkan Anda dengan mudah tersambung ke perangkat yang Anda inginkan untuk berbagi gambar.
-Aktifkan berbagi jepretan otomatis, lalu dekatkan perangkatnya (biasanya saling membelakangi) untuk menyambungkannya"</string>
     <string name="GPS_msg">GPS nonaktif</string>
     <string name="message_enable_GPS">Aktifkan GPS di Pengaturan utk menggunakan tag GPS</string>
     <string name="cancel">Batal</string>
@@ -246,11 +239,9 @@ Aktifkan berbagi jepretan otomatis, lalu dekatkan perangkatnya (biasanya saling 
     <string name="profile_user_default_name">Tidak diketahui</string>
     <string name="shareshot_no_user">Tidak ada orang untuk berbagi</string>
     <string name="snapshot_saved">%s tersimpan</string>
-    <string name="editable_shortcut_reset">Reset</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Ketuk dan tahan pemintas untuk mengeditnya</string>
     <string name="editable_shortcut_helptext">Ketuk dan tahan ikon, kemudian tarik untuk mengedit posisi pintasan</string>
-    <string name="sbeam_helptext">Ambil dan berbagi foto dengan perangkat lain. Dekatkan perangkat untuk menambahkan perangkat yang dengannya Anda ingin berbagi melalui S Beam</string>
     <string name="storage_setting_dialog_title">Lokasi penyimpanan</string>
     <string name="storage_setting_dialog_message">Kartu SD dimasukkan. Ubah lokasi penyimpanan ke kartu SD?</string>
     <string name="do_not_ask_again">Jangan tampilkan lagi</string>
@@ -259,8 +250,6 @@ Aktifkan berbagi jepretan otomatis, lalu dekatkan perangkatnya (biasanya saling 
     <string name="bestpic">Foto terbaik</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Pose kelompok terbaik</string>
-    <string name="bestgroup_title">Plh wajah terbaik utk disimpan</string>
     <string name="battery_low">Tutup Kamera. Suhu baterai terlalu rendah</string>
     <string name="buddy_photo_share_helptext">Ambil dan bagi foto dengan teman melalui deteksi wajah</string>
     <string name="face_zoom_helptext">Ketuk dua kali pada wajah untuk memperkecil atau memperbesar</string>
@@ -270,7 +259,6 @@ Aktifkan berbagi jepretan otomatis, lalu dekatkan perangkatnya (biasanya saling 
     <string name="on_device_help_camcorder">Alihkan ke mode Camcoder</string>
     <string name="on_device_help_self">Alihkan ke mode potret diri</string>
     <string name="on_device_help_editable">Ketuk dan tahan pintasan yang ingin Anda pindahkan. Lalu geser ke tempat yang Anda inginkan</string>
-    <string name="on_device_help_voicecommand">"Anda dapat mengambil foto dengan perintah suara seperti 'Foto', 'Bidik', 'Senyum', dan 'Cheese'"</string>
     <string name="Title_VideoSpeed">Kecepatan</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x lebih cepat</string>
@@ -292,7 +280,4 @@ Aktifkan berbagi jepretan otomatis, lalu dekatkan perangkatnya (biasanya saling 
     <string name="self_recording_open_warning_popup">Rekaman sendiri hanya dapat digunakan ketika telepon terbuka</string>
     <string name="contextual_filename">Nama file kontekstual</string>
     <string name="enable_gps_dialog">Tag GPS harus diaktifkan. Aktifkan tag GPS?</string>
-    <string name="gallery_disable">Galeri dinonaktifkan</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Kuat</string>
 </resources>

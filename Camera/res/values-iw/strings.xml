@@ -40,7 +40,7 @@
     <string name="SM_CARTOON">קריקטורה</string>
     <string name="SM_SHOOTANDSHARE">שתף תמונה</string>
     <string name="SM_BURST">צילום ברצף</string>
-    <string name="SM_BUDDY_PHOTOSHARING">שיתוף תמונה לחברים</string>
+    <string name="SM_BUDDY_PHOTOSHARING">שיתוף תמונות עם חברים</string>
     <string name="SM_LOW_LIGHT">אור חלש</string>
     <string name="NORMAL">רגיל</string>
     <string name="VM_WARM">חם</string>
@@ -60,14 +60,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">שחור לבן</string>
+    <string name="E_BW">שחור ולבן</string>
     <string name="E_SEPIA">חום כהה</string>
     <string name="E_NEGATIVE">תשליל</string>
     <string name="E_EMBOSS">הטבעה</string>
     <string name="E_OUTLINE">מיתאר</string>
     <string name="E_WATERCOLOR">צבעי מים</string>
-    <string name="E_MONOCHROME">מונוכרום</string>
-    <string name="E_SKETCH">שרטוט</string>
     <string name="E_WASHED">אפקט שטיפה</string>
     <string name="E_POSTERIZE">אפקט פוסטר</string>
     <string name="E_SOLARIZE">אפקט סולארי</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">נקודה אדומה-צהובה</string>
     <string name="E_CARTOONIZE">מתמונה לציור</string>
     <string name="F_AUTO_FLASH">מבזק אוטומטי</string>
-    <string name="F_AUTOFOCUS">"מיקוד אוט'"</string>
+    <string name="F_AUTOFOCUS">מיקוד אוטומטי</string>
     <string name="F_MACRO">מאקרו</string>
     <string name="F_FACE">זיהוי פנים</string>
     <string name="F_PANFOCUS">"מ' פנורמי"</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">טיימר</string>
     <string name="Title_Resolution">רזולוציה</string>
     <string name="Title_ShootAndShare">הגדרות שיתוף תמונות</string>
-    <string name="Title_DeviceList">רשימת התקנים</string>
     <string name="Title_WhiteBalance">איזון לבן</string>
     <string name="Title_Effects">אפקטים</string>
     <string name="Title_Focus">מיקוד</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">ניגודיות אוטומטית</string>
     <string name="Title_GPS">תגית GPS</string>
     <string name="Title_Review">סקירה</string>
-    <string name="Title_AutoShareShot">שיתוף תמונה אוטומטי</string>
     <string name="Title_Guideline">קווים מנחים</string>
     <string name="Title_VideoQuality">איכות וידאו</string>
     <string name="Title_AudioRecording">הקלטת שמע</string>
@@ -161,7 +157,7 @@
     <string name="Title_Mode">מצב</string>
     <string name="Title_Back">חזור</string>
     <string name="Title_ImageViewer">מציג התמונות</string>
-    <string name="Title_Outdoor_Visibility">תאורת מסך בחוץ</string>
+    <string name="Title_Outdoor_Visibility">נראות בחוץ</string>
     <string name="Title_Flip">שמור הפוך</string>
     <string name="Title_Self_Portrait">דיוקן-עצמי</string>
     <string name="Title_Self_Recording">הקלטה עצמית</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">הקפד לא להרעיד את ההתקן בעת צילום תמונות</string>
     <string name="help_text_panorama">הקש על מקש המצלמה והזז את הטלפון לאט בכיוון אחד</string>
     <string name="help_text_panorama_device">לחץ על מקש המצלמה והזז את ההתקן באיטיות בכיוון אחד</string>
-    <string name="message_DefaultLayout">פריסת קיצורי הדרך תאופס</string>
     <string name="message_EULA_GPS">הפעלת תגית GPS תצרף, תשבץ ותאחסן נתוני מיקום גיאוגרפי בכל תמונה. הפעל שיקול דעת כשאתה שולח, מפיץ, משדר או מעתיק תמונות אלה, משום שהן כוללות את המיקום שבו צולמו</string>
-    <string name="message_Auto_ShareShot">"שיתוף תמונה אוטומטי מאפשר לך להתחבר בקלות להתקנים שעמם אתה רוצה לשתף תמונות.
-הפעל את שיתוף תמונה אוטומטי ואז קבץ את ההתקנים (בדרך-כלל גב אל גב) כדי לחברם"</string>
     <string name="GPS_msg">GPS כבוי</string>
     <string name="message_enable_GPS">"הפעל GPS תחת 'הגדרות' כדי להשתמש בתגית GPS"</string>
     <string name="cancel">ביטול</string>
@@ -244,11 +237,9 @@
     <string name="profile_user_default_name">לא ידוע</string>
     <string name="shareshot_no_user">אין אנשים שניתן לשתף איתם</string>
     <string name="snapshot_saved">%s נשמר</string>
-    <string name="editable_shortcut_reset">איפוס</string>
     <string name="editable_shortcut_helptext_title">עצות</string>
     <string name="editable_shortcut_helptext_message">הקש באריכות על קיצורי דרך כדי לערוך אותם</string>
     <string name="editable_shortcut_helptext">הקש באריכות על סמל וגרור אותו כדי לערוך מיקום של קיצורי דרך</string>
-    <string name="sbeam_helptext">צלם תמונות ושתף אותן עם התקנים אחרים. קרב את ההתקנים זה לזה, כשאתה רוצה לצרף התקנים לשיתוף באמצעות S Beam</string>
     <string name="storage_setting_dialog_title">אחסון ברירת מחדל</string>
     <string name="storage_setting_dialog_message">כרטיס זיכרון זוהה. לשנות הגדרות אחסון לכרטיס זיכרון?</string>
     <string name="do_not_ask_again">אל תציג שוב</string>
@@ -257,8 +248,6 @@
     <string name="bestpic">התצלום הטוב ביותר</string>
     <string name="bestpic_on">מופעל</string>
     <string name="bestpic_off">כבוי</string>
-    <string name="bestgroup">התמונה הקבוצתית הטובה</string>
-    <string name="bestgroup_title">בחר כל פרצוף טוב ביותר לשמירה</string>
     <string name="battery_low">סגור את המצלמה. טמפרטורת הסוללה נמוכה מדי</string>
     <string name="buddy_photo_share_helptext">צלם תמונות ושתף אותן עם חברים באמצעות זיהוי פנים</string>
     <string name="face_zoom_helptext">הקש הקשה כפולה על פנים להגדלה או להקטנה</string>
@@ -268,7 +257,6 @@
     <string name="on_device_help_camcorder">החלף למצב מצלמת וידאו</string>
     <string name="on_device_help_self">עבור למצב דיוקן-עצמי</string>
     <string name="on_device_help_editable">הקש באריכות על קיצור הדרך שאתה רוצה להעביר. לאחר מכן גרור אותו לאן שתרצה</string>
-    <string name="on_device_help_voicecommand">"באפשרותך לצלם תמונות באמצעות פקודות קוליות כגון ’לכוד’, ’צלם’, ’לחייך’ ו’צ'יז’"</string>
     <string name="Title_VideoSpeed">מהירות</string>
     <string name="SPEED_OFF">רגיל</string>
     <string name="SPEED_2X_FASTER">פי 2 מהר יותר</string>
@@ -290,7 +278,4 @@
     <string name="self_recording_open_warning_popup">ניתן להקליט הקלטה עצמית רק כשהטלפון פתוח</string>
     <string name="contextual_filename">שם קובץ הקשרי</string>
     <string name="enable_gps_dialog">יש להפעיל את תגית GPS. להפעיל את תגית GPS?</string>
-    <string name="gallery_disable">הגלריה מושבתת</string>
-    <string name="HDR_Normal">רגיל</string>
-    <string name="HDR_Strong">חזק</string>
 </resources>

@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2730
+    .line 2709
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$5;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -40,23 +40,23 @@
     .parameter "orientation"
 
     .prologue
-    .line 2732
+    .line 2711
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 2733
+    .line 2712
     const-string v0, "CameraEngine"
 
     const-string v1, "onOrientationChanged: orientation - unknown orientation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2744
+    .line 2717
     :goto_0
     return-void
 
-    .line 2743
+    .line 2716
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$5;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
@@ -65,7 +65,7 @@
     move-result v1
 
     #calls: Lcom/sec/android/app/camera/CameraEngine;->setLastOrientation(I)V
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/CameraEngine;->access$1500(Lcom/sec/android/app/camera/CameraEngine;I)V
+    invoke-static {v0, v1}, Lcom/sec/android/app/camera/CameraEngine;->access$1800(Lcom/sec/android/app/camera/CameraEngine;I)V
 
     goto :goto_0
 .end method

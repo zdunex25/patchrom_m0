@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1126
+    .line 1134
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1128
+    .line 1136
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
@@ -54,23 +54,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 1129
+    .line 1137
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     #getter for: Lcom/sec/android/app/camera/CameraEngine;->mCameraDevice:Lcom/sec/android/seccamera/SecCamera;
-    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1000(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
+    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1300(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/sec/android/seccamera/SecCamera;->startShutterSound(Z)V
 
-    .line 1132
+    .line 1140
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraEngine;->setOrientationAndSendItToFramework()V
 
-    .line 1133
+    .line 1141
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -79,17 +79,17 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->pauseAudioPlayback()V
 
-    .line 1134
+    .line 1142
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     #getter for: Lcom/sec/android/app/camera/CameraEngine;->mCameraDevice:Lcom/sec/android/seccamera/SecCamera;
-    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1000(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
+    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1300(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/sec/android/seccamera/SecCamera;->startPanorama(Z)V
 
-    .line 1135
+    .line 1143
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mStateMessageHandler:Lcom/sec/android/app/camera/CameraEngine$StateMessageHandler;
@@ -98,15 +98,15 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraEngine$StateMessageHandler;->sendEmptyMessage(I)Z
 
-    .line 1136
+    .line 1144
     return-void
 
-    .line 1131
+    .line 1139
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$2;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     #getter for: Lcom/sec/android/app/camera/CameraEngine;->mCameraDevice:Lcom/sec/android/seccamera/SecCamera;
-    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1000(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
+    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1300(Lcom/sec/android/app/camera/CameraEngine;)Lcom/sec/android/seccamera/SecCamera;
 
     move-result-object v0
 

@@ -94,7 +94,7 @@
     .line 114
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSliderMenu$MainHandler;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSliderMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLSliderMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLSliderMenu;->access$200(Lcom/sec/android/app/camera/glwidget/TwGLSliderMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v0

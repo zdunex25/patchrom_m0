@@ -30,12 +30,12 @@
     .parameter
 
     .prologue
-    .line 5841
+    .line 5391
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$18;->this$0:Lcom/sec/android/app/camera/Camera;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/Camera$18;->val$user:Lcom/samsung/shareshot/User;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,12 +43,12 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
+    .locals 3
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    .line 5846
+    .line 5396
     :try_start_0
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$18;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -64,61 +64,19 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/samsung/shareshot/IShareShotService;->ackActivateUser(Ljava/lang/String;)V
-
-    .line 5847
-    const-string v1, "Camera"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, " acktivate user is "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/sec/android/app/camera/Camera$18;->val$user:Lcom/samsung/shareshot/User;
-
-    invoke-virtual {v3}, Lcom/samsung/shareshot/User;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5848
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$18;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v1, v1, Lcom/sec/android/app/camera/Camera;->iShootShareService:Lcom/samsung/shareshot/IShareShotService;
-
-    invoke-interface {v1}, Lcom/samsung/shareshot/IShareShotService;->getUserList()Ljava/util/List;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/sec/android/app/camera/Camera$18;->val$user:Lcom/samsung/shareshot/User;
-
-    invoke-interface {v1, v2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+    invoke-interface {v1, v2}, Lcom/samsung/shareshot/IShareShotService;->rejectActivateUser(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5856
+    .line 5401
     :goto_0
     return-void
 
-    .line 5852
+    .line 5397
     :catch_0
     move-exception v0
 
-    .line 5854
+    .line 5399
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1345
+    .line 1337
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$3;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,13 +41,13 @@
     .locals 2
 
     .prologue
-    .line 1347
+    .line 1339
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$3;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     #calls: Lcom/sec/android/app/camera/CameraEngine;->openCameraDevice()V
-    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1100(Lcom/sec/android/app/camera/CameraEngine;)V
+    invoke-static {v0}, Lcom/sec/android/app/camera/CameraEngine;->access$1400(Lcom/sec/android/app/camera/CameraEngine;)V
 
-    .line 1348
+    .line 1340
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$3;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mStateMessageHandler:Lcom/sec/android/app/camera/CameraEngine$StateMessageHandler;
@@ -56,6 +56,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraEngine$StateMessageHandler;->sendEmptyMessage(I)Z
 
-    .line 1351
+    .line 1343
     return-void
 .end method

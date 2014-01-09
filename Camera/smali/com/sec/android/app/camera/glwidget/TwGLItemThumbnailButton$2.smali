@@ -30,7 +30,7 @@
     .line 104
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .line 106
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->access$300(Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0
@@ -56,7 +56,7 @@
     .line 107
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->access$400(Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0

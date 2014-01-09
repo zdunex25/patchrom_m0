@@ -517,7 +517,7 @@
     invoke-static {v7, v2, v4, v0}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
     .line 83
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x0
 
@@ -528,7 +528,7 @@
     aput v9, v7, v8
 
     .line 84
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x1
 
@@ -546,7 +546,7 @@
     invoke-static {v7, v2, v4, v1}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
     .line 87
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x3
 
@@ -557,7 +557,7 @@
     aput v9, v7, v8
 
     .line 88
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x4
 
@@ -575,7 +575,7 @@
     invoke-static {v7, v2, v5, v0}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
     .line 91
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x6
 
@@ -586,7 +586,7 @@
     aput v9, v7, v8
 
     .line 92
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/4 v8, 0x7
 
@@ -604,7 +604,7 @@
     invoke-static {v7, v2, v5, v1}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
     .line 95
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/16 v8, 0x9
 
@@ -615,7 +615,7 @@
     aput v9, v7, v8
 
     .line 96
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mVertices:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLLineTexture;->mVertices:[F
 
     const/16 v8, 0xa
 

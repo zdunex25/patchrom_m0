@@ -36,7 +36,7 @@ med klicem"</string>
     <string name="SM_SMILE">Posn. nasmeška</string>
     <string name="SM_FRAME">Posnetek z okvirjem</string>
     <string name="SM_BEAUTY">Lepota</string>
-    <string name="SM_VINTAGE">Stara slika</string>
+    <string name="SM_VINTAGE">Letnik</string>
     <string name="SM_ADDME">Dodaj me</string>
     <string name="SM_ACTION">Akcijski posnetek</string>
     <string name="SM_STOPMOTION">Ustavi gibanje</string>
@@ -63,14 +63,12 @@ med klicem"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Črno-belo</string>
+    <string name="E_BW">Črno in belo</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negativ</string>
     <string name="E_EMBOSS">Vtisnjeno</string>
     <string name="E_OUTLINE">Oris</string>
     <string name="E_WATERCOLOR">Vodne barvice</string>
-    <string name="E_MONOCHROME">Enobarvno</string>
-    <string name="E_SKETCH">Skica</string>
     <string name="E_WASHED">Izprano</string>
     <string name="E_POSTERIZE">Poster</string>
     <string name="E_SOLARIZE">Osonči</string>
@@ -81,7 +79,7 @@ med klicem"</string>
     <string name="E_POINT_RED_YELLOW">Rdeče-rumena pika</string>
     <string name="E_CARTOONIZE">Strip</string>
     <string name="F_AUTO_FLASH">Samodejna bliskavica</string>
-    <string name="F_AUTOFOCUS">Sam.ostr.</string>
+    <string name="F_AUTOFOCUS">Samodejno ostrenje</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Zaznavanje obraza</string>
     <string name="F_PANFOCUS">Cel.ostr.</string>
@@ -133,7 +131,6 @@ med klicem"</string>
     <string name="Title_Timer">Časovnik</string>
     <string name="Title_Resolution">Ločljivost</string>
     <string name="Title_ShootAndShare">Nast. za Share shot</string>
-    <string name="Title_DeviceList">Seznam naprav</string>
     <string name="Title_WhiteBalance">Izenačevanje beline</string>
     <string name="Title_Effects">Učinki</string>
     <string name="Title_Focus">Žarišče</string>
@@ -155,11 +152,10 @@ med klicem"</string>
     <string name="Title_AutoContrast">Samodejni kontrast</string>
     <string name="Title_GPS">Oznaka GPS</string>
     <string name="Title_Review">Pregled</string>
-    <string name="Title_AutoShareShot">Samod. deljenje posnetka</string>
     <string name="Title_Guideline">Smernice</string>
     <string name="Title_VideoQuality">Kakovost videa</string>
     <string name="Title_AudioRecording">Sneman. zvoka</string>
-    <string name="Title_Storage">Shramba</string>
+    <string name="Title_Storage">Shranjevanje</string>
     <string name="Title_Reset">Ponastavi</string>
     <string name="Title_Mode">Način</string>
     <string name="Title_Back">Nazaj</string>
@@ -178,10 +174,7 @@ med klicem"</string>
     <string name="HDR_Helptext">Pazite, da naprave ne tresete med slikanjem</string>
     <string name="help_text_panorama">Pritisnite tipko kamere in telefon počasi premaknite v eno smer</string>
     <string name="help_text_panorama_device">Pritisnite tipko kamere in napravo počasi premaknite v eno smer</string>
-    <string name="message_DefaultLayout">Postavitev bližnjic bo ponastavljena</string>
     <string name="message_EULA_GPS">Če omogočite oznake GPS, bodo vsaki fotografiji priloženi, vdelani in shranjeni podatki o geografski lokaciji. Pri pošiljanju, deljenju, razdeljevanju, prenosu ali kopiranju teh fotografij bodite previdni, saj vsebujejo podatke o lokaciji, kjer so bile slikane</string>
-    <string name="message_Auto_ShareShot">"Samodejno deljenje posnetka omogoča preprosto povezovanje z napravami, s katerimi želite deliti slike.
-Omogočite samodejno deljenje posnetka, nato pa približajte napravi (običajno s hrbtnima stranema), da ju povežete"</string>
     <string name="GPS_msg">GPS izključen</string>
     <string name="message_enable_GPS">V Nastavitvah vklopite funkcijo GPS, če želite uporabljati oznake GPS</string>
     <string name="cancel">Prekliči</string>
@@ -248,11 +241,9 @@ Omogočite samodejno deljenje posnetka, nato pa približajte napravi (običajno 
     <string name="profile_user_default_name">Neznano</string>
     <string name="shareshot_no_user">Ni oseb, s katerimi bi delili</string>
     <string name="snapshot_saved">%s shranjeno</string>
-    <string name="editable_shortcut_reset">Ponastavi</string>
     <string name="editable_shortcut_helptext_title">Nasveti</string>
     <string name="editable_shortcut_helptext_message">Pritisnite in držite bližnjice, če jih želite urejati</string>
     <string name="editable_shortcut_helptext">Pritisnite in držite ikono, nato pa jo povlecite, da uredite položaj bližnjic</string>
-    <string name="sbeam_helptext">Slikajte in delite fotografije z drugimi napravami. Približajte naprave skupaj, da dodate tiste, s katerimi želite deliti fotografije prek storitve S Beam</string>
     <string name="storage_setting_dialog_title">Mesto shranjevanja</string>
     <string name="storage_setting_dialog_message">Vstavljena je kartica SD. Želite spremeniti lokacijo za shranjevanje na kartico SD?</string>
     <string name="do_not_ask_again">Ne kaži več</string>
@@ -261,8 +252,6 @@ Omogočite samodejno deljenje posnetka, nato pa približajte napravi (običajno 
     <string name="bestpic">Najboljša fotografija</string>
     <string name="bestpic_on">Vk</string>
     <string name="bestpic_off">Iz.</string>
-    <string name="bestgroup">Najboljša skupinska drža</string>
-    <string name="bestgroup_title">Izb. naj. obraz in ga shranite</string>
     <string name="battery_low">Zaprite kamero. Temperatura baterije je prenizka</string>
     <string name="buddy_photo_share_helptext">Slikajte in delite fotografije s prijatelji prek prepoznavanja obrazov</string>
     <string name="face_zoom_helptext">Dvakrat pritisnite na obraz za povečanje ali pomanjšanje</string>
@@ -272,7 +261,6 @@ Omogočite samodejno deljenje posnetka, nato pa približajte napravi (običajno 
     <string name="on_device_help_camcorder">Preklopi na način Videokamera</string>
     <string name="on_device_help_self">Preklopi na način samoportreta</string>
     <string name="on_device_help_editable">Pritisnite in držite bližnjico, ki jo želite premakniti. Nato jo povlecite, kamor želite</string>
-    <string name="on_device_help_voicecommand">Slikate lahko z glasovnimi ukazi, kot so ‘Zajemi’, ‘Slikaj’, ‘Nasmeh’ ali ‘Sir’</string>
     <string name="Title_VideoSpeed">Hitrost</string>
     <string name="SPEED_OFF">Normalno</string>
     <string name="SPEED_2X_FASTER">Dvakrat hitreje</string>
@@ -294,7 +282,4 @@ Omogočite samodejno deljenje posnetka, nato pa približajte napravi (običajno 
     <string name="self_recording_open_warning_popup">Snemanje sebe lahko uporabite samo, ko je telefon odprt</string>
     <string name="contextual_filename">Kontekstno ime datoteke</string>
     <string name="enable_gps_dialog">Oznake GPS morajo biti omogočene. Želite omogočiti oznake GPS?</string>
-    <string name="gallery_disable">Galerija je onemogočena</string>
-    <string name="HDR_Normal">Normalno</string>
-    <string name="HDR_Strong">Močno</string>
 </resources>

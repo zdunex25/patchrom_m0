@@ -3,7 +3,7 @@
 .source "AbstractCameraActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -27,54 +27,49 @@
     .parameter
 
     .prologue
-    .line 1692
+    .line 1569
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$24;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
     .parameter "dialog"
-    .parameter "keyCode"
-    .parameter "event"
+    .parameter "which"
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    .line 1694
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    .line 1571
+    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$24;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    move-result v1
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
-    if-ne v1, v0, :cond_1
+    move-result-object v0
 
-    const/4 v1, 0x4
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setStorage(I)V
 
-    if-eq p2, v1, :cond_0
+    .line 1572
+    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$24;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const/16 v1, 0x17
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
-    if-ne p2, v1, :cond_1
+    move-result-object v0
 
-    .line 1696
-    :cond_0
-    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$24;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setChangeStorageSettingDialog(I)V
 
-    const/16 v2, 0x8
+    .line 1573
+    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$24;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
+    const/4 v1, 0x5
 
-    .line 1699
-    :goto_0
-    return v0
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 1574
+    return-void
 .end method

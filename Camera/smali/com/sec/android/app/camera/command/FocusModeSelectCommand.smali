@@ -166,7 +166,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onFocusModeMenuSelect(I)V
 
     .line 76
-    iget v0, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v0, p0, Lcom/sec/android/app/camera/command/FocusModeSelectCommand;->mZOrder:I
 
     const/4 v1, 0x2
 

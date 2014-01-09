@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Cetak timbul</string>
     <string name="E_OUTLINE">Garis bentuk</string>
     <string name="E_WATERCOLOR">Cat air</string>
-    <string name="E_MONOCHROME">Monokrom</string>
-    <string name="E_SKETCH">Lakaran</string>
     <string name="E_WASHED">Pudar</string>
     <string name="E_POSTERIZE">Posterisasi</string>
     <string name="E_SOLARIZE">Menyuriakan</string>
@@ -80,7 +78,7 @@
     <string name="E_POINT_RED_YELLOW">Titik merah-kuning</string>
     <string name="E_CARTOONIZE">Kartun</string>
     <string name="F_AUTO_FLASH">Flash auto</string>
-    <string name="F_AUTOFOCUS">Auto fokus</string>
+    <string name="F_AUTOFOCUS">Fokus auto</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Pengesan muka</string>
     <string name="F_PANFOCUS">Sorot fokus</string>
@@ -119,7 +117,7 @@
     <string name="SCN_TEXT">Teks</string>
     <string name="SCN_CANDLE_LIGHT">Cahaya lilin</string>
     <string name="SCN_BACK_LIGHT">Cahaya belakang</string>
-    <string name="OPTION_ON">Hidupkan</string>
+    <string name="OPTION_ON">Hidup</string>
     <string name="OPTION_OFF">Matikan</string>
     <string name="EXPOSURE_METER">Pendedahan bermeter</string>
     <string name="ADJUST">Menyesuai</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">Pemasa</string>
     <string name="Title_Resolution">Peleraian</string>
     <string name="Title_ShootAndShare">Aturn kngsi tngkapn</string>
-    <string name="Title_DeviceList">Senarai peranti</string>
     <string name="Title_WhiteBalance">Pengimbang putih</string>
     <string name="Title_Effects">Kesan</string>
     <string name="Title_Focus">Fokus</string>
@@ -154,16 +151,15 @@
     <string name="Title_AutoContrast">Auto kontras</string>
     <string name="Title_GPS">GPS tag</string>
     <string name="Title_Review">Lihat semula</string>
-    <string name="Title_AutoShareShot">Tangkapn kongsi automatik</string>
     <string name="Title_Guideline">Panduan</string>
     <string name="Title_VideoQuality">Kualiti video</string>
     <string name="Title_AudioRecording">Rakaman audio</string>
-    <string name="Title_Storage">Storan</string>
+    <string name="Title_Storage">Penyimpanan</string>
     <string name="Title_Reset">Tetap semula</string>
     <string name="Title_Mode">Mod</string>
     <string name="Title_Back">Kembali</string>
     <string name="Title_ImageViewer">Pemandang imej</string>
-    <string name="Title_Outdoor_Visibility">Keterlihatan luar</string>
+    <string name="Title_Outdoor_Visibility">Penglihatan luar</string>
     <string name="Title_Flip">Simpan sebagai diputar</string>
     <string name="Title_Self_Portrait">Potret-sendiri</string>
     <string name="Title_Self_Recording">Rakaman sendiri</string>
@@ -177,10 +173,7 @@
     <string name="HDR_Helptext">Berhati-hati supaya tidak menggoncangkan peranti semasa mengambil gambar</string>
     <string name="help_text_panorama">Tekan kekunci kamera dan alihkan telefon perlahan-lahan dalam satu arah</string>
     <string name="help_text_panorama_device">Tekan kekunci kamera dan alihkan telefon secara perlahan dalam satu arah</string>
-    <string name="message_DefaultLayout">Reka letak pintasan akan ditetapkan semula</string>
     <string name="message_EULA_GPS">Mengaktifkan tag GPS akan melampir, membenam, dan menyimpan data lokasi geografi pada setiap foto. Berhati-hati semasa anda menghantar, berkongsi, mengedar, atau menyalin foto ini kerana ia mengandungi lokasi di mana foto tersebut diambil</string>
-    <string name="message_Auto_ShareShot">"Tangkapan kongsi automatik membolehkan anda dengan mudah menyambung ke peranti yang anda ingin kongsikan gambar.
-Aktifkan tangkapan kongsi automatik, kemudian membawa peranti bersama (biasanya sandar menyandar) untuk menyambungkannya"</string>
     <string name="GPS_msg">GPS dimatikan</string>
     <string name="message_enable_GPS">Hidupkan GPS dalam Aturan untuk mengguna tag GPS</string>
     <string name="cancel">Batal</string>
@@ -247,11 +240,9 @@ Aktifkan tangkapan kongsi automatik, kemudian membawa peranti bersama (biasanya 
     <string name="profile_user_default_name">Tidak diketahui</string>
     <string name="shareshot_no_user">Tiada orang untuk berkongsi dengan</string>
     <string name="snapshot_saved">%s disimpan</string>
-    <string name="editable_shortcut_reset">Ttp.smula</string>
     <string name="editable_shortcut_helptext_title">Tip</string>
     <string name="editable_shortcut_helptext_message">Ketik dan tahan pintasan untuk menyunting</string>
     <string name="editable_shortcut_helptext">Ketik dan tahan ikon, kemudian seret ia untuk menyunting kedudukan pintasan</string>
-    <string name="sbeam_helptext">Mengambil dan berkongsi foto dengan peranti lain. Dekatkan peranti untuk menambah peranti yang anda ingin berkongsi dengan melalui S Beam</string>
     <string name="storage_setting_dialog_title">Lokasi storan</string>
     <string name="storage_setting_dialog_message">Kad SD dimasukkan. Ubah lokasi storan menjadi kad SD?</string>
     <string name="do_not_ask_again">Jangan tunjuk lagi</string>
@@ -260,8 +251,6 @@ Aktifkan tangkapan kongsi automatik, kemudian membawa peranti bersama (biasanya 
     <string name="bestpic">Foto terbaik</string>
     <string name="bestpic_on">Hd</string>
     <string name="bestpic_off">Mt</string>
-    <string name="bestgroup">Gaya kumpulan terbaik</string>
-    <string name="bestgroup_title">Pilih muka terbaik utk simpan</string>
     <string name="battery_low">Tutup kamera. Suhu bateri terlalu rendah</string>
     <string name="buddy_photo_share_helptext">Mengambil dan berkongsi foto dengan rakan melalui pengesanan muka</string>
     <string name="face_zoom_helptext">Dwiketik pada muka untuk zum masuk atau keluar</string>
@@ -271,7 +260,6 @@ Aktifkan tangkapan kongsi automatik, kemudian membawa peranti bersama (biasanya 
     <string name="on_device_help_camcorder">Tukar ke mod Kamkorder</string>
     <string name="on_device_help_self">Tukar ke mod potret diri</string>
     <string name="on_device_help_editable">Ketik dan tahan pintasan yang ingin anda alihkan. Kemudian, seret ia ke tempat yang anda inginkan</string>
-    <string name="on_device_help_voicecommand">"Anda boleh mengambil gambar dengan perintah suara seperti 'Tangkap', 'Ambil', 'Senyum' dan 'Cheese'"</string>
     <string name="Title_VideoSpeed">Kelajuan</string>
     <string name="SPEED_OFF">Biasa</string>
     <string name="SPEED_2X_FASTER">2x lebih laju</string>
@@ -293,7 +281,4 @@ Aktifkan tangkapan kongsi automatik, kemudian membawa peranti bersama (biasanya 
     <string name="self_recording_open_warning_popup">Rakaman sendiri hanya boleh digunakan apabila telefon dibuka</string>
     <string name="contextual_filename">Nama fail mengikut konteks</string>
     <string name="enable_gps_dialog">Tag GPS perlu diaktifkan. Aktifkan tag GPS?</string>
-    <string name="gallery_disable">Galeri dinyahaktifkan</string>
-    <string name="HDR_Normal">Biasa</string>
-    <string name="HDR_Strong">Kuat</string>
 </resources>

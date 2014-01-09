@@ -1,6 +1,9 @@
 .class Lcom/sec/android/app/camera/Camcorder$4;
-.super Landroid/telephony/PhoneStateListener;
+.super Ljava/lang/Object;
 .source "Camcorder.java"
+
+# interfaces
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # annotations
@@ -24,58 +27,179 @@
     .parameter
 
     .prologue
-    .line 549
+    .line 472
     iput-object p1, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
-    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCallStateChanged(ILjava/lang/String;)V
-    .locals 2
-    .parameter "state"
-    .parameter "incomingNumber"
+.method public onAudioFocusChange(I)V
+    .locals 4
+    .parameter "focusChange"
 
     .prologue
-    .line 553
+    const/4 v3, 0x1
+
+    .line 474
+    const-string v0, "Camcorder"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onAudioFocusChange "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 475
     packed-switch p1, :pswitch_data_0
 
-    .line 560
+    .line 490
+    const-string v0, "Camcorder"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown audio focus change code,"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 492
+    :goto_0
+    return-void
+
+    .line 478
+    :pswitch_0
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mCamcorderEngine:Lcom/sec/android/app/camera/CamcorderEngine;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1200(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/app/camera/CamcorderEngine;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->getCurrentStateHandler()Lcom/sec/android/app/camera/AbstractCeState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCeState;->getId()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mIsCallStateRinging:Z
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1700(Lcom/sec/android/app/camera/Camcorder;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 479
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mCamcorderEngine:Lcom/sec/android/app/camera/CamcorderEngine;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1200(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/app/camera/CamcorderEngine;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->getVideoRecordingTimeInSecond()I
+
+    move-result v0
+
+    if-ge v0, v3, :cond_1
+
+    .line 480
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mCamcorderEngine:Lcom/sec/android/app/camera/CamcorderEngine;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1200(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/app/camera/CamcorderEngine;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->doCancelVideoRecordingSync()V
+
+    .line 485
+    :goto_1
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mCamcorderEngine:Lcom/sec/android/app/camera/CamcorderEngine;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1200(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/app/camera/CamcorderEngine;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CamcorderEngine;->changeEngineState(I)V
+
+    .line 487
+    :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
 
     const/4 v1, 0x0
 
     #setter for: Lcom/sec/android/app/camera/Camcorder;->mIsCallStateRinging:Z
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camcorder;->access$2002(Lcom/sec/android/app/camera/Camcorder;Z)Z
-
-    .line 563
-    :goto_0
-    return-void
-
-    .line 556
-    :pswitch_0
-    const-string v0, "Camcorder"
-
-    const-string v1, "PhoneStateListener On Call"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 557
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
-
-    const/4 v1, 0x1
-
-    #setter for: Lcom/sec/android/app/camera/Camcorder;->mIsCallStateRinging:Z
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camcorder;->access$2002(Lcom/sec/android/app/camera/Camcorder;Z)Z
+    invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camcorder;->access$1702(Lcom/sec/android/app/camera/Camcorder;Z)Z
 
     goto :goto_0
 
-    .line 553
+    .line 482
+    :cond_1
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #setter for: Lcom/sec/android/app/camera/Camcorder;->mIsReocrdingStoppedForcely:Z
+    invoke-static {v0, v3}, Lcom/sec/android/app/camera/Camcorder;->access$1602(Lcom/sec/android/app/camera/Camcorder;Z)Z
+
+    .line 483
+    iget-object v0, p0, Lcom/sec/android/app/camera/Camcorder$4;->this$0:Lcom/sec/android/app/camera/Camcorder;
+
+    #getter for: Lcom/sec/android/app/camera/Camcorder;->mCamcorderEngine:Lcom/sec/android/app/camera/CamcorderEngine;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camcorder;->access$1200(Lcom/sec/android/app/camera/Camcorder;)Lcom/sec/android/app/camera/CamcorderEngine;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->doStopVideoRecordingSync()V
+
+    goto :goto_1
+
+    .line 475
+    nop
+
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch -0x2
+        :pswitch_0
         :pswitch_0
     .end packed-switch
 .end method

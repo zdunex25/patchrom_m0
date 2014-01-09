@@ -208,7 +208,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f02027a
+    const v5, 0x7f02025f
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/sec/android/glview/TwGLAniResourceTexture;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -236,7 +236,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f02027b
+    const v5, 0x7f020260
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/sec/android/glview/TwGLAniResourceTexture;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -520,7 +520,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f02027c
+    const v5, 0x7f020261
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/sec/android/glview/TwGLAniResourceTexture;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -548,7 +548,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f020279
+    const v5, 0x7f02025e
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/sec/android/glview/TwGLAniResourceTexture;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -679,7 +679,7 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method
@@ -690,7 +690,7 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method

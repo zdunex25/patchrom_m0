@@ -72,7 +72,7 @@
     const/16 v1, 0xff
 
     .line 49
-    const v0, 0x7f060147
+    const v0, 0x7f060142
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -83,7 +83,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->MENU_POS_X:I
 
     .line 50
-    const v0, 0x7f060148
+    const v0, 0x7f060143
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -94,7 +94,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->MENU_POS_Y:I
 
     .line 51
-    const v0, 0x7f06014e
+    const v0, 0x7f060149
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -105,7 +105,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->MENU_WIDTH:I
 
     .line 52
-    const v0, 0x7f06014f
+    const v0, 0x7f06014a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -116,7 +116,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->MENU_HEIGHT:I
 
     .line 53
-    const v0, 0x7f060149
+    const v0, 0x7f060144
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -127,7 +127,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->TITLE_HEIGHT:I
 
     .line 54
-    const v0, 0x7f06014a
+    const v0, 0x7f060145
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -138,7 +138,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->TITLE_LEFT_PADDING:I
 
     .line 55
-    const v0, 0x7f06014b
+    const v0, 0x7f060146
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -149,7 +149,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->TITLE_TOP_PADDING:I
 
     .line 56
-    const v0, 0x7f080018
+    const v0, 0x7f080017
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -167,7 +167,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->TITLE_TEXT_COLOR:I
 
     .line 58
-    const v0, 0x7f06001c
+    const v0, 0x7f06001b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -178,7 +178,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->LIST_POS_X:I
 
     .line 59
-    const v0, 0x7f06014d
+    const v0, 0x7f060148
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -189,7 +189,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->LIST_ITEM_HEIGHT:I
 
     .line 62
-    const v0, 0x7f060090
+    const v0, 0x7f06008b
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -200,7 +200,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->SIDEMENU_WIDTH:I
 
     .line 63
-    const v0, 0x7f060091
+    const v0, 0x7f06008c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -211,7 +211,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->SIDEMENU_HEIGHT:I
 
     .line 64
-    const v0, 0x7f060096
+    const v0, 0x7f060091
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -222,7 +222,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->LEFT_ITEM_START_POS_Y:I
 
     .line 65
-    const v0, 0x7f060093
+    const v0, 0x7f06008e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -233,7 +233,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->ITEM_HEIGHT:I
 
     .line 66
-    const v0, 0x7f080010
+    const v0, 0x7f08000f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -267,7 +267,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->LEFT_ITEM_INTERVAL:I
 
     .line 68
-    const v0, 0x7f0600a1
+    const v0, 0x7f06009c
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -374,13 +374,13 @@
 
     int-to-float v6, v6
 
-    iget-object v7, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v7, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v7}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x7f09010f
+    const v8, 0x7f09010d
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -454,7 +454,7 @@
     .line 89
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mList:Lcom/sec/android/glview/TwGLList;
 
-    const v3, 0x7f020208
+    const v3, 0x7f0201f5
 
     invoke-virtual {v2, v3}, Lcom/sec/android/glview/TwGLList;->setScrollBarResource(I)V
 
@@ -556,7 +556,7 @@
     .line 109
     new-instance v2, Lcom/sec/android/glview/TwGLImage;
 
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -588,7 +588,7 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f020202
+    const v6, 0x7f0201ef
 
     invoke-direct {v2, v3, v4, v5, v6}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -627,7 +627,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     return-object v0
 .end method
@@ -660,7 +660,7 @@
     if-ne v0, v1, :cond_0
 
     .line 200
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -689,17 +689,17 @@
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLList;->showScrollBar()V
 
     .line 189
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_0
 
     .line 190
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
     .line 191
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-static {}, Lcom/sec/android/glview/TwGLUtil;->getAlphaOnAnimation()Landroid/view/animation/Animation;
 
@@ -718,12 +718,12 @@
 
     .prologue
     .line 179
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_0
 
     .line 180
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideWaitingAnimation()V
 
@@ -749,12 +749,12 @@
     const/4 v1, 0x4
 
     .line 167
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_0
 
     .line 168
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
@@ -771,14 +771,14 @@
 
     .line 173
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     iput-object v2, v0, Lcom/sec/android/app/camera/Camera;->mDeviceList:Lcom/sec/android/glview/TwGLList;
 
     .line 174
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -808,7 +808,7 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -821,7 +821,7 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showWaitingAnimation()V
 
@@ -829,7 +829,7 @@
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->refreshMenuPosition()V
 
     .line 158
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -838,7 +838,7 @@
     iput-object v1, v0, Lcom/sec/android/app/camera/Camera;->mDeviceList:Lcom/sec/android/glview/TwGLList;
 
     .line 159
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -847,7 +847,7 @@
     iput-object v1, v0, Lcom/sec/android/app/camera/Camera;->mDeviceListMenuWrapper:Lcom/sec/android/glview/TwGLTitleDecorator;
 
     .line 160
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
@@ -957,7 +957,7 @@
 
     .line 226
     .local v10, top_2:F
-    iget-object v11, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v11, :cond_6
 
@@ -993,13 +993,13 @@
 
     .line 243
     .local v3, interval_top:F
-    iget-object v11, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v11}, Lcom/sec/android/glview/TwGLImage;->getTop()F
 
     move-result v11
 
-    iget-object v12, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v12, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v12}, Lcom/sec/android/glview/TwGLImage;->getHeight()F
 
@@ -1129,7 +1129,7 @@
     :cond_4
     add-float v11, v0, v6
 
-    iget-object v12, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v12, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v12}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -1146,7 +1146,7 @@
     if-lez v11, :cond_0
 
     .line 247
-    iget-object v11, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v11}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -1369,7 +1369,7 @@
     :cond_b
     add-float v11, v0, v6
 
-    iget-object v12, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v12, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v12}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -1386,7 +1386,7 @@
     if-lez v11, :cond_8
 
     .line 284
-    iget-object v11, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v11}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -1524,7 +1524,7 @@
     .line 124
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLDeviceListMenu;->mMenuWrapper:Lcom/sec/android/glview/TwGLTitleDecorator;
 
-    const v1, 0x7f020203
+    const v1, 0x7f0201f0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLTitleDecorator;->setNinePatchBackground(I)Z
 

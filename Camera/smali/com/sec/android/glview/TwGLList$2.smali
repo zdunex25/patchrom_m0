@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 579
+    .line 588
     iput-object p1, p0, Lcom/sec/android/glview/TwGLList$2;->this$0:Lcom/sec/android/glview/TwGLList;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,13 +44,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 585
+    .line 594
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList$2;->this$0:Lcom/sec/android/glview/TwGLList;
 
     #setter for: Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
     invoke-static {v0, v1}, Lcom/sec/android/glview/TwGLList;->access$002(Lcom/sec/android/glview/TwGLList;Z)Z
 
-    .line 586
+    .line 595
     return v1
 .end method
 
@@ -59,7 +59,7 @@
     .parameter "animation"
 
     .prologue
-    .line 581
+    .line 590
     const/4 v0, 0x0
 
     return v0

@@ -36,7 +36,7 @@
     const/16 v2, 0xff
 
     .line 39
-    const v0, 0x7f080014
+    const v0, 0x7f080013
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -184,18 +184,18 @@
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataText;->resetSize()V
 
     .line 93
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataText;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataText;->mParent:Lcom/sec/android/glview/TwGLView;
 
     instance-of v0, v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_1
 
     .line 94
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataText;->mParent:Lcom/sec/android/glview/TwGLView;
 
     check-cast v0, Lcom/sec/android/glview/TwGLViewGroup;
 

@@ -140,7 +140,7 @@
 
     .line 76
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -169,95 +169,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 37
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x3f2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     .line 38
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x408
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 40
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x407
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 42
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x40a
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 44
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x409
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 46
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x40d
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 48
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x40b
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 50
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x40c
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 52
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x406
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 55
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x3f3
@@ -268,7 +191,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 56
+    .line 39
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x3f4
@@ -279,10 +202,98 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 41
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x406
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 43
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x408
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 45
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x407
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 47
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x40a
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 49
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x409
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 51
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x40b
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 53
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x40d
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 55
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x40c
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     .line 57
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x3f2
+    const/16 v1, 0x40f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -301,7 +312,7 @@
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/CamcorderEffectResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/sec/android/app/camera/AbstractCameraActivity;->showChangeStoragetDialog()V
+    value = Lcom/sec/android/app/camera/AbstractCameraActivity;->IsGpsEnableInSettings()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2303
+    .line 2197
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$43;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -38,31 +38,31 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 3
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    const/4 v1, 0x1
+    .line 2199
+    new-instance v0, Landroid/content/Intent;
 
-    .line 2305
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$43;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    const-string v1, "android.settings.LOCATION_SOURCE_SETTINGS"
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 2200
+    .local v0, intent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$43;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setStorage(I)V
+    invoke-virtual {v1, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 2306
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$43;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 2201
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$43;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    iput-boolean v2, v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->bFromSecureSetting:Z
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setChangeStorageSettingDialog(I)V
-
-    .line 2307
+    .line 2202
     return-void
 .end method

@@ -36,7 +36,7 @@
     <string name="SM_SMILE">Foto. zâmbet</string>
     <string name="SM_FRAME">Fotografiere cadru</string>
     <string name="SM_BEAUTY">Înfrumuseţare</string>
-    <string name="SM_VINTAGE">De epocă</string>
+    <string name="SM_VINTAGE">Producţie</string>
     <string name="SM_ADDME">Adăugaţi-mă</string>
     <string name="SM_ACTION">Foto. cu acţiune</string>
     <string name="SM_STOPMOTION">Oprire mişcare</string>
@@ -63,14 +63,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Alb-negru</string>
+    <string name="E_BW">Alb şi negru</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negativ</string>
     <string name="E_EMBOSS">Reliefare</string>
     <string name="E_OUTLINE">Schiţă</string>
     <string name="E_WATERCOLOR">Watercolour</string>
-    <string name="E_MONOCHROME">Monocrom</string>
-    <string name="E_SKETCH">Schiţă</string>
     <string name="E_WASHED">Estompat</string>
     <string name="E_POSTERIZE">Posterizare</string>
     <string name="E_SOLARIZE">Solarizare</string>
@@ -81,7 +79,7 @@
     <string name="E_POINT_RED_YELLOW">Nuanţă roşu-galben</string>
     <string name="E_CARTOONIZE">Desen animat</string>
     <string name="F_AUTO_FLASH">Bliţ automat</string>
-    <string name="F_AUTOFOCUS">Auto focus</string>
+    <string name="F_AUTOFOCUS">Focalizare automată</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detectare faţă</string>
     <string name="F_PANFOCUS">Foc. int.</string>
@@ -118,7 +116,7 @@
     <string name="SCN_NIGHT_SHOT">Noapte</string>
     <string name="SCN_FIREWORK">Artificii</string>
     <string name="SCN_TEXT">Text</string>
-    <string name="SCN_CANDLE_LIGHT">Lumânare</string>
+    <string name="SCN_CANDLE_LIGHT">Lumină de lumânare</string>
     <string name="SCN_BACK_LIGHT">Lumină din fundal</string>
     <string name="OPTION_ON">Pornit</string>
     <string name="OPTION_OFF">Oprit</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Temporizator</string>
     <string name="Title_Resolution">Rezoluţie</string>
     <string name="Title_ShootAndShare">Set. Partaj. foto.</string>
-    <string name="Title_DeviceList">Listă de dispozitive</string>
     <string name="Title_WhiteBalance">Balans de alb</string>
     <string name="Title_Effects">Efecte</string>
     <string name="Title_Focus">Focalizare</string>
@@ -155,11 +152,10 @@
     <string name="Title_AutoContrast">Contrast automat</string>
     <string name="Title_GPS">Etichetă GPS</string>
     <string name="Title_Review">Examinare</string>
-    <string name="Title_AutoShareShot">Partajare automată foto</string>
     <string name="Title_Guideline">Grilă</string>
     <string name="Title_VideoQuality">Calitate video</string>
     <string name="Title_AudioRecording">Înreg. audio</string>
-    <string name="Title_Storage">Spaţiu de stocare</string>
+    <string name="Title_Storage">Stocare</string>
     <string name="Title_Reset">Reiniţializare</string>
     <string name="Title_Mode">Mod</string>
     <string name="Title_Back">Înapoi</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Aveţi grijă să nu mişcaţi dispozitivul în timp ce realizaţi fotografii</string>
     <string name="help_text_panorama">Apăsaţi pe tasta Cameră şi mişcaţi telefonul încet într-o singură direcţie</string>
     <string name="help_text_panorama_device">Apăsaţi pe tasta Cameră şi mişcaţi dispozitivul încet, într-o singură direcţie</string>
-    <string name="message_DefaultLayout">Aspectul comenzii rapide va fi resetat</string>
     <string name="message_EULA_GPS">Activarea funcţiei Etichetă GPS va ataşa, integra şi stoca datele cu privire la locaţia geografică în cadrul fiecărei fotografii. Fiţi prudent când trimiteţi, partajaţi, distribuiţi, transmiteţi sau copiaţi aceste fotografii, întrucât conţin locaţia unde a fost realizată fotografia</string>
-    <string name="message_Auto_ShareShot">"Opţiunea Partajare automată foto vă permite să conectaţi cu uşurinţă dispozitivele cu care doriţi să partajaţi imagini.
-Activaţi partajarea automată a fotografiilor, apoi apropiaţi dispozitivele (de obicei, spate în spate) pentru a le conecta"</string>
     <string name="GPS_msg">GPS dezactivat</string>
     <string name="message_enable_GPS">Activaţi dispozitivul GPS din Setări pentru a utiliza eticheta GPS</string>
     <string name="cancel">Anulare</string>
@@ -248,11 +241,9 @@ Activaţi partajarea automată a fotografiilor, apoi apropiaţi dispozitivele (d
     <string name="profile_user_default_name">Necunoscut</string>
     <string name="shareshot_no_user">Nu aveţi cu cine partaja</string>
     <string name="snapshot_saved">%s salvat</string>
-    <string name="editable_shortcut_reset">Reiniţ.</string>
     <string name="editable_shortcut_helptext_title">Sfaturi</string>
     <string name="editable_shortcut_helptext_message">Ţineţi apăsat pe comenzile rapide pentru a le edita</string>
     <string name="editable_shortcut_helptext">Atingeţi şi menţineţi pictograma, apoi glisaţi-o pentru a edita poziţia comenzilor rapide</string>
-    <string name="sbeam_helptext">Realizaţi fotografii şi partajaţi-le cu alte dispozitive. Apropiaţi dispozitivele pentru a le adăuga pe cele cu care doriţi să partajaţi prin S Beam</string>
     <string name="storage_setting_dialog_title">Locaţie stocare</string>
     <string name="storage_setting_dialog_message">Cartelă SD introdusă. Modificaţi locaţia de stocare pe cartela SD?</string>
     <string name="do_not_ask_again">Nu se mai afişează</string>
@@ -261,8 +252,6 @@ Activaţi partajarea automată a fotografiilor, apoi apropiaţi dispozitivele (d
     <string name="bestpic">Fotografie optimă</string>
     <string name="bestpic_on">Ac</string>
     <string name="bestpic_off">Op.</string>
-    <string name="bestgroup">Cea mai bună poză de grup</string>
-    <string name="bestgroup_title">Sel. feţele optime pt. salvare</string>
     <string name="battery_low">Închideţi camera foto. Temperat. bateriei este prea scăzută</string>
     <string name="buddy_photo_share_helptext">Realizaţi şi partajaţi fotografii cu prieteni prin detecţia feţei</string>
     <string name="face_zoom_helptext">Atingeţi de două ori o faţă pentru a mări sau micşora</string>
@@ -272,7 +261,6 @@ Activaţi partajarea automată a fotografiilor, apoi apropiaţi dispozitivele (d
     <string name="on_device_help_camcorder">Comutare la modul Cameră video</string>
     <string name="on_device_help_self">Comutare la modul autoportret</string>
     <string name="on_device_help_editable">Ţineţi apăsat pe comanda rapidă pe care doriţi să o mutaţi. Apoi trageţi-o unde doriţi</string>
-    <string name="on_device_help_voicecommand">Puteţi fotografia cu ajutorul comenzilor vocale cum ar fi Capturare, Fotografiere, Zâmbet şi Zâmbiţi</string>
     <string name="Title_VideoSpeed">Viteză</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">De 2 ori mai rapid</string>
@@ -294,7 +282,4 @@ Activaţi partajarea automată a fotografiilor, apoi apropiaţi dispozitivele (d
     <string name="self_recording_open_warning_popup">Modul de autoînregistrare poate fi utilizat numai când telefonul este deschis</string>
     <string name="contextual_filename">Nume fişier contextual</string>
     <string name="enable_gps_dialog">Funcţia Etichetă GPS trebuie să fie activată. Activaţi funcţia Etichetă GPS?</string>
-    <string name="gallery_disable">Galeria este dezactivată</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Puternică</string>
 </resources>

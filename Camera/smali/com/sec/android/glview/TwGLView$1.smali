@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 409
+    .line 405
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 5
 
     .prologue
-    .line 411
+    .line 407
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
     #getter for: Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -64,12 +64,12 @@
 
     if-nez v1, :cond_1
 
-    .line 423
+    .line 419
     :cond_0
     :goto_0
     return-void
 
-    .line 414
+    .line 410
     :cond_1
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
@@ -77,14 +77,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 415
+    .line 411
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    .line 416
+    .line 412
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
     iget-object v1, v1, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
@@ -109,7 +109,7 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragStart(Lcom/sec/android/glview/TwGLView;FF)V
 
-    .line 418
+    .line 414
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
     #getter for: Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
@@ -119,7 +119,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 419
+    .line 415
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView$1;->this$0:Lcom/sec/android/glview/TwGLView;
 
     #getter for: Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -139,7 +139,7 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    .line 420
+    .line 416
     .local v0, vibrator:Landroid/os/Vibrator;
     const-wide/16 v1, 0x64
 

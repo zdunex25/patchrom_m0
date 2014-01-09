@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">Ուռուցիկ</string>
     <string name="E_OUTLINE">Գծապատկեր</string>
     <string name="E_WATERCOLOR">Ջրաներկ</string>
-    <string name="E_MONOCHROME">Մեներանգ</string>
-    <string name="E_SKETCH">Էսքիզ</string>
     <string name="E_WASHED">Գույնը գցած</string>
     <string name="E_POSTERIZE">Պլակատի էֆեկտ</string>
     <string name="E_SOLARIZE">Արևակայել</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">Կարմիր-դեղին կետ</string>
     <string name="E_CARTOONIZE">Ծաղրանկարել</string>
     <string name="F_AUTO_FLASH">Ավտոլուսարձակ</string>
-    <string name="F_AUTOFOCUS">ԱվտոՖոկուս</string>
+    <string name="F_AUTOFOCUS">Ավտո ֆոկուս</string>
     <string name="F_MACRO">Մակրո</string>
     <string name="F_FACE">Դեմքի ճանաչում</string>
     <string name="F_PANFOCUS">Հմպտ կնտր</string>
@@ -110,7 +108,7 @@
     <string name="SCN_PARTY_INDOOR">Խնջույք/Ներսում</string>
     <string name="SCN_BEACH_SNOW">Լողափ/Ձյուն</string>
     <string name="SCN_SUNSET">Մայրամուտ</string>
-    <string name="SCN_DAWN_DUSK">Արևածագ</string>
+    <string name="SCN_DAWN_DUSK">Արեւածագ</string>
     <string name="SCN_FALL_COLOR">Աշնան գույն</string>
     <string name="SCN_NIGHT_SHOT">Գիշեր</string>
     <string name="SCN_FIREWORK">Հրավառություն</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">Ժամանակաչափ</string>
     <string name="Title_Resolution">Լուծաչափ</string>
     <string name="Title_ShootAndShare">Լսնկ. հմօգտ. Դրվծք</string>
-    <string name="Title_DeviceList">Սարքերի ցանկ</string>
     <string name="Title_WhiteBalance">Սպիտակի հաշվեկշիռ</string>
     <string name="Title_Effects">Էֆեկտներ</string>
     <string name="Title_Focus">Ֆոկուս</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">Ինքնահակադրականություն</string>
     <string name="Title_GPS">GPS հատկորոշիչ</string>
     <string name="Title_Review">Վերանայում</string>
-    <string name="Title_AutoShareShot">Լուսանկարի ինքնահմօգտգրծմ</string>
     <string name="Title_Guideline">Ուղեցույցեր</string>
     <string name="Title_VideoQuality">Վիդեոյի որակ</string>
     <string name="Title_AudioRecording">Աուդ. ձայն.</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">Զգույշ եղեք, որպեսզի լուսանկարելիս սարքը չշարժեք</string>
     <string name="help_text_panorama">Սեղմեք խցիկի ստեղնը և հեռախոսը դանդաղ շարժեք մեկ ուղղությամբ</string>
     <string name="help_text_panorama_device">Սեղմել խցիկի ստեղնը և սարքը դանդաղորեն շարժել մեկ ուղղությամբ</string>
-    <string name="message_DefaultLayout">Դյուրանցումների դասավորվածքը կհետադարձվի</string>
     <string name="message_EULA_GPS">GPS հատկորոշիչ ընձեռելը կկցի, կներդնի և կպահի աշխարհագրական տեղորոշման տվյալները յուրաքանչյուր լուսանկարի սահմաններում: Զգույշ եղեք այդ լուսանկարներն ուղարկելիս, համօգտագործելիս, տարածելիս, փոխանցելիս կամ պատճենելիս, քանի որ դրանք պարունակում են տվյալներ լուսանկարահանման տեղի մասին</string>
-    <string name="message_Auto_ShareShot">"Լուսանկարի ինքնահամօգտագործումն ընձեռում է այն սարքերին հեշտությամբ միանալու հնարավորություն, որոնց հետո ուզում եք նկարներ համօգտագործել:
-Ընձեռեք լուսանկարի ինքնահամօգտագործումը, հետո իրար կցեք սարքերը (սովորաբար, հետևը հետևին)՝ դրանք միացնելու համար"</string>
     <string name="GPS_msg">GPS-ն անջատված է</string>
     <string name="message_enable_GPS">Միացնել GPS-ը Դրվածքներում՝ GPS հատկորոշիչ օգտագործելու համար</string>
     <string name="cancel">Չեղարկել</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">Անհայտ</string>
     <string name="shareshot_no_user">Մարդիկ չկան՝ նրանց հետ համօգտագործելու համար</string>
     <string name="snapshot_saved">%s պահպանված է</string>
-    <string name="editable_shortcut_reset">Զրոյացնել</string>
     <string name="editable_shortcut_helptext_title">Խորհրդներ</string>
     <string name="editable_shortcut_helptext_message">Թակեք և պահեք դյուրանցումները, որպեսզի դրանք խմբագրեք</string>
     <string name="editable_shortcut_helptext">Թակեք և պահեք պատկերակը, հետո քաշեք՝ դյուրանցումների դիրքը խմբագրելու համար</string>
-    <string name="sbeam_helptext">Նկարահանեք և լուսանկարները համօգտագործեք այլ սարքերի հետ: Միաբերեք սարքերը, որպեսզի ավելացնեք սարքեր, որոնց հետ ուզում եք համօգտագործել S Beam-ի միջոցով</string>
     <string name="storage_setting_dialog_title">Պահման տեղը</string>
     <string name="storage_setting_dialog_message">SD քարտը մտցված է. պահման տեղը փոխե՞լ SD քարտի:</string>
     <string name="do_not_ask_again">Չցուցադրել կրկին</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">Լավագույն լուսանկարը</string>
     <string name="bestpic_on">Մց</string>
     <string name="bestpic_off">Անջ</string>
-    <string name="bestgroup">Խմբի լավագույն կեցվածք</string>
-    <string name="bestgroup_title">Պհպ. հր ընտրեք յրք. լվգյն դեմք</string>
     <string name="battery_low">Փակեք Խցիկը: Մարտկոցի ջերմաստիճանը շատ ցածր է</string>
     <string name="buddy_photo_share_helptext">Նկարահանեք և լուսանկարները համօգտագործեք ընկերների հետ դեմքի ճանաչման միջոցով</string>
     <string name="face_zoom_helptext">Կրկնակի թակեք դեմքը՝ այն մեծացնելու կամ փոքրացնելու համար</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">Անցեք Տեսաձայնագրիչի ռեժիմին</string>
     <string name="on_device_help_self">Անցնել ինքնադիմանկարի ռեժիմին</string>
     <string name="on_device_help_editable">Թակեք և պահեք դյուրանցումը, որն ուզում եք տեղափոխել: Հետո այն քաշեք Ձեր ուզած տեղը</string>
-    <string name="on_device_help_voicecommand">Կարող եք լուսանկարահանել ձայնային հրամաններով, օրինակ՝ \"Սևեռել\", \"Նկարահանել\", \"Ժպիտ\" և \"Ժպտալ\"</string>
     <string name="Title_VideoSpeed">Արագթյուն</string>
     <string name="SPEED_OFF">Նորմալ</string>
     <string name="SPEED_2X_FASTER">2x ավելի արագ</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">Ինքնատեսագրումը կարող է միայն օգտագործվել, երբ հեռախոսը բաց է</string>
     <string name="contextual_filename">Ֆայլի համատեքստային անուն</string>
     <string name="enable_gps_dialog">GPS հատկորոշիչը պետք է ընձեռված լինի. ընձեռե՞լ GPS հատկորոշիչը:</string>
-    <string name="gallery_disable">Պատկերասրահը կասեցված է</string>
-    <string name="HDR_Normal">Նորմալ</string>
-    <string name="HDR_Strong">Ուժեղ</string>
 </resources>

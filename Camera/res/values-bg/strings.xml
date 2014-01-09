@@ -63,14 +63,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Черно и бяло</string>
+    <string name="E_BW">Черно-бяло</string>
     <string name="E_SEPIA">Сепия</string>
     <string name="E_NEGATIVE">Негатив</string>
     <string name="E_EMBOSS">Релеф</string>
     <string name="E_OUTLINE">Контур</string>
     <string name="E_WATERCOLOR">Акварел</string>
-    <string name="E_MONOCHROME">Едноцветен</string>
-    <string name="E_SKETCH">Скица</string>
     <string name="E_WASHED">Измити цветове</string>
     <string name="E_POSTERIZE">Постеризиране</string>
     <string name="E_SOLARIZE">Соларизация</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Таймер</string>
     <string name="Title_Resolution">Разделителна способност</string>
     <string name="Title_ShootAndShare">Настр.сподел.снимка</string>
-    <string name="Title_DeviceList">Списък с устройства</string>
     <string name="Title_WhiteBalance">Баланс на бялото</string>
     <string name="Title_Effects">Ефекти</string>
     <string name="Title_Focus">Фокус</string>
@@ -155,11 +152,10 @@
     <string name="Title_AutoContrast">Авто-контраст</string>
     <string name="Title_GPS">GPS таг</string>
     <string name="Title_Review">Преглед</string>
-    <string name="Title_AutoShareShot">Автом. сподел. на снимка</string>
     <string name="Title_Guideline">Направляващи линии</string>
     <string name="Title_VideoQuality">Видео качество</string>
     <string name="Title_AudioRecording">Аудио запис</string>
-    <string name="Title_Storage">Памет</string>
+    <string name="Title_Storage">Устройство за съхранение на данни</string>
     <string name="Title_Reset">Нyлиране</string>
     <string name="Title_Mode">Режим</string>
     <string name="Title_Back">Назад</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Внимавайте да не размърдате устройството, докато правите снимки</string>
     <string name="help_text_panorama">Натиснете бутона на камерата и движете телефона бавно в една посока</string>
     <string name="help_text_panorama_device">Натиснете бутона на камерата и движете устройството бавно в една посока</string>
-    <string name="message_DefaultLayout">Оформлението за бърз достъп ще бъде нулирано</string>
     <string name="message_EULA_GPS">Разрешаването на GPS таг ще прикача, вгражда и съхранява данни за географско местоположение във всяка снимка. Бъдете внимателни, когато изпращате, споделяте, разпространявате, предавате или копирате тези снимки, тъй като те съдържат местоположението, на което е заснета снимката</string>
-    <string name="message_Auto_ShareShot">"Автоматично споделяне на снимка ви позволява лесно да се свързвате към устройства, с които искате да споделяте снимки.
-Активирайте Автоматично споделяне на снимка, след което допрете устройствата (обикновено откъм задната им страна), за да ги свържете"</string>
     <string name="GPS_msg">GPS изкл.</string>
     <string name="message_enable_GPS">Включете GPS в Настройки, за да използвате GPS етикет</string>
     <string name="cancel">Отказ</string>
@@ -248,11 +241,9 @@
     <string name="profile_user_default_name">Неизвестно</string>
     <string name="shareshot_no_user">Няма хора, с които да споделите</string>
     <string name="snapshot_saved">%s запаметени</string>
-    <string name="editable_shortcut_reset">Нyлир.</string>
     <string name="editable_shortcut_helptext_title">Съвети</string>
     <string name="editable_shortcut_helptext_message">Чукнете и задръжте бързите клавиши, за да ги редактирате</string>
     <string name="editable_shortcut_helptext">Чукнете и задръжте икона, след което я плъзнете, за да редактирате позицията на бързите команди</string>
-    <string name="sbeam_helptext">Правете и споделяйте снимки с други устройства. Съберете устройствата, за да добавите устройства, с които искате да споделяте през S Beam</string>
     <string name="storage_setting_dialog_title">Място за съхранение</string>
     <string name="storage_setting_dialog_message">SD картата е поставена. Промяна на мястото за съхранение на SD карта?</string>
     <string name="do_not_ask_again">Не показвай отново</string>
@@ -261,8 +252,6 @@
     <string name="bestpic">Най-добра снимка</string>
     <string name="bestpic_on">Вк</string>
     <string name="bestpic_off">Изк</string>
-    <string name="bestgroup">Най-добра групова поза</string>
-    <string name="bestgroup_title">Изб. вс. добро лице за запис.</string>
     <string name="battery_low">Затворете Камера. Температурата на батерията е твърде ниска</string>
     <string name="buddy_photo_share_helptext">Снимайте и споделяйте снимки с приятели чрез откриване на лица</string>
     <string name="face_zoom_helptext">Чукнете двукратно лице за увеличаване и намаляване на мащаба</string>
@@ -272,7 +261,6 @@
     <string name="on_device_help_camcorder">Превключване към режим Камкордер</string>
     <string name="on_device_help_self">Превключване към режим автопортрет</string>
     <string name="on_device_help_editable">Чукнете и задръжте бързата команда, която искате да преместите. След това я плъзнете, където пожелаете</string>
-    <string name="on_device_help_voicecommand">Можете да правите снимки с гласови команди, като Заснемане, Усмивка и Зееелее!</string>
     <string name="Title_VideoSpeed">Скорост</string>
     <string name="SPEED_OFF">Нормален</string>
     <string name="SPEED_2X_FASTER">2x по-бързо</string>
@@ -294,7 +282,4 @@
     <string name="self_recording_open_warning_popup">Самозаснемане може да се използва само когато телефонът е отворен</string>
     <string name="contextual_filename">Контекстно име на файл</string>
     <string name="enable_gps_dialog">GPS тагът трябва да бъде активиран. Активиране на GPS таг?</string>
-    <string name="gallery_disable">Галерия е деактивирана</string>
-    <string name="HDR_Normal">Нормален</string>
-    <string name="HDR_Strong">Силен</string>
 </resources>

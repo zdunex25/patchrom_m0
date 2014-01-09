@@ -58,7 +58,7 @@
     :cond_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLNinePatch;->mNinePatch:Lcom/sec/android/glview/TwGLNinePatchTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLNinePatchTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 79
     cmpl-float v0, p4, v2
@@ -163,7 +163,7 @@
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLNinePatch;->mNinePatch:Lcom/sec/android/glview/TwGLNinePatchTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLNinePatchTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 108
     cmpl-float v0, p4, v2
@@ -259,7 +259,7 @@
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLNinePatch;->mNinePatch:Lcom/sec/android/glview/TwGLNinePatchTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLNinePatchTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 54
     iget-object v0, p0, Lcom/sec/android/glview/TwGLNinePatch;->mNinePatch:Lcom/sec/android/glview/TwGLNinePatchTexture;

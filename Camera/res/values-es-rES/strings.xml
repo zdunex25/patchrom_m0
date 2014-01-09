@@ -33,7 +33,7 @@
     <string name="SM_SMILE">Disp. sonrisa</string>
     <string name="SM_FRAME">Disparo marco</string>
     <string name="SM_BEAUTY">Belleza</string>
-    <string name="SM_VINTAGE">Vintage</string>
+    <string name="SM_VINTAGE">Cosecha</string>
     <string name="SM_ADDME">Añadirme</string>
     <string name="SM_ACTION">Toma de acción</string>
     <string name="SM_STOPMOTION">Parar movimiento</string>
@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">Relieve</string>
     <string name="E_OUTLINE">Contorno</string>
     <string name="E_WATERCOLOR">Acuarela</string>
-    <string name="E_MONOCHROME">Monocromo</string>
-    <string name="E_SKETCH">Boceto</string>
     <string name="E_WASHED">Agotado</string>
     <string name="E_POSTERIZE">Póster</string>
     <string name="E_SOLARIZE">Solarizado</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">Rojo-amarillo</string>
     <string name="E_CARTOONIZE">Dibujo anim</string>
     <string name="F_AUTO_FLASH">Flash automático</string>
-    <string name="F_AUTOFOCUS">Enfoq auto</string>
+    <string name="F_AUTOFOCUS">Enfoque automático</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detección de rostro</string>
     <string name="F_PANFOCUS">Enf pan</string>
@@ -102,7 +100,7 @@ compensado"</string>
     <string name="RM_MMS">Lím. de MMS</string>
     <string name="RM_EMAIL">Límite para correo electrónico</string>
     <string name="RM_SLOW">Cámara lenta</string>
-    <string name="RM_FAST">Movimiento rápido</string>
+    <string name="RM_FAST">Cámara rápida</string>
     <string name="CS_PROGRESS_TEXT">Creando imagen. Espere...</string>
     <string name="SCN_NONE">Ninguno</string>
     <string name="SCN_PORTRAIT">Retrato</string>
@@ -131,7 +129,6 @@ compensado"</string>
     <string name="Title_Timer">Temporizador</string>
     <string name="Title_Resolution">Resolución</string>
     <string name="Title_ShootAndShare">Ajust comp disparo</string>
-    <string name="Title_DeviceList">Lista de dispositivos</string>
     <string name="Title_WhiteBalance">Balance de blancos</string>
     <string name="Title_Effects">Efectos</string>
     <string name="Title_Focus">Enfocar</string>
@@ -153,7 +150,6 @@ compensado"</string>
     <string name="Title_AutoContrast">Contraste automático</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Revisar</string>
-    <string name="Title_AutoShareShot">Compartir disparo auto</string>
     <string name="Title_Guideline">Instrucciones</string>
     <string name="Title_VideoQuality">Calidad de vídeo</string>
     <string name="Title_AudioRecording">Grabac. de audio</string>
@@ -176,10 +172,7 @@ compensado"</string>
     <string name="HDR_Helptext">Procure no mover el dispositivo mientras hace fotos</string>
     <string name="help_text_panorama">Pulse la tecla de la cámara y mueva el teléfono lentamente en una dirección</string>
     <string name="help_text_panorama_device">Pulse la tecla de la cámara y mueva el dispositivo lentamente en una dirección</string>
-    <string name="message_DefaultLayout">Se restablecerá el diseño de acceso directo</string>
-    <string name="message_EULA_GPS">Si activa la etiqueta GPS, se adjuntarán, incorporarán y almacenarán datos de ubicación geográfica en cada foto. Tenga cuidado cuando envíe, comparta, distribuya, transmita o copie estas fotos porque contienen la ubicación donde se tomaron</string>
-    <string name="message_Auto_ShareShot">"Compartir disparo automático le permite conectarse fácilmente a los dispositivos con los que desea compartir imágenes.
-Habilite Compartir disparo automático y, a continuación, junte los dispositivos (normalmente de espaldas) para conectarlos"</string>
+    <string name="message_EULA_GPS">Si activa la etiqueta GPS, se adjuntarán, incrustarán y almacenarán datos de ubicación geográfica en cada foto. Tenga cuidado cuando envíe, comparta, distribuya, transmita o copie estas fotos porque contienen la ubicación donde se tomaron</string>
     <string name="GPS_msg">GPS desactivado</string>
     <string name="message_enable_GPS">Active GPS en Ajustes para utilizar la etiqueta GPS</string>
     <string name="cancel">Cancelar</string>
@@ -245,11 +238,9 @@ Habilite Compartir disparo automático y, a continuación, junte los dispositivo
     <string name="profile_user_default_name">Desconocido</string>
     <string name="shareshot_no_user">No hay gente para compartir</string>
     <string name="snapshot_saved">%s guardado</string>
-    <string name="editable_shortcut_reset">Restablecer</string>
     <string name="editable_shortcut_helptext_title">Consejos</string>
     <string name="editable_shortcut_helptext_message">Mantenga pulsados los accesos directos para editarlos</string>
     <string name="editable_shortcut_helptext">Mantenga pulsado el icono y arrástrelo a la posición de edición de accesos directos</string>
-    <string name="sbeam_helptext">Haga y comparta fotos con otros dispositivos. Junte los dispositivos para añadir dispositivos que quiera compartir mediante S Beam</string>
     <string name="storage_setting_dialog_title">Ubicación de almacenamiento</string>
     <string name="storage_setting_dialog_message">Tarjeta SD insertada. ¿Cambiar la ubicación de almacenamiento a la tarjeta SD?</string>
     <string name="do_not_ask_again">No mostrar de nuevo</string>
@@ -258,8 +249,6 @@ Habilite Compartir disparo automático y, a continuación, junte los dispositivo
     <string name="bestpic">La mejor foto</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Mejor pose de grupo</string>
-    <string name="bestgroup_title">Sel cada mejor cara para guard</string>
     <string name="battery_low">Cierre la cámara. Temperatura de batería demasiado baja</string>
     <string name="buddy_photo_share_helptext">Tomar y compartir fotos con amigos mediante detección de rostros</string>
     <string name="face_zoom_helptext">Toque dos veces en una cara para ampliar o reducir</string>
@@ -269,7 +258,6 @@ Habilite Compartir disparo automático y, a continuación, junte los dispositivo
     <string name="on_device_help_camcorder">Cambiar a modo de videocámara</string>
     <string name="on_device_help_self">Cambiar a modo de autorretrato</string>
     <string name="on_device_help_editable">Mantenga pulsado el acceso directo que desee mover. A continuación arrástrelo al lugar que desee</string>
-    <string name="on_device_help_voicecommand">Puede hacer fotos con comandos de voz como ‘Capturar’, ‘Disparar’, ‘Sonrisa’ y ‘Patata’</string>
     <string name="Title_VideoSpeed">Velocidad</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2 veces más rápido</string>
@@ -291,7 +279,4 @@ Habilite Compartir disparo automático y, a continuación, junte los dispositivo
     <string name="self_recording_open_warning_popup">La grabación automática solo se puede usar cuando el teléfono está abierto</string>
     <string name="contextual_filename">Nombre de archivo contextual</string>
     <string name="enable_gps_dialog">Es necesario activar la etiqueta GPS. ¿Activarla?</string>
-    <string name="gallery_disable">La Galería está desactivada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Fuerte</string>
 </resources>

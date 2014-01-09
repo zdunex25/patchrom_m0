@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 312
+    .line 310
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     const/4 v2, 0x0
 
-    .line 314
+    .line 312
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -58,12 +58,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
+    .line 314
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->access$108(Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;)I
 
-    .line 317
+    .line 315
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
     #getter for: Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mSwitchBall:Lcom/sec/android/glview/TwGLImage;
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v2, v5}, Lcom/sec/android/glview/TwGLImage;->translate(FF)V
 
-    .line 321
+    .line 319
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
@@ -92,22 +92,22 @@
 
     if-nez v0, :cond_1
 
-    .line 322
+    .line 320
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->setCamcorderSelected()V
 
-    .line 330
+    .line 328
     :goto_1
     return-void
 
-    .line 319
+    .line 317
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mThis:Lcom/sec/android/glview/TwGLView;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mThis:Lcom/sec/android/glview/TwGLView;
     invoke-static {v1}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->access$300(Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;)Lcom/sec/android/glview/TwGLView;
 
     move-result-object v1
@@ -120,7 +120,7 @@
 
     goto :goto_0
 
-    .line 327
+    .line 325
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$3;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 

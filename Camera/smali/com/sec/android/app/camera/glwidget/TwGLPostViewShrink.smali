@@ -23,7 +23,7 @@
 
     .prologue
     .line 39
-    const v0, 0x7f06007b
+    const v0, 0x7f060076
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -34,7 +34,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->THUMBNAIL_LEFT:I
 
     .line 40
-    const v0, 0x7f06007c
+    const v0, 0x7f060077
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -45,7 +45,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->THUMBNAIL_TOP:I
 
     .line 41
-    const v0, 0x7f06007d
+    const v0, 0x7f060078
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -341,7 +341,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method
@@ -352,7 +352,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method
@@ -375,7 +375,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method
@@ -386,7 +386,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     return-object v0
 .end method

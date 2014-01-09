@@ -63,14 +63,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Қара және ақ</string>
+    <string name="E_BW">Ақ-қара</string>
     <string name="E_SEPIA">Сепия</string>
     <string name="E_NEGATIVE">Негатив</string>
     <string name="E_EMBOSS">Рельеф</string>
     <string name="E_OUTLINE">Контур</string>
     <string name="E_WATERCOLOR">Акварель</string>
-    <string name="E_MONOCHROME">Монохромды</string>
-    <string name="E_SKETCH">Эскиз</string>
     <string name="E_WASHED">Жуылды</string>
     <string name="E_POSTERIZE">Постерлеу</string>
     <string name="E_SOLARIZE">Соляризация</string>
@@ -81,7 +79,7 @@
     <string name="E_POINT_RED_YELLOW">Қызыл-сары нүкте</string>
     <string name="E_CARTOONIZE">Мульт. жасау</string>
     <string name="F_AUTO_FLASH">Авто жарқыл</string>
-    <string name="F_AUTOFOCUS">Авто фокус</string>
+    <string name="F_AUTOFOCUS">Автофокус</string>
     <string name="F_MACRO">Maкро</string>
     <string name="F_FACE">Бетті көрсету</string>
     <string name="F_PANFOCUS">Панорама кезелімі</string>
@@ -113,12 +111,12 @@
     <string name="SCN_PARTY_INDOOR">Кеш/Іште</string>
     <string name="SCN_BEACH_SNOW">Жағажай/Қар</string>
     <string name="SCN_SUNSET">Күннің батуы</string>
-    <string name="SCN_DAWN_DUSK">Анық көріну</string>
+    <string name="SCN_DAWN_DUSK">Таң сәрі</string>
     <string name="SCN_FALL_COLOR">Күзгі түстер</string>
     <string name="SCN_NIGHT_SHOT">Түн</string>
     <string name="SCN_FIREWORK">Фейерверк</string>
     <string name="SCN_TEXT">Мәтінді</string>
-    <string name="SCN_CANDLE_LIGHT">Шам көрінісі</string>
+    <string name="SCN_CANDLE_LIGHT">Шам жарығы</string>
     <string name="SCN_BACK_LIGHT">Артқы жарық</string>
     <string name="OPTION_ON">Қосылған</string>
     <string name="OPTION_OFF">Өшірілген</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Таймер</string>
     <string name="Title_Resolution">Ажыратымдылық</string>
     <string name="Title_ShootAndShare">Түсі. бөлісу парам.</string>
-    <string name="Title_DeviceList">Құрылғылар тізімі</string>
     <string name="Title_WhiteBalance">Ақ түстің тепе-теңдігі</string>
     <string name="Title_Effects">Әсерлер</string>
     <string name="Title_Focus">Фокус</string>
@@ -155,7 +152,6 @@
     <string name="Title_AutoContrast">Авто контраст</string>
     <string name="Title_GPS">GPS тегі</string>
     <string name="Title_Review">Қарап шығу</string>
-    <string name="Title_AutoShareShot">Суретті автоматты бөлісу</string>
     <string name="Title_Guideline">Тор</string>
     <string name="Title_VideoQuality">Бейненің сапасы</string>
     <string name="Title_AudioRecording">Аудио жазу</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Суретке түсіргенде құрылғыны шайқамаңыз</string>
     <string name="help_text_panorama">Камера түймесін басыңыз да, телефонды бір бағытта жәй жылжытыңыз</string>
     <string name="help_text_panorama_device">Камера түймесін басыңыз да, құрылғыны бір бағытқа ақырын жылжытыңыз</string>
-    <string name="message_DefaultLayout">Белгіше орналасуы қалпына келтіріледі</string>
     <string name="message_EULA_GPS">GPS тегі қосылғанда әр суреттегі географиялық орын деректерін тіркейді, енгізеді және сақтайды. Сурет түсірілген орны болатындықтан, сол суреттерді жібергенде, бөліскенде, таратқанда, үшінші тарапқа бергенде немесе көшіргенде, сақтандыру шараларын пайдаланыңыз</string>
-    <string name="message_Auto_ShareShot">"Суретті автоматты бөлісу функциясы суреттерді бөліскіңіз келетін құрылғыларға оңай қосылуға мүмкіндік береді.
-Суретті автоматты бөлісуді қосып, құрылғыларды қосу үшін оларды бір-біріне жақын (әдетте артын артына тигізіп) қойыңыз"</string>
     <string name="GPS_msg">GPS өшірулі</string>
     <string name="message_enable_GPS">GPS тегін пайдалану үшін параметрлерден GPS функциясын қосыңыз</string>
     <string name="cancel">Тоқтату</string>
@@ -248,11 +241,9 @@
     <string name="profile_user_default_name">Белгісіз</string>
     <string name="shareshot_no_user">Бөлісетін адам жоқ</string>
     <string name="snapshot_saved">%s сақталған</string>
-    <string name="editable_shortcut_reset">Жариялау</string>
     <string name="editable_shortcut_helptext_title">Кеңестер</string>
     <string name="editable_shortcut_helptext_message">Оларды өзгерту үшін белгішелерді басып тұрыңыз</string>
     <string name="editable_shortcut_helptext">Белгішені басып тұрыңыз, сосын белгішелердің орнын өзгерту үшін оны жылжытыңыз</string>
-    <string name="sbeam_helptext">Суретке түсіріп, суреттерді басқа құрылғылармен бөлісіңіз. S Beam арқылы бөліскіңіз келген құрылғыларды қосу үшін құрылғыларды біріктіріп ұстаңыз</string>
     <string name="storage_setting_dialog_title">Сақтау орны</string>
     <string name="storage_setting_dialog_message">SD картасы салынған. Сақтау орнын SD картасына өзгерту керек пе?</string>
     <string name="do_not_ask_again">Қайта көрсетпеңіз</string>
@@ -261,8 +252,6 @@
     <string name="bestpic">Ең жақсы фотосурет</string>
     <string name="bestpic_on">Қс</string>
     <string name="bestpic_off">Өш.</string>
-    <string name="bestgroup">Топтың ең үздік кейпі</string>
-    <string name="bestgroup_title">Сақ. үшін әр ең жақсы бет таң.</string>
     <string name="battery_low">Камераны жабыңыз. Батарея температурасы тым төмен</string>
     <string name="buddy_photo_share_helptext">Суретке түсіріп, суреттерді достарыңызбен бет анықтау арқылы бөлісіңіз</string>
     <string name="face_zoom_helptext">Үлкейту не кішірейту үшін бетті екі рет түртіңіз</string>
@@ -272,7 +261,6 @@
     <string name="on_device_help_camcorder">Бейнекамера режиміне ауыстырып қосу</string>
     <string name="on_device_help_self">Автопортрет режиміне ауыстырып қосу</string>
     <string name="on_device_help_editable">Жылжытқыңыз келген белгішені басып тұрыңыз. Сосын оны қажетті орынға алып барыңыз</string>
-    <string name="on_device_help_voicecommand">\"Суретке түсіру\", \"Түсіру\", \"Жымию\" және \"Сыр\" сияқты дауыстық командалармен суретке түсіруге болады</string>
     <string name="Title_VideoSpeed">Жылдамдық</string>
     <string name="SPEED_OFF">Қалыпты</string>
     <string name="SPEED_2X_FASTER">2 есе жылдам</string>
@@ -294,7 +282,4 @@
     <string name="self_recording_open_warning_popup">Телефон ашық кезде ғана автоматты жазуды пайдалануға болады</string>
     <string name="contextual_filename">Контексттік файл аты</string>
     <string name="enable_gps_dialog">GPS тегін қосу керек. GPS тегін қосу керек пе?</string>
-    <string name="gallery_disable">Галерея өшірілген</string>
-    <string name="HDR_Normal">Қалыпты</string>
-    <string name="HDR_Strong">Күшті</string>
 </resources>

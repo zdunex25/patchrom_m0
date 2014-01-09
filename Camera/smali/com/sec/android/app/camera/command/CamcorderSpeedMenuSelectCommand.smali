@@ -67,7 +67,7 @@
 
     .line 50
     :pswitch_4
-    const/4 v0, 0x6
+    const/4 v0, -0x1
 
     iput v0, p0, Lcom/sec/android/app/camera/command/CamcorderSpeedMenuSelectCommand;->mSpeed:I
 
@@ -75,7 +75,7 @@
 
     .line 53
     :pswitch_5
-    const/4 v0, 0x7
+    const/4 v0, -0x2
 
     iput v0, p0, Lcom/sec/android/app/camera/command/CamcorderSpeedMenuSelectCommand;->mSpeed:I
 
@@ -83,13 +83,15 @@
 
     .line 56
     :pswitch_6
-    const/16 v0, 0x8
+    const/4 v0, -0x3
 
     iput v0, p0, Lcom/sec/android/app/camera/command/CamcorderSpeedMenuSelectCommand;->mSpeed:I
 
     goto :goto_0
 
     .line 36
+    nop
+
     :pswitch_data_0
     .packed-switch 0x960
         :pswitch_0
@@ -157,7 +159,7 @@
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onCamcorderSpeedMenuSelect(I)V
 
     .line 77
-    iget v0, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v0, p0, Lcom/sec/android/app/camera/command/CamcorderSpeedMenuSelectCommand;->mZOrder:I
 
     const/4 v1, 0x2
 

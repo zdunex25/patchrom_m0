@@ -46,7 +46,7 @@
 
     .prologue
     .line 42
-    const v0, 0x7f060202
+    const v0, 0x7f0601fd
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -57,7 +57,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_POS_X:I
 
     .line 43
-    const v0, 0x7f060203
+    const v0, 0x7f0601fe
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -68,7 +68,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_POS_Y:I
 
     .line 44
-    const v0, 0x7f060204
+    const v0, 0x7f0601ff
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -79,7 +79,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
     .line 45
-    const v0, 0x7f060205
+    const v0, 0x7f060200
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -90,7 +90,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_HEIGHT:I
 
     .line 46
-    const v0, 0x7f060206
+    const v0, 0x7f060201
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -101,7 +101,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_BUTTON_WIDTH:I
 
     .line 47
-    const v0, 0x7f060207
+    const v0, 0x7f060202
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -209,7 +209,7 @@
     .parameter "bAnimation"
 
     .prologue
-    .line 233
+    .line 232
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -218,12 +218,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 234
+    .line 233
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 235
+    .line 234
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -234,7 +234,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 236
+    .line 235
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 237
+    .line 236
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -253,7 +253,7 @@
 
     aput-object v2, v0, v1
 
-    .line 239
+    .line 238
     :cond_1
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
@@ -263,13 +263,13 @@
 
     move-result-object v6
 
-    .line 240
+    .line 239
     .local v6, croppedBitmap:Landroid/graphics/Bitmap;
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_2
 
-    .line 241
+    .line 240
     iget-object v8, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v9, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -298,7 +298,7 @@
 
     aput-object v0, v8, v9
 
-    .line 243
+    .line 242
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -308,17 +308,17 @@
 
     if-nez v0, :cond_3
 
-    .line 271
+    .line 270
     :goto_0
     return-void
 
-    .line 246
+    .line 245
     :cond_3
     const/4 v0, 0x1
 
     if-ne p3, v0, :cond_4
 
-    .line 247
+    .line 246
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -327,7 +327,7 @@
 
     invoke-virtual {v0, p2}, Lcom/sec/android/glview/TwGLImage;->setDefaultOrientation(I)V
 
-    .line 249
+    .line 248
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -339,7 +339,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setRotatable(Z)V
 
-    .line 250
+    .line 249
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -350,7 +350,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setCenterPivot(Z)V
 
-    .line 251
+    .line 250
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -361,12 +361,12 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setRotateAnimation(Z)V
 
-    .line 253
+    .line 252
     const/4 v0, 0x1
 
     if-ne p4, v0, :cond_5
 
-    .line 254
+    .line 253
     new-instance v7, Landroid/view/animation/TranslateAnimation;
 
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
@@ -383,7 +383,7 @@
 
     invoke-direct {v7, v0, v1, v2, v3}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 255
+    .line 254
     .local v7, transNewAnimation:Landroid/view/animation/TranslateAnimation;
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
@@ -395,17 +395,17 @@
 
     invoke-virtual {v7, v0, v1, v2, v3}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
 
-    .line 256
+    .line 255
     const-wide/16 v0, 0x96
 
     invoke-virtual {v7, v0, v1}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 258
+    .line 257
     const/4 v0, 0x1
 
     invoke-virtual {v7, v0}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
-    .line 259
+    .line 258
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -414,7 +414,7 @@
 
     invoke-virtual {v0, v7}, Lcom/sec/android/glview/TwGLImage;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 260
+    .line 259
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -423,14 +423,14 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->startAnimation()V
 
-    .line 263
+    .line 262
     .end local v7           #transNewAnimation:Landroid/view/animation/TranslateAnimation;
     :cond_5
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_6
 
-    .line 264
+    .line 263
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -441,7 +441,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 266
+    .line 265
     :cond_6
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
 
@@ -451,20 +451,20 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
 
-    .line 268
+    .line 267
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v1, 0x7f0201da
+    const v1, 0x7f0201cf
 
-    const v2, 0x7f0201dc
+    const v2, 0x7f0201d1
 
-    const v3, 0x7f0201da
+    const v3, 0x7f0201cf
 
     const/4 v4, 0x0
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 
-    .line 269
+    .line 268
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x0
@@ -561,24 +561,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 274
+    .line 273
     iget-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mButtonLocked:Z
 
     if-eqz v1, :cond_1
 
-    .line 280
+    .line 279
     :cond_0
     :goto_0
     return v0
 
-    .line 277
+    .line 276
     :cond_1
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     if-eqz v1, :cond_0
 
-    .line 278
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    .line 277
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     invoke-interface {v0, p0}, Lcom/sec/android/glview/TwGLView$OnClickListener;->onClick(Lcom/sec/android/glview/TwGLView;)Z
 
@@ -591,12 +591,12 @@
     .locals 2
 
     .prologue
-    .line 284
+    .line 283
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_0
 
-    .line 285
+    .line 284
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMainHandler()Landroid/os/Handler;
@@ -607,7 +607,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 286
+    .line 285
     :cond_0
     return-void
 .end method
@@ -616,12 +616,12 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 136
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->update(Z)V
 
-    .line 138
+    .line 137
     return-void
 .end method
 
@@ -632,20 +632,20 @@
     .parameter "bAnimation"
 
     .prologue
-    .line 223
+    .line 222
     div-int/lit8 v1, p2, 0xa
 
     mul-int/lit8 v1, v1, 0xa
 
     div-int/lit8 v0, v1, 0x5a
 
-    .line 224
+    .line 223
     .local v0, defaultOrientation:I
     const/4 v1, 0x1
 
     invoke-direct {p0, p1, v0, v1, p3}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->update(Landroid/graphics/Bitmap;IZZ)V
 
-    .line 225
+    .line 224
     return-void
 .end method
 
@@ -657,7 +657,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 228
+    .line 227
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_HEIGHT:I
@@ -668,11 +668,11 @@
 
     move-result-object v0
 
-    .line 229
+    .line 228
     .local v0, data:Landroid/graphics/Bitmap;
     invoke-direct {p0, v0, v4, v4, p2}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->update(Landroid/graphics/Bitmap;IZZ)V
 
-    .line 230
+    .line 229
     return-void
 .end method
 
@@ -681,7 +681,7 @@
     .parameter "bIsSNS"
 
     .prologue
-    .line 141
+    .line 140
     monitor-enter p0
 
     :try_start_0
@@ -691,17 +691,17 @@
 
     if-nez v0, :cond_0
 
-    .line 220
+    .line 219
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 144
+    .line 143
     :cond_0
     const/4 v10, 0x1
 
-    .line 146
+    .line 145
     .local v10, noThumbnail:Z
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -712,7 +712,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 147
+    .line 146
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -723,7 +723,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 148
+    .line 147
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x0
@@ -732,7 +732,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 149
+    .line 148
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x0
@@ -741,7 +741,7 @@
 
     aput-object v2, v0, v1
 
-    .line 152
+    .line 151
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -751,7 +751,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 153
+    .line 152
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -762,7 +762,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 154
+    .line 153
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x1
@@ -771,7 +771,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 155
+    .line 154
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x1
@@ -780,7 +780,7 @@
 
     aput-object v2, v0, v1
 
-    .line 158
+    .line 157
     :cond_2
     new-instance v0, Lcom/sec/android/app/camera/imageviewer/MediaList;
 
@@ -794,12 +794,12 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
-    .line 162
+    .line 161
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/imageviewer/MediaList;->initialize(Z)V
 
-    .line 163
+    .line 162
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
@@ -810,7 +810,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setLastContentUri(Landroid/net/Uri;)V
 
-    .line 165
+    .line 164
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
     const/4 v1, 0x0
@@ -821,7 +821,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
     const/4 v1, 0x0
@@ -832,7 +832,7 @@
 
     if-nez v0, :cond_7
 
-    .line 167
+    .line 166
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getContentResolver()Landroid/content/ContentResolver;
@@ -855,7 +855,7 @@
 
     move-result-object v8
 
-    .line 168
+    .line 167
     .local v8, bitmap:Landroid/graphics/Bitmap;
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
@@ -865,12 +865,12 @@
 
     move-result-object v6
 
-    .line 174
+    .line 173
     .local v6, croppedBitmap:Landroid/graphics/Bitmap;
     :goto_1
     if-eqz p1, :cond_3
 
-    .line 175
+    .line 174
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_3
@@ -883,7 +883,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 176
+    .line 175
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -896,7 +896,7 @@
 
     move-result-object v8
 
-    .line 177
+    .line 176
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -905,7 +905,7 @@
 
     iput-boolean v1, v0, Lcom/sec/android/app/camera/Camera;->mReceived:Z
 
-    .line 178
+    .line 177
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
     sget v1, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_HEIGHT:I
@@ -914,13 +914,13 @@
 
     move-result-object v6
 
-    .line 182
+    .line 181
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_4
 
-    .line 183
+    .line 182
     iget-object v11, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v12, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -949,7 +949,7 @@
 
     aput-object v0, v11, v12
 
-    .line 185
+    .line 184
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
@@ -961,7 +961,7 @@
 
     if-nez v0, :cond_5
 
-    .line 186
+    .line 185
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
     const/4 v1, 0x0
@@ -976,7 +976,7 @@
 
     div-int/lit8 v9, v0, 0x5a
 
-    .line 187
+    .line 186
     .local v9, defaultOrientation:I
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -986,7 +986,7 @@
 
     invoke-virtual {v0, v9}, Lcom/sec/android/glview/TwGLImage;->setDefaultOrientation(I)V
 
-    .line 191
+    .line 190
     .end local v6           #croppedBitmap:Landroid/graphics/Bitmap;
     .end local v8           #bitmap:Landroid/graphics/Bitmap;
     .end local v9           #defaultOrientation:I
@@ -999,7 +999,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 192
+    .line 191
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -1010,7 +1010,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setRotatable(Z)V
 
-    .line 193
+    .line 192
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -1021,7 +1021,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setCenterPivot(Z)V
 
-    .line 194
+    .line 193
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -1032,7 +1032,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setRotateAnimation(Z)V
 
-    .line 196
+    .line 195
     new-instance v7, Landroid/view/animation/AlphaAnimation;
 
     const v0, 0x3e99999a
@@ -1041,7 +1041,7 @@
 
     invoke-direct {v7, v0, v1}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 197
+    .line 196
     .local v7, alphaAnimation:Landroid/view/animation/AlphaAnimation;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->getWidth()F
 
@@ -1073,17 +1073,17 @@
 
     invoke-virtual {v7, v0, v1, v2, v3}, Landroid/view/animation/AlphaAnimation;->initialize(IIII)V
 
-    .line 198
+    .line 197
     const-wide/16 v0, 0x64
 
     invoke-virtual {v7, v0, v1}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 199
+    .line 198
     const/4 v0, 0x1
 
     invoke-virtual {v7, v0}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 200
+    .line 199
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -1092,7 +1092,7 @@
 
     invoke-virtual {v0, v7}, Lcom/sec/android/glview/TwGLImage;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 202
+    .line 201
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -1103,7 +1103,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 204
+    .line 203
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
@@ -1112,10 +1112,10 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->startAnimation()V
 
-    .line 206
+    .line 205
     const/4 v10, 0x0
 
-    .line 208
+    .line 207
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1124,36 +1124,36 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mIdxNewThumbnail:I
 
-    .line 211
+    .line 210
     .end local v7           #alphaAnimation:Landroid/view/animation/AlphaAnimation;
     :cond_6
     if-nez v10, :cond_8
 
-    .line 212
+    .line 211
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v1, 0x7f0201da
+    const v1, 0x7f0201cf
 
-    const v2, 0x7f0201dc
+    const v2, 0x7f0201d1
 
-    const v3, 0x7f0201da
+    const v3, 0x7f0201cf
 
     const/4 v4, 0x0
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 
-    .line 216
+    .line 215
     :goto_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v10}, Lcom/sec/android/glview/TwGLButton;->setDim(Z)V
 
-    .line 218
+    .line 217
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/imageviewer/MediaList;->clear()V
 
-    .line 219
+    .line 218
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mMediaList:Lcom/sec/android/app/camera/imageviewer/MediaList;
@@ -1162,7 +1162,7 @@
 
     goto/16 :goto_0
 
-    .line 141
+    .line 140
     .end local v10           #noThumbnail:Z
     :catchall_0
     move-exception v0
@@ -1171,7 +1171,7 @@
 
     throw v0
 
-    .line 171
+    .line 170
     .restart local v10       #noThumbnail:Z
     :cond_7
     :try_start_2
@@ -1195,7 +1195,7 @@
 
     move-result-object v8
 
-    .line 172
+    .line 171
     .restart local v8       #bitmap:Landroid/graphics/Bitmap;
     sget v0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->THUMBNAIL_WIDTH:I
 
@@ -1208,17 +1208,17 @@
     .restart local v6       #croppedBitmap:Landroid/graphics/Bitmap;
     goto/16 :goto_1
 
-    .line 214
+    .line 213
     .end local v6           #croppedBitmap:Landroid/graphics/Bitmap;
     .end local v8           #bitmap:Landroid/graphics/Bitmap;
     :cond_8
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v1, 0x7f0201db
+    const v1, 0x7f0201d0
 
-    const v2, 0x7f0201dc
+    const v2, 0x7f0201d1
 
-    const v3, 0x7f0201db
+    const v3, 0x7f0201d0
 
     const/4 v4, 0x0
 
@@ -1233,7 +1233,7 @@
     .locals 9
 
     .prologue
-    const v8, 0x7f0201db
+    const v8, 0x7f0201d0
 
     const/4 v6, 0x0
 
@@ -1242,7 +1242,7 @@
 
     if-nez v0, :cond_0
 
-    .line 117
+    .line 116
     :goto_0
     return-void
 
@@ -1289,7 +1289,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02023d
+    const v4, 0x7f020226
 
     invoke-direct {v2, v3, v6, v6, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -1329,7 +1329,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0201dc
+    const v5, 0x7f0201d1
 
     const/4 v7, 0x0
 
@@ -1348,33 +1348,16 @@
     .line 112
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0900e9
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setTitle(Ljava/lang/String;)V
-
-    .line 113
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
-
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 114
+    .line 113
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setDim(Z)V
 
-    .line 116
+    .line 115
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mFrameButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->addView(Lcom/sec/android/glview/TwGLView;)V
@@ -1392,19 +1375,19 @@
 
     const/4 v2, 0x0
 
-    .line 120
+    .line 119
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     aget-object v0, v0, v2
 
     if-eqz v0, :cond_1
 
-    .line 121
+    .line 120
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 122
+    .line 121
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -1413,7 +1396,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 123
+    .line 122
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -1421,12 +1404,12 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 124
+    .line 123
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     aput-object v4, v0, v2
 
-    .line 127
+    .line 126
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -1434,12 +1417,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 128
+    .line 127
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_2
 
-    .line 129
+    .line 128
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnail:Lcom/sec/android/glview/TwGLViewGroup;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
@@ -1448,7 +1431,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 130
+    .line 129
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -1456,15 +1439,15 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 131
+    .line 130
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->mThumbnailImage:[Lcom/sec/android/glview/TwGLImage;
 
     aput-object v4, v0, v3
 
-    .line 133
+    .line 132
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLThumbnailButton;->updateEmpty()V
 
-    .line 134
+    .line 133
     return-void
 .end method

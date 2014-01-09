@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 282
+    .line 275
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$UriSearchingHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 284
+    .line 277
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
-    .line 285
+    .line 278
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$UriSearchingHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraEngine;->searchForLastContentUri()V
 
-    .line 287
+    .line 280
     :cond_0
     return-void
 .end method

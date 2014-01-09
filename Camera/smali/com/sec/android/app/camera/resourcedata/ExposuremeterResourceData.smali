@@ -140,7 +140,7 @@
 
     .line 56
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/ExposuremeterResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -161,7 +161,7 @@
     .line 35
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ExposuremeterResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x4b2
+    const/16 v1, 0x4b0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -172,7 +172,7 @@
     .line 36
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ExposuremeterResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x4b0
+    const/16 v1, 0x4b1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -183,7 +183,7 @@
     .line 37
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ExposuremeterResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x4b1
+    const/16 v1, 0x4b2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -202,7 +202,7 @@
 
     .prologue
     .line 62
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ExposuremeterResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

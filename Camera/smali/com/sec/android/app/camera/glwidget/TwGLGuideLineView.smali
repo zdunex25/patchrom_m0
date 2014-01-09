@@ -35,7 +35,7 @@
 
     .prologue
     .line 36
-    const v0, 0x7f08000e
+    const v0, 0x7f08000d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -44,7 +44,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLGuideLineView;->GUIDELINE_WIDTH:I
 
     .line 37
-    const v0, 0x7f080011
+    const v0, 0x7f080010
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 

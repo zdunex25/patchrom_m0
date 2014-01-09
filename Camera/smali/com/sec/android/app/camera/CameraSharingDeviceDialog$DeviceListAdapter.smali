@@ -58,17 +58,17 @@
     .end annotation
 
     .prologue
-    .line 55
+    .line 54
     .local p4, items:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;>;"
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    .line 56
+    .line 55
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 57
+    .line 56
     iput-object p4, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter;->items:Ljava/util/ArrayList;
 
-    .line 58
+    .line 57
     return-void
 .end method
 
@@ -81,14 +81,14 @@
     .parameter "parent"
 
     .prologue
-    .line 62
+    .line 61
     move-object v4, p2
 
-    .line 63
+    .line 62
     .local v4, v:Landroid/view/View;
     if-nez v4, :cond_0
 
-    .line 64
+    .line 63
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
     invoke-virtual {v6}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->getActivity()Landroid/app/Activity;
@@ -103,7 +103,7 @@
 
     check-cast v5, Landroid/view/LayoutInflater;
 
-    .line 66
+    .line 65
     .local v5, vi:Landroid/view/LayoutInflater;
     const v6, 0x7f03000e
 
@@ -113,7 +113,7 @@
 
     move-result-object v4
 
-    .line 68
+    .line 67
     .end local v5           #vi:Landroid/view/LayoutInflater;
     :cond_0
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter;->items:Ljava/util/ArrayList;
@@ -124,12 +124,12 @@
 
     check-cast v2, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;
 
-    .line 70
+    .line 69
     .local v2, p:Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
-    .line 71
-    const v6, 0x7f0b0025
+    .line 70
+    const v6, 0x7f0b002c
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -137,9 +137,9 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 72
+    .line 71
     .local v1, iv:Landroid/widget/ImageView;
-    const v6, 0x7f0b0026
+    const v6, 0x7f0b002d
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -147,9 +147,9 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 73
+    .line 72
     .local v3, tv:Landroid/widget/TextView;
-    const v6, 0x7f0b0027
+    const v6, 0x7f0b002e
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -157,49 +157,49 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    .line 74
+    .line 73
     .local v0, cb:Landroid/widget/CheckBox;
     if-eqz v1, :cond_1
+
+    .line 74
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceImage()Landroid/graphics/Bitmap;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_5
 
     .line 75
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceImage()Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    if-eqz v6, :cond_4
-
-    .line 76
-    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceImage()Landroid/graphics/Bitmap;
-
-    move-result-object v6
-
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 80
+    .line 79
     :cond_1
     :goto_0
     if-eqz v3, :cond_2
+
+    .line 80
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceName()Ljava/lang/String;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_6
 
     .line 81
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceName()Ljava/lang/String;
 
     move-result-object v6
 
-    if-eqz v6, :cond_5
-
-    .line 82
-    invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceName()Ljava/lang/String;
-
-    move-result-object v6
-
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 86
+    .line 85
     :cond_2
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 87
+    .line 86
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceList;->getDeviceCheck()Z
 
     move-result v6
@@ -207,33 +207,34 @@
     invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 89
+    :cond_3
     new-instance v6, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter$1;
 
     invoke-direct {v6, p0, p1, v0}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter$1;-><init>(Lcom/sec/android/app/camera/CameraSharingDeviceDialog$DeviceListAdapter;ILandroid/widget/CheckBox;)V
 
     invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 96
+    .line 95
     .end local v0           #cb:Landroid/widget/CheckBox;
     .end local v1           #iv:Landroid/widget/ImageView;
     .end local v3           #tv:Landroid/widget/TextView;
-    :cond_3
+    :cond_4
     return-object v4
 
-    .line 78
+    .line 77
     .restart local v0       #cb:Landroid/widget/CheckBox;
     .restart local v1       #iv:Landroid/widget/ImageView;
     .restart local v3       #tv:Landroid/widget/TextView;
-    :cond_4
-    const v6, 0x7f02024f
+    :cond_5
+    const v6, 0x7f020236
 
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 
-    .line 84
-    :cond_5
-    const v6, 0x7f090122
+    .line 83
+    :cond_6
+    const v6, 0x7f090120
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 

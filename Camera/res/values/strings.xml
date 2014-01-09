@@ -149,7 +149,7 @@ weighted"</string>
     <string name="SCN_BEACH_SNOW">Beach/Snow</string>
     <string name="SCN_SUNSET">Sunset</string>
     <string name="SCN_DAWN_DUSK">Dawn</string>
-    <string name="SCN_FALL_COLOR">Autumn colour</string>
+    <string name="SCN_FALL_COLOR">Fall colour</string>
     <string name="SCN_NIGHT_SHOT">Night</string>
     <string name="SCN_FIREWORK">Firework</string>
     <string name="SCN_TEXT">Text</string>
@@ -190,7 +190,6 @@ weighted"</string>
     <string name="Title_AutoContrast">Auto contrast</string>
     <string name="Title_GPS">GPS tag</string>
     <string name="Title_Review">Review</string>
-    <string name="Title_AutoShareShot">Auto share shot</string>
     <string name="Title_Guideline">Guidelines</string>
     <string name="Title_VideoQuality">Video quality</string>
     <string name="Title_AudioRecording">Audio recording</string>
@@ -215,10 +214,8 @@ weighted"</string>
     <string name="HDR_Helptext">Be careful not to shake the device while taking photos</string>
     <string name="help_text_panorama">Press the camera key and move phone slowly in one direction</string>
     <string name="help_text_panorama_device">Press the camera key and move device slowly in one direction</string>
-    <string name="message_DefaultLayout">The shortcut layout will be reset</string>
+    <string name="message_DefaultLayout">Set Default Layout?</string>
     <string name="message_EULA_GPS">By turning GPS Tag on, this device will attach, embed and store geographical location data within each picture. Use caution when you send, share, distribute, transmit or copy these pictures since they contain the location when the picture was taken.</string>
-    <string name="message_Auto_ShareShot">"Auto share shot enables you to easily connect to the devices you want to share pictures with.
-Enable auto share shot, then bring the devices together (typically back to back) to connect them"</string>
     <string name="GPS_msg">GPS off</string>
     <string name="message_enable_GPS">Turn on GPS in Settings to use GPS tag</string>
     <string name="cancel">Cancel</string>
@@ -296,36 +293,27 @@ Direct connected"</string>
     <string name="profile_user_default_name">Unknown</string>
     <string name="shareshot_no_user">No people to share with</string>
     <string name="snapshot_saved">Image %s is saved</string>
-    <string name="editable_shortcut_reset">Reset</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Tap and hold shortcuts to edit them</string>
     <string name="editable_shortcut_helptext">Tap and hold icon, then drag it to edit position of shortcuts</string>
-    <string name="singleshotburst_helptext">"Tap and hold the camera key to burst shot
- - The save image quality will be fine"</string>
-    <string name="sbeam_helptext">Take and share photos with other devices. Bring the devices together to add devices you want to share with via S Beam</string>
     <string name="storage_setting_dialog_title">Storage location</string>
     <string name="storage_setting_dialog_message">"SD card inserted.
 Change storage location to SD card?"</string>
-    <string name="storage_setting_dialog_burstshot_message">Single shot will be saved in SD card. However, Burst shot will be saved to internal device memory.</string>
     <string name="do_not_ask_again">Do not show again</string>
     <string name="shutter">Shutter</string>
     <string name="record">Record</string>
     <string name="bestpic">Best photo</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Best faces</string>
-    <string name="bestgroup_title">Select each best face to save</string>
     <string name="battery_low">Close Camera. Battery temperature too low</string>
     <string name="buddy_photo_share_helptext">Take and share photos with friends via face detection</string>
     <string name="face_zoom_helptext">Double tap on a face to zoom in or out</string>
     <string name="burst_shot_guidetext">Burst shots will be saved to device storage</string>
-    <string name="best_photo_guidetext">Best photos will be saved to device storage</string>
     <string name="snap_shot_limitation_dialog">Unable to use the recording snapshot function while Anti-shake is enabled</string>
     <string name="on_device_help_focus">You can tap to set camera focus</string>
     <string name="on_device_help_camcorder">You can switch between pictures and video</string>
     <string name="on_device_help_self">You can tap here to switch to self-portrait mode</string>
     <string name="on_device_help_editable">You can touch and hold shortcuts to edit</string>
-    <string name="on_device_help_voicecommand">"You can take photos with voice commands like 'Capture', 'Shoot', 'Smile' and 'Cheese'"</string>
     <string name="Title_VideoSpeed">Speed</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2X faster</string>
@@ -364,7 +352,4 @@ Change storage location to SD card?"</string>
     <string name="enable_gps_dialog">GPS tag needs to be enabled. Enable GPS tag?</string>
     <string name="faces_detected">faces are detected</string>
     <string name="face_touched">Camera focus, Face is detected</string>
-    <string name="gallery_disable">Gallery is disabled</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Strong</string>
 </resources>

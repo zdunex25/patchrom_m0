@@ -18,8 +18,6 @@
 
 
 # static fields
-.field public static final CLICKABLE:I = 0x4000
-
 .field public static final DISABLED:I = 0x20
 
 .field private static final DRAG_HOLD_TIME_ABSOLUTE:I = 0x0
@@ -156,10 +154,6 @@
 
 .field private mHideAfterAnimation:Z
 
-.field private mHoverFocused:Z
-
-.field private mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
 .field protected mInScreen:Z
 
 .field private mInternalFocus:Z
@@ -178,7 +172,7 @@
 
 .field private mLeftTopCoordinates:[Landroid/graphics/RectF;
 
-.field public mLoaded:Z
+.field private mLoaded:Z
 
 .field private mLoading:Z
 
@@ -303,191 +297,188 @@
 
     const/16 v2, 0x10
 
-    const/4 v5, 0x1
+    const/4 v5, 0x0
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 689
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 685
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 63
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
-    .line 76
+    .line 78
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
-    .line 79
+    .line 81
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mLoading:Z
 
-    .line 82
+    .line 84
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mAnimationPending:Z
 
-    .line 85
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
+    .line 87
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
-    .line 88
+    .line 90
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStarted:Z
 
-    .line 91
+    .line 93
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStartedEvent:Z
 
-    .line 94
+    .line 96
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mAnimationTimeSet:Z
 
-    .line 97
+    .line 99
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mHideAfterAnimation:Z
 
-    .line 100
+    .line 102
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
-    .line 102
+    .line 104
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
 
-    .line 120
+    .line 122
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     .line 130
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
 
-    .line 132
-    iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mHoverFocused:Z
-
-    .line 167
+    .line 165
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
-    .line 170
+    .line 168
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
 
-    .line 173
+    .line 171
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
-    .line 176
+    .line 174
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTempMatrix:[F
 
-    .line 179
+    .line 177
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mCombinedMatrix:[F
 
-    .line 182
+    .line 180
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimMatrix:[F
 
-    .line 185
+    .line 183
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
-    .line 188
+    .line 186
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
 
-    .line 191
+    .line 189
     const/4 v1, 0x4
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->glCoordinate:[F
 
-    .line 194
+    .line 192
     const/4 v1, 0x4
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
-    .line 197
+    .line 195
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
 
-    .line 200
+    .line 198
     new-instance v1, Landroid/view/animation/Transformation;
 
     invoke-direct {v1}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformation:Landroid/view/animation/Transformation;
 
-    .line 203
+    .line 201
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleX:F
 
-    .line 206
+    .line 204
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleY:F
 
-    .line 209
+    .line 207
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 212
+    .line 210
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
-    .line 215
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
+    .line 213
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 218
+    .line 216
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mContinuousDrawMode:Z
 
-    .line 233
+    .line 231
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
-    .line 236
+    .line 234
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mDefaultOrientation:I
 
-    .line 239
+    .line 237
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
-    .line 242
+    .line 240
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mRotatable:Z
 
-    .line 245
+    .line 243
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mCenterPivot:Z
 
-    .line 248
+    .line 246
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimation:Z
 
-    .line 250
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
+    .line 248
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 252
+    .line 250
     const/16 v1, 0x12c
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationDuration:I
 
-    .line 279
+    .line 277
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mParentHAlign:I
 
-    .line 282
+    .line 280
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mParentVAlign:I
 
-    .line 285
+    .line 283
     const/4 v1, 0x4
 
     new-array v1, v1, [Landroid/graphics/RectF;
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
-    .line 287
+    .line 285
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -496,7 +487,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 288
+    .line 286
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     new-instance v2, Landroid/graphics/RectF;
@@ -505,235 +496,232 @@
 
     aput-object v2, v1, v0
 
-    .line 287
+    .line 285
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 294
+    .line 292
     :cond_0
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mSizeGiven:Z
 
+    .line 295
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
+
     .line 297
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
-    .line 299
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
-
-    .line 309
+    .line 307
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mBackgroundResId:I
 
-    .line 312
+    .line 310
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
 
-    .line 315
+    .line 313
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
-    .line 318
+    .line 316
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
-    .line 324
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mAlphaChanged:Z
+    .line 322
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAlphaChanged:Z
 
-    .line 327
+    .line 325
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
-    .line 330
+    .line 328
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
-    .line 333
+    .line 331
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
-    .line 336
+    .line 334
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
-    .line 339
+    .line 337
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
-    .line 342
+    .line 340
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
-    .line 344
+    .line 342
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 346
+    .line 344
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 351
+    .line 349
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
 
-    .line 354
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
+    .line 352
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
 
-    .line 366
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
+    .line 364
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
-    .line 369
+    .line 367
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    .line 372
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
+    .line 370
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
+
+    .line 373
+    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
 
     .line 375
-    iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
-
-    .line 377
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mAsyncLoad:Z
 
-    .line 379
+    .line 377
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mBypassTouch:Z
 
-    .line 382
+    .line 380
     iput v3, p0, Lcom/sec/android/glview/TwGLView;->mTempOrientation:I
 
-    .line 389
+    .line 387
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mInternalFocus:Z
 
-    .line 391
+    .line 389
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
-    .line 393
+    .line 391
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
-    .line 395
+    .line 393
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
-    .line 397
+    .line 395
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
-    .line 399
+    .line 397
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mToggleButton:Z
 
-    .line 403
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
+    .line 401
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     .line 405
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    .line 409
     new-instance v1, Lcom/sec/android/glview/TwGLView$1;
 
     invoke-direct {v1, p0}, Lcom/sec/android/glview/TwGLView$1;-><init>(Lcom/sec/android/glview/TwGLView;)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->setDragging:Ljava/lang/Runnable;
 
-    .line 450
+    .line 446
     iput v6, p0, Lcom/sec/android/glview/TwGLView;->mDragSensitivity:I
 
-    .line 517
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    .line 513
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    .line 545
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    .line 541
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
-    .line 564
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
+    .line 560
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
-    .line 570
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    .line 566
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
-    .line 602
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
+    .line 598
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
 
-    .line 628
-    iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    .line 624
+    iput-object v5, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
-    .line 690
+    .line 686
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
-    .line 691
+    .line 687
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iput p2, v1, Landroid/graphics/RectF;->left:F
 
-    .line 692
+    .line 688
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iput p3, v1, Landroid/graphics/RectF;->top:F
 
-    .line 694
+    .line 690
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
-    .line 695
+    .line 691
     iput p3, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
-    .line 697
+    .line 693
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 698
+    .line 694
     iput p3, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 700
+    .line 696
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    .line 701
+    .line 697
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetTransformMatrix()V
 
-    .line 703
+    .line 699
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
-    .line 704
+    .line 700
     iput-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mSizeGiven:Z
 
-    .line 706
+    .line 702
     invoke-virtual {p0, v3, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 707
-    invoke-virtual {p0, v5, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
+    .line 703
+    invoke-virtual {p0, v4, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 708
+    .line 704
     invoke-virtual {p0, v6, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 709
+    .line 705
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 711
+    .line 707
     iput-object p0, p0, Lcom/sec/android/glview/TwGLView;->mThis:Lcom/sec/android/glview/TwGLView;
 
-    .line 713
+    .line 709
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
-    .line 714
+    .line 710
     return-void
 .end method
 
@@ -756,185 +744,182 @@
 
     const/4 v4, 0x0
 
-    .line 730
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 726
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 63
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
-    .line 76
+    .line 78
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
-    .line 79
+    .line 81
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mLoading:Z
 
-    .line 82
+    .line 84
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimationPending:Z
 
-    .line 85
+    .line 87
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
-    .line 88
+    .line 90
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStarted:Z
 
-    .line 91
+    .line 93
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStartedEvent:Z
 
-    .line 94
+    .line 96
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAnimationTimeSet:Z
 
-    .line 97
+    .line 99
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mHideAfterAnimation:Z
 
-    .line 100
+    .line 102
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
-    .line 102
+    .line 104
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
 
-    .line 120
+    .line 122
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     .line 130
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
 
-    .line 132
-    iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mHoverFocused:Z
-
-    .line 167
+    .line 165
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
-    .line 170
+    .line 168
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
 
-    .line 173
+    .line 171
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
-    .line 176
+    .line 174
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTempMatrix:[F
 
-    .line 179
+    .line 177
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mCombinedMatrix:[F
 
-    .line 182
+    .line 180
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimMatrix:[F
 
-    .line 185
+    .line 183
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
-    .line 188
+    .line 186
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
 
-    .line 191
+    .line 189
     const/4 v1, 0x4
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->glCoordinate:[F
 
-    .line 194
+    .line 192
     const/4 v1, 0x4
 
     new-array v1, v1, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
-    .line 197
+    .line 195
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
 
-    .line 200
+    .line 198
     new-instance v1, Landroid/view/animation/Transformation;
 
     invoke-direct {v1}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformation:Landroid/view/animation/Transformation;
 
-    .line 203
+    .line 201
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleX:F
 
-    .line 206
+    .line 204
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleY:F
 
-    .line 209
+    .line 207
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 212
+    .line 210
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
-    .line 215
+    .line 213
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 218
+    .line 216
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mContinuousDrawMode:Z
 
-    .line 233
+    .line 231
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
-    .line 236
+    .line 234
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mDefaultOrientation:I
 
-    .line 239
+    .line 237
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
-    .line 242
+    .line 240
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mRotatable:Z
 
-    .line 245
+    .line 243
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mCenterPivot:Z
 
-    .line 248
+    .line 246
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimation:Z
 
-    .line 250
+    .line 248
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 252
+    .line 250
     const/16 v1, 0x12c
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationDuration:I
 
-    .line 279
+    .line 277
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mParentHAlign:I
 
-    .line 282
+    .line 280
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mParentVAlign:I
 
-    .line 285
+    .line 283
     const/4 v1, 0x4
 
     new-array v1, v1, [Landroid/graphics/RectF;
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
-    .line 287
+    .line 285
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -943,7 +928,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 288
+    .line 286
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     new-instance v2, Landroid/graphics/RectF;
@@ -952,170 +937,167 @@
 
     aput-object v2, v1, v0
 
-    .line 287
+    .line 285
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 294
+    .line 292
     :cond_0
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mSizeGiven:Z
 
-    .line 297
+    .line 295
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
 
-    .line 299
+    .line 297
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
-    .line 309
+    .line 307
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mBackgroundResId:I
 
-    .line 312
+    .line 310
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
 
-    .line 315
+    .line 313
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
-    .line 318
+    .line 316
     const/high16 v1, 0x3f80
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
-    .line 324
+    .line 322
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mAlphaChanged:Z
 
-    .line 327
+    .line 325
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
-    .line 330
+    .line 328
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
-    .line 333
+    .line 331
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
-    .line 336
+    .line 334
     new-array v1, v6, [F
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
-    .line 339
+    .line 337
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
-    .line 342
+    .line 340
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
-    .line 344
+    .line 342
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 346
+    .line 344
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 351
+    .line 349
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
 
-    .line 354
+    .line 352
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
 
-    .line 366
+    .line 364
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
-    .line 369
+    .line 367
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    .line 372
+    .line 370
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
 
-    .line 375
+    .line 373
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
 
-    .line 377
+    .line 375
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mAsyncLoad:Z
 
-    .line 379
+    .line 377
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mBypassTouch:Z
 
-    .line 382
+    .line 380
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mTempOrientation:I
 
-    .line 389
+    .line 387
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mInternalFocus:Z
 
-    .line 391
+    .line 389
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
-    .line 393
+    .line 391
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
-    .line 395
+    .line 393
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
-    .line 397
+    .line 395
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
-    .line 399
+    .line 397
     iput-boolean v4, p0, Lcom/sec/android/glview/TwGLView;->mToggleButton:Z
 
-    .line 403
+    .line 401
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     .line 405
-    iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    .line 409
     new-instance v1, Lcom/sec/android/glview/TwGLView$1;
 
     invoke-direct {v1, p0}, Lcom/sec/android/glview/TwGLView$1;-><init>(Lcom/sec/android/glview/TwGLView;)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->setDragging:Ljava/lang/Runnable;
 
-    .line 450
+    .line 446
     iput v6, p0, Lcom/sec/android/glview/TwGLView;->mDragSensitivity:I
 
-    .line 517
+    .line 513
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    .line 545
+    .line 541
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
-    .line 564
+    .line 560
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
-    .line 570
+    .line 566
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
-    .line 602
+    .line 598
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
 
-    .line 628
+    .line 624
     iput-object v3, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
-    .line 731
+    .line 727
     new-instance v1, Landroid/graphics/RectF;
 
     add-float v2, p2, p4
@@ -1126,55 +1108,55 @@
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
-    .line 733
+    .line 729
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    .line 734
+    .line 730
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetTransformMatrix()V
 
-    .line 736
+    .line 732
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
-    .line 737
+    .line 733
     iput p3, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
-    .line 739
+    .line 735
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 740
+    .line 736
     iput p3, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 742
+    .line 738
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
-    .line 743
+    .line 739
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mSizeGiven:Z
 
-    .line 745
+    .line 741
     invoke-virtual {p0, v4, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 746
+    .line 742
     invoke-virtual {p0, v5, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 747
+    .line 743
     invoke-virtual {p0, v6, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 748
+    .line 744
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1, p2, p3}, Lcom/sec/android/glview/TwGLView;->setLeftTop(IFF)V
 
-    .line 750
+    .line 746
     iput-object p0, p0, Lcom/sec/android/glview/TwGLView;->mThis:Lcom/sec/android/glview/TwGLView;
 
-    .line 751
+    .line 747
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
-    .line 752
+    .line 748
     return-void
 .end method
 
@@ -1183,7 +1165,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 45
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     return-object v0
@@ -1194,7 +1176,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 45
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragX:F
 
     return v0
@@ -1205,7 +1187,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 45
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragY:F
 
     return v0
@@ -1216,7 +1198,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 45
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
 
     return v0
@@ -1227,7 +1209,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 45
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     return-object v0
@@ -1237,7 +1219,7 @@
     .locals 6
 
     .prologue
-    .line 2126
+    .line 2096
     monitor-enter p0
 
     :try_start_0
@@ -1255,7 +1237,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2127
+    .line 2097
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mCombinedMatrix:[F
 
     const/4 v1, 0x0
@@ -1273,13 +1255,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2131
+    .line 2101
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2126
+    .line 2096
     :catchall_0
     move-exception v0
 
@@ -1287,10 +1269,114 @@
 
     throw v0
 
-    .line 2128
+    .line 2098
     :catch_0
     move-exception v0
 
+    goto :goto_0
+.end method
+
+.method private isScreenReaderActive()Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 3100
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+
+    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "enabled_accessibility_services"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+
+    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "accessibility_enabled"
+
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    :cond_0
+    move v0, v1
+
+    .line 3105
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 3102
+    :cond_2
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+
+    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "accessibility_enabled"
+
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_3
+
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+
+    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "enabled_accessibility_services"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "(?i).*talkback.*"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_3
+    move v0, v1
+
+    .line 3105
     goto :goto_0
 .end method
 
@@ -1300,51 +1386,40 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1574
+    .line 1558
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 1575
+    .line 1559
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
 
-    .line 1576
+    .line 1560
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->onLayoutUpdated()V
 
-    .line 1577
+    .line 1561
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1578
+    .line 1562
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->onLayoutUpdated()V
 
-    .line 1580
+    .line 1564
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_1
 
-    .line 1581
+    .line 1565
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->onLayoutUpdated()V
 
-    .line 1583
+    .line 1567
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v0, :cond_2
-
-    .line 1584
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->onLayoutUpdated()V
-
-    .line 1586
-    :cond_2
     return-void
 .end method
 
@@ -1356,7 +1431,7 @@
     .parameter "view"
 
     .prologue
-    .line 3066
+    .line 3016
     return-void
 .end method
 
@@ -1365,7 +1440,7 @@
     .parameter "view"
 
     .prologue
-    .line 3063
+    .line 3013
     return-void
 .end method
 
@@ -1373,22 +1448,22 @@
     .locals 1
 
     .prologue
-    .line 1692
+    .line 1669
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1693
+    .line 1670
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLView;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 1694
+    .line 1671
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLView;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 1696
+    .line 1673
     :cond_0
     return-void
 .end method
@@ -1397,7 +1472,7 @@
     .locals 3
 
     .prologue
-    .line 1619
+    .line 1600
     monitor-enter p0
 
     const/4 v1, 0x0
@@ -1405,122 +1480,106 @@
     :try_start_0
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mRotatable:Z
 
-    .line 1620
+    .line 1601
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
-    .line 1621
+    .line 1602
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
-    .line 1623
+    .line 1604
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v1, :cond_0
 
-    .line 1624
+    .line 1605
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->clear()V
 
-    .line 1625
+    .line 1606
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1627
+    .line 1608
     :cond_0
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v1, :cond_1
 
-    .line 1628
+    .line 1609
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLNinePatch;->clear()V
 
-    .line 1629
+    .line 1610
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
-    .line 1631
+    .line 1612
     :cond_1
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v1, :cond_2
-
-    .line 1632
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLNinePatch;->clear()V
-
-    .line 1633
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    .line 1635
-    :cond_2
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
-    .line 1637
+    .line 1614
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 1638
+    .line 1615
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    .line 1647
-    :cond_3
+    .line 1624
+    :cond_2
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 1648
+    .line 1625
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     const/4 v1, 0x4
 
-    if-ge v0, v1, :cond_4
+    if-ge v0, v1, :cond_3
 
-    .line 1649
+    .line 1626
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     const/4 v2, 0x0
 
     aput-object v2, v1, v0
 
-    .line 1648
+    .line 1625
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1650
-    :cond_4
+    .line 1627
+    :cond_3
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1652
+    .line 1629
     .end local v0           #i:I
-    :cond_5
+    :cond_4
     monitor-exit p0
 
     return-void
 
-    .line 1619
+    .line 1600
     :catchall_0
     move-exception v1
 
@@ -1536,7 +1595,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2593
+    .line 2556
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->getScreenWidth()I
@@ -1551,7 +1610,7 @@
 
     invoke-interface {p1, v2, v2, v0, v1}, Ljavax/microedition/khronos/opengles/GL11;->glScissor(IIII)V
 
-    .line 2594
+    .line 2557
     return-void
 .end method
 
@@ -1560,7 +1619,7 @@
     .parameter "gl"
 
     .prologue
-    .line 2567
+    .line 2537
     monitor-enter p0
 
     :try_start_0
@@ -1568,18 +1627,18 @@
 
     if-nez v0, :cond_0
 
-    .line 2568
+    .line 2538
     invoke-virtual {p0, p1}, Lcom/sec/android/glview/TwGLView;->clearClip(Ljavax/microedition/khronos/opengles/GL11;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2584
+    .line 2547
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2574
+    .line 2543
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
@@ -1624,7 +1683,7 @@
 
     goto :goto_0
 
-    .line 2567
+    .line 2537
     :catchall_0
     move-exception v0
 
@@ -1641,7 +1700,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1432
+    .line 1420
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
 
     if-eqz v1, :cond_1
@@ -1650,7 +1709,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1433
+    .line 1421
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOldClipRect:Landroid/graphics/Rect;
 
     float-to-int v1, p1
@@ -1661,23 +1720,23 @@
 
     move-result v0
 
-    .line 1444
+    .line 1432
     :cond_0
     :goto_0
     return v0
 
-    .line 1436
+    .line 1424
     :cond_1
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     if-eqz v1, :cond_0
 
-    .line 1440
+    .line 1428
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
     if-eqz v1, :cond_0
 
-    .line 1444
+    .line 1432
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     float-to-int v1, p1
@@ -1696,7 +1755,7 @@
     .parameter "gl"
 
     .prologue
-    .line 3055
+    .line 3005
     return-void
 .end method
 
@@ -1709,7 +1768,7 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 1962
+    .line 1936
     monitor-enter p0
 
     :try_start_0
@@ -1719,20 +1778,20 @@
 
     move-object v8, v0
 
-    .line 1964
+    .line 1938
     .local v8, gl11:Ljavax/microedition/khronos/opengles/GL11;
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
     if-nez v1, :cond_1
 
-    .line 1965
+    .line 1939
     invoke-virtual {p0, v8}, Lcom/sec/android/glview/TwGLView;->load(Ljavax/microedition/khronos/opengles/GL11;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1966
+    .line 1940
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v2, 0x1
@@ -1741,21 +1800,21 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2106
+    .line 2076
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1973
+    .line 1947
     :cond_1
     :try_start_1
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     if-eq v1, v2, :cond_0
 
-    .line 1977
+    .line 1951
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
 
     if-eqz v1, :cond_2
@@ -1764,7 +1823,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1978
+    .line 1952
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->getLastOrientation()I
@@ -1773,26 +1832,26 @@
 
     invoke-virtual {p0, v1}, Lcom/sec/android/glview/TwGLView;->setOrientation(I)V
 
-    .line 1981
+    .line 1955
     :cond_2
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mContinuousDrawMode:Z
 
     if-eqz v1, :cond_3
 
-    .line 1982
+    .line 1956
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 1984
+    .line 1958
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getAlpha()F
 
     move-result v7
 
-    .line 1985
+    .line 1959
     .local v7, alpha:F
     const/16 v1, 0x2300
 
@@ -1802,31 +1861,31 @@
 
     invoke-interface {p1, v1, v2, v3}, Ljavax/microedition/khronos/opengles/GL10;->glTexEnvf(IIF)V
 
-    .line 1986
+    .line 1960
     invoke-interface {p1, v7, v7, v7, v7}, Ljavax/microedition/khronos/opengles/GL10;->glColor4f(FFFF)V
 
-    .line 1988
+    .line 1962
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mCombinedMatrix:[F
 
-    .line 1990
+    .line 1964
     .local v5, currentMatrix:[F
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v1, :cond_8
 
-    .line 1991
+    .line 1965
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
     if-nez v1, :cond_6
 
-    .line 1992
+    .line 1966
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 1993
+    .line 1967
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
@@ -1835,20 +1894,20 @@
 
     div-long v9, v1, v3
 
-    .line 1994
+    .line 1968
     .local v9, timeMillis:J
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationPending:Z
 
     if-eqz v1, :cond_4
 
-    .line 1995
+    .line 1969
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1962
+    .line 1936
     .end local v5           #currentMatrix:[F
     .end local v7           #alpha:F
     .end local v8           #gl11:Ljavax/microedition/khronos/opengles/GL11;
@@ -1860,7 +1919,7 @@
 
     throw v1
 
-    .line 1999
+    .line 1973
     .restart local v5       #currentMatrix:[F
     .restart local v7       #alpha:F
     .restart local v8       #gl11:Ljavax/microedition/khronos/opengles/GL11;
@@ -1871,27 +1930,27 @@
 
     if-eqz v1, :cond_9
 
-    .line 2000
+    .line 1974
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStarted:Z
 
-    .line 2001
+    .line 1975
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationTimeSet:Z
 
-    .line 2002
+    .line 1976
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1}, Landroid/view/animation/Animation;->reset()V
 
-    .line 2003
+    .line 1977
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1, v9, v10}, Landroid/view/animation/Animation;->setStartTime(J)V
 
-    .line 2012
+    .line 1986
     :cond_5
     :goto_1
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
@@ -1904,7 +1963,7 @@
 
     if-eqz v1, :cond_a
 
-    .line 2013
+    .line 1987
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -1915,7 +1974,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 2016
+    .line 1990
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimMatrix:[F
 
     const/4 v2, 0x2
@@ -1934,7 +1993,7 @@
 
     aput v3, v1, v2
 
-    .line 2017
+    .line 1991
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimMatrix:[F
 
     const/4 v2, 0x5
@@ -1953,12 +2012,12 @@
 
     aput v3, v1, v2
 
-    .line 2019
+    .line 1993
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimMatrix:[F
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLUtil;->toGLMatrix([F)[F
 
-    .line 2020
+    .line 1994
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
     const/4 v2, 0x0
@@ -1974,17 +2033,17 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2022
+    .line 1996
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v1}, Landroid/view/animation/Transformation;->getAlpha()F
 
     move-result v7
 
-    .line 2023
+    .line 1997
     iput v7, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
-    .line 2026
+    .line 2000
     const/16 v1, 0x2300
 
     const/16 v2, 0x2200
@@ -1993,13 +2052,13 @@
 
     invoke-interface {p1, v1, v2, v3}, Ljavax/microedition/khronos/opengles/GL10;->glTexEnvf(IIF)V
 
-    .line 2027
+    .line 2001
     invoke-interface {p1, v7, v7, v7, v7}, Ljavax/microedition/khronos/opengles/GL10;->glColor4f(FFFF)V
 
-    .line 2029
+    .line 2003
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
-    .line 2048
+    .line 2022
     .end local v9           #timeMillis:J
     .restart local v5       #currentMatrix:[F
     :cond_6
@@ -2007,12 +2066,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 2049
+    .line 2023
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
 
-    .line 2050
+    .line 2024
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1}, Landroid/view/animation/Animation;->getFillAfter()Z
@@ -2021,7 +2080,7 @@
 
     if-eqz v1, :cond_c
 
-    .line 2051
+    .line 2025
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
     const/4 v2, 0x0
@@ -2037,10 +2096,10 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2052
+    .line 2026
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mAnimGLMatrix:[F
 
-    .line 2058
+    .line 2032
     .restart local v5       #currentMatrix:[F
     :cond_7
     :goto_2
@@ -2048,17 +2107,17 @@
 
     if-eqz v1, :cond_8
 
-    .line 2059
+    .line 2033
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStartedEvent:Z
 
-    .line 2060
+    .line 2034
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
 
     if-eqz v1, :cond_8
 
-    .line 2061
+    .line 2035
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->getMainHandler()Landroid/os/Handler;
@@ -2071,13 +2130,13 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2069
+    .line 2043
     :cond_8
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
 
     if-eqz v1, :cond_f
 
-    .line 2070
+    .line 2044
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
 
     const/4 v2, 0x0
@@ -2090,10 +2149,10 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2071
+    .line 2045
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->refreshClipRect()V
 
-    .line 2072
+    .line 2046
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
@@ -2110,57 +2169,57 @@
 
     if-nez v1, :cond_d
 
-    .line 2073
+    .line 2047
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
 
     if-eqz v1, :cond_d
 
-    .line 2074
+    .line 2048
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
-    .line 2075
+    .line 2049
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->onOutOfScreen()V
 
     goto/16 :goto_0
 
-    .line 2004
+    .line 1978
     .restart local v9       #timeMillis:J
     :cond_9
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationTimeSet:Z
 
     if-eqz v1, :cond_5
 
-    .line 2005
+    .line 1979
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationTimeSet:Z
 
-    .line 2006
+    .line 1980
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1}, Landroid/view/animation/Animation;->reset()V
 
-    .line 2007
+    .line 1981
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1, v9, v10}, Landroid/view/animation/Animation;->setStartTime(J)V
 
-    .line 2009
+    .line 1983
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStartedEvent:Z
 
     goto/16 :goto_1
 
-    .line 2031
+    .line 2005
     :cond_a
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
 
     if-eqz v1, :cond_b
 
-    .line 2032
+    .line 2006
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->getMainHandler()Landroid/os/Handler;
@@ -2173,25 +2232,25 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2039
+    .line 2013
     :cond_b
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
-    .line 2041
+    .line 2015
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mHideAfterAnimation:Z
 
     if-eqz v1, :cond_6
 
-    .line 2042
+    .line 2016
     const/4 v1, 0x4
 
     invoke-virtual {p0, v1}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 2054
+    .line 2028
     .end local v9           #timeMillis:J
     :cond_c
     const/high16 v1, 0x3f80
@@ -2200,48 +2259,48 @@
 
     goto :goto_2
 
-    .line 2079
+    .line 2053
     :cond_d
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
 
     if-nez v1, :cond_e
 
-    .line 2080
+    .line 2054
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {p3, v1}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_11
 
-    .line 2081
+    .line 2055
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
 
-    .line 2089
+    .line 2063
     :cond_e
     :goto_3
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
-    .line 2092
+    .line 2066
     :cond_f
     const/4 v1, 0x0
 
     invoke-interface {p1, v5, v1}, Ljavax/microedition/khronos/opengles/GL10;->glMultMatrixf([FI)V
 
-    .line 2093
+    .line 2067
     invoke-virtual {p0, v8}, Lcom/sec/android/glview/TwGLView;->dispatchDraw(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 2095
+    .line 2069
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v1, :cond_10
 
-    .line 2096
+    .line 2070
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
@@ -2250,16 +2309,16 @@
 
     invoke-virtual {v1, p1, v2, v3}, Lcom/sec/android/glview/TwGLView;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 2098
+    .line 2072
     :cond_10
     invoke-virtual {p0, v8}, Lcom/sec/android/glview/TwGLView;->onDraw(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 2099
+    .line 2073
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
 
-    .line 2100
+    .line 2074
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -2268,47 +2327,18 @@
 
     move-result v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_0
 
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_0
 
-    .line 2101
+    .line 2075
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
-
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, p1, v2, v3}, Lcom/sec/android/glview/TwGLNinePatch;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
-
-    .line 2103
-    :cond_11
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->isTouchExplorationEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverFocused:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v1, :cond_0
-
-    .line 2104
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
 
@@ -2318,8 +2348,8 @@
 
     goto/16 :goto_0
 
-    .line 2082
-    :cond_12
+    .line 2056
+    :cond_11
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
@@ -2328,17 +2358,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_12
 
-    .line 2083
+    .line 2057
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
 
     goto :goto_3
 
-    .line 2085
-    :cond_13
+    .line 2059
+    :cond_12
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     const/4 v2, 0x0
@@ -2351,7 +2381,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2086
+    .line 2060
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
@@ -2366,12 +2396,12 @@
     .parameter "level"
 
     .prologue
-    .line 3137
+    .line 3084
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3138
+    .line 3085
     .local v1, s:Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -2379,23 +2409,23 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 3139
+    .line 3086
     const-string v2, " "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3138
+    .line 3085
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3141
+    .line 3088
     :cond_0
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     if-eqz v2, :cond_1
 
-    .line 3142
+    .line 3089
     const-string v2, "DUMP"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2562,11 +2592,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3145
+    .line 3092
     :goto_1
     return-void
 
-    .line 3144
+    .line 3091
     :cond_1
     const-string v2, "DUMP"
 
@@ -2671,7 +2701,7 @@
     .parameter "direction"
 
     .prologue
-    .line 2810
+    .line 2783
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->isFocusable()Z
 
     move-result v7
@@ -2680,44 +2710,44 @@
 
     if-nez p1, :cond_2
 
-    .line 2811
+    .line 2784
     :cond_0
     const/4 v4, 0x0
 
-    .line 2856
+    .line 2829
     :cond_1
     :goto_0
     return-object v4
 
-    .line 2814
+    .line 2787
     :cond_2
     const/4 v4, 0x0
 
-    .line 2817
+    .line 2790
     .local v4, resultView:Lcom/sec/android/glview/TwGLView;
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getCurrentLeft()F
 
     move-result v3
 
-    .line 2818
+    .line 2791
     .local v3, left:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getCurrentTop()F
 
     move-result v5
 
-    .line 2819
+    .line 2792
     .local v5, top:F
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getCurrentLeft()F
 
     move-result v0
 
-    .line 2820
+    .line 2793
     .local v0, focusedViewLeft:F
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getCurrentTop()F
 
     move-result v1
 
-    .line 2821
+    .line 2794
     .local v1, focusedViewTop:F
     sub-float v7, v0, v3
 
@@ -2725,7 +2755,7 @@
 
     move-result v2
 
-    .line 2822
+    .line 2795
     .local v2, horizontalOffset:F
     sub-float v7, v1, v5
 
@@ -2733,80 +2763,80 @@
 
     move-result v6
 
-    .line 2824
+    .line 2797
     .local v6, verticalOffset:F
     sparse-switch p2, :sswitch_data_0
 
-    .line 2854
+    .line 2827
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 2826
+    .line 2799
     :sswitch_0
     cmpl-float v7, v0, v3
 
     if-lez v7, :cond_1
 
-    .line 2827
+    .line 2800
     cmpl-float v7, v2, v6
 
     if-lez v7, :cond_1
 
-    .line 2828
+    .line 2801
     move-object v4, p0
 
     goto :goto_0
 
-    .line 2833
+    .line 2806
     :sswitch_1
     cmpg-float v7, v0, v3
 
     if-gez v7, :cond_1
 
-    .line 2834
+    .line 2807
     cmpl-float v7, v2, v6
 
     if-lez v7, :cond_1
 
-    .line 2835
+    .line 2808
     move-object v4, p0
 
     goto :goto_0
 
-    .line 2840
+    .line 2813
     :sswitch_2
     cmpl-float v7, v1, v5
 
     if-lez v7, :cond_1
 
-    .line 2841
+    .line 2814
     cmpg-float v7, v2, v6
 
     if-gez v7, :cond_1
 
-    .line 2842
+    .line 2815
     move-object v4, p0
 
     goto :goto_0
 
-    .line 2847
+    .line 2820
     :sswitch_3
     cmpg-float v7, v1, v5
 
     if-gez v7, :cond_1
 
-    .line 2848
+    .line 2821
     cmpg-float v7, v2, v6
 
     if-gez v7, :cond_1
 
-    .line 2849
+    .line 2822
     move-object v4, p0
 
     goto :goto_0
 
-    .line 2824
+    .line 2797
     :sswitch_data_0
     .sparse-switch
         0x11 -> :sswitch_0
@@ -2824,20 +2854,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2871
+    .line 2844
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     if-eqz v1, :cond_1
 
     move-object p0, v0
 
-    .line 2881
+    .line 2854
     .end local p0
     :cond_0
     :goto_0
     return-object p0
 
-    .line 2874
+    .line 2847
     .restart local p0
     :cond_1
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mBypassTouch:Z
@@ -2846,10 +2876,10 @@
 
     move-object p0, v0
 
-    .line 2875
+    .line 2848
     goto :goto_0
 
-    .line 2878
+    .line 2851
     :cond_2
     invoke-virtual {p0, p1, p2}, Lcom/sec/android/glview/TwGLView;->contains(FF)Z
 
@@ -2859,7 +2889,7 @@
 
     move-object p0, v0
 
-    .line 2881
+    .line 2854
     goto :goto_0
 .end method
 
@@ -2868,12 +2898,12 @@
     .parameter "id"
 
     .prologue
-    .line 2789
+    .line 2762
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
     if-ne v0, p1, :cond_0
 
-    .line 2792
+    .line 2765
     .end local p0
     :goto_0
     return-object p0
@@ -2890,12 +2920,12 @@
     .parameter "tag"
 
     .prologue
-    .line 2803
+    .line 2776
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewTag:I
 
     if-ne v0, p1, :cond_0
 
-    .line 2806
+    .line 2779
     .end local p0
     :goto_0
     return-object p0
@@ -2911,27 +2941,27 @@
     .locals 2
 
     .prologue
-    .line 846
+    .line 838
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     const/16 v1, 0x20
 
     if-ne v0, v1, :cond_0
 
-    .line 847
+    .line 839
     const v0, 0x3e4ccccd
 
-    .line 852
+    .line 844
     :goto_0
     return v0
 
-    .line 849
+    .line 841
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 850
+    .line 842
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
@@ -2944,7 +2974,7 @@
 
     goto :goto_0
 
-    .line 852
+    .line 844
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
@@ -2955,7 +2985,7 @@
     .locals 5
 
     .prologue
-    .line 1398
+    .line 1386
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
@@ -2983,21 +3013,21 @@
     .locals 2
 
     .prologue
-    .line 1296
+    .line 1284
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
     if-nez v0, :cond_0
 
-    .line 1297
+    .line 1285
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->initSize()V
 
-    .line 1299
+    .line 1287
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1300
+    .line 1288
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
@@ -3010,7 +3040,7 @@
 
     add-float/2addr v0, v1
 
-    .line 1302
+    .line 1290
     :goto_0
     return v0
 
@@ -3026,7 +3056,7 @@
     .locals 1
 
     .prologue
-    .line 1854
+    .line 1831
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mBypassTouch:Z
 
     return v0
@@ -3036,7 +3066,7 @@
     .locals 1
 
     .prologue
-    .line 908
+    .line 900
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mCenterPivot:Z
 
     return v0
@@ -3046,15 +3076,15 @@
     .locals 1
 
     .prologue
-    .line 1897
+    .line 1871
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 1898
+    .line 1872
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->refreshClipRect()V
 
-    .line 1900
+    .line 1874
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
@@ -3065,7 +3095,7 @@
     .locals 5
 
     .prologue
-    .line 1904
+    .line 1878
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getClipRect()Landroid/graphics/Rect;
@@ -3109,18 +3139,18 @@
     .locals 5
 
     .prologue
-    .line 1374
+    .line 1362
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContentAreaLeft()F
 
     move-result v0
 
-    .line 1375
+    .line 1363
     .local v0, left:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContentAreaTop()F
 
     move-result v1
 
-    .line 1376
+    .line 1364
     .local v1, top:F
     new-instance v2, Landroid/graphics/RectF;
 
@@ -3145,7 +3175,7 @@
     .locals 2
 
     .prologue
-    .line 1394
+    .line 1382
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
@@ -3173,7 +3203,7 @@
     .locals 2
 
     .prologue
-    .line 1366
+    .line 1354
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
     move-result v0
@@ -3193,7 +3223,7 @@
     .locals 2
 
     .prologue
-    .line 1370
+    .line 1358
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
     move-result v0
@@ -3213,7 +3243,7 @@
     .locals 2
 
     .prologue
-    .line 1385
+    .line 1373
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
     move-result v0
@@ -3241,7 +3271,7 @@
     .locals 1
 
     .prologue
-    .line 1177
+    .line 1165
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     return-object v0
@@ -3251,7 +3281,7 @@
     .locals 8
 
     .prologue
-    .line 1407
+    .line 1395
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTranslateX()F
 
     move-result v6
@@ -3262,7 +3292,7 @@
 
     add-float v4, v6, v7
 
-    .line 1408
+    .line 1396
     .local v4, offsetX:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTranslateY()F
 
@@ -3274,7 +3304,7 @@
 
     add-float v5, v6, v7
 
-    .line 1409
+    .line 1397
     .local v5, offsetY:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
@@ -3282,7 +3312,7 @@
 
     add-float v1, v6, v4
 
-    .line 1410
+    .line 1398
     .local v1, currentLeft:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
@@ -3290,7 +3320,7 @@
 
     add-float v3, v6, v5
 
-    .line 1411
+    .line 1399
     .local v3, currentTop:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
@@ -3298,7 +3328,7 @@
 
     add-float v2, v1, v6
 
-    .line 1412
+    .line 1400
     .local v2, currentRight:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
@@ -3306,7 +3336,7 @@
 
     add-float v0, v3, v6
 
-    .line 1414
+    .line 1402
     .local v0, currentBottom:F
     new-instance v6, Landroid/graphics/RectF;
 
@@ -3319,7 +3349,7 @@
     .locals 2
 
     .prologue
-    .line 1362
+    .line 1350
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getBottom()F
 
     move-result v0
@@ -3343,12 +3373,12 @@
     .locals 7
 
     .prologue
-    .line 1418
+    .line 1406
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getCurrentArea()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 1419
+    .line 1407
     .local v0, current:Landroid/graphics/RectF;
     new-instance v1, Landroid/graphics/RectF;
 
@@ -3401,7 +3431,7 @@
     .locals 2
 
     .prologue
-    .line 1335
+    .line 1323
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
     move-result v0
@@ -3425,7 +3455,7 @@
     .locals 2
 
     .prologue
-    .line 1344
+    .line 1332
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getRight()F
 
     move-result v0
@@ -3449,7 +3479,7 @@
     .locals 2
 
     .prologue
-    .line 1353
+    .line 1341
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
     move-result v0
@@ -3473,7 +3503,7 @@
     .locals 1
 
     .prologue
-    .line 816
+    .line 812
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
     return v0
@@ -3483,15 +3513,15 @@
     .locals 2
 
     .prologue
-    .line 1323
+    .line 1311
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
     if-nez v0, :cond_0
 
-    .line 1324
+    .line 1312
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->initSize()V
 
-    .line 1326
+    .line 1314
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -3510,7 +3540,7 @@
     .locals 1
 
     .prologue
-    .line 1088
+    .line 1080
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewId:I
 
     return v0
@@ -3520,16 +3550,16 @@
     .locals 2
 
     .prologue
-    .line 2889
+    .line 2862
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mInternalFocus:Z
 
-    .line 2890
+    .line 2863
     .local v0, result:Z
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v1, :cond_0
 
-    .line 2891
+    .line 2864
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->getInternalFocus()Z
@@ -3538,7 +3568,7 @@
 
     or-int/2addr v0, v1
 
-    .line 2893
+    .line 2866
     :cond_0
     return v0
 .end method
@@ -3547,24 +3577,24 @@
     .locals 1
 
     .prologue
-    .line 2897
+    .line 2870
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mInternalFocus:Z
 
     if-eqz v0, :cond_0
 
-    .line 2902
+    .line 2875
     .end local p0
     :goto_0
     return-object p0
 
-    .line 2899
+    .line 2872
     .restart local p0
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 2900
+    .line 2873
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->getInternalFocusParent()Lcom/sec/android/glview/TwGLView;
@@ -3573,7 +3603,7 @@
 
     goto :goto_0
 
-    .line 2902
+    .line 2875
     :cond_1
     const/4 p0, 0x0
 
@@ -3584,7 +3614,7 @@
     .locals 1
 
     .prologue
-    .line 1212
+    .line 1200
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -3596,7 +3626,7 @@
     .locals 1
 
     .prologue
-    .line 1221
+    .line 1209
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -3608,17 +3638,17 @@
     .locals 2
 
     .prologue
-    .line 1234
+    .line 1222
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
     if-eqz v0, :cond_1
 
-    .line 1235
+    .line 1223
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1236
+    .line 1224
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -3633,7 +3663,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
-    .line 1237
+    .line 1225
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -3648,20 +3678,20 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTop:F
 
-    .line 1242
+    .line 1230
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
-    .line 1243
+    .line 1231
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
-    .line 1245
+    .line 1233
     :goto_1
     return v0
 
-    .line 1239
+    .line 1227
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -3669,7 +3699,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
-    .line 1240
+    .line 1228
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -3678,7 +3708,7 @@
 
     goto :goto_0
 
-    .line 1245
+    .line 1233
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
@@ -3696,14 +3726,14 @@
 
     const/high16 v4, 0x4000
 
-    .line 1014
+    .line 1006
     const/4 v2, 0x3
 
     if-gt p1, v2, :cond_0
 
     if-gez p1, :cond_1
 
-    .line 1015
+    .line 1007
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -3711,13 +3741,13 @@
 
     throw v2
 
-    .line 1017
+    .line 1009
     :cond_1
     iget-boolean v2, p0, Lcom/sec/android/glview/TwGLView;->mCenterPivot:Z
 
     if-eqz v2, :cond_3
 
-    .line 1018
+    .line 1010
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
     move-result v2
@@ -3730,7 +3760,7 @@
 
     div-float v0, v2, v4
 
-    .line 1019
+    .line 1011
     .local v0, centerX:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
@@ -3744,11 +3774,11 @@
 
     div-float v1, v2, v4
 
-    .line 1021
+    .line 1013
     .local v1, centerY:F
     packed-switch p1, :pswitch_data_0
 
-    .line 1049
+    .line 1041
     .end local v0           #centerX:F
     .end local v1           #centerY:F
     :cond_2
@@ -3757,7 +3787,7 @@
 
     return-object v2
 
-    .line 1023
+    .line 1015
     .restart local v0       #centerX:F
     .restart local v1       #centerY:F
     :pswitch_0
@@ -3769,7 +3799,7 @@
 
     aput v3, v2, v5
 
-    .line 1024
+    .line 1016
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
@@ -3780,7 +3810,7 @@
 
     goto :goto_0
 
-    .line 1027
+    .line 1019
     :pswitch_1
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
@@ -3794,7 +3824,7 @@
 
     aput v3, v2, v5
 
-    .line 1028
+    .line 1020
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
@@ -3809,7 +3839,7 @@
 
     goto :goto_0
 
-    .line 1031
+    .line 1023
     :pswitch_2
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
@@ -3825,7 +3855,7 @@
 
     aput v3, v2, v5
 
-    .line 1032
+    .line 1024
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
@@ -3842,7 +3872,7 @@
 
     goto :goto_0
 
-    .line 1035
+    .line 1027
     :pswitch_3
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
@@ -3856,7 +3886,7 @@
 
     aput v3, v2, v5
 
-    .line 1036
+    .line 1028
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
@@ -3871,7 +3901,7 @@
 
     goto :goto_0
 
-    .line 1043
+    .line 1035
     .end local v0           #centerX:F
     .end local v1           #centerY:F
     :cond_3
@@ -3879,7 +3909,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1044
+    .line 1036
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
@@ -3890,7 +3920,7 @@
 
     aput v3, v2, v5
 
-    .line 1045
+    .line 1037
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
@@ -3903,7 +3933,7 @@
 
     goto :goto_0
 
-    .line 1021
+    .line 1013
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3913,22 +3943,12 @@
     .end packed-switch
 .end method
 
-.method public getLoaded()Z
-    .locals 1
-
-    .prologue
-    .line 824
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
-
-    return v0
-.end method
-
 .method public getLoaded(Ljavax/microedition/khronos/opengles/GL11;)Z
     .locals 1
     .parameter "gl"
 
     .prologue
-    .line 1948
+    .line 1922
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
     return v0
@@ -3938,7 +3958,7 @@
     .locals 1
 
     .prologue
-    .line 1888
+    .line 1862
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
 
     return-object v0
@@ -3948,12 +3968,12 @@
     .locals 2
 
     .prologue
-    .line 1480
+    .line 1464
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1481
+    .line 1465
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -3970,7 +3990,7 @@
 
     add-float/2addr v0, v1
 
-    .line 1483
+    .line 1467
     :goto_0
     return v0
 
@@ -3990,12 +4010,12 @@
     .locals 2
 
     .prologue
-    .line 1487
+    .line 1471
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1488
+    .line 1472
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -4012,7 +4032,7 @@
 
     add-float/2addr v0, v1
 
-    .line 1490
+    .line 1474
     :goto_0
     return v0
 
@@ -4032,7 +4052,7 @@
     .locals 1
 
     .prologue
-    .line 1120
+    .line 1108
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
     return v0
@@ -4042,7 +4062,7 @@
     .locals 1
 
     .prologue
-    .line 1108
+    .line 1096
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
     return v0
@@ -4052,7 +4072,7 @@
     .locals 1
 
     .prologue
-    .line 1112
+    .line 1100
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
     return v0
@@ -4062,7 +4082,7 @@
     .locals 1
 
     .prologue
-    .line 1116
+    .line 1104
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
     return v0
@@ -4072,7 +4092,7 @@
     .locals 1
 
     .prologue
-    .line 641
+    .line 637
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
@@ -4082,7 +4102,7 @@
     .locals 1
 
     .prologue
-    .line 782
+    .line 778
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
@@ -4092,7 +4112,7 @@
     .locals 1
 
     .prologue
-    .line 770
+    .line 766
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
@@ -4102,12 +4122,12 @@
     .locals 2
 
     .prologue
-    .line 1186
+    .line 1174
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1187
+    .line 1175
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
@@ -4120,7 +4140,7 @@
 
     rem-int/lit8 v0, v0, 0x4
 
-    .line 1190
+    .line 1178
     :goto_0
     return v0
 
@@ -4134,7 +4154,7 @@
     .locals 1
 
     .prologue
-    .line 1879
+    .line 1853
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
     return-object v0
@@ -4144,7 +4164,7 @@
     .locals 1
 
     .prologue
-    .line 974
+    .line 966
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mParentHAlign:I
 
     return v0
@@ -4154,7 +4174,7 @@
     .locals 1
 
     .prologue
-    .line 983
+    .line 975
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mParentVAlign:I
 
     return v0
@@ -4164,21 +4184,21 @@
     .locals 2
 
     .prologue
-    .line 1281
+    .line 1269
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
     if-nez v0, :cond_0
 
-    .line 1282
+    .line 1270
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->initSize()V
 
-    .line 1284
+    .line 1272
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1285
+    .line 1273
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->right:F
@@ -4191,7 +4211,7 @@
 
     add-float/2addr v0, v1
 
-    .line 1287
+    .line 1275
     :goto_0
     return v0
 
@@ -4207,7 +4227,7 @@
     .locals 1
 
     .prologue
-    .line 945
+    .line 937
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mRotatable:Z
 
     return v0
@@ -4217,7 +4237,7 @@
     .locals 1
 
     .prologue
-    .line 927
+    .line 919
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimation:Z
 
     return v0
@@ -4227,7 +4247,7 @@
     .locals 1
 
     .prologue
-    .line 3035
+    .line 2985
     const/4 v0, 0x0
 
     return v0
@@ -4237,7 +4257,7 @@
     .locals 1
 
     .prologue
-    .line 1203
+    .line 1191
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeGiven:Z
 
     return v0
@@ -4247,27 +4267,17 @@
     .locals 1
 
     .prologue
-    .line 1199
+    .line 1187
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
     return v0
-.end method
-
-.method public final getSubTitle()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 1104
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mSubTitle:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public final getTag()I
     .locals 1
 
     .prologue
-    .line 1084
+    .line 1076
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewTag:I
 
     return v0
@@ -4277,7 +4287,7 @@
     .locals 1
 
     .prologue
-    .line 1100
+    .line 1092
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTitle:Ljava/lang/String;
 
     return-object v0
@@ -4287,7 +4297,7 @@
     .locals 1
 
     .prologue
-    .line 3153
+    .line 3113
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mToggleButton:Z
 
     return v0
@@ -4297,17 +4307,17 @@
     .locals 2
 
     .prologue
-    .line 1260
+    .line 1248
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
     if-eqz v0, :cond_1
 
-    .line 1261
+    .line 1249
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1262
+    .line 1250
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -4322,7 +4332,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
-    .line 1263
+    .line 1251
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -4337,20 +4347,20 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTop:F
 
-    .line 1268
+    .line 1256
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
-    .line 1269
+    .line 1257
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTop:F
 
-    .line 1271
+    .line 1259
     :goto_1
     return v0
 
-    .line 1265
+    .line 1253
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -4358,7 +4368,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mLeft:F
 
-    .line 1266
+    .line 1254
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -4367,7 +4377,7 @@
 
     goto :goto_0
 
-    .line 1271
+    .line 1259
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTop:F
 
@@ -4378,12 +4388,12 @@
     .locals 2
 
     .prologue
-    .line 2272
+    .line 2242
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 2273
+    .line 2243
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
@@ -4394,7 +4404,7 @@
 
     add-float/2addr v0, v1
 
-    .line 2275
+    .line 2245
     :goto_0
     return v0
 
@@ -4408,12 +4418,12 @@
     .locals 2
 
     .prologue
-    .line 2284
+    .line 2254
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 2285
+    .line 2255
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
@@ -4424,7 +4434,7 @@
 
     add-float/2addr v0, v1
 
-    .line 2287
+    .line 2257
     :goto_0
     return v0
 
@@ -4438,7 +4448,7 @@
     .locals 1
 
     .prologue
-    .line 1663
+    .line 1640
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
     return v0
@@ -4448,15 +4458,15 @@
     .locals 2
 
     .prologue
-    .line 1311
+    .line 1299
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
     if-nez v0, :cond_0
 
-    .line 1312
+    .line 1300
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->initSize()V
 
-    .line 1314
+    .line 1302
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -4478,41 +4488,17 @@
     .locals 1
 
     .prologue
-    .line 1755
+    .line 1732
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
     return v0
-.end method
-
-.method public final isClickable()Z
-    .locals 2
-
-    .prologue
-    .line 2916
-    iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
-
-    and-int/lit16 v0, v0, 0x4000
-
-    const/16 v1, 0x4000
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public isClipped()Z
     .locals 1
 
     .prologue
-    .line 3085
+    .line 3035
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mIsClipped:Z
 
     return v0
@@ -4522,7 +4508,7 @@
     .locals 1
 
     .prologue
-    .line 2725
+    .line 2698
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
     return v0
@@ -4534,7 +4520,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2912
+    .line 2885
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -4564,7 +4550,7 @@
     .locals 1
 
     .prologue
-    .line 2907
+    .line 2880
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
 
     return v0
@@ -4574,7 +4560,7 @@
     .locals 1
 
     .prologue
-    .line 3081
+    .line 3031
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
     return v0
@@ -4584,12 +4570,12 @@
     .locals 1
 
     .prologue
-    .line 1667
+    .line 1644
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1668
+    .line 1645
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->isVisible()I
@@ -4600,17 +4586,17 @@
 
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
-    .line 1670
+    .line 1647
     :goto_0
     return v0
 
-    .line 1668
+    .line 1645
     :cond_0
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 1670
+    .line 1647
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
@@ -4623,12 +4609,12 @@
     .parameter "event"
 
     .prologue
-    .line 2690
+    .line 2663
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
     if-eqz v0, :cond_0
 
-    .line 2691
+    .line 2664
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
     invoke-interface {v0, p0, p2}, Lcom/sec/android/glview/TwGLView$OnKeyListener;->onKeyDown(Lcom/sec/android/glview/TwGLView;Landroid/view/KeyEvent;)Z
@@ -4637,10 +4623,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2692
+    .line 2665
     const/4 v0, 0x1
 
-    .line 2694
+    .line 2667
     :goto_0
     return v0
 
@@ -4658,12 +4644,12 @@
     .parameter "event"
 
     .prologue
-    .line 2698
+    .line 2671
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
     if-eqz v0, :cond_0
 
-    .line 2699
+    .line 2672
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
     invoke-interface {v0, p0, p2}, Lcom/sec/android/glview/TwGLView$OnKeyListener;->onKeyUp(Lcom/sec/android/glview/TwGLView;Landroid/view/KeyEvent;)Z
@@ -4672,10 +4658,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2700
+    .line 2673
     const/4 v0, 0x1
 
-    .line 2702
+    .line 2675
     :goto_0
     return v0
 
@@ -4696,7 +4682,7 @@
 
     const/4 v0, 0x1
 
-    .line 1915
+    .line 1889
     monitor-enter p0
 
     :try_start_0
@@ -4704,26 +4690,26 @@
 
     if-eqz v2, :cond_2
 
-    .line 1916
+    .line 1890
     invoke-virtual {p0, p1}, Lcom/sec/android/glview/TwGLView;->getLoaded(Ljavax/microedition/khronos/opengles/GL11;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1917
+    .line 1891
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
-    .line 1918
+    .line 1892
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mLoading:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1937
+    .line 1911
     :cond_0
     :goto_0
     monitor-exit p0
@@ -4733,50 +4719,50 @@
     :cond_1
     move v0, v1
 
-    .line 1921
+    .line 1895
     goto :goto_0
 
-    .line 1924
+    .line 1898
     :cond_2
     :try_start_1
     iget-boolean v2, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
     if-nez v2, :cond_0
 
-    .line 1927
+    .line 1901
     invoke-virtual {p0, p1}, Lcom/sec/android/glview/TwGLView;->onLoad(Ljavax/microedition/khronos/opengles/GL11;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1928
+    .line 1902
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
-    .line 1929
+    .line 1903
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoading:Z
 
-    .line 1931
+    .line 1905
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_3
 
-    .line 1932
+    .line 1906
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/glview/TwGLView;->load(Ljavax/microedition/khronos/opengles/GL11;)Z
 
-    .line 1937
+    .line 1911
     :cond_3
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
     goto :goto_0
 
-    .line 1934
+    .line 1908
     :cond_4
     const/4 v0, 0x1
 
@@ -4786,10 +4772,10 @@
 
     move v0, v1
 
-    .line 1935
+    .line 1909
     goto :goto_0
 
-    .line 1915
+    .line 1889
     :catchall_0
     move-exception v0
 
@@ -4813,27 +4799,27 @@
 
     const/4 v1, 0x0
 
-    .line 2458
+    .line 2428
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glCoordinate:[F
 
     aput p2, v0, v1
 
-    .line 2459
+    .line 2429
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glCoordinate:[F
 
     aput p3, v0, v6
 
-    .line 2460
+    .line 2430
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glCoordinate:[F
 
     aput v2, v0, v3
 
-    .line 2461
+    .line 2431
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
     aput v2, v0, v3
 
-    .line 2462
+    .line 2432
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mMatrix:[F
@@ -4846,21 +4832,21 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMV([FI[FI[FI)V
 
-    .line 2464
+    .line 2434
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
     aget v0, v0, v1
 
     aput v0, p1, v1
 
-    .line 2465
+    .line 2435
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->glTransformedCoordinate:[F
 
     aget v0, v0, v6
 
     aput v0, p1, v6
 
-    .line 2467
+    .line 2437
     return-void
 .end method
 
@@ -4871,7 +4857,7 @@
     .parameter "screenY"
 
     .prologue
-    .line 2393
+    .line 2363
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getOrientation()I
 
     move-result v2
@@ -4882,43 +4868,43 @@
 
     rem-int/lit8 v10, v2, 0x4
 
-    .line 2394
+    .line 2364
     .local v10, orientation:I
     if-nez v10, :cond_0
 
-    .line 2395
+    .line 2365
     const/4 v2, 0x0
 
     aput p2, p1, v2
 
-    .line 2396
+    .line 2366
     const/4 v2, 0x1
 
     aput p3, p1, v2
 
-    .line 2436
+    .line 2406
     :goto_0
     return-void
 
-    .line 2400
+    .line 2370
     :cond_0
     const/16 v2, 0x10
 
     new-array v0, v2, [F
 
-    .line 2404
+    .line 2374
     .local v0, coordinateTransformMatrix:[F
     invoke-virtual {p0, v10}, Lcom/sec/android/glview/TwGLView;->getLeftTop(I)[F
 
     move-result-object v9
 
-    .line 2405
+    .line 2375
     .local v9, leftTop:[F
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v2, :cond_1
 
-    .line 2406
+    .line 2376
     const/4 v2, 0x0
 
     aget v3, v9, v2
@@ -4933,7 +4919,7 @@
 
     aput v3, v9, v2
 
-    .line 2407
+    .line 2377
     const/4 v2, 0x1
 
     aget v3, v9, v2
@@ -4948,13 +4934,13 @@
 
     aput v3, v9, v2
 
-    .line 2410
+    .line 2380
     :cond_1
     const/4 v2, 0x4
 
     new-array v7, v2, [F
 
-    .line 2411
+    .line 2381
     .local v7, glLeftTopCoordinate:[F
     const/4 v2, 0x3
 
@@ -4962,7 +4948,7 @@
 
     aput v3, v7, v2
 
-    .line 2412
+    .line 2382
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
@@ -4975,12 +4961,12 @@
 
     invoke-static {v2, v7, v3, v4}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2414
+    .line 2384
     const/4 v2, 0x4
 
     new-array v8, v2, [F
 
-    .line 2415
+    .line 2385
     .local v8, glRotatedLeftTopCoordinate:[F
     const/4 v2, 0x3
 
@@ -4988,7 +4974,7 @@
 
     aput v3, v8, v2
 
-    .line 2416
+    .line 2386
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v3, 0x0
@@ -5001,12 +4987,12 @@
 
     invoke-static {v2, v8, v3, v4}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2418
+    .line 2388
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2419
+    .line 2389
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -5021,7 +5007,7 @@
 
     invoke-static {v0, v2, v3, v4, v6}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2420
+    .line 2390
     const/4 v1, 0x0
 
     mul-int/lit8 v2, v10, 0x5a
@@ -5036,7 +5022,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 2421
+    .line 2391
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -5055,12 +5041,12 @@
 
     invoke-static {v0, v2, v3, v4, v6}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2426
+    .line 2396
     const/4 v2, 0x4
 
     new-array v5, v2, [F
 
-    .line 2427
+    .line 2397
     .local v5, glCoordinate:[F
     const/4 v2, 0x3
 
@@ -5068,17 +5054,17 @@
 
     aput v3, v5, v2
 
-    .line 2428
+    .line 2398
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-static {v2, v5, p2, p3}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2430
+    .line 2400
     const/4 v2, 0x4
 
     new-array v1, v2, [F
 
-    .line 2431
+    .line 2401
     .local v1, glTransformedCoordinate:[F
     const/4 v2, 0x3
 
@@ -5086,7 +5072,7 @@
 
     aput v3, v1, v2
 
-    .line 2432
+    .line 2402
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -5097,7 +5083,7 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/Matrix;->multiplyMV([FI[FI[FI)V
 
-    .line 2434
+    .line 2404
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v3, 0x0
@@ -5119,7 +5105,7 @@
     .parameter "y"
 
     .prologue
-    .line 1523
+    .line 1507
     monitor-enter p0
 
     :try_start_0
@@ -5127,13 +5113,13 @@
 
     move-result v1
 
-    .line 1524
+    .line 1508
     .local v1, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1526
+    .line 1510
     .local v0, height:F
     iget v2, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
@@ -5141,14 +5127,14 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 1527
+    .line 1511
     iget v2, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
     add-float/2addr v2, p2
 
     iput v2, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 1529
+    .line 1513
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v3, v2, Landroid/graphics/RectF;->left:F
@@ -5157,7 +5143,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 1530
+    .line 1514
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v3, v2, Landroid/graphics/RectF;->top:F
@@ -5166,7 +5152,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
-    .line 1531
+    .line 1515
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5177,7 +5163,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
-    .line 1532
+    .line 1516
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5188,17 +5174,17 @@
 
     iput v3, v2, Landroid/graphics/RectF;->bottom:F
 
-    .line 1534
+    .line 1518
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1535
+    .line 1519
     monitor-exit p0
 
     return-void
 
-    .line 1523
+    .line 1507
     .end local v0           #height:F
     .end local v1           #width:F
     :catchall_0
@@ -5215,7 +5201,7 @@
     .parameter "y"
 
     .prologue
-    .line 1538
+    .line 1522
     monitor-enter p0
 
     :try_start_0
@@ -5223,25 +5209,25 @@
 
     move-result v3
 
-    .line 1539
+    .line 1523
     .local v3, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1540
+    .line 1524
     .local v0, height:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getMoveLayoutX()F
 
     move-result v1
 
-    .line 1541
+    .line 1525
     .local v1, moveX:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getMoveLayoutY()F
 
     move-result v2
 
-    .line 1543
+    .line 1527
     .local v2, moveY:F
     iget v4, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
@@ -5249,14 +5235,14 @@
 
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 1544
+    .line 1528
     iget v4, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
     add-float/2addr v4, p2
 
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 1546
+    .line 1530
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v5, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
@@ -5265,7 +5251,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->left:F
 
-    .line 1547
+    .line 1531
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v5, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
@@ -5274,7 +5260,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->top:F
 
-    .line 1548
+    .line 1532
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5285,7 +5271,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->right:F
 
-    .line 1549
+    .line 1533
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5296,17 +5282,17 @@
 
     iput v5, v4, Landroid/graphics/RectF;->bottom:F
 
-    .line 1551
+    .line 1535
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1552
+    .line 1536
     monitor-exit p0
 
     return-void
 
-    .line 1538
+    .line 1522
     .end local v0           #height:F
     .end local v1           #moveX:F
     .end local v2           #moveY:F
@@ -5326,7 +5312,7 @@
     .parameter "update"
 
     .prologue
-    .line 1555
+    .line 1539
     monitor-enter p0
 
     :try_start_0
@@ -5334,25 +5320,25 @@
 
     move-result v3
 
-    .line 1556
+    .line 1540
     .local v3, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1557
+    .line 1541
     .local v0, height:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getMoveLayoutX()F
 
     move-result v1
 
-    .line 1558
+    .line 1542
     .local v1, moveX:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getMoveLayoutY()F
 
     move-result v2
 
-    .line 1560
+    .line 1544
     .local v2, moveY:F
     iget v4, p0, Lcom/sec/android/glview/TwGLView;->mOriginalLeft:F
 
@@ -5360,14 +5346,14 @@
 
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
 
-    .line 1561
+    .line 1545
     iget v4, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
     add-float/2addr v4, p2
 
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
-    .line 1563
+    .line 1547
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v5, p0, Lcom/sec/android/glview/TwGLView;->mBaseLeft:F
@@ -5376,7 +5362,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->left:F
 
-    .line 1564
+    .line 1548
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v5, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
@@ -5385,7 +5371,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->top:F
 
-    .line 1565
+    .line 1549
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5396,7 +5382,7 @@
 
     iput v5, v4, Landroid/graphics/RectF;->right:F
 
-    .line 1566
+    .line 1550
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5407,21 +5393,21 @@
 
     iput v5, v4, Landroid/graphics/RectF;->bottom:F
 
-    .line 1568
+    .line 1552
     if-eqz p3, :cond_0
 
-    .line 1569
+    .line 1553
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1571
+    .line 1555
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 1555
+    .line 1539
     .end local v0           #height:F
     .end local v1           #moveX:F
     .end local v2           #moveY:F
@@ -5440,7 +5426,7 @@
     .parameter "y"
 
     .prologue
-    .line 1502
+    .line 1486
     monitor-enter p0
 
     :try_start_0
@@ -5452,7 +5438,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 1503
+    .line 1487
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->top:F
@@ -5461,7 +5447,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 1504
+    .line 1488
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->right:F
@@ -5470,7 +5456,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 1505
+    .line 1489
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->bottom:F
@@ -5479,17 +5465,17 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 1507
+    .line 1491
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1508
+    .line 1492
     monitor-exit p0
 
     return-void
 
-    .line 1502
+    .line 1486
     :catchall_0
     move-exception v0
 
@@ -5504,7 +5490,7 @@
     .parameter "y"
 
     .prologue
-    .line 1511
+    .line 1495
     monitor-enter p0
 
     :try_start_0
@@ -5512,13 +5498,13 @@
 
     move-result v1
 
-    .line 1512
+    .line 1496
     .local v1, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1514
+    .line 1498
     .local v0, height:F
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -5528,7 +5514,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 1515
+    .line 1499
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v3, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
@@ -5537,7 +5523,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
-    .line 1516
+    .line 1500
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5548,7 +5534,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
-    .line 1517
+    .line 1501
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -5559,17 +5545,17 @@
 
     iput v3, v2, Landroid/graphics/RectF;->bottom:F
 
-    .line 1519
+    .line 1503
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1520
+    .line 1504
     monitor-exit p0
 
     return-void
 
-    .line 1511
+    .line 1495
     .end local v0           #height:F
     .end local v1           #width:F
     :catchall_0
@@ -5584,12 +5570,12 @@
     .locals 1
 
     .prologue
-    .line 3046
+    .line 2996
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAlphaChanged:Z
 
-    .line 3047
+    .line 2997
     return-void
 .end method
 
@@ -5605,18 +5591,18 @@
 
     const/4 v7, 0x1
 
-    .line 2991
+    .line 2956
     if-ne p1, v7, :cond_2
 
-    .line 2992
+    .line 2957
     iput-boolean v7, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
 
-    .line 2993
+    .line 2958
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-nez v0, :cond_0
 
-    .line 2999
+    .line 2964
     new-instance v0, Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -5687,158 +5673,40 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
-    .line 3001
+    .line 2966
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0, v7}, Lcom/sec/android/glview/TwGLNinePatch;->setBypassTouch(Z)V
 
-    .line 3002
+    .line 2967
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLNinePatch;->setClipping(Z)V
 
-    .line 3003
+    .line 2968
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLNinePatch;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 3008
+    .line 2973
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     if-eqz v0, :cond_1
 
-    .line 3009
+    .line 2974
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     invoke-interface {v0, p0, p1}, Lcom/sec/android/glview/TwGLView$OnFocusListener;->onFocusChanged(Lcom/sec/android/glview/TwGLView;I)Z
 
-    .line 3011
+    .line 2976
     :cond_1
     return-void
 
-    .line 3006
+    .line 2971
     :cond_2
     iput-boolean v8, p0, Lcom/sec/android/glview/TwGLView;->mFocused:Z
-
-    goto :goto_0
-.end method
-
-.method public onHoverStatusChanged(I)V
-    .locals 9
-    .parameter "hoverStatus"
-
-    .prologue
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    .line 3014
-    if-nez p1, :cond_1
-
-    .line 3015
-    iput-boolean v8, p0, Lcom/sec/android/glview/TwGLView;->mHoverFocused:Z
-
-    .line 3016
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-nez v0, :cond_0
-
-    .line 3017
-    new-instance v0, Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v3, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v3, v3
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v5, v5, Landroid/graphics/Rect;->right:I
-
-    int-to-float v5, v5
-
-    sub-float/2addr v4, v5
-
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v5, v5, Landroid/graphics/Rect;->left:I
-
-    int-to-float v5, v5
-
-    sub-float/2addr v4, v5
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
-
-    move-result v5
-
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v6, v6
-
-    sub-float/2addr v5, v6
-
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->top:I
-
-    int-to-float v6, v6
-
-    sub-float/2addr v5, v6
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/sec/android/glview/TwGLContext;->getHoverResourceId()I
-
-    move-result v6
-
-    invoke-direct/range {v0 .. v6}, Lcom/sec/android/glview/TwGLNinePatch;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFI)V
-
-    iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    .line 3019
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {v0, v8}, Lcom/sec/android/glview/TwGLNinePatch;->setBypassTouch(Z)V
-
-    .line 3020
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {v0, v7}, Lcom/sec/android/glview/TwGLNinePatch;->setClipping(Z)V
-
-    .line 3021
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
-
-    .line 3026
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 3024
-    :cond_1
-    iput-boolean v7, p0, Lcom/sec/android/glview/TwGLView;->mHoverFocused:Z
 
     goto :goto_0
 .end method
@@ -5849,7 +5717,7 @@
     .parameter "event"
 
     .prologue
-    .line 2717
+    .line 2690
     const/4 v0, 0x0
 
     return v0
@@ -5861,7 +5729,7 @@
     .parameter "event"
 
     .prologue
-    .line 2721
+    .line 2694
     const/4 v0, 0x0
 
     return v0
@@ -5871,12 +5739,12 @@
     .locals 1
 
     .prologue
-    .line 3042
+    .line 2992
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mPositionChanged:Z
 
-    .line 3043
+    .line 2993
     return-void
 .end method
 
@@ -5896,33 +5764,33 @@
 
     const/high16 v9, 0x4000
 
-    .line 2743
+    .line 2716
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mRotatable:Z
 
     if-eqz v1, :cond_0
 
-    .line 2744
+    .line 2717
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getOrientation()I
 
     move-result v1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
-    .line 2745
+    .line 2718
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
     if-ne v1, p1, :cond_1
 
-    .line 2779
+    .line 2752
     :cond_0
     :goto_0
     return-void
 
-    .line 2749
+    .line 2722
     :cond_1
     move v8, p1
 
-    .line 2750
+    .line 2723
     .local v8, tempOrientation:I
     if-nez v8, :cond_5
 
@@ -5930,10 +5798,10 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 2751
+    .line 2724
     const/4 v8, 0x4
 
-    .line 2756
+    .line 2729
     :cond_2
     :goto_1
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
@@ -5942,11 +5810,11 @@
 
     mul-int/lit8 v7, v1, 0x5a
 
-    .line 2757
+    .line 2730
     .local v7, degree:I
     invoke-virtual {p0, p1}, Lcom/sec/android/glview/TwGLView;->setOrientation(I)V
 
-    .line 2759
+    .line 2732
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
 
     if-nez v1, :cond_0
@@ -5957,12 +5825,12 @@
 
     if-nez v1, :cond_0
 
-    .line 2760
+    .line 2733
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimation:Z
 
     if-nez v1, :cond_6
 
-    .line 2761
+    .line 2734
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     if-eqz v1, :cond_3
@@ -5971,7 +5839,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 2762
+    .line 2735
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTransformation:Landroid/view/animation/Transformation;
 
     invoke-virtual {v1}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
@@ -5980,16 +5848,16 @@
 
     invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
 
-    .line 2763
+    .line 2736
     :cond_3
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLView;->mHideAfterAnimation:Z
 
     if-eqz v1, :cond_4
 
-    .line 2764
+    .line 2737
     invoke-virtual {p0, v4}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
-    .line 2766
+    .line 2739
     :cond_4
     invoke-static {}, Lcom/sec/android/glview/TwGLUtil;->getAlphaOnAnimation()Landroid/view/animation/Animation;
 
@@ -5997,12 +5865,12 @@
 
     invoke-virtual {p0, v1}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2767
+    .line 2740
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
 
     goto :goto_0
 
-    .line 2752
+    .line 2725
     .end local v7           #degree:I
     :cond_5
     if-ne v8, v2, :cond_2
@@ -6011,12 +5879,12 @@
 
     if-nez v1, :cond_2
 
-    .line 2753
+    .line 2726
     iput v4, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
     goto :goto_1
 
-    .line 2769
+    .line 2742
     .restart local v7       #degree:I
     :cond_6
     new-instance v0, Landroid/view/animation/RotateAnimation;
@@ -6053,7 +5921,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 2770
+    .line 2743
     .local v0, anim:Landroid/view/animation/RotateAnimation;
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
@@ -6081,28 +5949,28 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/animation/RotateAnimation;->initialize(IIII)V
 
-    .line 2771
+    .line 2744
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationDuration:I
 
     int-to-long v1, v1
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
-    .line 2772
+    .line 2745
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
 
     if-eqz v1, :cond_7
 
-    .line 2773
+    .line 2746
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 2774
+    .line 2747
     :cond_7
     invoke-virtual {p0, v0}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 2775
+    .line 2748
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
 
     goto/16 :goto_0
@@ -6112,12 +5980,12 @@
     .locals 1
 
     .prologue
-    .line 3077
+    .line 3027
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
 
-    .line 3078
+    .line 3028
     return-void
 .end method
 
@@ -6129,7 +5997,7 @@
     .parameter "e"
 
     .prologue
-    .line 2713
+    .line 2686
     const/4 v0, 0x0
 
     return v0
@@ -6139,7 +6007,7 @@
     .locals 7
 
     .prologue
-    .line 2504
+    .line 2474
     monitor-enter p0
 
     :try_start_0
@@ -6149,13 +6017,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 2558
+    .line 2528
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2508
+    .line 2478
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
@@ -6170,7 +6038,7 @@
 
     add-int v1, v4, v5
 
-    .line 2509
+    .line 2479
     .local v1, left:I
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
@@ -6184,7 +6052,7 @@
 
     add-int v3, v4, v5
 
-    .line 2510
+    .line 2480
     .local v3, top:I
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getRight()F
 
@@ -6198,7 +6066,7 @@
 
     sub-int v2, v4, v5
 
-    .line 2511
+    .line 2481
     .local v2, right:I
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getBottom()F
 
@@ -6212,7 +6080,7 @@
 
     sub-int v0, v4, v5
 
-    .line 2513
+    .line 2483
     .local v0, bottom:I
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
@@ -6222,7 +6090,7 @@
 
     invoke-virtual {p0, v4, v5, v6}, Lcom/sec/android/glview/TwGLView;->mapPoint([FFF)V
 
-    .line 2514
+    .line 2484
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
     int-to-float v5, v1
@@ -6231,7 +6099,7 @@
 
     invoke-virtual {p0, v4, v5, v6}, Lcom/sec/android/glview/TwGLView;->mapPoint([FFF)V
 
-    .line 2515
+    .line 2485
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
     int-to-float v5, v2
@@ -6240,7 +6108,7 @@
 
     invoke-virtual {p0, v4, v5, v6}, Lcom/sec/android/glview/TwGLView;->mapPoint([FFF)V
 
-    .line 2516
+    .line 2486
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
     int-to-float v5, v2
@@ -6249,7 +6117,7 @@
 
     invoke-virtual {p0, v4, v5, v6}, Lcom/sec/android/glview/TwGLView;->mapPoint([FFF)V
 
-    .line 2518
+    .line 2488
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     const/4 v5, 0x0
@@ -6258,7 +6126,7 @@
 
     float-to-int v1, v4
 
-    .line 2519
+    .line 2489
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     const/4 v5, 0x1
@@ -6267,7 +6135,7 @@
 
     float-to-int v3, v4
 
-    .line 2520
+    .line 2490
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
     const/4 v5, 0x0
@@ -6276,7 +6144,7 @@
 
     float-to-int v2, v4
 
-    .line 2521
+    .line 2491
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
     const/4 v5, 0x1
@@ -6285,7 +6153,7 @@
 
     float-to-int v0, v4
 
-    .line 2523
+    .line 2493
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getOrientation()I
 
     move-result v4
@@ -6298,13 +6166,13 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 2547
+    .line 2517
     :goto_1
     if-gt v1, v2, :cond_1
 
     if-le v3, v0, :cond_2
 
-    .line 2548
+    .line 2518
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
@@ -6318,7 +6186,7 @@
 
     add-int v1, v4, v5
 
-    .line 2549
+    .line 2519
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
     move-result v4
@@ -6331,7 +6199,7 @@
 
     add-int v3, v4, v5
 
-    .line 2550
+    .line 2520
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getRight()F
 
     move-result v4
@@ -6344,7 +6212,7 @@
 
     sub-int v2, v4, v5
 
-    .line 2551
+    .line 2521
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getBottom()F
 
     move-result v4
@@ -6357,20 +6225,20 @@
 
     sub-int v0, v4, v5
 
-    .line 2554
+    .line 2524
     :cond_2
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     if-nez v4, :cond_3
 
-    .line 2555
+    .line 2525
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v4, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
-    .line 2557
+    .line 2527
     :cond_3
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
@@ -6380,7 +6248,7 @@
 
     goto/16 :goto_0
 
-    .line 2504
+    .line 2474
     .end local v0           #bottom:I
     .end local v1           #left:I
     .end local v2           #right:I
@@ -6392,7 +6260,7 @@
 
     throw v4
 
-    .line 2525
+    .line 2495
     .restart local v0       #bottom:I
     .restart local v1       #left:I
     .restart local v2       #right:I
@@ -6407,7 +6275,7 @@
 
     float-to-int v1, v4
 
-    .line 2526
+    .line 2496
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
     const/4 v5, 0x1
@@ -6416,7 +6284,7 @@
 
     float-to-int v3, v4
 
-    .line 2527
+    .line 2497
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
     const/4 v5, 0x0
@@ -6425,7 +6293,7 @@
 
     float-to-int v2, v4
 
-    .line 2528
+    .line 2498
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
     const/4 v5, 0x1
@@ -6434,10 +6302,10 @@
 
     float-to-int v0, v4
 
-    .line 2529
+    .line 2499
     goto :goto_1
 
-    .line 2531
+    .line 2501
     :pswitch_1
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
@@ -6447,7 +6315,7 @@
 
     float-to-int v1, v4
 
-    .line 2532
+    .line 2502
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftBottom:[F
 
     const/4 v5, 0x1
@@ -6456,7 +6324,7 @@
 
     float-to-int v3, v4
 
-    .line 2533
+    .line 2503
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
     const/4 v5, 0x0
@@ -6465,7 +6333,7 @@
 
     float-to-int v2, v4
 
-    .line 2534
+    .line 2504
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightTop:[F
 
     const/4 v5, 0x1
@@ -6474,10 +6342,10 @@
 
     float-to-int v0, v4
 
-    .line 2535
+    .line 2505
     goto :goto_1
 
-    .line 2537
+    .line 2507
     :pswitch_2
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
@@ -6487,7 +6355,7 @@
 
     float-to-int v1, v4
 
-    .line 2538
+    .line 2508
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mRightBottom:[F
 
     const/4 v5, 0x1
@@ -6496,7 +6364,7 @@
 
     float-to-int v3, v4
 
-    .line 2539
+    .line 2509
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     const/4 v5, 0x0
@@ -6505,7 +6373,7 @@
 
     float-to-int v2, v4
 
-    .line 2540
+    .line 2510
     iget-object v4, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     const/4 v5, 0x1
@@ -6516,10 +6384,10 @@
 
     float-to-int v0, v4
 
-    .line 2541
+    .line 2511
     goto/16 :goto_1
 
-    .line 2523
+    .line 2493
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -6533,7 +6401,7 @@
     .parameter "view"
 
     .prologue
-    .line 3074
+    .line 3024
     return-void
 .end method
 
@@ -6541,7 +6409,7 @@
     .locals 1
 
     .prologue
-    .line 2928
+    .line 2893
     const/16 v0, 0x82
 
     invoke-virtual {p0, v0}, Lcom/sec/android/glview/TwGLView;->requestFocus(I)Z
@@ -6556,7 +6424,7 @@
     .parameter "direction"
 
     .prologue
-    .line 2932
+    .line 2897
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/glview/TwGLView;->requestFocus(ILcom/sec/android/glview/TwGLView;)Z
@@ -6576,17 +6444,17 @@
 
     const/4 v3, -0x1
 
-    .line 2936
+    .line 2901
     if-nez p2, :cond_0
 
-    .line 2937
+    .line 2902
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-ne v1, v2, :cond_5
 
-    .line 2938
+    .line 2903
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6595,24 +6463,24 @@
 
     move v1, v2
 
-    .line 2987
+    .line 2952
     :goto_0
     return v1
 
-    .line 2942
+    .line 2907
     :cond_0
     const/4 v0, 0x0
 
-    .line 2945
+    .line 2910
     .local v0, nextViewToFocus:Lcom/sec/android/glview/TwGLView;
     sparse-switch p1, :sswitch_data_0
 
-    .line 2970
+    .line 2935
     :cond_1
     :goto_1
     if-nez v0, :cond_3
 
-    .line 2971
+    .line 2936
     invoke-virtual {p2}, Lcom/sec/android/glview/TwGLView;->getId()I
 
     move-result v1
@@ -6629,16 +6497,16 @@
 
     move v1, v2
 
-    .line 2972
+    .line 2937
     goto :goto_0
 
-    .line 2947
+    .line 2912
     :sswitch_0
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
     if-eq v1, v3, :cond_1
 
-    .line 2948
+    .line 2913
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6651,13 +6519,13 @@
 
     goto :goto_1
 
-    .line 2952
+    .line 2917
     :sswitch_1
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
     if-eq v1, v3, :cond_1
 
-    .line 2953
+    .line 2918
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6670,13 +6538,13 @@
 
     goto :goto_1
 
-    .line 2957
+    .line 2922
     :sswitch_2
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
     if-eq v1, v3, :cond_1
 
-    .line 2958
+    .line 2923
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6689,13 +6557,13 @@
 
     goto :goto_1
 
-    .line 2962
+    .line 2927
     :sswitch_3
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
     if-eq v1, v3, :cond_1
 
-    .line 2963
+    .line 2928
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6708,7 +6576,7 @@
 
     goto :goto_1
 
-    .line 2974
+    .line 2939
     :cond_2
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
@@ -6718,7 +6586,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 2975
+    .line 2940
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v3
@@ -6733,12 +6601,12 @@
 
     move-result-object v0
 
-    .line 2981
+    .line 2946
     :cond_3
     :goto_2
     if-eqz v0, :cond_5
 
-    .line 2982
+    .line 2947
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v1
@@ -6747,10 +6615,10 @@
 
     move v1, v2
 
-    .line 2983
+    .line 2948
     goto :goto_0
 
-    .line 2977
+    .line 2942
     :cond_4
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -6764,14 +6632,14 @@
 
     goto :goto_2
 
-    .line 2987
+    .line 2952
     .end local v0           #nextViewToFocus:Lcom/sec/android/glview/TwGLView;
     :cond_5
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2945
+    .line 2910
     :sswitch_data_0
     .sparse-switch
         0x11 -> :sswitch_0
@@ -6785,7 +6653,7 @@
     .locals 1
 
     .prologue
-    .line 3092
+    .line 3042
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -6793,55 +6661,44 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
-    .line 3093
+    .line 3043
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoading:Z
 
-    .line 3094
+    .line 3044
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 3095
+    .line 3045
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->reset()V
 
-    .line 3097
+    .line 3047
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_1
 
-    .line 3098
+    .line 3048
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->reset()V
 
-    .line 3100
+    .line 3050
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v0, :cond_2
-
-    .line 3101
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->reset()V
-
-    .line 3103
-    :cond_2
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->onReset()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3104
+    .line 3051
     monitor-exit p0
 
     return-void
 
-    .line 3092
+    .line 3042
     :catchall_0
     move-exception v0
 
@@ -6854,7 +6711,7 @@
     .locals 4
 
     .prologue
-    .line 1604
+    .line 1585
     monitor-enter p0
 
     :try_start_0
@@ -6862,13 +6719,13 @@
 
     move-result v1
 
-    .line 1605
+    .line 1586
     .local v1, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1607
+    .line 1588
     .local v0, height:F
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -6876,14 +6733,14 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 1608
+    .line 1589
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v3, p0, Lcom/sec/android/glview/TwGLView;->mOriginalTop:F
 
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
-    .line 1609
+    .line 1590
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -6894,7 +6751,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
-    .line 1610
+    .line 1591
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -6905,17 +6762,17 @@
 
     iput v3, v2, Landroid/graphics/RectF;->bottom:F
 
-    .line 1612
+    .line 1593
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1613
+    .line 1594
     monitor-exit p0
 
     return-void
 
-    .line 1604
+    .line 1585
     .end local v0           #height:F
     .end local v1           #width:F
     :catchall_0
@@ -6930,7 +6787,7 @@
     .locals 1
 
     .prologue
-    .line 2493
+    .line 2463
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -6938,22 +6795,22 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
 
-    .line 2494
+    .line 2464
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOldClipRect:Landroid/graphics/Rect;
 
-    .line 2495
+    .line 2465
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->refreshClipRect()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2496
+    .line 2466
     monitor-exit p0
 
     return-void
 
-    .line 2493
+    .line 2463
     :catchall_0
     move-exception v0
 
@@ -6966,12 +6823,12 @@
     .locals 2
 
     .prologue
-    .line 2732
+    .line 2705
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    .line 2733
+    .line 2706
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->getMainHandler()Landroid/os/Handler;
@@ -6982,7 +6839,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2734
+    .line 2707
     return-void
 .end method
 
@@ -6990,7 +6847,7 @@
     .locals 4
 
     .prologue
-    .line 1592
+    .line 1573
     monitor-enter p0
 
     :try_start_0
@@ -6998,13 +6855,13 @@
 
     move-result v1
 
-    .line 1593
+    .line 1574
     .local v1, width:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v0
 
-    .line 1595
+    .line 1576
     .local v0, height:F
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
@@ -7012,14 +6869,14 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 1596
+    .line 1577
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget v3, p0, Lcom/sec/android/glview/TwGLView;->mBaseTop:F
 
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
-    .line 1597
+    .line 1578
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -7030,7 +6887,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
-    .line 1598
+    .line 1579
     iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -7041,17 +6898,17 @@
 
     iput v3, v2, Landroid/graphics/RectF;->bottom:F
 
-    .line 1600
+    .line 1581
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1601
+    .line 1582
     monitor-exit p0
 
     return-void
 
-    .line 1592
+    .line 1573
     .end local v0           #height:F
     .end local v1           #width:F
     :catchall_0
@@ -7066,7 +6923,7 @@
     .locals 2
 
     .prologue
-    .line 2137
+    .line 2107
     monitor-enter p0
 
     :try_start_0
@@ -7076,27 +6933,27 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2139
+    .line 2109
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2141
+    .line 2111
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mScaleX:F
 
-    .line 2142
+    .line 2112
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mScaleY:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2143
+    .line 2113
     monitor-exit p0
 
     return-void
 
-    .line 2137
+    .line 2107
     :catchall_0
     move-exception v0
 
@@ -7109,7 +6966,7 @@
     .locals 2
 
     .prologue
-    .line 2112
+    .line 2082
     monitor-enter p0
 
     :try_start_0
@@ -7119,13 +6976,13 @@
 
     if-nez v0, :cond_0
 
-    .line 2119
+    .line 2089
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2115
+    .line 2085
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
@@ -7134,21 +6991,21 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2116
+    .line 2086
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2117
+    .line 2087
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mCombinedMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2118
+    .line 2088
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
     const/4 v1, 0x0
@@ -7159,7 +7016,7 @@
 
     goto :goto_0
 
-    .line 2112
+    .line 2082
     :catchall_0
     move-exception v0
 
@@ -7172,7 +7029,7 @@
     .locals 2
 
     .prologue
-    .line 2174
+    .line 2144
     monitor-enter p0
 
     :try_start_0
@@ -7182,30 +7039,30 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2176
+    .line 2146
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2178
+    .line 2148
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 2179
+    .line 2149
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
-    .line 2181
+    .line 2151
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2182
+    .line 2152
     monitor-exit p0
 
     return-void
 
-    .line 2174
+    .line 2144
     :catchall_0
     move-exception v0
 
@@ -7221,7 +7078,7 @@
     .prologue
     const/high16 v4, 0x4000
 
-    .line 2366
+    .line 2336
     monitor-enter p0
 
     :try_start_0
@@ -7231,13 +7088,13 @@
 
     if-nez v0, :cond_0
 
-    .line 2380
+    .line 2350
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2369
+    .line 2339
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
@@ -7246,12 +7103,12 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2371
+    .line 2341
     const/4 v0, 0x2
 
     new-array v6, v0, [F
 
-    .line 2373
+    .line 2343
     .local v6, currentPivot:[F
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
@@ -7281,7 +7138,7 @@
 
     invoke-static {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2375
+    .line 2345
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -7298,7 +7155,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2376
+    .line 2346
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -7313,7 +7170,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 2377
+    .line 2347
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -7334,14 +7191,14 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2379
+    .line 2349
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 2366
+    .line 2336
     .end local v6           #currentPivot:[F
     :catchall_0
     move-exception v0
@@ -7359,7 +7216,7 @@
     .prologue
     const/high16 v5, 0x4000
 
-    .line 2154
+    .line 2124
     monitor-enter p0
 
     :try_start_0
@@ -7381,7 +7238,7 @@
 
     aput v3, v1, v2
 
-    .line 2155
+    .line 2125
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mLeftTop:[F
 
     const/4 v2, 0x1
@@ -7400,12 +7257,12 @@
 
     aput v3, v1, v2
 
-    .line 2157
+    .line 2127
     const/4 v1, 0x2
 
     new-array v0, v1, [F
 
-    .line 2158
+    .line 2128
     .local v0, currentPivot:[F
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
@@ -7423,7 +7280,7 @@
 
     invoke-static {v1, v0, v2, v3}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2160
+    .line 2130
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
     const/4 v2, 0x0
@@ -7440,7 +7297,7 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2161
+    .line 2131
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
     const/4 v2, 0x0
@@ -7449,7 +7306,7 @@
 
     invoke-static {v1, v2, p1, p2, v3}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    .line 2162
+    .line 2132
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleMatrix:[F
 
     const/4 v2, 0x0
@@ -7470,31 +7327,31 @@
 
     invoke-static {v1, v2, v3, v4, v5}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2164
+    .line 2134
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleX:F
 
     mul-float/2addr v1, p1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleX:F
 
-    .line 2165
+    .line 2135
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleY:F
 
     mul-float/2addr v1, p2
 
     iput v1, p0, Lcom/sec/android/glview/TwGLView;->mScaleY:F
 
-    .line 2167
+    .line 2137
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2168
+    .line 2138
     monitor-exit p0
 
     return-void
 
-    .line 2154
+    .line 2124
     .end local v0           #currentPivot:[F
     :catchall_0
     move-exception v1
@@ -7509,7 +7366,7 @@
     .parameter "alpha"
 
     .prologue
-    .line 834
+    .line 826
     monitor-enter p0
 
     :try_start_0
@@ -7519,21 +7376,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 835
+    .line 827
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mAlpha:F
 
-    .line 836
+    .line 828
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->updateAlpha()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 838
+    .line 830
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 834
+    .line 826
     :catchall_0
     move-exception v0
 
@@ -7547,7 +7404,7 @@
     .parameter "animation"
 
     .prologue
-    .line 1718
+    .line 1695
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -7557,12 +7414,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1719
+    .line 1696
     monitor-exit p0
 
     return-void
 
-    .line 1718
+    .line 1695
     :catchall_0
     move-exception v0
 
@@ -7577,23 +7434,23 @@
     .parameter "hideAfterAnimation"
 
     .prologue
-    .line 1730
+    .line 1707
     monitor-enter p0
 
     :try_start_0
     iput-boolean p2, p0, Lcom/sec/android/glview/TwGLView;->mHideAfterAnimation:Z
 
-    .line 1731
+    .line 1708
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1732
+    .line 1709
     monitor-exit p0
 
     return-void
 
-    .line 1730
+    .line 1707
     :catchall_0
     move-exception v0
 
@@ -7607,10 +7464,10 @@
     .parameter "async"
 
     .prologue
-    .line 820
+    .line 816
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLView;->mAsyncLoad:Z
 
-    .line 821
+    .line 817
     return-void
 .end method
 
@@ -7621,7 +7478,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1775
+    .line 1752
     monitor-enter p0
 
     :try_start_0
@@ -7631,34 +7488,34 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 1786
+    .line 1763
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1778
+    .line 1755
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1779
+    .line 1756
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->clear()V
 
-    .line 1780
+    .line 1757
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1782
+    .line 1759
     :cond_1
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mBackgroundResId:I
 
-    .line 1783
+    .line 1760
     new-instance v0, Lcom/sec/android/glview/TwGLResourceTexture;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -7681,24 +7538,24 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1784
+    .line 1761
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 1785
+    .line 1762
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1786
+    .line 1763
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1775
+    .line 1752
     :catchall_0
     move-exception v0
 
@@ -7712,7 +7569,7 @@
     .parameter "alpha"
 
     .prologue
-    .line 1842
+    .line 1819
     monitor-enter p0
 
     :try_start_0
@@ -7722,16 +7579,16 @@
 
     if-nez v0, :cond_0
 
-    .line 1843
+    .line 1820
     const/4 v0, 0x0
 
-    .line 1846
+    .line 1823
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1845
+    .line 1822
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
@@ -7742,12 +7599,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1846
+    .line 1823
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1842
+    .line 1819
     :catchall_0
     move-exception v0
 
@@ -7761,7 +7618,7 @@
     .parameter "bypass"
 
     .prologue
-    .line 1850
+    .line 1827
     monitor-enter p0
 
     :try_start_0
@@ -7769,12 +7626,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1851
+    .line 1828
     monitor-exit p0
 
     return-void
 
-    .line 1850
+    .line 1827
     :catchall_0
     move-exception v0
 
@@ -7788,7 +7645,7 @@
     .parameter "centerPivot"
 
     .prologue
-    .line 899
+    .line 891
     monitor-enter p0
 
     :try_start_0
@@ -7796,12 +7653,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 900
+    .line 892
     monitor-exit p0
 
     return-void
 
-    .line 899
+    .line 891
     :catchall_0
     move-exception v0
 
@@ -7810,41 +7667,12 @@
     throw v0
 .end method
 
-.method public setClickable(Z)V
-    .locals 2
-    .parameter "clickable"
-
-    .prologue
-    .line 2924
-    iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
-
-    and-int/lit16 v1, v0, -0x4001
-
-    if-eqz p1, :cond_0
-
-    const/16 v0, 0x4000
-
-    :goto_0
-    or-int/2addr v0, v1
-
-    iput v0, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
-
-    .line 2925
-    return-void
-
-    .line 2924
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public declared-synchronized setClipRect(Landroid/graphics/Rect;)V
     .locals 2
     .parameter "clipRect"
 
     .prologue
-    .line 2483
+    .line 2453
     monitor-enter p0
 
     :try_start_0
@@ -7852,10 +7680,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2484
+    .line 2454
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->refreshClipRect()V
 
-    .line 2486
+    .line 2456
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -7863,31 +7691,31 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOldClipRect:Landroid/graphics/Rect;
 
-    .line 2487
+    .line 2457
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOldClipRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2488
+    .line 2458
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2489
+    .line 2459
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2490
+    .line 2460
     monitor-exit p0
 
     return-void
 
-    .line 2483
+    .line 2453
     :catchall_0
     move-exception v0
 
@@ -7901,29 +7729,29 @@
     .parameter "clipping"
 
     .prologue
-    .line 2476
+    .line 2446
     monitor-enter p0
 
     :try_start_0
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
 
-    .line 2477
+    .line 2447
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mClipping:Z
 
     if-eqz v0, :cond_0
 
-    .line 2478
+    .line 2448
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->refreshClipRect()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2480
+    .line 2450
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 2476
+    .line 2446
     :catchall_0
     move-exception v0
 
@@ -7937,7 +7765,7 @@
     .parameter "continuousDrawMode"
 
     .prologue
-    .line 1765
+    .line 1742
     monitor-enter p0
 
     :try_start_0
@@ -7945,12 +7773,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1766
+    .line 1743
     monitor-exit p0
 
     return-void
 
-    .line 1765
+    .line 1742
     :catchall_0
     move-exception v0
 
@@ -7964,20 +7792,20 @@
     .parameter "orientation"
 
     .prologue
-    .line 2297
+    .line 2267
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mDefaultOrientation:I
 
-    .line 2298
+    .line 2268
     rsub-int/lit8 v0, p1, 0x4
 
     rem-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
-    .line 2299
+    .line 2269
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x1
@@ -7986,12 +7814,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2300
+    .line 2270
     monitor-exit p0
 
     return-void
 
-    .line 2297
+    .line 2267
     :catchall_0
     move-exception v0
 
@@ -8005,12 +7833,12 @@
     .parameter "dimmed"
 
     .prologue
-    .line 1705
+    .line 1682
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 1706
+    .line 1683
     const/16 v0, 0x20
 
     :try_start_0
@@ -8018,13 +7846,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1709
+    .line 1686
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1708
+    .line 1685
     :cond_0
     const/4 v0, 0x0
 
@@ -8035,7 +7863,7 @@
 
     goto :goto_0
 
-    .line 1705
+    .line 1682
     :catchall_0
     move-exception v0
 
@@ -8049,7 +7877,7 @@
     .parameter "sensitivity"
 
     .prologue
-    .line 459
+    .line 455
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -8060,18 +7888,18 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 462
+    .line 458
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 465
+    .line 461
     :cond_0
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mDragSensitivity:I
 
-    .line 466
+    .line 462
     return-void
 .end method
 
@@ -8080,10 +7908,10 @@
     .parameter "vibration"
 
     .prologue
-    .line 433
+    .line 429
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLView;->mDragVibration:Z
 
-    .line 434
+    .line 430
     return-void
 .end method
 
@@ -8092,40 +7920,27 @@
     .parameter "draggable"
 
     .prologue
-    .line 812
+    .line 808
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
-    .line 813
+    .line 809
     return-void
 .end method
 
-.method public setFocusable(Z)V
-    .locals 2
+.method public setFocusable(I)V
+    .locals 1
     .parameter "focusable"
 
     .prologue
-    .line 2920
+    .line 2889
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
 
-    and-int/lit8 v1, v0, -0x2
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    or-int/2addr v0, v1
+    or-int/2addr v0, p1
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mViewFlags:I
 
-    .line 2921
+    .line 2890
     return-void
-
-    .line 2920
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public setInternalFocus(Z)V
@@ -8133,10 +7948,10 @@
     .parameter "value"
 
     .prologue
-    .line 2885
+    .line 2858
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLView;->mInternalFocus:Z
 
-    .line 2886
+    .line 2859
     return-void
 .end method
 
@@ -8147,14 +7962,14 @@
     .parameter "top"
 
     .prologue
-    .line 997
+    .line 989
     const/4 v0, 0x3
 
     if-gt p1, v0, :cond_0
 
     if-gez p1, :cond_1
 
-    .line 998
+    .line 990
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -8162,27 +7977,27 @@
 
     throw v0
 
-    .line 1000
+    .line 992
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     if-eqz v0, :cond_2
 
-    .line 1001
+    .line 993
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     aget-object v0, v0, p1
 
     iput p2, v0, Landroid/graphics/RectF;->left:F
 
-    .line 1002
+    .line 994
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     aget-object v0, v0, p1
 
     iput p3, v0, Landroid/graphics/RectF;->top:F
 
-    .line 1004
+    .line 996
     :cond_2
     return-void
 .end method
@@ -8193,14 +8008,14 @@
     .parameter "leftTops"
 
     .prologue
-    .line 1061
+    .line 1053
     const/4 v0, 0x3
 
     if-gt p1, v0, :cond_0
 
     if-gez p1, :cond_1
 
-    .line 1062
+    .line 1054
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -8208,7 +8023,7 @@
 
     throw v0
 
-    .line 1064
+    .line 1056
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
@@ -8220,7 +8035,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 1065
+    .line 1057
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mLeftTopCoordinates:[Landroid/graphics/RectF;
 
     aget-object v0, v0, p1
@@ -8231,7 +8046,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 1066
+    .line 1058
     return-void
 .end method
 
@@ -8240,10 +8055,10 @@
     .parameter "id"
 
     .prologue
-    .line 1136
+    .line 1124
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
-    .line 1137
+    .line 1125
     return-void
 .end method
 
@@ -8252,20 +8067,20 @@
     .parameter "view"
 
     .prologue
-    .line 1164
+    .line 1152
     if-eqz p1, :cond_0
 
-    .line 1165
+    .line 1153
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getId()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusDownId:I
 
-    .line 1166
+    .line 1154
     const/4 v0, 0x1
 
-    .line 1168
+    .line 1156
     :goto_0
     return v0
 
@@ -8280,10 +8095,10 @@
     .parameter "id"
 
     .prologue
-    .line 1124
+    .line 1112
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
-    .line 1125
+    .line 1113
     return-void
 .end method
 
@@ -8292,20 +8107,20 @@
     .parameter "view"
 
     .prologue
-    .line 1140
+    .line 1128
     if-eqz p1, :cond_0
 
-    .line 1141
+    .line 1129
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getId()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusLeftId:I
 
-    .line 1142
+    .line 1130
     const/4 v0, 0x1
 
-    .line 1144
+    .line 1132
     :goto_0
     return v0
 
@@ -8320,10 +8135,10 @@
     .parameter "id"
 
     .prologue
-    .line 1128
+    .line 1116
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
-    .line 1129
+    .line 1117
     return-void
 .end method
 
@@ -8332,20 +8147,20 @@
     .parameter "view"
 
     .prologue
-    .line 1148
+    .line 1136
     if-eqz p1, :cond_0
 
-    .line 1149
+    .line 1137
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getId()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusRightId:I
 
-    .line 1150
+    .line 1138
     const/4 v0, 0x1
 
-    .line 1152
+    .line 1140
     :goto_0
     return v0
 
@@ -8360,10 +8175,10 @@
     .parameter "id"
 
     .prologue
-    .line 1132
+    .line 1120
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
-    .line 1133
+    .line 1121
     return-void
 .end method
 
@@ -8372,20 +8187,20 @@
     .parameter "view"
 
     .prologue
-    .line 1156
+    .line 1144
     if-eqz p1, :cond_0
 
-    .line 1157
+    .line 1145
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getId()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mNextFocusUpId:I
 
-    .line 1158
+    .line 1146
     const/4 v0, 0x1
 
-    .line 1160
+    .line 1148
     :goto_0
     return v0
 
@@ -8402,7 +8217,7 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1796
+    .line 1773
     monitor-enter p0
 
     :try_start_0
@@ -8412,37 +8227,37 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1797
+    .line 1774
     const/4 v0, 0x0
 
-    .line 1808
+    .line 1785
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1799
+    .line 1776
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1800
+    .line 1777
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->clear()V
 
-    .line 1801
+    .line 1778
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1803
+    .line 1780
     :cond_1
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mBackgroundResId:I
 
-    .line 1804
+    .line 1781
     new-instance v0, Lcom/sec/android/glview/TwGLNinePatch;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -8465,17 +8280,17 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1805
+    .line 1782
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 1806
+    .line 1783
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
 
-    .line 1807
+    .line 1784
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     check-cast v0, Lcom/sec/android/glview/TwGLNinePatch;
@@ -8490,10 +8305,10 @@
 
     move v0, v7
 
-    .line 1808
+    .line 1785
     goto :goto_0
 
-    .line 1796
+    .line 1773
     :catchall_0
     move-exception v0
 
@@ -8510,7 +8325,7 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 1820
+    .line 1797
     monitor-enter p0
 
     :try_start_0
@@ -8520,37 +8335,37 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1821
+    .line 1798
     const/4 v0, 0x0
 
-    .line 1832
+    .line 1809
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1823
+    .line 1800
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_1
 
-    .line 1824
+    .line 1801
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->clear()V
 
-    .line 1825
+    .line 1802
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1827
+    .line 1804
     :cond_1
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mBackgroundResId:I
 
-    .line 1828
+    .line 1805
     new-instance v0, Lcom/sec/android/glview/TwGLNinePatch;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -8575,17 +8390,17 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
-    .line 1829
+    .line 1806
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 1830
+    .line 1807
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
 
-    .line 1831
+    .line 1808
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     check-cast v0, Lcom/sec/android/glview/TwGLNinePatch;
@@ -8600,10 +8415,10 @@
 
     move v0, v8
 
-    .line 1832
+    .line 1809
     goto :goto_0
 
-    .line 1820
+    .line 1797
     :catchall_0
     move-exception v0
 
@@ -8617,10 +8432,10 @@
     .parameter "l"
 
     .prologue
-    .line 792
+    .line 788
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnAnimationEventListener:Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;
 
-    .line 793
+    .line 789
     return-void
 .end method
 
@@ -8629,10 +8444,10 @@
     .parameter "l"
 
     .prologue
-    .line 637
+    .line 633
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
-    .line 638
+    .line 634
     return-void
 .end method
 
@@ -8641,10 +8456,10 @@
     .parameter "l"
 
     .prologue
-    .line 802
+    .line 798
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    .line 803
+    .line 799
     return-void
 .end method
 
@@ -8653,10 +8468,10 @@
     .parameter "l"
 
     .prologue
-    .line 778
+    .line 774
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
-    .line 779
+    .line 775
     return-void
 .end method
 
@@ -8665,10 +8480,10 @@
     .parameter "l"
 
     .prologue
-    .line 774
+    .line 770
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnKeyListener:Lcom/sec/android/glview/TwGLView$OnKeyListener;
 
-    .line 775
+    .line 771
     return-void
 .end method
 
@@ -8677,10 +8492,10 @@
     .parameter "l"
 
     .prologue
-    .line 676
+    .line 672
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnOrientationChangedListener:Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;
 
-    .line 677
+    .line 673
     return-void
 .end method
 
@@ -8689,10 +8504,10 @@
     .parameter "l"
 
     .prologue
-    .line 761
+    .line 757
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
-    .line 762
+    .line 758
     return-void
 .end method
 
@@ -8705,7 +8520,7 @@
 
     const/4 v0, 0x1
 
-    .line 2309
+    .line 2279
     monitor-enter p0
 
     if-eqz p1, :cond_0
@@ -8718,7 +8533,7 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 2311
+    .line 2281
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -8728,7 +8543,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2309
+    .line 2279
     :catchall_0
     move-exception v0
 
@@ -8736,7 +8551,7 @@
 
     throw v0
 
-    .line 2314
+    .line 2284
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
@@ -8745,41 +8560,41 @@
 
     if-nez v0, :cond_1
 
-    .line 2357
+    .line 2327
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2318
+    .line 2288
     :cond_1
     :try_start_2
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mLastOrientation:I
 
-    .line 2319
+    .line 2289
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
-    .line 2321
+    .line 2291
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2323
+    .line 2293
     const/4 v0, 0x2
 
     new-array v6, v0, [F
 
-    .line 2324
+    .line 2294
     .local v6, currentPivot:[F
     const/4 v0, 0x2
 
     new-array v8, v0, [F
 
-    .line 2326
+    .line 2296
     .local v8, rotationPivot:[F
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
@@ -8787,13 +8602,13 @@
 
     move-result-object v7
 
-    .line 2328
+    .line 2298
     .local v7, leftTop:[F
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mCenterPivot:Z
 
     if-eqz v0, :cond_3
 
-    .line 2329
+    .line 2299
     const/4 v0, 0x0
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getLeft()F
@@ -8812,7 +8627,7 @@
 
     aput v1, v7, v0
 
-    .line 2330
+    .line 2300
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getTop()F
@@ -8831,7 +8646,7 @@
 
     aput v1, v7, v0
 
-    .line 2332
+    .line 2302
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x0
@@ -8844,7 +8659,7 @@
 
     invoke-static {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2334
+    .line 2304
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -8861,7 +8676,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2335
+    .line 2305
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -8888,7 +8703,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 2336
+    .line 2306
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -8909,23 +8724,23 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2351
+    .line 2321
     :goto_1
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2353
+    .line 2323
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnOrientationChangedListener:Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;
 
     if-eqz v0, :cond_2
 
-    .line 2354
+    .line 2324
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnOrientationChangedListener:Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLView;->mOrientation:I
 
     invoke-interface {v0, v1}, Lcom/sec/android/glview/TwGLView$OnOrientationChangedListener;->onOrientationChanged(I)V
 
-    .line 2356
+    .line 2326
     :cond_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
@@ -8935,13 +8750,13 @@
 
     goto/16 :goto_0
 
-    .line 2338
+    .line 2308
     :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_4
 
-    .line 2339
+    .line 2309
     const/4 v0, 0x0
 
     aget v1, v7, v0
@@ -8956,7 +8771,7 @@
 
     aput v1, v7, v0
 
-    .line 2340
+    .line 2310
     const/4 v0, 0x1
 
     aget v1, v7, v0
@@ -8971,7 +8786,7 @@
 
     aput v1, v7, v0
 
-    .line 2343
+    .line 2313
     :cond_4
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
@@ -8985,7 +8800,7 @@
 
     invoke-static {v0, v6, v1, v2}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2344
+    .line 2314
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x0
@@ -8998,7 +8813,7 @@
 
     invoke-static {v0, v8, v1, v2}, Lcom/sec/android/glview/TwGLUtil;->getGLCoordinateFromScreenCoordinate(Lcom/sec/android/glview/TwGLContext;[FFF)V
 
-    .line 2346
+    .line 2316
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -9015,7 +8830,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2347
+    .line 2317
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -9042,7 +8857,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 2348
+    .line 2318
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mRotationMatrix:[F
 
     const/4 v1, 0x0
@@ -9073,70 +8888,19 @@
     .parameter "paddings"
 
     .prologue
-    .line 1864
+    .line 1841
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
-    .line 1865
+    .line 1842
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_0
 
-    .line 1866
+    .line 1843
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float v2, v2
-
-    sub-float/2addr v1, v2
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->right:I
-
-    int-to-float v2, v2
-
-    sub-float/2addr v1, v2
-
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getHeight()F
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v3, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v2, v3
-
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v3, v3, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v2, v3
-
-    invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->setSize(FF)V
-
-    .line 1868
-    :cond_0
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v0, :cond_1
-
-    .line 1869
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
@@ -9182,13 +8946,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1871
-    :cond_1
+    .line 1845
+    :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 1864
+    .line 1841
     :catchall_0
     move-exception v0
 
@@ -9202,10 +8966,10 @@
     .parameter "halign"
 
     .prologue
-    .line 955
+    .line 947
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mParentHAlign:I
 
-    .line 956
+    .line 948
     return-void
 .end method
 
@@ -9214,10 +8978,10 @@
     .parameter "valign"
 
     .prologue
-    .line 965
+    .line 957
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mParentVAlign:I
 
-    .line 966
+    .line 958
     return-void
 .end method
 
@@ -9226,7 +8990,7 @@
     .parameter "rotatable"
 
     .prologue
-    .line 889
+    .line 881
     monitor-enter p0
 
     :try_start_0
@@ -9234,12 +8998,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 890
+    .line 882
     monitor-exit p0
 
     return-void
 
-    .line 889
+    .line 881
     :catchall_0
     move-exception v0
 
@@ -9253,7 +9017,7 @@
     .parameter "rotateAnimation"
 
     .prologue
-    .line 918
+    .line 910
     monitor-enter p0
 
     :try_start_0
@@ -9261,12 +9025,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 919
+    .line 911
     monitor-exit p0
 
     return-void
 
-    .line 918
+    .line 910
     :catchall_0
     move-exception v0
 
@@ -9280,7 +9044,7 @@
     .parameter "duration"
 
     .prologue
-    .line 936
+    .line 928
     monitor-enter p0
 
     :try_start_0
@@ -9288,12 +9052,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 937
+    .line 929
     monitor-exit p0
 
     return-void
 
-    .line 936
+    .line 928
     :catchall_0
     move-exception v0
 
@@ -9307,24 +9071,24 @@
     .parameter "interpolator"
 
     .prologue
-    .line 931
+    .line 923
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 932
+    .line 924
     :try_start_0
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mRotateAnimationInterpolator:Landroid/view/animation/Interpolator;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 933
+    .line 925
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 931
+    .line 923
     :catchall_0
     move-exception v0
 
@@ -9339,7 +9103,7 @@
     .parameter "height"
 
     .prologue
-    .line 1456
+    .line 1444
     monitor-enter p0
 
     :try_start_0
@@ -9353,7 +9117,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 1457
+    .line 1445
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mBound:Landroid/graphics/RectF;
@@ -9364,36 +9128,36 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 1459
+    .line 1447
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
 
-    .line 1461
+    .line 1449
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 1462
+    .line 1450
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->isNinePatchBackground:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 1463
+    .line 1451
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     check-cast v0, Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0, p1, p2}, Lcom/sec/android/glview/TwGLNinePatch;->setSize(FF)V
 
-    .line 1468
+    .line 1456
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_1
 
-    .line 1469
+    .line 1457
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mFocusIndicator:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
@@ -9430,62 +9194,19 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->setSize(FF)V
 
-    .line 1472
+    .line 1460
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    if-eqz v0, :cond_2
-
-    .line 1473
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mHoverIndicator:Lcom/sec/android/glview/TwGLNinePatch;
-
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->right:I
-
-    int-to-float v1, v1
-
-    sub-float v1, p1, v1
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float v2, v2
-
-    sub-float/2addr v1, v2
-
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v2, v2
-
-    sub-float v2, p2, v2
-
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
-
-    iget v3, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v2, v3
-
-    invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->setSize(FF)V
-
-    .line 1476
-    :cond_2
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1477
+    .line 1461
     monitor-exit p0
 
     return-void
 
-    .line 1465
-    :cond_3
+    .line 1453
+    :cond_2
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
@@ -9495,7 +9216,7 @@
 
     goto :goto_0
 
-    .line 1456
+    .line 1444
     :catchall_0
     move-exception v0
 
@@ -9509,10 +9230,10 @@
     .parameter "title"
 
     .prologue
-    .line 1096
+    .line 1088
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mSubTitle:Ljava/lang/String;
 
-    .line 1097
+    .line 1089
     return-void
 .end method
 
@@ -9521,10 +9242,10 @@
     .parameter "viewId"
 
     .prologue
-    .line 1075
+    .line 1067
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mViewTag:I
 
-    .line 1076
+    .line 1068
     return-void
 .end method
 
@@ -9533,10 +9254,10 @@
     .parameter "title"
 
     .prologue
-    .line 1092
+    .line 1084
     iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mTitle:Ljava/lang/String;
 
-    .line 1093
+    .line 1085
     return-void
 .end method
 
@@ -9544,12 +9265,12 @@
     .locals 1
 
     .prologue
-    .line 3149
+    .line 3109
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mToggleButton:Z
 
-    .line 3150
+    .line 3110
     return-void
 .end method
 
@@ -9558,13 +9279,13 @@
     .parameter "visibility"
 
     .prologue
-    .line 1680
+    .line 1657
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
-    .line 1681
+    .line 1658
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x1
@@ -9573,12 +9294,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1682
+    .line 1659
     monitor-exit p0
 
     return-void
 
-    .line 1680
+    .line 1657
     :catchall_0
     move-exception v0
 
@@ -9593,16 +9314,16 @@
     .parameter "update"
 
     .prologue
-    .line 1685
+    .line 1662
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
 
-    .line 1686
+    .line 1663
     if-eqz p2, :cond_0
 
-    .line 1687
+    .line 1664
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x1
@@ -9611,13 +9332,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1689
+    .line 1666
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 1685
+    .line 1662
     :catchall_0
     move-exception v0
 
@@ -9630,7 +9351,7 @@
     .locals 2
 
     .prologue
-    .line 1738
+    .line 1715
     monitor-enter p0
 
     :try_start_0
@@ -9640,41 +9361,41 @@
 
     if-nez v0, :cond_0
 
-    .line 1752
+    .line 1729
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1741
+    .line 1718
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLoaded:Z
 
     if-eqz v0, :cond_1
 
-    .line 1742
+    .line 1719
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0}, Landroid/view/animation/Animation;->reset()V
 
-    .line 1743
+    .line 1720
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationPending:Z
 
-    .line 1744
+    .line 1721
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStarted:Z
 
-    .line 1749
+    .line 1726
     :goto_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationFinished:Z
 
-    .line 1751
+    .line 1728
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x1
@@ -9685,7 +9406,7 @@
 
     goto :goto_0
 
-    .line 1738
+    .line 1715
     :catchall_0
     move-exception v0
 
@@ -9693,14 +9414,14 @@
 
     throw v0
 
-    .line 1746
+    .line 1723
     :cond_1
     const/4 v0, 0x1
 
     :try_start_2
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationPending:Z
 
-    .line 1747
+    .line 1724
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mAnimationStarted:Z
@@ -9711,58 +9432,98 @@
 .end method
 
 .method public touchEvent(Landroid/view/MotionEvent;)Z
-    .locals 9
+    .locals 11
     .parameter "e"
 
     .prologue
+    const/4 v10, 0x0
+
+    const/4 v9, 0x4
+
     const/4 v8, 0x3
 
     const/4 v7, 0x1
 
-    .line 2605
+    .line 2568
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mDragSensitivity:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2614
+    .line 2577
     const/16 v6, 0x1f4
 
-    .line 2617
+    .line 2580
     .local v6, dragHoldTime:I
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
-    .line 2618
-    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
-
-    .line 2619
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
+    .line 2581
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTitle:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2620
+    iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
+
+    if-eq v0, v9, :cond_0
+
+    invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->isScreenReaderActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2582
+    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2583
+    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->getTts()Landroid/speech/tts/TextToSpeech;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mTitle:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v7, v10}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
+
+    .line 2585
+    :cond_0
+    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
+
+    .line 2586
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
+
+    if-eqz v0, :cond_1
+
+    .line 2587
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getOrientation()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTempOrientation:I
 
-    .line 2621
+    .line 2588
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mDragSensitivity:I
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 2622
+    .line 2589
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->setDragging:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 2627
-    :cond_0
+    .line 2594
+    :cond_1
     :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -9770,55 +9531,55 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragX:F
 
-    .line 2628
+    .line 2595
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragY:F
 
-    .line 2678
-    :cond_1
+    .line 2645
+    :cond_2
     :goto_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_10
 
-    .line 2679
+    .line 2646
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     invoke-interface {v0, p0, p1}, Lcom/sec/android/glview/TwGLView$OnTouchListener;->onTouch(Lcom/sec/android/glview/TwGLView;Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     move v0, v7
 
-    .line 2686
+    .line 2659
     :goto_3
     return v0
 
-    .line 2607
+    .line 2570
     .end local v6           #dragHoldTime:I
     :pswitch_0
     const/4 v6, 0x0
 
-    .line 2608
+    .line 2571
     .restart local v6       #dragHoldTime:I
     goto :goto_0
 
-    .line 2610
+    .line 2573
     .end local v6           #dragHoldTime:I
     :pswitch_1
     const/16 v6, 0x12c
 
-    .line 2611
+    .line 2574
     .restart local v6       #dragHoldTime:I
     goto :goto_0
 
-    .line 2624
-    :cond_2
+    .line 2591
+    :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->getMainHandler()Landroid/os/Handler;
@@ -9833,41 +9594,41 @@
 
     goto :goto_1
 
-    .line 2629
-    :cond_3
+    .line 2596
+    :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_8
+    if-ne v0, v1, :cond_9
 
-    .line 2630
+    .line 2597
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 2631
+    .line 2598
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
-    .line 2632
+    .line 2599
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTempOrientation:I
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getOrientation()I
 
     move-result v1
 
-    if-eq v0, v1, :cond_5
+    if-eq v0, v1, :cond_6
 
-    .line 2633
+    .line 2600
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    .line 2634
+    .line 2601
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -9880,25 +9641,25 @@
 
     invoke-interface {v0, p0, v1, v2}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragEnd(Lcom/sec/android/glview/TwGLView;FF)V
 
-    .line 2636
-    :cond_4
+    .line 2603
+    :cond_5
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 2637
+    .line 2604
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
 
     move v0, v7
 
-    .line 2638
+    .line 2605
     goto :goto_3
 
-    .line 2640
-    :cond_5
+    .line 2607
+    :cond_6
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    .line 2641
+    .line 2608
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -9929,31 +9690,31 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDrag(Lcom/sec/android/glview/TwGLView;FFFF)V
 
-    .line 2643
-    :cond_6
+    .line 2610
+    :cond_7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragX:F
 
-    .line 2644
+    .line 2611
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mPreviousDragY:F
 
-    .line 2645
-    if-eqz v6, :cond_1
+    .line 2612
+    if-eqz v6, :cond_2
 
     move v0, v7
 
-    .line 2646
+    .line 2613
     goto :goto_3
 
-    .line 2647
-    :cond_7
+    .line 2614
+    :cond_8
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -9966,37 +9727,37 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 2648
+    .line 2615
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
 
     goto/16 :goto_2
 
-    .line 2651
-    :cond_8
+    .line 2618
+    :cond_9
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v7, :cond_c
+    if-ne v0, v7, :cond_d
 
-    .line 2652
+    .line 2619
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
+
+    if-eqz v0, :cond_c
+
+    .line 2620
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
     if-eqz v0, :cond_b
 
-    .line 2653
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
+    .line 2621
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     if-eqz v0, :cond_a
 
-    .line 2654
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
-
-    if-eqz v0, :cond_9
-
-    .line 2655
+    .line 2622
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -10009,18 +9770,18 @@
 
     invoke-interface {v0, p0, v1, v2}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragEnd(Lcom/sec/android/glview/TwGLView;FF)V
 
-    .line 2657
-    :cond_9
+    .line 2624
+    :cond_a
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 2662
-    :cond_a
+    .line 2629
+    :cond_b
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
 
     goto/16 :goto_2
 
-    .line 2664
-    :cond_b
+    .line 2631
+    :cond_c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -10033,37 +9794,37 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 2665
+    .line 2632
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->setAction(I)V
 
     goto/16 :goto_2
 
-    .line 2667
-    :cond_c
+    .line 2634
+    :cond_d
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v8, :cond_1
+    if-ne v0, v8, :cond_2
 
-    .line 2668
+    .line 2635
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDraggable:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 2669
+    .line 2636
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    .line 2670
+    .line 2637
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    .line 2671
+    .line 2638
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -10076,19 +9837,59 @@
 
     invoke-interface {v0, p0, v1, v2}, Lcom/sec/android/glview/TwGLView$OnDragListener;->onDragEnd(Lcom/sec/android/glview/TwGLView;FF)V
 
-    .line 2674
-    :cond_d
+    .line 2641
+    :cond_e
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->resetDrag()V
 
     goto/16 :goto_2
 
-    .line 2683
-    :cond_e
+    .line 2648
+    :cond_f
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mSubTitle:Ljava/lang/String;
+
+    if-eqz v0, :cond_10
+
+    iget v0, p0, Lcom/sec/android/glview/TwGLView;->mVisibility:I
+
+    if-eq v0, v9, :cond_10
+
+    invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->isScreenReaderActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    .line 2649
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mToggleButton:Z
+
+    if-ne v0, v7, :cond_10
+
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v7, :cond_f
+    if-nez v0, :cond_10
+
+    .line 2651
+    invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->getContext()Lcom/sec/android/glview/TwGLContext;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->getTts()Landroid/speech/tts/TextToSpeech;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mSubTitle:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v7, v10}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
+
+    .line 2656
+    :cond_10
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-ne v0, v7, :cond_11
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -10102,20 +9903,20 @@
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_11
 
-    .line 2684
+    .line 2657
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 2686
-    :cond_f
+    .line 2659
+    :cond_11
     invoke-virtual {p0, p1}, Lcom/sec/android/glview/TwGLView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     goto/16 :goto_3
 
-    .line 2605
+    .line 2568
     nop
 
     :pswitch_data_0
@@ -10133,7 +9934,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2237
+    .line 2207
     monitor-enter p0
 
     :try_start_0
@@ -10157,10 +9958,10 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2242
+    .line 2212
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2244
+    .line 2214
     cmpl-float v0, p1, v5
 
     if-nez v0, :cond_0
@@ -10169,11 +9970,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2245
+    .line 2215
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
 
-    .line 2247
+    .line 2217
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
@@ -10181,7 +9982,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 2248
+    .line 2218
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
     add-float/2addr v0, p2
@@ -10190,12 +9991,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2249
+    .line 2219
     monitor-exit p0
 
     return-void
 
-    .line 2237
+    .line 2207
     :catchall_0
     move-exception v0
 
@@ -10213,7 +10014,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2252
+    .line 2222
     monitor-enter p0
 
     :try_start_0
@@ -10237,10 +10038,10 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2257
+    .line 2227
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2259
+    .line 2229
     cmpl-float v0, p1, v5
 
     if-nez v0, :cond_0
@@ -10252,10 +10053,10 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 2260
+    .line 2230
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
 
-    .line 2262
+    .line 2232
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
@@ -10263,7 +10064,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 2263
+    .line 2233
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
 
     add-float/2addr v0, p2
@@ -10272,12 +10073,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2264
+    .line 2234
     monitor-exit p0
 
     return-void
 
-    .line 2252
+    .line 2222
     :catchall_0
     move-exception v0
 
@@ -10292,7 +10093,7 @@
     .parameter "y"
 
     .prologue
-    .line 2186
+    .line 2156
     monitor-enter p0
 
     :try_start_0
@@ -10302,10 +10103,10 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2187
+    .line 2157
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2190
+    .line 2160
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
 
     const/4 v1, 0x0
@@ -10326,10 +10127,10 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2195
+    .line 2165
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2197
+    .line 2167
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
     cmpl-float v0, v0, p1
@@ -10342,25 +10143,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 2198
+    .line 2168
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
 
-    .line 2200
+    .line 2170
     :cond_1
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 2201
+    .line 2171
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2202
+    .line 2172
     monitor-exit p0
 
     return-void
 
-    .line 2186
+    .line 2156
     :catchall_0
     move-exception v0
 
@@ -10376,7 +10177,7 @@
     .parameter "update"
 
     .prologue
-    .line 2205
+    .line 2175
     monitor-enter p0
 
     :try_start_0
@@ -10394,13 +10195,13 @@
 
     if-nez v0, :cond_0
 
-    .line 2226
+    .line 2196
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 2210
+    .line 2180
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
@@ -10409,10 +10210,10 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2211
+    .line 2181
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2214
+    .line 2184
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslationMatrix:[F
 
     const/4 v1, 0x0
@@ -10433,10 +10234,10 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 2219
+    .line 2189
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->combineMatrices()V
 
-    .line 2221
+    .line 2191
     iget v0, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
     cmpl-float v0, v0, p1
@@ -10452,21 +10253,21 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 2222
+    .line 2192
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLView;->updateLayout()V
 
-    .line 2224
+    .line 2194
     :cond_2
     iput p1, p0, Lcom/sec/android/glview/TwGLView;->mTranslateX:F
 
-    .line 2225
+    .line 2195
     iput p2, p0, Lcom/sec/android/glview/TwGLView;->mTranslateY:F
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 2205
+    .line 2175
     :catchall_0
     move-exception v0
 
@@ -10479,27 +10280,27 @@
     .locals 2
 
     .prologue
-    .line 875
+    .line 867
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 876
+    .line 868
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLView;->onAlphaUpdated()V
 
-    .line 877
+    .line 869
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     if-eqz v0, :cond_0
 
-    .line 878
+    .line 870
     iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mBackground:Lcom/sec/android/glview/TwGLView;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->onAlphaUpdated()V
 
-    .line 880
+    .line 872
     :cond_0
     return-void
 .end method

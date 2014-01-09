@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 184
+    .line 182
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 186
+    .line 184
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;
 
     #getter for: Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton;->mOnModeChangedListener:Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$OnModeChangedListener;
@@ -53,6 +53,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLModeSwitchButton$OnModeChangedListener;->onModeChanged(I)V
 
-    .line 187
+    .line 185
     return-void
 .end method

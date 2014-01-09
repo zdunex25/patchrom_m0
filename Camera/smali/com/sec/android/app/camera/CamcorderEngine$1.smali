@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 160
+    .line 153
     iput-object p1, p0, Lcom/sec/android/app/camera/CamcorderEngine$1;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 162
+    .line 155
     const-string v0, "CamcorderEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,16 +64,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
+    .line 156
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 170
+    .line 163
     :goto_0
     return-void
 
-    .line 165
+    .line 158
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CamcorderEngine$1;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -85,7 +85,7 @@
 
     goto :goto_0
 
-    .line 163
+    .line 156
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

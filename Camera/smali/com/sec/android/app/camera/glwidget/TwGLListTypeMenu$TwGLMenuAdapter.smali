@@ -30,7 +30,7 @@
     .line 144
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     .prologue
     .line 150
-    if-nez p2, :cond_1
+    if-nez p2, :cond_0
 
     .line 151
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
@@ -99,21 +99,21 @@
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v2}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->access$200(Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
     invoke-static {v3}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->access$300(Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;)Lcom/sec/android/glview/TwGLViewGroup;
 
     move-result-object v3
 
     iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
     invoke-static {v6}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->access$400(Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;)Lcom/sec/android/app/camera/MenuResourceDepot;
 
     move-result-object v6
@@ -124,9 +124,6 @@
 
     .line 153
     .local v5, command:Lcom/sec/android/app/camera/command/MenuCommand;
-    if-eqz v5, :cond_0
-
-    .line 154
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->getZorder()I
@@ -137,13 +134,12 @@
 
     invoke-virtual {v5, v1}, Lcom/sec/android/app/camera/command/MenuCommand;->setZOrder(I)V
 
-    .line 155
-    :cond_0
+    .line 154
     new-instance v0, Lcom/sec/android/app/camera/glwidget/TwGLItem;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
-    #getter for: Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
     invoke-static {v1}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->access$500(Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;)Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     move-result-object v1
@@ -164,7 +160,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/sec/android/app/camera/glwidget/TwGLItem;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;FFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;I)V
 
-    .line 156
+    .line 155
     .local v0, item:Lcom/sec/android/app/camera/glwidget/TwGLItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
@@ -175,7 +171,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLItem;->setOnTouchListener(Lcom/sec/android/glview/TwGLView$OnTouchListener;)V
 
-    .line 157
+    .line 156
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
     #getter for: Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->mList:Lcom/sec/android/glview/TwGLList;
@@ -185,7 +181,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLItem;->setOnKeyListener(Lcom/sec/android/glview/TwGLView$OnKeyListener;)V
 
-    .line 158
+    .line 157
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu$TwGLMenuAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/glwidget/TwGLListTypeMenu;->getZorder()I
@@ -196,14 +192,14 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLItem;->setZOrder(I)V
 
-    .line 161
+    .line 160
     .end local v0           #item:Lcom/sec/android/app/camera/glwidget/TwGLItem;
     .end local v4           #itemData:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     .end local v5           #command:Lcom/sec/android/app/camera/command/MenuCommand;
     :goto_0
     return-object v0
 
-    :cond_1
+    :cond_0
     move-object v0, p2
 
     goto :goto_0
@@ -213,6 +209,6 @@
     .locals 0
 
     .prologue
-    .line 166
+    .line 165
     return-void
 .end method

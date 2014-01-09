@@ -63,17 +63,17 @@
     if-ne v0, v1, :cond_0
 
     .line 98
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     const v1, 0x3f2147ae
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     .line 102
     :goto_0
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     cmpl-float v0, v0, v2
 
@@ -82,7 +82,7 @@
     .line 103
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     .line 104
     const/high16 v0, -0x4000
@@ -93,19 +93,19 @@
 
     .line 100
     :cond_0
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     const v1, 0x3f35c28f
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     goto :goto_0
 
     .line 107
     :cond_1
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mCnt:F
 
     div-float/2addr v0, v2
 
@@ -176,7 +176,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v18, v0
 
@@ -191,7 +191,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v19, v0
 
@@ -213,7 +213,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v18, v0
 
@@ -228,7 +228,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v19, v0
 
@@ -285,7 +285,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v19, v0
 
@@ -347,7 +347,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     move-object/from16 v18, v0
 
@@ -362,7 +362,7 @@
     .line 87
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     move-object/from16 v18, v0
 
@@ -377,7 +377,7 @@
     .line 88
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     move-object/from16 v18, v0
 
@@ -450,7 +450,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v0, v0, Lcom/sec/android/glanimation/TwGLAniShutterBVertex;->GRID_SIZE:I
 
     move/from16 v19, v0
 

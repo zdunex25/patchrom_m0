@@ -30,7 +30,7 @@
     .line 224
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .line 226
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->access$000(Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0
@@ -56,7 +56,7 @@
     .line 227
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;->access$100(Lcom/sec/android/app/camera/glwidget/TwGLSideMenuDragDropBox;)Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     move-result-object v0

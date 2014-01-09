@@ -181,7 +181,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mSlideDirection:I
 
@@ -202,19 +202,19 @@
     .line 87
     :cond_3
     :goto_1
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mZOrder:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setZorder(I)V
 
     .line 88
-    iget-object v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
+    iget-object v1, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setAnchor(Lcom/sec/android/glview/TwGLImage;)V
 
     .line 89
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchX:F
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mLaunchX:F
 
-    iget v2, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mLaunchY:F
+    iget v2, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mLaunchY:F
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/MenuBase;->setLaunchPosition(FF)V
 
@@ -279,7 +279,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchShootingModeMenuCommand;->mSlideDirection:I
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 788
+    .line 682
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$2$1;->this$1:Lcom/sec/android/app/camera/Camera$2;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/Camera$2$1;->val$filePath:Ljava/lang/String;
@@ -43,24 +43,24 @@
     .locals 2
 
     .prologue
-    .line 792
+    .line 686
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$2$1;->this$1:Lcom/sec/android/app/camera/Camera$2;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 793
+    .line 687
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$2$1;->this$1:Lcom/sec/android/app/camera/Camera$2;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChkKeyFromApp:Ljava/lang/String;
+    iget-object v0, v0, Lcom/sec/android/app/camera/Camera;->mChkKeyFromApp:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -83,13 +83,13 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 794
+    .line 688
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$2$1;->this$1:Lcom/sec/android/app/camera/Camera$2;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v0}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v0}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton(Ljava/lang/String;)V
 
-    .line 796
+    .line 690
     :cond_0
     return-void
 .end method

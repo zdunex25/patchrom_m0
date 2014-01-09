@@ -30,25 +30,25 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 238
+    .line 109
     const v4, 0x7f0900af
 
     invoke-direct {p0, v7, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;-><init>(II)V
 
-    .line 65
+    .line 33
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    .line 242
+    .line 111
     iput-object p1, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 246
+    .line 113
     invoke-direct {p0}, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->initCommandIdList()V
 
-    .line 250
+    .line 115
     iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -73,7 +73,7 @@
 
     move-result v1
 
-    .line 252
+    .line 116
     .local v1, commandId:I
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuResourceDepot()Lcom/sec/android/app/camera/MenuResourceDepot;
 
@@ -85,11 +85,11 @@
 
     move-result-object v3
 
-    .line 254
+    .line 117
     .local v3, resIDs:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     if-nez v3, :cond_0
 
-    .line 256
+    .line 118
     const-string v4, "ShootingModeResourceData"
 
     const-string v5, "Cannot find resource ID"
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 122
     :cond_0
     new-instance v0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
@@ -134,15 +134,15 @@
 
     invoke-direct {v0, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 268
+    .line 124
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 272
+    .line 126
     .end local v0           #bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     .end local v1           #commandId:I
     .end local v3           #resIDs:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
@@ -154,7 +154,7 @@
     .locals 2
 
     .prologue
-    .line 73
+    .line 37
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x12c
@@ -165,7 +165,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 79
+    .line 45
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -176,10 +176,10 @@
 
     if-nez v0, :cond_0
 
-    .line 81
+    .line 46
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x13c
+    const/16 v1, 0x140
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -187,19 +187,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 110
+    .line 50
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x13e
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 119
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -210,10 +199,10 @@
 
     if-nez v0, :cond_1
 
-    .line 121
+    .line 51
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x12e
+    const/16 v1, 0x13a
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -221,8 +210,52 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
+    .line 55
     :cond_1
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x13f
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 59
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x13e
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 63
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x12f
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 67
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x133
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 71
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -233,10 +266,10 @@
 
     if-nez v0, :cond_2
 
-    .line 132
+    .line 72
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x13b
+    const/16 v1, 0x12e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -244,7 +277,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 141
+    .line 98
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -256,10 +289,10 @@
 
     if-nez v0, :cond_3
 
-    .line 143
+    .line 99
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    const/16 v1, 0x13a
+    const/16 v1, 0x13b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -267,7 +300,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 152
+    .line 103
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -279,7 +312,7 @@
 
     if-nez v0, :cond_4
 
-    .line 154
+    .line 104
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x13d
@@ -290,41 +323,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 162
+    .line 106
     :cond_4
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x133
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 171
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x12f
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 215
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x139
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 232
     return-void
 .end method
 
@@ -334,16 +334,16 @@
     .locals 1
 
     .prologue
-    .line 280
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    .line 130
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 282
+    .line 131
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/BackCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 284
+    .line 132
     return-void
 .end method

@@ -110,9 +110,9 @@
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mContentResolver:Landroid/content/ContentResolver;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mBaseUri:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mBaseUri:Landroid/net/Uri;
 
     sget-object v2, Lcom/sec/android/app/camera/gallery/VideoList;->VIDEO_PROJECTION:[Ljava/lang/String;
 
@@ -156,7 +156,7 @@
     const/4 v4, 0x0
 
     .line 83
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mBaseUri:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mBaseUri:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
@@ -176,7 +176,7 @@
 
     .line 85
     .local v1, uri:Landroid/net/Uri;
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mContentResolver:Landroid/content/ContentResolver;
 
     const/4 v2, 0x2
 
@@ -373,7 +373,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v3, v0, Lcom/sec/android/app/camera/gallery/VideoList;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->getPosition()I
 
@@ -397,7 +397,7 @@
 
     .prologue
     .line 104
-    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mBucketId:Ljava/lang/String;
+    iget-object v0, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mBucketId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
@@ -411,7 +411,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/BaseImageList;->mBucketId:Ljava/lang/String;
+    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/VideoList;->mBucketId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

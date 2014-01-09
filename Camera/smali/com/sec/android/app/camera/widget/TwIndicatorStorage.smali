@@ -59,7 +59,7 @@
 
     .line 44
     .local v0, attr:Landroid/content/res/TypedArray;
-    const v1, 0x7f02008c
+    const v1, 0x7f020088
 
     invoke-virtual {v0, v4, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -68,7 +68,7 @@
     invoke-virtual {p0, v3, v1}, Lcom/sec/android/app/camera/widget/TwIndicatorStorage;->addImageId(II)V
 
     .line 47
-    const v1, 0x7f02008d
+    const v1, 0x7f020089
 
     invoke-virtual {v0, v3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 

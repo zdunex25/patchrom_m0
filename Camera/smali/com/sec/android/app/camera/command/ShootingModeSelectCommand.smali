@@ -29,7 +29,7 @@
     .line 36
     packed-switch p2, :pswitch_data_0
 
-    .line 85
+    .line 82
     :goto_0
     :pswitch_0
     return-void
@@ -146,17 +146,7 @@
 
     goto :goto_0
 
-    .line 80
-    :pswitch_f
-    const/16 v0, 0x19
-
-    iput v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mShootingMode:I
-
-    goto :goto_0
-
     .line 36
-    nop
-
     :pswitch_data_0
     .packed-switch 0x12c
         :pswitch_1
@@ -180,7 +170,6 @@
         :pswitch_d
         :pswitch_b
         :pswitch_e
-        :pswitch_f
     .end packed-switch
 .end method
 
@@ -190,7 +179,7 @@
     .locals 2
 
     .prologue
-    .line 89
+    .line 86
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -201,18 +190,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 90
+    .line 87
     const-string v0, "ShootingModeSelectCommand"
 
     const-string v1, "return isCapturing.."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
+    .line 105
     :goto_0
     return-void
 
-    .line 94
+    .line 91
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -222,7 +211,7 @@
 
     if-nez v0, :cond_1
 
-    .line 95
+    .line 92
     const-string v0, "ShootingModeSelectCommand"
 
     const-string v1, "return isStartPreview.."
@@ -231,7 +220,7 @@
 
     goto :goto_0
 
-    .line 99
+    .line 96
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -241,7 +230,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 100
+    .line 97
     const-string v0, "ShootingModeSelectCommand"
 
     const-string v1, "return getIsLaunchGallery.."
@@ -250,7 +239,7 @@
 
     goto :goto_0
 
-    .line 104
+    .line 101
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -261,14 +250,14 @@
 
     if-nez v0, :cond_3
 
-    .line 105
+    .line 102
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
     goto :goto_1
 
-    .line 107
+    .line 104
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 

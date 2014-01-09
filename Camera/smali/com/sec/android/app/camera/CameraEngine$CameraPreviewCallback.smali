@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1617
+    .line 1604
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$CameraPreviewCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,14 +43,14 @@
     .parameter "arg1"
 
     .prologue
-    .line 1619
+    .line 1606
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$CameraPreviewCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     const/4 v1, 0x1
 
     #setter for: Lcom/sec/android/app/camera/CameraEngine;->mIsFinishOneShotPreviewCallback:Z
-    invoke-static {v0, v1}, Lcom/sec/android/app/camera/CameraEngine;->access$1402(Lcom/sec/android/app/camera/CameraEngine;Z)Z
+    invoke-static {v0, v1}, Lcom/sec/android/app/camera/CameraEngine;->access$1702(Lcom/sec/android/app/camera/CameraEngine;Z)Z
 
-    .line 1625
+    .line 1609
     return-void
 .end method

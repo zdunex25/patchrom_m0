@@ -36,8 +36,8 @@ opname"</string>
     <string name="SM_PANORAMA">Panorama</string>
     <string name="SM_SMILE">Smile shot</string>
     <string name="SM_FRAME">Kaderopname</string>
-    <string name="SM_BEAUTY">Beauty shot</string>
-    <string name="SM_VINTAGE">Antiek</string>
+    <string name="SM_BEAUTY">Beauty-shot</string>
+    <string name="SM_VINTAGE">Wijn</string>
     <string name="SM_ADDME">Voeg mij toe</string>
     <string name="SM_ACTION">Actiefoto</string>
     <string name="SM_STOPMOTION">Beweging stoppen</string>
@@ -70,8 +70,6 @@ opname"</string>
     <string name="E_EMBOSS">Reliëf</string>
     <string name="E_OUTLINE">Omtrek</string>
     <string name="E_WATERCOLOR">Waterverf</string>
-    <string name="E_MONOCHROME">Monochroom</string>
-    <string name="E_SKETCH">Schets</string>
     <string name="E_WASHED">Vervaagd</string>
     <string name="E_POSTERIZE">Posterisatie</string>
     <string name="E_SOLARIZE">Solarisatie</string>
@@ -129,12 +127,11 @@ opname"</string>
     <string name="SATURATION">Intensiteit</string>
     <string name="SHARPNESS">Scherpte</string>
     <string name="OK_STRING">OK</string>
-    <string name="Title_SceneMode">Scènemodus</string>
+    <string name="Title_SceneMode">Scène-modus</string>
     <string name="Title_SetUp">Instellen</string>
     <string name="Title_Timer">Timer</string>
     <string name="Title_Resolution">Resolutie</string>
     <string name="Title_ShootAndShare">Opname-inst. delen</string>
-    <string name="Title_DeviceList">Apparatenlijst</string>
     <string name="Title_WhiteBalance">Witbalans</string>
     <string name="Title_Effects">Effecten</string>
     <string name="Title_Focus">Focus</string>
@@ -151,12 +148,11 @@ opname"</string>
     <string name="Title_ImageQuality">Beeldkwaliteit</string>
     <string name="Title_Metering">Meting</string>
     <string name="Title_ObjectTracking">Objecttracering</string>
-    <string name="Title_AntiShake">Anti trillen</string>
+    <string name="Title_AntiShake">Anti-trillen</string>
     <string name="Title_BlinkDetection">Knipperdet.</string>
     <string name="Title_AutoContrast">Automatisch contrast</string>
     <string name="Title_GPS">GPS-tag</string>
     <string name="Title_Review">Overzicht</string>
-    <string name="Title_AutoShareShot">Opname automatisch delen</string>
     <string name="Title_Guideline">Richtlijnen</string>
     <string name="Title_VideoQuality">Videokwaliteit</string>
     <string name="Title_AudioRecording">Geluid opnemen</string>
@@ -165,7 +161,7 @@ opname"</string>
     <string name="Title_Mode">Stand</string>
     <string name="Title_Back">Vorige</string>
     <string name="Title_ImageViewer">Afbeeldingenviewer</string>
-    <string name="Title_Outdoor_Visibility">Zichtbaarheid buiten</string>
+    <string name="Title_Outdoor_Visibility">Zichtbaar-heid buiten</string>
     <string name="Title_Flip">Omgekeerd opslaan</string>
     <string name="Title_Self_Portrait">Zelfportret</string>
     <string name="Title_Self_Recording">Zelfopname</string>
@@ -179,10 +175,7 @@ opname"</string>
     <string name="HDR_Helptext">Schud het apparaat niet terwijl u foto´s neemt</string>
     <string name="help_text_panorama">Druk op de cameratoets en beweeg de telefoon langzaam in één richting</string>
     <string name="help_text_panorama_device">Druk op de cameratoets en beweeg het apparaat langzaam in één richting</string>
-    <string name="message_DefaultLayout">De indeling van de snelkoppeling wordt gereset</string>
     <string name="message_EULA_GPS">Als u GPS-tag inschakelt, worden de geografische locatiegegevens in elke foto gekoppeld, ingesloten en opgeslagen. Wees voorzichtig bij het verzenden, delen, distribueren, verzenden of kopiëren van deze foto´s aangezien ze de locatie bevatten waar de foto is genomen</string>
-    <string name="message_Auto_ShareShot">"Door opnames automatisch te delen kunt u eenvoudig verbinding maken met de apparaten waarmee u foto´s wilt delen.
-Schakel Opname automatisch delen in en plaats de apparaten bij elkaar (gewoonlijk rug tegen rug) om verbinding te maken"</string>
     <string name="GPS_msg">GPS uit</string>
     <string name="message_enable_GPS">GPS in Instellingen inschakelen om GPS-tag te gebruiken</string>
     <string name="cancel">Annuleer</string>
@@ -249,11 +242,9 @@ Schakel Opname automatisch delen in en plaats de apparaten bij elkaar (gewoonlij
     <string name="profile_user_default_name">Onbekend</string>
     <string name="shareshot_no_user">Geen personen om mee te delen</string>
     <string name="snapshot_saved">%s opgeslagen</string>
-    <string name="editable_shortcut_reset">Resetten</string>
     <string name="editable_shortcut_helptext_title">Tips</string>
     <string name="editable_shortcut_helptext_message">Tik op sneltoetsen en houd vast om ze te bewerken</string>
-    <string name="editable_shortcut_helptext">Tik op het pictogram en houd het vast, sleep het om de positie van de sneltoetsen te bewerken</string>
-    <string name="sbeam_helptext">Maak foto´s en deel ze met andere apparaten. Plaats de apparaten bij elkaar om apparaten toe te voegen die u wilt delen via S Beam</string>
+    <string name="editable_shortcut_helptext">Tik op het pictogram en houd het vast, en sleep het om de positie van de sneltoetsen te bewerken</string>
     <string name="storage_setting_dialog_title">Opslaglocatie</string>
     <string name="storage_setting_dialog_message">SD-kaart geplaatst. Opslaglocatie wijzigen in SD-kaart?</string>
     <string name="do_not_ask_again">Niet meer laten zien</string>
@@ -262,8 +253,6 @@ Schakel Opname automatisch delen in en plaats de apparaten bij elkaar (gewoonlij
     <string name="bestpic">Beste foto</string>
     <string name="bestpic_on">Aan</string>
     <string name="bestpic_off">Uit</string>
-    <string name="bestgroup">Beste groepspose</string>
-    <string name="bestgroup_title">Sel. beste gezichten voor opsl</string>
     <string name="battery_low">Sluit camera. Temperatuur van accu is te laag</string>
     <string name="buddy_photo_share_helptext">Foto´s maken en met vrienden delen via gezichtsdetectie</string>
     <string name="face_zoom_helptext">Dubbeltik op een gezicht om in of uit te zoomen</string>
@@ -273,7 +262,6 @@ Schakel Opname automatisch delen in en plaats de apparaten bij elkaar (gewoonlij
     <string name="on_device_help_camcorder">Overschakelen naar camcordermodus</string>
     <string name="on_device_help_self">Overschakelen naar zelfportretmodus</string>
     <string name="on_device_help_editable">Houd de sneltoets die u wilt verplaatsen aangeraakt. Sleep deze vervolgens naar de door u gewenste plaats</string>
-    <string name="on_device_help_voicecommand">"U kunt foto's maken met spraakopdrachten als ‘Vastleggen’, ‘Opnemen’, ‘Glimlachen’ en ‘Cheese’."</string>
     <string name="Title_VideoSpeed">Snelheid</string>
     <string name="SPEED_OFF">Normaal</string>
     <string name="SPEED_2X_FASTER">2x sneller</string>
@@ -295,7 +283,4 @@ Schakel Opname automatisch delen in en plaats de apparaten bij elkaar (gewoonlij
     <string name="self_recording_open_warning_popup">Zelfopname kan alleen worden gebruikt wanneer de telefoon is geopend</string>
     <string name="contextual_filename">Contextuele bestandsnaam</string>
     <string name="enable_gps_dialog">GPS-tag moet worden ingeschakeld. GPS-tag inschakelen?</string>
-    <string name="gallery_disable">Galerij is uitgeschakeld</string>
-    <string name="HDR_Normal">Normaal</string>
-    <string name="HDR_Strong">Sterk</string>
 </resources>

@@ -69,8 +69,6 @@
     <string name="E_EMBOSS">Рельеф</string>
     <string name="E_OUTLINE">Контур</string>
     <string name="E_WATERCOLOR">Акварель</string>
-    <string name="E_MONOCHROME">Монохромный</string>
-    <string name="E_SKETCH">Эскиз</string>
     <string name="E_WASHED">Размытие</string>
     <string name="E_POSTERIZE">Постеризация</string>
     <string name="E_SOLARIZE">Соляризация</string>
@@ -123,7 +121,7 @@
     <string name="OPTION_ON">Включено</string>
     <string name="OPTION_OFF">Выключено</string>
     <string name="EXPOSURE_METER">Экспозамер</string>
-    <string name="ADJUST">Настр.</string>
+    <string name="ADJUST">Настроить</string>
     <string name="CONTRAST">Контраст</string>
     <string name="SATURATION">Насыщенность</string>
     <string name="SHARPNESS">Четкость</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Таймер</string>
     <string name="Title_Resolution">Разрешение</string>
     <string name="Title_ShootAndShare">Параметры обмена</string>
-    <string name="Title_DeviceList">Список устройств</string>
     <string name="Title_WhiteBalance">Баланс белого</string>
     <string name="Title_Effects">Эффекты</string>
     <string name="Title_Focus">Фокус</string>
@@ -155,7 +152,6 @@
     <string name="Title_AutoContrast">Автоконтрастность</string>
     <string name="Title_GPS">Тег GPS</string>
     <string name="Title_Review">Просмотр</string>
-    <string name="Title_AutoShareShot">Обмен фотографиями</string>
     <string name="Title_Guideline">Сетка</string>
     <string name="Title_VideoQuality">Качество видео</string>
     <string name="Title_AudioRecording">Запись звука</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">При съемке фотографий не допускайте движения камеры</string>
     <string name="help_text_panorama">Нажмите клавишу камеры и медленно передвигайте телефон в одном направлении</string>
     <string name="help_text_panorama_device">Нажмите клавишу камеры и медленно перемещайте устройство в одном направлении</string>
-    <string name="message_DefaultLayout">Расположение ярлыков будет сброшено</string>
     <string name="message_EULA_GPS">При включении тегов GPS в каждой фотографии будут храниться данные о географическом положении. При отправке, публикации, распространении, передаче и копировании таких фотографий соблюдайте осторожность, так как они содержат данные о месте съемки</string>
-    <string name="message_Auto_ShareShot">"Обмен фотографиями позволяет легко подключаться к устройствам, на которые вы хотите отправить фотографии.
-Включите эту функцию, а затем поднесите устройства друг к другу (обычно задними сторонами), чтобы подключить их"</string>
     <string name="GPS_msg">GPS выкл.</string>
     <string name="message_enable_GPS">Чтобы использовать теги GPS, включите GPS в разделе \"Настройки\"</string>
     <string name="cancel">Отмена</string>
@@ -232,7 +225,7 @@
     <string name="activate_agree">Принять</string>
     <string name="activate_reject">Отказ</string>
     <string name="name_cannot_empty">Введите имя</string>
-    <string name="camera_share">Поделиться</string>
+    <string name="camera_share">Отправить</string>
     <string name="video_play">Воспроизвести</string>
     <string name="camera_toss">Удалить</string>
     <string name="camera_set">Устан.</string>
@@ -248,11 +241,9 @@
     <string name="profile_user_default_name">Неизвестно</string>
     <string name="shareshot_no_user">Нет людей, которым нужно предоставить общий доступ</string>
     <string name="snapshot_saved">%s сохранено</string>
-    <string name="editable_shortcut_reset">Сброс</string>
     <string name="editable_shortcut_helptext_title">Советы</string>
     <string name="editable_shortcut_helptext_message">Нажмите и удерживайте ярлыки, чтобы изменить их</string>
     <string name="editable_shortcut_helptext">Нажмите и удерживайте значок, а затем перетащите его, чтобы изменить положение ярлыка</string>
-    <string name="sbeam_helptext">Обменивайтесь только что снятыми фотографиями с другими устройствами. Поднесите устройства друг к другу, чтобы зарегистрировать их для обмена данными через S Beam</string>
     <string name="storage_setting_dialog_title">Место хранения</string>
     <string name="storage_setting_dialog_message">Вставлена карта памяти SD. Изменить место хранения на карту памяти SD?</string>
     <string name="do_not_ask_again">Не показывать снова</string>
@@ -261,8 +252,6 @@
     <string name="bestpic">Лучшая фотография</string>
     <string name="bestpic_on">Вк</string>
     <string name="bestpic_off">Вык</string>
-    <string name="bestgroup">Лучшая общая фотография</string>
-    <string name="bestgroup_title">Выберите лучшие снимки</string>
     <string name="battery_low">Закройте камеру. Батарея слишком холодная</string>
     <string name="buddy_photo_share_helptext">Автоматическое определение лиц друзей на фотографиях</string>
     <string name="face_zoom_helptext">Для увеличения или уменьшения дважды нажмите лицо</string>
@@ -272,7 +261,6 @@
     <string name="on_device_help_camcorder">Перейти в режим видеокамеры</string>
     <string name="on_device_help_self">Переключиться в режим автопортрета</string>
     <string name="on_device_help_editable">Нажмите и удерживайте ярлык, который нужно переместить. Затем перетащите его в нужное место</string>
-    <string name="on_device_help_voicecommand">Вы можете делать снимки с помощью голосовых команд, таких как \"Съемка\", \"Снимок\", \"Улыбка\" или \"Сыр\"</string>
     <string name="Title_VideoSpeed">Скорость</string>
     <string name="SPEED_OFF">Обычное</string>
     <string name="SPEED_2X_FASTER">В 2 раза быстрее</string>
@@ -294,7 +282,4 @@
     <string name="self_recording_open_warning_popup">Автосъемку можно использовать, только если телефон открыт</string>
     <string name="contextual_filename">Контекстное имя файла</string>
     <string name="enable_gps_dialog">Необходимо включить теги GPS. Сделать это?</string>
-    <string name="gallery_disable">Галерея отключена</string>
-    <string name="HDR_Normal">Обычное</string>
-    <string name="HDR_Strong">Сильный</string>
 </resources>

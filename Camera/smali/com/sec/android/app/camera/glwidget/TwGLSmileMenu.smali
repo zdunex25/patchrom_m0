@@ -97,7 +97,7 @@
 
     .prologue
     .line 34
-    const v0, 0x7f060015
+    const v0, 0x7f060014
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -108,7 +108,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->HELP_TEXT_WIDTH:I
 
     .line 35
-    const v0, 0x7f060016
+    const v0, 0x7f060015
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -119,7 +119,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->HELP_TEXT_HEIGHT:I
 
     .line 36
-    const v0, 0x7f080022
+    const v0, 0x7f080021
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -130,7 +130,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->HELP_TEXT_SIZE:F
 
     .line 37
-    const v0, 0x7f060200
+    const v0, 0x7f0601fb
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -141,7 +141,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SIDEMENU_WIDTH:I
 
     .line 38
-    const v0, 0x7f060072
+    const v0, 0x7f06006d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -152,7 +152,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SCREEN_WIDTH:I
 
     .line 39
-    const v0, 0x7f060073
+    const v0, 0x7f06006e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -193,7 +193,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->HELP_TEXT_Y:I
 
     .line 42
-    const v0, 0x7f0601fe
+    const v0, 0x7f0601f9
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -204,7 +204,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SMILESHOT_BLINK_IMAGE_X:I
 
     .line 43
-    const v0, 0x7f0601ff
+    const v0, 0x7f0601fa
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -215,7 +215,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SMILESHOT_BLINK_IMAGE_Y:I
 
     .line 44
-    const v0, 0x7f060017
+    const v0, 0x7f060016
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -226,7 +226,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SMILESHOT_BLINK_IMAGE_WIDTH:I
 
     .line 45
-    const v0, 0x7f060018
+    const v0, 0x7f060017
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -237,7 +237,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SMILESHOT_BLINK_IMAGE_HEIGHT:I
 
     .line 47
-    const v0, 0x7f060201
+    const v0, 0x7f0601fc
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -248,7 +248,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->SMILESHOT_RECT_POS_X:I
 
     .line 48
-    const v0, 0x7f060019
+    const v0, 0x7f060018
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -365,7 +365,7 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f0900dd
+    const v6, 0x7f0900db
 
     invoke-virtual {p1, v6}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
 
@@ -402,7 +402,7 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x7f02008a
+    const v7, 0x7f020087
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
@@ -495,7 +495,7 @@
     invoke-virtual {v0, v1, v2, v3}, Lcom/sec/android/glview/TwGLImage;->setLeftTop(IFF)V
 
     .line 99
-    const v0, 0x7f040002
+    const/high16 v0, 0x7f04
 
     invoke-static {p1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -781,7 +781,7 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 326
+    .line 328
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -790,7 +790,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 327
+    .line 329
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v1, v1, v0
@@ -801,21 +801,21 @@
 
     if-nez v1, :cond_0
 
-    .line 328
+    .line 330
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 329
+    .line 331
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLRectangle;->resetTranslate()V
 
-    .line 331
+    .line 333
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
@@ -827,27 +827,27 @@
 
     if-nez v1, :cond_1
 
-    .line 332
+    .line 334
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 333
+    .line 335
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLRectangle;->resetTranslate()V
 
-    .line 326
+    .line 328
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 336
+    .line 338
     :cond_2
     return-void
 .end method
@@ -856,14 +856,14 @@
     .locals 2
 
     .prologue
-    .line 243
+    .line 245
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 244
+    .line 246
     return-void
 .end method
 
@@ -871,19 +871,19 @@
     .locals 2
 
     .prologue
-    .line 216
+    .line 218
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     if-eqz v0, :cond_0
 
-    .line 217
+    .line 219
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 219
+    .line 221
     :cond_0
     return-void
 .end method
@@ -892,21 +892,21 @@
     .locals 2
 
     .prologue
-    .line 229
+    .line 231
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mBlinkImage:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 230
+    .line 232
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 231
+    .line 233
     return-void
 .end method
 
@@ -924,7 +924,7 @@
     .locals 1
 
     .prologue
-    .line 239
+    .line 241
     const/4 v0, 0x1
 
     return v0
@@ -934,32 +934,32 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 195
     iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mIsDetecting:Z
 
     if-eqz v0, :cond_1
 
-    .line 195
+    .line 196
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mOnSmileDetectingStoppedListener:Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu$OnSmileDetectingStoppedListener;
 
     if-eqz v0, :cond_0
 
-    .line 196
+    .line 197
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mOnSmileDetectingStoppedListener:Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu$OnSmileDetectingStoppedListener;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu$OnSmileDetectingStoppedListener;->onSmileDetectingStopped()V
 
-    .line 201
+    .line 203
     :cond_0
     :goto_0
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->onBack()V
 
-    .line 202
+    .line 204
     return-void
 
-    .line 199
+    .line 200
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -1012,21 +1012,21 @@
     .locals 2
 
     .prologue
-    .line 205
+    .line 207
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mBlinkImage:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 206
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 208
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->onSmileDetectingStopped()V
 
-    .line 207
+    .line 209
     return-void
 .end method
 
@@ -1045,21 +1045,21 @@
     .locals 2
 
     .prologue
-    .line 251
+    .line 253
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mBlinkImage:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 252
+    .line 254
     const-string v0, "TwGLSmileMenu"
 
     const-string v1, "onStop"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
+    .line 255
     return-void
 .end method
 
@@ -1067,25 +1067,25 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 224
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->setTouchHandled(Z)V
 
-    .line 223
+    .line 225
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->showHelpText()V
 
-    .line 224
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 226
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_0
 
-    .line 225
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 227
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenuItems()V
 
-    .line 226
+    .line 228
     :cond_0
     return-void
 .end method
@@ -1106,14 +1106,14 @@
     .locals 2
 
     .prologue
-    .line 247
+    .line 249
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 248
+    .line 250
     return-void
 .end method
 
@@ -1121,19 +1121,19 @@
     .locals 2
 
     .prologue
-    .line 210
+    .line 212
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 213
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 213
+    .line 215
     :cond_0
     return-void
 .end method
@@ -1142,21 +1142,21 @@
     .locals 2
 
     .prologue
-    .line 234
+    .line 236
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mBlinkImage:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 235
+    .line 237
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mHelpText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 236
+    .line 238
     return-void
 .end method
 
@@ -1165,7 +1165,7 @@
     .parameter "data"
 
     .prologue
-    .line 260
+    .line 262
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1174,7 +1174,7 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 261
+    .line 263
     mul-int/lit8 v5, v1, 0x14
 
     add-int/lit8 v5, v5, 0x0
@@ -1219,7 +1219,7 @@
 
     or-int v2, v5, v6
 
-    .line 264
+    .line 266
     .local v2, left:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1265,7 +1265,7 @@
 
     or-int v4, v5, v6
 
-    .line 267
+    .line 269
     .local v4, top:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1311,7 +1311,7 @@
 
     or-int v3, v5, v6
 
-    .line 270
+    .line 272
     .local v3, right:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1357,7 +1357,7 @@
 
     or-int v0, v5, v6
 
-    .line 276
+    .line 278
     .local v0, bottom:I
     int-to-float v5, v2
 
@@ -1367,7 +1367,7 @@
 
     float-to-int v2, v5
 
-    .line 277
+    .line 279
     int-to-float v5, v4
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1376,7 +1376,7 @@
 
     float-to-int v4, v5
 
-    .line 278
+    .line 280
     int-to-float v5, v3
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1385,7 +1385,7 @@
 
     float-to-int v3, v5
 
-    .line 279
+    .line 281
     int-to-float v5, v0
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1394,7 +1394,7 @@
 
     float-to-int v0, v5
 
-    .line 281
+    .line 283
     sub-int v5, v3, v2
 
     if-lez v5, :cond_1
@@ -1403,7 +1403,7 @@
 
     if-lez v5, :cond_1
 
-    .line 282
+    .line 284
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1430,7 +1430,7 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Lcom/sec/android/glview/TwGLRectangle;->setRect(FFFF)V
 
-    .line 283
+    .line 285
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1439,14 +1439,14 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 260
+    .line 262
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 284
+    .line 286
     :cond_1
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
@@ -1458,7 +1458,7 @@
 
     if-nez v5, :cond_0
 
-    .line 285
+    .line 287
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1467,7 +1467,7 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 286
+    .line 288
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mFaceRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1476,7 +1476,7 @@
 
     goto :goto_1
 
-    .line 289
+    .line 291
     .end local v0           #bottom:I
     .end local v2           #left:I
     .end local v3           #right:I
@@ -1490,7 +1490,7 @@
     .parameter "data"
 
     .prologue
-    .line 294
+    .line 296
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1499,7 +1499,7 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 295
+    .line 297
     mul-int/lit8 v5, v1, 0x14
 
     add-int/lit8 v5, v5, 0x0
@@ -1544,7 +1544,7 @@
 
     or-int v2, v5, v6
 
-    .line 298
+    .line 300
     .local v2, left:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1590,7 +1590,7 @@
 
     or-int v4, v5, v6
 
-    .line 301
+    .line 303
     .local v4, top:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1636,7 +1636,7 @@
 
     or-int v3, v5, v6
 
-    .line 304
+    .line 306
     .local v3, right:I
     mul-int/lit8 v5, v1, 0x14
 
@@ -1682,7 +1682,7 @@
 
     or-int v0, v5, v6
 
-    .line 309
+    .line 311
     .local v0, bottom:I
     int-to-float v5, v2
 
@@ -1692,7 +1692,7 @@
 
     float-to-int v2, v5
 
-    .line 310
+    .line 312
     int-to-float v5, v4
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1701,7 +1701,7 @@
 
     float-to-int v4, v5
 
-    .line 311
+    .line 313
     int-to-float v5, v3
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1710,7 +1710,7 @@
 
     float-to-int v3, v5
 
-    .line 312
+    .line 314
     int-to-float v5, v0
 
     iget v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mPreviewResizeRatio:F
@@ -1719,7 +1719,7 @@
 
     float-to-int v0, v5
 
-    .line 314
+    .line 316
     sub-int v5, v3, v2
 
     if-lez v5, :cond_1
@@ -1728,7 +1728,7 @@
 
     if-lez v5, :cond_1
 
-    .line 315
+    .line 317
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1755,7 +1755,7 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Lcom/sec/android/glview/TwGLRectangle;->setRect(FFFF)V
 
-    .line 316
+    .line 318
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1764,14 +1764,14 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 294
+    .line 296
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 317
+    .line 319
     :cond_1
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
@@ -1783,7 +1783,7 @@
 
     if-nez v5, :cond_0
 
-    .line 318
+    .line 320
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1792,7 +1792,7 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 319
+    .line 321
     iget-object v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mSmileRect:[Lcom/sec/android/glview/TwGLRectangle;
 
     aget-object v5, v5, v1
@@ -1801,7 +1801,7 @@
 
     goto :goto_1
 
-    .line 323
+    .line 325
     .end local v0           #bottom:I
     .end local v2           #left:I
     .end local v3           #right:I
@@ -1818,7 +1818,7 @@
 
     .prologue
     .line 146
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideSideMenuItems()V
 
@@ -1884,7 +1884,7 @@
     const/4 v2, 0x0
 
     .line 157
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenuItems()V
 
@@ -1914,7 +1914,7 @@
     const/4 v2, 0x1
 
     .line 164
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSmileMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenu()V
 

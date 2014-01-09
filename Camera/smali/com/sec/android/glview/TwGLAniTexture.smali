@@ -65,13 +65,13 @@
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLAniTexture;->clearBuffers()V
 
     .line 68
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLUtil;->getByteBufferFromByteArray([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
+    iput-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
 
     .line 70
     iget v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->GRID_SIZE:I
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
+    iput-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
 
     .line 71
     iget v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->GRID_SIZE:I
@@ -133,16 +133,16 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
+    iput-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
 
     .line 73
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
@@ -153,13 +153,13 @@
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     .line 74
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
@@ -203,7 +203,7 @@
     div-float/2addr v6, v7
 
     :try_start_0
-    iput v6, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordWidth:F
+    iput v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordWidth:F
 
     .line 129
     int-to-float v6, p2
@@ -212,7 +212,7 @@
 
     div-float/2addr v6, v7
 
-    iput v6, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordHeight:F
+    iput v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordHeight:F
 
     .line 131
     const/4 v0, 0x0
@@ -249,7 +249,7 @@
 
     div-float/2addr v6, v7
 
-    iget v7, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordWidth:F
+    iget v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordWidth:F
 
     mul-float v2, v6, v7
 
@@ -263,13 +263,13 @@
 
     div-float/2addr v6, v7
 
-    iget v7, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordHeight:F
+    iget v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordHeight:F
 
     mul-float v3, v6, v7
 
     .line 139
     .local v3, v:F
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v0, v1, 0x1
 
@@ -278,7 +278,7 @@
     aput v2, v6, v1
 
     .line 140
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v1, v0, 0x1
 
@@ -306,13 +306,13 @@
     .line 144
     .end local v4           #x:I
     :cond_1
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     invoke-virtual {v6, v7}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
@@ -353,7 +353,7 @@
 
     div-float/2addr v6, v7
 
-    iget v7, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordWidth:F
+    iget v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordWidth:F
 
     mul-float v2, v6, v7
 
@@ -367,13 +367,13 @@
 
     div-float/2addr v6, v7
 
-    iget v7, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordHeight:F
+    iget v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordHeight:F
 
     mul-float v3, v6, v7
 
     .line 154
     .restart local v3       #v:F
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v0, v1, 0x1
 
@@ -382,7 +382,7 @@
     aput v2, v6, v1
 
     .line 155
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v1, v0, 0x1
 
@@ -410,13 +410,13 @@
     .line 159
     .end local v4           #x:I
     :cond_3
-    iget-object v6, p0, Lcom/sec/android/glview/TwGLTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v6, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     invoke-virtual {v6, v7}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
@@ -453,11 +453,11 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTextures:[I
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTextures:[I
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTextureLoaded:Z
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTextureLoaded:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -473,15 +473,15 @@
     .line 171
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
 
     if-nez v0, :cond_3
 
@@ -503,7 +503,7 @@
     :cond_3
     const/16 v0, 0xde1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLTexture;->mTextures:[I
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTextures:[I
 
     const/4 v2, 0x0
 
@@ -512,7 +512,7 @@
     invoke-interface {p1, v0, v1}, Ljavax/microedition/khronos/opengles/GL11;->glBindTexture(II)V
 
     .line 179
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mFlip:Z
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mFlip:Z
 
     const/4 v1, 0x1
 
@@ -525,13 +525,13 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexFlipCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-interface {p1, v0, v1, v2, v3}, Ljavax/microedition/khronos/opengles/GL11;->glTexCoordPointer(IIILjava/nio/Buffer;)V
 
     .line 184
     :goto_1
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTextureReloaded:Z
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTextureReloaded:Z
 
     if-eqz v0, :cond_4
 
@@ -541,19 +541,19 @@
     .line 186
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mTextureReloaded:Z
+    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTextureReloaded:Z
 
     .line 189
     :cond_4
     const/4 v0, 0x4
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     array-length v1, v1
 
     const/16 v2, 0x1401
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndexBuffer:Ljava/nio/ByteBuffer;
 
     invoke-interface {p1, v0, v1, v2, v3}, Ljavax/microedition/khronos/opengles/GL11;->glDrawElements(IIILjava/nio/Buffer;)V
     :try_end_1
@@ -578,7 +578,7 @@
     const/4 v2, 0x0
 
     :try_start_2
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLAniTexture;->mTexCoordBuffer:Ljava/nio/ByteBuffer;
 
     invoke-interface {p1, v0, v1, v2, v3}, Ljavax/microedition/khronos/opengles/GL11;->glTexCoordPointer(IIILjava/nio/Buffer;)V
     :try_end_2
@@ -595,7 +595,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     if-nez v12, :cond_0
 
@@ -610,11 +610,11 @@
 
     new-array v12, v12, [B
 
-    iput-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iput-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     .line 86
     :cond_0
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     if-nez v12, :cond_1
 
@@ -633,7 +633,7 @@
 
     new-array v12, v12, [F
 
-    iput-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iput-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     .line 89
     :cond_1
@@ -747,7 +747,7 @@
 
     .line 103
     .local v9, v:F
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v2, v3, 0x1
 
@@ -756,7 +756,7 @@
     aput-byte v4, v12, v3
 
     .line 104
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v3, v2, 0x1
 
@@ -765,7 +765,7 @@
     aput-byte v5, v12, v2
 
     .line 105
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v2, v3, 0x1
 
@@ -774,7 +774,7 @@
     aput-byte v7, v12, v3
 
     .line 107
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v3, v2, 0x1
 
@@ -783,7 +783,7 @@
     aput-byte v4, v12, v2
 
     .line 108
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v2, v3, 0x1
 
@@ -792,7 +792,7 @@
     aput-byte v7, v12, v3
 
     .line 109
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mIndices:[B
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mIndices:[B
 
     add-int/lit8 v3, v2, 0x1
 
@@ -801,7 +801,7 @@
     aput-byte v6, v12, v2
 
     .line 111
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v0, v1, 0x1
 
@@ -810,7 +810,7 @@
     aput v8, v12, v1
 
     .line 112
-    iget-object v12, p0, Lcom/sec/android/glview/TwGLTexture;->mCoordBuffer:[F
+    iget-object v12, p0, Lcom/sec/android/glview/TwGLAniTexture;->mCoordBuffer:[F
 
     add-int/lit8 v1, v0, 0x1
 

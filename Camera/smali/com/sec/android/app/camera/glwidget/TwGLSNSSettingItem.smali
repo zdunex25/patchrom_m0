@@ -85,7 +85,7 @@
 
     .prologue
     .line 46
-    const v0, 0x7f0601d3
+    const v0, 0x7f0601ce
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -96,7 +96,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_BUTTON_WIDTH:I
 
     .line 47
-    const v0, 0x7f0600ea
+    const v0, 0x7f0600e5
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -107,7 +107,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_BUTTON_HEIGHT:I
 
     .line 48
-    const v0, 0x7f060033
+    const v0, 0x7f060032
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -118,7 +118,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_TEXT_POS_X:I
 
     .line 49
-    const v0, 0x7f0600ec
+    const v0, 0x7f0600e7
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -129,7 +129,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_TEXT_POS_Y:I
 
     .line 50
-    const v0, 0x7f060034
+    const v0, 0x7f060033
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -140,7 +140,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_TEXT_WIDTH:I
 
     .line 51
-    const v0, 0x7f0600ee
+    const v0, 0x7f0600e9
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -151,7 +151,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->LIST_TYPE_TEXT_HEIGHT:I
 
     .line 52
-    const v0, 0x7f06002a
+    const v0, 0x7f060029
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -162,7 +162,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->CHECKBOX_X_OFFSET_FROM_RIGHT:I
 
     .line 53
-    const v0, 0x7f06002b
+    const v0, 0x7f06002a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -173,7 +173,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->CHECKBOX_POS_Y:I
 
     .line 54
-    const v0, 0x7f060107
+    const v0, 0x7f060102
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -193,7 +193,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->IMAGE_ICON_POS_X:I
 
     .line 57
-    const v0, 0x7f060032
+    const v0, 0x7f060031
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -344,7 +344,7 @@
     .parameter "glContext"
 
     .prologue
-    const v4, 0x7f02023d
+    const v4, 0x7f020226
 
     const/4 v7, 0x0
 
@@ -459,7 +459,7 @@
 
     .line 202
     .local v13, height:F
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
+    iget-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mSizeSpecified:Z
 
     if-eqz v0, :cond_5
 
@@ -650,7 +650,7 @@
 
     int-to-float v3, v3
 
-    const v6, 0x7f020057
+    const v6, 0x7f020054
 
     invoke-direct {v0, v1, v2, v3, v6}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -684,7 +684,7 @@
 
     int-to-float v11, v0
 
-    const v12, 0x7f020207
+    const v12, 0x7f0201f4
 
     move v10, v4
 
@@ -1023,7 +1023,7 @@
     if-eqz v2, :cond_0
 
     .line 300
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1085,7 +1085,7 @@
 
     .line 335
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     invoke-interface {v0, p1, p2}, Lcom/sec/android/glview/TwGLView$OnTouchListener;->onTouch(Lcom/sec/android/glview/TwGLView;Landroid/view/MotionEvent;)Z
 
@@ -1096,7 +1096,7 @@
     return v0
 
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     invoke-interface {v0, p1, p2}, Lcom/sec/android/glview/TwGLView$OnTouchListener;->onTouch(Lcom/sec/android/glview/TwGLView;Landroid/view/MotionEvent;)Z
 
@@ -1243,7 +1243,7 @@
     :goto_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mText:Lcom/sec/android/glview/TwGLText;
 
-    const v1, 0x7f08001b
+    const v1, 0x7f08001a
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -1478,10 +1478,10 @@
     const/4 v1, 0x0
 
     .line 310
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     .line 311
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLSNSSettingItem;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     if-nez v0, :cond_4
 

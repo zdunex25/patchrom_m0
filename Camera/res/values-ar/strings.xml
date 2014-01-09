@@ -33,7 +33,7 @@
     <string name="SM_SMILE">لقطة ابتسامة</string>
     <string name="SM_FRAME">لقطة إطار</string>
     <string name="SM_BEAUTY">الجمال</string>
-    <string name="SM_VINTAGE">عتيق</string>
+    <string name="SM_VINTAGE">محصول</string>
     <string name="SM_ADDME">إضافتي</string>
     <string name="SM_ACTION">لقطة الحركة</string>
     <string name="SM_STOPMOTION">إيقاف الحركة</string>
@@ -60,14 +60,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">أسود و أبيض</string>
+    <string name="E_BW">أسود وأبيض</string>
     <string name="E_SEPIA">بني داكن</string>
     <string name="E_NEGATIVE">نيجاتيف</string>
     <string name="E_EMBOSS">بارز</string>
     <string name="E_OUTLINE">تحديد</string>
     <string name="E_WATERCOLOR">لون الماء</string>
-    <string name="E_MONOCHROME">أحادي اللون</string>
-    <string name="E_SKETCH">رسم</string>
     <string name="E_WASHED">باهت</string>
     <string name="E_POSTERIZE">تدرج الألوان</string>
     <string name="E_SOLARIZE">تعريض للشمس</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">نقطة حمراء-صفراء</string>
     <string name="E_CARTOONIZE">رسم كرتوني</string>
     <string name="F_AUTO_FLASH">فلاش تلقائي</string>
-    <string name="F_AUTOFOCUS">ضبط البؤرة</string>
+    <string name="F_AUTOFOCUS">توضيح تلقائي</string>
     <string name="F_MACRO">ماكرو</string>
     <string name="F_FACE">كشف الوجه</string>
     <string name="F_PANFOCUS">ض ب تتبعي</string>
@@ -117,7 +115,7 @@
     <string name="SCN_TEXT">نص</string>
     <string name="SCN_CANDLE_LIGHT">ضوء الشموع</string>
     <string name="SCN_BACK_LIGHT">إضاءة خلفية</string>
-    <string name="OPTION_ON">تشغيل</string>
+    <string name="OPTION_ON">مفعل</string>
     <string name="OPTION_OFF">إلفاء التفعيل</string>
     <string name="EXPOSURE_METER">مقياس التعرض</string>
     <string name="ADJUST">تعديل</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">الموقت</string>
     <string name="Title_Resolution">الدقة</string>
     <string name="Title_ShootAndShare">ضبط مشاركة اللقطة</string>
-    <string name="Title_DeviceList">قائمة الأجهزة</string>
     <string name="Title_WhiteBalance">توازن اللون الأبيض</string>
     <string name="Title_Effects">تأثيرات</string>
     <string name="Title_Focus">تركيز</string>
@@ -152,16 +149,15 @@
     <string name="Title_AutoContrast">تباين تلقائي</string>
     <string name="Title_GPS">علامة GPS</string>
     <string name="Title_Review">إعادة عرض</string>
-    <string name="Title_AutoShareShot">مشاركة اللقطة تلقائيا</string>
     <string name="Title_Guideline">خطوط الإرشاد</string>
     <string name="Title_VideoQuality">جودة الفيديو</string>
     <string name="Title_AudioRecording">تسجيل الصوت</string>
-    <string name="Title_Storage">التخزين</string>
+    <string name="Title_Storage">مكان التخزين</string>
     <string name="Title_Reset">إرجاع</string>
     <string name="Title_Mode">نمط</string>
     <string name="Title_Back">رجوع</string>
     <string name="Title_ImageViewer">عرض الصور</string>
-    <string name="Title_Outdoor_Visibility">الرؤية في الخارج</string>
+    <string name="Title_Outdoor_Visibility">الرؤية الخارجية</string>
     <string name="Title_Flip">حفظ كصورة معكوسة</string>
     <string name="Title_Self_Portrait">صورة شخصية</string>
     <string name="Title_Self_Recording">التسجيل التلقائي</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">احرص على عدم اهتزاز الجهاز أثناء التقاط الصور</string>
     <string name="help_text_panorama">اضغط على مفتاح الكاميرا لنقل الهاتف ببطء في اتجاه واحد</string>
     <string name="help_text_panorama_device">اضغط على مفتاح الكاميرا وحرك الجهاز ببطء في اتجاه واحد</string>
-    <string name="message_DefaultLayout">ستتم إعادة ضبط‬ تخطيط الاختصارات</string>
     <string name="message_EULA_GPS">يؤدي تفعيل علامة GPS إلى إرفاق بيانات الموقع الجغرافية وتضمينها وتخزينها بداخل كل صورة. لذلك، يجب توخي الحذر عند إرسال هذه الصور أو مشاركتها أو توزيعها أو نقلها أو نسخها حيث أنها تحتوي على موقع التقاط الصورة</string>
-    <string name="message_Auto_ShareShot">"تتيح لك ميزة ‏‫مشاركة اللقطة تلقائيا‬ إمكانية الاتصال بالأجهزة التي ترغب في مشاركة الصور معها بسهولة.
-قم بتفعيل مشاركة اللقطة تلقائيا، ثم قم بتقريب الجهازين من بعضهما (عادة من الخلف) لتوصيلهما"</string>
     <string name="GPS_msg">إيقاف GPS</string>
     <string name="message_enable_GPS">تشغيل GPS في الإعدادات لاستخدام علامة GPS</string>
     <string name="cancel">إلغاء</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">مجهول</string>
     <string name="shareshot_no_user">لا يوجد أشخاص للمشاركة معهم</string>
     <string name="snapshot_saved">تم حفظ %s</string>
-    <string name="editable_shortcut_reset">إرجاع</string>
     <string name="editable_shortcut_helptext_title">تلميحات</string>
     <string name="editable_shortcut_helptext_message">انقر مع الاستمرار فوق الاختصارات لتعديلها</string>
     <string name="editable_shortcut_helptext">‏‫انقر مع الاستمرار فوق الرمز، ثم اسحبه إلى موضع تعديل الاختصارات</string>
-    <string name="sbeam_helptext">التقاط الصور ومشاركتها مع أجهزة أخرى. ‏‫قم بتقريب الجهازين من بعضهما لإضافة الأجهزة التي ترغب في مشاركتها عبر S Beam</string>
     <string name="storage_setting_dialog_title">موقع التخزين</string>
     <string name="storage_setting_dialog_message">تم إدخال بطاقة SD. هل تريد تغيير موقع التخزين إلى بطاقة SD؟</string>
     <string name="do_not_ask_again">عدم العرض مرة أخرى</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">أفضل صورة</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">أفضل وضع جماعي</string>
-    <string name="bestgroup_title">تحديد جميع الوجوه الأفضل لحفظها</string>
     <string name="battery_low">أغلق الكاميرا. درجة حرارة بطارية الكاميرا منخفضة للغاية</string>
     <string name="buddy_photo_share_helptext">التقاط الصور ومشاركتها مع الأصدقاء عبر اكتشاف الوجه</string>
     <string name="face_zoom_helptext">‏‫انقر نقرا مزدوجا على الوجه لتكبيره أو تصغيره</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">تبديل إلى وضع كاميرا الفيديو</string>
     <string name="on_device_help_self">انتقل إلى وضع ‏‫صورة شخصية‬</string>
     <string name="on_device_help_editable">انقر مع الاستمرار فوق الاختصار المطلوب نقله. وبعد ذلك، اسحبه حيث تشاء</string>
-    <string name="on_device_help_voicecommand">يمكنك التقاط الصور باستخدام أوامر صوتية‬ مثل ‘التقاط’ و‘تصوير’ و‘ابتسامة’ و‘إيقاف’</string>
     <string name="Title_VideoSpeed">السرعة</string>
     <string name="SPEED_OFF">عادي</string>
     <string name="SPEED_2X_FASTER">أسرع مرتين</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">لا يمكن استخدام التسجيل الذاتي إلا إذا كان الهاتف مفتوحا</string>
     <string name="contextual_filename">اسم الملف السياقي</string>
     <string name="enable_gps_dialog">يلزم تفعيل علامة GPS. هل تريد تفعيل علامة GPS؟</string>
-    <string name="gallery_disable">تم إلغاء تفعيل الاستوديو‬‬</string>
-    <string name="HDR_Normal">عادي</string>
-    <string name="HDR_Strong">قوية</string>
 </resources>

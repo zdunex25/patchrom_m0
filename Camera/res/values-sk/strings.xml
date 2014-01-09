@@ -36,7 +36,7 @@ spustiť fotoaparát"</string>
     <string name="SM_SMILE">Detek. úsmevu</string>
     <string name="SM_FRAME">Záber snímky</string>
     <string name="SM_BEAUTY">Krása</string>
-    <string name="SM_VINTAGE">Staromódny</string>
+    <string name="SM_VINTAGE">Ročník vína</string>
     <string name="SM_ADDME">Pridať ma</string>
     <string name="SM_ACTION">Akčný záber</string>
     <string name="SM_STOPMOTION">Zastaviť pohyb</string>
@@ -63,14 +63,12 @@ spustiť fotoaparát"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Čiernobiely</string>
+    <string name="E_BW">Čiernobiela</string>
     <string name="E_SEPIA">Sépia</string>
     <string name="E_NEGATIVE">Negatív</string>
     <string name="E_EMBOSS">Reliéf</string>
     <string name="E_OUTLINE">Obrys</string>
     <string name="E_WATERCOLOR">Akvarel</string>
-    <string name="E_MONOCHROME">Jednofarebné</string>
-    <string name="E_SKETCH">Náčrt</string>
     <string name="E_WASHED">Vyblednuté</string>
     <string name="E_POSTERIZE">Posterizácia</string>
     <string name="E_SOLARIZE">Solarizácia</string>
@@ -81,7 +79,7 @@ spustiť fotoaparát"</string>
     <string name="E_POINT_RED_YELLOW">Červenožltý bod</string>
     <string name="E_CARTOONIZE">Karikatúra</string>
     <string name="F_AUTO_FLASH">Automatický blesk</string>
-    <string name="F_AUTOFOCUS">Aut. zaos.</string>
+    <string name="F_AUTOFOCUS">Automatické zaostrovanie</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Detekcia tváre</string>
     <string name="F_PANFOCUS">Pan zaostr.</string>
@@ -133,7 +131,6 @@ spustiť fotoaparát"</string>
     <string name="Title_Timer">Časovač</string>
     <string name="Title_Resolution">Rozlíšenie</string>
     <string name="Title_ShootAndShare">Nast. zdieľ. záber.</string>
-    <string name="Title_DeviceList">Zoznam zariadení</string>
     <string name="Title_WhiteBalance">Vyváženie bielej</string>
     <string name="Title_Effects">Efekty</string>
     <string name="Title_Focus">Zaostrené</string>
@@ -155,11 +152,10 @@ spustiť fotoaparát"</string>
     <string name="Title_AutoContrast">Automatický kontrast</string>
     <string name="Title_GPS">Značka GPS</string>
     <string name="Title_Review">Prezrieť</string>
-    <string name="Title_AutoShareShot">Automaticky zdieľať záber</string>
     <string name="Title_Guideline">Vodiace čiary</string>
     <string name="Title_VideoQuality">Kvalita videa</string>
     <string name="Title_AudioRecording">Nahráv. zvuku</string>
-    <string name="Title_Storage">Ukladací priestor</string>
+    <string name="Title_Storage">Úložisko</string>
     <string name="Title_Reset">Vynulovať</string>
     <string name="Title_Mode">Režim</string>
     <string name="Title_Back">Späť</string>
@@ -178,10 +174,7 @@ spustiť fotoaparát"</string>
     <string name="HDR_Helptext">Dávajte pozor, aby ste počas snímania fotografií netriasli zariadením</string>
     <string name="help_text_panorama">Stlačte tlačidlo fotoaparátu a pomaly presúvajte telefón v jednom smere</string>
     <string name="help_text_panorama_device">Stlačte tlačidlo fotoaparátu a pomaly pohybujte zariadením v jednom smere</string>
-    <string name="message_DefaultLayout">Obnoví sa predvolené rozloženie odkazov</string>
     <string name="message_EULA_GPS">Zapnutím značky GPS sa priložia, vložia a uložia údaje o zemepisnej polohe do každej fotografie. Buďte obozretní pri odosielaní, zdieľaní, distribuovaní, prenášaní alebo kopírovaní týchto fotografií, pretože obsahujú informácie o mieste ich nasnímania</string>
-    <string name="message_Auto_ShareShot">"Automatické zdieľanie záberu umožňuje jednoducho sa pripojiť k zariadeniam, s ktorými chcete zdieľať obrázky.
-Zapnite automatické zdieľanie záberu a dajte zariadenia k sebe (obvykle tesne vedľa seba), aby sa spojili"</string>
     <string name="GPS_msg">GPS vypnuté</string>
     <string name="message_enable_GPS">Pred použitím značky GPS zapnite systém GPS v menu Nastavenia</string>
     <string name="cancel">Zrušiť</string>
@@ -248,11 +241,9 @@ Zapnite automatické zdieľanie záberu a dajte zariadenia k sebe (obvykle tesne
     <string name="profile_user_default_name">Neznáma</string>
     <string name="shareshot_no_user">Žiadne osoby na zdieľanie</string>
     <string name="snapshot_saved">%s uložený</string>
-    <string name="editable_shortcut_reset">Vynulovať</string>
     <string name="editable_shortcut_helptext_title">Tipy</string>
     <string name="editable_shortcut_helptext_message">Ťuknutím na skratky a ich podržaním ich môžete upraviť</string>
     <string name="editable_shortcut_helptext">Ťuknite na ikonu a podržte ju a potom ju presuňte do polohy na úpravu odkazov</string>
-    <string name="sbeam_helptext">Snímajte a zdieľajte fotografie s inými zariadeniami. Ak chcete pridať zariadenia na zdieľanie cez S Beam, dajte zariadenia k sebe</string>
     <string name="storage_setting_dialog_title">Umiestnenie úložného priestoru</string>
     <string name="storage_setting_dialog_message">Bola vložená karta SD. Zmeniť umiestnenie úložného priestoru na kartu SD?</string>
     <string name="do_not_ask_again">Už nezobrazovať</string>
@@ -261,8 +252,6 @@ Zapnite automatické zdieľanie záberu a dajte zariadenia k sebe (obvykle tesne
     <string name="bestpic">Najlepšia fotografia</string>
     <string name="bestpic_on">Zap</string>
     <string name="bestpic_off">Vyp</string>
-    <string name="bestgroup">Najlepšia skupinová póza</string>
-    <string name="bestgroup_title">Vyb. najlep. tvár na uloženie</string>
     <string name="battery_low">Zavrite fotoaparát. Teplota batérie je príliš nízka</string>
     <string name="buddy_photo_share_helptext">Prostredníctvom detekcie tváre môžete snímať a zdieľať fotografie s priateľmi</string>
     <string name="face_zoom_helptext">Dvojitým ťuknutím na tvár vykonáte priblíženie alebo oddialenie</string>
@@ -272,7 +261,6 @@ Zapnite automatické zdieľanie záberu a dajte zariadenia k sebe (obvykle tesne
     <string name="on_device_help_camcorder">Prepnúť do režimu videokamery</string>
     <string name="on_device_help_self">Prepnúť do režimu autoportrétu</string>
     <string name="on_device_help_editable">Ťuknite na odkaz, ktorý chcete premiestniť, a podržte ho. Potom ho presuňte na požadované miesto</string>
-    <string name="on_device_help_voicecommand">Hlasovými príkazmi ako Zachytiť, Snímať, Úsmev a Syr môžete snímať fotografie</string>
     <string name="Title_VideoSpeed">Rýchlosť</string>
     <string name="SPEED_OFF">Normálne</string>
     <string name="SPEED_2X_FASTER">2x rýchlejšie</string>
@@ -294,7 +282,4 @@ Zapnite automatické zdieľanie záberu a dajte zariadenia k sebe (obvykle tesne
     <string name="self_recording_open_warning_popup">Nahrávanie samého seba možno použiť iba pri otvorenom telefóne</string>
     <string name="contextual_filename">Kontextový názov súboru</string>
     <string name="enable_gps_dialog">Musí byť povolená značka GPS. Povoliť značku GPS?</string>
-    <string name="gallery_disable">Galéria je vypnutá</string>
-    <string name="HDR_Normal">Normálny</string>
-    <string name="HDR_Strong">﻿Silná</string>
 </resources>

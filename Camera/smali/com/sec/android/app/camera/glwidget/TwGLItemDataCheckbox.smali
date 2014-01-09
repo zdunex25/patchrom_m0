@@ -87,7 +87,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f020218
+    const v4, 0x7f020205
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -104,7 +104,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f020217
+    const v4, 0x7f020204
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -265,7 +265,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020218
+    const v2, 0x7f020205
 
     invoke-direct {v0, v1, v3, v3, v2}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -278,7 +278,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020217
+    const v2, 0x7f020204
 
     invoke-direct {v0, v1, v3, v3, v2}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -418,7 +418,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020218
+    const v2, 0x7f020205
 
     invoke-direct {v0, v1, v3, v3, v2}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -431,7 +431,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020217
+    const v2, 0x7f020204
 
     invoke-direct {v0, v1, v3, v3, v2}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 

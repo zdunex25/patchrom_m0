@@ -38,7 +38,7 @@
     .line 37
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iput-object v0, p0, Lcom/sec/android/app/camera/EmptyView;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     .line 38
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->clear()V
@@ -52,7 +52,7 @@
 
     .prologue
     .line 42
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/EmptyView;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-nez v0, :cond_0
 
@@ -62,7 +62,7 @@
 
     .line 45
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/EmptyView;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 

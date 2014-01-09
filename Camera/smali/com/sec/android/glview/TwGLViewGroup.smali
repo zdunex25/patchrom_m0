@@ -327,7 +327,7 @@
     const/4 v2, 0x0
 
     .line 186
-    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
+    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mInScreen:Z
 
     if-nez v3, :cond_0
 
@@ -620,7 +620,7 @@
 
     move-result-object v5
 
-    iget-boolean v6, p0, Lcom/sec/android/glview/TwGLView;->mManualClip:Z
+    iget-boolean v6, p0, Lcom/sec/android/glview/TwGLViewGroup;->mManualClip:Z
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1295,7 +1295,7 @@
 
     .line 256
     .local v1, resultView:Lcom/sec/android/glview/TwGLView;
-    iget-boolean v5, p0, Lcom/sec/android/glview/TwGLView;->mInScreen:Z
+    iget-boolean v5, p0, Lcom/sec/android/glview/TwGLViewGroup;->mInScreen:Z
 
     if-nez v5, :cond_1
 
@@ -1739,7 +1739,7 @@
     .line 493
     if-eqz v1, :cond_2
 
-    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
+    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mSizeSpecified:Z
 
     if-nez v3, :cond_2
 
@@ -2258,7 +2258,7 @@
     .line 471
     if-eqz v1, :cond_2
 
-    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
+    iget-boolean v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mSizeSpecified:Z
 
     if-nez v3, :cond_2
 

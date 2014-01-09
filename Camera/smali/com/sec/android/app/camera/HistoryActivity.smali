@@ -545,9 +545,9 @@
     .local v0, intent:Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v2, "com.miui.gallery"
+    const-string v2, "com.sec.android.gallery3d"
 
-    const-string v3, "com.miui.gallery.app.Gallery"
+    const-string v3, "com.sec.android.gallery3d.app.Gallery"
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -592,7 +592,7 @@
     invoke-direct {p0}, Lcom/sec/android/app/camera/HistoryActivity;->getHistoryInfoFromDb()V
 
     .line 66
-    const v0, 0x7f0b0015
+    const v0, 0x7f0b001b
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -603,7 +603,7 @@
     iput-object v0, p0, Lcom/sec/android/app/camera/HistoryActivity;->mHistory:Landroid/widget/ListView;
 
     .line 67
-    const v0, 0x7f0b0013
+    const v0, 0x7f0b0019
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/HistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -614,7 +614,7 @@
     iput-object v0, p0, Lcom/sec/android/app/camera/HistoryActivity;->mEmptyGroup:Landroid/widget/LinearLayout;
 
     .line 68
-    const v0, 0x7f0b0014
+    const v0, 0x7f0b001a
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/HistoryActivity;->findViewById(I)Landroid/view/View;
 

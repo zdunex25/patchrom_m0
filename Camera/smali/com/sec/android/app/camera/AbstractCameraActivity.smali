@@ -9,14 +9,6 @@
 .implements Lcom/sec/android/glview/TwGLContext$OnGLInitializeListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/sec/android/app/camera/AbstractCameraActivity$hoverclass;
-    }
-.end annotation
-
-
 # static fields
 .field protected static final AF_HIDE_RECT_TIMER:I = 0x3
 
@@ -28,6 +20,8 @@
 
 .field protected static final CAM_FLASH_AVAILABLE_TEMP:I = -0x32
 
+.field protected static final CHANGE_STORAGE_SETTING_DLG:I = 0x5
+
 .field protected static final CHECK_CALL_DLG:I = 0x2
 
 .field protected static final DIALOG_ID_WIFI_DIRECT_NOTIFICATION:I = 0x4
@@ -37,8 +31,6 @@
 .field protected static final DLG_HIDE:Z = false
 
 .field protected static final DLG_SHOW:Z = true
-
-.field protected static final ENABLE_AUTOSHARESHOT_DLG:I = 0xa
 
 .field protected static final ENABLE_GPS_DLG:I = 0x9
 
@@ -76,11 +68,9 @@
 
 .field protected static final MILLIS_IN_SEC:I = 0x3e8
 
-.field protected static final MULTIWINDOW_TITLE_HEIGHT:I = 0x23
-
 .field public static final NAME_WITH_DATA:I = 0x7d5
 
-.field protected static final NUM_OF_DLG:I = 0xb
+.field protected static final NUM_OF_DLG:I = 0xa
 
 .field public static final ORIENTATION_LANDSCAPE:I = 0x1
 
@@ -95,8 +85,6 @@
 .field public static final REQUEST_ATTACH_IMAGE:I = 0x7d1
 
 .field public static final REQUEST_ATTACH_VIDEO:I = 0x7d2
-
-.field public static final REQUEST_BESTGROUPPOSE_IMAGE:I = 0x7d7
 
 .field public static final REQUEST_BLINKDETECT_IMAGE:I = 0x7d3
 
@@ -114,12 +102,6 @@
 
 .field private static final TAG:Ljava/lang/String; = "AbstractCameraActivity"
 
-.field private static final TAG_BASE:Ljava/lang/String; = "Settings.Multimedia"
-
-.field private static final TAG_CAMERA:Ljava/lang/String; = "Settings.Multimedia.Camera"
-
-.field private static final TAG_CAMERA_SHUTTER:Ljava/lang/String; = "ShutterSound"
-
 .field public static final USERPROFILE_DLG:I = 0x6
 
 .field public static mIsCamcorderSelfIconLoaded:Z
@@ -130,8 +112,6 @@
 
 
 # instance fields
-.field private final DEFAULT_CSC_FILE:Ljava/lang/String;
-
 .field private bAFTimerStarted:Z
 
 .field protected bFlagOverheat:Z
@@ -156,8 +136,6 @@
 
 .field private mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
-.field private mChangeStoragetDialog:Landroid/app/AlertDialog;
-
 .field protected mCheckCalling:Z
 
 .field protected mCheckMemory:Lcom/sec/android/app/camera/CheckMemory;
@@ -180,8 +158,6 @@
 
 .field protected mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-.field protected mEnableDuringCall:Z
-
 .field protected mErrorPopup:Landroid/app/AlertDialog;
 
 .field protected mGLContext:Lcom/sec/android/glview/TwGLContext;
@@ -198,15 +174,13 @@
 
 .field public mIsFromSNS:Z
 
-.field protected mIsPinupMode:Z
-
-.field public mLastElementView:Lcom/sec/android/app/camera/MenuBase;
-
 .field protected mLowBatteryPopup:Landroid/app/AlertDialog;
 
 .field protected mLowBatteryWarningLevel:I
 
 .field protected mMainHandler:Landroid/os/Handler;
+
+.field private mMediaMetadataRetriever:Landroid/media/MediaMetadataRetriever;
 
 .field private mMenuDimController:Lcom/sec/android/app/camera/MenuDimController;
 
@@ -232,8 +206,6 @@
 
 .field protected mResetPopup:Landroid/app/AlertDialog;
 
-.field private mSbeamHelpTextDialog:Landroid/app/AlertDialog;
-
 .field protected mScaleGestureDetector:Landroid/view/ScaleGestureDetector;
 
 .field protected mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
@@ -243,8 +215,6 @@
 .field public mShowWifiDialog:Z
 
 .field protected mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
-
-.field private mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
 
 .field protected mSpinnerDialog:Landroid/app/Dialog;
 
@@ -277,25 +247,25 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 184
+    .line 180
     const/4 v0, 0x5
 
     sput v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_BATTERY_THRESHOLD_VALUE:I
 
-    .line 185
+    .line 181
     const/16 v0, 0x64
 
     sput v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_TEMP_FLASH_THRESHOLD_VALUE:I
 
-    .line 207
+    .line 203
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsEULAenabled:Z
 
-    .line 228
+    .line 213
     sput-boolean v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsCameraSelfIconLoaded:Z
 
-    .line 229
+    .line 214
     sput-boolean v1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsCamcorderSelfIconLoaded:Z
 
     return-void
@@ -309,7 +279,7 @@
 
     const/4 v1, 0x0
 
-    .line 531
+    .line 498
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 97
@@ -319,190 +289,172 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
-    .line 118
+    .line 114
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    .line 133
-    const/16 v0, 0xb
+    .line 128
+    const/16 v0, 0xa
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
-    .line 146
+    .line 141
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 147
+    .line 142
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
 
-    .line 149
+    .line 144
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mUsbMassStorageEnabled:Z
 
-    .line 151
+    .line 146
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
 
-    .line 161
+    .line 156
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChkKeyFromApp:Ljava/lang/String;
 
-    .line 163
+    .line 158
+    new-instance v0, Landroid/media/MediaMetadataRetriever;
+
+    invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
+
+    iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMediaMetadataRetriever:Landroid/media/MediaMetadataRetriever;
+
+    .line 159
     new-instance v0, Lcom/sec/android/app/camera/MenuDimController;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/MenuDimController;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuDimController:Lcom/sec/android/app/camera/MenuDimController;
 
-    .line 164
+    .line 160
     new-instance v0, Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/CameraSettings;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
-    .line 169
+    .line 165
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDisplayBatteryPercentage:I
 
-    .line 172
+    .line 168
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 173
+    .line 169
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    .line 174
+    .line 170
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOpenFailedPopup:Landroid/app/AlertDialog;
 
-    .line 175
+    .line 171
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingFailedPopup:Landroid/app/AlertDialog;
 
-    .line 176
+    .line 172
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBufferOverFlowPopup:Landroid/app/AlertDialog;
 
-    .line 178
+    .line 174
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
-    .line 179
+    .line 175
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 180
+    .line 176
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    .line 181
+    .line 177
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    .line 182
+    .line 178
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    .line 191
+    .line 187
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
 
-    .line 200
+    .line 196
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bAFTimerStarted:Z
 
-    .line 201
+    .line 197
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckMemory:Lcom/sec/android/app/camera/CheckMemory;
 
-    .line 203
+    .line 199
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWifiDialog:Z
 
-    .line 204
+    .line 200
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsFromSNS:Z
 
-    .line 205
+    .line 201
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
 
-    .line 206
+    .line 202
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bFromSecureSetting:Z
 
-    .line 209
+    .line 205
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsDisplayed:Z
 
-    .line 212
-    iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsPinupMode:Z
-
-    .line 215
+    .line 208
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    .line 217
-    iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    .line 220
-    iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
-
-    .line 223
-    iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    .line 225
+    .line 210
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 227
+    .line 212
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    .line 231
-    iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLastElementView:Lcom/sec/android/app/camera/MenuBase;
-
-    .line 233
+    .line 216
     new-instance v0, Lcom/sec/android/app/camera/AbstractCameraActivity$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$1;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
-    .line 247
+    .line 230
     new-instance v0, Lcom/sec/android/app/camera/AbstractCameraActivity$2;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$2;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mInactivityPopupHandler:Landroid/os/Handler;
 
-    .line 263
+    .line 246
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAutoRotation:Z
 
-    .line 273
+    .line 256
     new-instance v0, Lcom/sec/android/app/camera/command/CommandIdMap;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/command/CommandIdMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCommandIdMap:Lcom/sec/android/app/camera/command/CommandIdMap;
 
-    .line 276
+    .line 259
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLInitialized:Z
 
-    .line 278
+    .line 261
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
 
-    .line 537
+    .line 504
     new-instance v0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$3;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 547
+    .line 514
     new-instance v0, Lcom/sec/android/app/camera/AbstractCameraActivity$4;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$4;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mHideWaitingAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 1999
+    .line 1887
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
-    .line 2508
-    invoke-static {}, Lcom/sec/android/app/camera/CscParser;->getCustomerPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->DEFAULT_CSC_FILE:Ljava/lang/String;
-
-    .line 2510
-    iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    .line 532
+    .line 499
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/sec/android/app/camera/AbstractCameraActivity;)Lcom/sec/android/app/camera/CameraSettings;
+.method static synthetic access$000(Lcom/sec/android/app/camera/AbstractCameraActivity;)Lcom/sec/android/app/camera/CameraSettings;
     .locals 1
     .parameter "x0"
 
@@ -513,7 +465,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
+.method static synthetic access$100(Lcom/sec/android/app/camera/AbstractCameraActivity;)Landroid/app/Dialog;
     .locals 1
     .parameter "x0"
 
@@ -524,7 +476,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
+.method static synthetic access$102(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -544,7 +496,7 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 1417
+    .line 1335
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
 
     if-nez v0, :cond_0
@@ -553,15 +505,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 1418
+    .line 1336
     :cond_0
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDlg(I)V
 
-    .line 1422
+    .line 1340
     :goto_0
     return-void
 
-    .line 1420
+    .line 1338
     :cond_1
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
@@ -572,18 +524,18 @@
     .locals 3
 
     .prologue
-    .line 2435
+    .line 2196
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0900d9
+    const v1, 0x7f0900d7
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0900da
+    const v1, 0x7f0900d8
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -591,19 +543,19 @@
 
     const v1, 0x7f090015
 
-    new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$50;
+    new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$43;
 
-    invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$50;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$43;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0900db
+    const v1, 0x7f0900d9
 
-    new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$49;
+    new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$42;
 
-    invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$49;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$42;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -611,7 +563,7 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 2446
+    .line 2207
     return-void
 .end method
 
@@ -619,29 +571,19 @@
     .locals 1
 
     .prologue
-    .line 2118
+    .line 2005
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     if-eqz v0, :cond_0
 
-    .line 2122
+    .line 2006
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v0}, Landroid/opengl/GLSurfaceView;->onPause()V
 
-    .line 2124
+    .line 2008
     :cond_0
     return-void
-.end method
-
-.method protected cameraDuringCall()Z
-    .locals 1
-
-    .prologue
-    .line 2540
-    iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    return v0
 .end method
 
 .method public abstract cancelShutterTimer()V
@@ -665,152 +607,67 @@
 .method public abstract changeWhiteBalancePreview(I)V
 .end method
 
-.method protected checkCameraDuringCall()V
-    .locals 2
-
-    .prologue
-    .line 2532
-    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
-
-    move-result-object v0
-
-    const-string v1, "CscFeature_Camera_EnableCameraDuringCall"
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2533
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    .line 2537
-    :goto_0
-    return-void
-
-    .line 2535
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    goto :goto_0
-.end method
-
 .method public checkCameraStartCondition_Call()Z
-    .locals 6
+    .locals 5
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .line 1451
-    iput-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
+    .line 1343
+    iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
 
-    .line 1453
+    .line 1345
     :try_start_0
-    const-string v4, "phone"
+    const-string v3, "phone"
 
-    invoke-static {v4}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v3}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
+    invoke-static {v3}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
 
     move-result-object v1
 
-    .line 1454
+    .line 1346
     .local v1, phoneServ:Lcom/android/internal/telephony/ITelephony;
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
 
-    .line 1455
+    .line 1347
     invoke-interface {v1}, Lcom/android/internal/telephony/ITelephony;->isOffhook()Z
 
-    move-result v4
+    move-result v3
 
-    iput-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
+    iput-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
 
-    .line 1457
-    iget-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    if-nez v4, :cond_0
-
-    .line 1458
+    .line 1348
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->CannotStartCamera()V
 
-    .line 1459
-    :cond_0
-    iget-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
-
-    if-eqz v4, :cond_2
-
+    .line 1349
     iget-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
 
-    .line 1472
-    .end local v1           #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    :cond_1
-    :goto_0
-    return v3
+    if-eqz v3, :cond_0
 
-    .line 1461
-    .restart local v1       #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    :cond_2
-    const-string v4, "phone2"
-
-    invoke-static {v4}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
-
-    move-result-object v2
-
-    .line 1462
-    .local v2, phoneServ2:Lcom/android/internal/telephony/ITelephony;
-    if-eqz v2, :cond_1
-
-    .line 1463
-    invoke-interface {v2}, Lcom/android/internal/telephony/ITelephony;->isOffhook()Z
-
-    move-result v4
-
-    iput-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
-
-    .line 1465
-    iget-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEnableDuringCall:Z
-
-    if-nez v4, :cond_3
-
-    .line 1466
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->CannotStartCamera()V
-
-    .line 1467
-    :cond_3
-    iget-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
-
-    if-eqz v4, :cond_1
-
-    iget-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
+    iget-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
-
-    .line 1469
+    .line 1362
     .end local v1           #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    .end local v2           #phoneServ2:Lcom/android/internal/telephony/ITelephony;
+    :cond_0
+    :goto_0
+    return v2
+
+    .line 1359
     :catch_0
     move-exception v0
 
-    .line 1470
+    .line 1360
     .local v0, e:Landroid/os/RemoteException;
-    const-string v4, "AbstractCameraActivity"
+    const-string v3, "AbstractCameraActivity"
 
-    const-string v5, "phoneServ.isOffhook() or phoneServ.isVoIPIdle() failed"
+    const-string v4, "phoneServ.isOffhook() or phoneServ.isVoIPIdle() failed"
 
-    invoke-static {v4, v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 .end method
@@ -819,14 +676,14 @@
     .locals 2
 
     .prologue
-    .line 1504
+    .line 1393
     const-string v1, "persist.sys.camera_lock"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1505
+    .line 1394
     .local v0, dev_camera_lock_state:Ljava/lang/String;
     const-string v1, "camera_lock.enabled"
 
@@ -836,10 +693,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 1506
+    .line 1395
     const/4 v1, 0x1
 
-    .line 1508
+    .line 1397
     :goto_0
     return v1
 
@@ -855,10 +712,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1476
+    .line 1366
     iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
 
-    .line 1479
+    .line 1369
     :try_start_0
     const-string v3, "voip"
 
@@ -870,11 +727,11 @@
 
     move-result-object v1
 
-    .line 1480
+    .line 1370
     .local v1, voipInterfaceService:Landroid/os/IVoIPInterface;
     if-eqz v1, :cond_0
 
-    .line 1481
+    .line 1371
     invoke-interface {v1}, Landroid/os/IVoIPInterface;->isVoIPIdle()Z
 
     move-result v3
@@ -886,15 +743,15 @@
     :goto_0
     iput-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
 
-    .line 1483
+    .line 1372
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->CannotStartCamera()V
 
-    .line 1484
+    .line 1373
     iget-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1490
+    .line 1379
     .end local v1           #voipInterfaceService:Landroid/os/IVoIPInterface;
     :cond_0
     :goto_1
@@ -904,15 +761,15 @@
     :cond_1
     move v3, v2
 
-    .line 1481
+    .line 1371
     goto :goto_0
 
-    .line 1486
+    .line 1375
     .end local v1           #voipInterfaceService:Landroid/os/IVoIPInterface;
     :catch_0
     move-exception v0
 
-    .line 1488
+    .line 1377
     .local v0, e1:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -926,10 +783,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2416
+    .line 2177
     const/4 v0, 0x0
 
-    .line 2420
+    .line 2181
     .local v0, ret:Z
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -941,218 +798,56 @@
 
     if-nez v1, :cond_0
 
-    .line 2421
+    .line 2182
     if-ne p1, v2, :cond_1
 
-    .line 2422
+    .line 2183
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->handleFlipClose(Z)V
 
-    .line 2423
+    .line 2184
     const/4 v0, 0x0
 
-    .line 2431
+    .line 2192
     :cond_0
     :goto_0
     return v0
 
-    .line 2425
+    .line 2186
     :cond_1
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_0
 
-    .line 2426
+    .line 2187
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->handleFlipClose(Z)V
 
-    .line 2427
+    .line 2188
     const/4 v0, 0x1
 
     goto :goto_0
 .end method
 
-.method public checkOutgoingCall()Z
-    .locals 10
-
-    .prologue
-    const/4 v7, 0x0
-
-    const/4 v6, 0x1
-
-    .line 1425
-    const/4 v1, 0x1
-
-    .line 1426
-    .local v1, outgoingCall:Z
-    const/4 v2, 0x1
-
-    .line 1428
-    .local v2, outgoingVoipCall:Z
-    :try_start_0
-    const-string v8, "phone"
-
-    invoke-static {v8}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
-
-    move-result-object v3
-
-    .line 1429
-    .local v3, phoneServ:Lcom/android/internal/telephony/ITelephony;
-    if-eqz v3, :cond_0
-
-    .line 1430
-    invoke-interface {v3}, Lcom/android/internal/telephony/ITelephony;->isOffhook()Z
-
-    move-result v8
-
-    if-nez v8, :cond_3
-
-    move v1, v6
-
-    .line 1432
-    :cond_0
-    :goto_0
-    const-string v8, "phone2"
-
-    invoke-static {v8}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
-
-    move-result-object v4
-
-    .line 1433
-    .local v4, phoneServ2:Lcom/android/internal/telephony/ITelephony;
-    if-eqz v4, :cond_1
-
-    .line 1434
-    invoke-interface {v4}, Lcom/android/internal/telephony/ITelephony;->isOffhook()Z
-
-    move-result v8
-
-    if-nez v8, :cond_4
-
-    move v1, v6
-
-    .line 1436
-    :cond_1
-    :goto_1
-    const-string v8, "voip"
-
-    invoke-static {v8}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object v8
-
-    invoke-static {v8}, Landroid/os/IVoIPInterface$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IVoIPInterface;
-
-    move-result-object v5
-
-    .line 1437
-    .local v5, voipInterfaceService:Landroid/os/IVoIPInterface;
-    if-eqz v5, :cond_2
-
-    .line 1438
-    invoke-interface {v5}, Landroid/os/IVoIPInterface;->isVoIPIdle()Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v2
-
-    .line 1444
-    .end local v3           #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    .end local v4           #phoneServ2:Lcom/android/internal/telephony/ITelephony;
-    .end local v5           #voipInterfaceService:Landroid/os/IVoIPInterface;
-    :cond_2
-    :goto_2
-    iget-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
-
-    if-nez v8, :cond_5
-
-    iget-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
-
-    if-nez v8, :cond_5
-
-    .line 1447
-    :goto_3
-    return v6
-
-    .restart local v3       #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    :cond_3
-    move v1, v7
-
-    .line 1430
-    goto :goto_0
-
-    .restart local v4       #phoneServ2:Lcom/android/internal/telephony/ITelephony;
-    :cond_4
-    move v1, v7
-
-    .line 1434
-    goto :goto_1
-
-    .line 1440
-    .end local v3           #phoneServ:Lcom/android/internal/telephony/ITelephony;
-    .end local v4           #phoneServ2:Lcom/android/internal/telephony/ITelephony;
-    :catch_0
-    move-exception v0
-
-    .line 1441
-    .local v0, e:Landroid/os/RemoteException;
-    const-string v8, "AbstractCameraActivity"
-
-    const-string v9, "phoneServ.isOffhook() or phoneServ.isVoIPIdle() failed"
-
-    invoke-static {v8, v9, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_2
-
-    .line 1447
-    .end local v0           #e:Landroid/os/RemoteException;
-    :cond_5
-    iget-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckCalling:Z
-
-    if-eqz v8, :cond_6
-
-    if-nez v1, :cond_7
-
-    :cond_6
-    iget-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCheckVoIPCalling:Z
-
-    if-eqz v8, :cond_8
-
-    if-eqz v2, :cond_8
-
-    :cond_7
-    move v7, v6
-
-    :cond_8
-    move v6, v7
-
-    goto :goto_3
-.end method
-
 .method public checkStorage(ZZ)V
-    .locals 4
+    .locals 5
     .parameter "bMediaStorage"
     .parameter "bBroadcastReceiver"
 
     .prologue
+    const/4 v4, 0x5
+
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 1819
-    if-eqz p1, :cond_3
+    .line 1707
+    if-eqz p1, :cond_4
 
-    .line 1820
+    .line 1708
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1822
+    .line 1710
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
@@ -1161,9 +856,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 1823
+    .line 1711
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuDimController()Lcom/sec/android/app/camera/MenuDimController;
 
     move-result-object v0
@@ -1172,11 +867,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/MenuDimController;->refreshButtonDim(II)V
 
-    .line 1828
+    .line 1716
     :goto_0
     if-eqz p2, :cond_0
 
-    .line 1829
+    .line 1717
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
@@ -1185,13 +880,13 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 1830
+    .line 1718
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1831
+    .line 1719
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDlg(I)V
 
-    .line 1835
+    .line 1723
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
@@ -1199,9 +894,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 1836
+    .line 1724
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
@@ -1210,7 +905,7 @@
 
     move-result v0
 
-    if-eq v0, v3, :cond_1
+    if-eq v0, v3, :cond_2
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -1222,8 +917,27 @@
 
     const/16 v1, 0x11
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->getShootingMode()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->getBurstMode()I
+
+    move-result v0
+
+    if-eq v0, v3, :cond_2
+
+    :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
@@ -1234,24 +948,24 @@
 
     const/16 v1, 0x18
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    .line 1840
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showChangeStoragetDialog()V
+    .line 1729
+    invoke-virtual {p0, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDlg(I)V
 
-    .line 1857
-    :cond_1
+    .line 1745
+    :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->updateRemainTime()V
 
-    .line 1858
+    .line 1746
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->mediaStorageDialog()V
 
-    .line 1859
+    .line 1747
     return-void
 
-    .line 1825
-    :cond_2
+    .line 1713
+    :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuDimController()Lcom/sec/android/app/camera/MenuDimController;
 
     move-result-object v0
@@ -1262,23 +976,23 @@
 
     goto :goto_0
 
-    .line 1844
-    :cond_3
-    if-eqz p2, :cond_4
+    .line 1733
+    :cond_4
+    if-eqz p2, :cond_5
 
-    .line 1845
+    .line 1734
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
-    .line 1847
-    :cond_4
+    .line 1736
+    :cond_5
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1849
+    .line 1738
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->resetStorageMedia()V
 
-    .line 1850
+    .line 1739
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
@@ -1287,25 +1001,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 1851
+    .line 1740
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/CameraSettings;->setChangeStorageSettingDialog(I)V
 
-    .line 1853
-    :cond_5
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    if-eqz v0, :cond_1
-
-    .line 1854
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
+    .line 1742
+    :cond_6
+    invoke-virtual {p0, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
     goto :goto_1
 .end method
@@ -1315,12 +1022,12 @@
     .parameter "storage"
 
     .prologue
-    .line 1788
+    .line 1676
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getAvailableStorage(I)J
 
     move-result-wide v0
 
-    .line 1789
+    .line 1677
     .local v0, lAvailableStorage:J
     const-wide/16 v2, -0x2
 
@@ -1328,14 +1035,14 @@
 
     if-nez v2, :cond_0
 
-    .line 1790
+    .line 1678
     const/4 v2, 0x2
 
-    .line 1796
+    .line 1684
     :goto_0
     return v2
 
-    .line 1792
+    .line 1680
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -1365,12 +1072,12 @@
 
     if-gtz v2, :cond_1
 
-    .line 1794
+    .line 1682
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1796
+    .line 1684
     :cond_1
     const/4 v2, 0x0
 
@@ -1386,24 +1093,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 783
+    .line 722
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     if-eqz v0, :cond_0
 
-    .line 784
+    .line 723
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->clear()V
 
-    .line 785
+    .line 724
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    .line 787
+    .line 726
     :cond_0
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
-    .line 788
+    .line 727
     return-void
 .end method
 
@@ -1411,12 +1118,12 @@
     .locals 1
 
     .prologue
-    .line 2114
+    .line 2001
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 2115
+    .line 2002
     return-void
 .end method
 
@@ -1426,18 +1133,18 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 2457
+    .line 2218
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2458
+    .line 2219
     .local v1, dialog:Landroid/app/AlertDialog$Builder;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
-    .line 2460
+    .line 2221
     .local v2, inflater:Landroid/view/LayoutInflater;
     const v5, 0x7f030006
 
@@ -1447,9 +1154,9 @@
 
     move-result-object v3
 
-    .line 2461
+    .line 2222
     .local v3, layout:Landroid/view/View;
-    const v5, 0x7f0b000f
+    const v5, 0x7f0b0015
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1457,9 +1164,9 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 2462
+    .line 2223
     .local v4, message:Landroid/widget/TextView;
-    const v5, 0x7f0b0010
+    const v5, 0x7f0b0016
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1467,7 +1174,7 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    .line 2464
+    .line 2225
     .local v0, checkBox:Landroid/widget/CheckBox;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -1477,68 +1184,68 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/app/camera/CameraSettings;->setGPS(I)V
 
-    .line 2466
-    const v5, 0x7f0900d7
+    .line 2227
+    const v5, 0x7f0900d6
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2468
+    .line 2229
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 2469
+    .line 2230
     const v5, 0x1010355
 
     invoke-virtual {v1, v5}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2470
+    .line 2231
     const v5, 0x1040014
 
     invoke-virtual {v1, v5}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2471
+    .line 2232
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 2472
+    .line 2233
     invoke-virtual {v0, v7}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 2474
-    new-instance v5, Lcom/sec/android/app/camera/AbstractCameraActivity$51;
+    .line 2235
+    new-instance v5, Lcom/sec/android/app/camera/AbstractCameraActivity$44;
 
-    invoke-direct {v5, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$51;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v5, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$44;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v5}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 2481
+    .line 2242
     const v5, 0x7f0900a1
 
-    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$52;
+    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$45;
 
-    invoke-direct {v6, p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity$52;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/widget/CheckBox;)V
+    invoke-direct {v6, p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity$45;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v1, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2491
-    const v5, 0x7f0900db
+    .line 2252
+    const v5, 0x7f0900d9
 
-    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$53;
+    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$46;
 
-    invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$53;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$46;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v1, v5, v6}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2498
+    .line 2259
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    .line 2499
+    .line 2260
     iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
 
-    .line 2500
+    .line 2261
     return-void
 .end method
 
@@ -1546,16 +1253,16 @@
     .locals 5
 
     .prologue
-    .line 688
+    .line 652
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 689
+    .line 653
     .local v1, log:Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
-    .line 690
+    .line 654
     .local v2, view:Lcom/sec/android/app/camera/MenuBase;
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -1563,7 +1270,7 @@
 
     move-result v3
 
-    .line 691
+    .line 655
     .local v3, viewSize:I
     const/4 v0, 0x0
 
@@ -1571,7 +1278,7 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 692
+    .line 656
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v4, v0}, Ljava/util/Stack;->elementAt(I)Ljava/lang/Object;
@@ -1581,21 +1288,21 @@
     .end local v2           #view:Lcom/sec/android/app/camera/MenuBase;
     check-cast v2, Lcom/sec/android/app/camera/MenuBase;
 
-    .line 693
+    .line 657
     .restart local v2       #view:Lcom/sec/android/app/camera/MenuBase;
     const-string v4, ""
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 694
+    .line 658
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 695
+    .line 659
     const-string v4, " => "
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 696
+    .line 660
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -1606,53 +1313,53 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 697
+    .line 661
     const-string v4, "(Z:"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 698
+    .line 662
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->getZorder()I
 
     move-result v4
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 699
+    .line 663
     const-string v4, ",C:"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 700
+    .line 664
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->isCaptureEnabled()Z
 
     move-result v4
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 701
+    .line 665
     const-string v4, ",P:"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 702
+    .line 666
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->isPreviewTouchEnabled()Z
 
     move-result v4
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 703
+    .line 667
     const-string v4, ")\n"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 691
+    .line 655
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 705
+    .line 669
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1662,21 +1369,16 @@
 .end method
 
 .method public finish()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 629
+    .line 595
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->PauseGLSurface()V
 
-    .line 630
+    .line 596
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
-    .line 632
-    invoke-virtual {p0, v0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->overridePendingTransition(II)V
-
-    .line 633
+    .line 597
     return-void
 .end method
 
@@ -1689,7 +1391,7 @@
 
     const v5, 0x7f0900a1
 
-    .line 1324
+    .line 1242
     const-string v2, "AbstractCameraActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1718,14 +1420,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1326
+    .line 1244
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isFinishing()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1327
+    .line 1245
     const-string v2, "AbstractCameraActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1754,39 +1456,39 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1406
+    .line 1324
     :goto_0
     return-void
 
-    .line 1331
+    .line 1249
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1332
+    .line 1250
     .local v0, dialog:Landroid/app/AlertDialog$Builder;
     const v2, 0x7f090004
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1333
+    .line 1251
     const v2, 0x1010355
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1334
+    .line 1252
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 1336
+    .line 1254
     packed-switch p1, :pswitch_data_0
 
-    .line 1396
+    .line 1314
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1401
+    .line 1319
     :goto_1
     :try_start_0
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -1795,7 +1497,7 @@
 
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
-    .line 1402
+    .line 1320
     iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
@@ -1804,22 +1506,22 @@
 
     goto :goto_0
 
-    .line 1403
+    .line 1321
     :catch_0
     move-exception v1
 
-    .line 1404
+    .line 1322
     .local v1, ex:Ljava/lang/Exception;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finish()V
 
     goto :goto_0
 
-    .line 1339
+    .line 1257
     .end local v1           #ex:Ljava/lang/Exception;
     :pswitch_0
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1340
+    .line 1258
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$5;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$5;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1828,11 +1530,11 @@
 
     goto :goto_1
 
-    .line 1347
+    .line 1265
     :pswitch_1
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1348
+    .line 1266
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$6;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$6;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1841,13 +1543,13 @@
 
     goto :goto_1
 
-    .line 1355
+    .line 1273
     :pswitch_2
     const v2, 0x7f090011
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1356
+    .line 1274
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$7;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$7;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1856,13 +1558,13 @@
 
     goto :goto_1
 
-    .line 1363
+    .line 1281
     :pswitch_3
     const v2, 0x7f090014
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1364
+    .line 1282
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$8;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$8;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1871,13 +1573,13 @@
 
     goto :goto_1
 
-    .line 1371
+    .line 1289
     :pswitch_4
     const v2, 0x7f090012
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1372
+    .line 1290
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$9;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$9;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1886,21 +1588,21 @@
 
     goto :goto_1
 
-    .line 1379
+    .line 1297
     :pswitch_5
     const-string v2, "The firmware is not latest.\nDo you want to continue?"
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 1380
-    const v2, 0x7f0900cd
+    .line 1298
+    const v2, 0x7f0900cc
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1381
-    const v2, 0x7f0900ce
+    .line 1299
+    const v2, 0x7f0900cd
 
     new-instance v3, Lcom/sec/android/app/camera/AbstractCameraActivity$10;
 
@@ -1910,13 +1612,13 @@
 
     goto :goto_1
 
-    .line 1388
+    .line 1306
     :pswitch_6
     const v2, 0x7f090013
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1389
+    .line 1307
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$11;
 
     invoke-direct {v2, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$11;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
@@ -1925,7 +1627,7 @@
 
     goto :goto_1
 
-    .line 1336
+    .line 1254
     nop
 
     :pswitch_data_0
@@ -1945,7 +1647,7 @@
     .locals 1
 
     .prologue
-    .line 869
+    .line 808
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bAFTimerStarted:Z
 
     return v0
@@ -1955,7 +1657,7 @@
     .locals 1
 
     .prologue
-    .line 901
+    .line 840
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAutoRotation:Z
 
     return v0
@@ -1965,7 +1667,7 @@
     .locals 4
 
     .prologue
-    .line 1801
+    .line 1689
     iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
@@ -1976,7 +1678,7 @@
 
     move-result-wide v0
 
-    .line 1803
+    .line 1691
     .local v0, lAvailableStorage:J
     const-wide/16 v2, -0x2
 
@@ -1984,12 +1686,12 @@
 
     if-nez v2, :cond_0
 
-    .line 1804
+    .line 1692
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1806
+    .line 1694
     :cond_0
     return-wide v0
 .end method
@@ -1999,12 +1701,12 @@
     .parameter "storage"
 
     .prologue
-    .line 1810
+    .line 1698
     invoke-static {p1}, Lcom/sec/android/app/camera/CheckMemory;->getAvailableStorage(I)J
 
     move-result-wide v0
 
-    .line 1812
+    .line 1700
     .local v0, lAvailableStorage:J
     const-wide/16 v2, -0x2
 
@@ -2012,12 +1714,12 @@
 
     if-nez v2, :cond_0
 
-    .line 1813
+    .line 1701
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1815
+    .line 1703
     :cond_0
     return-wide v0
 .end method
@@ -2026,7 +1728,7 @@
     .locals 1
 
     .prologue
-    .line 755
+    .line 694
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
 
     return-object v0
@@ -2036,7 +1738,7 @@
     .locals 1
 
     .prologue
-    .line 1988
+    .line 1876
     iget v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBatteryLevel:I
 
     return v0
@@ -2046,7 +1748,7 @@
     .locals 1
 
     .prologue
-    .line 885
+    .line 824
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     return-object v0
@@ -2059,7 +1761,7 @@
     .locals 1
 
     .prologue
-    .line 822
+    .line 761
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCommandIdMap:Lcom/sec/android/app/camera/command/CommandIdMap;
 
     return-object v0
@@ -2069,7 +1771,7 @@
     .locals 1
 
     .prologue
-    .line 659
+    .line 623
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -2085,15 +1787,15 @@
 
     move-result v0
 
-    .line 663
+    .line 627
     :goto_0
     return v0
 
-    .line 660
+    .line 624
     :catch_0
     move-exception v0
 
-    .line 663
+    .line 627
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2103,7 +1805,7 @@
     .locals 1
 
     .prologue
-    .line 1996
+    .line 1884
     iget v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDisplayBatteryPercentage:I
 
     return v0
@@ -2113,7 +1815,7 @@
     .locals 1
 
     .prologue
-    .line 2453
+    .line 2214
     sget-boolean v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsEULAenabled:Z
 
     return v0
@@ -2123,7 +1825,7 @@
     .locals 1
 
     .prologue
-    .line 779
+    .line 718
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
@@ -2133,10 +1835,10 @@
     .locals 1
 
     .prologue
-    .line 2408
+    .line 2169
     const/4 v0, 0x1
 
-    .line 2412
+    .line 2173
     .local v0, ret:I
     return v0
 .end method
@@ -2145,7 +1847,7 @@
     .locals 1
 
     .prologue
-    .line 759
+    .line 698
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     return-object v0
@@ -2155,7 +1857,7 @@
     .locals 1
 
     .prologue
-    .line 1778
+    .line 1666
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsDisplayed:Z
 
     return v0
@@ -2164,22 +1866,22 @@
 .method public abstract getIsLaunchGallery()Z
 .end method
 
-.method public getLastElementView()Lcom/sec/android/app/camera/MenuBase;
-    .locals 1
-
-    .prologue
-    .line 721
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLastElementView:Lcom/sec/android/app/camera/MenuBase;
-
-    return-object v0
-.end method
-
 .method public getMainHandler()Landroid/os/Handler;
     .locals 1
 
     .prologue
-    .line 893
+    .line 832
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method public getMediaMetadataRetriever()Landroid/media/MediaMetadataRetriever;
+    .locals 1
+
+    .prologue
+    .line 844
+    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMediaMetadataRetriever:Landroid/media/MediaMetadataRetriever;
 
     return-object v0
 .end method
@@ -2188,7 +1890,7 @@
     .locals 1
 
     .prologue
-    .line 1895
+    .line 1783
     iget v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
     return v0
@@ -2198,7 +1900,7 @@
     .locals 1
 
     .prologue
-    .line 881
+    .line 820
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuDimController:Lcom/sec/android/app/camera/MenuDimController;
 
     return-object v0
@@ -2208,7 +1910,7 @@
     .locals 1
 
     .prologue
-    .line 897
+    .line 836
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
     return-object v0
@@ -2218,7 +1920,7 @@
     .locals 1
 
     .prologue
-    .line 763
+    .line 702
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
@@ -2228,7 +1930,7 @@
     .locals 1
 
     .prologue
-    .line 775
+    .line 714
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
@@ -2241,7 +1943,7 @@
     .locals 1
 
     .prologue
-    .line 889
+    .line 828
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mScaleGestureDetector:Landroid/view/ScaleGestureDetector;
 
     return-object v0
@@ -2251,7 +1953,7 @@
     .locals 1
 
     .prologue
-    .line 771
+    .line 710
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
@@ -2261,7 +1963,7 @@
     .locals 1
 
     .prologue
-    .line 767
+    .line 706
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
@@ -2274,7 +1976,7 @@
     .locals 4
 
     .prologue
-    .line 2131
+    .line 2015
     const-string v1, "storage"
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2283,7 +1985,7 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 2132
+    .line 2016
     .local v0, mStorageManager:Landroid/os/storage/StorageManager;
     invoke-virtual {v0}, Landroid/os/storage/StorageManager;->isUsbMassStorageEnabled()Z
 
@@ -2291,7 +1993,7 @@
 
     iput-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mUsbMassStorageEnabled:Z
 
-    .line 2133
+    .line 2017
     const-string v1, "AbstractCameraActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2316,32 +2018,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2134
+    .line 2018
     return-void
-.end method
-
-.method protected getWeather()I
-    .locals 1
-
-    .prologue
-    .line 2544
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method protected handleBatteryOverheat()V
     .locals 5
 
     .prologue
-    .line 1942
+    .line 1830
     const-string v1, "AbstractCameraActivity"
 
     const-string v2, "handleBatteryOverheat"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1944
+    .line 1832
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
@@ -2354,33 +2046,33 @@
 
     if-eqz v1, :cond_0
 
-    .line 1977
+    .line 1865
     :goto_0
     return-void
 
-    .line 1948
+    .line 1836
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1949
+    .line 1837
     .local v0, dialog:Landroid/app/AlertDialog$Builder;
     const v1, 0x7f090004
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1950
+    .line 1838
     const v1, 0x1010355
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1951
+    .line 1839
     const v1, 0x7f09000d
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1953
+    .line 1841
     const v1, 0x7f090017
 
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$31;
@@ -2389,31 +2081,31 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1960
+    .line 1848
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 1961
+    .line 1849
     new-instance v1, Lcom/sec/android/app/camera/AbstractCameraActivity$32;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$32;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1974
+    .line 1862
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    .line 1975
+    .line 1863
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 1976
+    .line 1864
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mInactivityPopupHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -2432,7 +2124,7 @@
     .prologue
     const/16 v3, 0x8
 
-    .line 1980
+    .line 1868
     const-string v0, "AbstractCameraActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2455,17 +2147,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1981
+    .line 1869
     if-eqz p1, :cond_0
 
-    .line 1982
+    .line 1870
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDlg(I)V
 
-    .line 1985
+    .line 1873
     :goto_0
     return-void
 
-    .line 1984
+    .line 1872
     :cond_0
     invoke-virtual {p0, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
@@ -2477,14 +2169,14 @@
     .parameter "temp"
 
     .prologue
-    .line 1899
+    .line 1787
     const-string v1, "AbstractCameraActivity"
 
     const-string v2, "handleLowBattery"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1901
+    .line 1789
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
@@ -2497,36 +2189,36 @@
 
     if-eqz v1, :cond_0
 
-    .line 1939
+    .line 1827
     :goto_0
     return-void
 
-    .line 1904
+    .line 1792
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1905
+    .line 1793
     .local v0, dialog:Landroid/app/AlertDialog$Builder;
     const v1, 0x7f090004
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1906
+    .line 1794
     const v1, 0x1010355
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1907
+    .line 1795
     if-eqz p1, :cond_1
 
-    .line 1908
-    const v1, 0x7f090136
+    .line 1796
+    const v1, 0x7f09012e
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1912
+    .line 1800
     :goto_1
     const v1, 0x7f090017
 
@@ -2536,33 +2228,33 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1920
+    .line 1808
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 1921
+    .line 1809
     new-instance v1, Lcom/sec/android/app/camera/AbstractCameraActivity$30;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$30;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1937
+    .line 1825
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 1938
+    .line 1826
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
     goto :goto_0
 
-    .line 1910
+    .line 1798
     :cond_1
     const v1, 0x7f090016
 
@@ -2575,16 +2267,16 @@
     .locals 3
 
     .prologue
-    .line 1886
+    .line 1774
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
-    const/16 v1, 0xb
+    const/16 v1, 0xa
 
     if-ge v0, v1, :cond_1
 
-    .line 1887
+    .line 1775
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
     aget-boolean v1, v1, v0
@@ -2593,23 +2285,23 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1888
+    .line 1776
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
     const/4 v2, 0x0
 
     aput-boolean v2, v1, v0
 
-    .line 1889
+    .line 1777
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->dismissDialog(I)V
 
-    .line 1886
+    .line 1774
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1892
+    .line 1780
     :cond_1
     return-void
 .end method
@@ -2619,19 +2311,19 @@
     .parameter "nId"
 
     .prologue
-    .line 1875
+    .line 1763
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
-    const/16 v1, 0xb
+    const/16 v1, 0xa
 
     if-ge v0, v1, :cond_1
 
-    .line 1876
+    .line 1764
     if-ne v0, p1, :cond_0
 
-    .line 1877
+    .line 1765
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
     aget-boolean v1, v1, v0
@@ -2640,23 +2332,23 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1878
+    .line 1766
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
     const/4 v2, 0x0
 
     aput-boolean v2, v1, v0
 
-    .line 1879
+    .line 1767
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->dismissDialog(I)V
 
-    .line 1875
+    .line 1763
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1883
+    .line 1771
     :cond_1
     return-void
 .end method
@@ -2665,11 +2357,8 @@
     .locals 0
 
     .prologue
-    .line 377
+    .line 354
     return-void
-.end method
-
-.method public abstract hideFocusRect()V
 .end method
 
 .method public abstract hideSideMenu()V
@@ -2682,7 +2371,7 @@
     .locals 2
 
     .prologue
-    .line 2137
+    .line 2021
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -2691,20 +2380,20 @@
 
     move-result-object v0
 
-    .line 2138
+    .line 2022
     .local v0, params:Landroid/view/WindowManager$LayoutParams;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
-    .line 2139
+    .line 2023
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 2140
+    .line 2024
     return-void
 .end method
 
@@ -2712,21 +2401,21 @@
     .locals 2
 
     .prologue
-    .line 567
+    .line 534
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 568
+    .line 535
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mHideWaitingAnimationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 569
+    .line 536
     return-void
 .end method
 
@@ -2736,19 +2425,19 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 572
+    .line 539
     new-instance v3, Landroid/app/Dialog;
 
     invoke-direct {v3, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
-    .line 573
+    .line 540
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 574
+    .line 541
     .local v0, factory:Landroid/view/LayoutInflater;
     const v3, 0x7f030010
 
@@ -2758,9 +2447,9 @@
 
     move-result-object v2
 
-    .line 575
+    .line 542
     .local v2, v:Landroid/view/View;
-    const v3, 0x7f0b002a
+    const v3, 0x7f0b0031
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2768,32 +2457,32 @@
 
     check-cast v1, Landroid/widget/ProgressBar;
 
-    .line 576
+    .line 543
     .local v1, pBar4:Landroid/widget/ProgressBar;
     invoke-virtual {v1, v5}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 579
+    .line 546
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     invoke-virtual {v3, v5}, Landroid/app/Dialog;->requestWindowFeature(I)Z
 
-    .line 580
+    .line 547
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     invoke-virtual {v3, v2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    .line 581
+    .line 548
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     invoke-virtual {v3}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
-    const v4, 0x7f02027f
+    const v4, 0x7f020264
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    .line 582
+    .line 549
     return-void
 .end method
 
@@ -2805,7 +2494,7 @@
 
     const/16 v1, 0x8
 
-    .line 728
+    .line 678
     new-instance v0, Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getBaseContext()Landroid/content/Context;
@@ -2816,7 +2505,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
-    .line 729
+    .line 679
     new-instance v0, Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getApplicationContext()Landroid/content/Context;
@@ -2829,7 +2518,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    .line 733
+    .line 680
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     const/4 v6, 0x4
@@ -2842,7 +2531,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/opengl/GLSurfaceView;->setEGLConfigChooser(IIIIII)V
 
-    .line 735
+    .line 681
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v0}, Landroid/opengl/GLSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -2853,48 +2542,27 @@
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->setFormat(I)V
 
-    .line 739
+    .line 682
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/opengl/GLSurfaceView;->setZOrderMediaOverlay(Z)V
 
-    .line 741
+    .line 683
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0, v1}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
-    .line 742
+    .line 684
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v0, v5}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
-    .line 743
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
-
-    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->isTouchExplorationEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 744
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
-
-    new-instance v1, Lcom/sec/android/app/camera/AbstractCameraActivity$hoverclass;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity$hoverclass;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Lcom/sec/android/app/camera/AbstractCameraActivity$1;)V
-
-    invoke-virtual {v0, v1}, Landroid/opengl/GLSurfaceView;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
-
-    .line 747
-    :cond_0
-    const v0, 0x7f0b0005
+    .line 686
+    const v0, 0x7f0b0006
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -2902,16 +2570,16 @@
 
     check-cast v7, Landroid/widget/LinearLayout;
 
-    .line 748
+    .line 687
     .local v7, glViewLayout:Landroid/widget/LinearLayout;
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v7, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 750
+    .line 689
     iput-boolean v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLInitialized:Z
 
-    .line 751
+    .line 690
     const-string v0, "AXLOG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2944,7 +2612,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
+    .line 691
     return-void
 .end method
 
@@ -2952,7 +2620,7 @@
     .locals 2
 
     .prologue
-    .line 1314
+    .line 1232
     const v1, 0x7f0b0004
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->findViewById(I)Landroid/view/View;
@@ -2961,11 +2629,11 @@
 
     check-cast v0, Lcom/sec/android/app/camera/PreviewFrameLayout;
 
-    .line 1315
+    .line 1233
     .local v0, previewLayout:Lcom/sec/android/app/camera/PreviewFrameLayout;
     invoke-virtual {v0}, Lcom/sec/android/app/camera/PreviewFrameLayout;->invalidate()V
 
-    .line 1316
+    .line 1234
     return-void
 .end method
 
@@ -2979,7 +2647,7 @@
     .locals 1
 
     .prologue
-    .line 1992
+    .line 1880
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bIsCharging:Z
 
     return v0
@@ -2989,7 +2657,7 @@
     .locals 1
 
     .prologue
-    .line 676
+    .line 640
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
@@ -2998,14 +2666,14 @@
 
     if-gtz v0, :cond_0
 
-    .line 677
+    .line 641
     const/4 v0, 0x1
 
-    .line 684
+    .line 648
     :goto_0
     return v0
 
-    .line 680
+    .line 644
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
@@ -3024,11 +2692,11 @@
 
     goto :goto_0
 
-    .line 681
+    .line 645
     :catch_0
     move-exception v0
 
-    .line 684
+    .line 648
     const/4 v0, 0x0
 
     goto :goto_0
@@ -3041,7 +2709,7 @@
     .locals 1
 
     .prologue
-    .line 2161
+    .line 2045
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v0
@@ -3052,10 +2720,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2162
+    .line 2046
     sget-boolean v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsCameraSelfIconLoaded:Z
 
-    .line 2164
+    .line 2048
     :goto_0
     return v0
 
@@ -3069,7 +2737,7 @@
     .locals 4
 
     .prologue
-    .line 905
+    .line 848
     const-string v1, "keyguard"
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3078,11 +2746,11 @@
 
     check-cast v0, Landroid/app/KeyguardManager;
 
-    .line 906
+    .line 849
     .local v0, kgm:Landroid/app/KeyguardManager;
     if-eqz v0, :cond_0
 
-    .line 907
+    .line 850
     const-string v1, "AbstractCameraActivity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3109,7 +2777,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 909
+    .line 852
     :cond_0
     if-eqz v0, :cond_1
 
@@ -3137,7 +2805,7 @@
     .locals 1
 
     .prologue
-    .line 2149
+    .line 2033
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
 
     return v0
@@ -3150,7 +2818,7 @@
     .locals 1
 
     .prologue
-    .line 668
+    .line 632
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -3166,15 +2834,15 @@
 
     move-result v0
 
-    .line 672
+    .line 636
     :goto_0
     return v0
 
-    .line 669
+    .line 633
     :catch_0
     move-exception v0
 
-    .line 672
+    .line 636
     const/4 v0, 0x0
 
     goto :goto_0
@@ -3184,19 +2852,19 @@
     .locals 1
 
     .prologue
-    .line 2107
+    .line 1994
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 2108
+    .line 1995
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
     move-result v0
 
-    .line 2110
+    .line 1997
     :goto_0
     return v0
 
@@ -3213,7 +2881,7 @@
     .locals 1
 
     .prologue
-    .line 2127
+    .line 2011
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mUsbMassStorageEnabled:Z
 
     return v0
@@ -3226,20 +2894,20 @@
     .parameter "str"
 
     .prologue
-    const v6, 0x7f02025a
+    const v6, 0x7f020241
 
     const/4 v7, 0x0
 
-    .line 2002
+    .line 1890
     invoke-virtual {p1}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 2003
+    .line 1891
     .local v1, inflater:Landroid/view/LayoutInflater;
     const v5, 0x7f03000a
 
-    const v4, 0x7f0b001b
+    const v4, 0x7f0b0021
 
     invoke-virtual {p1, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -3251,9 +2919,9 @@
 
     move-result-object v2
 
-    .line 2004
+    .line 1892
     .local v2, layout:Landroid/view/View;
-    const v4, 0x7f0b001c
+    const v4, 0x7f0b0022
 
     invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3261,9 +2929,9 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2005
+    .line 1893
     .local v0, image:Landroid/widget/ImageView;
-    const v4, 0x7f0b001d
+    const v4, 0x7f0b0023
 
     invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3271,34 +2939,34 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 2007
+    .line 1895
     .local v3, text:Landroid/widget/TextView;
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
     if-eqz v4, :cond_0
 
-    .line 2013
+    .line 1901
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 2014
+    .line 1902
     invoke-virtual {v3, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2018
+    .line 1906
     :goto_1
     const/high16 v4, 0x420c
 
     invoke-virtual {v3, v7, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 2019
+    .line 1907
     const/16 v4, 0x10
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 2021
+    .line 1909
     packed-switch p2, :pswitch_data_0
 
-    .line 2038
+    .line 1926
     :goto_2
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
@@ -3308,27 +2976,27 @@
 
     invoke-virtual {v4, v5, v7, v6}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 2039
+    .line 1927
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Landroid/widget/Toast;->setDuration(I)V
 
-    .line 2040
+    .line 1928
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
     invoke-virtual {v4, v2}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
 
-    .line 2041
+    .line 1929
     iget-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
-    .line 2042
+    .line 1930
     return-void
 
-    .line 2010
+    .line 1898
     :cond_0
     new-instance v4, Landroid/widget/Toast;
 
@@ -3338,13 +3006,13 @@
 
     goto :goto_0
 
-    .line 2016
+    .line 1904
     :cond_1
     invoke-virtual {v3, p2}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_1
 
-    .line 2023
+    .line 1911
     :pswitch_0
     const-string v4, "AbstractCameraActivity"
 
@@ -3352,12 +3020,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2024
+    .line 1912
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_2
 
-    .line 2028
+    .line 1916
     :pswitch_1
     const-string v4, "AbstractCameraActivity"
 
@@ -3365,12 +3033,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2029
+    .line 1917
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_2
 
-    .line 2033
+    .line 1921
     :pswitch_2
     const-string v4, "AbstractCameraActivity"
 
@@ -3378,14 +3046,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2034
-    const v4, 0x7f020259
+    .line 1922
+    const v4, 0x7f020240
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_2
 
-    .line 2021
+    .line 1909
     nop
 
     :pswitch_data_0
@@ -3402,19 +3070,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1409
+    .line 1327
     iget v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
     if-eqz v0, :cond_0
 
-    .line 1410
+    .line 1328
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDlg(I)V
 
-    .line 1414
+    .line 1332
     :goto_0
     return-void
 
-    .line 1412
+    .line 1330
     :cond_0
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
@@ -3425,7 +3093,7 @@
     .locals 1
 
     .prologue
-    .line 1051
+    .line 981
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -3435,7 +3103,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1052
+    .line 982
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
@@ -3448,12 +3116,12 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1057
+    .line 987
     :cond_0
     :goto_0
     return-void
 
-    .line 1054
+    .line 984
     :catch_0
     move-exception v0
 
@@ -3468,7 +3136,7 @@
     .parameter "antishake"
 
     .prologue
-    .line 449
+    .line 423
     return-void
 .end method
 
@@ -3477,16 +3145,7 @@
     .parameter "audiorecording"
 
     .prologue
-    .line 495
-    return-void
-.end method
-
-.method public onAutoShareShotModeSelectCommand(I)V
-    .locals 0
-    .parameter "mode"
-
-    .prologue
-    .line 525
+    .line 465
     return-void
 .end method
 
@@ -3495,7 +3154,7 @@
     .parameter "autocontrast"
 
     .prologue
-    .line 452
+    .line 426
     return-void
 .end method
 
@@ -3504,7 +3163,7 @@
     .parameter "blinkdetection"
 
     .prologue
-    .line 455
+    .line 429
     return-void
 .end method
 
@@ -3513,7 +3172,7 @@
     .parameter "mBurstMode"
 
     .prologue
-    .line 516
+    .line 486
     return-void
 .end method
 
@@ -3522,31 +3181,16 @@
     .parameter "quality"
 
     .prologue
-    .line 461
+    .line 435
     return-void
 .end method
 
 .method public onCamcorderSpeedMenuSelect(I)V
-    .locals 1
-    .parameter "speed"
-
-    .prologue
-    .line 467
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onCamcorderSpeedMenuSelect(IZ)V
-
-    .line 468
-    return-void
-.end method
-
-.method public onCamcorderSpeedMenuSelect(IZ)V
     .locals 0
     .parameter "speed"
-    .parameter "isSubMenu"
 
     .prologue
-    .line 464
+    .line 438
     return-void
 .end method
 
@@ -3555,7 +3199,7 @@
     .parameter "quality"
 
     .prologue
-    .line 458
+    .line 432
     return-void
 .end method
 
@@ -3564,7 +3208,7 @@
     .parameter "contextualFilename"
 
     .prologue
-    .line 519
+    .line 489
     return-void
 .end method
 
@@ -3573,28 +3217,26 @@
     .parameter "contrast"
 
     .prologue
-    .line 398
+    .line 375
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
     .parameter "savedInstanceState"
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 1180
+    .line 1098
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 1181
+    .line 1099
     const-string v1, "AbstractCameraActivity"
 
     const-string v2, "onCreate"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1183
+    .line 1101
     const-string v1, "power"
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3603,9 +3245,9 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 1184
+    .line 1102
     .local v0, pm:Landroid/os/PowerManager;
-    const v1, 0x2000000a
+    const/16 v1, 0xa
 
     const-string v2, "AbstractCameraActivity"
 
@@ -3615,24 +3257,23 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1185
+    .line 1103
     invoke-static {p0}, Lcom/sec/android/app/camera/CheckMemory;->setStorageVolume(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
-    .line 1187
+    .line 1105
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bFlagOverheat:Z
 
-    .line 1188
-    iput-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
+    .line 1106
+    const/4 v1, 0x0
 
-    .line 1191
+    iput-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
+
+    .line 1109
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideStatusIcon()V
 
-    .line 1194
-    iput-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsPinupMode:Z
-
-    .line 1195
+    .line 1112
     return-void
 .end method
 
@@ -3641,31 +3282,31 @@
     .parameter "id"
 
     .prologue
-    .line 1512
+    .line 1401
     const-string v10, "ro.csc.country_code"
 
     invoke-static {v10}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1514
+    .line 1403
     .local v8, country_code:Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 1746
+    .line 1634
     :pswitch_0
     const/4 v10, 0x0
 
     :goto_0
     return-object v10
 
-    .line 1516
+    .line 1405
     :pswitch_1
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1517
+    .line 1406
     .local v0, builder1:Landroid/app/AlertDialog$Builder;
     const v10, 0x7f090004
 
@@ -3699,30 +3340,30 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1537
+    .line 1427
     new-instance v10, Lcom/sec/android/app/camera/AbstractCameraActivity$13;
 
     invoke-direct {v10, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$13;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1547
+    .line 1437
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto :goto_0
 
-    .line 1549
+    .line 1439
     .end local v0           #builder1:Landroid/app/AlertDialog$Builder;
     :pswitch_2
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1550
+    .line 1440
     .local v1, builder2:Landroid/app/AlertDialog$Builder;
-    const v10, 0x7f0900df
+    const v10, 0x7f0900dd
 
     invoke-virtual {v1, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -3734,7 +3375,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0900cd
+    const v11, 0x7f0900cc
 
     new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$15;
 
@@ -3744,7 +3385,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0900ce
+    const v11, 0x7f0900cd
 
     new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$14;
 
@@ -3752,21 +3393,21 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1564
+    .line 1454
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto :goto_0
 
-    .line 1566
+    .line 1456
     .end local v1           #builder2:Landroid/app/AlertDialog$Builder;
     :pswitch_3
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1568
+    .line 1458
     .local v2, builder3:Landroid/app/AlertDialog$Builder;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -3780,12 +3421,12 @@
 
     if-eqz v10, :cond_0
 
-    .line 1569
+    .line 1459
     const v10, 0x7f090019
 
     invoke-virtual {v2, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1576
+    .line 1464
     :goto_1
     const v10, 0x7f090004
 
@@ -3813,21 +3454,21 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1583
+    .line 1471
     new-instance v10, Lcom/sec/android/app/camera/AbstractCameraActivity$17;
 
     invoke-direct {v10, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$17;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v2, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1593
+    .line 1481
     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto/16 :goto_0
 
-    .line 1573
+    .line 1461
     :cond_0
     const v10, 0x7f090018
 
@@ -3835,20 +3476,20 @@
 
     goto :goto_1
 
-    .line 1596
+    .line 1484
     .end local v2           #builder3:Landroid/app/AlertDialog$Builder;
     :pswitch_4
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1597
+    .line 1485
     .local v3, builder4:Landroid/app/AlertDialog$Builder;
-    const v10, 0x7f090106
+    const v10, 0x7f090104
 
     invoke-virtual {v3, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1598
+    .line 1486
     const-string v10, "China"
 
     invoke-virtual {v10, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3873,19 +3514,19 @@
 
     if-eqz v10, :cond_2
 
-    .line 1599
+    .line 1487
     :cond_1
-    const v10, 0x7f090108
+    const v10, 0x7f090106
 
     invoke-virtual {v3, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1603
+    .line 1491
     :goto_2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    const v11, 0x7f09010c
+    const v11, 0x7f09010a
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3897,12 +3538,12 @@
 
     invoke-virtual {v3, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1615
+    .line 1503
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    const v11, 0x7f09010d
+    const v11, 0x7f09010b
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3914,35 +3555,35 @@
 
     invoke-virtual {v3, v10, v11}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1625
+    .line 1513
     invoke-virtual {v3}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto/16 :goto_0
 
-    .line 1601
+    .line 1489
     :cond_2
-    const v10, 0x7f090107
+    const v10, 0x7f090105
 
     invoke-virtual {v3, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     goto :goto_2
 
-    .line 1628
+    .line 1516
     .end local v3           #builder4:Landroid/app/AlertDialog$Builder;
     :pswitch_5
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v4, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1629
+    .line 1517
     .local v4, builder5:Landroid/app/AlertDialog$Builder;
-    const v10, 0x7f090109
+    const v10, 0x7f090107
 
     invoke-virtual {v4, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1630
+    .line 1518
     const-string v10, "China"
 
     invoke-virtual {v10, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3967,19 +3608,19 @@
 
     if-eqz v10, :cond_4
 
-    .line 1631
+    .line 1519
     :cond_3
-    const v10, 0x7f09010b
+    const v10, 0x7f090109
 
     invoke-virtual {v4, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1635
+    .line 1523
     :goto_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    const v11, 0x7f09010c
+    const v11, 0x7f09010a
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3991,12 +3632,12 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1652
+    .line 1540
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    const v11, 0x7f09010d
+    const v11, 0x7f09010b
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4008,31 +3649,89 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1663
+    .line 1551
     new-instance v10, Lcom/sec/android/app/camera/AbstractCameraActivity$22;
 
     invoke-direct {v10, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$22;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v4, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1675
+    .line 1563
     invoke-virtual {v4}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto/16 :goto_0
 
-    .line 1633
+    .line 1521
     :cond_4
-    const v10, 0x7f09010a
+    const v10, 0x7f090108
 
     invoke-virtual {v4, v10}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     goto :goto_3
 
-    .line 1678
+    .line 1566
     .end local v4           #builder5:Landroid/app/AlertDialog$Builder;
     :pswitch_6
+    new-instance v5, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v5, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 1567
+    .local v5, builder6:Landroid/app/AlertDialog$Builder;
+    const v10, 0x7f090126
+
+    invoke-virtual {v5, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    const v11, 0x1010355
+
+    invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    const v11, 0x7f090127
+
+    invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    const/4 v11, 0x1
+
+    invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    const v11, 0x7f0900a1
+
+    new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$24;
+
+    invoke-direct {v12, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$24;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+
+    invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v10
+
+    const v11, 0x7f0900d9
+
+    new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$23;
+
+    invoke-direct {v12, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$23;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+
+    invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 1582
+    invoke-virtual {v5}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v10
+
+    goto/16 :goto_0
+
+    .line 1585
+    .end local v5           #builder6:Landroid/app/AlertDialog$Builder;
+    :pswitch_7
     const-string v10, "AbstractCameraActivity"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -4061,7 +3760,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1679
+    .line 1586
     iget-object v10, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/CameraSettings;->getSelfMode()I
@@ -4072,13 +3771,13 @@
 
     if-ne v10, v11, :cond_6
 
-    .line 1680
-    new-instance v5, Landroid/app/AlertDialog$Builder;
+    .line 1587
+    new-instance v6, Landroid/app/AlertDialog$Builder;
 
-    invoke-direct {v5, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1681
-    .local v5, builder7:Landroid/app/AlertDialog$Builder;
+    .line 1588
+    .local v6, builder7:Landroid/app/AlertDialog$Builder;
     iget-object v10, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/CameraSettings;->getMode()I
@@ -4087,60 +3786,60 @@
 
     if-nez v10, :cond_5
 
-    const v9, 0x7f090161
+    const v9, 0x7f090157
 
-    .line 1683
+    .line 1590
     .local v9, msgId01:I
     :goto_4
     const v10, 0x7f090004
 
-    invoke-virtual {v5, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v6, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1684
+    .line 1591
     const v10, 0x1010355
 
-    invoke-virtual {v5, v10}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v6, v10}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1685
-    invoke-virtual {v5, v9}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+    .line 1592
+    invoke-virtual {v6, v9}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1686
+    .line 1593
     const/4 v10, 0x0
 
-    invoke-virtual {v5, v10}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v6, v10}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 1687
+    .line 1594
     const v10, 0x7f0900a1
 
-    new-instance v11, Lcom/sec/android/app/camera/AbstractCameraActivity$23;
+    new-instance v11, Lcom/sec/android/app/camera/AbstractCameraActivity$25;
 
-    invoke-direct {v11, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$23;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v11, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$25;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
-    invoke-virtual {v5, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v6, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1692
-    new-instance v10, Lcom/sec/android/app/camera/AbstractCameraActivity$24;
+    .line 1599
+    new-instance v10, Lcom/sec/android/app/camera/AbstractCameraActivity$26;
 
-    invoke-direct {v10, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$24;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
+    invoke-direct {v10, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$26;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
-    invoke-virtual {v5, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v6, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1702
-    invoke-virtual {v5}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    .line 1609
+    invoke-virtual {v6}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto/16 :goto_0
 
-    .line 1681
+    .line 1588
     .end local v9           #msgId01:I
     :cond_5
-    const v9, 0x7f090162
+    const v9, 0x7f090158
 
     goto :goto_4
 
-    .line 1705
-    .end local v5           #builder7:Landroid/app/AlertDialog$Builder;
+    .line 1612
+    .end local v6           #builder7:Landroid/app/AlertDialog$Builder;
     :cond_6
     const-string v10, "AbstractCameraActivity"
 
@@ -4148,27 +3847,27 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1706
+    .line 1613
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 1709
-    :pswitch_7
+    .line 1616
+    :pswitch_8
     const/4 v10, 0x0
 
     invoke-virtual {p0, v10}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setGpsPopupDisplayed(Z)V
 
-    .line 1710
-    new-instance v6, Landroid/app/AlertDialog$Builder;
+    .line 1617
+    new-instance v7, Landroid/app/AlertDialog$Builder;
 
-    invoke-direct {v6, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1711
-    .local v6, builder8:Landroid/app/AlertDialog$Builder;
-    const v10, 0x7f09012b
+    .line 1618
+    .local v7, builder8:Landroid/app/AlertDialog$Builder;
+    const v10, 0x7f090126
 
-    invoke-virtual {v6, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v7, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v10
 
@@ -4178,64 +3877,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f090164
-
-    invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v10
-
-    const/4 v11, 0x1
-
-    invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v10
-
-    const v11, 0x7f0900a1
-
-    new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$26;
-
-    invoke-direct {v12, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$26;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v10
-
-    const v11, 0x7f0900db
-
-    new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$25;
-
-    invoke-direct {v12, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$25;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 1725
-    invoke-virtual {v6}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v10
-
-    goto/16 :goto_0
-
-    .line 1727
-    .end local v6           #builder8:Landroid/app/AlertDialog$Builder;
-    :pswitch_8
-    const/4 v10, 0x0
-
-    invoke-virtual {p0, v10}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setGpsPopupDisplayed(Z)V
-
-    .line 1728
-    new-instance v7, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v7, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 1729
-    .local v7, builder9:Landroid/app/AlertDialog$Builder;
-    const v10, 0x7f0900bd
-
-    invoke-virtual {v7, v10}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v10
-
-    const v11, 0x7f0900d8
+    const v11, 0x7f09015a
 
     invoke-virtual {v10, v11}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -4257,7 +3899,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0900db
+    const v11, 0x7f0900d9
 
     new-instance v12, Lcom/sec/android/app/camera/AbstractCameraActivity$27;
 
@@ -4265,16 +3907,14 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1743
+    .line 1632
     invoke-virtual {v7}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
     goto/16 :goto_0
 
-    .line 1514
-    nop
-
+    .line 1403
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -4282,10 +3922,9 @@
         :pswitch_3
         :pswitch_4
         :pswitch_5
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
         :pswitch_6
+        :pswitch_0
+        :pswitch_0
         :pswitch_7
         :pswitch_8
     .end packed-switch
@@ -4297,14 +3936,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1219
+    .line 1136
     const-string v0, "AbstractCameraActivity"
 
     const-string v1, "onDestroy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1221
+    .line 1138
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -4313,12 +3952,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1222
+    .line 1139
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1225
+    .line 1142
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
@@ -4326,208 +3965,208 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->clear()V
 
-    .line 1226
+    .line 1143
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
-    .line 1228
+    .line 1145
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
-    .line 1230
+    .line 1147
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     if-eqz v0, :cond_1
 
-    .line 1231
+    .line 1148
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->cancel()V
 
-    .line 1232
+    .line 1149
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
-    .line 1235
+    .line 1152
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_2
 
-    .line 1236
+    .line 1153
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
-    .line 1237
+    .line 1154
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mErrorPopup:Landroid/app/AlertDialog;
 
-    .line 1240
+    .line 1157
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOpenFailedPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_3
 
-    .line 1241
+    .line 1158
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOpenFailedPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
-    .line 1242
+    .line 1159
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOpenFailedPopup:Landroid/app/AlertDialog;
 
-    .line 1245
+    .line 1162
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingFailedPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_4
 
-    .line 1246
+    .line 1163
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingFailedPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
-    .line 1247
+    .line 1164
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingFailedPopup:Landroid/app/AlertDialog;
 
-    .line 1250
+    .line 1167
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBufferOverFlowPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_5
 
-    .line 1251
+    .line 1168
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBufferOverFlowPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
-    .line 1252
+    .line 1169
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBufferOverFlowPopup:Landroid/app/AlertDialog;
 
-    .line 1255
+    .line 1172
     :cond_5
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     if-eqz v0, :cond_6
 
-    .line 1256
+    .line 1173
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLContext;->clear()V
 
-    .line 1257
+    .line 1174
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    .line 1260
+    .line 1177
     :cond_6
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_7
 
-    .line 1261
+    .line 1178
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1262
+    .line 1179
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1265
+    .line 1182
     :cond_7
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_8
 
-    .line 1266
+    .line 1183
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1267
+    .line 1184
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1270
+    .line 1187
     :cond_8
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_9
 
-    .line 1271
+    .line 1188
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1272
+    .line 1189
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1275
+    .line 1192
     :cond_9
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_a
 
-    .line 1276
+    .line 1193
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1277
+    .line 1194
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1280
+    .line 1197
     :cond_a
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_b
 
-    .line 1281
+    .line 1198
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1282
+    .line 1199
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1285
+    .line 1202
     :cond_b
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCommandIdMap:Lcom/sec/android/app/camera/command/CommandIdMap;
 
     if-eqz v0, :cond_c
 
-    .line 1286
+    .line 1203
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCommandIdMap:Lcom/sec/android/app/camera/command/CommandIdMap;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/command/CommandIdMap;->clear()V
 
-    .line 1287
+    .line 1204
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCommandIdMap:Lcom/sec/android/app/camera/command/CommandIdMap;
 
-    .line 1289
+    .line 1206
     :cond_c
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_d
 
-    .line 1290
+    .line 1207
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1291
+    .line 1208
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1294
+    .line 1211
     :cond_d
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseIndicatorsRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-eqz v0, :cond_e
 
-    .line 1295
+    .line 1212
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseIndicatorsRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1296
+    .line 1213
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseIndicatorsRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 1299
+    .line 1216
     :cond_e
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuDimController()Lcom/sec/android/app/camera/MenuDimController;
 
@@ -4535,25 +4174,28 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/MenuDimController;->clear()V
 
-    .line 1300
+    .line 1217
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuDimController:Lcom/sec/android/app/camera/MenuDimController;
 
-    .line 1302
+    .line 1219
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mHideWaitingAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 1303
+    .line 1220
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 1304
+    .line 1221
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mInactivityPopupHandler:Landroid/os/Handler;
 
-    .line 1305
+    .line 1222
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
-    .line 1307
+    .line 1223
+    iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMediaMetadataRetriever:Landroid/media/MediaMetadataRetriever;
+
+    .line 1225
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 1308
+    .line 1226
     return-void
 .end method
 
@@ -4561,7 +4203,7 @@
     .locals 0
 
     .prologue
-    .line 416
+    .line 390
     return-void
 .end method
 
@@ -4569,7 +4211,7 @@
     .locals 0
 
     .prologue
-    .line 498
+    .line 468
     return-void
 .end method
 
@@ -4578,7 +4220,7 @@
     .parameter "effect"
 
     .prologue
-    .line 392
+    .line 369
     return-void
 .end method
 
@@ -4587,7 +4229,7 @@
     .parameter "type"
 
     .prologue
-    .line 513
+    .line 483
     return-void
 .end method
 
@@ -4596,7 +4238,7 @@
     .parameter "exposureValue"
 
     .prologue
-    .line 428
+    .line 402
     return-void
 .end method
 
@@ -4605,7 +4247,7 @@
     .parameter "exposuremeter"
 
     .prologue
-    .line 440
+    .line 414
     return-void
 .end method
 
@@ -4614,7 +4256,7 @@
     .parameter "flashMode"
 
     .prologue
-    .line 374
+    .line 351
     return-void
 .end method
 
@@ -4623,7 +4265,7 @@
     .parameter "flip"
 
     .prologue
-    .line 501
+    .line 471
     return-void
 .end method
 
@@ -4632,7 +4274,7 @@
     .parameter "focusMode"
 
     .prologue
-    .line 371
+    .line 348
     return-void
 .end method
 
@@ -4641,13 +4283,13 @@
     .parameter "rootView"
 
     .prologue
-    const v12, 0x7f060090
+    const v12, 0x7f06008b
 
-    const v11, 0x7f060077
+    const v11, 0x7f060072
 
     const/4 v2, 0x0
 
-    .line 791
+    .line 730
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -4656,7 +4298,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060072
+    const v1, 0x7f06006d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -4664,7 +4306,7 @@
 
     float-to-int v10, v0
 
-    .line 792
+    .line 731
     .local v10, SCREEN_WIDTH:I
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -4674,7 +4316,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060073
+    const v1, 0x7f06006e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -4682,13 +4324,13 @@
 
     float-to-int v9, v0
 
-    .line 794
+    .line 733
     .local v9, SCREEN_HEIGHT:I
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     if-nez v0, :cond_0
 
-    .line 795
+    .line 734
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4705,7 +4347,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 796
+    .line 735
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4722,7 +4364,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 797
+    .line 736
     new-instance v3, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4769,7 +4411,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060091
+    const v1, 0x7f06008c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -4785,7 +4427,7 @@
 
     iput-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 803
+    .line 742
     new-instance v3, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4816,7 +4458,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060076
+    const v1, 0x7f060071
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -4848,7 +4490,7 @@
 
     iput-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 806
+    .line 745
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4865,7 +4507,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 807
+    .line 746
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4882,7 +4524,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseIndicatorsRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 808
+    .line 747
     new-instance v0, Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -4899,48 +4541,48 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 809
+    .line 748
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseIndicatorsRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 810
+    .line 749
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 811
+    .line 750
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSideMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 812
+    .line 751
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 813
+    .line 752
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShootingmodeRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 814
+    .line 753
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mRecordingMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 815
+    .line 754
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPopupMenuRoot:Lcom/sec/android/glview/TwGLViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 818
+    .line 757
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLInitialized:Z
 
-    .line 819
+    .line 758
     return-void
 .end method
 
@@ -4949,7 +4591,7 @@
     .parameter "gps"
 
     .prologue
-    .line 474
+    .line 444
     return-void
 .end method
 
@@ -4958,7 +4600,7 @@
     .parameter "guideline"
 
     .prologue
-    .line 471
+    .line 441
     return-void
 .end method
 
@@ -4967,7 +4609,7 @@
     .parameter "hdr"
 
     .prologue
-    .line 504
+    .line 474
     return-void
 .end method
 
@@ -4976,7 +4618,7 @@
     .parameter "iso"
 
     .prologue
-    .line 437
+    .line 411
     return-void
 .end method
 
@@ -4984,7 +4626,7 @@
     .locals 0
 
     .prologue
-    .line 443
+    .line 417
     return-void
 .end method
 
@@ -4993,7 +4635,7 @@
     .parameter "objecttracking"
 
     .prologue
-    .line 446
+    .line 420
     return-void
 .end method
 
@@ -5002,489 +4644,416 @@
     .parameter "visibility"
 
     .prologue
-    .line 489
+    .line 459
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 8
+    .locals 6
 
     .prologue
-    const/4 v7, -0x1
-
-    const/4 v6, 0x0
-
     const/4 v5, 0x0
 
-    .line 1060
-    const-string v2, "AbstractCameraActivity"
+    const/4 v4, 0x0
 
-    const-string v3, "onPause"
+    .line 990
+    const-string v1, "AbstractCameraActivity"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v2, "onPause"
 
-    .line 1062
-    new-instance v2, Landroid/content/Intent;
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "com.sec.android.app.camera.ACTION_STOP_CAMERA"
+    .line 992
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    const-string v2, "com.sec.android.app.camera.ACTION_STOP_CAMERA"
 
-    invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1064
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    if-eqz v2, :cond_0
+    .line 994
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    .line 1065
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuResourceDepot;->clearInvisibleViews()V
+    .line 995
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    .line 1068
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/MenuResourceDepot;->clearInvisibleViews()V
+
+    .line 998
     :cond_0
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->getRootView()Lcom/sec/android/glview/TwGLViewGroup;
+    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->getRootView()Lcom/sec/android/glview/TwGLViewGroup;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 999
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+
+    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLContext;->onPause()V
+
+    .line 1002
+    :cond_1
+    iput-boolean v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLInitialized:Z
+
+    .line 1004
+    const-string v1, "AbstractCameraActivity"
+
+    const-string v2, "GL Cleared!"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1006
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
+
+    .line 1008
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
+
+    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 1011
+    const-string v1, "AbstractCameraActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onPause : SCREEN_BRIGHTNESS_MODE - bTurnOnScrAB:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    if-eqz v2, :cond_1
+    iget-boolean v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
 
-    .line 1069
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLContext;->onPause()V
+    move-result-object v2
 
-    .line 1072
-    :cond_1
-    iput-boolean v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLInitialized:Z
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1074
-    const-string v2, "AbstractCameraActivity"
+    move-result-object v2
 
-    const-string v3, "GL Cleared!"
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    .line 1012
+    iget-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
 
-    .line 1076
-    const/4 v2, 0x1
+    if-eqz v1, :cond_2
 
-    iput-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mbNeedToStartEngineSync:Z
+    .line 1013
+    const-string v1, "power"
 
-    .line 1078
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
-
-    iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 1081
-    const-string v2, "AbstractCameraActivity"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onPause : SCREEN_BRIGHTNESS_MODE - bTurnOnScrAB:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-boolean v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1082
-    iget-boolean v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
-
-    if-eqz v2, :cond_2
-
-    .line 1083
-    const-string v2, "power"
-
-    invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 1084
-    .local v1, pm:Landroid/os/PowerManager;
-    invoke-virtual {v1, v7, v7}, Landroid/os/PowerManager;->setAutoBrightnessLimit(II)V
-
-    .line 1091
-    .end local v1           #pm:Landroid/os/PowerManager;
+    .line 1021
     :cond_2
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {v2}, Lcom/sec/android/hardware/SecHardwareInterface;->setmDNIeOutDoor(Z)Z
+    invoke-static {v1}, Lcom/sec/android/hardware/SecHardwareInterface;->setmDNIeOutDoor(Z)Z
 
-    .line 1093
-    const/4 v2, 0x0
+    .line 1023
+    const/4 v1, 0x0
 
-    invoke-static {v2}, Lcom/sec/android/hardware/SecHardwareInterface;->setmDNIeUIMode(I)Z
+    invoke-static {v1}, Lcom/sec/android/hardware/SecHardwareInterface;->setmDNIeUIMode(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1101
+    .line 1031
     :goto_0
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :try_start_1
-    invoke-static {v2}, Lcom/sec/android/hardware/SecHardwareInterface;->setAmoledVideoGamma(Z)Z
+    invoke-static {v1}, Lcom/sec/android/hardware/SecHardwareInterface;->setAmoledVideoGamma(Z)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1107
+    .line 1037
     :goto_1
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
-    .line 1108
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    .line 1038
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1109
+    .line 1039
     :cond_3
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 1111
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+    .line 1041
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
-    .line 1112
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+    .line 1042
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1114
+    .line 1044
     :cond_4
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 1116
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
+    .line 1046
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_5
+    if-eqz v1, :cond_5
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_5
+    if-eqz v1, :cond_5
 
-    .line 1117
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
+    .line 1047
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1118
+    .line 1048
     :cond_5
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOverheatPopup:Landroid/app/AlertDialog;
 
-    .line 1120
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
+    .line 1050
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_6
+    if-eqz v1, :cond_6
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_6
+    if-eqz v1, :cond_6
 
-    .line 1121
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
+    .line 1051
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1122
+    .line 1052
     :cond_6
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    .line 1124
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
+    .line 1054
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_7
+    if-eqz v1, :cond_7
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_7
+    if-eqz v1, :cond_7
 
-    .line 1125
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
+    .line 1055
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1126
+    .line 1056
     :cond_7
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    .line 1128
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
+    .line 1058
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_8
+    if-eqz v1, :cond_8
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_8
+    if-eqz v1, :cond_8
 
-    .line 1129
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
+    .line 1059
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1130
+    .line 1060
     :cond_8
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEULAPopup:Landroid/app/AlertDialog;
 
-    .line 1132
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
+    .line 1062
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_9
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_9
 
-    .line 1133
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
+    .line 1063
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1134
+    .line 1064
     :cond_9
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    .line 1136
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
+    .line 1066
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    if-eqz v2, :cond_a
+    if-eqz v1, :cond_a
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/Dialog;->isShowing()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_a
+    if-eqz v1, :cond_a
 
-    .line 1137
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
+    .line 1067
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
 
-    .line 1138
+    .line 1068
     :cond_a
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    .line 1140
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    if-eqz v2, :cond_b
-
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    .line 1141
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 1142
-    :cond_b
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    .line 1144
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-
-    if-eqz v2, :cond_c
-
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-
-    invoke-virtual {v2}, Landroid/app/Dialog;->isShowing()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    .line 1145
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-
-    invoke-virtual {v2}, Landroid/app/Dialog;->dismiss()V
-
-    .line 1146
-    :cond_c
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
-
-    .line 1148
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    if-eqz v2, :cond_d
-
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_d
-
-    .line 1149
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 1150
-    :cond_d
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    .line 1152
+    .line 1070
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopInactivityTimer()V
 
-    .line 1153
+    .line 1071
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopOverheatTimer()V
 
-    .line 1154
+    .line 1072
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopAFHideRectTimer()V
 
-    .line 1156
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    .line 1074
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_e
+    if-eqz v1, :cond_b
 
-    .line 1157
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    .line 1075
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
+    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1160
-    :cond_e
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
+    .line 1078
+    :cond_b
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
 
-    if-eqz v2, :cond_f
+    if-eqz v1, :cond_c
 
-    .line 1161
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
+    .line 1079
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
 
-    const/16 v3, 0x8
+    const/16 v2, 0x8
 
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1164
-    :cond_f
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
+    .line 1082
+    :cond_c
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
-    if-eqz v2, :cond_10
+    if-eqz v1, :cond_d
 
-    .line 1165
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
+    .line 1083
+    iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
-    invoke-virtual {v2}, Landroid/widget/Toast;->cancel()V
+    invoke-virtual {v1}, Landroid/widget/Toast;->cancel()V
 
-    .line 1166
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
+    .line 1084
+    iput-object v4, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->msgToast:Landroid/widget/Toast;
 
-    .line 1170
-    :cond_10
+    .line 1088
+    :cond_d
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1171
+    .line 1089
     .local v0, dvfsLockIntent:Landroid/content/Intent;
-    const-string v2, "com.sec.android.intent.action.DVFS_LCD_FRAME_RATE"
+    const-string v1, "com.sec.android.intent.action.DVFS_LCD_FRAME_RATE"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1172
-    const-string v2, "RATE"
+    .line 1090
+    const-string v1, "RATE"
 
-    const-string v3, "60"
+    const-string v2, "60"
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1173
+    .line 1091
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1175
+    .line 1093
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 1176
-    iput-boolean v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
+    .line 1094
+    iput-boolean v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
 
-    .line 1177
+    .line 1095
     return-void
 
-    .line 1102
+    .line 1032
     .end local v0           #dvfsLockIntent:Landroid/content/Intent;
     :catch_0
-    move-exception v2
+    move-exception v1
 
     goto/16 :goto_1
 
-    .line 1094
+    .line 1024
     :catch_1
-    move-exception v2
+    move-exception v1
 
     goto/16 :goto_0
 .end method
@@ -5497,7 +5066,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 1750
+    .line 1638
     const-string v2, "AbstractCameraActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5520,14 +5089,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1751
+    .line 1639
     packed-switch p1, :pswitch_data_0
 
-    .line 1772
+    .line 1660
     :goto_0
     return-void
 
-    .line 1753
+    .line 1641
     :pswitch_0
     const v2, 0x7f090005
 
@@ -5535,13 +5104,13 @@
 
     move-result-object v1
 
-    .line 1754
+    .line 1642
     .local v1, message:Ljava/lang/String;
     iget v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
     if-ne v2, v5, :cond_0
 
-    .line 1755
+    .line 1643
     iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
@@ -5562,14 +5131,14 @@
 
     if-nez v2, :cond_1
 
-    .line 1758
+    .line 1646
     const-string v2, "AbstractCameraActivity"
 
     const-string v3, "change_to_card_memory"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1759
+    .line 1647
     const v2, 0x7f090007
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
@@ -5580,16 +5149,16 @@
     :goto_1
     move-object v0, p2
 
-    .line 1769
+    .line 1657
     check-cast v0, Landroid/app/AlertDialog;
 
-    .line 1770
+    .line 1658
     .local v0, builder:Landroid/app/AlertDialog;
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 1760
+    .line 1648
     .end local v0           #builder:Landroid/app/AlertDialog;
     :cond_1
     iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
@@ -5608,14 +5177,14 @@
 
     if-nez v2, :cond_2
 
-    .line 1762
+    .line 1650
     const-string v2, "AbstractCameraActivity"
 
     const-string v3, "change_to_phone_memory"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1763
+    .line 1651
     const v2, 0x7f090008
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
@@ -5624,7 +5193,7 @@
 
     goto :goto_1
 
-    .line 1765
+    .line 1653
     :cond_2
     const-string v2, "AbstractCameraActivity"
 
@@ -5632,7 +5201,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1766
+    .line 1654
     const v2, 0x7f090006
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getString(I)Ljava/lang/String;
@@ -5641,7 +5210,7 @@
 
     goto :goto_1
 
-    .line 1751
+    .line 1639
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -5653,7 +5222,7 @@
     .parameter "preview"
 
     .prologue
-    .line 419
+    .line 393
     return-void
 .end method
 
@@ -5662,7 +5231,7 @@
     .parameter "recordingMode"
 
     .prologue
-    .line 434
+    .line 408
     return-void
 .end method
 
@@ -5671,466 +5240,457 @@
     .parameter "resolution"
 
     .prologue
-    .line 389
+    .line 366
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 11
+    .locals 10
 
     .prologue
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    .line 916
-    const-string v6, "AbstractCameraActivity"
+    .line 859
+    const-string v5, "AbstractCameraActivity"
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "onResume hasWindowFocus()="
+    const-string v7, "onResume hasWindowFocus()="
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hasWindowFocus()Z
 
-    move-result v8
+    move-result v7
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 917
+    .line 860
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isKeyguardLocked()Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_0
+    if-eqz v5, :cond_0
 
-    .line 918
-    const-string v6, "AbstractCameraActivity"
+    .line 861
+    const-string v5, "AbstractCameraActivity"
 
-    const-string v7, "onResume. mOnResumePending=true"
+    const-string v6, "onResume. mOnResumePending=true"
 
-    invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
-    iput-boolean v9, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
+    .line 862
+    iput-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
 
-    .line 923
+    .line 866
     :cond_0
     :try_start_0
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
-    invoke-virtual {v6}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    .line 924
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
-
-    invoke-virtual {v6}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/sec/android/app/camera/MenuBase;
-
-    invoke-virtual {v6}, Lcom/sec/android/app/camera/MenuBase;->onResume()V
-    :try_end_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_3
-
-    .line 930
-    :cond_1
-    :goto_0
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    .line 931
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    .line 933
-    :cond_2
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    .line 934
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->restartInactivityTimer()V
-
-    .line 936
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
-
-    if-eqz v6, :cond_3
-
-    .line 937
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
-
-    invoke-virtual {v6, v10}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    .line 940
-    :cond_3
-    const/4 v4, 0x1
-
-    .line 942
-    .local v4, mAutomatic:I
-    :try_start_1
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v6
-
-    const-string v7, "screen_brightness_mode"
-
-    invoke-static {v6, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
-    :try_end_1
-    .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
-
-    move-result v4
-
-    .line 948
-    :goto_1
-    if-ne v4, v9, :cond_8
-
-    .line 949
-    iput-boolean v9, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
-
-    .line 951
-    const-string v6, "power"
-
-    invoke-virtual {p0, v6}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v5}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Landroid/os/PowerManager;
+    if-eqz v5, :cond_1
 
-    .line 952
-    .local v5, pm:Landroid/os/PowerManager;
-    const-string v6, "persist.sys.default_brightness"
+    .line 867
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
-    const/16 v7, 0x78
+    invoke-virtual {v5}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
 
-    invoke-static {v6, v7}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    move-result-object v5
 
-    move-result v0
+    check-cast v5, Lcom/sec/android/app/camera/MenuBase;
 
-    .line 953
-    .local v0, defBrightness:I
-    const/4 v6, -0x1
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/MenuBase;->onResume()V
+    :try_end_0
+    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_3
 
-    invoke-virtual {v5, v0, v6}, Landroid/os/PowerManager;->setAutoBrightnessLimit(II)V
+    .line 875
+    :cond_1
+    :goto_0
+    iput-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAutoRotation:Z
 
-    .line 958
-    .end local v0           #defBrightness:I
-    .end local v5           #pm:Landroid/os/PowerManager;
+    .line 878
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    .line 879
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    .line 881
+    :cond_2
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    .line 882
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->restartInactivityTimer()V
+
+    .line 884
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
+
+    if-eqz v5, :cond_3
+
+    .line 885
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mBaseLayout:Landroid/view/ViewGroup;
+
+    invoke-virtual {v5, v9}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    .line 888
+    :cond_3
+    const/4 v3, 0x1
+
+    .line 890
+    .local v3, mAutomatic:I
+    :try_start_1
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
+
+    const-string v6, "screen_brightness_mode"
+
+    invoke-static {v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
+    :try_end_1
+    .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result v3
+
+    .line 896
+    :goto_1
+    if-ne v3, v8, :cond_8
+
+    .line 897
+    iput-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
+
+    .line 899
+    const-string v5, "power"
+
+    invoke-virtual {p0, v5}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/os/PowerManager;
+
+    .line 900
+    .local v4, pm:Landroid/os/PowerManager;
+    const-string v5, "persist.sys.default_brightness"
+
+    const/16 v6, 0x78
+
+    invoke-static {v5, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    .line 906
+    .end local v4           #pm:Landroid/os/PowerManager;
     :goto_2
-    const-string v6, "AbstractCameraActivity"
+    const-string v5, "AbstractCameraActivity"
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "onResume : SCREEN_BRIGHTNESS_MODE - mAutomatic:"
+    const-string v7, "onResume : SCREEN_BRIGHTNESS_MODE - mAutomatic:"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    const-string v8, " bTurnOnScrAB:"
+    const-string v7, " bTurnOnScrAB:"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    iget-boolean v8, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
+    iget-boolean v7, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 966
-    const/4 v6, 0x1
+    .line 914
+    const/4 v5, 0x1
 
     :try_start_2
-    invoke-static {v6}, Lcom/sec/android/hardware/SecHardwareInterface;->setAmoledVideoGamma(Z)Z
+    invoke-static {v5}, Lcom/sec/android/hardware/SecHardwareInterface;->setAmoledVideoGamma(Z)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 971
+    .line 919
     :goto_3
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
-    if-eqz v6, :cond_4
+    if-eqz v5, :cond_4
 
-    .line 972
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
+    .line 920
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLSurfaceView:Landroid/opengl/GLSurfaceView;
 
-    invoke-virtual {v6}, Landroid/opengl/GLSurfaceView;->onResume()V
+    invoke-virtual {v5}, Landroid/opengl/GLSurfaceView;->onResume()V
 
-    .line 977
+    .line 922
     :cond_4
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    if-eqz v6, :cond_5
+    if-eqz v5, :cond_5
 
-    .line 978
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    .line 923
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    invoke-virtual {v6}, Lcom/sec/android/glview/TwGLContext;->onResume()V
+    invoke-virtual {v5}, Lcom/sec/android/glview/TwGLContext;->onResume()V
 
-    .line 980
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    .line 925
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    iget-boolean v7, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAutoRotation:Z
+    iget-boolean v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mAutoRotation:Z
 
-    invoke-virtual {v6, v7}, Lcom/sec/android/glview/TwGLContext;->enableOrientation(Z)V
+    invoke-virtual {v5, v6}, Lcom/sec/android/glview/TwGLContext;->enableOrientation(Z)V
 
-    .line 982
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
+    .line 927
+    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    invoke-virtual {v6, v9}, Lcom/sec/android/glview/TwGLContext;->setScrollBarAutoHide(Z)V
+    invoke-virtual {v5, v8}, Lcom/sec/android/glview/TwGLContext;->setScrollBarAutoHide(Z)V
 
-    .line 987
+    .line 932
     :cond_5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getUsbMassStorageEnabledStatus()V
 
-    .line 990
+    .line 935
     :try_start_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getBaseContext()Landroid/content/Context;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "display_battery_percentage"
+    const-string v6, "display_battery_percentage"
 
-    invoke-static {v6, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
-    move-result v6
+    move-result v5
 
-    iput v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDisplayBatteryPercentage:I
+    iput v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDisplayBatteryPercentage:I
     :try_end_3
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 996
+    .line 941
     :goto_4
-    new-instance v1, Landroid/content/Intent;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 997
-    .local v1, dvfsLockIntent:Landroid/content/Intent;
-    const-string v6, "com.sec.android.intent.action.DVFS_LCD_FRAME_RATE"
+    .line 942
+    .local v0, dvfsLockIntent:Landroid/content/Intent;
+    const-string v5, "com.sec.android.intent.action.DVFS_LCD_FRAME_RATE"
 
-    invoke-virtual {v1, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v5}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 998
-    const-string v6, "RATE"
+    .line 943
+    const-string v5, "RATE"
 
-    const-string v7, "40"
+    const-string v6, "40"
 
-    invoke-virtual {v1, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 999
-    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
+    .line 944
+    invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1001
+    .line 946
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
-    move-result-object v3
+    move-result-object v2
 
-    .line 1002
-    .local v3, imm:Landroid/view/inputmethod/InputMethodManager;
-    if-eqz v3, :cond_6
+    .line 947
+    .local v2, imm:Landroid/view/inputmethod/InputMethodManager;
+    if-eqz v2, :cond_6
 
-    .line 1003
-    invoke-virtual {v3}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput()Z
-
-    .line 1005
+    .line 951
     :cond_6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v6
+    move-result-object v5
 
-    if-eqz v6, :cond_a
+    if-eqz v5, :cond_a
 
-    .line 1006
+    .line 952
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "from-camera"
+    const-string v6, "from-camera"
 
-    invoke-virtual {v6, v7, v10}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v5, v6, v9}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v6
+    move-result v5
 
-    if-nez v6, :cond_7
+    if-nez v5, :cond_7
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "from-camcorder"
+    const-string v6, "from-camcorder"
 
-    invoke-virtual {v6, v7, v10}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v5, v6, v9}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v6
+    move-result v5
 
-    if-nez v6, :cond_7
+    if-nez v5, :cond_7
 
-    .line 1008
+    .line 954
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "CscFeature_Common_EnableOnDeviceHelp"
+    const-string v6, "CscFeature_Common_EnableOnDeviceHelp"
 
-    invoke-virtual {v6, v7}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
+    invoke-virtual {v5, v6}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_9
+    if-eqz v5, :cond_9
 
-    .line 1009
+    .line 955
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showOnDeviceHelpScreen()V
 
-    .line 1036
+    .line 966
     :cond_7
     :goto_5
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 1037
+    .line 967
     return-void
 
-    .line 944
-    .end local v1           #dvfsLockIntent:Landroid/content/Intent;
-    .end local v3           #imm:Landroid/view/inputmethod/InputMethodManager;
+    .line 892
+    .end local v0           #dvfsLockIntent:Landroid/content/Intent;
+    .end local v2           #imm:Landroid/view/inputmethod/InputMethodManager;
     :catch_0
-    move-exception v2
+    move-exception v1
 
-    .line 945
-    .local v2, e:Landroid/provider/Settings$SettingNotFoundException;
-    const-string v6, "AbstractCameraActivity"
+    .line 893
+    .local v1, e:Landroid/provider/Settings$SettingNotFoundException;
+    const-string v5, "AbstractCameraActivity"
 
-    const-string v7, "to get SCREEN_BRIGHTNESS_MODE failed"
+    const-string v6, "to get SCREEN_BRIGHTNESS_MODE failed"
 
-    invoke-static {v6, v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v5, v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_1
 
-    .line 955
-    .end local v2           #e:Landroid/provider/Settings$SettingNotFoundException;
+    .line 903
+    .end local v1           #e:Landroid/provider/Settings$SettingNotFoundException;
     :cond_8
-    iput-boolean v10, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
+    iput-boolean v9, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bTurnOnScrAB:Z
 
     goto/16 :goto_2
 
-    .line 991
+    .line 936
     :catch_1
-    move-exception v2
+    move-exception v1
 
-    .line 992
-    .restart local v2       #e:Landroid/provider/Settings$SettingNotFoundException;
-    const-string v6, "AbstractCameraActivity"
+    .line 937
+    .restart local v1       #e:Landroid/provider/Settings$SettingNotFoundException;
+    const-string v5, "AbstractCameraActivity"
 
-    const-string v7, "to get DISPLAY_BATTERY_PERCENTAGE failed"
+    const-string v6, "to get DISPLAY_BATTERY_PERCENTAGE failed"
 
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 1017
-    .end local v2           #e:Landroid/provider/Settings$SettingNotFoundException;
-    .restart local v1       #dvfsLockIntent:Landroid/content/Intent;
-    .restart local v3       #imm:Landroid/view/inputmethod/InputMethodManager;
+    .line 957
+    .end local v1           #e:Landroid/provider/Settings$SettingNotFoundException;
+    .restart local v0       #dvfsLockIntent:Landroid/content/Intent;
+    .restart local v2       #imm:Landroid/view/inputmethod/InputMethodManager;
     :cond_9
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showEditableShortcutHelpTextDialog()V
 
     goto :goto_5
 
-    .line 1023
+    .line 961
     :cond_a
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "CscFeature_Common_EnableOnDeviceHelp"
+    const-string v6, "CscFeature_Common_EnableOnDeviceHelp"
 
-    invoke-virtual {v6, v7}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
+    invoke-virtual {v5, v6}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_b
+    if-eqz v5, :cond_b
 
-    .line 1024
+    .line 962
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showOnDeviceHelpScreen()V
 
     goto :goto_5
 
-    .line 1032
+    .line 964
     :cond_b
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showEditableShortcutHelpTextDialog()V
 
     goto :goto_5
 
-    .line 967
-    .end local v1           #dvfsLockIntent:Landroid/content/Intent;
-    .end local v3           #imm:Landroid/view/inputmethod/InputMethodManager;
+    .line 915
+    .end local v0           #dvfsLockIntent:Landroid/content/Intent;
+    .end local v2           #imm:Landroid/view/inputmethod/InputMethodManager;
     :catch_2
-    move-exception v6
+    move-exception v5
 
     goto/16 :goto_3
 
-    .line 926
-    .end local v4           #mAutomatic:I
+    .line 869
+    .end local v3           #mAutomatic:I
     :catch_3
-    move-exception v6
+    move-exception v5
 
     goto/16 :goto_0
 .end method
@@ -6140,7 +5700,7 @@
     .parameter "cameraReview"
 
     .prologue
-    .line 407
+    .line 384
     return-void
 .end method
 
@@ -6149,7 +5709,7 @@
     .parameter "sns"
 
     .prologue
-    .line 422
+    .line 396
     return-void
 .end method
 
@@ -6158,7 +5718,7 @@
     .parameter "saturation"
 
     .prologue
-    .line 401
+    .line 378
     return-void
 .end method
 
@@ -6167,7 +5727,7 @@
     .parameter "sceneMode"
 
     .prologue
-    .line 431
+    .line 405
     return-void
 .end method
 
@@ -6175,7 +5735,7 @@
     .locals 0
 
     .prologue
-    .line 492
+    .line 462
     return-void
 .end method
 
@@ -6184,7 +5744,7 @@
     .parameter "sharpness"
 
     .prologue
-    .line 404
+    .line 381
     return-void
 .end method
 
@@ -6193,7 +5753,7 @@
     .parameter "sns"
 
     .prologue
-    .line 413
+    .line 387
     return-void
 .end method
 
@@ -6202,7 +5762,7 @@
     .parameter "shootingMode"
 
     .prologue
-    .line 380
+    .line 357
     return-void
 .end method
 
@@ -6211,7 +5771,7 @@
     .parameter "shutterSound"
 
     .prologue
-    .line 425
+    .line 399
     return-void
 .end method
 
@@ -6219,7 +5779,7 @@
     .locals 0
 
     .prologue
-    .line 486
+    .line 456
     return-void
 .end method
 
@@ -6227,7 +5787,7 @@
     .locals 1
 
     .prologue
-    .line 1199
+    .line 1116
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -6237,7 +5797,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1200
+    .line 1117
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
@@ -6250,23 +5810,23 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1206
+    .line 1123
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopInactivityTimer()V
 
-    .line 1207
+    .line 1124
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopOverheatTimer()V
 
-    .line 1208
+    .line 1125
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bFlagOverheat:Z
 
-    .line 1209
+    .line 1126
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopAFHideRectTimer()V
 
-    .line 1211
+    .line 1128
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -6275,19 +5835,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1212
+    .line 1129
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1215
+    .line 1132
     :cond_1
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 1216
+    .line 1133
     return-void
 
-    .line 1202
+    .line 1119
     :catch_0
     move-exception v0
 
@@ -6299,7 +5859,7 @@
     .parameter "storage"
 
     .prologue
-    .line 477
+    .line 447
     return-void
 .end method
 
@@ -6308,7 +5868,7 @@
     .parameter "value"
 
     .prologue
-    .line 480
+    .line 450
     return-void
 .end method
 
@@ -6317,7 +5877,7 @@
     .parameter "timer"
 
     .prologue
-    .line 383
+    .line 360
     return-void
 .end method
 
@@ -6325,13 +5885,13 @@
     .locals 0
 
     .prologue
-    .line 873
+    .line 812
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->restartInactivityTimer()V
 
-    .line 874
+    .line 813
     invoke-super {p0}, Landroid/app/Activity;->onUserInteraction()V
 
-    .line 875
+    .line 814
     return-void
 .end method
 
@@ -6340,16 +5900,7 @@
     .parameter "vintage"
 
     .prologue
-    .line 483
-    return-void
-.end method
-
-.method public onVoiceCommandMenuSelect(I)V
-    .locals 0
-    .parameter "VoiceCommand"
-
-    .prologue
-    .line 410
+    .line 453
     return-void
 .end method
 
@@ -6358,7 +5909,7 @@
     .parameter "whiteBalance"
 
     .prologue
-    .line 395
+    .line 372
     return-void
 .end method
 
@@ -6367,7 +5918,7 @@
     .parameter "hasFocus"
 
     .prologue
-    .line 1040
+    .line 970
     const-string v0, "AbstractCameraActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6390,27 +5941,27 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1041
+    .line 971
     if-eqz p1, :cond_0
 
-    .line 1042
+    .line 972
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->restartInactivityTimer()V
 
-    .line 1043
+    .line 973
     iget-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
 
     if-eqz v0, :cond_0
 
-    .line 1044
+    .line 974
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnResumePending:Z
 
-    .line 1046
+    .line 976
     :cond_0
     invoke-super {p0, p1}, Landroid/app/Activity;->onWindowFocusChanged(Z)V
 
-    .line 1047
+    .line 977
     return-void
 .end method
 
@@ -6419,7 +5970,7 @@
     .parameter "zoomValue"
 
     .prologue
-    .line 386
+    .line 363
     return-void
 .end method
 
@@ -6434,7 +5985,7 @@
     .parameter "zOrder"
 
     .prologue
-    .line 637
+    .line 601
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
@@ -6445,7 +5996,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 638
+    .line 602
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
@@ -6460,7 +6011,7 @@
 
     if-lt v0, p1, :cond_0
 
-    .line 639
+    .line 603
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -6475,11 +6026,11 @@
 
     goto :goto_0
 
-    .line 644
+    .line 608
     :catch_0
     move-exception v0
 
-    .line 647
+    .line 611
     :cond_0
     return-void
 .end method
@@ -6488,10 +6039,10 @@
     .locals 4
 
     .prologue
-    .line 603
+    .line 569
     const/4 v2, 0x0
 
-    .line 606
+    .line 572
     .local v2, view:Lcom/sec/android/app/camera/MenuBase;
     :try_start_0
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
@@ -6508,18 +6059,18 @@
     :try_end_0
     .catch Ljava/util/EmptyStackException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 613
+    .line 579
     :cond_0
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 614
+    .line 580
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->hideMenu()V
 
-    .line 615
+    .line 581
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->onBack()V
 
-    .line 618
+    .line 584
     :try_start_1
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -6529,7 +6080,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 619
+    .line 585
     iget-object v3, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v3}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
@@ -6542,16 +6093,16 @@
     :try_end_1
     .catch Ljava/util/NoSuchElementException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 625
+    .line 591
     :cond_1
     :goto_1
     return-void
 
-    .line 607
+    .line 573
     :catch_0
     move-exception v1
 
-    .line 609
+    .line 575
     .local v1, e:Ljava/util/EmptyStackException;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isFinishing()Z
 
@@ -6559,12 +6110,12 @@
 
     if-nez v3, :cond_0
 
-    .line 610
+    .line 576
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finish()V
 
     goto :goto_0
 
-    .line 621
+    .line 587
     .end local v1           #e:Ljava/util/EmptyStackException;
     :catch_1
     move-exception v3
@@ -6577,25 +6128,22 @@
     .parameter "menu"
 
     .prologue
-    .line 589
+    .line 556
     :try_start_0
-    iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLastElementView:Lcom/sec/android/app/camera/MenuBase;
-
-    .line 590
     invoke-virtual {p1}, Lcom/sec/android/app/camera/MenuBase;->getZorder()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->popMenu(I)V
 
-    .line 592
+    .line 558
     invoke-virtual {p1}, Lcom/sec/android/app/camera/MenuBase;->isFullScreen()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 593
+    .line 559
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->lastElement()Ljava/lang/Object;
@@ -6608,17 +6156,17 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 599
+    .line 565
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
     invoke-virtual {v0, p1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 600
+    .line 566
     return-void
 
-    .line 595
+    .line 561
     :catch_0
     move-exception v0
 
@@ -6630,7 +6178,7 @@
     .parameter "menu"
 
     .prologue
-    .line 651
+    .line 615
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mViewStack:Ljava/util/Stack;
 
@@ -6638,11 +6186,11 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 655
+    .line 619
     :goto_0
     return-void
 
-    .line 652
+    .line 616
     :catch_0
     move-exception v0
 
@@ -6661,21 +6209,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1782
+    .line 1670
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     if-eqz v0, :cond_0
 
-    .line 1783
+    .line 1671
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setStorage(I)V
 
-    .line 1784
+    .line 1672
     :cond_0
     iput v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1785
+    .line 1673
     return-void
 .end method
 
@@ -6692,20 +6240,20 @@
     .locals 2
 
     .prologue
-    .line 834
+    .line 773
     const-string v0, "AbstractCameraActivity"
 
     const-string v1, "restarting inactivity timer..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 835
+    .line 774
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->stopInactivityTimer()V
 
-    .line 836
+    .line 775
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->startInactivityTimer()V
 
-    .line 837
+    .line 776
     return-void
 .end method
 
@@ -6714,10 +6262,10 @@
     .parameter "arg0"
 
     .prologue
-    .line 2157
+    .line 2041
     sput-boolean p1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsCamcorderSelfIconLoaded:Z
 
-    .line 2158
+    .line 2042
     return-void
 .end method
 
@@ -6726,10 +6274,10 @@
     .parameter "arg0"
 
     .prologue
-    .line 2153
+    .line 2037
     sput-boolean p1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsCameraSelfIconLoaded:Z
 
-    .line 2154
+    .line 2038
     return-void
 .end method
 
@@ -6738,7 +6286,7 @@
     .parameter "state"
 
     .prologue
-    .line 522
+    .line 492
     return-void
 .end method
 
@@ -6749,12 +6297,12 @@
     .locals 1
 
     .prologue
-    .line 1862
+    .line 1750
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mStorageStatus:I
 
-    .line 1863
+    .line 1751
     return-void
 .end method
 
@@ -6763,10 +6311,10 @@
     .parameter "enable"
 
     .prologue
-    .line 2449
+    .line 2210
     sput-boolean p1, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsEULAenabled:Z
 
-    .line 2450
+    .line 2211
     return-void
 .end method
 
@@ -6775,10 +6323,10 @@
     .parameter "displayed"
 
     .prologue
-    .line 1774
+    .line 1662
     iput-boolean p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mIsDisplayed:Z
 
-    .line 1775
+    .line 1663
     return-void
 .end method
 
@@ -6790,7 +6338,7 @@
     .parameter "name"
 
     .prologue
-    .line 510
+    .line 480
     return-void
 .end method
 
@@ -6799,133 +6347,39 @@
     .parameter "uri"
 
     .prologue
-    .line 507
+    .line 477
     return-void
-.end method
-
-.method public abstract setPinupMode(Z)V
 .end method
 
 .method public abstract setSelectedMenuId(I)V
-.end method
-
-.method public abstract setTouchAutoFocusActive(Z)V
-.end method
-
-.method protected showChangeStoragetDialog()V
-    .locals 5
-
-    .prologue
-    .line 2289
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    if-eqz v2, :cond_0
-
-    .line 2316
-    :goto_0
-    return-void
-
-    .line 2292
-    :cond_0
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 2298
-    .local v0, dialog:Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f09012c
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 2301
-    .local v1, dialogMsg:Ljava/lang/String;
-    const v2, 0x7f09012b
-
-    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v2
-
-    const v3, 0x1010355
-
-    invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v2
-
-    const v3, 0x7f0900a1
-
-    new-instance v4, Lcom/sec/android/app/camera/AbstractCameraActivity$43;
-
-    invoke-direct {v4, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$43;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v2
-
-    const v3, 0x7f0900db
-
-    new-instance v4, Lcom/sec/android/app/camera/AbstractCameraActivity$42;
-
-    invoke-direct {v4, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$42;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 2314
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    .line 2315
-    iget-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChangeStoragetDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
-
-    goto :goto_0
 .end method
 
 .method public showDefaultLayoutPopup()V
     .locals 3
 
     .prologue
-    .line 2046
+    .line 1934
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2047
+    .line 1935
     .local v0, dialog:Landroid/app/AlertDialog$Builder;
-    const v1, 0x7f0900c3
+    const v1, 0x7f0900c2
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2048
+    .line 1936
     const v1, 0x1010355
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2049
-    const v1, 0x7f0900d6
+    .line 1937
+    const v1, 0x7f0900d5
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2051
+    .line 1939
     const v1, 0x7f0900a1
 
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$33;
@@ -6934,8 +6388,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2059
-    const v1, 0x7f0900db
+    .line 1947
+    const v1, 0x7f0900d9
 
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$34;
 
@@ -6943,7 +6397,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2067
+    .line 1955
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isCaptureEnabled()Z
 
@@ -6951,12 +6405,12 @@
 
     if-nez v1, :cond_0
 
-    .line 2068
+    .line 1956
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
     goto :goto_0
 
-    .line 2071
+    .line 1959
     :cond_0
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -6964,12 +6418,12 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
-    .line 2072
+    .line 1960
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDefaultLayoutPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 2073
+    .line 1961
     return-void
 .end method
 
@@ -6978,35 +6432,35 @@
     .parameter "nId"
 
     .prologue
-    .line 1866
+    .line 1754
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
-    const/16 v1, 0xb
+    const/16 v1, 0xa
 
     if-ge v0, v1, :cond_1
 
-    .line 1867
+    .line 1755
     if-ne v0, p1, :cond_0
 
-    .line 1868
+    .line 1756
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mDlgStatus:[Z
 
     const/4 v2, 0x1
 
     aput-boolean v2, v1, v0
 
-    .line 1869
+    .line 1757
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showDialog(I)V
 
-    .line 1866
+    .line 1754
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1872
+    .line 1760
     :cond_1
     return-void
 .end method
@@ -7020,17 +6474,17 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 2236
+    .line 2120
     iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
     if-eqz v6, :cond_1
 
-    .line 2286
+    .line 2166
     :cond_0
     :goto_0
     return-void
 
-    .line 2239
+    .line 2123
     :cond_1
     const-string v6, "AbstractCameraActivity"
 
@@ -7062,7 +6516,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2240
+    .line 2124
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v6
@@ -7073,18 +6527,18 @@
 
     if-eq v6, v9, :cond_0
 
-    .line 2241
+    .line 2125
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2242
+    .line 2126
     .local v1, dialog:Landroid/app/AlertDialog$Builder;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
-    .line 2244
+    .line 2128
     .local v3, inflater:Landroid/view/LayoutInflater;
     const v6, 0x7f030003
 
@@ -7094,9 +6548,9 @@
 
     move-result-object v4
 
-    .line 2245
+    .line 2129
     .local v4, layout:Landroid/view/View;
-    const v6, 0x7f0b000e
+    const v6, 0x7f0b0014
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7104,9 +6558,9 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 2246
+    .line 2130
     .local v2, img:Landroid/widget/ImageView;
-    const v6, 0x7f0b000f
+    const v6, 0x7f0b0015
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7114,9 +6568,9 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 2247
+    .line 2131
     .local v5, message:Landroid/widget/TextView;
-    const v6, 0x7f0b0010
+    const v6, 0x7f0b0016
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7124,41 +6578,41 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    .line 2249
+    .line 2133
     .local v0, checkBox:Landroid/widget/CheckBox;
-    const v6, 0x7f090127
+    const v6, 0x7f090124
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2251
-    const v6, 0x7f020054
+    .line 2134
+    const v6, 0x7f020052
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 2256
+    .line 2136
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 2257
-    const v6, 0x7f090126
+    .line 2137
+    const v6, 0x7f090123
 
     invoke-virtual {v1, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2258
+    .line 2138
     invoke-virtual {v1, v9}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 2259
+    .line 2139
     const/4 v6, 0x0
 
     invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 2261
+    .line 2141
     new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$39;
 
     invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$39;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 2268
+    .line 2148
     const v6, 0x7f0900a1
 
     new-instance v7, Lcom/sec/android/app/camera/AbstractCameraActivity$40;
@@ -7167,21 +6621,21 @@
 
     invoke-virtual {v1, v6, v7}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2274
+    .line 2154
     new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$41;
 
     invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$41;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v1, v6}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2283
+    .line 2163
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
-    .line 2284
+    .line 2164
     iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mEditableShortcutHelpTextDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v6}, Landroid/app/AlertDialog;->show()V
@@ -7195,17 +6649,17 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 2169
+    .line 2053
     iget-object v7, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
     if-eqz v7, :cond_1
 
-    .line 2232
+    .line 2116
     :cond_0
     :goto_0
     return-void
 
-    .line 2173
+    .line 2057
     :cond_1
     const-string v7, "AbstractCameraActivity"
 
@@ -7237,7 +6691,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2175
+    .line 2059
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v7
@@ -7248,12 +6702,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 2177
+    .line 2061
     new-instance v5, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v5}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 2178
+    .line 2062
     .local v5, lp:Landroid/view/WindowManager$LayoutParams;
     new-instance v2, Landroid/app/Dialog;
 
@@ -7261,17 +6715,17 @@
 
     invoke-direct {v2, p0, v7}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 2180
+    .line 2064
     .local v2, dialog:Landroid/app/Dialog;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
-    .line 2181
+    .line 2065
     .local v3, inflater:Landroid/view/LayoutInflater;
     const/4 v4, 0x0
 
-    .line 2183
+    .line 2067
     .local v4, layout:Landroid/view/View;
     const v7, 0x7f03000c
 
@@ -7281,15 +6735,15 @@
 
     move-result-object v4
 
-    .line 2184
+    .line 2068
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isFirstSidemenuSelf()Z
 
     move-result v7
 
     if-nez v7, :cond_2
 
-    .line 2185
-    const v7, 0x7f0b0021
+    .line 2069
+    const v7, 0x7f0b0027
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7297,16 +6751,16 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 2186
+    .line 2070
     .local v6, message:Landroid/widget/TextView;
-    const v7, 0x7f09013f
+    const v7, 0x7f090136
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2189
+    .line 2073
     .end local v6           #message:Landroid/widget/TextView;
     :cond_2
-    const v7, 0x7f0b0010
+    const v7, 0x7f0b0016
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7314,9 +6768,9 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    .line 2190
+    .line 2074
     .local v1, checkBox:Landroid/widget/CheckBox;
-    const v7, 0x7f0b0023
+    const v7, 0x7f0b0029
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -7324,34 +6778,34 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 2192
+    .line 2076
     .local v0, button:Landroid/widget/Button;
     invoke-virtual {v2, v10}, Landroid/app/Dialog;->requestWindowFeature(I)Z
 
-    .line 2193
+    .line 2077
     invoke-virtual {v2, v4}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    .line 2194
+    .line 2078
     invoke-virtual {v2, v10}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 2195
+    .line 2079
     invoke-virtual {v1, v10}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 2197
+    .line 2081
     new-instance v7, Lcom/sec/android/app/camera/AbstractCameraActivity$37;
 
     invoke-direct {v7, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$37;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
 
     invoke-virtual {v1, v7}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 2204
+    .line 2088
     new-instance v7, Lcom/sec/android/app/camera/AbstractCameraActivity$38;
 
     invoke-direct {v7, p0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity$38;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v0, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2223
+    .line 2107
     invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v7
@@ -7362,7 +6816,7 @@
 
     invoke-virtual {v5, v7}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 2224
+    .line 2108
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v7
@@ -7371,7 +6825,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060072
+    const v8, 0x7f06006d
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -7381,7 +6835,7 @@
 
     iput v7, v5, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 2225
+    .line 2109
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v7
@@ -7390,7 +6844,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f060073
+    const v8, 0x7f06006e
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -7400,14 +6854,14 @@
 
     iput v7, v5, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 2226
+    .line 2110
     invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v7
 
     invoke-virtual {v7, v5}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 2227
+    .line 2111
     invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v7
@@ -7420,10 +6874,10 @@
 
     invoke-virtual {v7, v8}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2229
+    .line 2113
     iput-object v2, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
-    .line 2230
+    .line 2114
     iget-object v7, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mOnDeviceHelpScreen:Landroid/app/Dialog;
 
     invoke-virtual {v7}, Landroid/app/Dialog;->show()V
@@ -7435,29 +6889,29 @@
     .locals 3
 
     .prologue
-    .line 2076
+    .line 1964
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2077
+    .line 1965
     .local v0, dialog:Landroid/app/AlertDialog$Builder;
     const v1, 0x7f090004
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2078
+    .line 1966
     const v1, 0x1010355
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2079
-    const v1, 0x7f0900de
+    .line 1967
+    const v1, 0x7f0900dc
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 2081
-    const v1, 0x7f09010c
+    .line 1969
+    const v1, 0x7f09010a
 
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$35;
 
@@ -7465,8 +6919,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2090
-    const v1, 0x7f09010d
+    .line 1977
+    const v1, 0x7f09010b
 
     new-instance v2, Lcom/sec/android/app/camera/AbstractCameraActivity$36;
 
@@ -7474,7 +6928,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 2098
+    .line 1985
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isCaptureEnabled()Z
 
@@ -7482,12 +6936,12 @@
 
     if-nez v1, :cond_0
 
-    .line 2099
+    .line 1986
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
     goto :goto_0
 
-    .line 2102
+    .line 1989
     :cond_0
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -7495,166 +6949,13 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
-    .line 2103
+    .line 1990
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mResetPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 2104
+    .line 1991
     return-void
-.end method
-
-.method protected showSbeamHelpTextDialog()V
-    .locals 9
-
-    .prologue
-    const/4 v8, 0x1
-
-    .line 2320
-    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
-
-    if-eqz v5, :cond_1
-
-    .line 2353
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 2323
-    :cond_1
-    const-string v5, "AbstractCameraActivity"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "create showSbeamHelpTextDialog - "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/CameraSettings;->getSbeamHelpTextDialog()I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2324
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/sec/android/app/camera/CameraSettings;->getSbeamHelpTextDialog()I
-
-    move-result v5
-
-    if-eq v5, v8, :cond_0
-
-    .line 2325
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 2326
-    .local v1, dialog:Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
-
-    move-result-object v2
-
-    .line 2328
-    .local v2, inflater:Landroid/view/LayoutInflater;
-    const v5, 0x7f03000d
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v2, v5, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v3
-
-    .line 2329
-    .local v3, layout:Landroid/view/View;
-    const v5, 0x7f0b000f
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    .line 2330
-    .local v4, message:Landroid/widget/TextView;
-    const v5, 0x7f0b0010
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/CheckBox;
-
-    .line 2332
-    .local v0, checkBox:Landroid/widget/CheckBox;
-    const v5, 0x7f09012a
-
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
-
-    .line 2333
-    invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    .line 2334
-    const v5, 0x7f090109
-
-    invoke-virtual {v1, v5}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    .line 2335
-    invoke-virtual {v1, v8}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    .line 2336
-    const/4 v5, 0x0
-
-    invoke-virtual {v0, v5}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    .line 2338
-    new-instance v5, Lcom/sec/android/app/camera/AbstractCameraActivity$44;
-
-    invoke-direct {v5, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$44;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v0, v5}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-
-    .line 2345
-    const v5, 0x7f0900a1
-
-    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$45;
-
-    invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$45;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v1, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 2350
-    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v5
-
-    iput-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
-
-    .line 2351
-    iget-object v5, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSbeamHelpTextDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
-
-    goto/16 :goto_0
 .end method
 
 .method public abstract showSideMenu()V
@@ -7663,186 +6964,11 @@
 .method public abstract showSideMenuItems()V
 .end method
 
-.method protected showSingleShotBurstHelpTextDialog()V
-    .locals 10
-
-    .prologue
-    const/4 v9, 0x1
-
-    .line 2357
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    if-eqz v6, :cond_1
-
-    .line 2405
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 2360
-    :cond_1
-    const-string v6, "AbstractCameraActivity"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "create showSingleShotBurstHelpTextDialog - "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lcom/sec/android/app/camera/CameraSettings;->getSingleShotBurstHelpTextDialog()I
-
-    move-result v8
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2361
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/sec/android/app/camera/CameraSettings;->getSingleShotBurstHelpTextDialog()I
-
-    move-result v6
-
-    if-eq v6, v9, :cond_0
-
-    .line 2362
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 2363
-    .local v1, dialog:Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
-
-    move-result-object v3
-
-    .line 2365
-    .local v3, inflater:Landroid/view/LayoutInflater;
-    const v6, 0x7f030003
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v3, v6, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v4
-
-    .line 2366
-    .local v4, layout:Landroid/view/View;
-    const v6, 0x7f0b000e
-
-    invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    .line 2367
-    .local v2, img:Landroid/widget/ImageView;
-    const v6, 0x7f0b000f
-
-    invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/TextView;
-
-    .line 2368
-    .local v5, message:Landroid/widget/TextView;
-    const v6, 0x7f0b0010
-
-    invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/CheckBox;
-
-    .line 2370
-    .local v0, checkBox:Landroid/widget/CheckBox;
-    const v6, 0x7f090129
-
-    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
-
-    .line 2373
-    const v6, 0x7f020054
-
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
-
-    .line 2375
-    invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    .line 2376
-    const v6, 0x7f090126
-
-    invoke-virtual {v1, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    .line 2377
-    invoke-virtual {v1, v9}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
-
-    .line 2378
-    const/4 v6, 0x0
-
-    invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    .line 2380
-    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$46;
-
-    invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$46;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-
-    .line 2387
-    const v6, 0x7f0900a1
-
-    new-instance v7, Lcom/sec/android/app/camera/AbstractCameraActivity$47;
-
-    invoke-direct {v7, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$47;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v1, v6, v7}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 2393
-    new-instance v6, Lcom/sec/android/app/camera/AbstractCameraActivity$48;
-
-    invoke-direct {v6, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity$48;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;)V
-
-    invoke-virtual {v1, v6}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 2402
-    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v6
-
-    iput-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    .line 2403
-    iget-object v6, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSingleShotBurstHelpTextDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v6}, Landroid/app/AlertDialog;->show()V
-
-    goto/16 :goto_0
-.end method
-
 .method public showStatusIcon()V
     .locals 2
 
     .prologue
-    .line 2143
+    .line 2027
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -7851,20 +6977,20 @@
 
     move-result-object v0
 
-    .line 2144
+    .line 2028
     .local v0, params:Landroid/view/WindowManager$LayoutParams;
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
-    .line 2145
+    .line 2029
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 2146
+    .line 2030
     return-void
 .end method
 
@@ -7872,7 +6998,7 @@
     .locals 4
 
     .prologue
-    .line 559
+    .line 526
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
@@ -7881,7 +7007,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 560
+    .line 527
     return-void
 .end method
 
@@ -7889,14 +7015,14 @@
     .locals 2
 
     .prologue
-    .line 563
+    .line 530
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mShowWaitingAnimationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 564
+    .line 531
     return-void
 .end method
 
@@ -7904,30 +7030,30 @@
     .locals 4
 
     .prologue
-    .line 855
+    .line 794
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 856
+    .line 795
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bAFTimerStarted:Z
 
-    .line 857
+    .line 796
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 858
+    .line 797
     iget-object v1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 859
+    .line 798
     return-void
 .end method
 
@@ -7938,7 +7064,7 @@
     .locals 4
 
     .prologue
-    .line 829
+    .line 768
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -7947,7 +7073,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 831
+    .line 770
     return-void
 .end method
 
@@ -7955,7 +7081,7 @@
     .locals 4
 
     .prologue
-    .line 847
+    .line 786
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mInactivityPopupHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -7964,7 +7090,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 848
+    .line 787
     return-void
 .end method
 
@@ -7972,25 +7098,25 @@
     .locals 2
 
     .prologue
-    .line 862
+    .line 801
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 863
+    .line 802
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mMainHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 865
+    .line 804
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->bAFTimerStarted:Z
 
-    .line 866
+    .line 805
     return-void
 .end method
 
@@ -8001,14 +7127,14 @@
     .locals 2
 
     .prologue
-    .line 840
+    .line 779
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMainHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 842
+    .line 781
     invoke-virtual {p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMainHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -8017,7 +7143,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 844
+    .line 783
     :cond_0
     return-void
 .end method
@@ -8026,14 +7152,14 @@
     .locals 2
 
     .prologue
-    .line 851
+    .line 790
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mInactivityPopupHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 852
+    .line 791
     return-void
 .end method
 

@@ -59,7 +59,7 @@
 
     .prologue
     .line 51
-    const v0, 0x7f060076
+    const v0, 0x7f060071
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -68,7 +68,7 @@
     sput v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->PREVIEW_WIDTH:F
 
     .line 52
-    const v0, 0x7f060077
+    const v0, 0x7f060072
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -77,7 +77,7 @@
     sput v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->PREVIEW_HEIGHT:F
 
     .line 54
-    const v0, 0x7f06020d
+    const v0, 0x7f060208
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -86,7 +86,7 @@
     sput v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->SHRINK_RATIO:F
 
     .line 55
-    const v0, 0x7f06020e
+    const v0, 0x7f060209
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -156,7 +156,7 @@
     iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->DISP_OVER_RATIO:F
 
     .line 44
-    const v0, 0x7f060208
+    const v0, 0x7f060203
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -165,7 +165,7 @@
     iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->BOTTOM_OFFSET:F
 
     .line 45
-    const v0, 0x7f060209
+    const v0, 0x7f060204
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -174,7 +174,7 @@
     iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->BOTTOM_OFFSET_CAMCORDER_WIDE:F
 
     .line 46
-    const v0, 0x7f06020a
+    const v0, 0x7f060205
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -183,7 +183,7 @@
     iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->BOTTOM_OFFSET_CAMCORDER_MINI:F
 
     .line 48
-    const v0, 0x7f06020b
+    const v0, 0x7f060206
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -192,7 +192,7 @@
     iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->RIGHT_OFFSET:F
 
     .line 49
-    const v0, 0x7f06020c
+    const v0, 0x7f060207
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -352,7 +352,7 @@
 
     .prologue
     .line 158
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     const/high16 v1, 0x4130
 
@@ -363,7 +363,7 @@
     .line 160
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     .line 161
     const/high16 v0, -0x4080
@@ -374,7 +374,7 @@
 
     .line 163
     :cond_0
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     const v1, 0x41175c29
 
@@ -383,13 +383,13 @@
     if-ltz v0, :cond_2
 
     .line 165
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     const v1, 0x3f2147ae
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     .line 167
     iget-boolean v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mNotiThumbnail:Z
@@ -402,21 +402,21 @@
     iput-boolean v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mNotiThumbnail:Z
 
     .line 169
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mOnAniProgressListener:Lcom/sec/android/glview/TwGLAniVertex$OnAniProgressListener;
+    iget-object v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mOnAniProgressListener:Lcom/sec/android/glview/TwGLAniVertex$OnAniProgressListener;
 
     if-eqz v0, :cond_1
 
     .line 170
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mOnAniProgressListener:Lcom/sec/android/glview/TwGLAniVertex$OnAniProgressListener;
+    iget-object v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mOnAniProgressListener:Lcom/sec/android/glview/TwGLAniVertex$OnAniProgressListener;
 
-    iget v1, p0, Lcom/sec/android/glview/TwGLAniVertex;->mMode:I
+    iget v1, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mMode:I
 
     invoke-interface {v0, p0, v1}, Lcom/sec/android/glview/TwGLAniVertex$OnAniProgressListener;->onAniProgress(Lcom/sec/android/glview/TwGLView;I)V
 
     .line 179
     :cond_1
     :goto_1
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     const/high16 v1, 0x4120
 
@@ -426,13 +426,13 @@
 
     .line 175
     :cond_2
-    iget v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     const v1, 0x3e3851ec
 
     const v2, 0x412e6666
 
-    iget v3, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iget v3, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     sub-float/2addr v2, v3
 
@@ -440,7 +440,7 @@
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/sec/android/glview/TwGLAniVertex;->mCnt:F
+    iput v0, p0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mCnt:F
 
     goto :goto_1
 .end method
@@ -517,7 +517,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget v14, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v14, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->GRID_SIZE:I
 
     if-gt v10, v14, :cond_2
 
@@ -526,7 +526,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v15, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->GRID_SIZE:I
 
     int-to-float v15, v15
 
@@ -542,7 +542,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget v14, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v14, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->GRID_SIZE:I
 
     if-gt v7, v14, :cond_1
 
@@ -563,7 +563,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/sec/android/glview/TwGLAniVertex;->GRID_SIZE:I
+    iget v15, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->GRID_SIZE:I
 
     int-to-float v15, v15
 
@@ -652,7 +652,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v14, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     add-int/lit8 v5, v4, 0x1
 
@@ -663,7 +663,7 @@
     .line 148
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v14, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     add-int/lit8 v4, v5, 0x1
 
@@ -674,7 +674,7 @@
     .line 149
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLAniVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
+    iget-object v14, v0, Lcom/sec/android/glanimation/TwGLAniShrinkVertex;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     add-int/lit8 v5, v4, 0x1
 

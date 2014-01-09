@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 537
+    .line 504
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,19 +41,19 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 506
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     if-nez v0, :cond_0
 
-    .line 540
+    .line 507
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->inflateWaitingView()V
 
-    .line 542
+    .line 509
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -61,14 +61,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 543
+    .line 510
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$3;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/AbstractCameraActivity;->mSpinnerDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 545
+    .line 512
     :cond_1
     return-void
 .end method

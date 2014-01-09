@@ -68,10 +68,7 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/AbstractCameraActivity;I)V
     .locals 11
-    .parameter "activityContext"
-    .parameter "quality"
 
-    .prologue
     const/4 v10, 0x5
 
     const/4 v9, 0x4
@@ -82,10 +79,8 @@
 
     const/16 v6, 0xa
 
-    .line 102
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v3, 0x7
 
     new-array v3, v3, [[I
@@ -140,11 +135,8 @@
 
     iput-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
-    .line 103
     const/4 v0, 0x2
 
-    .line 104
-    .local v0, propertyIndex:I
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v3
@@ -153,15 +145,10 @@
 
     move-result v2
 
-    .line 105
-    .local v2, resolutionId:I
     const/4 v1, 0x3
 
-    .line 108
-    .local v1, qualityIndex:I
     packed-switch v2, :pswitch_data_0
 
-    .line 130
     :goto_0
     :pswitch_0
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -174,10 +161,8 @@
 
     if-ne v3, v7, :cond_0
 
-    .line 131
     const/4 v0, 0x6
 
-    .line 133
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -196,7 +181,6 @@
 
     if-nez v3, :cond_1
 
-    .line 134
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -211,12 +195,10 @@
 
     move-result v2
 
-    .line 141
     :cond_0
     :goto_1
     packed-switch p2, :pswitch_data_1
 
-    .line 154
     :goto_2
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
@@ -226,7 +208,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mVideoEncoder:I
 
-    .line 156
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
     move-result-object v3
@@ -237,7 +218,6 @@
 
     if-ne v3, v7, :cond_3
 
-    .line 157
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -250,7 +230,6 @@
 
     if-lez v3, :cond_2
 
-    .line 158
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -263,7 +242,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mVideoBitrate:I
 
-    .line 165
     :goto_3
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
@@ -273,7 +251,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mVideoFps:I
 
-    .line 166
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v0
@@ -282,21 +259,18 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mOutputFormat:I
 
-    .line 167
     invoke-static {v2}, Lcom/sec/android/app/camera/CameraResolution;->getIntWidth(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mVideoWidth:I
 
-    .line 168
     invoke-static {v2}, Lcom/sec/android/app/camera/CameraResolution;->getIntHeight(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mVideoHeight:I
 
-    .line 171
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v0
@@ -307,7 +281,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mAudioEncoder:I
 
-    .line 172
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v0
@@ -318,7 +291,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mAudioBitrate:I
 
-    .line 173
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v0
@@ -329,7 +301,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mAudioChannels:I
 
-    .line 174
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v0
@@ -340,77 +311,58 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mAudioSamplingRate:I
 
-    .line 175
     return-void
 
-    .line 110
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 111
     goto/16 :goto_0
 
-    .line 113
     :pswitch_2
     const/4 v0, 0x1
 
-    .line 114
     goto/16 :goto_0
 
-    .line 116
     :pswitch_3
     const/4 v0, 0x2
 
-    .line 117
     goto/16 :goto_0
 
-    .line 119
     :pswitch_4
     const/4 v0, 0x3
 
-    .line 120
     goto/16 :goto_0
 
-    .line 122
     :pswitch_5
     const/4 v0, 0x4
 
-    .line 123
     goto/16 :goto_0
 
-    .line 125
     :pswitch_6
     const/4 v0, 0x5
 
     goto/16 :goto_0
 
-    .line 137
     :cond_1
     const/16 v2, 0x13
 
     goto/16 :goto_1
 
-    .line 143
     :pswitch_7
     const/4 v1, 0x1
 
-    .line 144
     goto/16 :goto_2
 
-    .line 146
     :pswitch_8
     const/4 v1, 0x2
 
-    .line 147
     goto/16 :goto_2
 
-    .line 149
     :pswitch_9
     const/4 v1, 0x3
 
     goto/16 :goto_2
 
-    .line 160
     :cond_2
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
@@ -422,7 +374,6 @@
 
     goto :goto_3
 
-    .line 162
     :cond_3
     iget-object v3, p0, Lcom/sec/android/app/camera/MediaRecorderProfile;->mProfileTable:[[I
 
@@ -434,15 +385,14 @@
 
     goto :goto_3
 
-    .line 66
     nop
 
     :array_0
     .array-data 0x4
         0x2t 0x0t 0x0t 0x0t
-        0x40t 0x66t 0x3t 0x1t
-        0xc0t 0xe1t 0xe4t 0x0t
-        0x40t 0x5dt 0xc6t 0x0t
+        0x80t 0xc3t 0xc9t 0x1t
+        0x0t 0x36t 0x6et 0x1t
+        0xc0t 0xeat 0x21t 0x1t
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
@@ -454,13 +404,13 @@
     :array_1
     .array-data 0x4
         0x2t 0x0t 0x0t 0x0t
-        0x0t 0x1bt 0xb7t 0x0t
+        0xc0t 0xeat 0x21t 0x1t
+        0xc0t 0xe1t 0xe4t 0x0t
         0x80t 0x96t 0x98t 0x0t
-        0x0t 0x12t 0x7at 0x0t
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
-        0x0t 0xf4t 0x1t 0x0t
+        0x0t 0x6bt 0x3t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x80t 0xbbt 0x0t 0x0t
     .end array-data
@@ -474,7 +424,7 @@
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
-        0x0t 0xf4t 0x1t 0x0t
+        0x0t 0x6bt 0x3t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x80t 0xbbt 0x0t 0x0t
     .end array-data
@@ -488,7 +438,7 @@
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
-        0x0t 0xf4t 0x1t 0x0t
+        0x0t 0x6bt 0x3t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x80t 0xbbt 0x0t 0x0t
     .end array-data
@@ -502,7 +452,7 @@
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
-        0x0t 0xf4t 0x1t 0x0t
+        0x0t 0x6bt 0x3t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x80t 0xbbt 0x0t 0x0t
     .end array-data
@@ -516,7 +466,7 @@
         0x1et 0x0t 0x0t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x3t 0x0t 0x0t 0x0t
-        0x0t 0xf4t 0x1t 0x0t
+        0x0t 0x6bt 0x3t 0x0t
         0x2t 0x0t 0x0t 0x0t
         0x80t 0xbbt 0x0t 0x0t
     .end array-data
@@ -535,7 +485,6 @@
         0x40t 0x1ft 0x0t 0x0t
     .end array-data
 
-    .line 108
     :pswitch_data_0
     .packed-switch 0xb
         :pswitch_4
@@ -549,7 +498,6 @@
         :pswitch_6
     .end packed-switch
 
-    .line 141
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_7

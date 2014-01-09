@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="CustomTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@android:color/black</item>
+    <style name="CustomTheme" parent="@*android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@*android:color/black</item>
         <item name="android:windowAnimationStyle">@style/NoEnterExitAnimation</item>
     </style>
     <style name="NoEnterExitAnimation">
@@ -19,7 +19,7 @@
         <item name="android:scaleType">fitXY</item>
         <item name="android:layout_weight">1.0</item>
     </style>
-    <style name="OverlayTipsTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@android:color/transparent</item>
+    <style name="OverlayTipsTheme" parent="@*android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@*android:color/transparent</item>
     </style>
 </resources>

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 272
+    .line 265
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 274
+    .line 267
     const-string v0, "CameraEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,7 +70,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
+    .line 269
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -79,6 +79,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->finishOnError(I)V
 
-    .line 277
+    .line 270
     return-void
 .end method

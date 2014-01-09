@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 748
+    .line 730
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraSettings$NotificationHandler;->this$0:Lcom/sec/android/app/camera/CameraSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,12 +39,12 @@
     .parameter "msg"
 
     .prologue
-    .line 750
+    .line 732
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
-    .line 751
+    .line 733
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraSettings$NotificationHandler;->this$0:Lcom/sec/android/app/camera/CameraSettings;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -53,7 +53,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/app/camera/CameraSettings;->handleNotification(II)V
 
-    .line 753
+    .line 735
     :cond_0
     return-void
 .end method

@@ -36,7 +36,7 @@
     <string name="SM_SMILE">Chụp nụ cười</string>
     <string name="SM_FRAME">Thêm khung</string>
     <string name="SM_BEAUTY">Vẻ đẹp</string>
-    <string name="SM_VINTAGE">Tối ở mép ảnh</string>
+    <string name="SM_VINTAGE">Thời kỳ</string>
     <string name="SM_ADDME">Thêm bạn</string>
     <string name="SM_ACTION">Chụp hành động</string>
     <string name="SM_STOPMOTION">Dừng chuyển động</string>
@@ -69,8 +69,6 @@
     <string name="E_EMBOSS">Làm nổi</string>
     <string name="E_OUTLINE">Viền</string>
     <string name="E_WATERCOLOR">Màu nước</string>
-    <string name="E_MONOCHROME">Đơn sắc</string>
-    <string name="E_SKETCH">Phác hoạ</string>
     <string name="E_WASHED">Phai màu</string>
     <string name="E_POSTERIZE">Kế tiếp</string>
     <string name="E_SOLARIZE">Phơi quá</string>
@@ -81,7 +79,7 @@
     <string name="E_POINT_RED_YELLOW">Điểm đỏ-vàng</string>
     <string name="E_CARTOONIZE">Truyện tranh</string>
     <string name="F_AUTO_FLASH">Flash tự động</string>
-    <string name="F_AUTOFOCUS">Tự lấy nét</string>
+    <string name="F_AUTOFOCUS">Chỉnh tiêu điểm tự động</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Nhận diện khuôn mặt</string>
     <string name="F_PANFOCUS">Tiêu cự quay</string>
@@ -104,7 +102,7 @@
     <string name="RM_MMS">Giới hạn MMS</string>
     <string name="RM_EMAIL">Giới hạn cho thư điện tử</string>
     <string name="RM_SLOW">Di chuyển chậm</string>
-    <string name="RM_FAST">Chuyển động nhanh</string>
+    <string name="RM_FAST">Di chuyển nhanh</string>
     <string name="CS_PROGRESS_TEXT">Đang tạo ảnh. Xin chờ...</string>
     <string name="SCN_NONE">Không dùng</string>
     <string name="SCN_PORTRAIT">Chân dung</string>
@@ -133,7 +131,6 @@
     <string name="Title_Timer">Bấm giờ</string>
     <string name="Title_Resolution">Độ phân giải</string>
     <string name="Title_ShootAndShare">Chia sẻ cài đặt chụp</string>
-    <string name="Title_DeviceList">Danh sách thiết bị</string>
     <string name="Title_WhiteBalance">Cân bằng trắng</string>
     <string name="Title_Effects">Hiệu ứng</string>
     <string name="Title_Focus">Tiêu điểm</string>
@@ -155,11 +152,10 @@
     <string name="Title_AutoContrast">Tự động tương phản</string>
     <string name="Title_GPS">GPS tag</string>
     <string name="Title_Review">Xem trước</string>
-    <string name="Title_AutoShareShot">Tự động chia sẻ ảnh chụp</string>
     <string name="Title_Guideline">Hướng dẫn</string>
     <string name="Title_VideoQuality">Chất lượng video</string>
     <string name="Title_AudioRecording">Ghi âm</string>
-    <string name="Title_Storage">Bộ nhớ</string>
+    <string name="Title_Storage">Lưu trữ</string>
     <string name="Title_Reset">Xóa</string>
     <string name="Title_Mode">Chế độ</string>
     <string name="Title_Back">Lùi lại</string>
@@ -178,10 +174,7 @@
     <string name="HDR_Helptext">Cần cẩn thận không được lắc thiết bị khi chụp ảnh</string>
     <string name="help_text_panorama">Nhấn phím camera và di chuyển điện thoại chậm theo một hướng</string>
     <string name="help_text_panorama_device">Nhấn phím camera và di chuyển thiết bị chậm theo một hướng</string>
-    <string name="message_DefaultLayout">Bố cục phím tắt sẽ được cài đặt lại</string>
     <string name="message_EULA_GPS">Việc bật thẻ GPS sẽ gán, nhúng và lưu dữ liệu vị trí địa lý vào trong mỗi ảnh. Hãy thận trọng khi gửi, chia sẻ, phân phối, truyền hoặc sao chép những ảnh này vì chúng có chứa thông tin về vị trí đã chụp ảnh</string>
-    <string name="message_Auto_ShareShot">"Tự động chia sẻ ảnh chụp cho phép bạn dễ dàng kết nối với các thiết bị bạn muốn chia sẻ ảnh.
-Hãy bật tự động chia sẻ ảnh chụp, sau đó đưa các thiết bị lại gần nhau (thường là úp mặt sau vào nhau) để kết nối chúng với nhau"</string>
     <string name="GPS_msg">GPS tắt</string>
     <string name="message_enable_GPS">Bật GPS trong Cài đặt để sử dụng thẻ GPS</string>
     <string name="cancel">Hủy</string>
@@ -248,11 +241,9 @@ Hãy bật tự động chia sẻ ảnh chụp, sau đó đưa các thiết bị
     <string name="profile_user_default_name">Không biết</string>
     <string name="shareshot_no_user">Không có ai để chia sẻ</string>
     <string name="snapshot_saved">%s đã lưu</string>
-    <string name="editable_shortcut_reset">Xóa</string>
     <string name="editable_shortcut_helptext_title">Gợi ý</string>
     <string name="editable_shortcut_helptext_message">Chạm và giữ các phím tắt để sửa chúng</string>
     <string name="editable_shortcut_helptext">Chạm và giữ biểu tượng rồi kéo nó để chỉnh vị trí của các phím tắt</string>
-    <string name="sbeam_helptext">Chụp và chia sẻ ảnh với các thiết bị khác. Đưa các thiết bị lại gần để thêm thiết bị bạn muốn chia sẻ cùng qua S Beam</string>
     <string name="storage_setting_dialog_title">Vị trí bộ nhớ</string>
     <string name="storage_setting_dialog_message">Đã gắn thẻ nhớ SD. Đổi vị trí bộ nhớ thành thẻ SD?</string>
     <string name="do_not_ask_again">Không hiện lại</string>
@@ -261,8 +252,6 @@ Hãy bật tự động chia sẻ ảnh chụp, sau đó đưa các thiết bị
     <string name="bestpic">Ảnh đẹp nhất</string>
     <string name="bestpic_on">Bật</string>
     <string name="bestpic_off">Tắt</string>
-    <string name="bestgroup">Tạo dáng nhóm tốt nhất</string>
-    <string name="bestgroup_title">Chọn từng khuôn mặt đẹp nhất để lưu</string>
     <string name="battery_low">Đóng máy ảnh. Nhiệt độ pin quá thấp</string>
     <string name="buddy_photo_share_helptext">Nhận và chia sẻ ảnh với bạn bè qua nhận diện khuôn mặt</string>
     <string name="face_zoom_helptext">Chạm hai lần vào một khuôn mặt để phóng to hoặc thu nhỏ</string>
@@ -272,7 +261,6 @@ Hãy bật tự động chia sẻ ảnh chụp, sau đó đưa các thiết bị
     <string name="on_device_help_camcorder">Chuyển sang chế độ Máy quay</string>
     <string name="on_device_help_self">Chuyển sang chế độ tự chụp chân dung</string>
     <string name="on_device_help_editable">Chạm và giữ phím tắt bạn muốn di chuyển. Sau đó kéo nó vào nơi bạn muốn</string>
-    <string name="on_device_help_voicecommand">"Bạn có thể chụp ảnh bằng lệnh thoại như 'Chụp', 'Cười' và 'Cheese'"</string>
     <string name="Title_VideoSpeed">Tốc độ</string>
     <string name="SPEED_OFF">Bình thường</string>
     <string name="SPEED_2X_FASTER">2x nhanh hơn</string>
@@ -294,7 +282,4 @@ Hãy bật tự động chia sẻ ảnh chụp, sau đó đưa các thiết bị
     <string name="self_recording_open_warning_popup">Chỉ có thể sử dụng chế độ tự quay khi điện thoại mở</string>
     <string name="contextual_filename">Tên file ngữ cảnh</string>
     <string name="enable_gps_dialog">Cần bật thẻ GPS. Bật thẻ GPS?</string>
-    <string name="gallery_disable">Bộ sưu tập bị vô hiệu</string>
-    <string name="HDR_Normal">Bình thường</string>
-    <string name="HDR_Strong">Mạnh</string>
 </resources>

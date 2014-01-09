@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 669
+    .line 578
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,895 +35,793 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 10
+    .locals 11
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 672
+    const/4 v10, 0x0
+
+    const/4 v9, 0x1
+
+    const/4 v8, 0x0
+
+    .line 581
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 673
+    .line 582
     .local v0, action:Ljava/lang/String;
-    const-string v7, "Camera"
+    const-string v5, "Camera"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "onReceive ["
+    const-string v7, "onReceive ["
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v6
 
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v6
 
-    const-string v9, "]"
+    const-string v7, "]"
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v6
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v6
 
-    invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 583
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mIsDestroying:Z
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$500(Lcom/sec/android/app/camera/Camera;)Z
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Z
 
-    move-result v7
+    move-result v5
 
-    const/4 v8, 0x1
+    if-ne v5, v9, :cond_1
 
-    if-ne v7, v8, :cond_1
+    .line 584
+    const-string v5, "Camera"
 
-    .line 675
-    const-string v7, "Camera"
+    const-string v6, "onReceive - camera is destroying"
 
-    const-string v8, "onReceive - camera is destroying"
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 833
+    .line 727
     :cond_0
     :goto_0
     return-void
 
-    .line 679
+    .line 588
     :cond_1
-    const-string v7, "android.net.wifi.p2p.STATE_CHANGED"
+    const-string v5, "android.net.wifi.p2p.STATE_CHANGED"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-nez v7, :cond_2
+    if-nez v5, :cond_2
 
-    const-string v7, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
+    const-string v5, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_8
+    if-eqz v5, :cond_3
 
-    .line 681
+    .line 590
     :cond_2
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$000(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_3
-
-    .line 682
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$000(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;->setWifiDirectStatus()V
-
-    .line 701
-    :cond_3
-    :goto_1
-    const-string v7, "android.intent.action.MEDIA_UNMOUNTED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    const-string v7, "android.intent.action.MEDIA_EJECT"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    const-string v7, "android.intent.action.MEDIA_REMOVED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    .line 704
-    :cond_4
-    invoke-static {}, Landroid/media/MiniThumbFile;->reset()V
-
-    .line 705
-    const/4 v3, 0x0
-
-    .line 706
-    .local v3, mIsSettingsMMC:Z
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_5
-
-    .line 707
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
-
-    move-result v7
-
-    const/4 v8, 0x1
-
-    if-ne v7, v8, :cond_9
-
-    .line 708
-    const/4 v3, 0x1
-
-    .line 714
-    :cond_5
-    :goto_2
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v7, v8, v9}, Lcom/sec/android/app/camera/Camera;->checkStorage(ZZ)V
-
-    .line 715
-    if-eqz v3, :cond_6
-
-    .line 716
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finish()V
-
-    .line 809
-    .end local v3           #mIsSettingsMMC:Z
-    :cond_6
-    :goto_3
-    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
-
-    move-result-object v7
-
-    const-string v8, "CscFeature_Camera_EnableSmsNotiPopup"
-
-    invoke-virtual {v7, v8}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_7
-
-    .line 810
-    const/4 v4, 0x0
-
-    .line 812
-    .local v4, messageDisplayData:Ljava/lang/String;
-    const-string v7, "com.sec.mms.intent.action.SMS_RECEIVED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1a
-
-    .line 813
-    const-string v7, "DisplayName"
-
-    invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 815
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v7, v8, v9, v4}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
-
-    .line 827
-    .end local v4           #messageDisplayData:Ljava/lang/String;
-    :cond_7
-    :goto_4
-    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
-
-    move-result-object v7
-
-    const-string v8, "CscFeature_Camera_SecurityMdmService"
-
-    invoke-virtual {v7, v8}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    .line 828
-    const-string v7, "com.sktelecom.dmc.intent.action.DCMO_SET"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    const-string v7, "CAMERA_ON"
-
-    const/4 v8, 0x1
-
-    invoke-virtual {p2, v7, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v7
-
-    if-nez v7, :cond_0
-
-    .line 829
-    const-string v7, "Camera"
-
-    const-string v8, "INTENT_MSG_DCMO"
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 830
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finish()V
-
-    goto/16 :goto_0
-
-    .line 684
-    :cond_8
-    const-string v7, "android.intent.action.SIOP_LEVEL_CHANGED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    .line 685
-    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$000(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
 
     move-result-object v5
 
-    .line 686
-    .local v5, myExtras:Landroid/os/Bundle;
-    const-string v7, "flash_led_disable"
+    if-eqz v5, :cond_3
 
-    const/4 v8, 0x0
+    .line 591
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-virtual {v5, v7, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    #getter for: Lcom/sec/android/app/camera/Camera;->mGLCameraBaseIndicators:Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$000(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;
 
-    move-result v1
+    move-result-object v5
 
-    .line 687
-    .local v1, bLimit:Z
-    if-eqz v1, :cond_3
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/glwidget/TwGLCameraBaseIndicators;->setWifiDirectStatus()V
 
-    .line 688
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 595
+    :cond_3
+    const-string v5, "android.intent.action.MEDIA_UNMOUNTED"
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v7
+    move-result v5
 
-    const/4 v8, 0x0
+    if-nez v5, :cond_4
 
-    invoke-virtual {v7, v8}, Lcom/sec/android/app/camera/CameraSettings;->setCameraFlashMode(I)V
+    const-string v5, "android.intent.action.MEDIA_EJECT"
 
-    .line 689
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->getMenuDimController()Lcom/sec/android/app/camera/MenuDimController;
+    move-result v5
 
-    move-result-object v7
+    if-nez v5, :cond_4
 
-    const/4 v8, 0x3
+    const-string v5, "android.intent.action.MEDIA_REMOVED"
 
-    const/4 v9, 0x0
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v7, v8, v9}, Lcom/sec/android/app/camera/MenuDimController;->refreshButtonDim(II)V
+    move-result v5
 
-    .line 690
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    if-eqz v5, :cond_9
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
+    .line 598
+    :cond_4
+    invoke-static {}, Landroid/media/MiniThumbFile;->reset()V
 
-    move-result-object v7
+    .line 599
+    const/4 v2, 0x0
 
-    if-eqz v7, :cond_3
+    .line 600
+    .local v2, mIsSettingsMMC:Z
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 691
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
+    move-result-object v5
 
-    move-result-object v7
+    if-eqz v5, :cond_5
 
-    const/4 v8, 0x3
+    .line 601
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const/4 v9, 0x0
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
 
-    invoke-virtual {v7, v8, v9}, Lcom/sec/android/app/camera/CameraEngine;->scheduleChangeParameter(II)V
+    move-result-object v5
 
-    goto/16 :goto_1
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/CameraSettings;->getStorage()I
 
-    .line 710
-    .end local v1           #bLimit:Z
-    .end local v5           #myExtras:Landroid/os/Bundle;
-    .restart local v3       #mIsSettingsMMC:Z
-    :cond_9
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    move-result v5
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    if-ne v5, v9, :cond_8
 
-    move-result-object v7
+    .line 602
+    const/4 v2, 0x1
 
-    if-eqz v7, :cond_5
+    .line 608
+    :cond_5
+    :goto_1
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v5, v8, v9}, Lcom/sec/android/app/camera/Camera;->checkStorage(ZZ)V
 
-    #calls: Lcom/sec/android/app/camera/Camera;->onChkImageCaptureIntent()Z
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$1100(Lcom/sec/android/app/camera/Camera;)Z
+    .line 609
+    if-eqz v2, :cond_6
 
-    move-result v7
+    .line 610
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    if-nez v7, :cond_5
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finish()V
 
-    .line 711
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 703
+    .end local v2           #mIsSettingsMMC:Z
+    :cond_6
+    :goto_2
+    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    move-result-object v5
 
-    move-result-object v7
+    const-string v6, "CscFeature_Camera_EnableSmsNotiPopup"
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton()V
+    invoke-virtual {v5, v6}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
 
-    goto/16 :goto_2
+    move-result v5
 
-    .line 717
-    .end local v3           #mIsSettingsMMC:Z
-    :cond_a
-    const-string v7, "android.intent.action.MEDIA_MOUNTED"
+    if-eqz v5, :cond_7
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 704
+    const/4 v3, 0x0
 
-    move-result v7
+    .line 706
+    .local v3, messageDisplayData:Ljava/lang/String;
+    const-string v5, "com.sec.mms.intent.action.SMS_RECEIVED"
 
-    if-eqz v7, :cond_b
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_19
+
+    .line 707
+    const-string v5, "DisplayName"
+
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 709
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v6, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v5, v6, v9, v3}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
 
     .line 721
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .end local v3           #messageDisplayData:Ljava/lang/String;
+    :cond_7
+    :goto_3
+    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
+
+    move-result-object v5
+
+    const-string v6, "CscFeature_Camera_SecurityMdmService"
+
+    invoke-virtual {v5, v6}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    .line 722
+    const-string v5, "com.sktelecom.dmc.intent.action.DCMO_SET"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    const-string v5, "CAMERA_ON"
+
+    invoke-virtual {p2, v5, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 723
+    const-string v5, "Camera"
+
+    const-string v6, "INTENT_MSG_DCMO"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 724
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finish()V
+
+    goto/16 :goto_0
+
+    .line 604
+    .restart local v2       #mIsSettingsMMC:Z
+    :cond_8
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_5
+
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #calls: Lcom/sec/android/app/camera/Camera;->onChkImageCaptureIntent()Z
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$1000(Lcom/sec/android/app/camera/Camera;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    .line 605
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton()V
+
+    goto :goto_1
+
+    .line 611
+    .end local v2           #mIsSettingsMMC:Z
+    :cond_9
+    const-string v5, "android.intent.action.MEDIA_MOUNTED"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    .line 615
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-static {}, Lcom/sec/android/app/camera/CheckMemory;->isStorageMounted()Z
 
-    move-result v8
+    move-result v6
 
-    const/4 v9, 0x0
+    invoke-virtual {v5, v6, v8}, Lcom/sec/android/app/camera/Camera;->checkStorage(ZZ)V
 
-    invoke-virtual {v7, v8, v9}, Lcom/sec/android/app/camera/Camera;->checkStorage(ZZ)V
+    goto :goto_2
 
-    goto/16 :goto_3
+    .line 616
+    :cond_a
+    const-string v5, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
-    .line 722
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_b
+
+    .line 617
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_6
+
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mChkKeyFromApp:Ljava/lang/String;
+
+    if-nez v5, :cond_6
+
+    .line 618
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$700(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton()V
+
+    goto/16 :goto_2
+
+    .line 619
     :cond_b
-    const-string v7, "android.intent.action.MEDIA_SCANNER_FINISHED"
+    const-string v5, "com.android.camera.NEW_PICTURE"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_c
+    if-eqz v5, :cond_c
 
-    .line 723
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 620
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->updateRemainTime()V
 
-    move-result-object v7
+    goto/16 :goto_2
 
-    if-eqz v7, :cond_6
-
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mChkKeyFromApp:Ljava/lang/String;
-
-    if-nez v7, :cond_6
-
-    .line 724
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraSideMenu:Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$600(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/glwidget/TwGLCameraSideMenu;->updateThumbnailButton()V
-
-    goto/16 :goto_3
-
-    .line 725
+    .line 621
     :cond_c
-    const-string v7, "com.android.camera.NEW_PICTURE"
+    const-string v5, "android.intent.action.BATTERY_CHANGED"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_d
+    if-eqz v5, :cond_d
 
-    .line 726
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->updateRemainTime()V
-
-    goto/16 :goto_3
-
-    .line 727
-    :cond_d
-    const-string v7, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_e
-
-    .line 728
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 622
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #calls: Lcom/sec/android/app/camera/Camera;->handleBatteryChanged(Landroid/content/Intent;)V
-    invoke-static {v7, p2}, Lcom/sec/android/app/camera/Camera;->access$1200(Lcom/sec/android/app/camera/Camera;Landroid/content/Intent;)V
+    invoke-static {v5, p2}, Lcom/sec/android/app/camera/Camera;->access$1100(Lcom/sec/android/app/camera/Camera;Landroid/content/Intent;)V
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 729
+    .line 623
+    :cond_d
+    const-string v5, "android.intent.action.BATTERY_LOW"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_f
+
+    .line 625
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$1200(Lcom/sec/android/app/camera/Camera;)I
+
+    move-result v5
+
+    sget v6, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_BATTERY_THRESHOLD_VALUE:I
+
+    if-gt v5, v6, :cond_e
+
+    .line 626
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
+
+    .line 627
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v5, v8}, Lcom/sec/android/app/camera/Camera;->handleLowBattery(Z)V
+
+    goto/16 :goto_2
+
+    .line 630
     :cond_e
-    const-string v7, "android.intent.action.BATTERY_LOW"
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-boolean v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryDisableFlashPopupDisplayed:Z
 
-    move-result v7
+    if-nez v5, :cond_6
 
-    if-eqz v7, :cond_10
+    .line 631
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 731
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$1300(Lcom/sec/android/app/camera/Camera;)I
+    .line 632
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    move-result v7
+    #calls: Lcom/sec/android/app/camera/Camera;->handlePluggedLowBattery(Z)V
+    invoke-static {v5, v8}, Lcom/sec/android/app/camera/Camera;->access$1300(Lcom/sec/android/app/camera/Camera;Z)V
 
-    sget v8, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_BATTERY_THRESHOLD_VALUE:I
+    goto/16 :goto_2
 
-    if-gt v7, v8, :cond_f
-
-    .line 732
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
-
-    .line 733
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v8}, Lcom/sec/android/app/camera/Camera;->handleLowBattery(Z)V
-
-    goto/16 :goto_3
-
-    .line 736
+    .line 636
     :cond_f
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    const-string v5, "android.intent.action.ACTION_POWER_CONNECTED"
 
-    iget-boolean v7, v7, Lcom/sec/android/app/camera/Camera;->mLowBatteryDisableFlashPopupDisplayed:Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v7, :cond_6
+    move-result v5
 
-    .line 737
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    if-eqz v5, :cond_15
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
+    .line 637
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 738
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$1200(Lcom/sec/android/app/camera/Camera;)I
 
-    const/4 v8, 0x0
+    move-result v5
 
-    #calls: Lcom/sec/android/app/camera/Camera;->handlePluggedLowBattery(Z)V
-    invoke-static {v7, v8}, Lcom/sec/android/app/camera/Camera;->access$1400(Lcom/sec/android/app/camera/Camera;Z)V
+    iget-object v6, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    goto/16 :goto_3
+    iget v6, v6, Lcom/sec/android/app/camera/Camera;->mLowBatteryWarningLevel:I
 
-    .line 742
+    if-gt v5, v6, :cond_13
+
+    .line 639
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$1200(Lcom/sec/android/app/camera/Camera;)I
+
+    move-result v5
+
+    sget v6, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_BATTERY_THRESHOLD_VALUE:I
+
+    if-gt v5, v6, :cond_11
+
+    .line 640
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
+
+    .line 641
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+
+    if-eqz v5, :cond_10
+
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->isShowing()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_10
+
+    .line 642
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->dismiss()V
+
+    .line 644
     :cond_10
-    const-string v7, "android.intent.action.ACTION_POWER_CONNECTED"
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v8}, Lcom/sec/android/app/camera/Camera;->handleLowBattery(Z)V
 
-    move-result v7
+    goto/16 :goto_2
 
-    if-eqz v7, :cond_16
-
-    .line 743
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$1300(Lcom/sec/android/app/camera/Camera;)I
-
-    move-result v7
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget v8, v8, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryWarningLevel:I
-
-    if-gt v7, v8, :cond_14
-
-    .line 745
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->battLevel:I
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$1300(Lcom/sec/android/app/camera/Camera;)I
-
-    move-result v7
-
-    sget v8, Lcom/sec/android/app/camera/AbstractCameraActivity;->LOW_BATTERY_THRESHOLD_VALUE:I
-
-    if-gt v7, v8, :cond_12
-
-    .line 746
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
-
-    .line 747
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
-
-    if-eqz v7, :cond_11
-
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_11
-
-    .line 748
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mPluggedLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 750
+    .line 647
     :cond_11
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const/4 v8, 0x0
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
 
-    invoke-virtual {v7, v8}, Lcom/sec/android/app/camera/Camera;->handleLowBattery(Z)V
+    .line 648
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    goto/16 :goto_3
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 753
+    if-eqz v5, :cond_12
+
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->isShowing()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_12
+
+    .line 649
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->dismiss()V
+
+    .line 651
     :cond_12
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->finishTimerCount()V
+    iput-object v10, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    .line 754
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    if-eqz v7, :cond_13
-
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_13
-
-    .line 755
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 757
-    :cond_13
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v8, 0x0
-
-    iput-object v8, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    .line 759
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v8, 0x0
+    .line 653
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
     #calls: Lcom/sec/android/app/camera/Camera;->handlePluggedLowBattery(Z)V
-    invoke-static {v7, v8}, Lcom/sec/android/app/camera/Camera;->access$1400(Lcom/sec/android/app/camera/Camera;Z)V
+    invoke-static {v5, v8}, Lcom/sec/android/app/camera/Camera;->access$1300(Lcom/sec/android/app/camera/Camera;Z)V
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 763
+    .line 657
+    :cond_13
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
+
+    if-eqz v5, :cond_14
+
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->isShowing()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_14
+
+    .line 658
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iget-object v5, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
+
+    invoke-virtual {v5}, Landroid/app/AlertDialog;->dismiss()V
+
+    .line 660
     :cond_14
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    iput-object v10, v5, Lcom/sec/android/app/camera/Camera;->mLowBatteryPopup:Landroid/app/AlertDialog;
 
-    if-eqz v7, :cond_15
+    goto/16 :goto_2
 
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_15
-
-    .line 764
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v7, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
-
-    invoke-virtual {v7}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 766
+    .line 662
     :cond_15
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    const-string v5, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
-    const/4 v8, 0x0
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-object v8, v7, Lcom/sec/android/app/camera/AbstractCameraActivity;->mLowBatteryPopup:Landroid/app/AlertDialog;
+    move-result v5
 
-    goto/16 :goto_3
+    if-eqz v5, :cond_16
 
-    .line 768
+    .line 663
+    const-string v5, "Camera"
+
+    const-string v6, "INTENT_MSG_SECURITY"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_2
+
+    .line 675
     :cond_16
-    const-string v7, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
+    const-string v5, "com.android.shoot.userchanged"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_17
+    if-eqz v5, :cond_17
 
-    .line 769
-    const-string v7, "Camera"
+    .line 676
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const-string v8, "INTENT_MSG_SECURITY"
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/Camera;->refreshDeviceList()V
 
-    invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    goto/16 :goto_2
 
-    goto/16 :goto_3
-
-    .line 781
+    .line 677
     :cond_17
-    const-string v7, "com.android.shoot.userchanged"
+    const-string v5, "com.android.shootshare.recvfile"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_18
+    if-eqz v5, :cond_18
 
-    .line 782
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 678
+    const-string v5, "filepath"
 
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/Camera;->refreshDeviceList()V
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    goto/16 :goto_3
+    move-result-object v1
 
-    .line 783
+    .line 680
+    .local v1, filePath:Ljava/lang/String;
+    if-eqz v1, :cond_6
+
+    .line 681
+    new-instance v4, Ljava/util/Timer;
+
+    invoke-direct {v4}, Ljava/util/Timer;-><init>()V
+
+    .line 682
+    .local v4, timer:Ljava/util/Timer;
+    new-instance v5, Lcom/sec/android/app/camera/Camera$2$1;
+
+    invoke-direct {v5, p0, v1}, Lcom/sec/android/app/camera/Camera$2$1;-><init>(Lcom/sec/android/app/camera/Camera$2;Ljava/lang/String;)V
+
+    const-wide/16 v6, 0x1f4
+
+    invoke-virtual {v4, v5, v6, v7}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+
+    goto/16 :goto_2
+
+    .line 693
+    .end local v1           #filePath:Ljava/lang/String;
+    .end local v4           #timer:Ljava/util/Timer;
     :cond_18
-    const-string v7, "com.android.shootshare.recvfile"
+    const-string v5, "POWER_OFF_ANIMATION_START"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_19
+    if-eqz v5, :cond_6
 
-    .line 784
-    const-string v7, "filepath"
+    .line 694
+    const-string v5, "Camera"
 
-    invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    const-string v6, "onReceive shutdown"
 
-    move-result-object v2
+    invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 786
-    .local v2, filePath:Ljava/lang/String;
-    if-eqz v2, :cond_6
+    .line 696
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    .line 787
-    new-instance v6, Ljava/util/Timer;
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct {v6}, Ljava/util/Timer;-><init>()V
+    move-result-object v5
 
-    .line 788
-    .local v6, timer:Ljava/util/Timer;
-    new-instance v7, Lcom/sec/android/app/camera/Camera$2$1;
+    if-eqz v5, :cond_6
 
-    invoke-direct {v7, p0, v2}, Lcom/sec/android/app/camera/Camera$2$1;-><init>(Lcom/sec/android/app/camera/Camera$2;Ljava/lang/String;)V
+    .line 697
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const-wide/16 v8, 0x1f4
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-virtual {v6, v7, v8, v9}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+    move-result-object v5
 
-    goto/16 :goto_3
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/CameraEngine;->isTimerCounting()Z
 
-    .line 799
-    .end local v2           #filePath:Ljava/lang/String;
-    .end local v6           #timer:Ljava/util/Timer;
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    .line 698
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
+    invoke-static {v5}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/sec/android/app/camera/CameraEngine;->doCancelShutterTimer()V
+
+    goto/16 :goto_2
+
+    .line 710
+    .restart local v3       #messageDisplayData:Ljava/lang/String;
     :cond_19
-    const-string v7, "POWER_OFF_ANIMATION_START"
+    const-string v5, "com.sec.mms.intent.action.PUSHSMS_RECEIVED"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_6
+    if-eqz v5, :cond_1a
 
-    .line 800
-    const-string v7, "Camera"
+    .line 711
+    const-string v5, "DisplayName"
 
-    const-string v8, "onReceive shutdown"
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v3
 
-    .line 802
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 713
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
+    iget-object v6, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    move-result-object v7
+    const/4 v7, 0x2
 
-    if-eqz v7, :cond_6
-
-    .line 803
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/CameraEngine;->isTimerCounting()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_6
-
-    .line 804
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    #getter for: Lcom/sec/android/app/camera/Camera;->mCameraEngine:Lcom/sec/android/app/camera/CameraEngine;
-    invoke-static {v7}, Lcom/sec/android/app/camera/Camera;->access$100(Lcom/sec/android/app/camera/Camera;)Lcom/sec/android/app/camera/CameraEngine;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/sec/android/app/camera/CameraEngine;->doCancelShutterTimer()V
+    invoke-virtual {v5, v6, v7, v3}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 816
-    .restart local v4       #messageDisplayData:Ljava/lang/String;
+    .line 714
     :cond_1a
-    const-string v7, "com.sec.mms.intent.action.PUSHSMS_RECEIVED"
+    const-string v5, "com.sec.mms.intent.action.MMS_RECEIVED"
 
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_1b
+    if-eqz v5, :cond_7
 
-    .line 817
-    const-string v7, "DisplayName"
+    .line 715
+    const-string v5, "DisplayName"
 
-    invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    .line 819
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    .line 717
+    iget-object v5, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    iget-object v8, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
+    iget-object v6, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const/4 v9, 0x2
+    const/4 v7, 0x3
 
-    invoke-virtual {v7, v8, v9, v4}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
+    invoke-virtual {v5, v6, v7, v3}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
 
-    goto/16 :goto_4
-
-    .line 820
-    :cond_1b
-    const-string v7, "com.sec.mms.intent.action.MMS_RECEIVED"
-
-    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_7
-
-    .line 821
-    const-string v7, "DisplayName"
-
-    invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 823
-    iget-object v7, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    iget-object v8, p0, Lcom/sec/android/app/camera/Camera$2;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const/4 v9, 0x3
-
-    invoke-virtual {v7, v8, v9, v4}, Lcom/sec/android/app/camera/Camera;->makeToast(Landroid/app/Activity;ILjava/lang/String;)V
-
-    goto/16 :goto_4
+    goto/16 :goto_3
 .end method

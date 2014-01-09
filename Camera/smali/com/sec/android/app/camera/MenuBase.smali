@@ -152,7 +152,7 @@
 
     .prologue
     .line 100
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
     const/4 v1, 0x0
@@ -377,7 +377,7 @@
 
     .prologue
     .line 137
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
     const/4 v0, 0x0
@@ -550,36 +550,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 364
+    .line 349
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
 
-    .line 366
+    .line 351
     iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mBaseView:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 367
+    .line 352
     iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mBaseView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 368
+    .line 353
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mBaseView:Landroid/view/ViewGroup;
 
-    .line 370
+    .line 355
     :cond_0
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 371
+    .line 356
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
-    .line 372
+    .line 357
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    .line 373
+    .line 358
     iput-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 374
+    .line 359
     return-void
 .end method
 
@@ -587,12 +587,12 @@
     .locals 3
 
     .prologue
-    .line 354
+    .line 339
     iget-boolean v1, p0, Lcom/sec/android/app/camera/MenuBase;->mGLActive:Z
 
     if-eqz v1, :cond_0
 
-    .line 355
+    .line 340
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -605,11 +605,11 @@
 
     move-result-object v0
 
-    .line 356
+    .line 341
     .local v0, view:Lcom/sec/android/glview/TwGLView;
     if-eqz v0, :cond_0
 
-    .line 357
+    .line 342
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -622,10 +622,10 @@
 
     invoke-virtual {v1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 358
+    .line 343
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->clear()V
 
-    .line 361
+    .line 346
     .end local v0           #view:Lcom/sec/android/glview/TwGLView;
     :cond_0
     return-void
@@ -635,7 +635,7 @@
     .locals 1
 
     .prologue
-    .line 283
+    .line 268
     iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mLayoutId:I
 
     return v0
@@ -645,17 +645,7 @@
     .locals 1
 
     .prologue
-    .line 291
-    iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
-
-    return v0
-.end method
-
-.method public getViewId()I
-    .locals 1
-
-    .prologue
-    .line 182
+    .line 276
     iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
 
     return v0
@@ -665,7 +655,7 @@
     .locals 1
 
     .prologue
-    .line 299
+    .line 284
     iget-boolean v0, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
 
     return v0
@@ -675,7 +665,7 @@
     .locals 1
 
     .prologue
-    .line 307
+    .line 292
     iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mZorder:I
 
     and-int/lit8 v0, v0, 0xf
@@ -684,162 +674,114 @@
 .end method
 
 .method public hideMenu()V
-    .locals 7
+    .locals 5
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
-    const/4 v5, 0x4
+    .line 193
+    iget-boolean v2, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
 
-    .line 197
-    iget-boolean v3, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
+    if-eqz v2, :cond_1
 
-    if-eqz v3, :cond_1
+    .line 194
+    iget-boolean v2, p0, Lcom/sec/android/app/camera/MenuBase;->mGLActive:Z
 
-    .line 198
-    iget-boolean v3, p0, Lcom/sec/android/app/camera/MenuBase;->mGLActive:Z
+    if-nez v2, :cond_4
 
-    if-nez v3, :cond_4
+    .line 195
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 199
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget v3, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
 
-    iget v4, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
-
-    invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 200
+    .line 196
     .local v0, baseView:Landroid/view/View;
-    if-eqz v0, :cond_0
+    const/16 v2, 0x8
 
-    .line 201
-    const/16 v3, 0x8
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    .line 223
+    .line 208
     .end local v0           #baseView:Landroid/view/View;
     :cond_0
     :goto_0
-    iput-boolean v6, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
+    iput-boolean v4, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
 
-    .line 226
+    .line 211
     :cond_1
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_2
 
-    .line 227
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
+    .line 212
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/MenuBase;->hideMenu()V
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->hideMenu()V
 
-    .line 230
+    .line 215
     :cond_2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/MenuBase;->onHide()V
 
-    .line 232
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mOnHideListener:Lcom/sec/android/app/camera/MenuBase$OnHideListener;
+    .line 217
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mOnHideListener:Lcom/sec/android/app/camera/MenuBase$OnHideListener;
 
-    if-eqz v3, :cond_3
+    if-eqz v2, :cond_3
 
-    .line 233
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mOnHideListener:Lcom/sec/android/app/camera/MenuBase$OnHideListener;
+    .line 218
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mOnHideListener:Lcom/sec/android/app/camera/MenuBase$OnHideListener;
 
-    invoke-interface {v3, p0}, Lcom/sec/android/app/camera/MenuBase$OnHideListener;->onHide(Lcom/sec/android/app/camera/MenuBase;)V
+    invoke-interface {v2, p0}, Lcom/sec/android/app/camera/MenuBase$OnHideListener;->onHide(Lcom/sec/android/app/camera/MenuBase;)V
 
-    .line 236
+    .line 221
     :cond_3
-    iput-boolean v6, p0, Lcom/sec/android/app/camera/MenuBase;->mActive:Z
+    iput-boolean v4, p0, Lcom/sec/android/app/camera/MenuBase;->mActive:Z
 
-    .line 237
+    .line 222
     return-void
 
-    .line 204
+    .line 198
     :cond_4
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v3
-
-    iget v4, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
-
-    invoke-virtual {v3, v4}, Lcom/sec/android/glview/TwGLContext;->findViewByTag(I)Lcom/sec/android/glview/TwGLView;
+    invoke-virtual {v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v2
 
-    .line 205
-    .local v2, view:Lcom/sec/android/glview/TwGLView;
-    if-eqz v2, :cond_0
+    iget v3, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
 
-    .line 206
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mHideAnimation:Landroid/view/animation/Animation;
-
-    if-eqz v3, :cond_7
-
-    .line 207
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mHideAnimation:Landroid/view/animation/Animation;
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v2, v3, v4}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;Z)V
-
-    .line 208
-    iget-object v3, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v4}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getLastElementView()Lcom/sec/android/app/camera/MenuBase;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/sec/android/app/camera/MenuBase;->getViewId()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Lcom/sec/android/glview/TwGLContext;->findViewByTag(I)Lcom/sec/android/glview/TwGLView;
+    invoke-virtual {v2, v3}, Lcom/sec/android/glview/TwGLContext;->findViewByTag(I)Lcom/sec/android/glview/TwGLView;
 
     move-result-object v1
 
-    .line 209
-    .local v1, lastElementView:Lcom/sec/android/glview/TwGLView;
-    if-eqz v1, :cond_6
+    .line 199
+    .local v1, view:Lcom/sec/android/glview/TwGLView;
+    if-eqz v1, :cond_0
 
-    .line 210
-    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->getLoaded()Z
+    .line 200
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mHideAnimation:Landroid/view/animation/Animation;
 
-    move-result v3
+    if-eqz v2, :cond_5
 
-    if-eqz v3, :cond_5
+    .line 201
+    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mHideAnimation:Landroid/view/animation/Animation;
 
-    .line 211
-    invoke-virtual {v2}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;Z)V
+
+    .line 202
+    invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
 
     goto :goto_0
 
-    .line 213
+    .line 204
     :cond_5
-    invoke-virtual {v2, v5}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
+    const/4 v2, 0x4
 
-    goto :goto_0
-
-    .line 216
-    :cond_6
-    invoke-virtual {v2, v5}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
-
-    goto :goto_0
-
-    .line 219
-    .end local v1           #lastElementView:Lcom/sec/android/glview/TwGLView;
-    :cond_7
-    invoke-virtual {v2, v5}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -858,7 +800,7 @@
     .locals 3
 
     .prologue
-    .line 397
+    .line 380
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -871,14 +813,14 @@
 
     move-result-object v0
 
-    .line 398
+    .line 381
     .local v0, view:Lcom/sec/android/glview/TwGLView;
     if-nez v0, :cond_0
 
-    .line 399
+    .line 382
     const/4 v1, 0x1
 
-    .line 400
+    .line 383
     :goto_0
     return v1
 
@@ -894,7 +836,7 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 317
     iget-boolean v0, p0, Lcom/sec/android/app/camera/MenuBase;->mCaptureEnabled:Z
 
     return v0
@@ -904,7 +846,7 @@
     .locals 2
 
     .prologue
-    .line 324
+    .line 309
     iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mZorder:I
 
     and-int/lit16 v0, v0, 0xf0
@@ -928,7 +870,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 313
     iget-boolean v0, p0, Lcom/sec/android/app/camera/MenuBase;->mPreviewTouchEnabled:Z
 
     return v0
@@ -939,7 +881,7 @@
     .parameter "event"
 
     .prologue
-    .line 412
+    .line 395
     const/4 v0, 0x0
 
     return v0
@@ -949,7 +891,7 @@
     .locals 0
 
     .prologue
-    .line 386
+    .line 371
     return-void
 .end method
 
@@ -958,7 +900,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 347
+    .line 332
     return-void
 .end method
 
@@ -967,7 +909,7 @@
     .parameter "view"
 
     .prologue
-    .line 350
+    .line 335
     const/4 v0, 0x0
 
     return v0
@@ -977,7 +919,7 @@
     .locals 0
 
     .prologue
-    .line 394
+    .line 377
     return-void
 .end method
 
@@ -987,7 +929,7 @@
     .parameter "event"
 
     .prologue
-    .line 404
+    .line 387
     const/4 v0, 0x0
 
     return v0
@@ -999,7 +941,7 @@
     .parameter "event"
 
     .prologue
-    .line 408
+    .line 391
     const/4 v0, 0x0
 
     return v0
@@ -1009,7 +951,7 @@
     .locals 0
 
     .prologue
-    .line 380
+    .line 365
     return-void
 .end method
 
@@ -1017,32 +959,15 @@
     .locals 0
 
     .prologue
-    .line 377
+    .line 362
     return-void
 .end method
 
 .method protected onShow()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 389
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    if-eqz v0, :cond_0
-
-    .line 390
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
-
-    .line 391
-    :cond_0
+    .line 374
     return-void
 .end method
 
@@ -1050,7 +975,7 @@
     .locals 0
 
     .prologue
-    .line 383
+    .line 368
     return-void
 .end method
 
@@ -1062,17 +987,17 @@
 
     const/4 v4, 0x0
 
-    .line 240
+    .line 225
     iget-boolean v2, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
 
     if-nez v2, :cond_2
 
-    .line 241
+    .line 226
     iget-boolean v2, p0, Lcom/sec/android/app/camera/MenuBase;->mGLActive:Z
 
     if-nez v2, :cond_5
 
-    .line 242
+    .line 227
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget v3, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
@@ -1081,60 +1006,60 @@
 
     move-result-object v0
 
-    .line 243
+    .line 228
     .local v0, baseView:Landroid/view/View;
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mShowAnimation:Landroid/view/animation/Animation;
 
     if-eqz v2, :cond_0
 
-    .line 244
+    .line 229
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mShowAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 246
+    .line 231
     :cond_0
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 259
+    .line 244
     .end local v0           #baseView:Landroid/view/View;
     :cond_1
     :goto_0
     iput-boolean v5, p0, Lcom/sec/android/app/camera/MenuBase;->mVisibility:Z
 
-    .line 262
+    .line 247
     :cond_2
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
     if-eqz v2, :cond_3
 
-    .line 263
+    .line 248
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/MenuBase;->showMenu()V
 
-    .line 266
+    .line 251
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/MenuBase;->onShow()V
 
-    .line 267
+    .line 252
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mOnShowListener:Lcom/sec/android/app/camera/MenuBase$OnShowListener;
 
     if-eqz v2, :cond_4
 
-    .line 268
+    .line 253
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mOnShowListener:Lcom/sec/android/app/camera/MenuBase$OnShowListener;
 
     invoke-interface {v2, p0}, Lcom/sec/android/app/camera/MenuBase$OnShowListener;->onShow(Lcom/sec/android/app/camera/MenuBase;)V
 
-    .line 270
+    .line 255
     :cond_4
     iput-boolean v5, p0, Lcom/sec/android/app/camera/MenuBase;->mActive:Z
 
-    .line 271
+    .line 256
     return-void
 
-    .line 248
+    .line 233
     :cond_5
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1148,29 +1073,29 @@
 
     move-result-object v1
 
-    .line 249
+    .line 234
     .local v1, view:Lcom/sec/android/glview/TwGLView;
     if-eqz v1, :cond_1
 
-    .line 250
+    .line 235
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
-    .line 251
+    .line 236
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mShowAnimation:Landroid/view/animation/Animation;
 
     if-eqz v2, :cond_6
 
-    .line 252
+    .line 237
     iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mShowAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLView;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 253
+    .line 238
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->startAnimation()V
 
-    .line 255
+    .line 240
     :cond_6
     invoke-virtual {v1, v4}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
@@ -1182,10 +1107,10 @@
     .parameter "anchor"
 
     .prologue
-    .line 315
+    .line 300
     iput-object p1, p0, Lcom/sec/android/app/camera/MenuBase;->mAnchor:Lcom/sec/android/glview/TwGLImage;
 
-    .line 316
+    .line 301
     return-void
 .end method
 
@@ -1194,10 +1119,10 @@
     .parameter "layoutId"
 
     .prologue
-    .line 287
+    .line 272
     iput p1, p0, Lcom/sec/android/app/camera/MenuBase;->mLayoutId:I
 
-    .line 288
+    .line 273
     return-void
 .end method
 
@@ -1206,10 +1131,10 @@
     .parameter "viewId"
 
     .prologue
-    .line 295
+    .line 280
     iput p1, p0, Lcom/sec/android/app/camera/MenuBase;->mViewId:I
 
-    .line 296
+    .line 281
     return-void
 .end method
 
@@ -1218,10 +1143,10 @@
     .parameter "capture"
 
     .prologue
-    .line 340
+    .line 325
     iput-boolean p1, p0, Lcom/sec/android/app/camera/MenuBase;->mCaptureEnabled:Z
 
-    .line 341
+    .line 326
     return-void
 .end method
 
@@ -1230,10 +1155,10 @@
     .parameter "child"
 
     .prologue
-    .line 303
+    .line 288
     iput-object p1, p0, Lcom/sec/android/app/camera/MenuBase;->mChild:Lcom/sec/android/app/camera/MenuBase;
 
-    .line 304
+    .line 289
     return-void
 .end method
 
@@ -1242,12 +1167,12 @@
     .parameter "dimmed"
 
     .prologue
-    .line 274
+    .line 259
     iget-boolean v1, p0, Lcom/sec/android/app/camera/MenuBase;->mGLActive:Z
 
     if-eqz v1, :cond_0
 
-    .line 275
+    .line 260
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1260,11 +1185,11 @@
 
     move-result-object v0
 
-    .line 276
+    .line 261
     .local v0, view:Lcom/sec/android/glview/TwGLView;
     if-eqz v0, :cond_0
 
-    .line 277
+    .line 262
     if-eqz p1, :cond_1
 
     const/16 v1, 0x20
@@ -1272,12 +1197,12 @@
     :goto_0
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLView;->setVisibility(I)V
 
-    .line 280
+    .line 265
     .end local v0           #view:Lcom/sec/android/glview/TwGLView;
     :cond_0
     return-void
 
-    .line 277
+    .line 262
     .restart local v0       #view:Lcom/sec/android/glview/TwGLView;
     :cond_1
     const/4 v1, 0x0
@@ -1303,13 +1228,13 @@
     .parameter "y"
 
     .prologue
-    .line 319
+    .line 304
     iput p1, p0, Lcom/sec/android/app/camera/MenuBase;->mLaunchX:F
 
-    .line 320
+    .line 305
     iput p2, p0, Lcom/sec/android/app/camera/MenuBase;->mLaunchY:F
 
-    .line 321
+    .line 306
     return-void
 .end method
 
@@ -1354,10 +1279,10 @@
     .parameter "handle"
 
     .prologue
-    .line 336
+    .line 321
     iput-boolean p1, p0, Lcom/sec/android/app/camera/MenuBase;->mPreviewTouchEnabled:Z
 
-    .line 337
+    .line 322
     return-void
 .end method
 
@@ -1366,7 +1291,7 @@
     .parameter "zOrder"
 
     .prologue
-    .line 311
+    .line 296
     iget v0, p0, Lcom/sec/android/app/camera/MenuBase;->mZorder:I
 
     and-int/lit16 v0, v0, 0xf0
@@ -1375,7 +1300,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/MenuBase;->mZorder:I
 
-    .line 312
+    .line 297
     return-void
 .end method
 
@@ -1383,22 +1308,22 @@
     .locals 3
 
     .prologue
-    .line 186
+    .line 182
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-nez v1, :cond_0
 
-    .line 194
+    .line 190
     :goto_0
     return-void
 
-    .line 189
+    .line 185
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1, p0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->pushMenu(Lcom/sec/android/app/camera/MenuBase;)V
 
-    .line 190
+    .line 186
     iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -1411,14 +1336,14 @@
 
     move-result-object v0
 
-    .line 191
+    .line 187
     .local v0, view:Lcom/sec/android/glview/TwGLView;
     if-eqz v0, :cond_1
 
-    .line 192
+    .line 188
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLView;->bringToFront()V
 
-    .line 193
+    .line 189
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/MenuBase;->restoreMenu()V
 

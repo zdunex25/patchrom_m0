@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 994
+    .line 988
     iput-object p1, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 7
+    .locals 5
 
     .prologue
-    const/4 v6, -0x4
+    const/4 v4, -0x4
 
-    .line 997
+    .line 991
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #getter for: Lcom/sec/android/app/camera/CamcorderEngine;->mMediaRecorder:Lcom/sec/android/secmediarecorder/SecMediaRecorder;
@@ -53,25 +53,25 @@
 
     if-nez v2, :cond_0
 
-    .line 998
+    .line 992
     const-string v2, "CamcorderEngine"
 
     const-string v3, "SecMediaRecorder is not initialized."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
+    .line 993
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v2, v2, Lcom/sec/android/app/camera/CamcorderEngine;->mErrorMessageHandler:Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;
 
-    invoke-virtual {v2, v6}, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v2, v4}, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->sendEmptyMessage(I)Z
 
-    .line 1033
+    .line 1024
     :goto_0
     return-void
 
-    .line 1003
+    .line 997
     :cond_0
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -80,37 +80,14 @@
     #setter for: Lcom/sec/android/app/camera/CamcorderEngine;->mMediaRecorderRecording:Z
     invoke-static {v2, v3}, Lcom/sec/android/app/camera/CamcorderEngine;->access$402(Lcom/sec/android/app/camera/CamcorderEngine;Z)Z
 
-    .line 1004
+    .line 998
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #calls: Lcom/sec/android/app/camera/CamcorderEngine;->disableAlertSound()V
     invoke-static {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->access$500(Lcom/sec/android/app/camera/CamcorderEngine;)V
 
-    .line 1006
-    iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
-
-    #getter for: Lcom/sec/android/app/camera/CamcorderEngine;->mHideFocusRectHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->access$600(Lcom/sec/android/app/camera/CamcorderEngine;)Landroid/os/Handler;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    const-wide/16 v4, 0x12c
-
-    invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 1009
+    .line 1001
     :try_start_0
-    iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
-
-    iget-object v2, v2, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    check-cast v2, Lcom/sec/android/app/camera/Camcorder;
-
-    invoke-virtual {v2}, Lcom/sec/android/app/camera/Camcorder;->resetIndicatorTimerDrift()V
-
-    .line 1010
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #getter for: Lcom/sec/android/app/camera/CamcorderEngine;->mMediaRecorder:Lcom/sec/android/secmediarecorder/SecMediaRecorder;
@@ -122,14 +99,14 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1022
+    .line 1013
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.android.server.CpuGovernorService.action.IOBUSY_VOTE"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1024
+    .line 1015
     .local v1, ioBusyVoteIntent:Landroid/content/Intent;
     const-string v2, "com.android.server.CpuGovernorService.voteType"
 
@@ -137,14 +114,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1025
+    .line 1016
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v2, v2, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v2, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1027
+    .line 1018
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v2, v2, Lcom/sec/android/app/camera/CamcorderEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
@@ -157,13 +134,13 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1028
+    .line 1019
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #calls: Lcom/sec/android/app/camera/CamcorderEngine;->setSystemSoundEffect()V
-    invoke-static {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->access$700(Lcom/sec/android/app/camera/CamcorderEngine;)V
+    invoke-static {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->access$600(Lcom/sec/android/app/camera/CamcorderEngine;)V
 
-    .line 1029
+    .line 1020
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->getSystemSoundEffect()Z
@@ -172,12 +149,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 1030
+    .line 1021
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->disableSystemSoundEffect()V
 
-    .line 1032
+    .line 1023
     :cond_1
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -189,12 +166,12 @@
 
     goto :goto_0
 
-    .line 1011
+    .line 1002
     .end local v1           #ioBusyVoteIntent:Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 1012
+    .line 1003
     .local v0, e:Ljava/lang/RuntimeException;
     const-string v2, "CamcorderEngine"
 
@@ -202,27 +179,27 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1013
+    .line 1004
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->releaseMediaRecorder()V
 
-    .line 1015
+    .line 1006
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->scheduleStopVideoRecording()V
 
-    .line 1016
+    .line 1007
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/CamcorderEngine;->scheduleStartPreview()V
 
-    .line 1018
+    .line 1009
     iget-object v2, p0, Lcom/sec/android/app/camera/CamcorderEngine$4;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     iget-object v2, v2, Lcom/sec/android/app/camera/CamcorderEngine;->mErrorMessageHandler:Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;
 
-    invoke-virtual {v2, v6}, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v2, v4}, Lcom/sec/android/app/camera/CameraEngine$ErrorMessageHandler;->sendEmptyMessage(I)Z
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method

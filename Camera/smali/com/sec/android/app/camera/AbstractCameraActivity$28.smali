@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1731
+    .line 1620
     iput-object p1, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,58 +45,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1733
+    .line 1622
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->setGpsPopupDisplayed(Z)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->isAndroidBeamEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
+    .line 1623
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->onGpsChanged(I)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSettings;->isNfcEnabled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 1734
-    :cond_0
+    .line 1624
     iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->androidBeamController(Z)V
-
-    .line 1735
-    :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraSettings;->setAutoShareShotMode(I)V
-
-    .line 1736
-    iget-object v0, p0, Lcom/sec/android/app/camera/AbstractCameraActivity$28;->this$0:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    const/16 v1, 0xa
+    const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideDlg(I)V
 
-    .line 1737
+    .line 1625
     return-void
 .end method

@@ -1178,13 +1178,13 @@
 
     float-to-int v7, v7
 
-    invoke-virtual {v0, v3, v5, v6, v7}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v3, v5, v6, v7}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 139
-    invoke-virtual {v0, v10, v11}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v10, v11}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 140
-    invoke-virtual {v0, v4}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v0, v4}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 141
     iget-object v3, p0, Lcom/sec/android/glview/TwGLSlider;->mGauge:Lcom/sec/android/glview/TwGLImage;
@@ -1278,13 +1278,13 @@
 
     float-to-int v8, v8
 
-    invoke-virtual {v0, v3, v6, v7, v8}, Landroid/view/animation/TranslateAnimation;->initialize(IIII)V
+    invoke-virtual {v0, v3, v6, v7, v8}, Landroid/view/animation/Animation;->initialize(IIII)V
 
     .line 147
-    invoke-virtual {v0, v10, v11}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v10, v11}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 148
-    invoke-virtual {v0, v5}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v0, v5}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     .line 149
     iget-object v3, p0, Lcom/sec/android/glview/TwGLSlider;->mGauge:Lcom/sec/android/glview/TwGLImage;
@@ -1515,7 +1515,7 @@
 
     .line 345
     .local v0, et:Landroid/view/MotionEvent;
-    iget-object v8, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    iget-object v8, p0, Lcom/sec/android/glview/TwGLSlider;->mTransformedScreenCoordinate:[F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1528,13 +1528,13 @@
     invoke-virtual {p0, v8, v9, v10}, Lcom/sec/android/glview/TwGLSlider;->mapPointReverse([FFF)V
 
     .line 346
-    iget-object v8, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    iget-object v8, p0, Lcom/sec/android/glview/TwGLSlider;->mTransformedScreenCoordinate:[F
 
     const/4 v9, 0x0
 
     aget v8, v8, v9
 
-    iget-object v9, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    iget-object v9, p0, Lcom/sec/android/glview/TwGLSlider;->mTransformedScreenCoordinate:[F
 
     const/4 v10, 0x1
 
@@ -2581,7 +2581,7 @@
     .line 178
     iget-object v0, p0, Lcom/sec/android/glview/TwGLSlider;->mGauge:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 180
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLSlider;->setStepIndicatorPosition()V
@@ -2726,7 +2726,7 @@
     .line 191
     iget-object v0, p0, Lcom/sec/android/glview/TwGLSlider;->mSliderBar:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 192
     return-void

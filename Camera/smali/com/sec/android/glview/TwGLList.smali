@@ -27,9 +27,13 @@
 
 .field private static final BOUNCE_IMAGE_FULLY_VISIBLE_THRESHOLD_DIP:F = 100.0f
 
+.field private static final BOUNCE_SEVERAL_TIMES:Z = false
+
 .field private static final BOUNCE_SMOOTH_LANDING_FACTOR:F = 0.3f
 
 .field private static final BOUNCING_VELOCITY_DIP:F = 3.0f
+
+.field private static final COEFFICIENT_OF_RESTITUTION:F = 0.4f
 
 .field private static final DEFAULT_SCROLLBAR_PADDING:I = 0x1
 
@@ -158,101 +162,101 @@
 
     const/4 v1, 0x0
 
-    .line 317
+    .line 324
     invoke-direct/range {p0 .. p5}, Lcom/sec/android/glview/TwGLViewGroup;-><init>(Lcom/sec/android/glview/TwGLContext;FFFF)V
 
-    .line 52
+    .line 54
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
-    .line 61
+    .line 63
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
-    .line 67
+    .line 69
     iput-boolean v2, p0, Lcom/sec/android/glview/TwGLList;->mScrolling:Z
 
-    .line 70
+    .line 72
     iput v3, p0, Lcom/sec/android/glview/TwGLList;->mScrollThreshold:F
 
-    .line 75
+    .line 77
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollX:F
 
-    .line 78
+    .line 80
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollY:F
 
-    .line 81
+    .line 83
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 84
+    .line 86
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 87
+    .line 89
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
 
-    .line 90
+    .line 92
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
-    .line 93
+    .line 95
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 96
+    .line 98
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 99
+    .line 101
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
-    .line 102
+    .line 104
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
-    .line 122
+    .line 124
     iput-boolean v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
 
-    .line 125
+    .line 127
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarSize:F
 
-    .line 128
+    .line 130
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarOffset:F
 
-    .line 130
+    .line 132
     const/high16 v0, 0x4339
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->BOUNCE_IMAGE_SIZE:F
 
-    .line 132
+    .line 134
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->BOUNCE_EDGE_SIZE:F
 
-    .line 145
+    .line 147
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
-    .line 148
+    .line 150
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
-    .line 154
+    .line 156
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 157
+    .line 159
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 166
+    .line 168
     iput-boolean v2, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
-    .line 191
+    .line 198
     iput-boolean v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollRequested:Z
 
-    .line 195
+    .line 202
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mFirstFullyVisibleViewIndex:I
 
-    .line 200
+    .line 207
     new-instance v0, Lcom/sec/android/glview/TwGLList$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/glview/TwGLList$1;-><init>(Lcom/sec/android/glview/TwGLList;)V
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLList;->mMainHandler:Landroid/os/Handler;
 
-    .line 319
+    .line 326
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLContext;->getDensity()F
 
     move-result v0
@@ -261,7 +265,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollThreshold:F
 
-    .line 320
+    .line 327
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLContext;->getDensity()F
 
     move-result v0
@@ -272,7 +276,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocity:F
 
-    .line 321
+    .line 328
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLContext;->getDensity()F
 
     move-result v0
@@ -283,7 +287,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mBouncingVelocity:F
 
-    .line 322
+    .line 329
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLContext;->getDensity()F
 
     move-result v0
@@ -294,7 +298,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageMaxAlphaThreshold:F
 
-    .line 323
+    .line 330
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLContext;->getDensity()F
 
     move-result v0
@@ -305,7 +309,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
 
-    .line 328
+    .line 335
     return-void
 .end method
 
@@ -315,7 +319,7 @@
     .parameter "x1"
 
     .prologue
-    .line 37
+    .line 39
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
 
     return p1
@@ -326,7 +330,7 @@
     .parameter "x0"
 
     .prologue
-    .line 37
+    .line 39
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
     return v0
@@ -338,7 +342,7 @@
     .parameter "x1"
 
     .prologue
-    .line 37
+    .line 39
     iput p1, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
     return p1
@@ -350,7 +354,7 @@
     .parameter "x1"
 
     .prologue
-    .line 37
+    .line 39
     iput p1, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
     return p1
@@ -361,7 +365,7 @@
     .parameter "x0"
 
     .prologue
-    .line 37
+    .line 39
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
 
     move-result v0
@@ -377,10 +381,10 @@
 
     const/4 v5, 0x0
 
-    .line 1367
+    .line 1478
     const/4 v1, 0x0
 
-    .line 1368
+    .line 1479
     .local v1, ret:Z
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
@@ -390,19 +394,19 @@
 
     if-ne v2, v3, :cond_7
 
-    .line 1369
+    .line 1480
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     cmpl-float v2, v2, v5
 
     if-lez v2, :cond_3
 
-    .line 1371
+    .line 1482
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 1372
+    .line 1483
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
@@ -411,14 +415,14 @@
 
     if-gez v2, :cond_1
 
-    .line 1373
+    .line 1484
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
     cmpl-float v2, v2, v5
 
     if-nez v2, :cond_0
 
-    .line 1375
+    .line 1486
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
@@ -427,10 +431,10 @@
 
     if-lez v2, :cond_0
 
-    .line 1376
+    .line 1487
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1377
+    .line 1488
     .local v0, originalVelocity:F
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
 
@@ -446,7 +450,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1378
+    .line 1489
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -457,7 +461,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 1379
+    .line 1490
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -468,23 +472,23 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 1382
+    .line 1493
     .end local v0           #originalVelocity:F
     :cond_0
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
-    .line 1384
+    .line 1495
     :cond_1
     const/4 v1, 0x1
 
-    .line 1443
+    .line 1554
     :cond_2
     :goto_0
     return v1
 
-    .line 1385
+    .line 1496
     :cond_3
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
@@ -500,7 +504,7 @@
 
     if-gez v2, :cond_6
 
-    .line 1387
+    .line 1498
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContentAreaHeight()F
 
     move-result v2
@@ -515,7 +519,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 1388
+    .line 1499
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
@@ -524,14 +528,14 @@
 
     if-gez v2, :cond_5
 
-    .line 1389
+    .line 1500
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
     cmpl-float v2, v2, v5
 
     if-nez v2, :cond_4
 
-    .line 1391
+    .line 1502
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
@@ -544,10 +548,10 @@
 
     if-lez v2, :cond_4
 
-    .line 1392
+    .line 1503
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1393
+    .line 1504
     .restart local v0       #originalVelocity:F
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
 
@@ -569,7 +573,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1394
+    .line 1505
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -580,7 +584,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 1395
+    .line 1506
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -591,29 +595,29 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 1398
+    .line 1509
     .end local v0           #originalVelocity:F
     :cond_4
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
-    .line 1400
+    .line 1511
     :cond_5
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1402
+    .line 1513
     :cond_6
     iput v5, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
-    .line 1403
+    .line 1514
     iput v5, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceMaxOffset:F
 
     goto :goto_0
 
-    .line 1405
+    .line 1516
     :cond_7
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
@@ -623,19 +627,19 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 1406
+    .line 1517
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     cmpl-float v2, v2, v5
 
     if-lez v2, :cond_a
 
-    .line 1408
+    .line 1519
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 1409
+    .line 1520
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
@@ -644,14 +648,14 @@
 
     if-gez v2, :cond_9
 
-    .line 1410
+    .line 1521
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
     cmpl-float v2, v2, v5
 
     if-nez v2, :cond_8
 
-    .line 1412
+    .line 1523
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
@@ -660,10 +664,10 @@
 
     if-lez v2, :cond_8
 
-    .line 1413
+    .line 1524
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1414
+    .line 1525
     .restart local v0       #originalVelocity:F
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
 
@@ -679,7 +683,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1415
+    .line 1526
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -690,7 +694,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 1416
+    .line 1527
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -701,20 +705,20 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 1419
+    .line 1530
     .end local v0           #originalVelocity:F
     :cond_8
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
-    .line 1421
+    .line 1532
     :cond_9
     const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 1422
+    .line 1533
     :cond_a
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
 
@@ -730,7 +734,7 @@
 
     if-gez v2, :cond_d
 
-    .line 1424
+    .line 1535
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContentAreaWidth()F
 
     move-result v2
@@ -745,7 +749,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 1425
+    .line 1536
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
@@ -754,14 +758,14 @@
 
     if-lez v2, :cond_c
 
-    .line 1426
+    .line 1537
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
     cmpl-float v2, v2, v5
 
     if-nez v2, :cond_b
 
-    .line 1428
+    .line 1539
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
@@ -774,10 +778,10 @@
 
     if-lez v2, :cond_b
 
-    .line 1429
+    .line 1540
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1430
+    .line 1541
     .restart local v0       #originalVelocity:F
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mVelocityLimit:F
 
@@ -799,7 +803,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1431
+    .line 1542
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -810,7 +814,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 1432
+    .line 1543
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
     iget v3, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -821,24 +825,24 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 1435
+    .line 1546
     .end local v0           #originalVelocity:F
     :cond_b
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
-    .line 1437
+    .line 1548
     :cond_c
     const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 1439
+    .line 1550
     :cond_d
     iput v5, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceOffset:F
 
-    .line 1440
+    .line 1551
     iput v5, p0, Lcom/sec/android/glview/TwGLList;->mLandscapeBounceMaxOffset:F
 
     goto/16 :goto_0
@@ -852,26 +856,26 @@
 
     const/high16 v4, 0x3f80
 
-    .line 474
+    .line 483
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-nez v0, :cond_1
 
-    .line 506
+    .line 515
     :cond_0
     :goto_0
     return-void
 
-    .line 477
+    .line 486
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v0, :cond_4
 
-    .line 478
+    .line 487
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
@@ -879,7 +883,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -893,14 +897,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 481
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    .line 490
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
     if-nez v0, :cond_3
 
-    .line 482
+    .line 491
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getRight()F
@@ -925,7 +929,7 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
@@ -933,7 +937,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->moveLayoutAbsolute(FF)V
 
-    .line 486
+    .line 495
     :goto_1
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
@@ -947,7 +951,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarSize:F
 
-    .line 487
+    .line 496
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -962,7 +966,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->setSize(FF)V
 
-    .line 504
+    .line 513
     :cond_2
     :goto_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -993,12 +997,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FF)V
 
-    .line 505
+    .line 514
     iput-boolean v5, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
 
     goto :goto_0
 
-    .line 484
+    .line 493
     :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
@@ -1012,7 +1016,7 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
@@ -1030,7 +1034,7 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
@@ -1040,16 +1044,16 @@
 
     goto :goto_1
 
-    .line 488
+    .line 497
     :cond_4
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-ne v0, v5, :cond_2
 
-    .line 489
+    .line 498
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -1057,7 +1061,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
@@ -1071,17 +1075,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 492
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    .line 501
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
     if-nez v0, :cond_5
 
-    .line 493
+    .line 502
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -1111,7 +1115,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->moveLayoutAbsolute(FF)V
 
-    .line 497
+    .line 506
     :goto_3
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
@@ -1125,7 +1129,7 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarSize:F
 
-    .line 498
+    .line 507
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarSize:F
@@ -1142,11 +1146,11 @@
 
     goto/16 :goto_2
 
-    .line 495
+    .line 504
     :cond_5
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -1162,7 +1166,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->bottom:I
 
@@ -1193,12 +1197,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 442
+    .line 449
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getWidth()F
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -1206,7 +1210,7 @@
 
     sub-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
@@ -1216,12 +1220,12 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
-    .line 443
+    .line 450
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getHeight()F
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
@@ -1229,7 +1233,7 @@
 
     sub-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -1239,12 +1243,12 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
-    .line 445
+    .line 453
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v0, :cond_1
 
-    .line 446
+    .line 454
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_0
@@ -1253,7 +1257,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 447
+    .line 455
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1262,7 +1266,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 448
+    .line 456
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1271,7 +1275,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 449
+    .line 457
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
@@ -1286,7 +1290,7 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 450
+    .line 458
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1299,7 +1303,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 451
+    .line 459
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1312,7 +1316,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 452
+    .line 460
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
@@ -1323,12 +1327,12 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 464
+    .line 473
     :cond_0
     :goto_0
     return-void
 
-    .line 454
+    .line 462
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -1336,7 +1340,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 455
+    .line 463
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_0
@@ -1345,7 +1349,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 456
+    .line 464
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->BOUNCE_IMAGE_SIZE:F
@@ -1354,7 +1358,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 457
+    .line 465
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->BOUNCE_IMAGE_SIZE:F
@@ -1363,7 +1367,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 458
+    .line 466
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1378,7 +1382,7 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 459
+    .line 467
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
@@ -1391,7 +1395,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 460
+    .line 468
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
@@ -1404,7 +1408,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 461
+    .line 469
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -1427,25 +1431,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 740
+    .line 751
     instance-of v2, p1, Lcom/sec/android/glview/TwGLList;
 
     if-eqz v2, :cond_0
 
-    .line 741
+    .line 752
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v2}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v2
 
-    .line 743
+    .line 754
     :cond_0
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v2, :cond_4
 
-    .line 744
+    .line 755
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getHeight()F
@@ -1456,7 +1460,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
-    .line 745
+    .line 756
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
     move-result v2
@@ -1467,27 +1471,27 @@
 
     if-lez v2, :cond_1
 
-    .line 746
+    .line 757
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getWidth()F
 
     move-result v2
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
 
-    .line 755
+    .line 766
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getPaddings()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 756
+    .line 767
     .local v1, paddings:Landroid/graphics/Rect;
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v4, v4, v4, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 758
+    .line 769
     .local v0, childPaddings:Landroid/graphics/Rect;
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -1495,7 +1499,7 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 759
+    .line 770
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
     move-result v2
@@ -1526,7 +1530,7 @@
 
     if-ltz v2, :cond_5
 
-    .line 760
+    .line 771
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -1547,7 +1551,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 764
+    .line 775
     :goto_1
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getRight()F
 
@@ -1579,7 +1583,7 @@
 
     if-ltz v2, :cond_6
 
-    .line 765
+    .line 776
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     int-to-float v2, v2
@@ -1600,7 +1604,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->right:I
 
-    .line 769
+    .line 780
     :goto_2
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -1610,7 +1614,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 770
+    .line 781
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -1619,13 +1623,13 @@
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 772
+    .line 783
     :cond_2
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-eqz v2, :cond_3
 
-    .line 773
+    .line 784
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
     move-result v2
@@ -1656,7 +1660,7 @@
 
     if-ltz v2, :cond_7
 
-    .line 774
+    .line 785
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     int-to-float v2, v2
@@ -1677,7 +1681,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 778
+    .line 789
     :goto_3
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getBottom()F
 
@@ -1709,7 +1713,7 @@
 
     if-ltz v2, :cond_8
 
-    .line 779
+    .line 790
     iget v2, v1, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v2, v2
@@ -1730,7 +1734,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 783
+    .line 794
     :goto_4
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -1740,7 +1744,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 784
+    .line 795
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -1749,17 +1753,17 @@
 
     iput v2, v0, Landroid/graphics/Rect;->right:I
 
-    .line 787
+    .line 798
     :cond_3
     invoke-virtual {p1, v0}, Lcom/sec/android/glview/TwGLView;->setPaddings(Landroid/graphics/Rect;)V
 
-    .line 788
+    .line 799
     invoke-super {p0, p1}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 789
+    .line 800
     return-void
 
-    .line 749
+    .line 760
     .end local v0           #childPaddings:Landroid/graphics/Rect;
     .end local v1           #paddings:Landroid/graphics/Rect;
     :cond_4
@@ -1773,7 +1777,7 @@
 
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
 
-    .line 750
+    .line 761
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v2
@@ -1784,7 +1788,7 @@
 
     if-lez v2, :cond_1
 
-    .line 751
+    .line 762
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getHeight()F
 
     move-result v2
@@ -1793,7 +1797,7 @@
 
     goto/16 :goto_0
 
-    .line 762
+    .line 773
     .restart local v0       #childPaddings:Landroid/graphics/Rect;
     .restart local v1       #paddings:Landroid/graphics/Rect;
     :cond_5
@@ -1807,7 +1811,7 @@
 
     goto/16 :goto_1
 
-    .line 767
+    .line 778
     :cond_6
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -1819,7 +1823,7 @@
 
     goto/16 :goto_2
 
-    .line 776
+    .line 787
     :cond_7
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -1831,7 +1835,7 @@
 
     goto :goto_3
 
-    .line 781
+    .line 792
     :cond_8
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -1850,80 +1854,80 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1596
+    .line 1707
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_0
 
-    .line 1597
+    .line 1708
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->clear()V
 
-    .line 1598
+    .line 1709
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
-    .line 1600
+    .line 1711
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_1
 
-    .line 1601
+    .line 1712
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 1602
+    .line 1713
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 1604
+    .line 1715
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_2
 
-    .line 1605
+    .line 1716
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 1606
+    .line 1717
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 1608
+    .line 1719
     :cond_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_3
 
-    .line 1609
+    .line 1720
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 1610
+    .line 1721
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
-    .line 1612
+    .line 1723
     :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_4
 
-    .line 1613
+    .line 1724
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 1614
+    .line 1725
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
-    .line 1617
+    .line 1728
     :cond_4
     invoke-super {p0}, Lcom/sec/android/glview/TwGLViewGroup;->clear()V
 
-    .line 1618
+    .line 1729
     return-void
 .end method
 
@@ -1933,17 +1937,17 @@
     .parameter "y"
 
     .prologue
-    .line 421
+    .line 428
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 422
+    .line 429
     const/4 v0, 0x0
 
-    .line 424
+    .line 431
     :goto_0
     return v0
 
@@ -1969,10 +1973,10 @@
     .parameter "direction"
 
     .prologue
-    .line 1508
+    .line 1619
     const/4 v0, 0x0
 
-    .line 1512
+    .line 1623
     .local v0, newDirection:I
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getCenterPivot()Z
 
@@ -1980,17 +1984,17 @@
 
     if-nez v1, :cond_0
 
-    .line 1513
+    .line 1624
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getOrientation()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1564
+    .line 1675
     move v0, p2
 
-    .line 1568
+    .line 1679
     :cond_0
     :goto_0
     invoke-super {p0, p1, v0}, Lcom/sec/android/glview/TwGLViewGroup;->findNextFocusFromView(Lcom/sec/android/glview/TwGLView;I)Lcom/sec/android/glview/TwGLView;
@@ -1999,106 +2003,106 @@
 
     return-object v1
 
-    .line 1515
+    .line 1626
     :pswitch_0
     sparse-switch p2, :sswitch_data_0
 
     goto :goto_0
 
-    .line 1517
+    .line 1628
     :sswitch_0
     const/16 v0, 0x82
 
-    .line 1518
+    .line 1629
     goto :goto_0
 
-    .line 1520
+    .line 1631
     :sswitch_1
     const/16 v0, 0x21
 
-    .line 1521
+    .line 1632
     goto :goto_0
 
-    .line 1523
+    .line 1634
     :sswitch_2
     const/16 v0, 0x11
 
-    .line 1524
+    .line 1635
     goto :goto_0
 
-    .line 1526
+    .line 1637
     :sswitch_3
     const/16 v0, 0x42
 
     goto :goto_0
 
-    .line 1531
+    .line 1642
     :pswitch_1
     sparse-switch p2, :sswitch_data_1
 
     goto :goto_0
 
-    .line 1533
+    .line 1644
     :sswitch_4
     const/16 v0, 0x42
 
-    .line 1534
+    .line 1645
     goto :goto_0
 
-    .line 1536
+    .line 1647
     :sswitch_5
     const/16 v0, 0x11
 
-    .line 1537
+    .line 1648
     goto :goto_0
 
-    .line 1539
+    .line 1650
     :sswitch_6
     const/16 v0, 0x82
 
-    .line 1540
+    .line 1651
     goto :goto_0
 
-    .line 1542
+    .line 1653
     :sswitch_7
     const/16 v0, 0x21
 
     goto :goto_0
 
-    .line 1547
+    .line 1658
     :pswitch_2
     sparse-switch p2, :sswitch_data_2
 
     goto :goto_0
 
-    .line 1549
+    .line 1660
     :sswitch_8
     const/16 v0, 0x21
 
-    .line 1550
+    .line 1661
     goto :goto_0
 
-    .line 1552
+    .line 1663
     :sswitch_9
     const/16 v0, 0x82
 
-    .line 1553
+    .line 1664
     goto :goto_0
 
-    .line 1555
+    .line 1666
     :sswitch_a
     const/16 v0, 0x42
 
-    .line 1556
+    .line 1667
     goto :goto_0
 
-    .line 1558
+    .line 1669
     :sswitch_b
     const/16 v0, 0x11
 
     goto :goto_0
 
-    .line 1513
+    .line 1624
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2106,7 +2110,7 @@
         :pswitch_2
     .end packed-switch
 
-    .line 1515
+    .line 1626
     :sswitch_data_0
     .sparse-switch
         0x11 -> :sswitch_0
@@ -2115,7 +2119,7 @@
         0x82 -> :sswitch_3
     .end sparse-switch
 
-    .line 1531
+    .line 1642
     :sswitch_data_1
     .sparse-switch
         0x11 -> :sswitch_4
@@ -2124,7 +2128,7 @@
         0x82 -> :sswitch_7
     .end sparse-switch
 
-    .line 1547
+    .line 1658
     :sswitch_data_2
     .sparse-switch
         0x11 -> :sswitch_8
@@ -2138,7 +2142,7 @@
     .locals 1
 
     .prologue
-    .line 467
+    .line 476
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mFirstFullyVisibleViewIndex:I
 
     return v0
@@ -2148,7 +2152,7 @@
     .locals 1
 
     .prologue
-    .line 532
+    .line 541
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollThreshold:F
 
     return v0
@@ -2160,7 +2164,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 566
+    .line 575
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v0
@@ -2175,12 +2179,12 @@
 
     if-nez v0, :cond_1
 
-    .line 590
+    .line 599
     :cond_0
     :goto_0
     return-void
 
-    .line 569
+    .line 578
     :cond_1
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
@@ -2198,26 +2202,26 @@
 
     if-eqz v0, :cond_3
 
-    .line 570
+    .line 579
     :cond_2
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->restartScrollBarTimer()V
 
     goto :goto_0
 
-    .line 573
+    .line 582
     :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-nez v0, :cond_4
 
-    .line 574
+    .line 583
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
 
     goto :goto_0
 
-    .line 578
+    .line 587
     :cond_4
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
@@ -2229,7 +2233,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLNinePatch;->setAnimation(Landroid/view/animation/Animation;Z)V
 
-    .line 579
+    .line 588
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     new-instance v1, Lcom/sec/android/glview/TwGLList$2;
@@ -2238,7 +2242,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLNinePatch;->setOnAnimationEventListener(Lcom/sec/android/glview/TwGLView$OnAnimationEventListener;)V
 
-    .line 589
+    .line 598
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->startAnimation()V
@@ -2252,44 +2256,44 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 723
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 734
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 724
+    .line 735
     :try_start_0
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 725
+    .line 736
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 727
+    .line 738
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
-    .line 728
+    .line 739
     iput v2, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
 
-    .line 730
+    .line 741
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mAdapter:Lcom/sec/android/glview/TwGLList$Adapter;
 
     invoke-interface {v0}, Lcom/sec/android/glview/TwGLList$Adapter;->reset()V
 
-    .line 731
+    .line 742
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mAdapter:Lcom/sec/android/glview/TwGLList$Adapter;
 
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/glview/TwGLList;->setAdapter(Lcom/sec/android/glview/TwGLList$Adapter;I)V
 
-    .line 732
+    .line 743
     return-void
 
-    .line 725
+    .line 736
     :catchall_0
     move-exception v0
 
@@ -2305,42 +2309,42 @@
     .locals 1
 
     .prologue
-    .line 1136
+    .line 1206
     invoke-super {p0}, Lcom/sec/android/glview/TwGLViewGroup;->onAlphaUpdated()V
 
-    .line 1137
+    .line 1207
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_0
 
-    .line 1138
+    .line 1208
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->onAlphaUpdated()V
 
-    .line 1140
+    .line 1210
     :cond_0
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v0, :cond_1
 
-    .line 1141
+    .line 1211
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->onAlphaUpdated()V
 
-    .line 1143
+    .line 1213
     :cond_1
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_2
 
-    .line 1144
+    .line 1214
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLNinePatch;->onAlphaUpdated()V
 
-    .line 1146
+    .line 1216
     :cond_2
     return-void
 .end method
@@ -2354,10 +2358,10 @@
     .parameter "dy"
 
     .prologue
-    .line 1160
+    .line 1230
     invoke-virtual {p0, p4, p5}, Lcom/sec/android/glview/TwGLList;->translate(FF)V
 
-    .line 1161
+    .line 1231
     return-void
 .end method
 
@@ -2368,7 +2372,7 @@
     .parameter "y"
 
     .prologue
-    .line 1168
+    .line 1238
     return-void
 .end method
 
@@ -2379,7 +2383,7 @@
     .parameter "y"
 
     .prologue
-    .line 1153
+    .line 1223
     return-void
 .end method
 
@@ -2388,14 +2392,14 @@
     .parameter "gl"
 
     .prologue
-    .line 867
+    .line 878
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v12, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v12
 
-    .line 868
+    .line 879
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2403,10 +2407,10 @@
 
     if-eqz v11, :cond_0
 
-    .line 869
+    .line 880
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->scrollToVisible()Z
 
-    .line 871
+    .line 882
     :cond_0
     move-object/from16 v0, p0
 
@@ -2422,7 +2426,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 872
+    .line 883
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
@@ -2437,16 +2441,16 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 873
+    .line 884
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v8
 
-    .line 874
+    .line 885
     .local v8, size:I
     invoke-direct/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
 
@@ -2454,17 +2458,17 @@
 
     if-nez v11, :cond_b
 
-    .line 876
+    .line 887
     const/4 v5, 0x0
 
     .local v5, i:I
     :goto_0
     if-ge v5, v8, :cond_2
 
-    .line 877
+    .line 888
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2472,17 +2476,17 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 878
+    .line 889
     .local v9, view:Lcom/sec/android/glview/TwGLView;
     if-nez v9, :cond_1
 
-    .line 876
+    .line 887
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 883
+    .line 894
     :cond_1
     move-object/from16 v0, p0
 
@@ -2498,7 +2502,7 @@
 
     goto :goto_1
 
-    .line 1130
+    .line 1200
     .end local v5           #i:I
     .end local v8           #size:I
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
@@ -2511,7 +2515,7 @@
 
     throw v11
 
-    .line 885
+    .line 896
     .restart local v5       #i:I
     .restart local v8       #size:I
     :cond_2
@@ -2528,7 +2532,7 @@
 
     if-eqz v11, :cond_3
 
-    .line 886
+    .line 897
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -2573,7 +2577,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translate(FFZ)V
 
-    .line 889
+    .line 901
     :cond_3
     move-object/from16 v0, p0
 
@@ -2583,7 +2587,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 890
+    .line 902
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -2592,7 +2596,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 891
+    .line 903
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
@@ -2601,7 +2605,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 892
+    .line 904
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
@@ -2610,7 +2614,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 895
+    .line 908
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -2621,7 +2625,7 @@
 
     if-lez v11, :cond_9
 
-    .line 896
+    .line 909
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -2636,7 +2640,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 897
+    .line 910
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -2647,14 +2651,14 @@
 
     if-gez v11, :cond_4
 
-    .line 898
+    .line 911
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 904
+    .line 917
     :cond_4
     :goto_2
     move-object/from16 v0, p0
@@ -2667,7 +2671,7 @@
 
     if-lez v11, :cond_a
 
-    .line 905
+    .line 918
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -2682,7 +2686,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 906
+    .line 919
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -2693,14 +2697,14 @@
 
     if-gez v11, :cond_5
 
-    .line 907
+    .line 920
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1082
+    .line 1150
     .end local v5           #i:I
     :cond_5
     :goto_3
@@ -2724,7 +2728,7 @@
 
     if-eqz v11, :cond_7
 
-    .line 1083
+    .line 1151
     :cond_6
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
 
@@ -2734,23 +2738,23 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 1085
+    .line 1153
     :cond_7
     const/4 v2, 0x0
 
-    .line 1086
+    .line 1154
     .local v2, checked:Z
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getMatrix()[F
 
     move-result-object v7
 
-    .line 1087
+    .line 1155
     .local v7, matrix:[F
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 1088
+    .line 1156
     .local v3, clipRect:Landroid/graphics/Rect;
     const/4 v5, 0x0
 
@@ -2758,10 +2762,10 @@
     :goto_4
     if-ge v5, v8, :cond_27
 
-    .line 1089
+    .line 1157
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2769,7 +2773,7 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 1091
+    .line 1159
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     if-nez v2, :cond_8
 
@@ -2779,44 +2783,44 @@
 
     if-nez v11, :cond_8
 
-    .line 1092
+    .line 1160
     if-nez v5, :cond_26
 
-    .line 1093
+    .line 1161
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFirstFullyVisibleViewIndex:I
 
-    .line 1094
+    .line 1162
     const/4 v2, 0x1
 
-    .line 1100
+    .line 1168
     :cond_8
     :goto_5
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1101
+    .line 1169
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPushMatrix()V
 
-    .line 1102
+    .line 1170
     move-object/from16 v0, p1
 
     invoke-virtual {v9, v0, v7, v3}, Lcom/sec/android/glview/TwGLView;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1103
+    .line 1171
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPopMatrix()V
 
-    .line 1104
+    .line 1172
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clearClip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1088
+    .line 1156
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 900
+    .line 913
     .end local v2           #checked:Z
     .end local v3           #clipRect:Landroid/graphics/Rect;
     .end local v7           #matrix:[F
@@ -2836,7 +2840,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 901
+    .line 914
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -2847,7 +2851,7 @@
 
     if-lez v11, :cond_4
 
-    .line 902
+    .line 915
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -2856,7 +2860,7 @@
 
     goto/16 :goto_2
 
-    .line 909
+    .line 922
     :cond_a
     move-object/from16 v0, p0
 
@@ -2872,7 +2876,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 910
+    .line 923
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -2883,7 +2887,7 @@
 
     if-lez v11, :cond_5
 
-    .line 911
+    .line 924
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -2892,7 +2896,7 @@
 
     goto/16 :goto_3
 
-    .line 913
+    .line 926
     .end local v5           #i:I
     :cond_b
     move-object/from16 v0, p0
@@ -2901,7 +2905,7 @@
 
     if-eqz v11, :cond_5
 
-    .line 914
+    .line 937
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mScroll:I
@@ -2910,7 +2914,7 @@
 
     if-ne v11, v13, :cond_18
 
-    .line 915
+    .line 938
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getHeight()F
 
     move-result v11
@@ -2927,7 +2931,7 @@
 
     move-result v4
 
-    .line 917
+    .line 940
     .local v4, height:F
     :goto_6
     move-object/from16 v0, p0
@@ -2956,7 +2960,7 @@
 
     const/high16 v1, 0x3f80
 
-    .line 918
+    .line 941
     .local v1, alpha:F
     :goto_7
     const/high16 v11, 0x3f80
@@ -2967,7 +2971,7 @@
 
     add-float v1, v11, v13
 
-    .line 920
+    .line 943
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
@@ -2978,10 +2982,10 @@
 
     if-lez v11, :cond_13
 
-    .line 923
+    .line 947
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3001,7 +3005,7 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 924
+    .line 948
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     const/4 v11, 0x0
 
@@ -3013,7 +3017,7 @@
 
     goto :goto_8
 
-    .line 915
+    .line 938
     .end local v1           #alpha:F
     .end local v4           #height:F
     .end local v6           #i$:Ljava/util/Iterator;
@@ -3025,7 +3029,7 @@
 
     goto :goto_6
 
-    .line 917
+    .line 940
     .restart local v4       #height:F
     :cond_d
     move-object/from16 v0, p0
@@ -3048,7 +3052,7 @@
 
     goto :goto_7
 
-    .line 926
+    .line 950
     .restart local v1       #alpha:F
     .restart local v6       #i$:Ljava/util/Iterator;
     :cond_e
@@ -3064,7 +3068,7 @@
 
     if-eqz v11, :cond_f
 
-    .line 927
+    .line 951
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -3077,7 +3081,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 930
+    .line 954
     :cond_f
     move-object/from16 v0, p0
 
@@ -3085,7 +3089,7 @@
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 931
+    .line 955
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
@@ -3104,14 +3108,14 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 932
+    .line 956
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 935
+    .line 961
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3122,7 +3126,7 @@
 
     if-lez v11, :cond_11
 
-    .line 936
+    .line 962
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3153,7 +3157,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 946
+    .line 975
     :goto_9
     move-object/from16 v0, p0
 
@@ -3171,28 +3175,28 @@
 
     if-gtz v11, :cond_10
 
-    .line 949
+    .line 982
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 950
+    .line 983
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 951
+    .line 984
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v11, v0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
-    .line 1065
+    .line 1132
     .end local v1           #alpha:F
     .end local v4           #height:F
     .end local v6           #i$:Ljava/util/Iterator;
@@ -3204,10 +3208,10 @@
 
     if-nez v11, :cond_5
 
-    .line 1068
+    .line 1134
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3227,7 +3231,7 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 1069
+    .line 1135
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     move-object/from16 v0, p0
 
@@ -3243,7 +3247,7 @@
 
     goto :goto_b
 
-    .line 939
+    .line 965
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
     .restart local v1       #alpha:F
     .restart local v4       #height:F
@@ -3264,7 +3268,7 @@
 
     if-lez v11, :cond_12
 
-    .line 940
+    .line 966
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3297,7 +3301,7 @@
 
     goto :goto_9
 
-    .line 942
+    .line 968
     :cond_12
     move-object/from16 v0, p0
 
@@ -3319,7 +3323,7 @@
 
     goto :goto_9
 
-    .line 953
+    .line 987
     .end local v6           #i$:Ljava/util/Iterator;
     :cond_13
     move-object/from16 v0, p0
@@ -3340,10 +3344,10 @@
 
     if-gez v11, :cond_10
 
-    .line 956
+    .line 991
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3363,13 +3367,13 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 957
+    .line 992
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->top:I
 
@@ -3379,7 +3383,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v14, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v14, v14, Landroid/graphics/Rect;->bottom:I
 
@@ -3399,7 +3403,7 @@
 
     goto :goto_c
 
-    .line 959
+    .line 994
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
     :cond_14
     move-object/from16 v0, p0
@@ -3414,7 +3418,7 @@
 
     if-eqz v11, :cond_15
 
-    .line 960
+    .line 995
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -3433,7 +3437,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v15, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v15, v15, Landroid/graphics/Rect;->top:I
 
@@ -3443,7 +3447,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v0, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     move-object/from16 v16, v0
 
@@ -3477,7 +3481,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 964
+    .line 999
     :cond_15
     move-object/from16 v0, p0
 
@@ -3485,7 +3489,7 @@
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 965
+    .line 1000
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -3508,7 +3512,7 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 966
+    .line 1001
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -3531,14 +3535,14 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 967
+    .line 1002
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 971
+    .line 1008
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3549,7 +3553,7 @@
 
     if-gez v11, :cond_16
 
-    .line 972
+    .line 1009
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3580,7 +3584,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 982
+    .line 1022
     :goto_d
     move-object/from16 v0, p0
 
@@ -3600,7 +3604,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->top:I
 
@@ -3610,7 +3614,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v14, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v14, v14, Landroid/graphics/Rect;->bottom:I
 
@@ -3622,10 +3626,10 @@
 
     if-ltz v11, :cond_10
 
-    .line 985
+    .line 1029
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v11, v11, Landroid/graphics/Rect;->top:I
 
@@ -3635,7 +3639,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->bottom:I
 
@@ -3653,14 +3657,14 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 986
+    .line 1030
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 987
+    .line 1031
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -3669,7 +3673,7 @@
 
     goto/16 :goto_a
 
-    .line 975
+    .line 1012
     :cond_16
     move-object/from16 v0, p0
 
@@ -3687,7 +3691,7 @@
 
     if-lez v11, :cond_17
 
-    .line 976
+    .line 1013
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
@@ -3720,7 +3724,7 @@
 
     goto :goto_d
 
-    .line 978
+    .line 1015
     :cond_17
     move-object/from16 v0, p0
 
@@ -3742,7 +3746,7 @@
 
     goto/16 :goto_d
 
-    .line 990
+    .line 1035
     .end local v1           #alpha:F
     .end local v4           #height:F
     .end local v6           #i$:Ljava/util/Iterator;
@@ -3755,7 +3759,7 @@
 
     if-ne v11, v13, :cond_10
 
-    .line 991
+    .line 1036
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getWidth()F
 
     move-result v11
@@ -3772,7 +3776,7 @@
 
     move-result v10
 
-    .line 993
+    .line 1038
     .local v10, width:F
     :goto_e
     move-object/from16 v0, p0
@@ -3801,7 +3805,7 @@
 
     const/high16 v1, 0x3f80
 
-    .line 994
+    .line 1039
     .restart local v1       #alpha:F
     :goto_f
     const/high16 v11, 0x3f80
@@ -3812,7 +3816,7 @@
 
     add-float v1, v11, v13
 
-    .line 996
+    .line 1041
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
@@ -3823,10 +3827,10 @@
 
     if-lez v11, :cond_1f
 
-    .line 999
+    .line 1045
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3846,7 +3850,7 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 1000
+    .line 1046
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     const/4 v11, 0x0
 
@@ -3858,7 +3862,7 @@
 
     goto :goto_10
 
-    .line 991
+    .line 1036
     .end local v1           #alpha:F
     .end local v6           #i$:Ljava/util/Iterator;
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
@@ -3870,7 +3874,7 @@
 
     goto :goto_e
 
-    .line 993
+    .line 1038
     .restart local v10       #width:F
     :cond_1a
     move-object/from16 v0, p0
@@ -3897,7 +3901,7 @@
 
     goto :goto_f
 
-    .line 1002
+    .line 1048
     .restart local v1       #alpha:F
     .restart local v6       #i$:Ljava/util/Iterator;
     :cond_1b
@@ -3913,7 +3917,7 @@
 
     if-eqz v11, :cond_1c
 
-    .line 1003
+    .line 1049
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -3926,7 +3930,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 1006
+    .line 1052
     :cond_1c
     move-object/from16 v0, p0
 
@@ -3934,7 +3938,7 @@
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1007
+    .line 1053
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
@@ -3959,7 +3963,7 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 1011
+    .line 1059
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -3970,7 +3974,7 @@
 
     if-lez v11, :cond_1d
 
-    .line 1012
+    .line 1060
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -4001,7 +4005,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1022
+    .line 1073
     :goto_11
     move-object/from16 v0, p0
 
@@ -4019,21 +4023,21 @@
 
     if-gtz v11, :cond_10
 
-    .line 1025
+    .line 1080
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 1026
+    .line 1081
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1027
+    .line 1082
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -4042,7 +4046,7 @@
 
     goto/16 :goto_a
 
-    .line 1015
+    .line 1063
     :cond_1d
     move-object/from16 v0, p0
 
@@ -4060,7 +4064,7 @@
 
     if-lez v11, :cond_1e
 
-    .line 1016
+    .line 1064
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -4093,7 +4097,7 @@
 
     goto :goto_11
 
-    .line 1018
+    .line 1066
     :cond_1e
     move-object/from16 v0, p0
 
@@ -4115,7 +4119,7 @@
 
     goto :goto_11
 
-    .line 1029
+    .line 1085
     .end local v6           #i$:Ljava/util/Iterator;
     :cond_1f
     move-object/from16 v0, p0
@@ -4136,10 +4140,10 @@
 
     if-gez v11, :cond_10
 
-    .line 1032
+    .line 1089
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4159,11 +4163,11 @@
 
     check-cast v9, Lcom/sec/android/glview/TwGLView;
 
-    .line 1033
+    .line 1090
     .restart local v9       #view:Lcom/sec/android/glview/TwGLView;
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v11, v11, Landroid/graphics/Rect;->left:I
 
@@ -4173,7 +4177,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->right:I
 
@@ -4195,7 +4199,7 @@
 
     goto :goto_12
 
-    .line 1035
+    .line 1092
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
     :cond_20
     move-object/from16 v0, p0
@@ -4210,7 +4214,7 @@
 
     if-eqz v11, :cond_21
 
-    .line 1036
+    .line 1093
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -4227,7 +4231,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v14, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v14, v14, Landroid/graphics/Rect;->left:I
 
@@ -4237,7 +4241,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v15, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v15, v15, Landroid/graphics/Rect;->right:I
 
@@ -4261,7 +4265,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 1039
+    .line 1096
     :cond_21
     move-object/from16 v0, p0
 
@@ -4269,7 +4273,7 @@
 
     invoke-virtual {v11, v1}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1040
+    .line 1097
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4298,7 +4302,7 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 1041
+    .line 1098
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4327,7 +4331,7 @@
 
     invoke-virtual {v11, v13, v14}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 1045
+    .line 1104
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -4338,7 +4342,7 @@
 
     if-gez v11, :cond_22
 
-    .line 1046
+    .line 1105
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -4369,7 +4373,7 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1056
+    .line 1118
     :goto_13
     move-object/from16 v0, p0
 
@@ -4389,7 +4393,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->left:I
 
@@ -4399,7 +4403,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v14, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v14, v14, Landroid/graphics/Rect;->right:I
 
@@ -4411,10 +4415,10 @@
 
     if-ltz v11, :cond_10
 
-    .line 1059
+    .line 1125
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v11, v11, Landroid/graphics/Rect;->left:I
 
@@ -4424,7 +4428,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v13, v0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v13, v13, Landroid/graphics/Rect;->right:I
 
@@ -4442,14 +4446,14 @@
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 1060
+    .line 1126
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1061
+    .line 1127
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -4458,7 +4462,7 @@
 
     goto/16 :goto_a
 
-    .line 1049
+    .line 1108
     :cond_22
     move-object/from16 v0, p0
 
@@ -4476,7 +4480,7 @@
 
     if-lez v11, :cond_23
 
-    .line 1050
+    .line 1109
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
@@ -4509,7 +4513,7 @@
 
     goto :goto_13
 
-    .line 1052
+    .line 1111
     :cond_23
     move-object/from16 v0, p0
 
@@ -4531,7 +4535,7 @@
 
     goto/16 :goto_13
 
-    .line 1071
+    .line 1137
     .end local v1           #alpha:F
     .end local v10           #width:F
     :cond_24
@@ -4547,7 +4551,7 @@
 
     if-eqz v11, :cond_25
 
-    .line 1072
+    .line 1138
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -4592,7 +4596,7 @@
 
     invoke-virtual {v11, v13, v14, v15}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 1074
+    .line 1141
     :cond_25
     move-object/from16 v0, p0
 
@@ -4602,7 +4606,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1075
+    .line 1142
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4611,7 +4615,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1076
+    .line 1143
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
@@ -4620,7 +4624,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1077
+    .line 1144
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4629,7 +4633,7 @@
 
     invoke-virtual {v11, v13}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1078
+    .line 1146
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v11
@@ -4640,7 +4644,7 @@
 
     goto/16 :goto_3
 
-    .line 1095
+    .line 1163
     .end local v6           #i$:Ljava/util/Iterator;
     .restart local v2       #checked:Z
     .restart local v3       #clipRect:Landroid/graphics/Rect;
@@ -4650,7 +4654,7 @@
     :cond_26
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     add-int/lit8 v13, v5, -0x1
 
@@ -4666,17 +4670,17 @@
 
     if-eqz v11, :cond_8
 
-    .line 1096
+    .line 1164
     move-object/from16 v0, p0
 
     iput v5, v0, Lcom/sec/android/glview/TwGLList;->mFirstFullyVisibleViewIndex:I
 
-    .line 1097
+    .line 1165
     const/4 v2, 0x1
 
     goto/16 :goto_5
 
-    .line 1107
+    .line 1175
     .end local v9           #view:Lcom/sec/android/glview/TwGLView;
     :cond_27
     move-object/from16 v0, p0
@@ -4691,13 +4695,13 @@
 
     if-eqz v11, :cond_28
 
-    .line 1108
+    .line 1176
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1109
+    .line 1177
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPushMatrix()V
 
-    .line 1110
+    .line 1178
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
@@ -4706,13 +4710,13 @@
 
     invoke-virtual {v11, v0, v7, v3}, Lcom/sec/android/glview/TwGLNinePatch;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1111
+    .line 1179
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPopMatrix()V
 
-    .line 1112
+    .line 1180
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clearClip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1114
+    .line 1183
     :cond_28
     move-object/from16 v0, p0
 
@@ -4720,13 +4724,13 @@
 
     if-eqz v11, :cond_29
 
-    .line 1115
+    .line 1184
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1116
+    .line 1185
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPushMatrix()V
 
-    .line 1117
+    .line 1186
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
@@ -4735,7 +4739,7 @@
 
     invoke-virtual {v11, v0, v7, v3}, Lcom/sec/android/glview/TwGLImage;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1118
+    .line 1187
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
@@ -4744,13 +4748,13 @@
 
     invoke-virtual {v11, v0, v7, v3}, Lcom/sec/android/glview/TwGLImage;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1119
+    .line 1188
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPopMatrix()V
 
-    .line 1120
+    .line 1189
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clearClip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1122
+    .line 1191
     :cond_29
     move-object/from16 v0, p0
 
@@ -4758,13 +4762,13 @@
 
     if-eqz v11, :cond_2a
 
-    .line 1123
+    .line 1192
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1124
+    .line 1193
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPushMatrix()V
 
-    .line 1125
+    .line 1194
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4773,7 +4777,7 @@
 
     invoke-virtual {v11, v0, v7, v3}, Lcom/sec/android/glview/TwGLImage;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1126
+    .line 1195
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
@@ -4782,26 +4786,26 @@
 
     invoke-virtual {v11, v0, v7, v3}, Lcom/sec/android/glview/TwGLImage;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 1127
+    .line 1196
     invoke-interface/range {p1 .. p1}, Ljavax/microedition/khronos/opengles/GL11;->glPopMatrix()V
 
-    .line 1128
+    .line 1197
     invoke-virtual/range {p0 .. p1}, Lcom/sec/android/glview/TwGLList;->clearClip(Ljavax/microedition/khronos/opengles/GL11;)V
 
-    .line 1130
+    .line 1200
     :cond_2a
     monitor-exit v12
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1131
+    .line 1201
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v11, v0, Lcom/sec/android/glview/TwGLView;->mDrawFirstTime:Z
+    iput-boolean v11, v0, Lcom/sec/android/glview/TwGLList;->mDrawFirstTime:Z
 
-    .line 1132
+    .line 1202
     return-void
 .end method
 
@@ -4813,16 +4817,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1351
+    .line 1462
     if-ne p2, v0, :cond_0
 
-    .line 1352
+    .line 1463
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollRequested:Z
 
-    .line 1353
+    .line 1464
     iput-object p1, p0, Lcom/sec/android/glview/TwGLList;->mScrollToVisibleView:Lcom/sec/android/glview/TwGLView;
 
-    .line 1355
+    .line 1466
     :cond_0
     const/4 v0, 0x0
 
@@ -4835,7 +4839,7 @@
     .parameter "event"
 
     .prologue
-    .line 1340
+    .line 1451
     const/4 v0, 0x0
 
     return v0
@@ -4847,7 +4851,7 @@
     .parameter "event"
 
     .prologue
-    .line 1346
+    .line 1457
     const/4 v0, 0x0
 
     return v0
@@ -4858,16 +4862,16 @@
     .parameter "gl"
 
     .prologue
-    .line 343
+    .line 350
     const/4 v0, 0x1
 
-    .line 344
+    .line 351
     .local v0, ret:Z
     invoke-super {p0, p1}, Lcom/sec/android/glview/TwGLViewGroup;->onLoad(Ljavax/microedition/khronos/opengles/GL11;)Z
 
     move-result v0
 
-    .line 345
+    .line 352
     return v0
 .end method
 
@@ -4875,69 +4879,69 @@
     .locals 4
 
     .prologue
-    .line 1573
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 1684
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v3
 
-    .line 1574
+    .line 1685
     :try_start_0
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v2, :cond_0
 
-    .line 1575
+    .line 1686
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {v2}, Lcom/sec/android/glview/TwGLNinePatch;->reset()V
 
-    .line 1576
+    .line 1687
     :cond_0
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v2, :cond_1
 
-    .line 1577
+    .line 1688
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v2}, Lcom/sec/android/glview/TwGLImage;->reset()V
 
-    .line 1579
+    .line 1690
     :cond_1
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v2, :cond_2
 
-    .line 1580
+    .line 1691
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v2}, Lcom/sec/android/glview/TwGLImage;->reset()V
 
-    .line 1582
+    .line 1693
     :cond_2
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v2, :cond_3
 
-    .line 1583
+    .line 1694
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v2}, Lcom/sec/android/glview/TwGLImage;->reset()V
 
-    .line 1585
+    .line 1696
     :cond_3
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     if-eqz v2, :cond_4
 
-    .line 1586
+    .line 1697
     iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v2}, Lcom/sec/android/glview/TwGLImage;->reset()V
 
-    .line 1588
+    .line 1699
     :cond_4
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4957,13 +4961,13 @@
 
     check-cast v1, Lcom/sec/android/glview/TwGLView;
 
-    .line 1589
+    .line 1700
     .local v1, view:Lcom/sec/android/glview/TwGLView;
     invoke-virtual {v1}, Lcom/sec/android/glview/TwGLView;->reset()V
 
     goto :goto_0
 
-    .line 1591
+    .line 1702
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #view:Lcom/sec/android/glview/TwGLView;
     :catchall_0
@@ -4982,7 +4986,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1592
+    .line 1703
     return-void
 .end method
 
@@ -4992,7 +4996,7 @@
     .parameter "e"
 
     .prologue
-    .line 1174
+    .line 1244
     invoke-virtual {p0, p2}, Lcom/sec/android/glview/TwGLList;->touchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -5005,20 +5009,20 @@
     .parameter "e"
 
     .prologue
-    .line 1182
-    iget-object v8, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 1252
+    iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v8
 
-    .line 1183
+    .line 1253
     :try_start_0
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v3
 
-    .line 1184
+    .line 1254
     .local v3, et:Landroid/view/MotionEvent;
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mTransformedScreenCoordinate:[F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -5030,14 +5034,14 @@
 
     invoke-virtual {p0, v7, v9, v10}, Lcom/sec/android/glview/TwGLList;->mapPointReverse([FFF)V
 
-    .line 1185
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    .line 1255
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mTransformedScreenCoordinate:[F
 
     const/4 v9, 0x0
 
     aget v7, v7, v9
 
-    iget-object v9, p0, Lcom/sec/android/glview/TwGLView;->mTransformedScreenCoordinate:[F
+    iget-object v9, p0, Lcom/sec/android/glview/TwGLList;->mTransformedScreenCoordinate:[F
 
     const/4 v10, 0x1
 
@@ -5045,18 +5049,18 @@
 
     invoke-virtual {v3, v7, v9}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 1187
+    .line 1257
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
 
     move-result v5
 
-    .line 1189
+    .line 1259
     .local v5, mBoundary:Z
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-nez v7, :cond_0
 
-    .line 1190
+    .line 1260
     new-instance v7, Landroid/view/GestureDetector;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -5077,7 +5081,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1193
+    .line 1263
     :cond_0
     :try_start_1
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mGestureDetector:Landroid/view/GestureDetector;
@@ -5091,21 +5095,21 @@
 
     if-eqz v7, :cond_1
 
-    .line 1194
+    .line 1264
     const/4 v7, 0x1
 
     :try_start_2
     monitor-exit v8
 
-    .line 1333
+    .line 1444
     :goto_0
     return v7
 
-    .line 1196
+    .line 1266
     :catch_0
     move-exception v7
 
-    .line 1200
+    .line 1270
     :cond_1
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getAction()I
 
@@ -5113,48 +5117,48 @@
 
     if-nez v7, :cond_2
 
-    .line 1201
+    .line 1271
     const-string v7, "TwGLList"
 
     const-string v9, "ACTION_DOWN"
 
     invoke-static {v7, v9}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1202
+    .line 1272
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getX()F
 
     move-result v7
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollX:F
 
-    .line 1203
+    .line 1273
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getY()F
 
     move-result v7
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollY:F
 
-    .line 1204
+    .line 1274
     const/4 v7, 0x0
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityY:F
 
-    .line 1205
+    .line 1275
     const/4 v7, 0x0
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mFlingVelocityX:F
 
-    .line 1206
+    .line 1276
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->showScrollBar()V
 
-    .line 1207
+    .line 1277
     const/4 v7, 0x0
 
     monitor-exit v8
 
     goto :goto_0
 
-    .line 1334
+    .line 1445
     .end local v3           #et:Landroid/view/MotionEvent;
     .end local v5           #mBoundary:Z
     :catchall_0
@@ -5166,7 +5170,7 @@
 
     throw v7
 
-    .line 1209
+    .line 1279
     .restart local v3       #et:Landroid/view/MotionEvent;
     .restart local v5       #mBoundary:Z
     :cond_2
@@ -5175,7 +5179,7 @@
 
     if-nez v7, :cond_5
 
-    iget-boolean v7, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
+    iget-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mDragging:Z
 
     if-nez v7, :cond_5
 
@@ -5187,7 +5191,7 @@
 
     if-ne v7, v9, :cond_5
 
-    .line 1210
+    .line 1280
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
     and-int/lit8 v7, v7, 0x1
@@ -5196,7 +5200,7 @@
 
     if-ne v7, v9, :cond_3
 
-    .line 1211
+    .line 1281
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollY:F
 
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getY()F
@@ -5215,17 +5219,17 @@
 
     if-lez v7, :cond_3
 
-    .line 1213
+    .line 1283
     const/4 v7, 0x1
 
     invoke-virtual {p0, v7}, Lcom/sec/android/glview/TwGLList;->setScrolling(Z)V
 
-    .line 1214
+    .line 1284
     const/4 v7, 0x3
 
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 1217
+    .line 1287
     :cond_3
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
@@ -5235,7 +5239,7 @@
 
     if-ne v7, v9, :cond_4
 
-    .line 1218
+    .line 1288
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollX:F
 
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getX()F
@@ -5254,34 +5258,34 @@
 
     if-lez v7, :cond_4
 
-    .line 1220
+    .line 1290
     const/4 v7, 0x1
 
     invoke-virtual {p0, v7}, Lcom/sec/android/glview/TwGLList;->setScrolling(Z)V
 
-    .line 1221
+    .line 1291
     const/4 v7, 0x3
 
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 1224
+    .line 1294
     :cond_4
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->restartScrollBarTimer()V
 
-    .line 1225
+    .line 1295
     const/4 v7, 0x0
 
     monitor-exit v8
 
     goto :goto_0
 
-    .line 1227
+    .line 1297
     :cond_5
     iget-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mScrolling:Z
 
     if-eqz v7, :cond_19
 
-    iget-boolean v7, p0, Lcom/sec/android/glview/TwGLView;->mDragging:Z
+    iget-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mDragging:Z
 
     if-nez v7, :cond_19
 
@@ -5293,7 +5297,7 @@
 
     if-ne v7, v9, :cond_19
 
-    .line 1228
+    .line 1298
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
     and-int/lit8 v7, v7, 0x1
@@ -5302,7 +5306,7 @@
 
     if-ne v7, v9, :cond_e
 
-    .line 1229
+    .line 1299
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getY()F
 
     move-result v7
@@ -5311,11 +5315,11 @@
 
     sub-float v1, v7, v9
 
-    .line 1230
+    .line 1300
     .local v1, delta:F
     move v2, v1
 
-    .line 1232
+    .line 1303
     .local v2, deltaForContents:F
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
@@ -5339,14 +5343,14 @@
 
     if-gtz v7, :cond_8
 
-    .line 1234
+    .line 1305
     :cond_6
     const/4 v2, 0x0
 
-    .line 1245
+    .line 1317
     :cond_7
     :goto_1
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5366,11 +5370,11 @@
 
     check-cast v6, Lcom/sec/android/glview/TwGLView;
 
-    .line 1246
+    .line 1318
     .local v6, view:Lcom/sec/android/glview/TwGLView;
     if-nez v5, :cond_a
 
-    .line 1247
+    .line 1319
     const/4 v7, 0x0
 
     const/4 v9, 0x0
@@ -5379,7 +5383,7 @@
 
     goto :goto_2
 
-    .line 1235
+    .line 1306
     .end local v4           #i$:Ljava/util/Iterator;
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
     :cond_8
@@ -5393,19 +5397,19 @@
 
     if-lez v7, :cond_9
 
-    .line 1237
+    .line 1308
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     sub-float v2, v1, v7
 
-    .line 1238
+    .line 1309
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
     goto :goto_1
 
-    .line 1239
+    .line 1310
     :cond_9
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
@@ -5423,7 +5427,7 @@
 
     if-gez v7, :cond_7
 
-    .line 1241
+    .line 1312
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContentAreaHeight()F
 
     move-result v7
@@ -5438,14 +5442,14 @@
 
     sub-float v2, v1, v7
 
-    .line 1242
+    .line 1313
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
     goto :goto_1
 
-    .line 1249
+    .line 1321
     .restart local v4       #i$:Ljava/util/Iterator;
     .restart local v6       #view:Lcom/sec/android/glview/TwGLView;
     :cond_a
@@ -5461,7 +5465,7 @@
 
     goto :goto_2
 
-    .line 1253
+    .line 1325
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
     :cond_b
     iget-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
@@ -5472,10 +5476,10 @@
 
     if-eqz v7, :cond_c
 
-    .line 1254
+    .line 1326
     if-nez v5, :cond_f
 
-    .line 1255
+    .line 1327
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
     iget v9, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
@@ -5486,7 +5490,7 @@
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarOffset:F
 
-    .line 1259
+    .line 1331
     :goto_3
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
@@ -5498,7 +5502,7 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/sec/android/glview/TwGLNinePatch;->translate(FF)V
 
-    .line 1262
+    .line 1335
     :cond_c
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
@@ -5516,35 +5520,35 @@
 
     if-eqz v7, :cond_d
 
-    .line 1264
+    .line 1337
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1265
+    .line 1338
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1266
+    .line 1339
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1267
+    .line 1340
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1270
+    .line 1343
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     iget-object v9, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
@@ -5557,7 +5561,7 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 1271
+    .line 1344
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     iget-object v9, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
@@ -5574,7 +5578,7 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/sec/android/glview/TwGLImage;->setSize(FF)V
 
-    .line 1272
+    .line 1345
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v9, 0x0
@@ -5591,7 +5595,7 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 1276
+    .line 1349
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
     invoke-static {v7}, Ljava/lang/Math;->abs(F)F
@@ -5614,7 +5618,7 @@
 
     const/high16 v0, 0x3f80
 
-    .line 1277
+    .line 1350
     .local v0, alpha:F
     :goto_4
     const/high16 v7, 0x3f80
@@ -5625,7 +5629,7 @@
 
     add-float v0, v7, v9
 
-    .line 1278
+    .line 1351
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     const/4 v9, 0x0
@@ -5634,30 +5638,30 @@
 
     if-lez v7, :cond_11
 
-    .line 1279
+    .line 1352
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v7, v0}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1280
+    .line 1353
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v7, v0}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1286
+    .line 1360
     .end local v0           #alpha:F
     :cond_d
     :goto_5
     if-nez v5, :cond_12
 
-    .line 1287
+    .line 1361
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     add-float/2addr v7, v1
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 1292
+    .line 1366
     :goto_6
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getY()F
 
@@ -5665,7 +5669,7 @@
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollY:F
 
-    .line 1294
+    .line 1368
     .end local v1           #delta:F
     .end local v2           #deltaForContents:F
     .end local v4           #i$:Ljava/util/Iterator;
@@ -5678,7 +5682,7 @@
 
     if-ne v7, v9, :cond_16
 
-    .line 1295
+    .line 1369
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getX()F
 
     move-result v7
@@ -5687,13 +5691,13 @@
 
     sub-float v1, v7, v9
 
-    .line 1296
+    .line 1370
     .restart local v1       #delta:F
     move v2, v1
 
-    .line 1299
+    .line 1387
     .restart local v2       #deltaForContents:F
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5713,11 +5717,11 @@
 
     check-cast v6, Lcom/sec/android/glview/TwGLView;
 
-    .line 1300
+    .line 1388
     .restart local v6       #view:Lcom/sec/android/glview/TwGLView;
     if-nez v5, :cond_13
 
-    .line 1301
+    .line 1389
     const/4 v7, 0x0
 
     const/4 v9, 0x0
@@ -5726,7 +5730,7 @@
 
     goto :goto_7
 
-    .line 1257
+    .line 1329
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
     :cond_f
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
@@ -5745,7 +5749,7 @@
 
     goto/16 :goto_3
 
-    .line 1276
+    .line 1349
     :cond_10
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mPortraitBounceOffset:F
 
@@ -5763,7 +5767,7 @@
 
     goto :goto_4
 
-    .line 1281
+    .line 1354
     .restart local v0       #alpha:F
     :cond_11
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
@@ -5776,7 +5780,7 @@
 
     move-result v9
 
-    iget-object v10, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v10, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v10, v10, Landroid/graphics/Rect;->top:I
 
@@ -5784,7 +5788,7 @@
 
     sub-float/2addr v9, v10
 
-    iget-object v10, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v10, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
@@ -5796,19 +5800,19 @@
 
     if-gez v7, :cond_d
 
-    .line 1282
+    .line 1355
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v7, v0}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 1283
+    .line 1356
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {v7, v0}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
     goto :goto_5
 
-    .line 1289
+    .line 1363
     .end local v0           #alpha:F
     :cond_12
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
@@ -5823,7 +5827,7 @@
 
     goto :goto_6
 
-    .line 1303
+    .line 1391
     .restart local v6       #view:Lcom/sec/android/glview/TwGLView;
     :cond_13
     const v7, 0x3e4ccccd
@@ -5838,7 +5842,7 @@
 
     goto :goto_7
 
-    .line 1307
+    .line 1395
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
     :cond_14
     iget-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
@@ -5849,10 +5853,10 @@
 
     if-eqz v7, :cond_15
 
-    .line 1308
+    .line 1396
     if-nez v5, :cond_17
 
-    .line 1309
+    .line 1397
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
     iget v9, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
@@ -5863,7 +5867,7 @@
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarOffset:F
 
-    .line 1313
+    .line 1401
     :goto_8
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
@@ -5875,18 +5879,18 @@
 
     invoke-virtual {v7, v9, v10}, Lcom/sec/android/glview/TwGLNinePatch;->translate(FF)V
 
-    .line 1315
+    .line 1426
     :cond_15
     if-nez v5, :cond_18
 
-    .line 1316
+    .line 1427
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     add-float/2addr v7, v1
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 1320
+    .line 1431
     :goto_9
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getX()F
 
@@ -5894,7 +5898,7 @@
 
     iput v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollX:F
 
-    .line 1322
+    .line 1433
     .end local v1           #delta:F
     .end local v2           #deltaForContents:F
     .end local v4           #i$:Ljava/util/Iterator;
@@ -5905,7 +5909,7 @@
 
     goto/16 :goto_0
 
-    .line 1311
+    .line 1399
     .restart local v1       #delta:F
     .restart local v2       #deltaForContents:F
     .restart local v4       #i$:Ljava/util/Iterator;
@@ -5926,7 +5930,7 @@
 
     goto :goto_8
 
-    .line 1318
+    .line 1429
     :cond_18
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
@@ -5940,7 +5944,7 @@
 
     goto :goto_9
 
-    .line 1324
+    .line 1435
     .end local v1           #delta:F
     .end local v2           #deltaForContents:F
     .end local v4           #i$:Ljava/util/Iterator;
@@ -5965,7 +5969,7 @@
 
     if-ne v7, v9, :cond_1b
 
-    .line 1325
+    .line 1436
     :cond_1a
     const-string v7, "TwGLList"
 
@@ -5973,25 +5977,25 @@
 
     invoke-static {v7, v9}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1326
+    .line 1437
     const/4 v7, 0x0
 
     invoke-virtual {p0, v7}, Lcom/sec/android/glview/TwGLList;->setScrolling(Z)V
 
-    .line 1327
+    .line 1438
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
-    .line 1328
+    .line 1439
     const/4 v7, 0x3
 
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 1329
+    .line 1440
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->restartScrollBarTimer()V
 
-    .line 1330
+    .line 1441
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v7
@@ -6000,14 +6004,14 @@
 
     invoke-virtual {v7, v9}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 1331
+    .line 1442
     const/4 v7, 0x0
 
     monitor-exit v8
 
     goto/16 :goto_0
 
-    .line 1333
+    .line 1444
     :cond_1b
     const/4 v7, 0x0
 
@@ -6023,14 +6027,14 @@
     .parameter "view"
 
     .prologue
-    .line 796
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 807
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 797
+    .line 808
     :try_start_0
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -6038,12 +6042,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 798
+    .line 809
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v0, :cond_1
 
-    .line 799
+    .line 810
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
     invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getHeight()F
@@ -6054,20 +6058,20 @@
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mContentHeight:F
 
-    .line 804
+    .line 815
     :cond_0
     :goto_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 806
+    .line 817
     invoke-super {p0, p1}, Lcom/sec/android/glview/TwGLViewGroup;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 807
+    .line 818
     return-void
 
-    .line 801
+    .line 812
     :cond_1
     :try_start_1
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mContentWidth:F
@@ -6082,7 +6086,7 @@
 
     goto :goto_0
 
-    .line 804
+    .line 815
     :catchall_0
     move-exception v0
 
@@ -6099,19 +6103,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 558
+    .line 567
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mMainHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 559
+    .line 568
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mMainHandler:Landroid/os/Handler;
 
     const-wide/16 v1, 0x3e8
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 560
+    .line 569
     return-void
 .end method
 
@@ -6120,15 +6124,15 @@
     .parameter "view"
 
     .prologue
-    .line 810
+    .line 821
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollRequested:Z
 
-    .line 811
+    .line 822
     iput-object p1, p0, Lcom/sec/android/glview/TwGLList;->mScrollToVisibleView:Lcom/sec/android/glview/TwGLView;
 
-    .line 812
+    .line 823
     return-void
 .end method
 
@@ -6140,16 +6144,16 @@
 
     const/4 v6, 0x0
 
-    .line 815
+    .line 826
     iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollToVisibleView:Lcom/sec/android/glview/TwGLView;
 
     if-nez v8, :cond_0
 
-    .line 859
+    .line 870
     :goto_0
     return v6
 
-    .line 819
+    .line 830
     :cond_0
     iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollToVisibleView:Lcom/sec/android/glview/TwGLView;
 
@@ -6157,13 +6161,13 @@
 
     move-result-object v1
 
-    .line 820
+    .line 831
     .local v1, itemCurrentRect:Landroid/graphics/RectF;
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getCurrentContentArea()Landroid/graphics/RectF;
 
     move-result-object v2
 
-    .line 823
+    .line 834
     .local v2, listCurrentRect:Landroid/graphics/RectF;
     invoke-virtual {v2, v1}, Landroid/graphics/RectF;->contains(Landroid/graphics/RectF;)Z
 
@@ -6171,29 +6175,29 @@
 
     if-eqz v8, :cond_1
 
-    .line 824
+    .line 835
     iput-boolean v6, p0, Lcom/sec/android/glview/TwGLList;->mScrollRequested:Z
 
     move v6, v7
 
-    .line 825
+    .line 836
     goto :goto_0
 
-    .line 827
+    .line 838
     :cond_1
     const/4 v4, 0x0
 
-    .line 828
+    .line 839
     .local v4, offsetY:F
     const/4 v3, 0x0
 
-    .line 830
+    .line 841
     .local v3, offsetX:F
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v8, :cond_4
 
-    .line 831
+    .line 842
     iget v8, v1, Landroid/graphics/RectF;->top:F
 
     iget v9, v2, Landroid/graphics/RectF;->top:F
@@ -6202,24 +6206,24 @@
 
     if-gez v8, :cond_3
 
-    .line 832
+    .line 843
     iget v8, v2, Landroid/graphics/RectF;->top:F
 
     iget v9, v1, Landroid/graphics/RectF;->top:F
 
     sub-float v4, v8, v9
 
-    .line 833
+    .line 844
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     add-float/2addr v8, v4
 
     iput v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 850
+    .line 861
     :cond_2
     :goto_1
-    iget-object v8, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6239,7 +6243,7 @@
 
     check-cast v5, Lcom/sec/android/glview/TwGLView;
 
-    .line 851
+    .line 862
     .local v5, v:Lcom/sec/android/glview/TwGLView;
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
@@ -6249,7 +6253,7 @@
 
     goto :goto_2
 
-    .line 834
+    .line 845
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v5           #v:Lcom/sec/android/glview/TwGLView;
     :cond_3
@@ -6261,14 +6265,14 @@
 
     if-lez v8, :cond_2
 
-    .line 835
+    .line 846
     iget v8, v2, Landroid/graphics/RectF;->bottom:F
 
     iget v9, v1, Landroid/graphics/RectF;->bottom:F
 
     sub-float v4, v8, v9
 
-    .line 836
+    .line 847
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
     add-float/2addr v8, v4
@@ -6277,13 +6281,13 @@
 
     goto :goto_1
 
-    .line 838
+    .line 849
     :cond_4
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-ne v8, v7, :cond_2
 
-    .line 839
+    .line 850
     iget v8, v1, Landroid/graphics/RectF;->left:F
 
     iget v9, v2, Landroid/graphics/RectF;->left:F
@@ -6292,40 +6296,14 @@
 
     if-gez v8, :cond_5
 
-    .line 840
+    .line 851
     iget v8, v2, Landroid/graphics/RectF;->left:F
 
     iget v9, v1, Landroid/graphics/RectF;->left:F
 
     sub-float v3, v8, v9
 
-    .line 841
-    iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
-
-    add-float/2addr v8, v3
-
-    iput v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
-
-    goto :goto_1
-
-    .line 842
-    :cond_5
-    iget v8, v1, Landroid/graphics/RectF;->right:F
-
-    iget v9, v2, Landroid/graphics/RectF;->right:F
-
-    cmpl-float v8, v8, v9
-
-    if-lez v8, :cond_2
-
-    .line 843
-    iget v8, v2, Landroid/graphics/RectF;->right:F
-
-    iget v9, v1, Landroid/graphics/RectF;->right:F
-
-    sub-float v3, v8, v9
-
-    .line 844
+    .line 852
     iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
     add-float/2addr v8, v3
@@ -6335,6 +6313,32 @@
     goto :goto_1
 
     .line 853
+    :cond_5
+    iget v8, v1, Landroid/graphics/RectF;->right:F
+
+    iget v9, v2, Landroid/graphics/RectF;->right:F
+
+    cmpl-float v8, v8, v9
+
+    if-lez v8, :cond_2
+
+    .line 854
+    iget v8, v2, Landroid/graphics/RectF;->right:F
+
+    iget v9, v1, Landroid/graphics/RectF;->right:F
+
+    sub-float v3, v8, v9
+
+    .line 855
+    iget v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
+
+    add-float/2addr v8, v3
+
+    iput v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
+
+    goto :goto_1
+
+    .line 864
     .restart local v0       #i$:Ljava/util/Iterator;
     :cond_6
     iget-boolean v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
@@ -6345,7 +6349,7 @@
 
     if-eqz v8, :cond_7
 
-    .line 854
+    .line 865
     iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget v9, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -6374,23 +6378,23 @@
 
     invoke-virtual {v8, v9, v10, v6}, Lcom/sec/android/glview/TwGLNinePatch;->translateAbsolute(FFZ)V
 
-    .line 856
+    .line 867
     :cond_7
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->showScrollBar()V
 
-    .line 857
+    .line 868
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
 
     move-result-object v8
 
     invoke-virtual {v8, v7}, Lcom/sec/android/glview/TwGLContext;->setDirty(Z)V
 
-    .line 858
+    .line 869
     iput-boolean v6, p0, Lcom/sec/android/glview/TwGLList;->mScrollRequested:Z
 
     move v6, v7
 
-    .line 859
+    .line 870
     goto/16 :goto_0
 .end method
 
@@ -6399,12 +6403,12 @@
     .parameter "adapter"
 
     .prologue
-    .line 619
+    .line 628
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/glview/TwGLList;->setAdapter(Lcom/sec/android/glview/TwGLList$Adapter;I)V
 
-    .line 620
+    .line 629
     return-void
 .end method
 
@@ -6414,58 +6418,58 @@
     .parameter "stackOrientation"
 
     .prologue
-    .line 629
+    .line 638
     if-nez p1, :cond_0
 
-    .line 630
+    .line 639
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v1
 
-    .line 632
+    .line 641
     :cond_0
     move-object/from16 v0, p1
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLList;->mAdapter:Lcom/sec/android/glview/TwGLList$Adapter;
 
-    .line 633
+    .line 642
     move/from16 v0, p2
 
     iput v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
-    .line 635
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 644
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 636
+    .line 645
     :try_start_0
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 637
+    .line 646
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 639
+    .line 648
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v1, :cond_2
 
-    .line 640
+    .line 649
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/sec/android/glview/TwGLList;->setScroll(I)V
 
-    .line 645
+    .line 654
     :goto_0
     const/4 v12, 0x0
 
-    .line 646
+    .line 655
     .local v12, offset:I
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mAdapter:Lcom/sec/android/glview/TwGLList$Adapter;
 
@@ -6473,7 +6477,7 @@
 
     move-result v9
 
-    .line 647
+    .line 656
     .local v9, count:I
     const/4 v10, 0x0
 
@@ -6481,7 +6485,7 @@
     :goto_1
     if-ge v10, v9, :cond_7
 
-    .line 648
+    .line 657
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mAdapter:Lcom/sec/android/glview/TwGLList$Adapter;
 
     const/4 v2, 0x0
@@ -6490,17 +6494,17 @@
 
     move-result-object v14
 
-    .line 649
+    .line 658
     .local v14, view:Lcom/sec/android/glview/TwGLView;
     if-nez v14, :cond_3
 
-    .line 717
+    .line 728
     .end local v14           #view:Lcom/sec/android/glview/TwGLView;
     :cond_1
     :goto_2
     return-void
 
-    .line 637
+    .line 646
     .end local v9           #count:I
     .end local v10           #i:I
     .end local v12           #offset:I
@@ -6514,7 +6518,7 @@
 
     throw v1
 
-    .line 642
+    .line 651
     :cond_2
     const/4 v1, 0x2
 
@@ -6522,7 +6526,7 @@
 
     goto :goto_0
 
-    .line 652
+    .line 661
     .restart local v9       #count:I
     .restart local v10       #i:I
     .restart local v12       #offset:I
@@ -6532,21 +6536,21 @@
 
     if-nez v1, :cond_5
 
-    .line 653
+    .line 662
     invoke-virtual {v14}, Lcom/sec/android/glview/TwGLView;->getScrollHint()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 654
+    .line 663
     neg-int v1, v12
 
     int-to-float v1, v1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumY:F
 
-    .line 656
+    .line 665
     :cond_4
     const/4 v1, 0x0
 
@@ -6554,7 +6558,7 @@
 
     invoke-virtual {v14, v1, v2}, Lcom/sec/android/glview/TwGLView;->moveLayoutAbsolute(FF)V
 
-    .line 657
+    .line 666
     int-to-float v1, v12
 
     invoke-virtual {v14}, Lcom/sec/android/glview/TwGLView;->getHeight()F
@@ -6565,19 +6569,19 @@
 
     float-to-int v12, v1
 
-    .line 665
+    .line 674
     :goto_3
     invoke-virtual {v14, p0}, Lcom/sec/android/glview/TwGLView;->setOnFocusListener(Lcom/sec/android/glview/TwGLView$OnFocusListener;)V
 
-    .line 666
+    .line 675
     invoke-virtual {p0, v14}, Lcom/sec/android/glview/TwGLList;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 647
+    .line 656
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 659
+    .line 668
     :cond_5
     invoke-virtual {v14}, Lcom/sec/android/glview/TwGLView;->getScrollHint()Z
 
@@ -6585,14 +6589,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 660
+    .line 669
     neg-int v1, v12
 
     int-to-float v1, v1
 
     iput v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
-    .line 662
+    .line 671
     :cond_6
     int-to-float v1, v12
 
@@ -6600,7 +6604,7 @@
 
     invoke-virtual {v14, v1, v2}, Lcom/sec/android/glview/TwGLView;->moveLayoutAbsolute(FF)V
 
-    .line 663
+    .line 672
     int-to-float v1, v12
 
     invoke-virtual {v14}, Lcom/sec/android/glview/TwGLView;->getWidth()F
@@ -6613,14 +6617,14 @@
 
     goto :goto_3
 
-    .line 669
+    .line 678
     .end local v14           #view:Lcom/sec/android/glview/TwGLView;
     :cond_7
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v1, :cond_a
 
-    .line 670
+    .line 679
     int-to-float v1, v12
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getHeight()F
@@ -6631,7 +6635,7 @@
 
     if-gez v1, :cond_8
 
-    .line 671
+    .line 680
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getWidth()F
 
     move-result v1
@@ -6640,14 +6644,14 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/sec/android/glview/TwGLList;->setSize(FF)V
 
-    .line 679
+    .line 689
     :cond_8
     :goto_4
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v1, :cond_b
 
-    .line 680
+    .line 690
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6666,13 +6670,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020267
+    const v8, 0x7f02024e
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 681
+    .line 691
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6691,13 +6695,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020265
+    const v8, 0x7f02024c
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
-    .line 682
+    .line 692
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6716,13 +6720,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020266
+    const v8, 0x7f02024d
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 683
+    .line 693
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6741,81 +6745,81 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020266
+    const v8, 0x7f02024d
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
-    .line 690
+    .line 700
     :goto_5
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 691
+    .line 701
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 692
+    .line 702
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 693
+    .line 703
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLImage;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 694
+    .line 704
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 695
+    .line 705
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 696
+    .line 706
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 697
+    .line 707
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeBottom:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLImage;->setAlpha(F)V
 
-    .line 699
+    .line 710
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setVisibleArea()V
 
-    .line 701
+    .line 712
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-nez v1, :cond_c
 
-    .line 702
+    .line 713
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v1, :cond_9
 
-    .line 703
+    .line 714
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setScrollBarLayout()V
 
-    .line 711
+    .line 722
     :cond_9
     :goto_6
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6835,7 +6839,7 @@
 
     check-cast v13, Lcom/sec/android/glview/TwGLView;
 
-    .line 712
+    .line 723
     .local v13, v:Lcom/sec/android/glview/TwGLView;
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollSumX:F
 
@@ -6845,7 +6849,7 @@
 
     goto :goto_7
 
-    .line 674
+    .line 683
     .end local v11           #i$:Ljava/util/Iterator;
     .end local v13           #v:Lcom/sec/android/glview/TwGLView;
     :cond_a
@@ -6859,7 +6863,7 @@
 
     if-gez v1, :cond_8
 
-    .line 675
+    .line 684
     int-to-float v1, v12
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getHeight()F
@@ -6870,7 +6874,7 @@
 
     goto/16 :goto_4
 
-    .line 685
+    .line 695
     :cond_b
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
@@ -6890,13 +6894,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020263
+    const v8, 0x7f02024a
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 686
+    .line 696
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6915,13 +6919,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020264
+    const v8, 0x7f02024b
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceImageBottom:Lcom/sec/android/glview/TwGLImage;
 
-    .line 687
+    .line 697
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6940,13 +6944,13 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020262
+    const v8, 0x7f020249
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
     iput-object v1, p0, Lcom/sec/android/glview/TwGLList;->mBounceEdgeTop:Lcom/sec/android/glview/TwGLImage;
 
-    .line 688
+    .line 698
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -6965,7 +6969,7 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f020262
+    const v8, 0x7f020249
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFZI)V
 
@@ -6973,7 +6977,7 @@
 
     goto/16 :goto_5
 
-    .line 705
+    .line 716
     :cond_c
     iget v1, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -6981,17 +6985,17 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 706
+    .line 717
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v1, :cond_9
 
-    .line 707
+    .line 718
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setScrollBarLayout()V
 
     goto/16 :goto_6
 
-    .line 714
+    .line 725
     .restart local v11       #i$:Ljava/util/Iterator;
     :cond_d
     iget-boolean v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
@@ -7002,7 +7006,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 715
+    .line 726
     iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     iget v2, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
@@ -7039,10 +7043,10 @@
     .parameter "l"
 
     .prologue
-    .line 336
+    .line 343
     iput-object p1, p0, Lcom/sec/android/glview/TwGLList;->mOnScrollListener:Lcom/sec/android/glview/TwGLList$OnScrollListener;
 
-    .line 337
+    .line 344
     return-void
 .end method
 
@@ -7051,41 +7055,41 @@
     .parameter "paddings"
 
     .prologue
-    .line 353
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    .line 360
+    iput-object p1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
-    .line 354
+    .line 361
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getLeft()F
 
     move-result v3
 
-    .line 355
+    .line 362
     .local v3, left:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getRight()F
 
     move-result v4
 
-    .line 356
+    .line 363
     .local v4, right:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getTop()F
 
     move-result v5
 
-    .line 357
+    .line 364
     .local v5, top:F
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getBottom()F
 
     move-result v0
 
-    .line 359
+    .line 366
     .local v0, bottom:F
-    iget-object v8, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v8, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     monitor-enter v8
 
-    .line 360
+    .line 367
     :try_start_0
-    iget-object v7, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mGLViews:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7105,7 +7109,7 @@
 
     check-cast v6, Lcom/sec/android/glview/TwGLView;
 
-    .line 361
+    .line 368
     .local v6, view:Lcom/sec/android/glview/TwGLView;
     new-instance v1, Landroid/graphics/Rect;
 
@@ -7119,7 +7123,7 @@
 
     invoke-direct {v1, v7, v9, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 363
+    .line 370
     .local v1, childPaddings:Landroid/graphics/Rect;
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -7127,7 +7131,7 @@
 
     if-eq v7, v9, :cond_0
 
-    .line 364
+    .line 371
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getLeft()F
 
     move-result v7
@@ -7150,7 +7154,7 @@
 
     if-ltz v7, :cond_2
 
-    .line 365
+    .line 372
     iget v7, p1, Landroid/graphics/Rect;->left:I
 
     int-to-float v7, v7
@@ -7167,7 +7171,7 @@
 
     iput v7, v1, Landroid/graphics/Rect;->left:I
 
-    .line 369
+    .line 376
     :goto_1
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getRight()F
 
@@ -7191,7 +7195,7 @@
 
     if-ltz v7, :cond_3
 
-    .line 370
+    .line 377
     iget v7, p1, Landroid/graphics/Rect;->right:I
 
     int-to-float v7, v7
@@ -7208,7 +7212,7 @@
 
     iput v7, v1, Landroid/graphics/Rect;->right:I
 
-    .line 374
+    .line 381
     :goto_2
     iget-object v7, v6, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
@@ -7216,20 +7220,20 @@
 
     iput v7, v1, Landroid/graphics/Rect;->top:I
 
-    .line 375
+    .line 382
     iget-object v7, v6, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->bottom:I
 
     iput v7, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 377
+    .line 384
     :cond_0
     iget v7, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
     if-eqz v7, :cond_1
 
-    .line 378
+    .line 385
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getTop()F
 
     move-result v7
@@ -7252,7 +7256,7 @@
 
     if-ltz v7, :cond_4
 
-    .line 379
+    .line 386
     iget v7, p1, Landroid/graphics/Rect;->top:I
 
     int-to-float v7, v7
@@ -7269,7 +7273,7 @@
 
     iput v7, v1, Landroid/graphics/Rect;->top:I
 
-    .line 383
+    .line 390
     :goto_3
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getBottom()F
 
@@ -7293,7 +7297,7 @@
 
     if-ltz v7, :cond_5
 
-    .line 384
+    .line 391
     iget v7, p1, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v7, v7
@@ -7310,7 +7314,7 @@
 
     iput v7, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 388
+    .line 395
     :goto_4
     iget-object v7, v6, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
@@ -7318,20 +7322,20 @@
 
     iput v7, v1, Landroid/graphics/Rect;->left:I
 
-    .line 389
+    .line 396
     iget-object v7, v6, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->right:I
 
     iput v7, v1, Landroid/graphics/Rect;->right:I
 
-    .line 391
+    .line 398
     :cond_1
     invoke-virtual {v6, v1}, Lcom/sec/android/glview/TwGLView;->setPaddings(Landroid/graphics/Rect;)V
 
     goto/16 :goto_0
 
-    .line 393
+    .line 400
     .end local v1           #childPaddings:Landroid/graphics/Rect;
     .end local v2           #i$:Ljava/util/Iterator;
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
@@ -7344,7 +7348,7 @@
 
     throw v7
 
-    .line 367
+    .line 374
     .restart local v1       #childPaddings:Landroid/graphics/Rect;
     .restart local v2       #i$:Ljava/util/Iterator;
     .restart local v6       #view:Lcom/sec/android/glview/TwGLView;
@@ -7360,7 +7364,7 @@
 
     goto/16 :goto_1
 
-    .line 372
+    .line 379
     :cond_3
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -7372,7 +7376,7 @@
 
     goto :goto_2
 
-    .line 381
+    .line 388
     :cond_4
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -7384,7 +7388,7 @@
 
     goto :goto_3
 
-    .line 386
+    .line 393
     :cond_5
     invoke-virtual {v6}, Lcom/sec/android/glview/TwGLView;->getPaddings()Landroid/graphics/Rect;
 
@@ -7396,7 +7400,7 @@
 
     goto :goto_4
 
-    .line 393
+    .line 400
     .end local v1           #childPaddings:Landroid/graphics/Rect;
     .end local v6           #view:Lcom/sec/android/glview/TwGLView;
     :cond_6
@@ -7404,18 +7408,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 395
+    .line 402
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setVisibleArea()V
 
-    .line 396
+    .line 403
     iget-object v7, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v7, :cond_7
 
-    .line 397
+    .line 404
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setScrollBarLayout()V
 
-    .line 399
+    .line 406
     :cond_7
     return-void
 .end method
@@ -7425,10 +7429,10 @@
     .parameter "scroll"
 
     .prologue
-    .line 514
+    .line 523
     iput p1, p0, Lcom/sec/android/glview/TwGLList;->mScroll:I
 
-    .line 515
+    .line 524
     return-void
 .end method
 
@@ -7439,7 +7443,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 433
+    .line 440
     new-instance v0, Lcom/sec/android/glview/TwGLNinePatch;
 
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->getContext()Lcom/sec/android/glview/TwGLContext;
@@ -7450,19 +7454,19 @@
 
     iput-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
-    .line 434
+    .line 441
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     const v1, 0xfffff
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLNinePatch;->setTag(I)V
 
-    .line 435
+    .line 442
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLNinePatch;->mParent:Lcom/sec/android/glview/TwGLView;
 
-    .line 436
+    .line 443
     return-void
 .end method
 
@@ -7471,7 +7475,7 @@
     .parameter "scrollThresholdDIP"
 
     .prologue
-    .line 523
+    .line 532
     const-string v0, "TwGLList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7494,10 +7498,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
+    .line 534
     iput p1, p0, Lcom/sec/android/glview/TwGLList;->mScrollThreshold:F
 
-    .line 526
+    .line 535
     return-void
 .end method
 
@@ -7506,40 +7510,40 @@
     .parameter "start"
 
     .prologue
-    .line 541
+    .line 550
     iget-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mScrolling:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 542
+    .line 551
     iput-boolean p1, p0, Lcom/sec/android/glview/TwGLList;->mScrolling:Z
 
-    .line 543
+    .line 552
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mOnScrollListener:Lcom/sec/android/glview/TwGLList$OnScrollListener;
 
     if-eqz v0, :cond_0
 
-    .line 544
+    .line 553
     if-eqz p1, :cond_2
 
-    .line 545
+    .line 554
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mOnScrollListener:Lcom/sec/android/glview/TwGLList$OnScrollListener;
 
     invoke-interface {v0}, Lcom/sec/android/glview/TwGLList$OnScrollListener;->onScrollStart()V
 
-    .line 550
+    .line 559
     :cond_0
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 551
+    .line 560
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->resetDrag()V
 
-    .line 552
+    .line 561
     :cond_1
     return-void
 
-    .line 547
+    .line 556
     :cond_2
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mOnScrollListener:Lcom/sec/android/glview/TwGLList$OnScrollListener;
 
@@ -7554,34 +7558,34 @@
     .parameter "height"
 
     .prologue
-    .line 406
+    .line 413
     invoke-super {p0, p1, p2}, Lcom/sec/android/glview/TwGLViewGroup;->setSize(FF)V
 
-    .line 408
+    .line 415
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->checkBoundary()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 409
+    .line 416
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/glview/TwGLList;->mBouncing:Z
 
-    .line 411
+    .line 418
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setVisibleArea()V
 
-    .line 412
+    .line 419
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-eqz v0, :cond_1
 
-    .line 413
+    .line 420
     invoke-direct {p0}, Lcom/sec/android/glview/TwGLList;->setScrollBarLayout()V
 
-    .line 415
+    .line 422
     :cond_1
     return-void
 .end method
@@ -7592,17 +7596,17 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 596
+    .line 605
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     if-nez v0, :cond_1
 
-    .line 611
+    .line 620
     :cond_0
     :goto_0
     return-void
 
-    .line 599
+    .line 608
     :cond_1
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -7610,7 +7614,7 @@
 
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleHeight:F
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
@@ -7618,7 +7622,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -7632,7 +7636,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 602
+    .line 611
     :cond_2
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mStackOrientation:I
 
@@ -7640,7 +7644,7 @@
 
     iget v0, p0, Lcom/sec/android/glview/TwGLList;->mListVisibleWidth:F
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -7648,7 +7652,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLList;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
@@ -7662,7 +7666,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 606
+    .line 615
     :cond_3
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
@@ -7670,24 +7674,24 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLNinePatch;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 607
+    .line 616
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     const/high16 v1, 0x3f80
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLNinePatch;->setAlpha(F)V
 
-    .line 608
+    .line 617
     iput-boolean v2, p0, Lcom/sec/android/glview/TwGLList;->mScrollBarVisible:Z
 
-    .line 609
+    .line 618
     iget-object v0, p0, Lcom/sec/android/glview/TwGLList;->mScrollBar:Lcom/sec/android/glview/TwGLNinePatch;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLNinePatch;->setVisibility(I)V
 
-    .line 610
+    .line 619
     invoke-virtual {p0}, Lcom/sec/android/glview/TwGLList;->restartScrollBarTimer()V
 
     goto :goto_0

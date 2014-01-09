@@ -162,7 +162,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -173,7 +173,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -184,7 +184,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -195,7 +195,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -206,7 +206,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -217,7 +217,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -228,7 +228,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -239,7 +239,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -250,7 +250,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -261,7 +261,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -272,7 +272,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -283,7 +283,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -294,7 +294,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -305,7 +305,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -316,7 +316,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -327,7 +327,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnDragListener:Lcom/sec/android/glview/TwGLView$OnDragListener;
 
     return-object v0
 .end method
@@ -338,7 +338,7 @@
     .prologue
     const/16 v14, 0x63
 
-    const v9, 0x7f020244
+    const v9, 0x7f02022c
 
     const/4 v2, 0x0
 
@@ -443,7 +443,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
+    .line 233
     :cond_3
     :goto_0
     return-void
@@ -499,24 +499,32 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setTitle(Ljava/lang/String;)V
 
-    .line 178
+    .line 165
     :cond_5
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
+
+    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->getToggleButton()Z
+
+    move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 179
+    .line 166
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
-    iget v1, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mNormal:I
+    invoke-static {v0}, Lcom/sec/android/glview/TwGLUtil;->getToggleAnimation(Lcom/sec/android/glview/TwGLView;)Landroid/view/animation/Animation;
 
-    iget v2, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mPress:I
+    move-result-object v0
 
-    iget v3, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mDim:I
+    invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->setAnimation(Landroid/view/animation/Animation;)V
 
-    invoke-virtual {v0, v1, v2, v3, v9}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
+    .line 167
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->startAnimation()V
 
-    .line 184
+    .line 168
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->setToggleButtonResources()Z
+
+    .line 183
     :goto_2
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
@@ -526,7 +534,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 192
+    .line 191
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     new-instance v1, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$2;
@@ -535,7 +543,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnTouchListener(Lcom/sec/android/glview/TwGLView$OnTouchListener;)V
 
-    .line 200
+    .line 199
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     new-instance v1, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$3;
@@ -544,7 +552,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnDragListener(Lcom/sec/android/glview/TwGLView$OnDragListener;)V
 
-    .line 219
+    .line 218
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     new-instance v1, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$4;
@@ -553,12 +561,12 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnFocusListener(Lcom/sec/android/glview/TwGLView$OnFocusListener;)V
 
-    .line 230
+    .line 229
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mCommandId:I
 
     if-ne v0, v14, :cond_3
 
-    .line 231
+    .line 230
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x0
@@ -593,8 +601,27 @@
 
     goto :goto_1
 
-    .line 181
+    .line 170
     :cond_7
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+
+    if-eqz v0, :cond_8
+
+    .line 171
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
+
+    iget v1, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mNormal:I
+
+    iget v2, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mPress:I
+
+    iget v3, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mDim:I
+
+    invoke-virtual {v0, v1, v2, v3, v9}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
+
+    goto :goto_2
+
+    .line 173
+    :cond_8
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     iget v1, v12, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mNormal:I
@@ -643,7 +670,7 @@
     .parameter "modeid"
 
     .prologue
-    .line 306
+    .line 303
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->isActivityDestoying()Z
@@ -652,12 +679,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 317
+    .line 314
     :cond_0
     :goto_0
     return-void
 
-    .line 309
+    .line 306
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -673,7 +700,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 311
+    .line 308
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mCommandId:I
 
     const/16 v1, 0x8
@@ -686,7 +713,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 315
+    .line 312
     invoke-direct {p0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->refreshButton()V
 
     goto :goto_0
@@ -697,18 +724,18 @@
     .parameter "gl"
 
     .prologue
-    .line 297
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 294
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mGLViews:Ljava/util/List;
 
     monitor-enter v3
 
-    .line 298
+    .line 295
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     :try_start_0
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -716,8 +743,8 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 299
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    .line 296
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -725,7 +752,7 @@
 
     check-cast v1, Lcom/sec/android/glview/TwGLView;
 
-    .line 300
+    .line 297
     .local v1, view:Lcom/sec/android/glview/TwGLView;
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->getMatrix()[F
 
@@ -737,20 +764,20 @@
 
     invoke-virtual {v1, p1, v2, v4}, Lcom/sec/android/glview/TwGLView;->draw(Ljavax/microedition/khronos/opengles/GL10;[FLandroid/graphics/Rect;)V
 
-    .line 298
+    .line 295
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 302
+    .line 299
     .end local v1           #view:Lcom/sec/android/glview/TwGLView;
     :cond_0
     monitor-exit v3
 
-    .line 303
+    .line 300
     return-void
 
-    .line 302
+    .line 299
     :catchall_0
     move-exception v2
 
@@ -806,19 +833,19 @@
     .parameter "l"
 
     .prologue
-    const v8, 0x7f020244
+    const v8, 0x7f02022c
+
+    .line 237
+    if-nez p1, :cond_3
 
     .line 238
-    if-nez p1, :cond_4
-
-    .line 239
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 251
+    .line 250
     :goto_0
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -832,7 +859,7 @@
 
     move-result v0
 
-    .line 252
+    .line 251
     .local v0, menuid:I
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
 
@@ -840,7 +867,7 @@
 
     move-result v1
 
-    .line 253
+    .line 252
     .local v1, modeid:I
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -852,7 +879,7 @@
 
     move-result v3
 
-    .line 254
+    .line 253
     .local v3, selectedCommandId:I
     iget v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mCommandId:I
 
@@ -860,10 +887,10 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 255
+    .line 254
     const/16 v3, 0x63
 
-    .line 258
+    .line 257
     :cond_0
     const/16 v4, 0x8
 
@@ -875,11 +902,11 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 259
+    .line 258
     :cond_1
     const/16 v3, 0x8
 
-    .line 263
+    .line 262
     :cond_2
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -893,14 +920,11 @@
 
     move-result-object v2
 
-    .line 265
+    .line 264
     .local v2, res:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_4
 
-    .line 266
-    if-eqz v2, :cond_3
-
-    .line 267
+    .line 265
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     iget v5, v2, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mNormal:I
@@ -911,20 +935,19 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 
-    .line 273
-    :cond_3
+    .line 270
     :goto_1
     invoke-super {p0, p1}, Lcom/sec/android/glview/TwGLViewGroup;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 274
+    .line 271
     return-void
 
-    .line 241
+    .line 240
     .end local v0           #menuid:I
     .end local v1           #modeid:I
     .end local v2           #res:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     .end local v3           #selectedCommandId:I
-    :cond_4
+    :cond_3
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     new-instance v5, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$5;
@@ -935,15 +958,12 @@
 
     goto :goto_0
 
-    .line 269
+    .line 267
     .restart local v0       #menuid:I
     .restart local v1       #modeid:I
     .restart local v2       #res:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     .restart local v3       #selectedCommandId:I
-    :cond_5
-    if-eqz v2, :cond_3
-
-    .line 270
+    :cond_4
     iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     iget v5, v2, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;->mNormal:I
@@ -962,24 +982,24 @@
     .parameter "l"
 
     .prologue
-    .line 278
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    .line 275
+    iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
-    .line 279
+    .line 276
     if-nez p1, :cond_0
 
-    .line 280
+    .line 277
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 293
+    .line 290
     :goto_0
     return-void
 
-    .line 282
+    .line 279
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
@@ -1047,7 +1067,7 @@
     .parameter "height"
 
     .prologue
-    .line 321
+    .line 318
     monitor-enter p0
 
     :try_start_0
@@ -1055,29 +1075,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 322
+    .line 319
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, p1, p2}, Lcom/sec/android/glview/TwGLButton;->setSize(FF)V
 
-    .line 324
+    .line 321
     :cond_0
     iput p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mWidth:F
 
-    .line 325
+    .line 322
     iput p2, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mHeight:F
 
-    .line 326
+    .line 323
     invoke-super {p0, p1, p2}, Lcom/sec/android/glview/TwGLViewGroup;->setSize(FF)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 327
+    .line 324
     monitor-exit p0
 
     return-void
 
-    .line 321
+    .line 318
     :catchall_0
     move-exception v0
 
@@ -1235,17 +1255,17 @@
     .locals 1
 
     .prologue
-    .line 330
+    .line 327
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     if-eqz v0, :cond_0
 
-    .line 331
+    .line 328
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLButton;->setToggleButton()V
 
-    .line 333
+    .line 330
     :cond_0
     return-void
 .end method
@@ -1254,11 +1274,11 @@
     .locals 7
 
     .prologue
-    const v6, 0x7f020244
+    const v6, 0x7f02022c
 
     const/4 v2, 0x0
 
-    .line 336
+    .line 333
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getCameraSettings()Lcom/sec/android/app/camera/CameraSettings;
@@ -1269,7 +1289,7 @@
 
     move-result v0
 
-    .line 337
+    .line 334
     .local v0, cameraMode:I
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -1281,72 +1301,72 @@
 
     move-result v1
 
-    .line 339
+    .line 336
     .local v1, selfMode:I
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
     if-nez v3, :cond_0
 
-    .line 355
+    .line 352
     :goto_0
     return v2
 
-    .line 342
+    .line 339
     :cond_0
     if-nez v0, :cond_2
 
-    .line 343
+    .line 340
     if-nez v1, :cond_1
 
-    .line 344
+    .line 341
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v4, 0x7f020188
+    const v4, 0x7f02017e
 
-    const v5, 0x7f020189
+    const v5, 0x7f02017f
 
     invoke-virtual {v3, v4, v5, v2, v6}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 
-    .line 355
+    .line 352
     :goto_1
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 346
+    .line 343
     :cond_1
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v4, 0x7f02018a
+    const v4, 0x7f020180
 
-    const v5, 0x7f02018b
+    const v5, 0x7f020181
+
+    invoke-virtual {v3, v4, v5, v2, v6}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
+
+    goto :goto_1
+
+    .line 346
+    :cond_2
+    if-nez v1, :cond_3
+
+    .line 347
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
+
+    const v4, 0x7f02017a
+
+    const v5, 0x7f02017b
 
     invoke-virtual {v3, v4, v5, v2, v6}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 
     goto :goto_1
 
     .line 349
-    :cond_2
-    if-nez v1, :cond_3
-
-    .line 350
-    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
-
-    const v4, 0x7f020184
-
-    const v5, 0x7f020185
-
-    invoke-virtual {v3, v4, v5, v2, v6}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
-
-    goto :goto_1
-
-    .line 352
     :cond_3
     iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mButton:Lcom/sec/android/glview/TwGLButton;
 
-    const v4, 0x7f020186
+    const v4, 0x7f02017c
 
-    const v5, 0x7f020187
+    const v5, 0x7f02017d
 
     invoke-virtual {v3, v4, v5, v2, v6}, Lcom/sec/android/glview/TwGLButton;->setButtonResources(IIII)V
 

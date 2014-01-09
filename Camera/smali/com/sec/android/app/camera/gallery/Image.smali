@@ -56,7 +56,7 @@
     .line 96
     new-instance v1, Landroid/media/ExifInterface;
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mDataPath:Ljava/lang/String;
+    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/Image;->mDataPath:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
@@ -374,9 +374,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 65
-    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mContentResolver:Landroid/content/ContentResolver;
+    iget-object v1, p0, Lcom/sec/android/app/camera/gallery/Image;->mContentResolver:Landroid/content/ContentResolver;
 
-    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mUri:Landroid/net/Uri;
+    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/Image;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2, v0, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -409,7 +409,7 @@
     iput-object v2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     .line 167
-    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/BaseImage;->mDataPath:Ljava/lang/String;
+    iget-object v2, p0, Lcom/sec/android/app/camera/gallery/Image;->mDataPath:Ljava/lang/String;
 
     const/4 v3, 0x1
 

@@ -180,7 +180,7 @@
     .line 219
     iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 220
     :cond_1
@@ -317,7 +317,7 @@
     .line 234
     iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 235
     :cond_1
@@ -455,7 +455,7 @@
     .line 261
     iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 262
     :cond_1
@@ -599,7 +599,7 @@
     .line 277
     iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v1, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v1, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 278
     :cond_1
@@ -699,7 +699,7 @@
     .line 144
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 145
     :cond_1
@@ -800,7 +800,7 @@
     .line 157
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 158
     :cond_1
@@ -900,7 +900,7 @@
     .line 180
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 181
     :cond_1
@@ -1004,7 +1004,7 @@
     .line 194
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 195
     :cond_1
@@ -1099,7 +1099,7 @@
     .line 87
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 88
     :cond_1
@@ -1197,7 +1197,7 @@
     .line 108
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 109
     :cond_1
@@ -1299,7 +1299,7 @@
     .line 122
     iget-object v0, p0, Lcom/sec/android/glview/TwGLText;->mString:Lcom/sec/android/glview/TwGLStringTexture;
 
-    iput-object p0, v0, Lcom/sec/android/glview/TwGLView;->mParent:Lcom/sec/android/glview/TwGLView;
+    iput-object p0, v0, Lcom/sec/android/glview/TwGLStringTexture;->mParent:Lcom/sec/android/glview/TwGLView;
 
     .line 123
     :cond_1
@@ -1388,7 +1388,7 @@
     if-eqz v0, :cond_1
 
     .line 358
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mSizeSpecified:Z
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLText;->mSizeSpecified:Z
 
     if-nez v0, :cond_1
 
@@ -1412,7 +1412,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
@@ -1420,7 +1420,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
@@ -1451,7 +1451,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
@@ -1459,7 +1459,7 @@
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -1654,7 +1654,7 @@
 
     move-result v4
 
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->left:I
 
@@ -1662,7 +1662,7 @@
 
     sub-float/2addr v4, v5
 
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->right:I
 
@@ -1676,7 +1676,7 @@
 
     move-result v4
 
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->top:I
 
@@ -1684,7 +1684,7 @@
 
     sub-float/2addr v4, v5
 
-    iget-object v5, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->bottom:I
 
@@ -1990,7 +1990,7 @@
 
     iget v1, p0, Lcom/sec/android/glview/TwGLText;->mWidth:F
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -1998,7 +1998,7 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
@@ -2008,7 +2008,7 @@
 
     iget v2, p0, Lcom/sec/android/glview/TwGLText;->mHeight:F
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->top:I
 
@@ -2016,7 +2016,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->bottom:I
 
@@ -2086,7 +2086,7 @@
 
     iget v1, p0, Lcom/sec/android/glview/TwGLText;->mWidth:F
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -2094,7 +2094,7 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
@@ -2104,7 +2104,7 @@
 
     iget v2, p0, Lcom/sec/android/glview/TwGLText;->mHeight:F
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->top:I
 
@@ -2112,7 +2112,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLView;->mPaddings:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/sec/android/glview/TwGLText;->mPaddings:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->bottom:I
 

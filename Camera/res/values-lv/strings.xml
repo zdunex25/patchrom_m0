@@ -36,7 +36,7 @@ startēt kameru"</string>
     <string name="SM_SMILE">Smaidīgs foto</string>
     <string name="SM_FRAME">Kadra fotografēšana</string>
     <string name="SM_BEAUTY">Skaistums</string>
-    <string name="SM_VINTAGE">Antīks</string>
+    <string name="SM_VINTAGE">Vīnogu novākšanas laiks</string>
     <string name="SM_ADDME">Pievienot mani</string>
     <string name="SM_ACTION">Kustību fotogr.</string>
     <string name="SM_STOPMOTION">Apturēt kustību</string>
@@ -69,8 +69,6 @@ startēt kameru"</string>
     <string name="E_EMBOSS">Reljefs</string>
     <string name="E_OUTLINE">Kontūra</string>
     <string name="E_WATERCOLOR">Akvarelis</string>
-    <string name="E_MONOCHROME">Vienkrāsains</string>
-    <string name="E_SKETCH">Skice</string>
     <string name="E_WASHED">Izbalējis</string>
     <string name="E_POSTERIZE">Plakāts</string>
     <string name="E_SOLARIZE">Pārgaismot</string>
@@ -81,7 +79,7 @@ startēt kameru"</string>
     <string name="E_POINT_RED_YELLOW">Sarkani-dzeltens punkts</string>
     <string name="E_CARTOONIZE">Komikss</string>
     <string name="F_AUTO_FLASH">Automātiskā zibspuldze</string>
-    <string name="F_AUTOFOCUS">Aut.fokus.</string>
+    <string name="F_AUTOFOCUS">Automātiskā fokusēšana</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Sejas noteikšana</string>
     <string name="F_PANFOCUS">Pan. fok.</string>
@@ -104,7 +102,7 @@ startēt kameru"</string>
     <string name="RM_MMS">Mult. ierob.</string>
     <string name="RM_EMAIL">E-pasta ierobežojums</string>
     <string name="RM_SLOW">Lēna kustība</string>
-    <string name="RM_FAST">Ātri</string>
+    <string name="RM_FAST">Ātra kustība</string>
     <string name="CS_PROGRESS_TEXT">Izveido attēlu. Lūdzu, uzgaidiet...</string>
     <string name="SCN_NONE">Nav</string>
     <string name="SCN_PORTRAIT">Portrets</string>
@@ -133,7 +131,6 @@ startēt kameru"</string>
     <string name="Title_Timer">Taimeris</string>
     <string name="Title_Resolution">Izšķirtspēja</string>
     <string name="Title_ShootAndShare">Foto kop. iestat.</string>
-    <string name="Title_DeviceList">Ierīču saraksts</string>
     <string name="Title_WhiteBalance">Baltā balanss</string>
     <string name="Title_Effects">Efekti</string>
     <string name="Title_Focus">Fokuss</string>
@@ -155,16 +152,15 @@ startēt kameru"</string>
     <string name="Title_AutoContrast">Automātiskais kontrasts</string>
     <string name="Title_GPS">GPS atzīme</string>
     <string name="Title_Review">Pārskatīt</string>
-    <string name="Title_AutoShareShot">Autom. kopīgot uzņēmumu</string>
     <string name="Title_Guideline">Instrukcija</string>
     <string name="Title_VideoQuality">Video kvalitāte</string>
     <string name="Title_AudioRecording">Audio ierak.</string>
     <string name="Title_Storage">Krātuve</string>
-    <string name="Title_Reset">Nodzēst</string>
+    <string name="Title_Reset">Atiestatīt</string>
     <string name="Title_Mode">Režīms</string>
     <string name="Title_Back">Atpakaļ</string>
     <string name="Title_ImageViewer">Attēlu skatītājs</string>
-    <string name="Title_Outdoor_Visibility">Pārskatāmība āra apstākļos</string>
+    <string name="Title_Outdoor_Visibility">Uztveramība āra apst.</string>
     <string name="Title_Flip">Saglabāt kā apvērstu</string>
     <string name="Title_Self_Portrait">Pašportrets</string>
     <string name="Title_Self_Recording">Automāt. ierakstīšana</string>
@@ -178,10 +174,7 @@ startēt kameru"</string>
     <string name="HDR_Helptext">Fotografēšanas laikā centieties nekratīt ierīci</string>
     <string name="help_text_panorama">Nospiediet kameras taustiņu un lēni pārvietojiet tālruni vienā virzienā</string>
     <string name="help_text_panorama_device">Nospiediet kameras taustiņu un lēni pārvietojiet ierīci vienā virzienā</string>
-    <string name="message_DefaultLayout">Īsceļu izkārtojums tiks atiestatīts</string>
     <string name="message_EULA_GPS">Aktivizējot GPS atzīmi, katrā fotoattēlā tiks pievienoti, iegulti un saglabāti ģeogrāfiskās atrašanās vietas dati. Sūtot, kopīgojot, izplatot, pārsūtot vai kopējot šos fotoattēlus, rīkojieties piesardzīgi, jo tajos ir informācija par fotoattēlu uzņemšanas atrašanās vietu</string>
-    <string name="message_Auto_ShareShot">"Automātiskās kopīgošanas uzņēmums ļauj izveidot savienojumu ar ierīcēm, ar kurām vēlaties kopīgot attēlus.
-Aktivizējiet automātiskās kopīgošanas uzņēmumu, pēc tam novietojiet ierīces blakus (saliekot kopā aizmugures), lai izveidotu savienojumu"</string>
     <string name="GPS_msg">GPS ir izslēgts</string>
     <string name="message_enable_GPS">Lai lietotu GPS atzīmi, sadaļā Iestatījumi ieslēdziet GPS</string>
     <string name="cancel">Atcelt</string>
@@ -248,11 +241,9 @@ Aktivizējiet automātiskās kopīgošanas uzņēmumu, pēc tam novietojiet ier�
     <string name="profile_user_default_name">Nezināms</string>
     <string name="shareshot_no_user">Nav nevienas personas, ar ko kopīgot</string>
     <string name="snapshot_saved">%s saglabāts</string>
-    <string name="editable_shortcut_reset">Atiestatīt</string>
     <string name="editable_shortcut_helptext_title">Padomi</string>
     <string name="editable_shortcut_helptext_message">Lai rediģētu īsceļus, pieskarieties tiem un turiet</string>
     <string name="editable_shortcut_helptext">Pieskarieties ikonai un turiet, pēc tam velciet, lai rediģētu īsceļu novietojumu</string>
-    <string name="sbeam_helptext">Fotografējiet un kopīgojiet fotoattēlus ar citām ierīcēm. Novietojiet ierīces blakus, lai pievienotu ierīces, ar kurām vēlaties kopīgot saturu, izmantojot S Beam</string>
     <string name="storage_setting_dialog_title">Krātuves atrašanās vieta</string>
     <string name="storage_setting_dialog_message">Ievietota SD karte. Vai mainīt krātuves atrašanās vietu uz SD karti?</string>
     <string name="do_not_ask_again">Nerādīt vēlreiz</string>
@@ -261,8 +252,6 @@ Aktivizējiet automātiskās kopīgošanas uzņēmumu, pēc tam novietojiet ier�
     <string name="bestpic">Labākais fotoattēls</string>
     <string name="bestpic_on">Ies</string>
     <string name="bestpic_off">Izs</string>
-    <string name="bestgroup">Jauns grupas izkārtojums</string>
-    <string name="bestgroup_title">Izv. skaist. sejas, lai sagl.</string>
     <string name="battery_low">Aizveriet kameru. Akumulatora temperatūra ir par zemu</string>
     <string name="buddy_photo_share_helptext">Fotografējiet un kopīgojiet fotoattēlus ar draugiem, izmantojot sejas noteikšanas funkciju</string>
     <string name="face_zoom_helptext">Veiciet divkāršo pieskārienu sejai, lai tuvinātu vai tālinātu</string>
@@ -272,7 +261,6 @@ Aktivizējiet automātiskās kopīgošanas uzņēmumu, pēc tam novietojiet ier�
     <string name="on_device_help_camcorder">Pārslēdzieties uz videokameras režīmu</string>
     <string name="on_device_help_self">Pārslēdziet uz pašportreta režīmu</string>
     <string name="on_device_help_editable">Pieskarieties īsceļam, kuru vēlaties pārvietot, un turiet to. Pēc tam velciet to uz vajadzīgo vietu</string>
-    <string name="on_device_help_voicecommand">Lai uzņemtu fotoattēlus, izmantojiet balss komandas Tvert, Fotografēt, Smaidīt un Smieties</string>
     <string name="Title_VideoSpeed">Ātrums</string>
     <string name="SPEED_OFF">Parasts</string>
     <string name="SPEED_2X_FASTER">2x ātrāk</string>
@@ -294,7 +282,4 @@ Aktivizējiet automātiskās kopīgošanas uzņēmumu, pēc tam novietojiet ier�
     <string name="self_recording_open_warning_popup">Sevi ierakstīt var tikai tad, ja tālrunis ir atvērts</string>
     <string name="contextual_filename">Kontekstuāls faila nosaukums</string>
     <string name="enable_gps_dialog">Ir jāaktivizē GPS atzīme. Vai aktivizēt GPS atzīmi?</string>
-    <string name="gallery_disable">Galerija ir deaktivizēta</string>
-    <string name="HDR_Normal">Parasti</string>
-    <string name="HDR_Strong">Spēcīgs</string>
 </resources>

@@ -30,7 +30,7 @@
     .line 89
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
     .line 95
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;
 
-    #getter for: Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->access$000(Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;)Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     move-result-object v0
@@ -57,7 +57,7 @@
     .line 96
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;
 
-    #getter for: Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;->access$100(Lcom/sec/android/app/camera/glwidget/TwGLPostViewShrink;)Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     move-result-object v0

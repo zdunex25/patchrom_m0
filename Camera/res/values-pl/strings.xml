@@ -36,7 +36,7 @@ nie można uruchomić aparatu"</string>
     <string name="SM_SMILE">Uśmiech</string>
     <string name="SM_FRAME">Zdjęcie z ramką</string>
     <string name="SM_BEAUTY">Upiększanie</string>
-    <string name="SM_VINTAGE">Winietowanie</string>
+    <string name="SM_VINTAGE">Rocznik i pochodzenie</string>
     <string name="SM_ADDME">Dwie połowy</string>
     <string name="SM_ACTION">Zdjęcie akcji</string>
     <string name="SM_STOPMOTION">Zatrzymaj ruch</string>
@@ -69,8 +69,6 @@ nie można uruchomić aparatu"</string>
     <string name="E_EMBOSS">Wytłoczenie</string>
     <string name="E_OUTLINE">Kontur</string>
     <string name="E_WATERCOLOR">Akwarela</string>
-    <string name="E_MONOCHROME">Monochromatyczny</string>
-    <string name="E_SKETCH">Szkic</string>
     <string name="E_WASHED">Rozmycie</string>
     <string name="E_POSTERIZE">Posteryzacja</string>
     <string name="E_SOLARIZE">Solaryzacja</string>
@@ -81,7 +79,7 @@ nie można uruchomić aparatu"</string>
     <string name="E_POINT_RED_YELLOW">Punkt czerwono-żółty</string>
     <string name="E_CARTOONIZE">Kreskówka</string>
     <string name="F_AUTO_FLASH">Automatyczny flesz</string>
-    <string name="F_AUTOFOCUS">Auto Focus</string>
+    <string name="F_AUTOFOCUS">Wł.</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Detekcja twarzy</string>
     <string name="F_PANFOCUS">Wył.</string>
@@ -93,7 +91,8 @@ nie można uruchomić aparatu"</string>
     <string name="SS_SOUND3">Dźwięk3</string>
     <string name="SS_SOUND2">Dźwięk2</string>
     <string name="SS_SOUND1">Dźwięk1</string>
-    <string name="M_CENTER">Centralnie-ważony</string>
+    <string name="M_CENTER">"Centralnie-
+ważony"</string>
     <string name="M_CENTER_WEIGHTED">Centralnie-ważony</string>
     <string name="M_SPOT">Punktowy</string>
     <string name="M_MATRIX">Matrycowy</string>
@@ -133,7 +132,6 @@ nie można uruchomić aparatu"</string>
     <string name="Title_Timer">Samowyzwalacz</string>
     <string name="Title_Resolution">Rozdzielczość</string>
     <string name="Title_ShootAndShare">Ust. udost. zdjęć</string>
-    <string name="Title_DeviceList">Lista urządzeń</string>
     <string name="Title_WhiteBalance">Balans bieli</string>
     <string name="Title_Effects">Efekty</string>
     <string name="Title_Focus">Auto Focus</string>
@@ -155,16 +153,15 @@ nie można uruchomić aparatu"</string>
     <string name="Title_AutoContrast">Kontrast automatyczny</string>
     <string name="Title_GPS">Etykieta GPS</string>
     <string name="Title_Review">Podgląd zdjęcia</string>
-    <string name="Title_AutoShareShot">Autom. udost. zdjęć</string>
     <string name="Title_Guideline">Linie pomocnicze</string>
     <string name="Title_VideoQuality">Jakość wideo</string>
     <string name="Title_AudioRecording">Nagryw. z dźw.</string>
-    <string name="Title_Storage">Pamięć</string>
-    <string name="Title_Reset">Ust.fabryczne</string>
+    <string name="Title_Storage">Domyślna pamięć</string>
+    <string name="Title_Reset">Ust. fabryczne</string>
     <string name="Title_Mode">Tryb</string>
     <string name="Title_Back">Wstecz</string>
     <string name="Title_ImageViewer">Przeglądarka obrazów</string>
-    <string name="Title_Outdoor_Visibility">Ekstra jasność wyśw.</string>
+    <string name="Title_Outdoor_Visibility">Widoczność na zewnątrz</string>
     <string name="Title_Flip">Zapisz odwrócony</string>
     <string name="Title_Self_Portrait">Autoportret</string>
     <string name="Title_Self_Recording">Samoczynne nagrywanie</string>
@@ -178,10 +175,7 @@ nie można uruchomić aparatu"</string>
     <string name="HDR_Helptext">Uważaj, aby nie trząść urządzeniem podczas robienia zdjęć</string>
     <string name="help_text_panorama">Naciśnij klawisz aparatu i powoli przesuń telefon w jednym kierunku</string>
     <string name="help_text_panorama_device">Naciśnij klawisz aparatu i powoli przesuń urządzenie w jednym kierunku</string>
-    <string name="message_DefaultLayout">Układ skrótów zostanie wyzerowany</string>
     <string name="message_EULA_GPS">Włączenie etykiety GPS spowoduje dołączanie, osadzanie i zapisywanie lokalizacji geograficznej w każdym zdjęciu. Zachowaj rozwagę przy wysyłaniu, udostępnianiu, dystrybuowaniu, przesyłaniu i kopiowaniu tych zdjęć, ponieważ zawierają one informację o miejscu, w którym zostały zrobione</string>
-    <string name="message_Auto_ShareShot">"Automatyczne udostępnianie zdjęć umożliwia łatwe łączenie się z urządzeniami, którym chcesz udostępniać zdjęcia.
-Włącz automatyczne udostępnianie zdjęć, a następnie zbliż urządzenia do siebie (zazwyczaj ich tylne strony), aby je połączyć"</string>
     <string name="GPS_msg">GPS wyłączony</string>
     <string name="message_enable_GPS">Aby użyć etykiety GPS, włącz GPS w ustawieniach</string>
     <string name="cancel">Anuluj</string>
@@ -248,11 +242,9 @@ Włącz automatyczne udostępnianie zdjęć, a następnie zbliż urządzenia do 
     <string name="profile_user_default_name">Nieznany</string>
     <string name="shareshot_no_user">Brak osób do udostępnienia</string>
     <string name="snapshot_saved">Zapisano %s</string>
-    <string name="editable_shortcut_reset">Zeruj</string>
     <string name="editable_shortcut_helptext_title">Wskazówki</string>
     <string name="editable_shortcut_helptext_message">Dotknij skrótów i przytrzymaj je, aby je edytować</string>
     <string name="editable_shortcut_helptext">Aby zmieniać położenie skrótów, dotknij ikony, przytrzymaj ją, a następnie przeciągnij</string>
-    <string name="sbeam_helptext">Rób zdjęcia i udostępniaj je innym urządzeniom. Zbierz urządzenia razem, aby dodać te, którym chcesz udostępniać przez S Beam</string>
     <string name="storage_setting_dialog_title">Położenie pamięci</string>
     <string name="storage_setting_dialog_message">Włożono kartę pamięci. Zmienić lokalizację pamięci na kartę pamięci?</string>
     <string name="do_not_ask_again">Nie wyświetlaj ponownie</string>
@@ -261,8 +253,6 @@ Włącz automatyczne udostępnianie zdjęć, a następnie zbliż urządzenia do 
     <string name="bestpic">Najlepsze zdjęcie</string>
     <string name="bestpic_on">Wł</string>
     <string name="bestpic_off">Wył</string>
-    <string name="bestgroup">Wybór najlepszej pozy</string>
-    <string name="bestgroup_title">Wyb. najl. wyraz tw. do zapis.</string>
     <string name="battery_low">Zamknij aplikację Aparat. Temperatura baterii jest za niska</string>
     <string name="buddy_photo_share_helptext">Rób zdjęcia i udostępniaj je przyjaciołom dzięki funkcji wykrywania twarzy</string>
     <string name="face_zoom_helptext">Dotknij dwukrotnie twarzy, aby powiększyć lub zmniejszyć</string>
@@ -272,7 +262,6 @@ Włącz automatyczne udostępnianie zdjęć, a następnie zbliż urządzenia do 
     <string name="on_device_help_camcorder">Przełącz do trybu kamery</string>
     <string name="on_device_help_self">Przełącz do trybu Autoportret</string>
     <string name="on_device_help_editable">Dotknij i przytrzymaj skrót, który chcesz przesunąć. Następnie, przeciągnij go w żądane miejsce</string>
-    <string name="on_device_help_voicecommand">"Możesz robić zdjęcia za pomocą poleceń głosowych, takich jak 'Przechwyć', 'Zdjęcie', 'Uśmiech' czy 'Uśmiech!'"</string>
     <string name="Title_VideoSpeed">Szybkość</string>
     <string name="SPEED_OFF">Normalna</string>
     <string name="SPEED_2X_FASTER">2x szybciej</string>
@@ -294,7 +283,4 @@ Włącz automatyczne udostępnianie zdjęć, a następnie zbliż urządzenia do 
     <string name="self_recording_open_warning_popup">Samoczynnego nagrywania można używać tylko przy otwartym telefonie</string>
     <string name="contextual_filename">Kontekstowa nazwa pliku</string>
     <string name="enable_gps_dialog">Etykieta GPS musi być włączona. Włączyć etykietę GPS?</string>
-    <string name="gallery_disable">Galeria jest wyłączona</string>
-    <string name="HDR_Normal">Normalna</string>
-    <string name="HDR_Strong">Bardzo dobra</string>
 </resources>

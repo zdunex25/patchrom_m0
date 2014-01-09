@@ -68,7 +68,7 @@
     const/4 v0, -0x1
 
     .line 49
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 50
     iput v0, p0, Lcom/samsung/dmc/ux/db/UserInfo;->userID:I
@@ -105,7 +105,7 @@
 
     .prologue
     .line 56
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     iput p1, p0, Lcom/samsung/dmc/ux/db/UserInfo;->userID:I
@@ -152,7 +152,7 @@
 
     .prologue
     .line 70
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 72
     new-instance v0, Lcom/samsung/dmc/ux/db/PersonalSettingInfo;

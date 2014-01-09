@@ -59,7 +59,7 @@
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/EditUserName;->setContentView(I)V
 
     .line 28
-    const v1, 0x7f0b0011
+    const v1, 0x7f0b0017
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/EditUserName;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
 
     .line 55
     :cond_0
-    const v1, 0x7f090114
+    const v1, 0x7f090112
 
     invoke-static {p0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

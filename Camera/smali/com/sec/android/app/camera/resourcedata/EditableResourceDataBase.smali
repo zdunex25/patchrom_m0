@@ -35,18 +35,18 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 128
     invoke-virtual {p0}, Lcom/sec/android/app/camera/resourcedata/EditableResourceDataBase;->saveOrder()V
 
-    .line 125
+    .line 129
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/resourcedata/EditableResourceDataBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 126
+    .line 130
     invoke-super {p0}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->cleanUpResources()V
 
-    .line 127
+    .line 131
     return-void
 .end method
 
@@ -54,14 +54,14 @@
     .locals 5
 
     .prologue
-    .line 112
+    .line 116
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 113
+    .line 117
     .local v2, orderString:Ljava/lang/StringBuilder;
-    iget-object v3, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/sec/android/app/camera/resourcedata/EditableResourceDataBase;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -81,7 +81,7 @@
 
     check-cast v0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
-    .line 114
+    .line 118
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -113,7 +113,7 @@
 
     goto :goto_0
 
-    .line 116
+    .line 120
     .end local v0           #bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -129,7 +129,7 @@
 
     .prologue
     .line 43
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/EditableResourceDataBase;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
@@ -192,11 +192,11 @@
 
     .line 64
     :cond_1
-    const/16 v4, 0xbd7
+    const/16 v4, 0xbcb
 
     if-eq v1, v4, :cond_0
 
-    .line 92
+    .line 96
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v4
@@ -209,12 +209,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 93
+    .line 97
     const/16 v4, 0x14
 
     if-eq v1, v4, :cond_0
 
-    .line 96
+    .line 100
     :cond_2
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -228,18 +228,13 @@
 
     if-eqz v4, :cond_3
 
-    .line 97
+    .line 101
     const/16 v4, 0x15
 
     if-eq v1, v4, :cond_0
 
-    .line 101
+    .line 109
     :cond_3
-    const/16 v4, 0xbdc
-
-    if-eq v1, v4, :cond_0
-
-    .line 105
     new-instance v0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     const/4 v4, 0x5
@@ -276,15 +271,15 @@
 
     invoke-direct {v0, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 107
+    .line 111
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/EditableResourceDataBase;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 109
+    .line 113
     .end local v0           #bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     .end local v1           #commandId:I
     .end local v2           #resIDs:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
@@ -296,6 +291,6 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 124
     return-void
 .end method

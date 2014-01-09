@@ -33,7 +33,7 @@
     <string name="SM_SMILE">Tabassumli kadr</string>
     <string name="SM_FRAME">Ramkali kadr</string>
     <string name="SM_BEAUTY">Go‘zallik</string>
-    <string name="SM_VINTAGE">Vintaj</string>
+    <string name="SM_VINTAGE">Vino sorti</string>
     <string name="SM_ADDME">Meni qo‘shish</string>
     <string name="SM_ACTION">Harakat kadri</string>
     <string name="SM_STOPMOTION">Harakatni to‘xtat.</string>
@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">"Bo'rttirish"</string>
     <string name="E_OUTLINE">Kontur</string>
     <string name="E_WATERCOLOR">Akvarel</string>
-    <string name="E_MONOCHROME">Monoxrom</string>
-    <string name="E_SKETCH">Eskiz</string>
     <string name="E_WASHED">Xiralashgan</string>
     <string name="E_POSTERIZE">Sifatini pasaytirish</string>
     <string name="E_SOLARIZE">Solarise</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">Qizil-sariq nuqta</string>
     <string name="E_CARTOONIZE">Multipl-siya</string>
     <string name="F_AUTO_FLASH">Avto-flesh</string>
-    <string name="F_AUTOFOCUS">Avtomatik fokus</string>
+    <string name="F_AUTOFOCUS">Fokusni avtomatik to‘g‘rilash</string>
     <string name="F_MACRO">Makros</string>
     <string name="F_FACE">Yuzni aniqlash</string>
     <string name="F_PANFOCUS">Panor. fokusi</string>
@@ -110,12 +108,12 @@
     <string name="SCN_PARTY_INDOOR">Bazm/Bino ichi</string>
     <string name="SCN_BEACH_SNOW">Sohil/Qor</string>
     <string name="SCN_SUNSET">Kun botishi</string>
-    <string name="SCN_DAWN_DUSK">Tong</string>
+    <string name="SCN_DAWN_DUSK">Tong otishi</string>
     <string name="SCN_FALL_COLOR">Kuz rangi</string>
     <string name="SCN_NIGHT_SHOT">Tun</string>
     <string name="SCN_FIREWORK">Mushakbozlik</string>
     <string name="SCN_TEXT">Matn</string>
-    <string name="SCN_CANDLE_LIGHT">Candlelight</string>
+    <string name="SCN_CANDLE_LIGHT">G‘ira-shira</string>
     <string name="SCN_BACK_LIGHT">Fon chirog‘i</string>
     <string name="OPTION_ON">Yoq.</string>
     <string name="OPTION_OFF">O‘ch.</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">Taymer</string>
     <string name="Title_Resolution">Rezolyutsiya</string>
     <string name="Title_ShootAndShare">Kadr bah/k. param.</string>
-    <string name="Title_DeviceList">Qurilmalar ro‘yxati</string>
     <string name="Title_WhiteBalance">Oq balans</string>
     <string name="Title_Effects">Effektlar</string>
     <string name="Title_Focus">Fokus</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">Avto-kontrast</string>
     <string name="Title_GPS">GPS tegi</string>
     <string name="Title_Review">Ko‘rib chiqish</string>
-    <string name="Title_AutoShareShot">Kadrni avto baham ko‘rish</string>
     <string name="Title_Guideline">Yo‘riqnomalar</string>
     <string name="Title_VideoQuality">Video sifati</string>
     <string name="Title_AudioRecording">Audio yozish</string>
@@ -161,7 +157,7 @@
     <string name="Title_Mode">Rejim</string>
     <string name="Title_Back">Orqaga</string>
     <string name="Title_ImageViewer">Rasmni ko‘rib chiqish vositasi</string>
-    <string name="Title_Outdoor_Visibility">Tashqarida ko‘rish qobiliyati</string>
+    <string name="Title_Outdoor_Visibility">Tashqarida ko‘rish qobil.</string>
     <string name="Title_Flip">Teskari holatda saqlash</string>
     <string name="Title_Self_Portrait">Avtoportret</string>
     <string name="Title_Self_Recording">O‘zini yozish</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">Rasmga olayotganda qurilmani qimirlatmang</string>
     <string name="help_text_panorama">Kamera tugmasini bosing va telefonni sekin-asta bir yo‘nalishda harakatlantiring</string>
     <string name="help_text_panorama_device">Kamera tugmasini bosing va qurilmani bir yo‘nalishda sekin-asta harakatlantiring</string>
-    <string name="message_DefaultLayout">Yorliq joylashuvi birlamchiga qaytariladi</string>
     <string name="message_EULA_GPS">GPS tegini yoqish har bir fotosuratga geografik joylashuv haqidagi ma’lumotni biriktiradi, bog‘laydi va saqlaydi. Ushbu fotosuratlarni yuborish, ulashish, tarqatish, uzatish yoki ulardan nusxa ko‘chirish vaqtida ehtiyot bo‘ling, chunki ularda rasm olingan joy aks ettirilgan</string>
-    <string name="message_Auto_ShareShot">"Kadrni avtomatik baham ko‘rish Sizga rasmlarni baham ko‘rmoqchi bo‘lgan qurilmalarga osongina ulanish imkonini yaratadi.
-Kadrni avtomatik baham ko‘rishni yoqing, undan so‘ng qurilmalarni ulash uchun, ularni bir-biriga yaqin keltiring (odatda orqasini orqasiga) va undan so‘ng ekranni cherting"</string>
     <string name="GPS_msg">GPS o‘ch.</string>
     <string name="message_enable_GPS">GPS tegidan foydalanish uchun, Parametrlarda GPSni yoqing</string>
     <string name="cancel">Bekor q.</string>
@@ -244,11 +237,9 @@ Kadrni avtomatik baham ko‘rishni yoqing, undan so‘ng qurilmalarni ulash uchu
     <string name="profile_user_default_name">Noma’lum</string>
     <string name="shareshot_no_user">Ulashiladigan foydalanuvchilar yo‘q</string>
     <string name="snapshot_saved">%s saqlandi</string>
-    <string name="editable_shortcut_reset">"Qay. o'r."</string>
     <string name="editable_shortcut_helptext_title">Maslahat</string>
     <string name="editable_shortcut_helptext_message">Yorliqlarni tahririlash uchun ularni bosib turing</string>
     <string name="editable_shortcut_helptext">Ikonchani bosib turing va undan so‘ng yorliqlar joylashuvini tahrirlash uchun uni tortib o‘tkazing</string>
-    <string name="sbeam_helptext">Rasmga oling va ularni boshqalar bilan ulashing. S Beam orqali ulashmoqchi bo‘lgan qurilmalarni qo‘shish uchun ularni bir-biriga tekkizing</string>
     <string name="storage_setting_dialog_title">Ombor joylashuvi</string>
     <string name="storage_setting_dialog_message">SD-karta kiritildi. Ombor joylashuvi SD-kartaga o‘zgartirilsinmi?</string>
     <string name="do_not_ask_again">Boshqa ko‘rsatilmasin</string>
@@ -257,8 +248,6 @@ Kadrni avtomatik baham ko‘rishni yoqing, undan so‘ng qurilmalarni ulash uchu
     <string name="bestpic">Eng yaxshi foto</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">Eng yaxshi guruh ko‘rin.</string>
-    <string name="bestgroup_title">Yaxshi yuzni saqlash u-n tanla</string>
     <string name="battery_low">Kamerani yopish. Batareya harorati juda past</string>
     <string name="buddy_photo_share_helptext">Yuzni aniqlash orqali rasmga oling va do‘stlaringiz bilan ulashing</string>
     <string name="face_zoom_helptext">Kattalashtirish yoki kichraytirish uchun yuzni ikki marta cherting</string>
@@ -268,7 +257,6 @@ Kadrni avtomatik baham ko‘rishni yoqing, undan so‘ng qurilmalarni ulash uchu
     <string name="on_device_help_camcorder">Kamkorder rejimiga o‘tish</string>
     <string name="on_device_help_self">Avto-portret rejimiga o‘tish</string>
     <string name="on_device_help_editable">Ko‘chirmoqchi bo‘lgan ilovani bosib turing. So‘ngra uni o‘zingiz istagan joyga tortib o‘tkazing</string>
-    <string name="on_device_help_voicecommand">Siz \"Rasmga ol\", \"Kadr\", \"Kuling\" va \"Tabassum\" kabi ovozli buyruqlar yordamida rasmga olishingiz mumkin</string>
     <string name="Title_VideoSpeed">Tezlik</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2x tezroq</string>
@@ -290,7 +278,4 @@ Kadrni avtomatik baham ko‘rishni yoqing, undan so‘ng qurilmalarni ulash uchu
     <string name="self_recording_open_warning_popup">Telefon ochilgandagina o‘zini-o‘zi videoga olishdan foydalanish mumkin</string>
     <string name="contextual_filename">Kontekst fayl nomi</string>
     <string name="enable_gps_dialog">GPS tegi yoqilishi lozim. GPS tegi yoqilsinmi?</string>
-    <string name="gallery_disable">Galereya o‘chirildi</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Kuchli</string>
 </resources>

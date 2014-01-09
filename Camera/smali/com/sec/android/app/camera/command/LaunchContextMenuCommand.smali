@@ -97,7 +97,7 @@
 
     iget-object v5, p0, Lcom/sec/android/app/camera/command/LaunchContextMenuCommand;->mMenuDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
-    iget v6, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v6, p0, Lcom/sec/android/app/camera/command/LaunchContextMenuCommand;->mZOrder:I
 
     iget v7, p0, Lcom/sec/android/app/camera/command/LaunchContextMenuCommand;->mSlideDirection:I
 
@@ -123,7 +123,7 @@
 
     .line 61
     :cond_0
-    iget v1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iget v1, p0, Lcom/sec/android/app/camera/command/LaunchContextMenuCommand;->mZOrder:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/MenuBase;->setZorder(I)V
 
@@ -168,7 +168,7 @@
 
     .prologue
     .line 47
-    iput p1, p0, Lcom/sec/android/app/camera/command/MenuCommand;->mZOrder:I
+    iput p1, p0, Lcom/sec/android/app/camera/command/LaunchContextMenuCommand;->mZOrder:I
 
     .line 48
     return-void

@@ -30,7 +30,7 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 105
+    .line 102
     const v4, 0x7f0900af
 
     invoke-direct {p0, v7, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;-><init>(II)V
@@ -42,13 +42,13 @@
 
     iput-object v4, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    .line 107
+    .line 104
     iput-object p1, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 109
+    .line 106
     invoke-direct {p0}, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->initCommandIdList()V
 
-    .line 111
+    .line 108
     iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -73,7 +73,7 @@
 
     move-result v1
 
-    .line 112
+    .line 109
     .local v1, commandId:I
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getMenuResourceDepot()Lcom/sec/android/app/camera/MenuResourceDepot;
 
@@ -85,11 +85,11 @@
 
     move-result-object v3
 
-    .line 113
+    .line 110
     .local v3, resIDs:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     if-nez v3, :cond_0
 
-    .line 114
+    .line 111
     const-string v4, "FrontCameraShootingModeResourceData"
 
     const-string v5, "Cannot find resource ID"
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 118
+    .line 115
     :cond_0
     new-instance v0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
@@ -134,15 +134,15 @@
 
     invoke-direct {v0, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 120
+    .line 117
     .local v0, bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 122
+    .line 119
     .end local v0           #bundle:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     .end local v1           #commandId:I
     .end local v3           #resIDs:Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
@@ -165,7 +165,29 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 56
+    .line 60
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x12f
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 64
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
+
+    const/16 v1, 0x133
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 91
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
@@ -176,7 +198,7 @@
 
     if-nez v0, :cond_0
 
-    .line 57
+    .line 92
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x13b
@@ -187,7 +209,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 65
+    .line 96
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
@@ -199,7 +221,7 @@
 
     if-nez v0, :cond_1
 
-    .line 66
+    .line 97
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0x13d
@@ -210,41 +232,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 70
+    .line 99
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x133
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 74
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x12f
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 100
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
-
-    const/16 v1, 0x139
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 102
     return-void
 .end method
 
@@ -254,16 +243,16 @@
     .locals 1
 
     .prologue
-    .line 126
-    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->mMenuResource:Ljava/util/ArrayList;
+    .line 123
+    iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 127
+    .line 124
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/FrontCameraShootingModeResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 128
+    .line 125
     return-void
 .end method

@@ -1394,7 +1394,7 @@
     .line 464
     :cond_1
     :try_start_1
-    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
+    iget-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mLayoutUpdated:Z
 
     if-eqz v0, :cond_5
 
@@ -1433,7 +1433,7 @@
     .line 472
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
+    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mLayoutUpdated:Z
 
     .line 481
     :cond_3
@@ -1604,7 +1604,7 @@
     .line 219
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLView;->mLayoutUpdated:Z
+    iput-boolean v0, p0, Lcom/sec/android/glview/TwGLTexture;->mLayoutUpdated:Z
 
     .line 220
     return-void
@@ -1626,7 +1626,7 @@
     iput-object p1, p0, Lcom/sec/android/glview/TwGLTexture;->mGL:Ljavax/microedition/khronos/opengles/GL11;
 
     .line 259
-    iget-boolean v6, p0, Lcom/sec/android/glview/TwGLView;->mAsyncLoad:Z
+    iget-boolean v6, p0, Lcom/sec/android/glview/TwGLTexture;->mAsyncLoad:Z
 
     if-eqz v6, :cond_2
 

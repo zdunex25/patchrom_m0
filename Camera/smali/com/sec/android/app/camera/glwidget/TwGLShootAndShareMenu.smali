@@ -39,8 +39,6 @@
 
 .field private mUserCount:I
 
-.field newFragment:Landroid/app/DialogFragment;
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -57,8 +55,8 @@
 
     const/4 v2, 0x0
 
-    .line 46
-    const v0, 0x7f060259
+    .line 44
+    const v0, 0x7f060239
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -68,8 +66,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->ShareShot_Button_BUTTON_WIDTH:I
 
-    .line 47
-    const v0, 0x7f06025a
+    .line 45
+    const v0, 0x7f06023a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -79,8 +77,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->ShareShot_Button_BUTTON_HEIGHT:I
 
-    .line 48
-    const v0, 0x7f060263
+    .line 46
+    const v0, 0x7f060243
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -90,8 +88,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->ShareShot_Count_TEXT_WIDTH:I
 
-    .line 49
-    const v0, 0x7f060264
+    .line 47
+    const v0, 0x7f060244
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -101,8 +99,8 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->ShareShot_Count_TEXT_HEIGHT:I
 
-    .line 50
-    const v0, 0x7f060265
+    .line 48
+    const v0, 0x7f060245
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -112,10 +110,10 @@
 
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->ShareShot_Count_TEXT_SIZE:I
 
-    .line 52
+    .line 50
     new-array v0, v6, [I
 
-    const v1, 0x7f06025b
+    const v1, 0x7f06023b
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -125,7 +123,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f06025c
+    const v1, 0x7f06023c
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -135,7 +133,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f06025d
+    const v1, 0x7f06023d
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -145,7 +143,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f06025e
+    const v1, 0x7f06023e
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -157,10 +155,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_BUTTON_ICON_POS_X:[I
 
-    .line 59
+    .line 57
     new-array v0, v6, [I
 
-    const v1, 0x7f06025f
+    const v1, 0x7f06023f
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -170,7 +168,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f060260
+    const v1, 0x7f060240
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -180,7 +178,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f060261
+    const v1, 0x7f060241
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -190,7 +188,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f060262
+    const v1, 0x7f060242
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -202,10 +200,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_BUTTON_ICON_POS_Y:[I
 
-    .line 66
+    .line 64
     new-array v0, v6, [I
 
-    const v1, 0x7f060266
+    const v1, 0x7f060246
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -215,7 +213,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f060267
+    const v1, 0x7f060247
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -225,7 +223,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f060268
+    const v1, 0x7f060248
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -235,7 +233,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f060269
+    const v1, 0x7f060249
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -247,10 +245,10 @@
 
     sput-object v0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_COUNT_TEXT_POS_X:[I
 
-    .line 73
+    .line 71
     new-array v0, v6, [I
 
-    const v1, 0x7f06026a
+    const v1, 0x7f06024a
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -260,7 +258,7 @@
 
     aput v1, v0, v2
 
-    const v1, 0x7f06026b
+    const v1, 0x7f06024b
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -270,7 +268,7 @@
 
     aput v1, v0, v3
 
-    const v1, 0x7f06026c
+    const v1, 0x7f06024c
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -280,7 +278,7 @@
 
     aput v1, v0, v4
 
-    const v1, 0x7f06026d
+    const v1, 0x7f06024d
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -303,7 +301,7 @@
     .parameter "menuResourceDepot"
 
     .prologue
-    .line 82
+    .line 89
     const/4 v5, 0x5
 
     const/4 v6, 0x1
@@ -320,24 +318,17 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/sec/android/app/camera/MenuBase;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;ILcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;IZ)V
 
-    .line 42
+    .line 41
     const-string v0, "0"
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->DefaultCount:Ljava/lang/String;
 
-    .line 43
+    .line 42
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mUserCount:I
 
-    .line 83
-    new-instance v0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
-
-    invoke-direct {v0}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;-><init>()V
-
-    iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->newFragment:Landroid/app/DialogFragment;
-
-    .line 85
+    .line 91
     new-instance v0, Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -368,11 +359,11 @@
 
     int-to-float v5, v5
 
-    const v6, 0x7f02021c
+    const v6, 0x7f020209
 
-    const v7, 0x7f02021d
+    const v7, 0x7f02020a
 
-    const v8, 0x7f02021d
+    const v8, 0x7f02020a
 
     const/4 v9, 0x0
 
@@ -380,7 +371,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 91
+    .line 97
     new-instance v0, Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getGLContext()Lcom/sec/android/glview/TwGLContext;
@@ -421,14 +412,14 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
-    .line 96
+    .line 102
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
-    const v1, 0x7f02021e
+    const v1, 0x7f02020b
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setBackground(I)Z
 
-    .line 97
+    .line 103
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x2
@@ -437,69 +428,64 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLText;->setAlign(II)V
 
-    .line 99
+    .line 105
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->setCaptureEnabled(Z)V
 
-    .line 100
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->setTouchHandled(Z)V
-
-    .line 101
+    .line 106
     invoke-direct {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->init()V
 
-    .line 103
+    .line 108
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setRotatable(Z)V
 
-    .line 104
+    .line 109
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setRotatable(Z)V
 
-    .line 105
+    .line 110
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 106
+    .line 111
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
 
-    .line 108
+    .line 113
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     if-eqz v0, :cond_0
 
-    .line 109
+    .line 114
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 111
+    .line 116
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 112
+    .line 117
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     invoke-virtual {p3, v0}, Lcom/sec/android/glview/TwGLViewGroup;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 113
+    .line 118
     return-void
 .end method
 
@@ -513,7 +499,7 @@
 
     const/4 v3, 0x1
 
-    .line 116
+    .line 121
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_BUTTON_ICON_POS_X:[I
@@ -530,7 +516,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 117
+    .line 122
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_BUTTON_ICON_POS_X:[I
@@ -547,7 +533,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 118
+    .line 123
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_BUTTON_ICON_POS_X:[I
@@ -564,7 +550,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLButton;->setLeftTop(IFF)V
 
-    .line 120
+    .line 125
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_COUNT_TEXT_POS_X:[I
@@ -581,7 +567,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 121
+    .line 126
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_COUNT_TEXT_POS_X:[I
@@ -598,7 +584,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 122
+    .line 127
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
     sget-object v1, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->SHARESHOT_COUNT_TEXT_POS_X:[I
@@ -615,7 +601,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/sec/android/glview/TwGLText;->setLeftTop(IFF)V
 
-    .line 123
+    .line 128
     return-void
 .end method
 
@@ -627,24 +613,56 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 174
+    .line 132
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 133
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
 
-    .line 176
+    .line 134
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
-    .line 178
+    .line 136
     :cond_0
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->clear()V
 
-    .line 179
+    .line 137
+    return-void
+.end method
+
+.method public hideCaptureLayout()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x4
+
+    .line 164
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
+
+    if-eqz v0, :cond_0
+
+    .line 165
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
+
+    .line 166
+    :cond_0
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
+
+    if-eqz v0, :cond_1
+
+    .line 167
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
+
+    .line 168
+    :cond_1
     return-void
 .end method
 
@@ -652,12 +670,12 @@
     .locals 1
 
     .prologue
-    .line 126
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 140
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
-    .line 127
+    .line 141
     return-void
 .end method
 
@@ -668,27 +686,31 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 190
-    iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mUserCount:I
+    .line 179
+    iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mUserCount:I
 
-    if-ge v0, v3, :cond_0
+    if-ge v1, v3, :cond_0
 
-    .line 191
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 180
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    check-cast v0, Lcom/sec/android/app/camera/Camera;
+    check-cast v1, Lcom/sec/android/app/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->showWifiConnectionDialog()V
+    invoke-virtual {v1}, Lcom/sec/android/app/camera/Camera;->showWifiConnectionDialog()V
 
-    .line 195
+    .line 185
     :goto_0
     return v3
 
-    .line 193
+    .line 182
     :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->newFragment:Landroid/app/DialogFragment;
+    new-instance v0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    iget-object v1, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    invoke-direct {v0}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;-><init>()V
+
+    .line 183
+    .local v0, newFragment:Landroid/app/DialogFragment;
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/AbstractCameraActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -702,88 +724,70 @@
 .end method
 
 .method public onHide()V
-    .locals 2
+    .locals 0
 
     .prologue
-    const/4 v1, 0x4
+    .line 148
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->hideCaptureLayout()V
 
-    .line 136
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
-
-    if-eqz v0, :cond_0
-
-    .line 137
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
-
-    .line 138
-    :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
-
-    if-eqz v0, :cond_1
-
-    .line 139
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
-
-    .line 140
-    :cond_1
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 1
-
-    .prologue
-    .line 183
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->newFragment:Landroid/app/DialogFragment;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->newFragment:Landroid/app/DialogFragment;
-
-    invoke-virtual {v0}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 184
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->newFragment:Landroid/app/DialogFragment;
-
-    invoke-virtual {v0}, Landroid/app/DialogFragment;->dismiss()V
-
-    .line 185
-    :cond_0
-    invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->onPause()V
-
-    .line 186
+    .line 149
     return-void
 .end method
 
 .method public onShow()V
+    .locals 0
+
+    .prologue
+    .line 144
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->showCaptureLayout()V
+
+    .line 145
+    return-void
+.end method
+
+.method public reset()V
     .locals 2
 
     .prologue
-    .line 130
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
+    const/4 v1, 0x1
+
+    .line 152
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->setTouchHandled(Z)V
+
+    .line 154
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     if-eqz v0, :cond_0
 
-    .line 131
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
+    .line 155
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->showSideMenuItems()V
 
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
+    .line 156
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    .line 132
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->hideStatusIcon()V
+
+    .line 157
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    check-cast v0, Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera;->setTouchAutoFocusActive(Z)V
+
+    .line 158
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+
+    check-cast v0, Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->resetTouchFocus()V
+
+    .line 160
     :cond_0
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->showDisplayCount()V
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->showCaptureLayout()V
 
-    .line 133
+    .line 161
     return-void
 .end method
 
@@ -792,141 +796,71 @@
     .parameter "count"
 
     .prologue
-    .line 143
+    .line 79
     const-string v0, "TwGLShootAndShareMenu"
 
     const-string v1, "setUserCount()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
-    if-nez p1, :cond_1
+    .line 80
+    if-nez p1, :cond_0
 
-    .line 145
+    .line 81
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->DefaultCount:Ljava/lang/String;
 
-    .line 146
-    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setText(Ljava/lang/String;)V
 
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
-
-    .line 150
-    :cond_0
+    .line 84
     :goto_0
     iput p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mUserCount:I
 
-    .line 151
+    .line 85
     return-void
 
-    .line 148
-    :cond_1
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->showDisplayCount()V
+    .line 83
+    :cond_0
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
+
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setText(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public showDisplayCount()V
-    .locals 6
+.method public showCaptureLayout()V
+    .locals 2
 
     .prologue
-    .line 154
-    iget-object v4, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    const/4 v1, 0x0
 
-    check-cast v4, Lcom/sec/android/app/camera/Camera;
+    .line 171
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
-    iget-object v4, v4, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v4}, Lcom/sec/android/app/camera/Camera$UserWrapper;->getUserCount()I
+    .line 172
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceButton:Lcom/sec/android/glview/TwGLButton;
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLButton;->setVisibility(I)V
 
-    .line 155
-    .local v1, mDeviceCount:I
-    new-array v2, v1, [Lcom/samsung/shareshot/User;
-
-    .line 156
-    .local v2, mDeviceData:[Lcom/samsung/shareshot/User;
-    const/4 v3, 0x0
-
-    .line 158
-    .local v3, mDisplaycount:I
-    const/4 v0, 0x0
-
-    .local v0, i:I
-    :goto_0
-    if-ge v0, v1, :cond_1
-
-    .line 159
-    iget-object v4, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
-
-    check-cast v4, Lcom/sec/android/app/camera/Camera;
-
-    iget-object v4, v4, Lcom/sec/android/app/camera/Camera;->mUserWrapper:Lcom/sec/android/app/camera/Camera$UserWrapper;
-
-    invoke-virtual {v4, v0}, Lcom/sec/android/app/camera/Camera$UserWrapper;->getUserFromList(I)Lcom/samsung/shareshot/User;
-
-    move-result-object v4
-
-    aput-object v4, v2, v0
-
-    .line 160
-    aget-object v4, v2, v0
-
-    if-eqz v4, :cond_0
-
-    .line 161
-    aget-object v4, v2, v0
-
-    invoke-virtual {v4}, Lcom/samsung/shareshot/User;->isActivate()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 162
-    add-int/lit8 v3, v3, 0x1
-
-    .line 158
+    .line 173
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
 
-    goto :goto_0
+    if-eqz v0, :cond_1
 
-    .line 165
+    .line 174
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
+
+    .line 175
     :cond_1
-    if-lez v1, :cond_2
-
-    .line 166
-    iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
-
-    .line 167
-    iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
-
-    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lcom/sec/android/glview/TwGLText;->setText(Ljava/lang/String;)V
-
-    .line 170
-    :goto_1
     return-void
-
-    .line 169
-    :cond_2
-    iget-object v4, p0, Lcom/sec/android/app/camera/glwidget/TwGLShootAndShareMenu;->mSharingDeviceText:Lcom/sec/android/glview/TwGLText;
-
-    const/4 v5, 0x4
-
-    invoke-virtual {v4, v5}, Lcom/sec/android/glview/TwGLText;->setVisibility(I)V
-
-    goto :goto_1
 .end method

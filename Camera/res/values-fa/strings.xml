@@ -33,7 +33,7 @@
     <string name="SM_SMILE">عکس لبخند</string>
     <string name="SM_FRAME">فریم عکس</string>
     <string name="SM_BEAUTY">زیبایی</string>
-    <string name="SM_VINTAGE">قدیمی</string>
+    <string name="SM_VINTAGE">شراب سال</string>
     <string name="SM_ADDME">افزودن من</string>
     <string name="SM_ACTION">عکس فعالیت</string>
     <string name="SM_STOPMOTION">توقف حرکت</string>
@@ -60,14 +60,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">سیاه وسفید</string>
+    <string name="E_BW">سیاه و سفید</string>
     <string name="E_SEPIA">قرمزقهوه ای</string>
     <string name="E_NEGATIVE">نگاتیو</string>
     <string name="E_EMBOSS">برجسته</string>
     <string name="E_OUTLINE">قالب</string>
     <string name="E_WATERCOLOR">رنگ آب</string>
-    <string name="E_MONOCHROME">هم رنگ</string>
-    <string name="E_SKETCH">طرح</string>
     <string name="E_WASHED">شسته شده</string>
     <string name="E_POSTERIZE">پوستری</string>
     <string name="E_SOLARIZE">تابش آفتاب</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">نقطه قرمز-زرد</string>
     <string name="E_CARTOONIZE">کارتونی کردن</string>
     <string name="F_AUTO_FLASH">فلش خودکار</string>
-    <string name="F_AUTOFOCUS">فوکوس خ.</string>
+    <string name="F_AUTOFOCUS">خودکار</string>
     <string name="F_MACRO">ماکرو</string>
     <string name="F_FACE">کشف صورت</string>
     <string name="F_PANFOCUS">فوکوس خوب</string>
@@ -110,12 +108,12 @@
     <string name="SCN_PARTY_INDOOR">مهمانی/داخل ساختمان</string>
     <string name="SCN_BEACH_SNOW">ساحل/برف</string>
     <string name="SCN_SUNSET">نور کم</string>
-    <string name="SCN_DAWN_DUSK">طلوع</string>
+    <string name="SCN_DAWN_DUSK">سپیده دم</string>
     <string name="SCN_FALL_COLOR">رنگ پاییز</string>
     <string name="SCN_NIGHT_SHOT">شب</string>
     <string name="SCN_FIREWORK">آتش بازی</string>
     <string name="SCN_TEXT">متن</string>
-    <string name="SCN_CANDLE_LIGHT">روشنایی شمع</string>
+    <string name="SCN_CANDLE_LIGHT">نور شمع</string>
     <string name="SCN_BACK_LIGHT">نور پس زمینه</string>
     <string name="OPTION_ON">روشن</string>
     <string name="OPTION_OFF">خاموش</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">تایمر</string>
     <string name="Title_Resolution">وضوح</string>
     <string name="Title_ShootAndShare">اشتراک تنظیمات تصویر</string>
-    <string name="Title_DeviceList">لیست دستگاه</string>
     <string name="Title_WhiteBalance">درجه روشنايی</string>
     <string name="Title_Effects">جلوه ها</string>
     <string name="Title_Focus">مورد نظر</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">کنتراست خودکار</string>
     <string name="Title_GPS">برچسب GPS</string>
     <string name="Title_Review">مرور</string>
-    <string name="Title_AutoShareShot">تصویربرداری مشترک خودکار</string>
     <string name="Title_Guideline">راهنما</string>
     <string name="Title_VideoQuality">کیفیت ویدئو</string>
     <string name="Title_AudioRecording">ضبط کردن صوت</string>
@@ -161,7 +157,7 @@
     <string name="Title_Mode">حالت</string>
     <string name="Title_Back">بازگشت</string>
     <string name="Title_ImageViewer">مشاهده گر تصویر</string>
-    <string name="Title_Outdoor_Visibility">قابلیت رؤیت خارج از ساختمان</string>
+    <string name="Title_Outdoor_Visibility">قابلیت رؤیت خارج ساختمان</string>
     <string name="Title_Flip">ذخیره به صورت وارونه شده</string>
     <string name="Title_Self_Portrait">پرتره از خودتان</string>
     <string name="Title_Self_Recording">ضبط خودکار</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">مراقب باشید که در هنگام گرفتن عکس، دستگاه نلرزد</string>
     <string name="help_text_panorama">کلید دوربین را فشار دهید و تلفن را به آرامی در یک جهت حرکت دهید</string>
     <string name="help_text_panorama_device">کلید دوربین را فشار دهید و دستگاه را به آرامی در یک جهت حرکت دهید</string>
-    <string name="message_DefaultLayout">چیدمان میانبر بازنشانی خواهد شد</string>
     <string name="message_EULA_GPS">فعال کردن برچسب GPS اطلاعات جغرافیایی هر عکس را در آن ضمیمه، جاسازی و ذخیره می کند. هنگام ارسال، به اشتراک گذاری، پخش، انتقال، یا کپی این عکس ها مراقب باشید زیرا این عکس ها محتوی مکانی که در آن عکس گرفته شده می باشند</string>
-    <string name="message_Auto_ShareShot">"تصویربرداری مشترک خودکار شما را قادر می سازد به راحتی به دستگاه هایی که می خواهید با آنها تصویر به اشتراک بگذارید متصل شوید.
-تصویربرداری مشترک خودکار را فعال کنید، سپس دستگاه ها را برای متصل کردن بهم نزدیک کنید (معمولا پشت به پشت)"</string>
     <string name="GPS_msg">GPS خاموش</string>
     <string name="message_enable_GPS">برای استفاده از برچسب GPS، GPS را در تنظیمات فعال کنید</string>
     <string name="cancel">لغو</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">ناشناس</string>
     <string name="shareshot_no_user">هیچ کس جهت به اشتراک گذاری وجود ندارد</string>
     <string name="snapshot_saved">%s ثبت شد</string>
-    <string name="editable_shortcut_reset">تنظیم مجدد</string>
     <string name="editable_shortcut_helptext_title">نکات مهم</string>
     <string name="editable_shortcut_helptext_message">برای میانبرها روی آن ضربه زده و نگه دارید</string>
     <string name="editable_shortcut_helptext">روی نماد ضربه بزنید و نگهدارید، سپس آن را بکشید تا به محل ویرایش میانبرها برده شود</string>
-    <string name="sbeam_helptext">با دستگاه های دیگر عکس بگیرید و به اشتراک بگذارید. برای افزودن دستگاه هایی که می خواهید از طریق S Beam با آنها به اشتراک بگذارید، دستگاه ها را به یکدیگر نزدیک کنید</string>
     <string name="storage_setting_dialog_title">مکان ذخیره</string>
     <string name="storage_setting_dialog_message">کارت SD وارد شد. محل ذخیره را به کارت SD تغییر می دهید؟</string>
     <string name="do_not_ask_again">دوباره نمایش داده نشود</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">بهترین عکس</string>
     <string name="bestpic_on">On</string>
     <string name="bestpic_off">Off</string>
-    <string name="bestgroup">بهترین ژست عکس گروهی</string>
-    <string name="bestgroup_title">بهترین چهره ها را برای ذخیره انتخاب کنید</string>
     <string name="battery_low">دوربین را ببندید. دمای باتری بسیار پایین است</string>
     <string name="buddy_photo_share_helptext">با استفاده از ویژگی تشخیص چهره، عکس بگیرید و آنها را به اشتراک بگذارید</string>
     <string name="face_zoom_helptext">روی یک چهره برای بزرگنمایی یا کوچکنمایی آن دوبار ضربه بزنید</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">رفتن به حالت دوربین فیلم برداری</string>
     <string name="on_device_help_self">تغییر به حالت تصویر از خود</string>
     <string name="on_device_help_editable">روی میانبری که می خواهید انتقال دهید ضربه بزنید و آن را نگه دارید. سپس هر کجا می خواهید آن را بکشید</string>
-    <string name="on_device_help_voicecommand">با استفاده از فرمان های صوتی مانند تصویربرداری، عکسبرداری، لبخند و سیب می توانید عکس بگیرید</string>
     <string name="Title_VideoSpeed">سرعت</string>
     <string name="SPEED_OFF">عادی</string>
     <string name="SPEED_2X_FASTER">2 بار سریع تر</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">فقط وقتی تلفن باز است می توانید از خود فیلمبرداری کنید</string>
     <string name="contextual_filename">نام فایل متنی</string>
     <string name="enable_gps_dialog">برچسب GPS باید فعال شود. برچسب GPS فعال شود؟</string>
-    <string name="gallery_disable">گالری غیرفعال است</string>
-    <string name="HDR_Normal">عادی</string>
-    <string name="HDR_Strong">قوی</string>
 </resources>

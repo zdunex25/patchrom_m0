@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 3239
+    .line 2948
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$6;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,18 +41,18 @@
     .locals 2
 
     .prologue
-    .line 3241
+    .line 2950
     const-string v0, "Camera"
 
     const-string v1, "Finish camera due to camcorder start"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3242
+    .line 2951
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$6;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->finish()V
 
-    .line 3243
+    .line 2952
     return-void
 .end method

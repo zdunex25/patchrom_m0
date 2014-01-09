@@ -33,7 +33,7 @@
     <string name="SM_SMILE">مسکراہٹ شاٹ</string>
     <string name="SM_FRAME">فریم شاٹ</string>
     <string name="SM_BEAUTY">خوبصورتی</string>
-    <string name="SM_VINTAGE">انگوری موسم</string>
+    <string name="SM_VINTAGE">فصل انگور</string>
     <string name="SM_ADDME">مجھے شامل کریں</string>
     <string name="SM_ACTION">ایکشن شاٹ</string>
     <string name="SM_STOPMOTION">حرکت روکیں</string>
@@ -60,14 +60,12 @@
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">کالا اور سفید</string>
+    <string name="E_BW">سیاہ اور سفید</string>
     <string name="E_SEPIA">سیپیا</string>
     <string name="E_NEGATIVE">منفی</string>
     <string name="E_EMBOSS">ایمبوس</string>
     <string name="E_OUTLINE">آوٹ لاؤین</string>
     <string name="E_WATERCOLOR">آبی رنگ</string>
-    <string name="E_MONOCHROME">مونوکروم</string>
-    <string name="E_SKETCH">اسکیچ</string>
     <string name="E_WASHED">دھو ڈالا</string>
     <string name="E_POSTERIZE">پوسٹر تاثر</string>
     <string name="E_SOLARIZE">آفتاب زدہ کریں</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">سرخ-پیلا نقطہ</string>
     <string name="E_CARTOONIZE">کارٹون بناؤ</string>
     <string name="F_AUTO_FLASH">خودکار فلیش</string>
-    <string name="F_AUTOFOCUS">خود فوکس</string>
+    <string name="F_AUTOFOCUS">آٹو فوکس</string>
     <string name="F_MACRO">میکرو</string>
     <string name="F_FACE">چہرے کی پہچان</string>
     <string name="F_PANFOCUS">فوکس پین</string>
@@ -101,7 +99,7 @@
     <string name="RM_MMS">MMS کی حد</string>
     <string name="RM_EMAIL">ای میل کی حد</string>
     <string name="RM_SLOW">سست حرکت</string>
-    <string name="RM_FAST">تیز موشن</string>
+    <string name="RM_FAST">تیز حرکت</string>
     <string name="CS_PROGRESS_TEXT">تصویر تخلیق کررہا ہے۔ برائے مہربانی انتظار کیجیئے...</string>
     <string name="SCN_NONE">نہیں</string>
     <string name="SCN_PORTRAIT">پوٹریٹ</string>
@@ -110,12 +108,12 @@
     <string name="SCN_PARTY_INDOOR">پارٹی/گھر کے اندر</string>
     <string name="SCN_BEACH_SNOW">ساہل/ برف باری</string>
     <string name="SCN_SUNSET">سورج کا غروب ہونا</string>
-    <string name="SCN_DAWN_DUSK">صبح</string>
+    <string name="SCN_DAWN_DUSK">طلوع صبح</string>
     <string name="SCN_FALL_COLOR">بہار کا رنگ</string>
     <string name="SCN_NIGHT_SHOT">رات</string>
     <string name="SCN_FIREWORK">آتش بازی</string>
     <string name="SCN_TEXT">ٹیکسٹ</string>
-    <string name="SCN_CANDLE_LIGHT">موم بتی کی روشنی</string>
+    <string name="SCN_CANDLE_LIGHT">شمع کی روشنی</string>
     <string name="SCN_BACK_LIGHT">پس منظر روشنی</string>
     <string name="OPTION_ON">آن</string>
     <string name="OPTION_OFF">آف</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">ٹائمر</string>
     <string name="Title_Resolution">جزیات کاری</string>
     <string name="Title_ShootAndShare">تصویر شراکت سیٹنگز</string>
-    <string name="Title_DeviceList">آلہ فہرست</string>
     <string name="Title_WhiteBalance">سفید بیلینس</string>
     <string name="Title_Effects">اثرات</string>
     <string name="Title_Focus">فوکس</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">خودکار تناسب امتزاج</string>
     <string name="Title_GPS">GPS ٹیگ</string>
     <string name="Title_Review">دوبارہ دیکھیں</string>
-    <string name="Title_AutoShareShot">خودکار شراکت شاٹ</string>
     <string name="Title_Guideline">گائیڈ لائن</string>
     <string name="Title_VideoQuality">ویڈیو کوالٹی</string>
     <string name="Title_AudioRecording">آڈيو ریکارڈنگ</string>
@@ -161,7 +157,7 @@
     <string name="Title_Mode">وضع</string>
     <string name="Title_Back">واپس</string>
     <string name="Title_ImageViewer">تصویر منظر کنندہ</string>
-    <string name="Title_Outdoor_Visibility">گھر سے باہر نظر آنے کی قابلیت</string>
+    <string name="Title_Outdoor_Visibility">گھر سے باہر دکھائی دینا</string>
     <string name="Title_Flip">بطور فلپ کردہ محفوظ کریں</string>
     <string name="Title_Self_Portrait">خود اپنا-پورٹریٹ</string>
     <string name="Title_Self_Recording">خود اپنی-ریکارڈنگ</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">احتیاط کریں کہ تصاویر لیتے ہوئے آلے کو حرکت مت دیں</string>
     <string name="help_text_panorama">کمیرا بٹن دبائيں اور فون کو آہستہ سے ایک رخ میں حرکت دیں</string>
     <string name="help_text_panorama_device">کیمرے کے بٹن کو دبائیں اور آلہ کو آھستہ آھستہ ایک سمت میں حرکت دیں</string>
-    <string name="message_DefaultLayout">شارٹ کٹ لے آؤٹ پھر سیٹ کیا جائے گا</string>
     <string name="message_EULA_GPS">GPS ٹیگ اہل بنانا ہر فوٹو کے اندر جغرافیائی محل وقوع کوائف منسلک، جما اور ذخیرہ کردے گا۔ جب آپ ان فوٹوز کو بھیجیں، شراکت کریں، تقسیم کریں، نشر کریں، یا ان کی نقل بنائیں تو احتیاط سے کام لیں چونکہ ان میں وہ محل وقوع شامل ہوتا ہے جہاں یہ فوٹو لیا گیا تھا</string>
-    <string name="message_Auto_ShareShot">"خودکار شراکت شاٹ آپ کو آسانی سے ان آلہ جات کے ساتھ جڑنے کی اجازت دیتا ہے جن سے آپ تصویریں شراکت کرنا چاہتے ہیں۔
-خودکار شراکت شاٹ اہل بنائیں، پھر ان آلہ جات کو جڑنے کے لئے (مثالی طور پر پشت سے پشت ملا کر) یکجا کریں"</string>
     <string name="GPS_msg">GPS آف</string>
     <string name="message_enable_GPS">GPS ٹیگ استعمال کرنے کے لئے سیٹنگز میں GPS آن کریں</string>
     <string name="cancel">منسوخ</string>
@@ -245,11 +238,9 @@
     <string name="profile_user_default_name">نامعلوم</string>
     <string name="shareshot_no_user">شراکت کرنے کے لئے کوئی لوگ نہیں ہیں</string>
     <string name="snapshot_saved">%s محفوظ</string>
-    <string name="editable_shortcut_reset">دوبارہ سیٹ</string>
     <string name="editable_shortcut_helptext_title">مشورے</string>
     <string name="editable_shortcut_helptext_message">شارٹ کٹ کو ایڈٹ کرنے کے لیے انکو تھپکائیں اور پکڑ کر رکھیں</string>
     <string name="editable_shortcut_helptext">شبیہ کو تھپکیں اور تھام کر رکھیں، تب تیز راہوں کی پوزیشن تدوین کرنے کے لئے اس کو گھسیٹیں</string>
-    <string name="sbeam_helptext">دیگر آلات کے ساتھ فوٹوز کھینچیں اور شراکت کریں۔ ان آلہ جات کا اضافہ کرنے کے لئے جن کی آپ براستہ S Beam شراکت کرنا چاہتے ہیں آلہ جات کو یکجا کریں</string>
     <string name="storage_setting_dialog_title">ذخیرہ کا محل وقوع</string>
     <string name="storage_setting_dialog_message">SD کارڈ داخل کیا گیا۔ ذخیرہ کا محل وقوع SD کارڈ پر تبدیل کریں؟</string>
     <string name="do_not_ask_again">دوبارہ نہیں دکھا‏‏ئيں</string>
@@ -258,8 +249,6 @@
     <string name="bestpic">بہترین فوٹو</string>
     <string name="bestpic_on">آن</string>
     <string name="bestpic_off">آف</string>
-    <string name="bestgroup">بہترین گروپ پوز</string>
-    <string name="bestgroup_title">ہر بہترین چہرہ محفوظ کرنے کے لئے منتخب کریں</string>
     <string name="battery_low">کیمرہ بند کریں۔ بیٹری کا درجہ حرارت بہت کم ہے</string>
     <string name="buddy_photo_share_helptext">چہرے کا پتا چلانے کے ذریعہ دوستوں کے ساتھ فوٹوز لیں اور شراکت کریں</string>
     <string name="face_zoom_helptext">زوم ان یا آؤٹ کرنے کے لئے کسی چہرے پر دو بار تھپکیں</string>
@@ -269,7 +258,6 @@
     <string name="on_device_help_camcorder">کیم کورڈر موڈ پر سوئچ کریں</string>
     <string name="on_device_help_self">سیلف-پورٹریٹ موڈ پر سوئچ کریں</string>
     <string name="on_device_help_editable">اس تیز راہ کو تھپتھپائیں اور تھام کر رکھیں جسے آپ منتقل کرنا چاہتے ہیں۔ پھر اس کو وہاں گھسیٹیں جہاں آپ چاہتے ہیں</string>
-    <string name="on_device_help_voicecommand">آپ صوتی احکام سے فوٹوز کھینچ سکتے ہیں جیسے کہ ’کھینچیں‘، ’شوٹ کریں‘، ’مسکرائیں‘ اور ’چیز کہیں‘</string>
     <string name="Title_VideoSpeed">رفتار</string>
     <string name="SPEED_OFF">نارمل</string>
     <string name="SPEED_2X_FASTER">2x تیز تر</string>
@@ -291,7 +279,4 @@
     <string name="self_recording_open_warning_popup">خود اپنی ریکارڈنگ کو صرف اس وقت استعمال کیا جاسکتا ہے جب فون کھلا ہوا ہو</string>
     <string name="contextual_filename">سیاق و سباق سے فائل نام</string>
     <string name="enable_gps_dialog">GPS ٹیگ کو اہل بنانے کی ضرورت ہے۔ GPS ٹیگ اہل بنائیں؟</string>
-    <string name="gallery_disable">گیلری نا اہل بنادی گئی ہے</string>
-    <string name="HDR_Normal">معمولی</string>
-    <string name="HDR_Strong">طاقتور</string>
 </resources>

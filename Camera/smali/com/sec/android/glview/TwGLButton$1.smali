@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 107
+    .line 211
     iput-object p1, p0, Lcom/sec/android/glview/TwGLButton$1;->this$0:Lcom/sec/android/glview/TwGLButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,12 +44,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 112
+    .line 221
     iget-object v0, p0, Lcom/sec/android/glview/TwGLButton$1;->this$0:Lcom/sec/android/glview/TwGLButton;
 
     iput-boolean v1, v0, Lcom/sec/android/glview/TwGLButton;->mDrawHighlight:Z
 
-    .line 113
+    .line 223
     return v1
 .end method
 
@@ -58,7 +58,7 @@
     .parameter "animation"
 
     .prologue
-    .line 109
+    .line 215
     const/4 v0, 0x0
 
     return v0

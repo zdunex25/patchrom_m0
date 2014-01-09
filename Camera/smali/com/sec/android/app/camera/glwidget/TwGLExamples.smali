@@ -25,7 +25,7 @@
 
     .prologue
     .line 36
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLExamples;->mContext:Landroid/content/Context;
@@ -85,7 +85,7 @@
 
     iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLExamples;->mGLContext:Lcom/sec/android/glview/TwGLContext;
 
-    const v3, 0x7f020293
+    const v3, 0x7f020277
 
     invoke-direct {v0, v2, v5, v5, v3}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFI)V
 
@@ -128,7 +128,7 @@
 
     .line 145
     .local v6, adapter:Lcom/sec/android/app/camera/glwidget/TwGLExamples$TwListAdapter;
-    const v1, 0x7f020203
+    const v1, 0x7f0201f0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLList;->setNinePatchBackground(I)Z
 
@@ -147,7 +147,7 @@
     .parameter "rootView"
 
     .prologue
-    const v9, 0x7f0900d0
+    const v9, 0x7f0900cf
 
     const/high16 v2, 0x43c8
 
@@ -240,13 +240,13 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f02015e
+    const v4, 0x7f020154
 
-    const v5, 0x7f02015e
+    const v5, 0x7f020154
 
     const/4 v6, 0x0
 
-    const v7, 0x7f020244
+    const v7, 0x7f02022c
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIII)V
 
@@ -262,13 +262,13 @@
 
     move-result v4
 
-    const v5, 0x7f020144
+    const v5, 0x7f02013a
 
-    const v6, 0x7f020144
+    const v6, 0x7f02013a
 
     const/4 v7, 0x0
 
-    const v8, 0x7f020244
+    const v8, 0x7f02022c
 
     invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIII)V
 
@@ -300,13 +300,13 @@
 
     const/4 v5, 0x0
 
-    const v6, 0x7f02015e
+    const v6, 0x7f020154
 
-    const v7, 0x7f02015e
+    const v7, 0x7f020154
 
     const/4 v8, 0x0
 
-    const v9, 0x7f020244
+    const v9, 0x7f02022c
 
     invoke-direct/range {v2 .. v9}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIII)V
 
@@ -322,13 +322,13 @@
 
     move-result v6
 
-    const v7, 0x7f020144
+    const v7, 0x7f02013a
 
-    const v8, 0x7f020144
+    const v8, 0x7f02013a
 
     const/4 v9, 0x0
 
-    const v10, 0x7f020244
+    const v10, 0x7f02022c
 
     invoke-direct/range {v3 .. v10}, Lcom/sec/android/glview/TwGLButton;-><init>(Lcom/sec/android/glview/TwGLContext;FFIIII)V
 
@@ -372,7 +372,7 @@
 
     const/16 v23, 0x0
 
-    const v24, 0x7f020293
+    const v24, 0x7f020277
 
     move-object/from16 v0, v21
 
@@ -428,7 +428,7 @@
 
     const/16 v23, 0x0
 
-    const v24, 0x7f0200e7
+    const v24, 0x7f0200dd
 
     move-object/from16 v0, v21
 
@@ -484,7 +484,7 @@
 
     const/16 v23, 0x0
 
-    const v24, 0x7f020293
+    const v24, 0x7f020277
 
     move-object/from16 v0, v21
 
@@ -540,7 +540,7 @@
 
     const/16 v23, 0x0
 
-    const v24, 0x7f0200e7
+    const v24, 0x7f0200dd
 
     move-object/from16 v0, v16
 
@@ -826,7 +826,7 @@
     .parameter "rootView"
 
     .prologue
-    const v6, 0x7f020293
+    const v6, 0x7f020277
 
     const/high16 v5, 0x3f00
 

@@ -19,9 +19,9 @@
 
 .field public static final AUTO:I = 0x7f090036
 
-.field public static final Action_Shot_Helptext:I = 0x7f0900d0
+.field public static final Action_Shot_Helptext:I = 0x7f0900cf
 
-.field public static final Add_Me_Helptext:I = 0x7f0900cf
+.field public static final Add_Me_Helptext:I = 0x7f0900ce
 
 .field public static final CONTRAST:I = 0x7f09009e
 
@@ -29,27 +29,27 @@
 
 .field public static final CS_PROGRESS_TEXT:I = 0x7f09008b
 
-.field public static final Cartoon_Helptext:I = 0x7f0900d2
+.field public static final Cartoon_Helptext:I = 0x7f0900d1
 
-.field public static final Dialog_No:I = 0x7f0900ce
+.field public static final Dialog_No:I = 0x7f0900cd
 
-.field public static final Dialog_Yes:I = 0x7f0900cd
+.field public static final Dialog_Yes:I = 0x7f0900cc
 
-.field public static final ER_EFFECT_BIG_EYES:I = 0x7f09015c
+.field public static final ER_EFFECT_BIG_EYES:I = 0x7f090152
 
-.field public static final ER_EFFECT_BIG_MOUTH:I = 0x7f09015e
+.field public static final ER_EFFECT_BIG_MOUTH:I = 0x7f090154
 
-.field public static final ER_EFFECT_BIG_NOSE:I = 0x7f09015d
+.field public static final ER_EFFECT_BIG_NOSE:I = 0x7f090153
 
-.field public static final ER_EFFECT_NOEFFECT:I = 0x7f09015a
+.field public static final ER_EFFECT_NOEFFECT:I = 0x7f090150
 
-.field public static final ER_EFFECT_NONE:I = 0x7f090159
+.field public static final ER_EFFECT_NONE:I = 0x7f09014f
 
-.field public static final ER_EFFECT_SMALL_EYES:I = 0x7f09015f
+.field public static final ER_EFFECT_SMALL_EYES:I = 0x7f090155
 
-.field public static final ER_EFFECT_SMALL_MOUTH:I = 0x7f090160
+.field public static final ER_EFFECT_SMALL_MOUTH:I = 0x7f090156
 
-.field public static final ER_EFFECT_SQUEEZE:I = 0x7f09015b
+.field public static final ER_EFFECT_SQUEEZE:I = 0x7f090151
 
 .field public static final EXPOSURE_METER:I = 0x7f09009c
 
@@ -97,13 +97,9 @@
 
 .field public static final F_PANFOCUS:I = 0x7f090076
 
-.field public static final GPS_msg:I = 0x7f0900d9
+.field public static final GPS_msg:I = 0x7f0900d7
 
-.field public static final HDR_Helptext:I = 0x7f0900d3
-
-.field public static final HDR_Normal:I = 0x7f090168
-
-.field public static final HDR_Strong:I = 0x7f090169
+.field public static final HDR_Helptext:I = 0x7f0900d2
 
 .field public static final ISO_100:I = 0x7f09003e
 
@@ -137,7 +133,7 @@
 
 .field public static final OPTION_ON:I = 0x7f09009a
 
-.field public static final OnScreen_HelpTextTouchAF:I = 0x7f0900e1
+.field public static final OnScreen_HelpTextTouchAF:I = 0x7f0900df
 
 .field public static final Q_FINE:I = 0x7f090078
 
@@ -279,19 +275,19 @@
 
 .field public static final SM_VINTAGE:I = 0x7f090027
 
-.field public static final SPEED_2X_FASTER:I = 0x7f090143
+.field public static final SPEED_2X_FASTER:I = 0x7f090139
 
-.field public static final SPEED_2X_SLOWER:I = 0x7f090146
+.field public static final SPEED_2X_SLOWER:I = 0x7f09013c
 
-.field public static final SPEED_4X_FASTER:I = 0x7f090144
+.field public static final SPEED_4X_FASTER:I = 0x7f09013a
 
-.field public static final SPEED_4X_SLOWER:I = 0x7f090147
+.field public static final SPEED_4X_SLOWER:I = 0x7f09013d
 
-.field public static final SPEED_8X_FASTER:I = 0x7f090145
+.field public static final SPEED_8X_FASTER:I = 0x7f09013b
 
-.field public static final SPEED_8X_SLOWER:I = 0x7f090148
+.field public static final SPEED_8X_SLOWER:I = 0x7f09013e
 
-.field public static final SPEED_OFF:I = 0x7f090142
+.field public static final SPEED_OFF:I = 0x7f090138
 
 .field public static final SS_SOUND1:I = 0x7f09007e
 
@@ -305,9 +301,9 @@
 
 .field public static final S_PHONE:I = 0x7f090083
 
-.field public static final SmileShot_message:I = 0x7f0900dd
+.field public static final SmileShot_message:I = 0x7f0900db
 
-.field public static final Stop_Motion_Helptext:I = 0x7f0900d1
+.field public static final Stop_Motion_Helptext:I = 0x7f0900d0
 
 .field public static final T_FIVE:I = 0x7f09007a
 
@@ -317,25 +313,23 @@
 
 .field public static final Title_AntiShake:I = 0x7f0900b8
 
-.field public static final Title_AudioRecording:I = 0x7f0900c0
+.field public static final Title_AudioRecording:I = 0x7f0900bf
 
 .field public static final Title_AutoContrast:I = 0x7f0900ba
 
-.field public static final Title_AutoShareShot:I = 0x7f0900bd
-
-.field public static final Title_Back:I = 0x7f0900c5
+.field public static final Title_Back:I = 0x7f0900c4
 
 .field public static final Title_BlinkDetection:I = 0x7f0900b9
 
 .field public static final Title_Brightness:I = 0x7f0900b1
 
-.field public static final Title_ChangeMemoryInUseDailog:I = 0x7f0900df
+.field public static final Title_ChangeMemoryInUseDailog:I = 0x7f0900dd
 
-.field public static final Title_DefaultLayout:I = 0x7f0900c2
+.field public static final Title_DefaultLayout:I = 0x7f0900c1
 
 .field public static final Title_DeviceList:I = 0x7f0900a7
 
-.field public static final Title_EffectRecorder:I = 0x7f090158
+.field public static final Title_EffectRecorder:I = 0x7f09014e
 
 .field public static final Title_Effects:I = 0x7f0900a9
 
@@ -343,7 +337,7 @@
 
 .field public static final Title_Flash:I = 0x7f0900b0
 
-.field public static final Title_Flip:I = 0x7f0900c9
+.field public static final Title_Flip:I = 0x7f0900c8
 
 .field public static final Title_Focus:I = 0x7f0900aa
 
@@ -353,33 +347,33 @@
 
 .field public static final Title_GPS:I = 0x7f0900bb
 
-.field public static final Title_Guideline:I = 0x7f0900be
+.field public static final Title_Guideline:I = 0x7f0900bd
 
-.field public static final Title_HDR:I = 0x7f0900c8
+.field public static final Title_HDR:I = 0x7f0900c7
 
 .field public static final Title_ISO:I = 0x7f0900ab
 
 .field public static final Title_ImageQuality:I = 0x7f0900b5
 
-.field public static final Title_ImageViewer:I = 0x7f0900c6
+.field public static final Title_ImageViewer:I = 0x7f0900c5
 
-.field public static final Title_InsertMemoryCardDailog:I = 0x7f0900e0
+.field public static final Title_InsertMemoryCardDailog:I = 0x7f0900de
 
 .field public static final Title_Metering:I = 0x7f0900b6
 
-.field public static final Title_Mode:I = 0x7f0900c4
+.field public static final Title_Mode:I = 0x7f0900c3
 
 .field public static final Title_Mosaic:I = 0x7f0900ad
 
 .field public static final Title_ObjectTracking:I = 0x7f0900b7
 
-.field public static final Title_Outdoor_Visibility:I = 0x7f0900c7
+.field public static final Title_Outdoor_Visibility:I = 0x7f0900c6
 
 .field public static final Title_RecordingMode:I = 0x7f0900b3
 
-.field public static final Title_Reset:I = 0x7f0900c3
+.field public static final Title_Reset:I = 0x7f0900c2
 
-.field public static final Title_ResetDailog:I = 0x7f0900de
+.field public static final Title_ResetDailog:I = 0x7f0900dc
 
 .field public static final Title_Resolution:I = 0x7f0900a5
 
@@ -387,9 +381,9 @@
 
 .field public static final Title_SceneMode:I = 0x7f0900a2
 
-.field public static final Title_Self_Portrait:I = 0x7f0900ca
+.field public static final Title_Self_Portrait:I = 0x7f0900c9
 
-.field public static final Title_Self_Recording:I = 0x7f0900cb
+.field public static final Title_Self_Recording:I = 0x7f0900ca
 
 .field public static final Title_SetUp:I = 0x7f0900a3
 
@@ -399,15 +393,15 @@
 
 .field public static final Title_ShutterSound:I = 0x7f0900ac
 
-.field public static final Title_Storage:I = 0x7f0900c1
+.field public static final Title_Storage:I = 0x7f0900c0
 
 .field public static final Title_Timer:I = 0x7f0900a4
 
-.field public static final Title_VideoQuality:I = 0x7f0900bf
+.field public static final Title_VideoQuality:I = 0x7f0900be
 
-.field public static final Title_VideoSpeed:I = 0x7f090141
+.field public static final Title_VideoSpeed:I = 0x7f090137
 
-.field public static final Title_Voice_Capture:I = 0x7f0900cc
+.field public static final Title_Voice_Capture:I = 0x7f0900cb
 
 .field public static final Title_WhiteBalance:I = 0x7f0900a8
 
@@ -435,57 +429,51 @@
 
 .field public static final ZOOM_X_4:I = 0x7f09001f
 
-.field public static final activate_agree:I = 0x7f090112
+.field public static final activate_agree:I = 0x7f090110
 
-.field public static final activate_reject:I = 0x7f090113
+.field public static final activate_reject:I = 0x7f090111
 
-.field public static final add_photo_title:I = 0x7f090105
+.field public static final add_photo_title:I = 0x7f090103
 
-.field public static final app_name:I = 0x7f0900dc
+.field public static final app_name:I = 0x7f0900da
 
-.field public static final battery_low:I = 0x7f090136
+.field public static final battery_low:I = 0x7f09012e
 
 .field public static final battery_overheat:I = 0x7f09000d
 
-.field public static final best_photo_guidetext:I = 0x7f09013a
+.field public static final bestpic:I = 0x7f09012b
 
-.field public static final bestgroup:I = 0x7f090134
+.field public static final bestpic_off:I = 0x7f09012d
 
-.field public static final bestgroup_title:I = 0x7f090135
+.field public static final bestpic_on:I = 0x7f09012c
 
-.field public static final bestpic:I = 0x7f090131
-
-.field public static final bestpic_off:I = 0x7f090133
-
-.field public static final bestpic_on:I = 0x7f090132
-
-.field public static final buddy_photo_share_helptext:I = 0x7f090137
+.field public static final buddy_photo_share_helptext:I = 0x7f09012f
 
 .field public static final buffer_overflow_error_msg:I = 0x7f090012
 
-.field public static final burst_shot_guidetext:I = 0x7f090139
+.field public static final burst_shot_guidetext:I = 0x7f090131
 
 .field public static final camcorder_label:I = 0x7f090002
 
 .field public static final camera_label:I = 0x7f090001
 
-.field public static final camera_security_enter:I = 0x7f0900ed
+.field public static final camera_security_enter:I = 0x7f0900eb
 
-.field public static final camera_security_exit:I = 0x7f0900ee
+.field public static final camera_security_exit:I = 0x7f0900ec
 
-.field public static final camera_set:I = 0x7f090118
+.field public static final camera_set:I = 0x7f090116
 
-.field public static final camera_share:I = 0x7f090115
+.field public static final camera_share:I = 0x7f090113
 
-.field public static final camera_toss:I = 0x7f090117
+.field public static final camera_toss:I = 0x7f090115
 
-.field public static final cancel:I = 0x7f0900db
+.field public static final cancel:I = 0x7f0900d9
 
 .field public static final cannot_start_camcorder_msg:I = 0x7f090019
 
 .field public static final cannot_start_camera_msg:I = 0x7f090018
 
-.field public static final cannot_write_file:I = 0x7f0900ef
+.field public static final cannot_write_file:I = 0x7f0900ed
 
 .field public static final capture_failed_msg:I = 0x7f090010
 
@@ -497,79 +485,75 @@
 
 .field public static final close:I = 0x7f090017
 
-.field public static final close_camera_for_unmounted_memory:I = 0x7f0900e5
+.field public static final close_camera_for_unmounted_memory:I = 0x7f0900e3
 
-.field public static final close_camera_when_media_mounted:I = 0x7f0900e4
+.field public static final close_camera_when_media_mounted:I = 0x7f0900e2
 
-.field public static final close_camera_when_mmc_inserted:I = 0x7f0900e3
+.field public static final close_camera_when_mmc_inserted:I = 0x7f0900e1
 
-.field public static final confirm_delete_title:I = 0x7f09011d
+.field public static final confirm_delete_title:I = 0x7f09011b
 
-.field public static final context_menu_edit:I = 0x7f0900f2
+.field public static final context_menu_edit:I = 0x7f0900f0
 
-.field public static final contextual_filename:I = 0x7f090163
+.field public static final contextual_filename:I = 0x7f090159
 
-.field public static final crop_discard_text:I = 0x7f0900e8
+.field public static final crop_discard_text:I = 0x7f0900e6
 
-.field public static final crop_gallery_text:I = 0x7f0900e9
+.field public static final crop_gallery_text:I = 0x7f0900e7
 
-.field public static final crop_label:I = 0x7f0900eb
+.field public static final crop_label:I = 0x7f0900e9
 
-.field public static final crop_save_text:I = 0x7f0900e7
+.field public static final crop_save_text:I = 0x7f0900e5
 
-.field public static final default_storage_changed_to_memory_card:I = 0x7f0900f1
+.field public static final default_storage_changed_to_memory_card:I = 0x7f0900ef
 
-.field public static final default_storage_changed_to_phone:I = 0x7f0900f0
+.field public static final default_storage_changed_to_phone:I = 0x7f0900ee
 
-.field public static final deviceType:I = 0x7f09011e
+.field public static final deviceType:I = 0x7f09011c
 
-.field public static final do_not_ask_again:I = 0x7f09012e
+.field public static final do_not_ask_again:I = 0x7f090128
 
-.field public static final done:I = 0x7f090104
+.field public static final done:I = 0x7f090102
 
-.field public static final editable_shortcut_helptext:I = 0x7f090128
+.field public static final editable_shortcut_helptext:I = 0x7f090125
 
-.field public static final editable_shortcut_helptext_message:I = 0x7f090127
+.field public static final editable_shortcut_helptext_message:I = 0x7f090124
 
-.field public static final editable_shortcut_helptext_title:I = 0x7f090126
+.field public static final editable_shortcut_helptext_title:I = 0x7f090123
 
-.field public static final editable_shortcut_reset:I = 0x7f090125
+.field public static final enable_gps_dialog:I = 0x7f09015a
 
-.field public static final enable_gps_dialog:I = 0x7f090164
+.field public static final ev_0:I = 0x7f0900f5
 
-.field public static final ev_0:I = 0x7f0900f7
+.field public static final ev_minus_0_5:I = 0x7f0900f6
 
-.field public static final ev_minus_0_5:I = 0x7f0900f8
+.field public static final ev_minus_1_0:I = 0x7f0900f7
 
-.field public static final ev_minus_1_0:I = 0x7f0900f9
+.field public static final ev_minus_1_5:I = 0x7f0900f8
 
-.field public static final ev_minus_1_5:I = 0x7f0900fa
+.field public static final ev_minus_2_0:I = 0x7f0900f9
 
-.field public static final ev_minus_2_0:I = 0x7f0900fb
+.field public static final ev_plus_0_5:I = 0x7f0900f4
 
-.field public static final ev_plus_0_5:I = 0x7f0900f6
+.field public static final ev_plus_1_0:I = 0x7f0900f3
 
-.field public static final ev_plus_1_0:I = 0x7f0900f5
+.field public static final ev_plus_1_5:I = 0x7f0900f2
 
-.field public static final ev_plus_1_5:I = 0x7f0900f4
+.field public static final ev_plus_2_0:I = 0x7f0900f1
 
-.field public static final ev_plus_2_0:I = 0x7f0900f3
+.field public static final face_touched:I = 0x7f09015c
 
-.field public static final face_touched:I = 0x7f090166
+.field public static final face_zoom_helptext:I = 0x7f090130
 
-.field public static final face_zoom_helptext:I = 0x7f090138
+.field public static final faces_detected:I = 0x7f09015b
 
-.field public static final faces_detected:I = 0x7f090165
+.field public static final gallery:I = 0x7f09010e
 
-.field public static final gallery:I = 0x7f090110
+.field public static final help_text_panorama:I = 0x7f0900d3
 
-.field public static final gallery_disable:I = 0x7f090167
+.field public static final help_text_panorama_device:I = 0x7f0900d4
 
-.field public static final help_text_panorama:I = 0x7f0900d4
-
-.field public static final help_text_panorama_device:I = 0x7f0900d5
-
-.field public static final history:I = 0x7f09011c
+.field public static final history:I = 0x7f09011a
 
 .field public static final image_stitching_fail:I = 0x7f09001a
 
@@ -577,167 +561,157 @@
 
 .field public static final low_batt_msg:I = 0x7f090016
 
-.field public static final low_database_storage_view_text:I = 0x7f0900ec
+.field public static final low_database_storage_view_text:I = 0x7f0900ea
 
-.field public static final low_temp_msg:I = 0x7f0900ff
+.field public static final low_temp_msg:I = 0x7f0900fd
 
-.field public static final media_scanner_running:I = 0x7f0900e2
+.field public static final media_scanner_running:I = 0x7f0900e0
 
 .field public static final media_server_died_msg:I = 0x7f090013
 
-.field public static final message_Auto_ShareShot:I = 0x7f0900d8
+.field public static final message_DefaultLayout:I = 0x7f0900d5
 
-.field public static final message_DefaultLayout:I = 0x7f0900d6
+.field public static final message_EULA_GPS:I = 0x7f0900d6
 
-.field public static final message_EULA_GPS:I = 0x7f0900d7
+.field public static final message_enable_GPS:I = 0x7f0900d8
 
-.field public static final message_enable_GPS:I = 0x7f0900da
+.field public static final message_size_limited:I = 0x7f0900e4
 
-.field public static final message_size_limited:I = 0x7f0900e6
+.field public static final mobileType:I = 0x7f09011d
 
-.field public static final mobileType:I = 0x7f09011f
+.field public static final name_cannot_empty:I = 0x7f090112
 
-.field public static final name_cannot_empty:I = 0x7f090114
+.field public static final network_title:I = 0x7f090100
 
-.field public static final network_title:I = 0x7f090102
-
-.field public static final network_title_chn:I = 0x7f090103
+.field public static final network_title_chn:I = 0x7f090101
 
 .field public static final not_enough_space:I = 0x7f090006
 
-.field public static final not_supported_zoom:I = 0x7f0900fc
+.field public static final not_supported_zoom:I = 0x7f0900fa
 
 .field public static final null_string:I = 0x7f090000
 
-.field public static final on_device_help_camcorder:I = 0x7f09013d
+.field public static final on_device_help_camcorder:I = 0x7f090134
 
-.field public static final on_device_help_editable:I = 0x7f09013f
+.field public static final on_device_help_editable:I = 0x7f090136
 
-.field public static final on_device_help_focus:I = 0x7f09013c
+.field public static final on_device_help_focus:I = 0x7f090133
 
-.field public static final on_device_help_self:I = 0x7f09013e
-
-.field public static final on_device_help_voicecommand:I = 0x7f090140
+.field public static final on_device_help_self:I = 0x7f090135
 
 .field public static final open_hw_failed_msg:I = 0x7f09000f
 
 .field public static final panorama_processing_msg:I = 0x7f09000c
 
-.field public static final pcType:I = 0x7f090121
+.field public static final pcType:I = 0x7f09011f
 
-.field public static final plugged_low_batt_msg:I = 0x7f0900fe
+.field public static final plugged_low_batt_msg:I = 0x7f0900fc
 
-.field public static final preview_file_received_title:I = 0x7f090101
+.field public static final preview_file_received_title:I = 0x7f0900ff
 
 .field public static final processing_msg:I = 0x7f09000b
 
-.field public static final profile_user_default_name:I = 0x7f090122
+.field public static final profile_user_default_name:I = 0x7f090120
 
-.field public static final record:I = 0x7f090130
+.field public static final record:I = 0x7f09012a
 
 .field public static final recording_failed_msg:I = 0x7f090011
 
-.field public static final recording_speed_1:I = 0x7f09014d
+.field public static final recording_speed_1:I = 0x7f090143
 
-.field public static final recording_speed_1_2:I = 0x7f09014e
+.field public static final recording_speed_1_2:I = 0x7f090144
 
-.field public static final recording_speed_1_4:I = 0x7f09014f
+.field public static final recording_speed_1_4:I = 0x7f090145
 
-.field public static final recording_speed_1_8:I = 0x7f090150
+.field public static final recording_speed_1_8:I = 0x7f090146
 
-.field public static final recording_speed_2:I = 0x7f09014a
+.field public static final recording_speed_2:I = 0x7f090140
 
-.field public static final recording_speed_4:I = 0x7f09014b
+.field public static final recording_speed_4:I = 0x7f090141
 
-.field public static final recording_speed_8:I = 0x7f09014c
+.field public static final recording_speed_8:I = 0x7f090142
 
-.field public static final recording_timelapse_1:I = 0x7f090151
+.field public static final recording_timelapse_1:I = 0x7f090147
 
-.field public static final recording_timelapse_10:I = 0x7f090157
+.field public static final recording_timelapse_10:I = 0x7f09014d
 
-.field public static final recording_timelapse_1_5:I = 0x7f090152
+.field public static final recording_timelapse_1_5:I = 0x7f090148
 
-.field public static final recording_timelapse_2:I = 0x7f090153
+.field public static final recording_timelapse_2:I = 0x7f090149
 
-.field public static final recording_timelapse_2_5:I = 0x7f090154
+.field public static final recording_timelapse_2_5:I = 0x7f09014a
 
-.field public static final recording_timelapse_3:I = 0x7f090155
+.field public static final recording_timelapse_3:I = 0x7f09014b
 
-.field public static final recording_timelapse_5:I = 0x7f090156
+.field public static final recording_timelapse_5:I = 0x7f09014c
 
-.field public static final recording_timelapse_seconds:I = 0x7f090149
+.field public static final recording_timelapse_seconds:I = 0x7f09013f
 
 .field public static final savingImage:I = 0x7f09000e
 
-.field public static final sbeam_helptext:I = 0x7f09012a
+.field public static final self_recording_open_warning_popup:I = 0x7f090158
 
-.field public static final self_recording_open_warning_popup:I = 0x7f090162
+.field public static final self_shot_open_warning_popup:I = 0x7f090157
 
-.field public static final self_shot_open_warning_popup:I = 0x7f090161
+.field public static final sendImage:I = 0x7f090118
 
-.field public static final sendImage:I = 0x7f09011a
+.field public static final sendVideo:I = 0x7f090117
 
-.field public static final sendVideo:I = 0x7f090119
-
-.field public static final setImage:I = 0x7f09011b
+.field public static final setImage:I = 0x7f090119
 
 .field public static final settings:I = 0x7f090015
 
-.field public static final share_with:I = 0x7f09010f
+.field public static final share_with:I = 0x7f09010d
 
-.field public static final shareshot_no_user:I = 0x7f090123
+.field public static final shareshot_no_user:I = 0x7f090121
 
-.field public static final sharing_devices:I = 0x7f09010e
+.field public static final sharing_devices:I = 0x7f09010c
 
-.field public static final shutter:I = 0x7f09012f
+.field public static final shutter:I = 0x7f090129
 
-.field public static final singleshotburst_helptext:I = 0x7f090129
+.field public static final snap_shot_limitation_dialog:I = 0x7f090132
 
-.field public static final snap_shot_limitation_dialog:I = 0x7f09013b
+.field public static final snapshot_saved:I = 0x7f090122
 
-.field public static final snapshot_saved:I = 0x7f090124
+.field public static final storage_setting_dialog_message:I = 0x7f090127
 
-.field public static final storage_setting_dialog_burstshot_message:I = 0x7f09012d
+.field public static final storage_setting_dialog_title:I = 0x7f090126
 
-.field public static final storage_setting_dialog_message:I = 0x7f09012c
+.field public static final tabletType:I = 0x7f09011e
 
-.field public static final storage_setting_dialog_title:I = 0x7f09012b
-
-.field public static final tabletType:I = 0x7f090120
-
-.field public static final take_photo:I = 0x7f090111
+.field public static final take_photo:I = 0x7f09010f
 
 .field public static final unknown_error_callback_msg:I = 0x7f090014
 
-.field public static final user_profile_title:I = 0x7f090100
+.field public static final user_profile_title:I = 0x7f0900fe
 
-.field public static final video_play:I = 0x7f090116
+.field public static final video_play:I = 0x7f090114
 
 .field public static final video_reach_size_limit:I = 0x7f09000a
 
 .field public static final wait:I = 0x7f090003
 
-.field public static final wallpaper:I = 0x7f0900ea
+.field public static final wallpaper:I = 0x7f0900e8
 
 .field public static final warning_msg:I = 0x7f090004
 
-.field public static final wifi_dialog_no:I = 0x7f09010d
+.field public static final wifi_dialog_no:I = 0x7f09010b
 
-.field public static final wifi_dialog_text:I = 0x7f090107
+.field public static final wifi_dialog_text:I = 0x7f090105
 
-.field public static final wifi_dialog_text_chn:I = 0x7f090108
+.field public static final wifi_dialog_text_chn:I = 0x7f090106
 
-.field public static final wifi_dialog_title:I = 0x7f090106
+.field public static final wifi_dialog_title:I = 0x7f090104
 
-.field public static final wifi_dialog_yes:I = 0x7f09010c
+.field public static final wifi_dialog_yes:I = 0x7f09010a
 
-.field public static final wifi_direct_dialog_text:I = 0x7f09010a
+.field public static final wifi_direct_dialog_text:I = 0x7f090108
 
-.field public static final wifi_direct_dialog_text_chn:I = 0x7f09010b
+.field public static final wifi_direct_dialog_text_chn:I = 0x7f090109
 
-.field public static final wifi_direct_dialog_title:I = 0x7f090109
+.field public static final wifi_direct_dialog_title:I = 0x7f090107
 
-.field public static final zoom_not_available:I = 0x7f0900fd
+.field public static final zoom_not_available:I = 0x7f0900fb
 
 
 # direct methods
@@ -745,8 +719,8 @@
     .locals 0
 
     .prologue
-    .line 2558
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 2416
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

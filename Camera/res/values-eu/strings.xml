@@ -34,7 +34,7 @@ deian zehar"</string>
     <string name="SM_SMILE">Irri klisk.</string>
     <string name="SM_FRAME">Marko argazkia</string>
     <string name="SM_BEAUTY">Ederra</string>
-    <string name="SM_VINTAGE">Vintage</string>
+    <string name="SM_VINTAGE">Mahats uzta</string>
     <string name="SM_ADDME">Gehitu ni</string>
     <string name="SM_ACTION">Akzio hartualdia</string>
     <string name="SM_STOPMOTION">Gelditu mugimendua</string>
@@ -61,14 +61,12 @@ deian zehar"</string>
     <string name="ISO_800">800</string>
     <string name="ISO_1600">1600</string>
     <string name="ISO_3200">3200</string>
-    <string name="E_BW">Txuri eta beltza</string>
+    <string name="E_BW">Zuri-beltzean</string>
     <string name="E_SEPIA">Sepia</string>
     <string name="E_NEGATIVE">Negatiboa</string>
     <string name="E_EMBOSS">Bozeldu</string>
     <string name="E_OUTLINE">Ingerada</string>
     <string name="E_WATERCOLOR">Urmargoa</string>
-    <string name="E_MONOCHROME">Monokromoa</string>
-    <string name="E_SKETCH">Zirriborroa</string>
     <string name="E_WASHED">Garbitua</string>
     <string name="E_POSTERIZE">Posterizatu</string>
     <string name="E_SOLARIZE">Solarizatu</string>
@@ -79,7 +77,7 @@ deian zehar"</string>
     <string name="E_POINT_RED_YELLOW">Puntu gorri-horia</string>
     <string name="E_CARTOONIZE">Marrazkitu</string>
     <string name="F_AUTO_FLASH">Flash automatikoa</string>
-    <string name="F_AUTOFOCUS">Autofokua</string>
+    <string name="F_AUTOFOCUS">Fokatze automatikoa</string>
     <string name="F_MACRO">Makroa</string>
     <string name="F_FACE">Aurpegi detekzioa</string>
     <string name="F_PANFOCUS">Pan fokua</string>
@@ -102,7 +100,7 @@ deian zehar"</string>
     <string name="RM_MMS">MMS muga</string>
     <string name="RM_EMAIL">Mezu elektronikoarentzako muga</string>
     <string name="RM_SLOW">Kamera geldoa</string>
-    <string name="RM_FAST">Kamera azkarra</string>
+    <string name="RM_FAST">Mugimendu azkarra</string>
     <string name="CS_PROGRESS_TEXT">Irudia sortzen. Itxaron mesedez...</string>
     <string name="SCN_NONE">Bat ere ez</string>
     <string name="SCN_PORTRAIT">Erretratua</string>
@@ -116,7 +114,7 @@ deian zehar"</string>
     <string name="SCN_NIGHT_SHOT">Gaua</string>
     <string name="SCN_FIREWORK">Su artifizialak</string>
     <string name="SCN_TEXT">Testua</string>
-    <string name="SCN_CANDLE_LIGHT">Kandelak</string>
+    <string name="SCN_CANDLE_LIGHT">Argi gutxi</string>
     <string name="SCN_BACK_LIGHT">Atzeko argia</string>
     <string name="OPTION_ON">Aktibatuta</string>
     <string name="OPTION_OFF">Desaktibatuta</string>
@@ -131,7 +129,6 @@ deian zehar"</string>
     <string name="Title_Timer">Tenporizadorea</string>
     <string name="Title_Resolution">Bereizmena</string>
     <string name="Title_ShootAndShare">Partek. argazk. Ezarpenak</string>
-    <string name="Title_DeviceList">Gailu zerrenda</string>
     <string name="Title_WhiteBalance">Zuri-balantzea</string>
     <string name="Title_Effects">Efektuak</string>
     <string name="Title_Focus">Fokatu</string>
@@ -153,11 +150,10 @@ deian zehar"</string>
     <string name="Title_AutoContrast">Kontraste automatikoa</string>
     <string name="Title_GPS">GPS etiketa</string>
     <string name="Title_Review">Berrikusi</string>
-    <string name="Title_AutoShareShot">Partek. autom. ateraldia</string>
     <string name="Title_Guideline">Gida marrak</string>
     <string name="Title_VideoQuality">Bideo kalitatea</string>
     <string name="Title_AudioRecording">Audio grabaketa</string>
-    <string name="Title_Storage">Memoria</string>
+    <string name="Title_Storage">Biltegiratzea</string>
     <string name="Title_Reset">Berrezarri</string>
     <string name="Title_Mode">Modua</string>
     <string name="Title_Back">Atzera</string>
@@ -176,10 +172,7 @@ deian zehar"</string>
     <string name="HDR_Helptext">Kontuz gailua astintzearekin argazkiak ateratzen dituzun bitartean</string>
     <string name="help_text_panorama">Sakatu kamera-tekla eta mugitu telefonoa poliki-poliki norabide bakarrean</string>
     <string name="help_text_panorama_device">Sakatu kamera-tekla eta mugitu gailua poliki norabide bakarrean</string>
-    <string name="message_DefaultLayout">Laster-markaren itxura berrezarriko da</string>
-    <string name="message_EULA_GPS">GPS etiketa gaitzean, argazki bakoitzean kokapen geografikoaren datuak erantsi, txertatu eta bilduko dira. Erabili kontuz argazkiak bidaltzen, partekatzen, banatzen, transmititzen edo kopiatzen dituztenean argazkiak non atera den adierazten baitu</string>
-    <string name="message_Auto_ShareShot">"Partekatze automatikoko ateraldiak nahi duzun gailuetara erraz konektatzea ahalbidetzen dizu haiekin argazkiak partekatzeko.
-Gaitu partekatze automatikoko ateraldia, ondoren elkartu gailuak (normalean bien atzealdeak) haiek konektatzeko"</string>
+    <string name="message_EULA_GPS">GPS etiketa gaitzean, argazki bakoitzean kokapen geografikoaren datuak erantsi, txertatu eta bilduko da. Erabili kontuz argazkiak bidaltzen, partekatzen, banatzen, transmititzen edo kopiatzen dituztenean argazkiak non atera den adierazten baitu</string>
     <string name="GPS_msg">GPSa itzalita</string>
     <string name="message_enable_GPS">Piztu GPSa ezarpenetan GPS etiketa erabiltzeko</string>
     <string name="cancel">Ezeztatu</string>
@@ -245,11 +238,9 @@ Gaitu partekatze automatikoko ateraldia, ondoren elkartu gailuak (normalean bien
     <string name="profile_user_default_name">Ezezaguna</string>
     <string name="shareshot_no_user">Ez dago norekin partekatu</string>
     <string name="snapshot_saved">%s gordeta</string>
-    <string name="editable_shortcut_reset">Berrezarri</string>
     <string name="editable_shortcut_helptext_title">Aholkuak</string>
     <string name="editable_shortcut_helptext_message">Ukitu eta eutsi laster-markak horiek editatzeko</string>
     <string name="editable_shortcut_helptext">Ukitu eta eutsi ikonoa, ondoren arrastatu laster-marken editatze kokapenera</string>
-    <string name="sbeam_helptext">Atera eta partekatu argazkiak beste gailuekin. Elkartu gailua zer gailurekin partekatu nahi duzun S Beam bidez gehitzeko</string>
     <string name="storage_setting_dialog_title">Memoriaren kokapena</string>
     <string name="storage_setting_dialog_message">SD txartela sartuta. Aldatu memoria kokapena SD txartelera?</string>
     <string name="do_not_ask_again">Ez erakutsi berriro</string>
@@ -258,8 +249,6 @@ Gaitu partekatze automatikoko ateraldia, ondoren elkartu gailuak (normalean bien
     <string name="bestpic">Argazkirik onena</string>
     <string name="bestpic_on">Piztuta</string>
     <string name="bestpic_off">Itzalita</string>
-    <string name="bestgroup">Talde poserik onena</string>
-    <string name="bestgroup_title">Haut. gordetzeko aurpegi onak</string>
     <string name="battery_low">Itxi Kamera. Bateriaren tenperatura baxuegia</string>
     <string name="buddy_photo_share_helptext">Atera eta partekatu argazkiak lagunekin aurpegi hautemate bidez</string>
     <string name="face_zoom_helptext">Bi aldiz ukitu aurpegi batean zooma hurbiltzeko eta urruntzeko</string>
@@ -269,7 +258,6 @@ Gaitu partekatze automatikoko ateraldia, ondoren elkartu gailuak (normalean bien
     <string name="on_device_help_camcorder">Aldatu Bideo grabagailu modura</string>
     <string name="on_device_help_self">Aldatu auto-erretratu modura</string>
     <string name="on_device_help_editable">Ukitu eta eutsi mugitu nahi duzun laster-bidea. Ondoren arrastatu nahi duzun tokira</string>
-    <string name="on_device_help_voicecommand">Argazkiak atera ditzakezu ahots komandoekin, adibidez, ‘Atera’, ‘Kliskatu’, ‘Egin irribarre’ edo ‘Patata’</string>
     <string name="Title_VideoSpeed">Abiadura</string>
     <string name="SPEED_OFF">Arrunta</string>
     <string name="SPEED_2X_FASTER">2x azkarrago</string>
@@ -291,7 +279,4 @@ Gaitu partekatze automatikoko ateraldia, ondoren elkartu gailuak (normalean bien
     <string name="self_recording_open_warning_popup">Norberaren bideoak telefonoa irekita dagoenean soilik atera daitezke</string>
     <string name="contextual_filename">Fitxategi izen kontestuala</string>
     <string name="enable_gps_dialog">GPS etiketa gaitu behar duzu. Gaitu GPS etiketa?</string>
-    <string name="gallery_disable">Galeria ezgaituta dago</string>
-    <string name="HDR_Normal">Arrunta</string>
-    <string name="HDR_Strong">Sendoa</string>
 </resources>

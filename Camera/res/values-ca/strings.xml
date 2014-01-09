@@ -33,7 +33,7 @@
     <string name="SM_SMILE">Disp somriure</string>
     <string name="SM_FRAME">Disparament amb marc</string>
     <string name="SM_BEAUTY">Bellesa</string>
-    <string name="SM_VINTAGE">Vintage</string>
+    <string name="SM_VINTAGE">Collita</string>
     <string name="SM_ADDME">Afegir-me</string>
     <string name="SM_ACTION">"Foto d'acció"</string>
     <string name="SM_STOPMOTION">Aturar el moviment</string>
@@ -66,8 +66,6 @@
     <string name="E_EMBOSS">Relleu</string>
     <string name="E_OUTLINE">Contorn</string>
     <string name="E_WATERCOLOR">Aquarel·la</string>
-    <string name="E_MONOCHROME">Monocromàtic</string>
-    <string name="E_SKETCH">Esbós</string>
     <string name="E_WASHED">Destenyit</string>
     <string name="E_POSTERIZE">Posteritzar</string>
     <string name="E_SOLARIZE">Solaritzar</string>
@@ -78,7 +76,7 @@
     <string name="E_POINT_RED_YELLOW">Punt vermell-groc</string>
     <string name="E_CARTOONIZE">Fer dib anim</string>
     <string name="F_AUTO_FLASH">Flaix automàtic</string>
-    <string name="F_AUTOFOCUS">Enfoc auto</string>
+    <string name="F_AUTOFOCUS">Enfocament automàtic</string>
     <string name="F_MACRO">Macro</string>
     <string name="F_FACE">Detecció de cares</string>
     <string name="F_PANFOCUS">Enfoc pan</string>
@@ -110,7 +108,7 @@
     <string name="SCN_PARTY_INDOOR">Festa/Interior</string>
     <string name="SCN_BEACH_SNOW">Platja/Neu</string>
     <string name="SCN_SUNSET">Posta de sol</string>
-    <string name="SCN_DAWN_DUSK">Albada</string>
+    <string name="SCN_DAWN_DUSK">Alba</string>
     <string name="SCN_FALL_COLOR">Color de tardor</string>
     <string name="SCN_NIGHT_SHOT">Nit</string>
     <string name="SCN_FIREWORK">Focs artificials</string>
@@ -130,7 +128,6 @@
     <string name="Title_Timer">Temporitzador</string>
     <string name="Title_Resolution">Resolució</string>
     <string name="Title_ShootAndShare">Ajust compar dispar</string>
-    <string name="Title_DeviceList">Llista de dispositius</string>
     <string name="Title_WhiteBalance">Balanç de blancs</string>
     <string name="Title_Effects">Efectes</string>
     <string name="Title_Focus">Enfocar</string>
@@ -152,7 +149,6 @@
     <string name="Title_AutoContrast">Contrast automàtic</string>
     <string name="Title_GPS">Etiqueta GPS</string>
     <string name="Title_Review">Revisar</string>
-    <string name="Title_AutoShareShot">Compartir dispar auto</string>
     <string name="Title_Guideline">Instruccions</string>
     <string name="Title_VideoQuality">Qualitat de vídeo</string>
     <string name="Title_AudioRecording">"Gravació d'àudio"</string>
@@ -175,10 +171,7 @@
     <string name="HDR_Helptext">Vigili de no sacsejar el dispositiu en fer fotos</string>
     <string name="help_text_panorama">Premi la tecla de càmera i mogui el telèfon lentament en una direcció</string>
     <string name="help_text_panorama_device">Premi la tecla de càmera i mogui el dispositiu lentament en una direcció</string>
-    <string name="message_DefaultLayout">"Es restablirà el disseny d'accés directe"</string>
-    <string name="message_EULA_GPS">"Si habilita l'etiqueta GPS, s'adjuntaran, incrustaran i emmagatzemaran dades d'ubicació geogràfica a cada foto. Vagi amb compte quan enviï, comparteixi, transmeti o copiï aquestes fotos perquè contindrà la ubicació on s'han fet"</string>
-    <string name="message_Auto_ShareShot">"Compartir dispar automàtic li permet connectar-se fàcilment als dispositius amb què vol compartir imatges.
-Habiliti Compartir dispar automàtic i, a continuació, ajunti els dispositius (normalment d'esquena) per connectar-los"</string>
+    <string name="message_EULA_GPS">"Si habilita l'etiqueta GPS, s'adjuntaran, incrustaran i emmagatzemaran dades d'ubicació geogràfica a cada foto. Vagi amb compte quan enviï, comparteixi, transmeti o copiï aquestes fotos perquè contindrà la informació on s'han fet"</string>
     <string name="GPS_msg">GPS desactivat</string>
     <string name="message_enable_GPS">"Activi el GPS a Ajustaments per utilitzar l'etiqueta GPS"</string>
     <string name="cancel">Cancelar</string>
@@ -244,11 +237,9 @@ Habiliti Compartir dispar automàtic i, a continuació, ajunti els dispositius (
     <string name="profile_user_default_name">Desconegut</string>
     <string name="shareshot_no_user">No hi ha gent per compartir</string>
     <string name="snapshot_saved">%s desat</string>
-    <string name="editable_shortcut_reset">Restablir</string>
     <string name="editable_shortcut_helptext_title">Consells</string>
     <string name="editable_shortcut_helptext_message">Mantingui tocats els accessos directes per editar-los</string>
     <string name="editable_shortcut_helptext">"Mantingui tocada la icona i arrossegui-la a la posició d'edició d'accessos directes"</string>
-    <string name="sbeam_helptext">Faci i comparteixi fotos amb altres dispositius. Ajunti els dispositius per afegir dispositius amb els quals vulgui compartir mitjançant S Beam</string>
     <string name="storage_setting_dialog_title">"Ubicació d'emmagatzematge"</string>
     <string name="storage_setting_dialog_message">"Targeta SD inserida. Canviar la ubicació d'emmagatzematge a la targeta SD?"</string>
     <string name="do_not_ask_again">No tornar a mostrar</string>
@@ -257,8 +248,6 @@ Habiliti Compartir dispar automàtic i, a continuació, ajunti els dispositius (
     <string name="bestpic">Millor foto</string>
     <string name="bestpic_on">Ac</string>
     <string name="bestpic_off">Des</string>
-    <string name="bestgroup">Millor pose de grup</string>
-    <string name="bestgroup_title">Sel cada millor cara per desar</string>
     <string name="battery_low">Tanqui la càmera. La temperatura de bateria és massa baixa</string>
     <string name="buddy_photo_share_helptext">Fer i compartir fotos amb amics mitjançant detecció de cares</string>
     <string name="face_zoom_helptext">Doble toc en una cara per apropar o allunyar</string>
@@ -268,7 +257,6 @@ Habiliti Compartir dispar automàtic i, a continuació, ajunti els dispositius (
     <string name="on_device_help_camcorder">Canviar a mode de videocàmera</string>
     <string name="on_device_help_self">"Canviar a mode d'autoretrat"</string>
     <string name="on_device_help_editable">"Mantingui tocat l'accés directe que vulgui moure i arrossegui'l on vulgui"</string>
-    <string name="on_device_help_voicecommand">Pot fer fotos amb ordres de veu com ‘Capturar’, ‘Disparar’, ‘Somriu’ i ‘Lluís’</string>
     <string name="Title_VideoSpeed">Velocitat</string>
     <string name="SPEED_OFF">Normal</string>
     <string name="SPEED_2X_FASTER">2 cops més ràpid</string>
@@ -290,7 +278,4 @@ Habiliti Compartir dispar automàtic i, a continuació, ajunti els dispositius (
     <string name="self_recording_open_warning_popup">"L'autogravació només es pot utilitzar amb el telèfon obert"</string>
     <string name="contextual_filename">Nom de fitxer contextual</string>
     <string name="enable_gps_dialog">"Cal habilitar l'etiqueta GPS. Habilitar-la?"</string>
-    <string name="gallery_disable">La Galeria està deshabilitada</string>
-    <string name="HDR_Normal">Normal</string>
-    <string name="HDR_Strong">Fort</string>
 </resources>

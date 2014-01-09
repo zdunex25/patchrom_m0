@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 682
+    .line 664
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$RawPictureCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 682
+    .line 664
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/CameraEngine$RawPictureCallback;-><init>(Lcom/sec/android/app/camera/CameraEngine;)V
 
     return-void
@@ -55,14 +55,14 @@
     .parameter "camera"
 
     .prologue
-    .line 685
+    .line 667
     const-string v0, "CameraEngine"
 
     const-string v1, "RawPictureCallback.onPictureTaken"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 687
+    .line 669
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$RawPictureCallback;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mCurrentState:Lcom/sec/android/app/camera/AbstractCeState;
@@ -75,7 +75,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 692
+    .line 674
     :cond_0
     return-void
 .end method

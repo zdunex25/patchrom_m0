@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1407
+    .line 1379
     iput-object p1, p0, Lcom/sec/android/app/camera/CamcorderEngine$5;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 1409
+    .line 1381
     const-string v0, "CamcorderEngine"
 
     const-string v1, "starting preview..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
+    .line 1383
     :try_start_0
     const-string v0, "CamcorderEngine"
 
@@ -56,11 +56,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1412
+    .line 1384
     iget-object v0, p0, Lcom/sec/android/app/camera/CamcorderEngine$5;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #getter for: Lcom/sec/android/app/camera/CamcorderEngine;->mCamcorderDevice:Lcom/sec/android/seccamera/SecCamera;
-    invoke-static {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->access$800(Lcom/sec/android/app/camera/CamcorderEngine;)Lcom/sec/android/seccamera/SecCamera;
+    invoke-static {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->access$700(Lcom/sec/android/app/camera/CamcorderEngine;)Lcom/sec/android/seccamera/SecCamera;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1423
+    .line 1390
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CamcorderEngine$5;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
@@ -78,16 +78,16 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/CameraEngine$StateMessageHandler;->sendEmptyMessage(I)Z
 
-    .line 1424
+    .line 1391
     iget-object v0, p0, Lcom/sec/android/app/camera/CamcorderEngine$5;->this$0:Lcom/sec/android/app/camera/CamcorderEngine;
 
     #calls: Lcom/sec/android/app/camera/CamcorderEngine;->updateOutdoorVisibility()V
-    invoke-static {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->access$900(Lcom/sec/android/app/camera/CamcorderEngine;)V
+    invoke-static {v0}, Lcom/sec/android/app/camera/CamcorderEngine;->access$800(Lcom/sec/android/app/camera/CamcorderEngine;)V
 
-    .line 1425
+    .line 1392
     return-void
 
-    .line 1413
+    .line 1385
     :catch_0
     move-exception v0
 

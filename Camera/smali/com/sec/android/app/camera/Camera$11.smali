@@ -3,7 +3,7 @@
 .source "Camera.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # annotations
@@ -27,29 +27,76 @@
     .parameter
 
     .prologue
-    .line 5524
+    .line 5093
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 3
     .parameter "dialog"
-    .parameter "which"
+    .parameter "keyCode"
+    .parameter "event"
 
     .prologue
-    .line 5526
+    const/4 v0, 0x1
+
+    .line 5095
+    const/16 v1, 0x1b
+
+    if-ne p2, v1, :cond_0
+
+    .line 5096
+    const-string v1, "Camera"
+
+    const-string v2, "jhSeo handlePluggedLowBattery onKey() CAMERAKEY return"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 5105
+    :goto_0
+    return v0
+
+    .line 5100
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq p2, v1, :cond_1
+
+    const/16 v1, 0x52
+
+    if-ne p2, v1, :cond_2
+
+    .line 5102
+    :cond_1
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    iput-boolean v0, v1, Lcom/sec/android/app/camera/Camera;->mLowBatteryDisableFlashPopupDisplayed:Z
+
+    goto :goto_0
+
+    .line 5105
+    :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->getWindow()Landroid/view/Window;
 
-    iput-boolean v1, v0, Lcom/sec/android/app/camera/Camera;->mLowBatteryDisableFlashPopupDisplayed:Z
+    move-result-object v0
 
-    .line 5527
-    return-void
+    invoke-virtual {v0, p3}, Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 250
+    .line 243
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$TimerEventHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 252
+    .line 245
     const-string v0, "AXLOG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +72,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
+    .line 246
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$TimerEventHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mOnTimerEventListener:Lcom/sec/android/app/camera/CameraEngine$OnTimerEventListener;
@@ -81,6 +81,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/CameraEngine$OnTimerEventListener;->onTimerEvent(I)V
 
-    .line 254
+    .line 247
     return-void
 .end method

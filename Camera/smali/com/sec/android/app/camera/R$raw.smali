@@ -25,16 +25,14 @@
 
 .field public static final cameratimer:I = 0x7f050004
 
-.field public static final shutter_500:I = 0x7f050005
-
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 2550
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 2409
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

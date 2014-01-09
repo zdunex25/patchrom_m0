@@ -3,7 +3,7 @@
 .source "Camera.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -27,80 +27,144 @@
     .parameter
 
     .prologue
-    .line 6364
+    .line 5930
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 6
     .parameter "dialog"
-    .parameter "keyCode"
-    .parameter "event"
+    .parameter "which"
 
     .prologue
-    const/4 v0, 0x1
+    const/16 v5, 0x7d4
 
-    .line 6366
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    const/16 v4, 0x64
 
-    move-result v1
+    const/4 v3, 0x1
 
-    if-ne v1, v0, :cond_1
+    .line 5935
+    if-nez p2, :cond_1
 
-    const/4 v1, 0x4
+    .line 5936
+    new-instance v0, Landroid/content/Intent;
 
-    if-eq p2, v1, :cond_0
-
-    const/16 v1, 0x52
-
-    if-eq p2, v1, :cond_0
-
-    const/16 v1, 0x17
-
-    if-ne p2, v1, :cond_1
-
-    .line 6368
-    :cond_0
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
-
-    const-string v2, "/sdcard/Android/data/com.sec.android.app.camera/user_pic.b"
-
-    iput-object v2, v1, Lcom/sec/android/app/camera/Camera;->mPhotoPath:Ljava/lang/String;
-
-    .line 6369
-    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
+    const-string v1, "android.intent.action.GET_CONTENT"
 
     const/4 v2, 0x0
 
-    iput-boolean v2, v1, Lcom/sec/android/app/camera/Camera;->mNameChanged:Z
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 6370
+    .line 5937
+    .local v0, intent:Landroid/content/Intent;
+    const-string v1, "image/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 5938
+    const-string v1, "crop"
+
+    const-string v2, "true"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 5939
+    const-string v1, "aspectX"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5940
+    const-string v1, "aspectY"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5941
+    const-string v1, "outputX"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5942
+    const-string v1, "outputY"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5943
+    const-string v1, "return-data"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 5944
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
 
-    const/4 v2, 0x6
+    invoke-virtual {v1, v0, v5}, Lcom/sec/android/app/camera/Camera;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/Camera;->removeDialog(I)V
-
-    .line 6373
+    .line 5956
+    .end local v0           #intent:Landroid/content/Intent;
+    :cond_0
     :goto_0
-    return v0
+    return-void
 
+    .line 5945
     :cond_1
-    iget-object v0, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
+    if-ne p2, v3, :cond_0
 
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->getWindow()Landroid/view/Window;
+    .line 5946
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    const-string v1, "android.media.action.IMAGE_CAPTURE"
 
-    invoke-virtual {v0, p3}, Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    .line 5947
+    .restart local v0       #intent:Landroid/content/Intent;
+    const-string v1, "com.sec.android.app.camera"
+
+    const-string v2, "com.sec.android.app.camera.Camera"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 5948
+    const-string v1, "image/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 5949
+    const-string v1, "crop"
+
+    const-string v2, "true"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 5950
+    const-string v1, "aspectX"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5951
+    const-string v1, "aspectY"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5952
+    const-string v1, "outputX"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5953
+    const-string v1, "outputY"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5954
+    iget-object v1, p0, Lcom/sec/android/app/camera/Camera$25;->this$0:Lcom/sec/android/app/camera/Camera;
+
+    invoke-virtual {v1, v0, v5}, Lcom/sec/android/app/camera/Camera;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method

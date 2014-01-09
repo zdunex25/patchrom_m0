@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 137
+    .line 124
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderRecordingMenu$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLCamcorderRecordingMenu;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,19 +39,19 @@
     .parameter "msg"
 
     .prologue
-    .line 139
+    .line 126
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 140
+    .line 127
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderRecordingMenu$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLCamcorderRecordingMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/glwidget/TwGLCamcorderRecordingMenu;->stepSecond()V
 
-    .line 142
+    .line 129
     :cond_0
     return-void
 .end method

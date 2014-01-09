@@ -30,7 +30,7 @@
     .line 150
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLExamples$TwListAdapter;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLExamples;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -83,13 +83,13 @@
 
     move-result-object v1
 
-    const v4, 0x7f020144
+    const v4, 0x7f02013a
 
-    const v5, 0x7f02023a
+    const v5, 0x7f020223
 
     const/4 v6, 0x0
 
-    const v7, 0x7f020244
+    const v7, 0x7f02022c
 
     move v3, v2
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0900d0
+    const v6, 0x7f0900cf
 
     invoke-virtual {v1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -2,6 +2,9 @@
 .super Lcom/sec/android/glview/TwGLViewGroup;
 .source "TwGLImageProgressBar.java"
 
+# interfaces
+.implements Lcom/sec/android/glview/TwGLView$OnClickListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -50,6 +53,8 @@
 
 .field private mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
+.field private mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
 .field private mUriList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -79,96 +84,96 @@
     .parameter "Max"
 
     .prologue
-    .line 75
+    .line 77
     invoke-direct/range {p0 .. p5}, Lcom/sec/android/glview/TwGLViewGroup;-><init>(Lcom/sec/android/glview/TwGLContext;FFFF)V
-
-    .line 44
-    const/4 v1, 0x0
-
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
     .line 45
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
     .line 46
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     .line 47
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHeight:F
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
 
     .line 48
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconWidth:F
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHeight:F
 
     .line 49
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconHeight:F
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconWidth:F
 
     .line 50
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconHeight:F
 
     .line 51
     const/4 v1, 0x0
 
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
+
+    .line 52
+    const/4 v1, 0x0
+
     iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicNum:I
 
-    .line 58
+    .line 60
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlight:Z
 
-    .line 59
+    .line 61
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 60
+    .line 62
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mUriList:Ljava/util/ArrayList;
 
-    .line 64
+    .line 66
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOnImageSelectedListener:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar$OnImageSelectedListener;
 
-    .line 77
+    .line 79
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mGL:Lcom/sec/android/glview/TwGLContext;
 
-    .line 78
+    .line 80
     iput p4, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
 
-    .line 79
+    .line 81
     iput p5, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHeight:F
 
-    .line 80
+    .line 82
     move/from16 v0, p10
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
-    .line 81
+    .line 83
     move/from16 v0, p8
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconWidth:F
 
-    .line 82
+    .line 84
     move/from16 v0, p9
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIconHeight:F
 
-    .line 83
+    .line 85
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     const/4 v3, 0x0
@@ -189,14 +194,14 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBackImage:Lcom/sec/android/glview/TwGLImage;
 
-    .line 84
+    .line 86
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
     new-array v1, v1, [Lcom/sec/android/glview/TwGLImage;
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
-    .line 85
+    .line 87
     new-instance v1, Lcom/sec/android/glview/TwGLRectangle;
 
     const/4 v3, 0x0
@@ -231,7 +236,42 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
 
-    .line 86
+    .line 88
+    new-instance v1, Lcom/sec/android/glview/TwGLRectangle;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
+
+    iget v5, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
+
+    int-to-float v5, v5
+
+    div-float/2addr v2, v5
+
+    const/high16 v5, 0x40a0
+
+    sub-float v5, v2, v5
+
+    iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHeight:F
+
+    const/high16 v6, 0x40a0
+
+    sub-float v6, v2, v6
+
+    const v7, -0xffff01
+
+    const/4 v8, 0x5
+
+    move-object v2, p1
+
+    invoke-direct/range {v1 .. v8}, Lcom/sec/android/glview/TwGLRectangle;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFII)V
+
+    iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    .line 89
     new-instance v1, Lcom/sec/android/glview/TwGLImage;
 
     const/4 v3, 0x0
@@ -252,43 +292,55 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
 
-    .line 87
+    .line 90
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOrientation:[I
 
-    .line 90
+    .line 93
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBackImage:Lcom/sec/android/glview/TwGLImage;
-
-    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
-
-    .line 91
-    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
-
-    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
-
-    .line 92
-    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
 
     .line 94
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
 
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
+
+    .line 95
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
+
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
+
+    .line 96
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
+
+    .line 99
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
+
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 95
+    .line 100
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
+
+    .line 101
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 97
+    .line 103
     invoke-static {}, Lcom/sec/android/glview/TwGLUtil;->getAlphaOnAnimation()Landroid/view/animation/Animation;
 
     move-result-object v1
@@ -297,14 +349,14 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mAnimation:Landroid/view/animation/AlphaAnimation;
 
-    .line 98
+    .line 104
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mAnimation:Landroid/view/animation/AlphaAnimation;
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 99
+    .line 105
     return-void
 .end method
 
@@ -314,7 +366,7 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 183
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
 
     return v0
@@ -325,7 +377,7 @@
     .parameter "index"
 
     .prologue
-    .line 173
+    .line 191
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOrientation:[I
 
     aget v0, v0, p1
@@ -337,7 +389,7 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 179
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     return v0
@@ -348,7 +400,7 @@
     .parameter "index"
 
     .prologue
-    .line 169
+    .line 187
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mUriList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -360,11 +412,84 @@
     return-object v0
 .end method
 
+.method public onClick(Lcom/sec/android/glview/TwGLView;)Z
+    .locals 4
+    .parameter "view"
+
+    .prologue
+    .line 169
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOnImageSelectedListener:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar$OnImageSelectedListener;
+
+    if-eqz v0, :cond_0
+
+    .line 170
+    iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOnImageSelectedListener:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar$OnImageSelectedListener;
+
+    invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getTag()I
+
+    move-result v2
+
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mUriList:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getTag()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/Uri;
+
+    invoke-interface {v1, v2, v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar$OnImageSelectedListener;->onImageSelected(ILandroid/net/Uri;)V
+
+    .line 172
+    :cond_0
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    invoke-virtual {p1}, Lcom/sec/android/glview/TwGLView;->getTag()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
+
+    iget v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    mul-float/2addr v1, v2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->moveLayoutAbsolute(FF)V
+
+    .line 173
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    invoke-virtual {v0}, Lcom/sec/android/glview/TwGLRectangle;->bringToFront()V
+
+    .line 174
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
+
+    .line 175
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public declared-synchronized resetProgressBar()V
     .locals 3
 
     .prologue
-    .line 132
+    .line 139
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -372,7 +497,7 @@
     :try_start_0
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
-    .line 134
+    .line 141
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
@@ -384,7 +509,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 135
+    .line 142
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
@@ -393,7 +518,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 136
+    .line 143
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
@@ -402,7 +527,7 @@
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->removeView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 137
+    .line 144
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
@@ -411,7 +536,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->clear()V
 
-    .line 138
+    .line 145
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
@@ -420,7 +545,7 @@
 
     aput-object v2, v0, v1
 
-    .line 134
+    .line 141
     :cond_0
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mIndex:I
 
@@ -432,7 +557,7 @@
 
     goto :goto_0
 
-    .line 132
+    .line 139
     :catchall_0
     move-exception v0
 
@@ -440,40 +565,47 @@
 
     throw v0
 
-    .line 142
+    .line 149
     :cond_1
     const/4 v0, 0x0
 
     :try_start_1
     iput v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicNum:I
 
-    .line 143
+    .line 150
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
 
-    .line 144
+    .line 151
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mSelectRect:Lcom/sec/android/glview/TwGLRectangle;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLRectangle;->setVisibility(I)V
+
+    .line 152
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 145
+    .line 153
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlight:Z
 
-    .line 146
+    .line 154
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mUriList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 147
+    .line 155
     monitor-exit p0
 
     return-void
@@ -484,12 +616,12 @@
     .parameter "mData"
 
     .prologue
-    .line 102
+    .line 108
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 103
+    .line 109
     :try_start_0
     iget-object v7, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
@@ -531,7 +663,7 @@
 
     aput-object v0, v7, v8
 
-    .line 104
+    .line 110
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
@@ -540,7 +672,7 @@
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 105
+    .line 111
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
@@ -551,7 +683,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setVisibility(I)V
 
-    .line 106
+    .line 112
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
@@ -562,7 +694,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 107
+    .line 113
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
 
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
@@ -571,7 +703,7 @@
 
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->startAnimation()V
 
-    .line 108
+    .line 114
     iget v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     add-int/lit8 v0, v0, 0x1
@@ -580,13 +712,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 110
+    .line 116
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 102
+    .line 108
     :catchall_0
     move-exception v0
 
@@ -602,18 +734,18 @@
     .parameter "orientation"
 
     .prologue
-    .line 113
+    .line 119
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 114
+    .line 120
     :try_start_0
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mUriList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 121
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mWidth:F
 
     iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mMax:I
@@ -632,7 +764,7 @@
 
     move-result-object v6
 
-    .line 116
+    .line 122
     .local v6, croppedBitmap:Landroid/graphics/Bitmap;
     new-instance v0, Lcom/sec/android/glview/TwGLImage;
 
@@ -666,27 +798,30 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/sec/android/glview/TwGLImage;-><init>(Lcom/sec/android/glview/TwGLContext;FFFFLandroid/graphics/Bitmap;)V
 
-    .line 117
+    .line 123
     .local v0, image:Lcom/sec/android/glview/TwGLImage;
+    invoke-virtual {v0, p0}, Lcom/sec/android/glview/TwGLImage;->setOnClickListener(Lcom/sec/android/glview/TwGLView$OnClickListener;)V
+
+    .line 124
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setTag(I)V
 
-    .line 118
+    .line 125
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mAnimation:Landroid/view/animation/AlphaAnimation;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/glview/TwGLImage;->setAnimation(Landroid/view/animation/Animation;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 120
+    .line 127
     :try_start_1
     invoke-virtual {v0}, Lcom/sec/android/glview/TwGLImage;->startAnimation()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 124
+    .line 131
     :goto_0
     :try_start_2
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgressImage:[Lcom/sec/android/glview/TwGLImage;
@@ -695,17 +830,17 @@
 
     aput-object v0, v1, v2
 
-    .line 125
+    .line 132
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->addView(Lcom/sec/android/glview/TwGLView;)V
 
-    .line 126
+    .line 133
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOrientation:[I
 
     iget v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     aput p3, v1, v2
 
-    .line 127
+    .line 134
     iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mProgress:I
 
     add-int/lit8 v1, v1, 0x1
@@ -714,7 +849,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 129
+    .line 136
     .end local v0           #image:Lcom/sec/android/glview/TwGLImage;
     .end local v6           #croppedBitmap:Landroid/graphics/Bitmap;
     :cond_0
@@ -722,7 +857,7 @@
 
     return-void
 
-    .line 121
+    .line 128
     .restart local v0       #image:Lcom/sec/android/glview/TwGLImage;
     .restart local v6       #croppedBitmap:Landroid/graphics/Bitmap;
     :catch_0
@@ -730,7 +865,7 @@
 
     goto :goto_0
 
-    .line 113
+    .line 119
     .end local v0           #image:Lcom/sec/android/glview/TwGLImage;
     .end local v6           #croppedBitmap:Landroid/graphics/Bitmap;
     :catchall_0
@@ -746,10 +881,10 @@
     .parameter "BestpicNum"
 
     .prologue
-    .line 150
+    .line 158
     iput p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicNum:I
 
-    .line 151
+    .line 159
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlightRect:Lcom/sec/android/glview/TwGLRectangle;
 
     int-to-float v1, p1
@@ -768,7 +903,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLRectangle;->moveLayoutAbsolute(FF)V
 
-    .line 152
+    .line 160
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mBestPicIcon:Lcom/sec/android/glview/TwGLImage;
 
     int-to-float v1, p1
@@ -791,7 +926,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/android/glview/TwGLImage;->moveLayoutAbsolute(FF)V
 
-    .line 154
+    .line 162
     return-void
 .end method
 
@@ -800,10 +935,10 @@
     .parameter "l"
 
     .prologue
-    .line 71
+    .line 73
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mOnImageSelectedListener:Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar$OnImageSelectedListener;
 
-    .line 72
+    .line 74
     return-void
 .end method
 
@@ -811,11 +946,11 @@
     .locals 1
 
     .prologue
-    .line 157
+    .line 165
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLImageProgressBar;->mHighlight:Z
 
-    .line 158
+    .line 166
     return-void
 .end method

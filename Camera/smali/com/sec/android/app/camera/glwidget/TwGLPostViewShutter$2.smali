@@ -30,7 +30,7 @@
     .line 156
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;
 
-    #getter for: Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->access$100(Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;)Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     move-result-object v0
@@ -65,7 +65,7 @@
     .line 162
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter$2;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;
 
-    #getter for: Lcom/sec/android/glview/TwGLAniViewGroup;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->mOnProgressListener:Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;->access$200(Lcom/sec/android/app/camera/glwidget/TwGLPostViewShutter;)Lcom/sec/android/glview/TwGLAniViewGroup$OnProgressListener;
 
     move-result-object v0

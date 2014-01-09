@@ -52,7 +52,7 @@
     const/16 v1, 0xff
 
     .line 45
-    const v0, 0x7f06014e
+    const v0, 0x7f060149
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -63,7 +63,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->MENU_WIDTH:I
 
     .line 46
-    const v0, 0x7f06014f
+    const v0, 0x7f06014a
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -74,7 +74,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->MENU_HEIGHT:I
 
     .line 47
-    const v0, 0x7f060149
+    const v0, 0x7f060144
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -85,7 +85,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->TITLE_HEIGHT:I
 
     .line 48
-    const v0, 0x7f06014a
+    const v0, 0x7f060145
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -96,7 +96,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->TITLE_LEFT_PADDING:I
 
     .line 49
-    const v0, 0x7f06014b
+    const v0, 0x7f060146
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -107,7 +107,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->TITLE_TOP_PADDING:I
 
     .line 50
-    const v0, 0x7f080018
+    const v0, 0x7f080017
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getInteger(I)I
 
@@ -125,7 +125,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->TITLE_TEXT_COLOR:I
 
     .line 52
-    const v0, 0x7f06014c
+    const v0, 0x7f060147
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -136,7 +136,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->LIST_ITEM_WIDTH:I
 
     .line 53
-    const v0, 0x7f06014d
+    const v0, 0x7f060148
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -147,7 +147,7 @@
     sput v0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->LIST_ITEM_HEIGHT:I
 
     .line 54
-    const v0, 0x7f060072
+    const v0, 0x7f06006d
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -192,7 +192,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/sec/android/app/camera/MenuBase;-><init>(Lcom/sec/android/app/camera/AbstractCameraActivity;ILcom/sec/android/glview/TwGLViewGroup;Lcom/sec/android/app/camera/MenuResourceDepot;IZ)V
 
     .line 55
-    const v1, 0x7f060073
+    const v1, 0x7f06006e
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -242,6 +242,15 @@
     sget v2, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->LIST_ITEM_HEIGHT:I
 
     div-int/lit8 v2, v2, 0x2
+
+    sub-int/2addr v1, v2
+
+    iput v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->MENU_POS_Y:I
+
+    .line 75
+    iget v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->MENU_POS_Y:I
+
+    sget v2, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->LIST_ITEM_HEIGHT:I
 
     sub-int/2addr v1, v2
 
@@ -306,7 +315,7 @@
 
     int-to-float v5, v5
 
-    iget-object v6, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v6, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     iget-object v7, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
 
@@ -340,7 +349,7 @@
     .line 85
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mMenuWrapper:Lcom/sec/android/glview/TwGLTitleDecorator;
 
-    const v2, 0x7f020205
+    const v2, 0x7f0201f2
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLTitleDecorator;->setNinePatchBackground(I)Z
 
@@ -376,7 +385,7 @@
     .line 88
     iget-object v1, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mList:Lcom/sec/android/glview/TwGLList;
 
-    const v2, 0x7f020208
+    const v2, 0x7f0201f5
 
     invoke-virtual {v1, v2}, Lcom/sec/android/glview/TwGLList;->setScrollBarResource(I)V
 
@@ -457,7 +466,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     return-object v0
 .end method
@@ -468,7 +477,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mGLParentView:Lcom/sec/android/glview/TwGLViewGroup;
 
     return-object v0
 .end method
@@ -479,7 +488,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mMenuResourceDepot:Lcom/sec/android/app/camera/MenuResourceDepot;
 
     return-object v0
 .end method
@@ -490,7 +499,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     return-object v0
 .end method
@@ -556,19 +565,19 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 145
+    .line 144
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    .line 146
-    iget-object v0, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 145
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
-    .line 148
+    .line 147
     :cond_0
     return v1
 .end method
@@ -577,10 +586,10 @@
     .locals 0
 
     .prologue
-    .line 140
+    .line 139
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->onHide()V
 
-    .line 141
+    .line 140
     return-void
 .end method
 
@@ -588,14 +597,14 @@
     .locals 4
 
     .prologue
-    .line 153
+    .line 152
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->getZorder()I
 
     move-result v2
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 155
+    .line 154
     .local v0, depth:I
     invoke-virtual {p0}, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->getZorder()I
 
@@ -605,12 +614,12 @@
 
     if-le v2, v3, :cond_1
 
-    .line 156
+    .line 155
     add-int/lit8 v0, v0, -0x1
 
     move v1, v0
 
-    .line 159
+    .line 158
     .end local v0           #depth:I
     .local v1, depth:I
     :goto_0
@@ -622,8 +631,8 @@
 
     if-le v1, v2, :cond_0
 
-    .line 160
-    iget-object v2, p0, Lcom/sec/android/app/camera/MenuBase;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
+    .line 159
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLRecordingModePopup;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/AbstractCameraActivity;->processBack()V
 
@@ -633,7 +642,7 @@
     .restart local v1       #depth:I
     goto :goto_0
 
-    .line 162
+    .line 161
     .end local v1           #depth:I
     .restart local v0       #depth:I
     :cond_0
@@ -651,9 +660,9 @@
     .locals 0
 
     .prologue
-    .line 135
+    .line 134
     invoke-super {p0}, Lcom/sec/android/app/camera/MenuBase;->onShow()V
 
-    .line 136
+    .line 135
     return-void
 .end method

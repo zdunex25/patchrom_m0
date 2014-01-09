@@ -72,7 +72,7 @@
     const-wide/16 v1, -0x1
 
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
     iput-wide v1, p0, Lcom/samsung/dmc/ux/db/ProcessInfo;->nTaskID:J
@@ -131,7 +131,7 @@
 
     .prologue
     .line 53
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
     const-wide/16 v0, -0x1

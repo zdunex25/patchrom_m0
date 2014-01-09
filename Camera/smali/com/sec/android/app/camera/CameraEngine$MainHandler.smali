@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 328
+    .line 320
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraEngine$MainHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 330
+    .line 322
     const-string v0, "CameraEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,17 +66,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
+    .line 323
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 345
+    .line 337
     :cond_0
     :goto_0
     return-void
 
-    .line 333
+    .line 325
     :sswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$MainHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
@@ -86,7 +86,7 @@
 
     goto :goto_0
 
-    .line 336
+    .line 328
     :sswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$MainHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
@@ -104,12 +104,12 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 338
+    .line 330
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$MainHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mActivityContext:Lcom/sec/android/app/camera/AbstractCameraActivity;
 
-    const v1, 0x7f0900ef
+    const v1, 0x7f0900ed
 
     invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -117,7 +117,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 339
+    .line 331
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraEngine$MainHandler;->this$0:Lcom/sec/android/app/camera/CameraEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/CameraEngine;->mCameraSettings:Lcom/sec/android/app/camera/CameraSettings;
@@ -128,7 +128,7 @@
 
     goto :goto_0
 
-    .line 331
+    .line 323
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

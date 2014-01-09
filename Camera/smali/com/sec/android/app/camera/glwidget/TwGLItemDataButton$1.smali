@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 184
+    .line 183
     iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -42,20 +42,20 @@
     .parameter "view"
 
     .prologue
-    .line 186
+    .line 185
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$000(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 187
+    .line 186
     iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton$1;->this$0:Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;
 
-    #getter for: Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    #getter for: Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
     invoke-static {v0}, Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;->access$100(Lcom/sec/android/app/camera/glwidget/TwGLItemDataButton;)Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     move-result-object v0
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    .line 189
+    .line 188
     :goto_0
     return v0
 

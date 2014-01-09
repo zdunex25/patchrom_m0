@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 161
+    .line 159
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$1;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,11 +43,11 @@
     .parameter "whichButton"
 
     .prologue
-    .line 163
+    .line 161
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraSharingDeviceDialog$1;->this$0:Lcom/sec/android/app/camera/CameraSharingDeviceDialog;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraSharingDeviceDialog;->dismiss()V
 
-    .line 164
+    .line 162
     return-void
 .end method

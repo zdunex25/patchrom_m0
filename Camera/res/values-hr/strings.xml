@@ -35,7 +35,7 @@
     <string name="SM_SMILE">Osmijeh</string>
     <string name="SM_FRAME">Okvir</string>
     <string name="SM_BEAUTY">Ljepota</string>
-    <string name="SM_VINTAGE">Starinski</string>
+    <string name="SM_VINTAGE">Berba</string>
     <string name="SM_ADDME">Dodaj me</string>
     <string name="SM_ACTION">Akcija</string>
     <string name="SM_STOPMOTION">Pokret zaustavljanja</string>
@@ -68,8 +68,6 @@
     <string name="E_EMBOSS">Ispupčiti</string>
     <string name="E_OUTLINE">Rub</string>
     <string name="E_WATERCOLOR">Akvarel</string>
-    <string name="E_MONOCHROME">Jednobojno</string>
-    <string name="E_SKETCH">Skica</string>
     <string name="E_WASHED">Isprano</string>
     <string name="E_POSTERIZE">Posterizacija</string>
     <string name="E_SOLARIZE">Solarizacija</string>
@@ -80,7 +78,7 @@
     <string name="E_POINT_RED_YELLOW">Crveno-žuta točka</string>
     <string name="E_CARTOONIZE">Strip stil</string>
     <string name="F_AUTO_FLASH">Auto. bljeskalica</string>
-    <string name="F_AUTOFOCUS">Autofokus</string>
+    <string name="F_AUTOFOCUS">Auto fokus</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Prepoznavanje lica</string>
     <string name="F_PANFOCUS">Pan fokus</string>
@@ -117,9 +115,9 @@
     <string name="SCN_NIGHT_SHOT">Noćno</string>
     <string name="SCN_FIREWORK">Vatromet</string>
     <string name="SCN_TEXT">Tekst</string>
-    <string name="SCN_CANDLE_LIGHT">Svijeća</string>
+    <string name="SCN_CANDLE_LIGHT">Svjetlost svijeće</string>
     <string name="SCN_BACK_LIGHT">Pozadinsko svjetlo</string>
-    <string name="OPTION_ON">Uključeno</string>
+    <string name="OPTION_ON">Uključi</string>
     <string name="OPTION_OFF">Isključeno</string>
     <string name="EXPOSURE_METER">Ekspozicija</string>
     <string name="ADJUST">Podešavanja</string>
@@ -132,7 +130,6 @@
     <string name="Title_Timer">Odbrojavanje</string>
     <string name="Title_Resolution">Rezolucija</string>
     <string name="Title_ShootAndShare">Dijeli postavke snimke</string>
-    <string name="Title_DeviceList">Popis uređaja</string>
     <string name="Title_WhiteBalance">Kor. bijele boje</string>
     <string name="Title_Effects">Efekti</string>
     <string name="Title_Focus">Fokus</string>
@@ -154,16 +151,15 @@
     <string name="Title_AutoContrast">Auto. kontrast</string>
     <string name="Title_GPS">GPS oznaka</string>
     <string name="Title_Review">Pregled</string>
-    <string name="Title_AutoShareShot">Automatski dijeli snimku</string>
     <string name="Title_Guideline">Smjernice</string>
     <string name="Title_VideoQuality">Video kvaliteta</string>
     <string name="Title_AudioRecording">Snimanje zvuka</string>
     <string name="Title_Storage">Spremanje</string>
-    <string name="Title_Reset">Poništi</string>
+    <string name="Title_Reset">Poništavanje</string>
     <string name="Title_Mode">Način</string>
     <string name="Title_Back">Nazad</string>
     <string name="Title_ImageViewer">Preglednik slika</string>
-    <string name="Title_Outdoor_Visibility">Vidljivost na otvorenom</string>
+    <string name="Title_Outdoor_Visibility">Vanjska vidljivost</string>
     <string name="Title_Flip">Spremi kao preokrenuto</string>
     <string name="Title_Self_Portrait">Autoportret</string>
     <string name="Title_Self_Recording">Samo-snimanje</string>
@@ -177,10 +173,7 @@
     <string name="HDR_Helptext">Nemojte tresti uređaj dok snimate fotografije</string>
     <string name="help_text_panorama">Pritisnite Fotoaparat i lagano pomičite telefon u jednom smjeru</string>
     <string name="help_text_panorama_device">Pritisnite Fotoaparat i lagano pomičite uređaj u jednom smjeru</string>
-    <string name="message_DefaultLayout">Izgled prečaca bit će poništen</string>
     <string name="message_EULA_GPS">Uključivanjem GPS oznake uz svaku će fotografiju biti priloženi, umetnuti i spremljeni podaci o geografskoj lokaciji. Šaljite, dijelite, distribuirajte, prenosite i kopirajte ove fotografije s oprezom jer sadržavaju podatke o lokaciji gdje je fotografija snimljena</string>
-    <string name="message_Auto_ShareShot">"Automatsko dijeljenje snimaka omogućuje vam da se jednostavno spojite na uređaje s kojima želite dijeliti slike.
-Uključite automatsko dijeljenje snimki, a zatim približite uređaje (obično stražnje strane) da biste ih spojili"</string>
     <string name="GPS_msg">GPS isključen</string>
     <string name="message_enable_GPS">Uključite GPS u Postavkama da biste koristili GPS oznaku</string>
     <string name="cancel">Prekid</string>
@@ -247,11 +240,9 @@ Uključite automatsko dijeljenje snimki, a zatim približite uređaje (obično s
     <string name="profile_user_default_name">Nepoznato</string>
     <string name="shareshot_no_user">Nema ljudi za dijeljenje</string>
     <string name="snapshot_saved">%s spremljeno</string>
-    <string name="editable_shortcut_reset">Poništi</string>
     <string name="editable_shortcut_helptext_title">Savjeti</string>
     <string name="editable_shortcut_helptext_message">Dodirnite i držite prečace da biste ih uredili</string>
     <string name="editable_shortcut_helptext">Dotaknite i držite ikonu i zatim je povucite da biste uredili položaj prečaca</string>
-    <string name="sbeam_helptext">Fotografirajte i dijelite fotografije s drugim uređajima. Približite uređaje da biste dodali uređaje s kojima želite dijeliti putem aplikacije S Beam</string>
     <string name="storage_setting_dialog_title">Mjesto spremanja</string>
     <string name="storage_setting_dialog_message">SD kartica umetnuta. Promijeniti mjesto spremanja na SD karticu?</string>
     <string name="do_not_ask_again">Ne prikazuj više</string>
@@ -260,8 +251,6 @@ Uključite automatsko dijeljenje snimki, a zatim približite uređaje (obično s
     <string name="bestpic">Najbolja fotografija</string>
     <string name="bestpic_on">Uk</string>
     <string name="bestpic_off">Isk</string>
-    <string name="bestgroup">Najbolja grupna poza</string>
-    <string name="bestgroup_title">Odaberite najb. lice za sprem.</string>
     <string name="battery_low">Zatvorite fotoaparat. Temperatura baterije preniska</string>
     <string name="buddy_photo_share_helptext">Snimajte i dijelite fotografije s prijateljima putem otkrivanja lica</string>
     <string name="face_zoom_helptext">Dvaput dotaknite lice za povećanje ili smanjenje zooma</string>
@@ -271,7 +260,6 @@ Uključite automatsko dijeljenje snimki, a zatim približite uređaje (obično s
     <string name="on_device_help_camcorder">Prebaci na Kameru</string>
     <string name="on_device_help_self">Prebaci na način autoportret</string>
     <string name="on_device_help_editable">Dotaknite i držite prečac koji želite pomaknuti. Tada ga povucite gdje želite</string>
-    <string name="on_device_help_voicecommand">Možete snimati fotografije glasovnim naredbama poput ‘Snimi’, ‘Fotografiraj’, ‘Smiješak’ i ‘Ptičica’</string>
     <string name="Title_VideoSpeed">Brzina</string>
     <string name="SPEED_OFF">Normalna</string>
     <string name="SPEED_2X_FASTER">2x brže</string>
@@ -293,7 +281,4 @@ Uključite automatsko dijeljenje snimki, a zatim približite uređaje (obično s
     <string name="self_recording_open_warning_popup">Sebe možete snimati samo kad je telefon otvoren</string>
     <string name="contextual_filename">Kontekstualni naziv datoteke</string>
     <string name="enable_gps_dialog">GPS oznaka mora biti uključena. Uključiti GPS oznaku?</string>
-    <string name="gallery_disable">Galerija je onemogućena</string>
-    <string name="HDR_Normal">Normalno</string>
-    <string name="HDR_Strong">Jak</string>
 </resources>

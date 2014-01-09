@@ -36,7 +36,7 @@ kaamerat käivitada"</string>
     <string name="SM_SMILE">Naeratusvõte</string>
     <string name="SM_FRAME">Raamiga võte</string>
     <string name="SM_BEAUTY">Ilu</string>
-    <string name="SM_VINTAGE">Klassikaline</string>
+    <string name="SM_VINTAGE">Aastakäik</string>
     <string name="SM_ADDME">Lisa mind</string>
     <string name="SM_ACTION">Tegevusvõte</string>
     <string name="SM_STOPMOTION">Peata liigutamine</string>
@@ -69,8 +69,6 @@ kaamerat käivitada"</string>
     <string name="E_EMBOSS">Graveering</string>
     <string name="E_OUTLINE">Kontuur</string>
     <string name="E_WATERCOLOR">Vesivärvid</string>
-    <string name="E_MONOCHROME">Ühevärviline</string>
-    <string name="E_SKETCH">Visand</string>
     <string name="E_WASHED">Mahapestud</string>
     <string name="E_POSTERIZE">Plakatiefekt</string>
     <string name="E_SOLARIZE">Solariseeri</string>
@@ -81,7 +79,7 @@ kaamerat käivitada"</string>
     <string name="E_POINT_RED_YELLOW">Punakaskollane punkt</string>
     <string name="E_CARTOONIZE">Animatsioon</string>
     <string name="F_AUTO_FLASH">Automaatne välk</string>
-    <string name="F_AUTOFOCUS">Autofookus</string>
+    <string name="F_AUTOFOCUS">Auto-fookus</string>
     <string name="F_MACRO">Makro</string>
     <string name="F_FACE">Näo tuvastamine</string>
     <string name="F_PANFOCUS">Panoraam</string>
@@ -104,7 +102,7 @@ kaamerat käivitada"</string>
     <string name="RM_MMS">MMS-i piir</string>
     <string name="RM_EMAIL">E-kirjade piirang</string>
     <string name="RM_SLOW">Aegluubis</string>
-    <string name="RM_FAST">Kiire salvestamine</string>
+    <string name="RM_FAST">Kiire liigutus</string>
     <string name="CS_PROGRESS_TEXT">Pildi loomine. Palun oodake...</string>
     <string name="SCN_NONE">Puudub</string>
     <string name="SCN_PORTRAIT">Püstpaigutus</string>
@@ -118,7 +116,7 @@ kaamerat käivitada"</string>
     <string name="SCN_NIGHT_SHOT">Öö</string>
     <string name="SCN_FIREWORK">Ilu-tulestik</string>
     <string name="SCN_TEXT">Tekst</string>
-    <string name="SCN_CANDLE_LIGHT">Küünlavalgus</string>
+    <string name="SCN_CANDLE_LIGHT">Küünlavalg.</string>
     <string name="SCN_BACK_LIGHT">Tausta valgustus</string>
     <string name="OPTION_ON">Sees</string>
     <string name="OPTION_OFF">Väljas</string>
@@ -133,7 +131,6 @@ kaamerat käivitada"</string>
     <string name="Title_Timer">Taimer</string>
     <string name="Title_Resolution">Eraldusvõime</string>
     <string name="Title_ShootAndShare">Jaga võtte seadeid</string>
-    <string name="Title_DeviceList">Seadmete loend</string>
     <string name="Title_WhiteBalance">Valge tasakaal</string>
     <string name="Title_Effects">Efektid</string>
     <string name="Title_Focus">Fokuseeri</string>
@@ -155,11 +152,10 @@ kaamerat käivitada"</string>
     <string name="Title_AutoContrast">Automaatne kontrastsus</string>
     <string name="Title_GPS">GPS-i silt</string>
     <string name="Title_Review">Eelvaade</string>
-    <string name="Title_AutoShareShot">Jaga võtet automaatselt</string>
     <string name="Title_Guideline">Juhised</string>
     <string name="Title_VideoQuality">Video kvaliteet</string>
     <string name="Title_AudioRecording">Audio salvest.</string>
-    <string name="Title_Storage">Mälu</string>
+    <string name="Title_Storage">Hoiundamine</string>
     <string name="Title_Reset">Lähtesta</string>
     <string name="Title_Mode">Režiim</string>
     <string name="Title_Back">Tagasi</string>
@@ -178,10 +174,7 @@ kaamerat käivitada"</string>
     <string name="HDR_Helptext">Fotode tegemisel olge ettevaatlik, et te kaamerat ei raputaks</string>
     <string name="help_text_panorama">Vajutage kaamera nuppu ja liigutage telefoni aeglaselt ühes suunas</string>
     <string name="help_text_panorama_device">Vajutage kaameranuppu ja liigutage seadet aeglaselt ühes suunas</string>
-    <string name="message_DefaultLayout">Otseteede paigutus lähtestatakse</string>
     <string name="message_EULA_GPS">GPS-i sildi aktiveerimisel lisatakse ja salvestatakse iga fotoga koos selle geograafilise asukoha andmed. Olge ettevaatlik nende fotode saatmisel, jagamisel, levitamisel, edastamisel või kopeerimisel ettevaatlik, kuna need sisaldavad teavet jäädvustamise asukoha kohta</string>
-    <string name="message_Auto_ShareShot">"Automaatne võttejagamine võimaldab teil lihtsalt luua ühendust seadmetega, millega soovite pilte jagada.
-Aktiveerige automaatne võttejagamine ning seejärel asetage seadmed ühendamiseks üksteise lähedale (tavaliselt tagaküljed kokku)"</string>
     <string name="GPS_msg">GPS väljas</string>
     <string name="message_enable_GPS">GPS-i sildi kasutamiseks lülitage seadetes GPS sisse</string>
     <string name="cancel">Tühista</string>
@@ -248,11 +241,9 @@ Aktiveerige automaatne võttejagamine ning seejärel asetage seadmed ühendamise
     <string name="profile_user_default_name">Tundmatu</string>
     <string name="shareshot_no_user">Pole inimesi, kellega jagada</string>
     <string name="snapshot_saved">%s on salvestatud</string>
-    <string name="editable_shortcut_reset">Lähtesta</string>
     <string name="editable_shortcut_helptext_title">Näpunäited</string>
     <string name="editable_shortcut_helptext_message">Otseteede redigeerimiseks toksake ja hoidke</string>
     <string name="editable_shortcut_helptext">Otsetee asendi redigeerimiseks toksake ja hoidke sõrme ikoonil ning seejärel lohistage seda</string>
-    <string name="sbeam_helptext">Jäädvustage ja jagage fotosid teiste seadmetega. Asetage seadmed lähestikku, et lisada seadmeid, millega soovite S Beami kaudu jagada</string>
     <string name="storage_setting_dialog_title">Salvestamise asukoht</string>
     <string name="storage_setting_dialog_message">SD-kaart on sisestatud. Muuta salvestamise asukohaks SD-kaart?</string>
     <string name="do_not_ask_again">Ära näita uuesti</string>
@@ -261,8 +252,6 @@ Aktiveerige automaatne võttejagamine ning seejärel asetage seadmed ühendamise
     <string name="bestpic">Parim foto</string>
     <string name="bestpic_on">Sees</string>
     <string name="bestpic_off">Väljas</string>
-    <string name="bestgroup">Parim rühmapoos</string>
-    <string name="bestgroup_title">Valige salv.-ks parimad näod</string>
     <string name="battery_low">Sulgege kaamera. Aku temperatuur on liiga madal</string>
     <string name="buddy_photo_share_helptext">Tehke ja jagage fotosid sõpradega näotuvastuse kaudu</string>
     <string name="face_zoom_helptext">Toksake kaks korda näol, et suumida lähemale või kaugemale</string>
@@ -272,7 +261,6 @@ Aktiveerige automaatne võttejagamine ning seejärel asetage seadmed ühendamise
     <string name="on_device_help_camcorder">Lülitu videokaamerarežiimile</string>
     <string name="on_device_help_self">Lülitu autoportreerežiimile</string>
     <string name="on_device_help_editable">Toksake ja hoidke sõrme otseteel, mida soovite liigutada. Seejärel lohistage see soovitud kohta</string>
-    <string name="on_device_help_voicecommand">Saate pildistada häälkäsklustega, nagu Jäädvusta, Pildista ja Naerata</string>
     <string name="Title_VideoSpeed">Kiirus</string>
     <string name="SPEED_OFF">Tavaline</string>
     <string name="SPEED_2X_FASTER">2x kiirem</string>
@@ -294,7 +282,4 @@ Aktiveerige automaatne võttejagamine ning seejärel asetage seadmed ühendamise
     <string name="self_recording_open_warning_popup">Iseendast video tegemise funktsiooni saab kasutada ainult siis, kui telefon on lahti</string>
     <string name="contextual_filename">Kontekstiline failinimi</string>
     <string name="enable_gps_dialog">GPS-i sildid tuleb aktiveerida. Kas aktiveerida GPS-i sildid?</string>
-    <string name="gallery_disable">Galerii on desaktiveeritud</string>
-    <string name="HDR_Normal">Tavaline</string>
-    <string name="HDR_Strong">Tugev</string>
 </resources>

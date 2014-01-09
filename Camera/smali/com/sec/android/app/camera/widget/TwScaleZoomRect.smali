@@ -14,8 +14,6 @@
 
 
 # instance fields
-.field protected mGLContext:Lcom/sec/android/glview/TwGLContext;
-
 .field private mLastOrientation:I
 
 .field private mLinePaint:Landroid/graphics/Paint;
@@ -33,7 +31,7 @@
 
     .prologue
     .line 37
-    const v0, 0x7f060213
+    const v0, 0x7f06020e
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -44,7 +42,7 @@
     sput v0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->MAX_ZOOM_RATIO:I
 
     .line 38
-    const v0, 0x7f060214
+    const v0, 0x7f06020f
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -55,7 +53,7 @@
     sput v0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->MIN_ZOOM_RATIO:I
 
     .line 39
-    const v0, 0x7f060215
+    const v0, 0x7f060210
 
     invoke-static {v0}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -88,62 +86,28 @@
     .parameter "context"
 
     .prologue
-    .line 48
+    .line 47
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 43
+    .line 42
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
-    .line 122
+    .line 112
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mOrientationListener:Landroid/view/OrientationEventListener;
 
-    .line 123
+    .line 113
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLastOrientation:I
+
+    .line 48
+    invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->init()V
 
     .line 49
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->init()V
-
-    .line 50
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lcom/sec/android/glview/TwGLContext;)V
-    .locals 1
-    .parameter "context"
-    .parameter "glcontext"
-
-    .prologue
-    .line 53
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    .line 43
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
-
-    .line 122
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mOrientationListener:Landroid/view/OrientationEventListener;
-
-    .line 123
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLastOrientation:I
-
-    .line 54
-    iput-object p2, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mGLContext:Lcom/sec/android/glview/TwGLContext;
-
-    .line 55
-    invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->init()V
-
-    .line 56
     return-void
 .end method
 
@@ -189,75 +153,75 @@
     .parameter "orientationInput"
 
     .prologue
-    .line 158
+    .line 157
     move v0, p1
 
-    .line 159
+    .line 158
     .local v0, orientation:I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_0
 
-    .line 160
+    .line 159
     const/4 v0, 0x0
 
-    .line 162
+    .line 161
     :cond_0
     rem-int/lit16 v0, v0, 0x168
 
-    .line 164
+    .line 163
     const/16 v2, 0x2d
 
     if-ge v0, v2, :cond_1
 
-    .line 165
+    .line 164
     const/4 v1, 0x0
 
-    .line 175
+    .line 174
     .local v1, retVal:I
     :goto_0
     return v1
 
-    .line 166
+    .line 165
     .end local v1           #retVal:I
     :cond_1
     const/16 v2, 0x87
 
     if-ge v0, v2, :cond_2
 
-    .line 167
+    .line 166
     const/16 v1, 0x5a
 
     .restart local v1       #retVal:I
     goto :goto_0
 
-    .line 168
+    .line 167
     .end local v1           #retVal:I
     :cond_2
     const/16 v2, 0xe1
 
     if-ge v0, v2, :cond_3
 
-    .line 169
+    .line 168
     const/16 v1, 0xb4
 
     .restart local v1       #retVal:I
     goto :goto_0
 
-    .line 170
+    .line 169
     .end local v1           #retVal:I
     :cond_3
     const/16 v2, 0x13b
 
     if-ge v0, v2, :cond_4
 
-    .line 171
+    .line 170
     const/16 v1, 0x10e
 
     .restart local v1       #retVal:I
     goto :goto_0
 
-    .line 173
+    .line 172
     .end local v1           #retVal:I
     :cond_4
     const/4 v1, 0x0
@@ -270,12 +234,12 @@
     .locals 2
 
     .prologue
-    .line 126
+    .line 116
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mOrientationListener:Landroid/view/OrientationEventListener;
 
     if-nez v0, :cond_0
 
-    .line 127
+    .line 117
     new-instance v0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect$1;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->getContext()Landroid/content/Context;
@@ -286,13 +250,13 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mOrientationListener:Landroid/view/OrientationEventListener;
 
-    .line 154
+    .line 153
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mOrientationListener:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 
-    .line 155
+    .line 154
     return-void
 .end method
 
@@ -304,29 +268,29 @@
     .prologue
     const/16 v2, 0xff
 
-    .line 59
+    .line 52
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
-    .line 60
+    .line 53
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 61
+    .line 54
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/graphics/Paint;->setARGB(IIII)V
 
-    .line 62
+    .line 55
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f06020f
+    const v1, 0x7f06020a
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -338,10 +302,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 63
+    .line 56
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f060210
+    const v1, 0x7f06020b
 
     invoke-static {v1}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -349,10 +313,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 65
+    .line 58
     invoke-direct {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->setOrientationListener()V
 
-    .line 66
+    .line 59
     return-void
 .end method
 
@@ -361,13 +325,13 @@
     .parameter "canvas"
 
     .prologue
-    .line 77
+    .line 70
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 79
+    .line 72
     const/4 v5, 0x0
 
-    .line 80
+    .line 73
     .local v5, tempWidth:F
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->getHeight()I
 
@@ -377,7 +341,7 @@
 
     int-to-float v1, v9
 
-    .line 81
+    .line 74
     .local v1, hcenter:F
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->getWidth()I
 
@@ -387,9 +351,9 @@
 
     int-to-float v8, v9
 
-    .line 82
+    .line 75
     .local v8, wcenter:F
-    const v9, 0x7f06020f
+    const v9, 0x7f06020a
 
     invoke-static {v9}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -399,37 +363,22 @@
 
     div-int/lit8 v3, v9, 0x2
 
-    .line 83
+    .line 76
     .local v3, offset:I
-    const v9, 0x7f060216
+    const v9, 0x7f060211
 
     invoke-static {v9}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
     move-result v5
 
-    .line 84
-    iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mGLContext:Lcom/sec/android/glview/TwGLContext;
-
-    if-eqz v9, :cond_0
-
-    .line 85
-    iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mGLContext:Lcom/sec/android/glview/TwGLContext;
-
-    invoke-virtual {v9}, Lcom/sec/android/glview/TwGLContext;->getScreenWScale()F
-
-    move-result v9
-
-    mul-float/2addr v5, v9
-
-    .line 88
-    :cond_0
-    const v9, 0x7f060211
+    .line 78
+    const v9, 0x7f06020c
 
     invoke-static {v9}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
     move-result v6
 
-    .line 90
+    .line 80
     .local v6, textUpperMargin:F
     iget v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
@@ -447,7 +396,7 @@
 
     sub-float v2, v8, v9
 
-    .line 91
+    .line 81
     .local v2, left:F
     iget v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
@@ -465,7 +414,7 @@
 
     sub-float v7, v1, v9
 
-    .line 92
+    .line 82
     .local v7, top:F
     iget v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
@@ -483,7 +432,7 @@
 
     add-float v4, v8, v9
 
-    .line 93
+    .line 83
     .local v4, right:F
     iget v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
@@ -501,7 +450,7 @@
 
     add-float v0, v1, v9
 
-    .line 95
+    .line 85
     .local v0, bottom:F
     new-instance v9, Landroid/graphics/RectF;
 
@@ -509,7 +458,7 @@
 
     iput-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mRect:Landroid/graphics/RectF;
 
-    .line 97
+    .line 87
     iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mRect:Landroid/graphics/RectF;
 
     int-to-float v10, v3
@@ -518,7 +467,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/graphics/RectF;->inset(FF)V
 
-    .line 99
+    .line 89
     iget v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLastOrientation:I
 
     rsub-int v9, v9, 0x168
@@ -539,28 +488,28 @@
 
     invoke-virtual {p1, v9, v10, v11}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 101
+    .line 91
     iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
     sget-object v10, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v9, v10}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 103
+    .line 93
     iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mRect:Landroid/graphics/RectF;
 
     iget-object v10, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v9, v10}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 108
+    .line 98
     iget-object v9, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLinePaint:Landroid/graphics/Paint;
 
     sget-object v10, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v9, v10}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 110
+    .line 100
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -595,7 +544,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f060212
+    const v10, 0x7f06020d
 
     invoke-static {v10}, Lcom/sec/android/glview/TwGLContext;->getDimension(I)F
 
@@ -625,7 +574,7 @@
 
     invoke-virtual {p1, v9, v10, v11, v12}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 113
+    .line 103
     return-void
 .end method
 
@@ -634,7 +583,7 @@
     .parameter "orientation"
 
     .prologue
-    .line 70
+    .line 63
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->roundOrientation(I)I
 
     move-result v0
@@ -643,7 +592,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->mLastOrientation:I
 
-    .line 74
+    .line 67
     return-void
 .end method
 
@@ -652,9 +601,9 @@
     .parameter "currentzoomValue"
 
     .prologue
-    .line 116
+    .line 106
     iput p1, p0, Lcom/sec/android/app/camera/widget/TwScaleZoomRect;->zoomValue:I
 
-    .line 117
+    .line 107
     return-void
 .end method

@@ -78,7 +78,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -89,7 +89,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnClickListener:Lcom/sec/android/glview/TwGLView$OnClickListener;
 
     return-object v0
 .end method
@@ -100,7 +100,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -111,7 +111,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnTouchListener:Lcom/sec/android/glview/TwGLView$OnTouchListener;
 
     return-object v0
 .end method
@@ -122,7 +122,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -133,7 +133,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -144,7 +144,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -155,7 +155,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iget-object v0, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     return-object v0
 .end method
@@ -425,7 +425,7 @@
 
     .prologue
     .line 145
-    iget-object v3, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v3, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mGLViews:Ljava/util/List;
 
     monitor-enter v3
 
@@ -435,7 +435,7 @@
     .local v0, i:I
     :goto_0
     :try_start_0
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -444,7 +444,7 @@
     if-ge v0, v2, :cond_0
 
     .line 147
-    iget-object v2, p0, Lcom/sec/android/glview/TwGLViewGroup;->mGLViews:Ljava/util/List;
+    iget-object v2, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mGLViews:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -494,7 +494,7 @@
 
     .prologue
     .line 126
-    iput-object p1, p0, Lcom/sec/android/glview/TwGLView;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
+    iput-object p1, p0, Lcom/sec/android/app/camera/glwidget/TwGLItemThumbnailButton;->mOnFocusListener:Lcom/sec/android/glview/TwGLView$OnFocusListener;
 
     .line 127
     if-nez p1, :cond_0
