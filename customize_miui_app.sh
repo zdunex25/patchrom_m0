@@ -82,6 +82,7 @@ fi
 if [ $1 = "Contacts" ];then
 	addPolish $1
 	adjustDpi $1
+	sed -i -e 's/<item android:id=\"@id\/menu_yellowpage_order\" android:title=\"@string\/yellowpage_navigation_menu_order\" \/>/<!--item android:id=\"@id\/menu_yellowpage_order\" android:title=\"@string\/yellowpage_navigation_menu_order\" \/-->/' out/$1/res/menu/people_options.xml
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
