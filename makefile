@@ -9,17 +9,17 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_I9300.zip
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := AGE Camera GalaxyS3Settings m7Parts MiuiUpdater VFX SPN
+local-modified-apps := AGE Camera GalaxyS3Settings m7Parts VFX SPN #MiuiUpdater
 
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist BaiduNetworkLocation
+local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer MiWallpaper Mms Music NetworkAssistant Notes PackageInstaller Phone \
-			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer VpnDialogs \
+			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer Updater VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,

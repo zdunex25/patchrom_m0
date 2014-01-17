@@ -306,13 +306,13 @@ if [ $1 = "Transfer" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
-#if [ $1 = "Updater" ];then
-#	addPolish $1
-#	adjustDpi $1
-#	cp -f $1/res/drawable-en-xhdpi/miui_title.png  out/$1/res/drawable-pl-xhdpi/miui_title.png
-#	$XMLMERGYTOOL $1/res/values $2/res/values
-#fi
-#
+if [ $1 = "Updater" ];then
+	addPolish $1
+	adjustDpi $1
+	cp -f $1/res/drawable-en-xhdpi/miui_title.png  out/$1/res/drawable-pl-xhdpi/miui_title.png
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
 if [ $1 = "VpnDialogs" ];then
 	addPolish $1
 	adjustDpi $1
