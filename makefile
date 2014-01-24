@@ -17,7 +17,7 @@ local-modified-apps := AGE Camera FmRadio m7Parts VFX #SPN
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist
+local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
