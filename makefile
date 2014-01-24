@@ -14,7 +14,7 @@ local-modified-apps := AGE Camera GalaxyS3Settings m7Parts VFX SPN #MiuiUpdater
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation
+local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
