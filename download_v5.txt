@@ -1,0 +1,3 @@
+[dwl producent="samsung" board="m0" tytul="Samsung Galaxy S3" android="4.1.1" miui="4.1.24" data="24/1/2014" md5="1817b406ef963120e6b55bb319979c60" informacje="ROM Kamila Z" status="" link="http://goo.im/devs/mikegapinski/4.1.1/miuigalaxy-v5-sgs3-4.1.24-4.1.zip" mirror1="" mirror2="" rozmiar="440M" rodzaj="pelna"]
+    
+    
