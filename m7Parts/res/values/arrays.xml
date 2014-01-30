@@ -53,12 +53,14 @@
         <item>2</item>
     </string-array>
     <string-array name="StatusBarTypes5">
-        <item>Default for rom</item>
-        <item>Default for miui</item>
+        <item>Default</item>
+        <item>Center clock</item>
+        <item>iOS7</item>
     </string-array>
     <string-array name="StatusBarValues5">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
     <string-array name="ToggleTitles">
         <item>Lockscreen_Unlock</item>
