@@ -17,7 +17,7 @@
 --- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
 +++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
 @@ -2464,6 +2464,47 @@
-     return-void
+     return-object v0
  .end method
  
 +.method private getStatusBarType(I)I
