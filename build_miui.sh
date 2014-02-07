@@ -20,12 +20,12 @@ find pl -name "hdpi" | xargs rm -rf
 find pl -name "xxhdpi" | xargs rm -rf
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
-cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030030\" \/>/id=\"0x7f030030\" \/>\
-    <public type=\"layout\" name=\"status_bar_center\" id=\"0x7f030031\" \/>\
-    <public type=\"layout\" name=\"super_status_bar_center\" id=\"0x7f030032\" \/>\
-    <public type=\"layout\" name=\"signal_cluster_view_ios\" id=\"0x7f030033\" \/>\
-    <public type=\"layout\" name=\"status_bar_ios\" id=\"0x7f030034\" \/>\
-    <public type=\"layout\" name=\"super_status_bar_ios\" id=\"0x7f030035\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
+cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030032\" \/>/id=\"0x7f030032\" \/>\
+    <public type=\"layout\" name=\"status_bar_center\" id=\"0x7f030033\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_center\" id=\"0x7f030034\" \/>\
+    <public type=\"layout\" name=\"signal_cluster_view_ios\" id=\"0x7f030035\" \/>\
+    <public type=\"layout\" name=\"status_bar_ios\" id=\"0x7f030036\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_ios\" id=\"0x7f030037\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
 cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali' | sed -e 's/.method private getTabIndicatorPosition(I)I/.method private getStatusBarType(I)I\
     .locals 6\
     .parameter\
@@ -57,18 +57,18 @@ cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smal
     return p1\
 \
     :cond_0\
-    const v4, 0x7f030032\
+    const v4, 0x7f030034\
 \
     return v4\
 \
     :cond_1\
-    const v4, 0x7f030035\
+    const v4, 0x7f030037\
 \
     return v4\
 .end method\
 \
 .method private getTabIndicatorPosition(I)I/' > 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali'
-cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali' | sed -e 's/const v0, 0x7f030020/const v0, 0x7f030020\
+cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali' | sed -e 's/const v0, 0x7f030022/const v0, 0x7f030022\
 \
     invoke-direct {p0, v0}, Lcom\/android\/systemui\/statusbar\/phone\/PhoneStatusBar;->getStatusBarType(I)I\
 \
@@ -102,12 +102,6 @@ cat 'Mms/smali/com/android/mms/ui/MessageEditableActivityBase.smali' | sed -e 's
 cat 'Settings/res/xml/settings_headers.xml' | sed -e "s/<header android:id=\"@id\/manufacturer_settings\">/<header android:title=\"@string\/header_category_galaxy\" \/>/g" \
 					| sed -e 's/    <intent android:action=\"com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>/<header android:icon=\"@drawable\/ic_ringer_volume_settings\" android:title=\"@string\/viper_settings\">\
         <intent android:action="com.android.settings.VIPER\" \/>\
-    <\/header>\
-    <header android:icon=\"@drawable\/ic_mobile_network_settings\" android:title=\"@string\/carrier_settings\">\
-        <intent android:action="com.android.settings.CARRIER\" \/>\
-    <\/header>\
-    <header android:icon=\"@drawable\/ic_accessibility_settings\" android:title=\"@string\/age_settings\">\
-        <intent android:action="com.android.settings.GESTURE\" \/>\
     <\/header>\
     <header android:icon=\"@drawable\/ic_launcher_settings\" android:id=\"@id\/manufacturer_settings\" android:title=\"@string\/galaxy_settings\">\
         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING\" \/>\
