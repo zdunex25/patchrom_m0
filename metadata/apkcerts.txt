@@ -1,4 +1,3 @@
-name="AGE.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="ApplicationsProvider.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="AirkanPhoneService.apk" certificate="PRESIGNED" private_key=""
 name="BackupRestoreConfirmation.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
@@ -53,7 +52,6 @@ name="Settings.apk" certificate="build/target/product/security/platform.x509.pem
 name="SettingsProvider.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="SharedStorageBackup.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="SoundRecorder.apk" certificate="PRESIGNED" private_key=""
-name="SPN.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="Stk.apk" certificate="PRESIGNED" private_key=""
 name="SystemUI.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="Tag.apk" certificate="PRESIGNED" private_key=""
