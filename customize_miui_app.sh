@@ -171,7 +171,7 @@ if [ $1 = "MiuiSystemUI" ];then
 	$XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi
 fi
 
-if [ $1 = "MiuiVideoPlayer" ];then
+if [ $1 = "MiuiVideo" ];then
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
