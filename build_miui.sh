@@ -300,7 +300,7 @@ rm -rf MiuiHome/res/values-pl
 rm -rf MiuiSystemUI/res/values-pl
 rm -rf MiuiSystemUI/res/values/public.xml
 rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
-rm -rf MiuiVideoPlayer
+rm -rf MiuiVideo
 rm -rf MiWallpaper
 rm -f Mms/AndroidManifest.xml
 rm -rf Mms/res/raw-pl

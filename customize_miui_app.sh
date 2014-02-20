@@ -111,7 +111,7 @@ if [ $1 = "MiuiSystemUI" ];then
     appendPart $1
 fi
 
-if [ $1 = "MiuiVideoPlayer" ];then
+if [ $1 = "MiuiVideo" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
