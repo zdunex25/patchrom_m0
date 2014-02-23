@@ -299,6 +299,7 @@ rm -rf MiuiHome/res/drawable-pl-xhdpi
 rm -rf MiuiHome/res/values-pl
 rm -rf MiuiSystemUI/res/values-pl
 rm -rf MiuiSystemUI/res/values/public.xml
+rm -rf MiuiSystemUI/res/raw
 rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 rm -rf MiuiVideo
 rm -rf MiWallpaper
