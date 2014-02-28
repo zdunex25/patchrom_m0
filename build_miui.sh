@@ -20,12 +20,12 @@ find pl -name "hdpi" | xargs rm -rf
 find pl -name "xxhdpi" | xargs rm -rf
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/MiuiSystemUI.apk'
-cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030032\" \/>/id=\"0x7f030032\" \/>\
-    <public type=\"layout\" name=\"status_bar_center\" id=\"0x7f030033\" \/>\
-    <public type=\"layout\" name=\"super_status_bar_center\" id=\"0x7f030034\" \/>\
-    <public type=\"layout\" name=\"signal_cluster_view_ios\" id=\"0x7f030035\" \/>\
-    <public type=\"layout\" name=\"status_bar_ios\" id=\"0x7f030036\" \/>\
-    <public type=\"layout\" name=\"super_status_bar_ios\" id=\"0x7f030037\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
+cat 'MiuiSystemUI/res/values/public.xml' | sed -e 's/id=\"0x7f030031\" \/>/id=\"0x7f030031\" \/>\
+    <public type=\"layout\" name=\"status_bar_center\" id=\"0x7f030032\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_center\" id=\"0x7f030033\" \/>\
+    <public type=\"layout\" name=\"signal_cluster_view_ios\" id=\"0x7f030034\" \/>\
+    <public type=\"layout\" name=\"status_bar_ios\" id=\"0x7f030035\" \/>\
+    <public type=\"layout\" name=\"super_status_bar_ios\" id=\"0x7f030036\" \/>/' > '../MiuiSystemUI/res/values/public.xml'
 cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali' | sed -e 's/.method private getTabIndicatorPosition(I)I/.method private getStatusBarType(I)I\
     .locals 6\
     .parameter\
@@ -57,18 +57,18 @@ cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smal
     return p1\
 \
     :cond_0\
-    const v4, 0x7f030034\
+    const v4, 0x7f030033\
 \
     return v4\
 \
     :cond_1\
-    const v4, 0x7f030037\
+    const v4, 0x7f030036\
 \
     return v4\
 .end method\
 \
 .method private getTabIndicatorPosition(I)I/' > 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali'
-cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali' | sed -e 's/const v0, 0x7f030022/const v0, 0x7f030022\
+cat 'MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar2.smali' | sed -e 's/const v0, 0x7f030021/const v0, 0x7f030021\
 \
     invoke-direct {p0, v0}, Lcom\/android\/systemui\/statusbar\/phone\/PhoneStatusBar;->getStatusBarType(I)I\
 \
