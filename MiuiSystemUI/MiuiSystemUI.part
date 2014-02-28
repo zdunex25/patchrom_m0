@@ -2,15 +2,15 @@
 --- a/MiuiSystemUI/res/values/public.xml
 +++ b/MiuiSystemUI/res/values/public.xml
 @@ -440,6 +440,11 @@
-     <public type="layout" name="task_item_view" id="0x7f030030" />
-     <public type="layout" name="task_manager" id="0x7f030031" />
-     <public type="layout" name="torch_main" id="0x7f030032" />
-+    <public type="layout" name="status_bar_center" id="0x7f030033" />
-+    <public type="layout" name="super_status_bar_center" id="0x7f030034" />
-+    <public type="layout" name="signal_cluster_view_ios" id="0x7f030035" />
-+    <public type="layout" name="status_bar_ios" id="0x7f030036" />
-+    <public type="layout" name="super_status_bar_ios" id="0x7f030037" />
-     <public type="layout" name="status_bar_search_panel" id="0x7f03001b" />
+     <public type="layout" name="task_item_view" id="0x7f03002f" />
+     <public type="layout" name="task_manager" id="0x7f030030" />
+     <public type="layout" name="torch_main" id="0x7f030031" />
++    <public type="layout" name="status_bar_center" id="0x7f030032" />
++    <public type="layout" name="super_status_bar_center" id="0x7f030033" />
++    <public type="layout" name="signal_cluster_view_ios" id="0x7f030034" />
++    <public type="layout" name="status_bar_ios" id="0x7f030035" />
++    <public type="layout" name="super_status_bar_ios" id="0x7f030036" />
+     <public type="layout" name="status_bar_search_panel" id="0x7f03001a" />
      <public type="anim" name="notification_final_disappear" id="0x7f040000" />
      <public type="anim" name="priority_alert_enter" id="0x7f040001" />
 
@@ -51,12 +51,12 @@
 +    return p1
 +
 +    :cond_0
-+    const v4, 0x7f030034
++    const v4, 0x7f030033
 +
 +    return v4
 +
 +    :cond_1
-+    const v4, 0x7f030037
++    const v4, 0x7f030036
 +
 +    return v4
 +.end method
@@ -66,7 +66,7 @@
      .parameter "tabIndex"
 @@ -9422,6 +9422,10 @@
      .line 662
-     const v0, 0x7f030022
+     const v0, 0x7f030021
  
 +    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getStatusBarType(I)I
 +
@@ -75,13 +75,3 @@
      invoke-static {v4, v0, v9}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
  
      move-result-object v0
-
---- a/MiuiSystemUI/res/layout/status_bar_simple.xml
-+++ b/MiuiSystemUI/res/layout/status_bar_simple.xml
-@@ -1,5 +1,5 @@
- <?xml version="1.0" encoding="utf-8"?>
--<FrameLayout android:gravity="center_vertical" android:background="@drawable/status_bar_background" android:layout_width="fill_parent" android:layout_height="@miui:dimen/android_status_bar_height"
-+<FrameLayout android:gravity="center_vertical" android:background="@drawable/status_bar_background" android:layout_width="0.0dip" android:layout_height="0.0dip"
-   xmlns:android="http://schemas.android.com/apk/res/android">
-     <com.android.systemui.statusbar.phone.BatteryIndicator android:layout_gravity="top" android:id="@id/expanded_battery_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/battery_indicator" android:scaleType="fitXY" />
-     <com.android.systemui.statusbar.phone.BatteryIndicatorCharging android:layout_gravity="top|right|center" android:id="@id/expanded_battery_indicator_charging" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/battery_indicator_charging" />
