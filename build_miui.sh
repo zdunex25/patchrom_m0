@@ -316,6 +316,7 @@ rm -rf Notes
 rm -rf PackageInstaller
 rm -rf PaymentService
 rm -rf Phone/res/values-pl
+rm -rf Phone/res/raw
 rm -rf Provision
 rm -rf QuickSearchBox
 rm -rf Settings/res/drawable-pl-hdpi
