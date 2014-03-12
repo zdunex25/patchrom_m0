@@ -159,6 +159,16 @@ if [ $1 = "QuickSearchBox" ];then
 fi
 
 if [ $1 = "Settings" ];then
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY Settings.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: Settings patch fail"
+        exit 1
+    done
+
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
