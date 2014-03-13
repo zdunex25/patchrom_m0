@@ -1190,7 +1190,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "shared_prefs"
+    const-string v3, "shared_prefs"
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -1542,7 +1542,7 @@
 
     .line 1674
     :pswitch_0
-    const-string/jumbo v0, "read and write"
+    const-string v0, "read and write"
 
     .line 1678
     :goto_0
@@ -1550,13 +1550,13 @@
 
     .line 1676
     :pswitch_1
-    const-string/jumbo v0, "read"
+    const-string v0, "read"
 
     goto :goto_0
 
     .line 1678
     :pswitch_2
-    const-string/jumbo v0, "write"
+    const-string v0, "write"
 
     goto :goto_0
 
@@ -1946,7 +1946,7 @@
     .line 1551
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "permission is null"
+    const-string v1, "permission is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2002,7 +2002,7 @@
     .line 1538
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "permission is null"
+    const-string v2, "permission is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2092,7 +2092,7 @@
     .line 1524
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "permission is null"
+    const-string v2, "permission is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2438,8 +2438,7 @@
 
     const/4 v5, 0x0
 
-    .line 1753
-    const-string/jumbo v6, "system"
+    const-string v6, "system"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
