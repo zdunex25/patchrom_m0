@@ -2127,6 +2127,14 @@
     .end local v131           #usb:Lcom/android/server/usb/UsbService;
     .restart local v130       #usb:Lcom/android/server/usb/UsbService;
     :goto_2e
+    const-string v7, "security"
+
+    new-instance v9, Lcom/miui/server/SecurityManagerService;
+
+    invoke-direct {v9, v5}, Lcom/miui/server/SecurityManagerService;-><init>(Landroid/content/Context;)V
+
+    invoke-static {v7, v9}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
     :try_start_43
     const-string v7, "SystemServer"
 
