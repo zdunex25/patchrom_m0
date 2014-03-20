@@ -148,8 +148,6 @@ if [ $1 = "MiuiHome" ];then
 	addPolish $1
 	sed -i -e 's/<item>4x5<\/item>/<item>4x5<\/item>\
         <item>5x5<\/item>/' out/$1/res/values/arrays.xml
-	sed -i -e 's/<item>Strona<\/item>/<!--item>Strona<\/item-->/' out/$1/res/values-pl/arrays.xml
-	sed -i -e 's/<item>Obrót<\/item>/<!--item>Obrót<\/item-->/' out/$1/res/values-pl/arrays.xml
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
@@ -209,7 +207,7 @@ if [ $1 = "Music" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
-if [ $1 = "NetworkAssistant" ];then
+if [ $1 = "NetworkAssistant2" ];then
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
@@ -235,16 +233,16 @@ if [ $1 = "PaymentService" ];then
 fi
 
 if [ $1 = "Phone" ];then
-    cp $1/*.part out/
-    cd out
-    $GIT_APPLY Phone.part
-    cd ..
-    for file in `find $2 -name *.rej`
-    do
-	echo "Fatal error: Phone patch fail"
-        exit 1
-    done
-
+#    cp $1/*.part out/
+#    cd out
+#    $GIT_APPLY Phone.part
+#    cd ..
+#    for file in `find $2 -name *.rej`
+#    do
+#	echo "Fatal error: Phone patch fail"
+#        exit 1
+#    done
+#
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
