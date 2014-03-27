@@ -167,6 +167,8 @@ cat 'Settings/smali/com/android/settings/MiuiDeviceInfoSettings2.smali' | sed -e
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
 cp -u -r pl/LBESEC_MIUI/* LBESEC_MIUI
 '../../tools/apktool' --quiet b -f 'LBESEC_MIUI' '../other/unsigned-LBESEC_MIUI.apk'
+rm -rf pl/AMAPNetworkLocation
+rm -rf pl/AntHalService
 rm -rf pl/ApplicationsProvider
 rm -rf pl/BackupRestoreConfirmation
 rm -rf pl/CABLService
@@ -178,6 +180,9 @@ rm -rf pl/Ds
 rm -rf pl/DsUI
 rm -rf pl/EngineerMode
 rm -rf pl/GuardProvider
+rm -rf pl/InputDevices
+rm -rf pl/InterfacePermissions
+rm -rf pl/KeyChain
 rm -rf pl/LBESEC_MIUI
 rm -rf pl/lenovo-res
 rm -rf pl/LiveWallpapers
@@ -188,9 +193,12 @@ rm -rf pl/MtkBt
 rm -rf pl/MusicFX
 rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
+rm -rf pl/SettingsProvider
+rm -rf pl/Shell
 rm -rf pl/PicoTts
 rm -rf pl/Stk1
 rm -rf pl/StkSelection
+rm -rf pl/Tag
 rm -rf pl/TelocationProvider
 rm -rf pl/Updater
 rm -rf pl/YGPS
