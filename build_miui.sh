@@ -188,6 +188,7 @@ rm -rf pl/lenovo-res
 rm -rf pl/LiveWallpapers
 rm -rf pl/LiveWallpapersPicker
 rm -rf pl/mediatek-res
+rm -rf pl/MiTagApp
 rm -rf pl/MIUIStats
 rm -rf pl/MtkBt
 rm -rf pl/MusicFX
@@ -195,6 +196,7 @@ rm -rf pl/NetworkLocation
 rm -rf pl/Nfc
 rm -rf pl/SettingsProvider
 rm -rf pl/Shell
+rm -rf pl/StubNetworkLocation
 rm -rf pl/PicoTts
 rm -rf pl/Stk1
 rm -rf pl/StkSelection
@@ -319,7 +321,7 @@ rm -rf Mms/smali/com/android/mms/transaction
 rm -rf Mms/smali/com/android/mms/ui
 rm -rf Music/res/drawable-pl-xhdpi
 rm -rf Music/res/values-pl
-rm -rf NetworkAssistant
+rm -rf NetworkAssistant2
 rm -rf Notes
 rm -rf PackageInstaller
 rm -rf PaymentService

@@ -1,16 +1,16 @@
-From 258f0c2081b7ff825881bf2c8ae37a28392a7ba6 Mon Sep 17 00:00:00 2001
+From 455f20a0d97d1552bbc26afdd94060c2603fff5a Mon Sep 17 00:00:00 2001
 From: mochangming <mochangming@xiaomi.com>
-Date: Wed, 23 Oct 2013 16:11:51 +0800
-Subject: [PATCH] MiuiPhoneWindowManager patch
+Date: Mon, 31 Mar 2014 20:48:56 +0800
+Subject: [PATCH] BaseMiuiPhoneWindowManager.patch
 
 ---
- .../policy/impl/MiuiPhoneWindowManager.smali       |    6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
+ .../policy/impl/BaseMiuiPhoneWindowManager.smali   |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
---- a/android.policy/smali/com/android/internal/policy/impl/MiuiPhoneWindowManager.smali
-+++ b/android.policy/smali/com/android/internal/policy/impl/MiuiPhoneWindowManager.smali
-@@ -2326,14 +2326,16 @@
-     .end sparse-switch
+--- a/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
+@@ -2131,14 +2131,14 @@
+     goto :goto_0
  .end method
  
 -.method public layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
@@ -19,8 +19,6 @@ Subject: [PATCH] MiuiPhoneWindowManager patch
      .parameter "win"
      .parameter "attrs"
      .parameter "attached"
-+    .parameter "baseAttrs"
-+    .parameter "windowMode"
  
      .prologue
 -    invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
