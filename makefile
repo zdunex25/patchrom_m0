@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9300.zip
 local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera FmRadio m7Parts VFX #SPN
+local-modified-apps := Camera FmRadio m7Parts VFX
 
 local-modified-jars :=
 
@@ -20,7 +20,7 @@ local-modified-jars :=
 local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
 			PaymentService Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider ThemeManager Transfer VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
@@ -48,7 +48,7 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
-#	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 	
 	@echo Add missing stuff

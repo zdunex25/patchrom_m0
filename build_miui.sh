@@ -262,10 +262,7 @@ find other -name "signed-*" | xargs rm -f
 
 cp other/extras/gapps/*.apk out/temp/system/app
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
-cp -f ../miuipolska/Polish/extras/system/etc/apns-conf.xml out/temp/system/etc/apns-conf.xml
-cp -f ../miuipolska/Polish/extras/system/etc/gps.conf out/temp/system/etc/gps.conf
-cp -f ../miuipolska/Polish/extras/system/etc/hosts out/temp/system/etc/hosts
-cp -f ../miuipolska/Polish/extras/system/etc/spn-conf.xml out/temp/system/etc/spn-conf.xml
+cp -f ../miuipolska/Polish/extras/system/etc/* out/temp/system/etc
 
 mv out/temp/system/media/theme/default/alarmscreen out/temp/system/media/theme/default/alarmscreen.zip
 mv out/temp/system/media/theme/default/lockscreen out/temp/system/media/theme/default/lockscreen.zip
@@ -301,7 +298,6 @@ rm -rf DeskClock
 rm -rf DownloadProvider
 rm -rf DownloadProviderUi
 rm -rf Email
-rm -rf Exchange2
 rm -rf FileExplorer
 rm -rf MiuiCompass
 rm -rf MiuiGallery
@@ -312,6 +308,7 @@ rm -rf MiuiSystemUI/res/values/public.xml
 rm -rf MiuiSystemUI/res/raw
 rm -rf MiuiSystemUI/smali/com/android/systemui/statusbar/phone
 rm -rf MiuiVideo
+rm -rf MiuiVideoPlayer
 rm -rf MiWallpaper
 rm -f Mms/AndroidManifest.xml
 rm -rf Mms/res/raw-pl

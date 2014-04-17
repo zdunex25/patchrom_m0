@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/backup_import" android:id="@id/import_backup" android:title="@string/backup_import" />
-    <item android:icon="@drawable/backup_export" android:id="@id/export_backup" android:title="@string/backup_export" />
-    <item android:icon="@drawable/menu_info" android:id="@id/donate" android:title="@string/donate_title" />
-</menu>
