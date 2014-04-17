@@ -17,7 +17,7 @@ local-modified-jars := #framework_ext
 local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
 			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer Updater VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
@@ -47,7 +47,7 @@ include $(PORT_BUILD)/porting.mk
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
-#	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
+	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 	

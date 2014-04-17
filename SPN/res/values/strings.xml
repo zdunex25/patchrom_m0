@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello">Please write your mobile operator name here and switch airplane mode after saving</string>
-    <string name="app_name">Carrier name</string>
-    <string name="no_sim_service">Please insert your SIM card, and make sure your phone is not in airplane mode</string>
-    <string name="save">Save</string>
-    <string name="airplane_on">Airplane Mode On</string>
-    <string name="airplane_off">Airplane Mode Off</string>
-</resources>

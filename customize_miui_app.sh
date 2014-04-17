@@ -113,16 +113,6 @@ fi
 if [ $1 = "Email" ];then
 	addPolish $1
 	adjustDpi $1
-	sed -i -e 's/main_content\"\"/main_contentq\"/' $2/res/values/ids.xml
-	sed -i -e 's/main_content\"\"/main_contentq\"/' $2/res/values/public.xml
-	sed -i -e 's/main_content\"/main_contentq/' $2/res/values-sw600dp/styles.xml
-	sed -i -e 's/main_content\"/main_contentq/' $2/res/values-sw720dp-port/styles.xml
-	$XMLMERGYTOOL $1/res/values $2/res/values
-fi
-
-if [ $1 = "Exchange2" ];then
-	addPolish $1
-	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
@@ -293,6 +283,16 @@ if [ $1 = "TelephonyProvider" ];then
 fi
 
 if [ $1 = "ThemeManager" ];then
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY ThemeManager.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: Phone patch fail"
+        exit 1
+    done
+
 	addPolish $1
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
