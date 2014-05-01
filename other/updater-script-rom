@@ -11,7 +11,8 @@ package_extract_dir("system", "/system");
 ui_print("Tworzenie symlinkow...");
 symlink("/system/xbin/su", "/system/bin/su");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
-symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
+symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf",
+        "/system/fonts/EmojiPlaceholder.ttf");
 symlink("busybox", "/system/xbin/[", "/system/xbin/[[",
         "/system/xbin/adjtimex", "/system/xbin/arp", "/system/xbin/ash",
         "/system/xbin/awk", "/system/xbin/base64", "/system/xbin/basename",

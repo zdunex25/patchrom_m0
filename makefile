@@ -17,7 +17,7 @@ local-modified-jars := #framework_ext
 local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
 			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer Updater VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
@@ -28,7 +28,7 @@ local-density := XHDPI
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := SystemUI Gallery2 Stk Launcher2 VideoEditor PicoTts VoiceDialer \
-		HoloSpiralWallpaper MagicSmokeWallpapers PhaseBeam Galaxy4 NoiseField
+		HoloSpiralWallpaper MagicSmokeWallpapers PhaseBeam Galaxy4 NoiseField Exchange2
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -55,6 +55,7 @@ local-pre-zip-misc:
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
+	cp other/Email.apk $(ZIP_DIR)/system/app/Email.apk
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

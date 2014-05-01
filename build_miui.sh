@@ -4,7 +4,7 @@ export PATH=$PATH:/home/$USER/android-sdk-linux/tools:/home/$USER/android-sdk-li
 cd patchromv542
 . build/envsetup.sh -p m0
 cd m0
-mkdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass MiuiGallery MiuiVideo MiWallpaper NetworkAssistant2 Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage temp
+mkdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass MiuiGallery MiuiVideo MiWallpaper NetworkAssistant2 Notes PackageInstaller PaymentService Provision SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage temp
 cd temp
 
 '../../tools/apktool' --quiet d -f '../../miui/XHDPI/system/app/LBESEC_MIUI.apk'
@@ -33,9 +33,9 @@ cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-scri
 sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" out/temp/system/build.prop
-sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
-sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
-sed -i -e "s/ro\.goo\.version=.*/ro\.goo\.version=$version/g" out/temp/system/build.prop
+#sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
+#sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
+#sed -i -e "s/ro\.goo\.version=.*/ro\.goo\.version=$version/g" out/temp/system/build.prop
 sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=m0_z25/g" out/temp/system/build.prop
 
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
@@ -70,7 +70,7 @@ fi
 . ../build/envsetup.sh
 cd m0
 
-rmdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass MiuiGallery MiuiVideo MiWallpaper NetworkAssistant2 Notes PackageInstaller PaymentService Provision QuickSearchBox SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage
+rmdir AntiSpam Backup BugReport Calculator Calendar CalendarProvider CloudService Contacts ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass MiuiGallery MiuiVideo MiWallpaper NetworkAssistant2 Notes PackageInstaller PaymentService Provision SoundRecorder TelephonyProvider Transfer VpnDialogs Weather WeatherProvider XiaomiServiceFramework YellowPage
 find other -name "unsigned-*" | xargs rm -f
 make clean
 echo Signing rom
