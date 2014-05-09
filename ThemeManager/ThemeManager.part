@@ -9,18 +9,18 @@
 +    .locals 1
  
      .prologue
-     .line 180
+     .line 184
 -    iget-object v6, p0, Lmiui/resourcebrowser/activity/ResourceTabActivity;->mResContext:Lmiui/resourcebrowser/ResourceContext;
 -
 -    invoke-virtual {v6}, Lmiui/resourcebrowser/ResourceContext;->getResourceCode()Ljava/lang/String;
 -
 -    move-result-object v5
  
--    .line 181
+-    .line 185
 -    .local v5, resourceCode:Ljava/lang/String;
      const/4 v0, 0x0
  
--    .line 183
+-    .line 187
 -    .local v0, config:Lmiui/resourcebrowser/model/PageTabConfig;
 -    sget-object v6, Lmiui/resourcebrowser/activity/ResourceTabActivity;->sPageTabConfigCodeCache:Ljava/util/Map;
 -
@@ -30,11 +30,11 @@
 -
 -    check-cast v4, Ljava/lang/ref/WeakReference;
 -
--    .line 184
+-    .line 188
 -    .local v4, ref:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lmiui/resourcebrowser/model/PageTabConfig;>;"
 -    if-eqz v4, :cond_0
 -
--    .line 185
+-    .line 189
 -    invoke-virtual {v4}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 -
 -    move-result-object v0
@@ -42,12 +42,12 @@
 -    .end local v0           #config:Lmiui/resourcebrowser/model/PageTabConfig;
 -    check-cast v0, Lmiui/resourcebrowser/model/PageTabConfig;
 -
--    .line 187
+-    .line 191
 -    .restart local v0       #config:Lmiui/resourcebrowser/model/PageTabConfig;
 -    :cond_0
 -    if-nez v0, :cond_1
 -
--    .line 188
+-    .line 192
 -    new-instance v2, Ljava/io/File;
 -
 -    iget-object v6, p0, Lmiui/resourcebrowser/activity/ResourceTabActivity;->mResContext:Lmiui/resourcebrowser/ResourceContext;
@@ -62,13 +62,13 @@
 -
 -    invoke-direct {v2, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 -
--    .line 190
+-    .line 194
 -    .local v2, file:Ljava/io/File;
 -    new-instance v3, Lmiui/resourcebrowser/controller/local/PageTabConfigSerializableParser;
 -
 -    invoke-direct {v3}, Lmiui/resourcebrowser/controller/local/PageTabConfigSerializableParser;-><init>()V
 -
--    .line 192
+-    .line 196
 -    .local v3, parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
 -    :try_start_0
 -    invoke-virtual {v3, v2}, Lmiui/resourcebrowser/controller/local/PageTabConfigParser;->loadPageTabConfig(Ljava/io/File;)Lmiui/resourcebrowser/model/PageTabConfig;
@@ -77,11 +77,11 @@
 -
 -    move-result-object v0
 -
--    .line 196
+-    .line 200
 -    :goto_0
 -    if-eqz v0, :cond_1
 -
--    .line 197
+-    .line 201
 -    sget-object v6, Lmiui/resourcebrowser/activity/ResourceTabActivity;->sPageTabConfigCodeCache:Ljava/util/Map;
 -
 -    new-instance v7, Ljava/lang/ref/WeakReference;
@@ -90,19 +90,19 @@
 -
 -    invoke-interface {v6, v5, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 -
--    .line 201
+-    .line 205
 -    .end local v2           #file:Ljava/io/File;
 -    .end local v3           #parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
 -    :cond_1
      return-object v0
 -
--    .line 193
+-    .line 197
 -    .restart local v2       #file:Ljava/io/File;
 -    .restart local v3       #parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
 -    :catch_0
 -    move-exception v1
 -
--    .line 194
+-    .line 198
 -    .local v1, e:Lmiui/resourcebrowser/controller/local/PersistenceException;
 -    invoke-virtual {v1}, Lmiui/resourcebrowser/controller/local/PersistenceException;->printStackTrace()V
 -

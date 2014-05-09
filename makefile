@@ -65,7 +65,8 @@ local-pre-zip-misc:
 	cp -f other/bootanimation.zip $(ZIP_DIR)/system/media/bootanimation.zip
 	
 	@echo Remove usless stuff
-	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
+	rm -rf $(ZIP_DIR)/data/miui/preinstall_apps
+	rm -rf $(ZIP_DIR)/data/miui/cust/preinstall_apps
 	rm -rf $(ZIP_DIR)/system/media/video/*.mp4
 	rm -rf $(ZIP_DIR)/system/tts/lang_pico/*.bin
 

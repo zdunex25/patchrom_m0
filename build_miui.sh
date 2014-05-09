@@ -26,16 +26,12 @@ z=${x: -1:1}
 version=$z$y
 time=`date +%c`
 utc=`date +%s`
-ota=`date +%Y%m%d-%H%M`
 
 cp -f other/updater-script-rom out/temp/META-INF/com/google/android/updater-script
 
 sed -i -e "s/ro\.build\.date=.*/ro\.build\.date=$time/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.date\.utc=.*/ro\.build\.date\.utc=$utc/g" out/temp/system/build.prop
 sed -i -e "s/ro\.build\.version\.incremental=.*/ro\.build\.version\.incremental=$version/g" out/temp/system/build.prop
-#sed -i -e "s/updater\.time=.*/updater\.time=$ota/g" out/temp/system/build.prop
-#sed -i -e "s/updater\.ver=.*/updater\.ver=$version/g" out/temp/system/build.prop
-#sed -i -e "s/ro\.goo\.version=.*/ro\.goo\.version=$version/g" out/temp/system/build.prop
 sed -i -e "s/ro\.product\.mod_device=.*/ro\.product\.mod_device=m0_z25/g" out/temp/system/build.prop
 
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "other/unsigned-LBESEC_MIUI.apk" "other/signed-LBESEC_MIUI.apk"
@@ -77,7 +73,6 @@ echo Signing rom
 java -jar 'other/signapk.jar' 'other/testkey.x509.pem' 'other/testkey.pk8' "unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip" "miuigalaxy-v5-sgs3-$version-4.2.zip"
 rm -r unsigned-miuigalaxy-v5-sgs3-$version-4.2.zip
 
-echo $ota
 md5=`md5sum miuigalaxy-v5-sgs3-$version-4.2.zip | cut -d" " -f1`
 size=`du -sh miuigalaxy-v5-sgs3-$version-4.2.zip | cut -c1-4`
 data=`date +%-d/%-m/%Y`
@@ -88,4 +83,6 @@ MIRROR1_PL="http://goo.im/devs/mikegapinski/miuiv5/4.2.2/m0/miuigalaxy-v5-sgs3-$
 echo '[dwl producent="'samsung'" board="'m0'" tytul="Samsung&nbsp;Galaxy&nbsp;S3" android="'4.2.2'" miui="'$version'" data="'$data'" md5="'$md5'" informacje="'$forum'" status="" link="'$LINK_PL'" rozmiar="'$size'" mirror1="'$MIRROR1_PL'" mirror2="" rodzaj="'pelna'"]
     
     ' >> ../download_v5.txt
+grep -v 'aapt: warning: string*' 'miui_log.log' >> 'miui_log_s3.log'
+rm miui_log.log
 read -p "Done, miuigalaxy-v5-sgs3-$version-4.2.zip has been created in root of m0 directory, copy to sd and flash it!"
