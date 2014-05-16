@@ -10,7 +10,7 @@
         <activity android:label="@string/app_name" android:name=".m7PartsActivity" android:icon="@drawable/ic_launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.android.settings.M7PARTS" />
+                <action android:name="com.android.systemui.M7PARTS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

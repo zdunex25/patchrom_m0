@@ -17,10 +17,10 @@
 # instance fields
 .field activity:Ljava/lang/Object;
 
-.field children:Ljava/util/HashMap;
+.field children:Landroid/support/v4/util/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashMap",
+            "Landroid/support/v4/util/SimpleArrayMap",
             "<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -42,11 +42,12 @@
     .end annotation
 .end field
 
-.field loaders:Landroid/support/v4/util/SparseArrayCompat;
+.field loaders:Landroid/support/v4/util/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/util/SparseArrayCompat",
+            "Landroid/support/v4/util/SimpleArrayMap",
             "<",
+            "Ljava/lang/String;",
             "Landroid/support/v4/app/LoaderManagerImpl;",
             ">;"
         }
@@ -59,7 +60,7 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

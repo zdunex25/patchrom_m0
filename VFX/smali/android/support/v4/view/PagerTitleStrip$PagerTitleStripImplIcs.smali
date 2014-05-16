@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,9 +35,9 @@
     .parameter "text"
 
     .prologue
-    .line 90
+    .line 94
     invoke-static {p1}, Landroid/support/v4/view/PagerTitleStripIcs;->setSingleLineAllCaps(Landroid/widget/TextView;)V
 
-    .line 91
+    .line 95
     return-void
 .end method

@@ -1,11 +1,11 @@
 .class Lcom/stericson/RootTools/internal/RootToolsInternalMethods$4;
-.super Lcom/stericson/RootTools/execution/Command;
+.super Lcom/stericson/RootTools/execution/CommandCapture;
 .source "RootToolsInternalMethods.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getInode(Ljava/lang/String;)Ljava/lang/String;
+    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getBusyBoxVersion(Ljava/lang/String;)Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,17 +19,18 @@
 
 
 # direct methods
-.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
+.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;IZ[Ljava/lang/String;)V
     .locals 0
     .parameter
     .parameter "x0"
     .parameter "x1"
+    .parameter "x2"
 
     .prologue
-    .line 700
+    .line 658
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$4;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-    invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(IZ[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -42,68 +43,47 @@
     .parameter "line"
 
     .prologue
-    const/4 v2, 0x0
+    .line 661
+    const/4 v1, 0x4
 
-    .line 704
-    const/4 v0, 0x5
+    if-ne p1, v1, :cond_0
 
-    if-ne p1, v0, :cond_0
+    .line 662
+    const-string v1, "BusyBox"
 
-    .line 705
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v1
 
-    const-string v1, ""
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v1, Lcom/stericson/RootTools/internal/InternalVariables;->busyboxVersion:Ljava/lang/String;
 
-    move-result v0
+    const-string v2, ""
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
-
-    move-result-object v0
-
-    aget-char v0, v0, v2
-
-    invoke-static {v0}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 706
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 663
     const-string v1, " "
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {p2, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    aget-object v0, v0, v2
+    .line 664
+    .local v0, temp:[Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
+    aget-object v1, v0, v1
 
-    move-result-object v0
+    sput-object v1, Lcom/stericson/RootTools/internal/InternalVariables;->busyboxVersion:Ljava/lang/String;
 
-    sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->inode:Ljava/lang/String;
-
-    .line 709
+    .line 667
+    .end local v0           #temp:[Ljava/lang/String;
     :cond_0
     return-void
 .end method

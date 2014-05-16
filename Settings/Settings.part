@@ -13,21 +13,17 @@
 
 --- a/Settings/res/xml/settings_headers.xml
 +++ b/Settings/res/xml/settings_headers.xml
-@@ -51,9 +51,16 @@
+@@ -51,9 +51,12 @@
      <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
          <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
      </header>
 -    <header android:id="@id/manufacturer_settings">
-+    <header android:title="@string/header_category_galaxy" />
 +    <header android:icon="@drawable/ic_ringer_volume_settings" android:title="@string/viper_settings">
 +        <intent android:action="com.android.settings.VIPER" />
 +    </header>
 +    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings" android:title="@string/galaxy_settings">
          <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
      </header>
-+    <header android:icon="@drawable/ic_status_bar_settings" android:title="@string/cp_settings">
-+        <intent android:action="com.android.settings.M7PARTS" />
-+    </header>
      <header android:id="@id/system_section" android:title="@string/header_category_system" />
      <header android:icon="@drawable/ic_oldman_mode_settings" android:id="@id/oldman_mode_settings" android:title="@string/oldman_mode_entry_name">
          <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.OldmanModeSettings" />

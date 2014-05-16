@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="onMeClick"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About1" />
-    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView2" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About2" />
-    <!--TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView3" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About3" android:onClick="onMeClick2" />
-    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView7" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PAVLYUKOFF@GMAIL.COM" /-->
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="7.5sp" android:id="@id/textView8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About1" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About2" />
     <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
-    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sNavBarDescr" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="300.0dip" android:layout_height="wrap_content" android:src="@drawable/miuis" android:adjustViewBounds="true" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="300.0dip" android:layout_height="wrap_content" android:src="@drawable/center" android:adjustViewBounds="true" />
     <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
-    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/About4" />
-    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="300.0dip" android:layout_height="wrap_content" android:src="@drawable/ios" android:adjustViewBounds="true" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView6" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="10.5sp" android:id="@id/textView9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
 </LinearLayout>

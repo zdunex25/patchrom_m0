@@ -148,6 +148,6 @@ package_extract_file("META-INF/com/miui/relink", "/data/local/tmp/relink");
 set_perm(0, 0, 0555, "/data/local/tmp/relink");
 run_program("/data/local/tmp/relink");
 delete("/data/local/tmp/relink");
-set_metadata_recursive("/data/miui/cust", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
+set_perm_recursive(1000, 1000, 0755, 0644, "/data/miui/cust");
 unmount("/data");
 unmount("/system");

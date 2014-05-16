@@ -18,6 +18,9 @@
 .method public abstract getCanRetrieveWindowContent(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
 .end method
 
+.method public abstract getCapabilities(Landroid/accessibilityservice/AccessibilityServiceInfo;)I
+.end method
+
 .method public abstract getDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
 .end method
 

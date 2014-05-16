@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 97
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .parameter "action"
 
     .prologue
-    .line 121
+    .line 128
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .parameter "child"
 
     .prologue
-    .line 126
+    .line 133
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .parameter "virtualDescendantId"
 
     .prologue
-    .line 131
+    .line 138
     return-void
 .end method
 
@@ -79,7 +79,7 @@
     .end annotation
 
     .prologue
-    .line 135
+    .line 142
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -93,7 +93,7 @@
     .parameter "focus"
 
     .prologue
-    .line 375
+    .line 382
     const/4 v0, 0x0
 
     return-object v0
@@ -105,7 +105,7 @@
     .parameter "direction"
 
     .prologue
-    .line 380
+    .line 387
     const/4 v0, 0x0
 
     return-object v0
@@ -116,7 +116,7 @@
     .parameter "info"
 
     .prologue
-    .line 140
+    .line 147
     const/4 v0, 0x0
 
     return v0
@@ -128,7 +128,7 @@
     .parameter "outBounds"
 
     .prologue
-    .line 146
+    .line 153
     return-void
 .end method
 
@@ -138,7 +138,7 @@
     .parameter "outBounds"
 
     .prologue
-    .line 151
+    .line 158
     return-void
 .end method
 
@@ -148,7 +148,7 @@
     .parameter "index"
 
     .prologue
-    .line 155
+    .line 162
     const/4 v0, 0x0
 
     return-object v0
@@ -159,7 +159,7 @@
     .parameter "info"
 
     .prologue
-    .line 160
+    .line 167
     const/4 v0, 0x0
 
     return v0
@@ -170,7 +170,7 @@
     .parameter "info"
 
     .prologue
-    .line 165
+    .line 172
     const/4 v0, 0x0
 
     return-object v0
@@ -181,10 +181,21 @@
     .parameter "info"
 
     .prologue
-    .line 170
+    .line 177
     const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public getLiveRegion(Ljava/lang/Object;)I
+    .locals 1
+    .parameter "info"
+
+    .prologue
+    .line 417
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public getMovementGranularities(Ljava/lang/Object;)I
@@ -192,7 +203,7 @@
     .parameter "info"
 
     .prologue
-    .line 270
+    .line 277
     const/4 v0, 0x0
 
     return v0
@@ -203,7 +214,7 @@
     .parameter "info"
 
     .prologue
-    .line 175
+    .line 182
     const/4 v0, 0x0
 
     return-object v0
@@ -214,7 +225,7 @@
     .parameter "info"
 
     .prologue
-    .line 180
+    .line 187
     const/4 v0, 0x0
 
     return-object v0
@@ -225,7 +236,18 @@
     .parameter "info"
 
     .prologue
-    .line 185
+    .line 192
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getViewIdResourceName(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
+    .parameter "info"
+
+    .prologue
+    .line 407
     const/4 v0, 0x0
 
     return-object v0
@@ -236,7 +258,7 @@
     .parameter "info"
 
     .prologue
-    .line 190
+    .line 197
     const/4 v0, 0x0
 
     return v0
@@ -247,7 +269,7 @@
     .parameter "info"
 
     .prologue
-    .line 230
+    .line 237
     const/4 v0, 0x0
 
     return v0
@@ -258,7 +280,7 @@
     .parameter "info"
 
     .prologue
-    .line 195
+    .line 202
     const/4 v0, 0x0
 
     return v0
@@ -269,7 +291,7 @@
     .parameter "info"
 
     .prologue
-    .line 200
+    .line 207
     const/4 v0, 0x0
 
     return v0
@@ -280,7 +302,7 @@
     .parameter "info"
 
     .prologue
-    .line 205
+    .line 212
     const/4 v0, 0x0
 
     return v0
@@ -291,7 +313,7 @@
     .parameter "info"
 
     .prologue
-    .line 210
+    .line 217
     const/4 v0, 0x0
 
     return v0
@@ -302,7 +324,7 @@
     .parameter "info"
 
     .prologue
-    .line 215
+    .line 222
     const/4 v0, 0x0
 
     return v0
@@ -313,7 +335,7 @@
     .parameter "info"
 
     .prologue
-    .line 220
+    .line 227
     const/4 v0, 0x0
 
     return v0
@@ -324,7 +346,7 @@
     .parameter "info"
 
     .prologue
-    .line 235
+    .line 242
     const/4 v0, 0x0
 
     return v0
@@ -335,7 +357,7 @@
     .parameter "info"
 
     .prologue
-    .line 240
+    .line 247
     const/4 v0, 0x0
 
     return v0
@@ -346,7 +368,7 @@
     .parameter "info"
 
     .prologue
-    .line 245
+    .line 252
     const/4 v0, 0x0
 
     return v0
@@ -357,7 +379,7 @@
     .parameter "info"
 
     .prologue
-    .line 250
+    .line 257
     const/4 v0, 0x0
 
     return v0
@@ -368,7 +390,7 @@
     .parameter "info"
 
     .prologue
-    .line 225
+    .line 232
     const/4 v0, 0x0
 
     return v0
@@ -378,7 +400,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 107
     const/4 v0, 0x0
 
     return-object v0
@@ -389,7 +411,7 @@
     .parameter "source"
 
     .prologue
-    .line 105
+    .line 112
     const/4 v0, 0x0
 
     return-object v0
@@ -401,7 +423,7 @@
     .parameter "virtualDescendantId"
 
     .prologue
-    .line 110
+    .line 117
     const/4 v0, 0x0
 
     return-object v0
@@ -412,7 +434,7 @@
     .parameter "info"
 
     .prologue
-    .line 115
+    .line 122
     const/4 v0, 0x0
 
     return-object v0
@@ -424,7 +446,7 @@
     .parameter "action"
 
     .prologue
-    .line 255
+    .line 262
     const/4 v0, 0x0
 
     return v0
@@ -437,7 +459,7 @@
     .parameter "arguments"
 
     .prologue
-    .line 260
+    .line 267
     const/4 v0, 0x0
 
     return v0
@@ -448,7 +470,7 @@
     .parameter "info"
 
     .prologue
-    .line 391
+    .line 398
     return-void
 .end method
 
@@ -458,7 +480,7 @@
     .parameter "focused"
 
     .prologue
-    .line 331
+    .line 338
     return-void
 .end method
 
@@ -468,7 +490,7 @@
     .parameter "bounds"
 
     .prologue
-    .line 276
+    .line 283
     return-void
 .end method
 
@@ -478,7 +500,7 @@
     .parameter "bounds"
 
     .prologue
-    .line 281
+    .line 288
     return-void
 .end method
 
@@ -488,7 +510,7 @@
     .parameter "checkable"
 
     .prologue
-    .line 286
+    .line 293
     return-void
 .end method
 
@@ -498,7 +520,7 @@
     .parameter "checked"
 
     .prologue
-    .line 291
+    .line 298
     return-void
 .end method
 
@@ -508,7 +530,7 @@
     .parameter "className"
 
     .prologue
-    .line 296
+    .line 303
     return-void
 .end method
 
@@ -518,7 +540,7 @@
     .parameter "clickable"
 
     .prologue
-    .line 301
+    .line 308
     return-void
 .end method
 
@@ -528,7 +550,7 @@
     .parameter "contentDescription"
 
     .prologue
-    .line 306
+    .line 313
     return-void
 .end method
 
@@ -538,7 +560,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 311
+    .line 318
     return-void
 .end method
 
@@ -548,7 +570,7 @@
     .parameter "focusable"
 
     .prologue
-    .line 316
+    .line 323
     return-void
 .end method
 
@@ -558,7 +580,17 @@
     .parameter "focused"
 
     .prologue
-    .line 321
+    .line 328
+    return-void
+.end method
+
+.method public setLiveRegion(Ljava/lang/Object;I)V
+    .locals 0
+    .parameter "info"
+    .parameter "mode"
+
+    .prologue
+    .line 423
     return-void
 .end method
 
@@ -568,7 +600,7 @@
     .parameter "longClickable"
 
     .prologue
-    .line 336
+    .line 343
     return-void
 .end method
 
@@ -578,7 +610,7 @@
     .parameter "granularities"
 
     .prologue
-    .line 266
+    .line 273
     return-void
 .end method
 
@@ -588,7 +620,7 @@
     .parameter "packageName"
 
     .prologue
-    .line 341
+    .line 348
     return-void
 .end method
 
@@ -598,7 +630,7 @@
     .parameter "parent"
 
     .prologue
-    .line 346
+    .line 353
     return-void
 .end method
 
@@ -609,7 +641,7 @@
     .parameter "virtualDescendantId"
 
     .prologue
-    .line 396
+    .line 403
     return-void
 .end method
 
@@ -619,7 +651,7 @@
     .parameter "password"
 
     .prologue
-    .line 351
+    .line 358
     return-void
 .end method
 
@@ -629,7 +661,7 @@
     .parameter "scrollable"
 
     .prologue
-    .line 356
+    .line 363
     return-void
 .end method
 
@@ -639,7 +671,7 @@
     .parameter "selected"
 
     .prologue
-    .line 361
+    .line 368
     return-void
 .end method
 
@@ -649,7 +681,7 @@
     .parameter "source"
 
     .prologue
-    .line 366
+    .line 373
     return-void
 .end method
 
@@ -660,7 +692,7 @@
     .parameter "virtualDescendantId"
 
     .prologue
-    .line 371
+    .line 378
     return-void
 .end method
 
@@ -670,7 +702,17 @@
     .parameter "text"
 
     .prologue
-    .line 386
+    .line 393
+    return-void
+.end method
+
+.method public setViewIdResourceName(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+    .parameter "info"
+    .parameter "viewId"
+
+    .prologue
+    .line 413
     return-void
 .end method
 
@@ -680,6 +722,6 @@
     .parameter "visibleToUser"
 
     .prologue
-    .line 326
+    .line 333
     return-void
 .end method

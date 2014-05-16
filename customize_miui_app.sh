@@ -154,6 +154,7 @@ if [ $1 = "MiuiSystemUI" ];then
     done
 
 	addPolish $1
+	sed -i -e 's/>Układ ikon/>Układ ikon i navbar/' out/$1/res/values-pl/strings.xml
 	adjustDpi $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
 	$XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi

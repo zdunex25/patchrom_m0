@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .parameter "direction"
 
     .prologue
-    .line 86
+    .line 236
     const/4 v0, 0x0
 
     return v0
@@ -48,7 +48,18 @@
     .parameter "direction"
 
     .prologue
-    .line 89
+    .line 239
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getAccessibilityLiveRegion(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 357
     const/4 v0, 0x0
 
     return v0
@@ -59,17 +70,28 @@
     .parameter "view"
 
     .prologue
-    .line 138
+    .line 291
     const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public getAlpha(Landroid/view/View;)F
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 294
+    const/high16 v0, 0x3f80
+
+    return v0
 .end method
 
 .method getFrameTime()J
     .locals 2
 
     .prologue
-    .line 129
+    .line 279
     const-wide/16 v0, 0xa
 
     return-wide v0
@@ -80,8 +102,78 @@
     .parameter "view"
 
     .prologue
-    .line 132
+    .line 282
     const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLabelFor(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 303
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLayerType(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 300
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getLayoutDirection(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 314
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getMeasuredHeightAndState(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 347
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMeasuredState(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 352
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getMeasuredWidthAndState(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 342
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
 
     return v0
 .end method
@@ -91,10 +183,23 @@
     .parameter "v"
 
     .prologue
-    .line 92
+    .line 242
     const/4 v0, 0x2
 
     return v0
+.end method
+
+.method public getParentForAccessibility(Landroid/view/View;)Landroid/view/ViewParent;
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 324
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public hasTransientState(Landroid/view/View;)Z
@@ -102,10 +207,42 @@
     .parameter "view"
 
     .prologue
-    .line 111
+    .line 261
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public isOpaque(Landroid/view/View;)Z
+    .locals 4
+    .parameter "view"
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 329
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 330
+    .local v0, bg:Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
+
+    .line 331
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-ne v2, v3, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 333
+    :cond_0
+    return v1
 .end method
 
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
@@ -114,7 +251,7 @@
     .parameter "event"
 
     .prologue
-    .line 105
+    .line 255
     return-void
 .end method
 
@@ -124,7 +261,7 @@
     .parameter "info"
 
     .prologue
-    .line 108
+    .line 258
     return-void
 .end method
 
@@ -134,8 +271,21 @@
     .parameter "event"
 
     .prologue
-    .line 102
+    .line 252
     return-void
+.end method
+
+.method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
+    .parameter "view"
+    .parameter "action"
+    .parameter "arguments"
+
+    .prologue
+    .line 288
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public postInvalidateOnAnimation(Landroid/view/View;)V
@@ -143,14 +293,14 @@
     .parameter "view"
 
     .prologue
-    .line 117
+    .line 267
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/view/View;->postInvalidateDelayed(J)V
 
-    .line 118
+    .line 268
     return-void
 .end method
 
@@ -163,7 +313,7 @@
     .parameter "bottom"
 
     .prologue
-    .line 120
+    .line 270
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v1
@@ -180,7 +330,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/view/View;->postInvalidateDelayed(JIIII)V
 
-    .line 121
+    .line 271
     return-void
 .end method
 
@@ -190,14 +340,14 @@
     .parameter "action"
 
     .prologue
-    .line 123
+    .line 273
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 124
+    .line 274
     return-void
 .end method
 
@@ -208,7 +358,7 @@
     .parameter "delayMillis"
 
     .prologue
-    .line 126
+    .line 276
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
@@ -217,8 +367,23 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 127
+    .line 277
     return-void
+.end method
+
+.method public resolveSizeAndState(III)I
+    .locals 1
+    .parameter "size"
+    .parameter "measureSpec"
+    .parameter "childMeasuredState"
+
+    .prologue
+    .line 337
+    invoke-static {p1, p2}, Landroid/view/View;->resolveSize(II)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public setAccessibilityDelegate(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
@@ -227,7 +392,17 @@
     .parameter "delegate"
 
     .prologue
-    .line 99
+    .line 249
+    return-void
+.end method
+
+.method public setAccessibilityLiveRegion(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "mode"
+
+    .prologue
+    .line 363
     return-void
 .end method
 
@@ -237,7 +412,7 @@
     .parameter "hasTransientState"
 
     .prologue
-    .line 115
+    .line 265
     return-void
 .end method
 
@@ -247,7 +422,48 @@
     .parameter "mode"
 
     .prologue
-    .line 136
+    .line 286
+    return-void
+.end method
+
+.method public setLabelFor(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "id"
+
+    .prologue
+    .line 307
+    return-void
+.end method
+
+.method public setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
+    .locals 0
+    .parameter "view"
+    .parameter "p"
+
+    .prologue
+    .line 310
+    return-void
+.end method
+
+.method public setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
+    .locals 0
+    .parameter "view"
+    .parameter "layerType"
+    .parameter "paint"
+
+    .prologue
+    .line 298
+    return-void
+.end method
+
+.method public setLayoutDirection(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "layoutDirection"
+
+    .prologue
+    .line 320
     return-void
 .end method
 
@@ -257,6 +473,6 @@
     .parameter "mode"
 
     .prologue
-    .line 96
+    .line 246
     return-void
 .end method

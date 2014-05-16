@@ -1,10 +1,10 @@
-.class public Landroid/support/v4/app/TaskStackBuilderHoneycomb;
+.class Landroid/support/v4/app/TaskStackBuilderHoneycomb;
 .super Ljava/lang/Object;
 .source "TaskStackBuilderHoneycomb.java"
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue

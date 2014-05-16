@@ -2,4 +2,5 @@
 <resources>
     <string name="status_bar_date_format">"EEEE
 yyyy.M.d"</string>
+    <string name="status_bar_icon_style">Layout and navbar</string>
 </resources>

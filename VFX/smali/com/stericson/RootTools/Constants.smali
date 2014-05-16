@@ -18,7 +18,7 @@
 
 .field public static final IAG:I = 0x2
 
-.field public static final TAG:Ljava/lang/String; = "RootTools v2.6"
+.field public static final TAG:Ljava/lang/String; = "RootTools v3.4"
 
 
 # direct methods

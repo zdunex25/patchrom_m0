@@ -111,6 +111,7 @@
     <public type="string" name="sVolumeExtSum" id="0x7f07004b" />
     <public type="string" name="LinkTogglesTitle" id="0x7f07004c" />
     <public type="string" name="sHeapGeneral" id="0x7f07004d" />
+    <public type="string" name="sNavBarDesc" id="0x7f07004e" />
     <public type="id" name="textView1" id="0x7f080000" />
     <public type="id" name="textView4" id="0x7f080001" />
     <public type="id" name="button6" id="0x7f080002" />

@@ -50,6 +50,7 @@ local-pre-zip-misc:
 	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
+	cp other/su $(ZIP_DIR)/system/xbin/su
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons

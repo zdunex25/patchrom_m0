@@ -1,15 +1,18 @@
 
 --- a/MiuiSystemUI/res/values/public.xml
 +++ b/MiuiSystemUI/res/values/public.xml
-@@ -436,6 +436,11 @@
+@@ -436,6 +436,14 @@
      <public type="layout" name="task_item_view" id="0x7f030032" />
      <public type="layout" name="task_manager" id="0x7f030033" />
      <public type="layout" name="torch_main" id="0x7f030034" />
 +    <public type="layout" name="status_bar_center" id="0x7f030035" />
-+    <public type="layout" name="super_status_bar_center" id="0x7f030036" />
-+    <public type="layout" name="signal_cluster_view_ios" id="0x7f030037" />
-+    <public type="layout" name="status_bar_ios" id="0x7f030038" />
-+    <public type="layout" name="super_status_bar_ios" id="0x7f030039" />
++    <public type="layout" name="status_bar_simple_center" id="0x7f030036" />
++    <public type="layout" name="super_status_bar_center" id="0x7f030037" />
++    <public type="layout" name="signal_cluster_view_ios" id="0x7f030038" />
++    <public type="layout" name="status_bar_ios" id="0x7f030039" />
++    <public type="layout" name="status_bar_simple_ios" id="0x7f03003a" />
++    <public type="layout" name="super_status_bar_ios" id="0x7f03003b" />
++    <public type="layout" name="status_bar_simple_blank" id="0x7f03003c" />
      <public type="layout" name="status_bar_search_panel" id="0x7f03001d" />
      <public type="anim" name="notification_final_disappear" id="0x7f040000" />
      <public type="anim" name="priority_alert_enter" id="0x7f040001" />
@@ -51,12 +54,12 @@
 +    return p1
 +
 +    :cond_0
-+    const v4, 0x7f030036
++    const v4, 0x7f030037
 +
 +    return v4
 +
 +    :cond_1
-+    const v4, 0x7f030039
++    const v4, 0x7f03003b
 +
 +    return v4
 +.end method
@@ -76,12 +79,98 @@
  
      move-result-object v0
 
---- a/MiuiSystemUI/res/layout/status_bar_simple.xml
-+++ b/MiuiSystemUI/res/layout/status_bar_simple.xml
-@@ -1,5 +1,5 @@
- <?xml version="1.0" encoding="utf-8"?>
--<com.android.systemui.statusbar.phone.SimpleStatusBar android:gravity="center_vertical" android:id="@id/status_bar_simple" android:layout_width="fill_parent" android:layout_height="@miui:dimen/android_status_bar_height"
-+<com.android.systemui.statusbar.phone.SimpleStatusBar android:gravity="center_vertical" android:id="@id/status_bar_simple" android:layout_width="0.0dip" android:layout_height="0.0dip"
+--- a/MiuiSystemUI/smali/com/android/systemui/taskmanager/TaskManagerView.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/taskmanager/TaskManagerView.smali
+@@ -1342,62 +1342,19 @@
+ 
+     div-int/lit8 v10, v5, 0x3
+ 
+-    invoke-static {v9, v10}, Landroid/view/Surface;->screenshot(II)Landroid/graphics/Bitmap;
++    invoke-static {v8, v5}, Landroid/view/Surface;->screenshot(II)Landroid/graphics/Bitmap;
+ 
+     move-result-object v1
+ 
+-    .line 365
+-    .local v1, backgroundOriginal:Landroid/graphics/Bitmap;
+-    if-eqz v1, :cond_4
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+-
+-    move-result v9
+-
+-    if-eqz v9, :cond_4
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+-
+-    move-result v9
+-
+-    if-eqz v9, :cond_4
+-
+-    .line 367
+-    iget-object v9, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    if-nez v9, :cond_2
+-
+-    .line 368
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+-
+-    move-result v9
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+-
+-    move-result v10
+-
+     sget-object v11, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+ 
+-    invoke-static {v9, v10, v11}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+-
+-    move-result-object v9
+-
+-    iput-object v9, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    .line 370
+-    iget-object v9, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    const/high16 v10, -0x100
++    const/4 v9, 0x1
+ 
+-    invoke-virtual {v9, v10}, Landroid/graphics/Bitmap;->eraseColor(I)V
++    invoke-virtual {v1, v11, v9}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
+ 
+-    .line 373
+-    :cond_2
+-    iget-object v9, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    sget v10, Lcom/android/systemui/taskmanager/TaskManagerView;->BACKGROUND_BLUR_RADIUS:I
++    move-result-object v1
+ 
+-    invoke-static {v1, v9, v10}, Lmiui/util/ImageUtils;->fastBlur(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)V
++    iput-object v1, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+ 
+     .line 374
+     new-instance v2, Landroid/graphics/Canvas;
+
+--- a/MiuiSystemUI/res/layout/status_bar_expanded.xml
++++ b/MiuiSystemUI/res/layout/status_bar_expanded.xml
+@@ -2,7 +2,7 @@
+ <com.android.systemui.statusbar.phone.TrackingView android:id="@id/notification_panel" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
    xmlns:android="http://schemas.android.com/apk/res/android">
-     <com.android.systemui.statusbar.phone.BatteryIndicator android:layout_gravity="top" android:id="@id/battery_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/battery_indicator" android:scaleType="fitXY" />
-     <com.android.systemui.statusbar.phone.BatteryIndicatorCharging android:layout_gravity="top|right|center" android:id="@id/battery_indicator_charging" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/battery_indicator_charging" />
+     <LinearLayout android:orientation="vertical" android:id="@id/expanded_fixed" android:layout_width="fill_parent" android:layout_height="fill_parent">
+-        <include layout="@layout/status_bar_simple" />
++        <include layout="@layout/status_bar_simple_blank" />
+         <LinearLayout android:orientation="vertical" android:id="@id/expanded_fixed_backgroud" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+             <include layout="@layout/status_bar_expanded_header" />
+             <com.android.systemui.statusbar.phone.ExpandedView android:id="@id/expanded_contents" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+
+--- a/MiuiSystemUI/res/xml/advanced_settings.xml
++++ b/MiuiSystemUI/res/xml/advanced_settings.xml
+@@ -7,6 +7,9 @@
+         <miui.preference.ValuePreference android:persistent="false" android:title="@string/settings_custom_carrier" android:key="custom_carrier">
+             <intent android:targetPackage="com.android.systemui" android:targetClass="com.android.systemui.settings.CarrierCustomSettings" />
+         </miui.preference.ValuePreference>
++        <PreferenceScreen android:title="@string/status_bar_icon_style">
++            <intent android:action="com.android.systemui.M7PARTS" />
++        </PreferenceScreen>
+     </PreferenceCategory>
+     <PreferenceCategory android:title="@string/settings_notification_bar">
+         <CheckBoxPreference android:persistent="true" android:title="@string/settings_show_screenshot_notification" android:key="show_screenshot_notification" />

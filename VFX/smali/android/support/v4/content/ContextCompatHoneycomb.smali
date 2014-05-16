@@ -8,10 +8,23 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static getObbDir(Landroid/content/Context;)Ljava/io/File;
+    .locals 1
+    .parameter "context"
+
+    .prologue
+    .line 34
+    invoke-virtual {p0}, Landroid/content/Context;->getObbDir()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method static startActivities(Landroid/content/Context;[Landroid/content/Intent;)V
@@ -20,9 +33,9 @@
     .parameter "intents"
 
     .prologue
-    .line 28
+    .line 30
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
 
-    .line 29
+    .line 31
     return-void
 .end method

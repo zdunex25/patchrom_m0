@@ -1,5 +1,5 @@
 .class Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatIcsImpl;
-.super Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatStubImpl;
+.super Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatHCImpl;
 .source "ViewGroupCompat.java"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 42
-    invoke-direct {p0}, Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatStubImpl;-><init>()V
+    .line 83
+    invoke-direct {p0}, Landroid/support/v4/view/ViewGroupCompat$ViewGroupCompatHCImpl;-><init>()V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     .parameter "event"
 
     .prologue
-    .line 46
+    .line 87
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/ViewGroupCompatIcs;->onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0

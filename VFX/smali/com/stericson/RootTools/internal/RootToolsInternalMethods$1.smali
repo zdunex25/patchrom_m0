@@ -1,5 +1,5 @@
 .class Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;
-.super Lcom/stericson/RootTools/execution/Command;
+.super Lcom/stericson/RootTools/execution/CommandCapture;
 .source "RootToolsInternalMethods.java"
 
 
@@ -21,20 +21,21 @@
 
 
 # direct methods
-.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/util/List;)V
+.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;IZ[Ljava/lang/String;Ljava/util/List;)V
     .locals 0
     .parameter
     .parameter "x0"
     .parameter "x1"
+    .parameter "x2"
     .parameter
 
     .prologue
-    .line 417
+    .line 400
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-    iput-object p4, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;->val$result:Ljava/util/List;
+    iput-object p5, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;->val$result:Ljava/util/List;
 
-    invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(IZ[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -47,14 +48,14 @@
     .parameter "arg1"
 
     .prologue
-    .line 420
+    .line 403
     invoke-static {p2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .line 421
+    .line 404
     iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$1;->val$result:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 422
+    .line 405
     return-void
 .end method

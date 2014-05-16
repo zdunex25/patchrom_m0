@@ -1,14 +1,14 @@
-.class public Landroid/support/v4/view/ViewCompatJB;
+.class Landroid/support/v4/view/ViewCompatJB;
 .super Ljava/lang/Object;
 .source "ViewCompatJB.java"
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +19,7 @@
     .parameter "view"
 
     .prologue
-    .line 60
+    .line 66
     invoke-virtual {p0}, Landroid/view/View;->getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
 
     move-result-object v0
@@ -32,7 +32,7 @@
     .parameter "view"
 
     .prologue
-    .line 52
+    .line 54
     invoke-virtual {p0}, Landroid/view/View;->getImportantForAccessibility()I
 
     move-result v0
@@ -40,13 +40,41 @@
     return v0
 .end method
 
+.method public static getParentForAccessibility(Landroid/view/View;)Landroid/view/ViewParent;
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 70
+    invoke-virtual {p0}, Landroid/view/View;->getParentForAccessibility()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static hasTransientState(Landroid/view/View;)Z
     .locals 1
     .parameter "view"
 
     .prologue
-    .line 27
+    .line 29
     invoke-virtual {p0}, Landroid/view/View;->hasTransientState()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
+    .parameter "view"
+    .parameter "action"
+    .parameter "arguments"
+
+    .prologue
+    .line 62
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result v0
 
@@ -58,10 +86,10 @@
     .parameter "view"
 
     .prologue
-    .line 35
+    .line 37
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
-    .line 36
+    .line 38
     return-void
 .end method
 
@@ -74,10 +102,10 @@
     .parameter "bottom"
 
     .prologue
-    .line 40
+    .line 42
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->postInvalidate(IIII)V
 
-    .line 41
+    .line 43
     return-void
 .end method
 
@@ -87,10 +115,10 @@
     .parameter "action"
 
     .prologue
-    .line 44
+    .line 46
     invoke-virtual {p0, p1}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 45
+    .line 47
     return-void
 .end method
 
@@ -101,10 +129,10 @@
     .parameter "delayMillis"
 
     .prologue
-    .line 48
+    .line 50
     invoke-virtual {p0, p1, p2, p3}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
 
-    .line 49
+    .line 51
     return-void
 .end method
 
@@ -114,10 +142,10 @@
     .parameter "hasTransientState"
 
     .prologue
-    .line 31
+    .line 33
     invoke-virtual {p0, p1}, Landroid/view/View;->setHasTransientState(Z)V
 
-    .line 32
+    .line 34
     return-void
 .end method
 
@@ -127,9 +155,9 @@
     .parameter "mode"
 
     .prologue
-    .line 56
+    .line 58
     invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    .line 57
+    .line 59
     return-void
 .end method

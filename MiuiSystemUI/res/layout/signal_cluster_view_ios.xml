@@ -5,7 +5,6 @@
     <ImageView android:layout_gravity="center_vertical" android:id="@id/mobile_roam" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     <ImageView android:layout_gravity="center_vertical" android:id="@id/no_sim" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_no_sim" />
     <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <View android:visibility="invisible" android:layout_width="6.0dip" android:layout_height="6.0dip" />
         <FrameLayout android:id="@id/mobile_combo" android:layout_width="wrap_content" android:layout_height="wrap_content">
             <ImageView android:id="@id/mobile_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             <ImageView android:id="@id/mobile_type" android:layout_width="wrap_content" android:layout_height="wrap_content" />

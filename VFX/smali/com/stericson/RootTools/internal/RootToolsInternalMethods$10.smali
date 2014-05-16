@@ -1,11 +1,11 @@
 .class Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;
-.super Lcom/stericson/RootTools/RootTools$Result;
+.super Lcom/stericson/RootTools/execution/CommandCapture;
 .source "RootToolsInternalMethods.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->isProcessRunning(Ljava/lang/String;)Z
+    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->hasUtil(Ljava/lang/String;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,94 +17,100 @@
 # instance fields
 .field final synthetic this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-.field final synthetic val$processName:Ljava/lang/String;
+.field final synthetic val$box:Ljava/lang/String;
+
+.field final synthetic val$util:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;Ljava/lang/String;)V
+.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;IZ[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .parameter
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
     .parameter
     .parameter
 
     .prologue
-    .line 1247
+    .line 1176
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-    iput-object p2, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$processName:Ljava/lang/String;
+    iput-object p5, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$box:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/stericson/RootTools/RootTools$Result;-><init>()V
+    iput-object p6, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$util:Ljava/lang/String;
+
+    invoke-direct {p0, p2, p3, p4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(IZ[Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onComplete(I)V
-    .locals 0
-    .parameter "diag"
-
-    .prologue
-    .line 1262
-    return-void
-.end method
-
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
-    .parameter "ex"
-
-    .prologue
-    .line 1257
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->setError(I)Lcom/stericson/RootTools/RootTools$Result;
-
-    .line 1258
-    return-void
-.end method
-
-.method public process(Ljava/lang/String;)V
-    .locals 1
+.method public output(ILjava/lang/String;)V
+    .locals 3
+    .parameter "id"
     .parameter "line"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
     .prologue
-    .line 1250
-    iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$processName:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    .line 1180
+    iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$box:Ljava/lang/String;
+
+    const-string v1, "toolbox"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1181
+    const-string v0, "no such tool"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 1182
+    sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
+
+    .line 1191
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1184
+    :cond_1
+    iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$box:Ljava/lang/String;
+
+    const-string v1, "busybox"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1251
-    const/4 v0, 0x1
+    .line 1186
+    iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->val$util:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$10;->setData(Ljava/io/Serializable;)Lcom/stericson/RootTools/RootTools$Result;
+    if-eqz v0, :cond_0
 
-    .line 1253
-    :cond_0
-    return-void
-.end method
+    .line 1187
+    const-string v0, "Found util!"
 
-.method public processError(Ljava/lang/String;)V
-    .locals 0
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+    invoke-static {v0}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
 
-    .prologue
-    .line 1266
-    return-void
+    .line 1188
+    sput-boolean v2, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
+
+    goto :goto_0
 .end method

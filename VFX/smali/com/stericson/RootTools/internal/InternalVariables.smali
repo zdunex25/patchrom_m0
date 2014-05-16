@@ -42,6 +42,10 @@
 
 .field protected static permissions:Lcom/stericson/RootTools/containers/Permissions;
 
+.field protected static pid_list:Ljava/lang/String;
+
+.field protected static processRunning:Z
+
 .field protected static psPattern:Ljava/util/regex/Pattern;
 
 .field protected static results:Ljava/util/List;
@@ -85,12 +89,20 @@
     .line 43
     sput-boolean v0, Lcom/stericson/RootTools/internal/InternalVariables;->found:Z
 
-    .line 51
+    .line 44
+    sput-boolean v0, Lcom/stericson/RootTools/internal/InternalVariables;->processRunning:Z
+
+    .line 49
+    const-string v0, ""
+
+    sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->pid_list:Ljava/lang/String;
+
+    .line 54
     const-string v0, ""
 
     sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->inode:Ljava/lang/String;
 
-    .line 61
+    .line 63
     const-string v0, "^\\S+\\s+([0-9]+).*$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -99,7 +111,7 @@
 
     sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->psPattern:Ljava/util/regex/Pattern;
 
-    .line 62
+    .line 64
     return-void
 .end method
 

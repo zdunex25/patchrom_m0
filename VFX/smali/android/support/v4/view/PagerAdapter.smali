@@ -104,7 +104,7 @@
     .parameter "position"
 
     .prologue
-    .line 297
+    .line 307
     const/4 v0, 0x0
 
     return-object v0
@@ -115,7 +115,7 @@
     .parameter "position"
 
     .prologue
-    .line 308
+    .line 318
     const/high16 v0, 0x3f80
 
     return v0
@@ -167,17 +167,17 @@
     return-void
 .end method
 
-.method registerDataSetObserver(Landroid/database/DataSetObserver;)V
+.method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 1
     .parameter "observer"
 
     .prologue
-    .line 280
+    .line 285
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 281
+    .line 286
     return-void
 .end method
 
@@ -247,16 +247,16 @@
     return-void
 .end method
 
-.method unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+.method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 1
     .parameter "observer"
 
     .prologue
-    .line 284
+    .line 294
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    .line 285
+    .line 295
     return-void
 .end method

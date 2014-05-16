@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .parameter "cm"
 
     .prologue
-    .line 61
+    .line 62
     invoke-static {p1}, Landroid/support/v4/net/ConnectivityManagerCompatGingerbread;->isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z
 
     move-result v0

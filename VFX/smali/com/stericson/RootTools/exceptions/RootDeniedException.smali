@@ -13,9 +13,9 @@
     .parameter "error"
 
     .prologue
-    .line 34
+    .line 30
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 35
+    .line 31
     return-void
 .end method
