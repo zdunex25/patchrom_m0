@@ -14,12 +14,12 @@ local-modified-apps := Camera GalaxyS3Settings m7Parts VFX #MiuiUpdater
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
+local-miui-removed-apps := MediaProvider SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
-			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer Updater VpnDialogs \
+			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Updater VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
@@ -50,13 +50,14 @@ local-pre-zip-misc:
 	cp other/apns-conf.xml $(ZIP_DIR)/system/etc/apns-conf.xml
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
-	cp other/su $(ZIP_DIR)/system/xbin/su
+#	cp other/su $(ZIP_DIR)/system/xbin/su
 	
 	@echo Add missing stuff
 	cp -f other/icons $(ZIP_DIR)/system/media/theme/default/icons
 	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
 	cp other/Email.apk $(ZIP_DIR)/system/app/Email.apk
+	cp other/XiaomiAuthenticator.apk $(ZIP_DIR)/system/app/XiaomiAuthenticator.apk
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
@@ -66,8 +67,7 @@ local-pre-zip-misc:
 	cp -f other/bootanimation.zip $(ZIP_DIR)/system/media/bootanimation.zip
 	
 	@echo Remove usless stuff
-	rm -rf $(ZIP_DIR)/data/miui/preinstall_apps
-	rm -rf $(ZIP_DIR)/data/miui/cust/preinstall_apps
+	rm -rf $(ZIP_DIR)/data/miui/apps/*.apk
 	rm -rf $(ZIP_DIR)/system/media/video/*.mp4
 	rm -rf $(ZIP_DIR)/system/tts/lang_pico/*.bin
 

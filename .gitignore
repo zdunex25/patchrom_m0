@@ -1,0 +1,6 @@
+#To keep OTA script private
+build_ota_m0.sh
+
+#To avoid pushing base and logs
+miuigalaxy-v5-sgs3*.zip
+*.log
