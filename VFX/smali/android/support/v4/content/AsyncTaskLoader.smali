@@ -199,21 +199,24 @@
     if-ne v0, p1, :cond_0
 
     .line 203
+    invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->rollbackContentChanged()V
+
+    .line 204
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mLastLoadCompleteTime:J
 
-    .line 204
+    .line 205
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mCancellingTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
-    .line 205
+    .line 206
     invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->executePendingTask()V
 
-    .line 207
+    .line 208
     :cond_0
     return-void
 .end method
@@ -233,7 +236,7 @@
     .end annotation
 
     .prologue
-    .line 210
+    .line 211
     .local p0, this:Landroid/support/v4/content/AsyncTaskLoader;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>;"
     .local p1, task:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>.LoadTask;"
     .local p2, data:Ljava/lang/Object;,"TD;"
@@ -241,14 +244,14 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 212
+    .line 213
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/content/AsyncTaskLoader;->dispatchOnCancelled(Landroid/support/v4/content/AsyncTaskLoader$LoadTask;Ljava/lang/Object;)V
 
-    .line 224
+    .line 226
     :goto_0
     return-void
 
-    .line 214
+    .line 215
     :cond_0
     invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->isAbandoned()Z
 
@@ -256,25 +259,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 216
+    .line 217
     invoke-virtual {p0, p2}, Landroid/support/v4/content/AsyncTaskLoader;->onCanceled(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 218
+    .line 219
     :cond_1
+    invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->commitContentChanged()V
+
+    .line 220
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mLastLoadCompleteTime:J
 
-    .line 219
+    .line 221
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
-    .line 221
+    .line 223
     invoke-virtual {p0, p2}, Landroid/support/v4/content/AsyncTaskLoader;->deliverResult(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -288,16 +294,16 @@
     .parameter "args"
 
     .prologue
-    .line 266
+    .line 268
     .local p0, this:Landroid/support/v4/content/AsyncTaskLoader;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>;"
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/content/Loader;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 267
+    .line 269
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 270
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mTask="
@@ -308,7 +314,7 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 269
+    .line 271
     const-string v0, " waiting="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -319,13 +325,13 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 271
+    .line 273
     :cond_0
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mCancellingTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
     if-eqz v0, :cond_1
 
-    .line 272
+    .line 274
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mCancellingTask="
@@ -336,7 +342,7 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 273
+    .line 275
     const-string v0, " waiting="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -347,7 +353,7 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 275
+    .line 277
     :cond_1
     iget-wide v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mUpdateThrottle:J
 
@@ -357,24 +363,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 276
+    .line 278
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mUpdateThrottle="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 277
+    .line 279
     iget-wide v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mUpdateThrottle:J
 
     invoke-static {v0, v1, p3}, Landroid/support/v4/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    .line 278
+    .line 280
     const-string v0, " mLastLoadCompleteTime="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 279
+    .line 281
     iget-wide v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mLastLoadCompleteTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -383,10 +389,10 @@
 
     invoke-static {v0, v1, v2, v3, p3}, Landroid/support/v4/util/TimeUtils;->formatDuration(JJLjava/io/PrintWriter;)V
 
-    .line 281
+    .line 283
     invoke-virtual {p3}, Ljava/io/PrintWriter;->println()V
 
-    .line 283
+    .line 285
     :cond_2
     return-void
 .end method
@@ -552,7 +558,7 @@
     .end annotation
 
     .prologue
-    .line 240
+    .line 242
     .local p0, this:Landroid/support/v4/content/AsyncTaskLoader;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>;"
     invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->loadInBackground()Ljava/lang/Object;
 
@@ -593,15 +599,15 @@
     .locals 2
 
     .prologue
-    .line 254
+    .line 256
     .local p0, this:Landroid/support/v4/content/AsyncTaskLoader;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>;"
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
-    .line 255
+    .line 257
     .local v0, task:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;,"Landroid/support/v4/content/AsyncTaskLoader<TD;>.LoadTask;"
     if-eqz v0, :cond_0
 
-    .line 257
+    .line 259
     :try_start_0
     #getter for: Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->done:Ljava/util/concurrent/CountDownLatch;
     invoke-static {v0}, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->access$000(Landroid/support/v4/content/AsyncTaskLoader$LoadTask;)Ljava/util/concurrent/CountDownLatch;
@@ -612,12 +618,12 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 262
+    .line 264
     :cond_0
     :goto_0
     return-void
 
-    .line 258
+    .line 260
     :catch_0
     move-exception v1
 

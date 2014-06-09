@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Control panel</string>
+    <string name="app_name">Layout and navbar</string>
     <string name="ShowRebootOpt">Show reboot</string>
     <string name="RebootString">Reboot</string>
     <string name="TracksString">Tracks</string>
@@ -25,8 +25,8 @@
     <string name="sVolumeDown">Volume Down</string>
     <string name="sUseVolumeDown">React on Volume Down</string>
     <string name="sUseVolumeDownS">React on Volume Down button press</string>
-    <string name="About1">Mod creator is:</string>
-    <string name="About2">7OH @ 4pda.ru</string>
+    <string name="About1">A reboot is necessary after changing layout!</string>
+    <string name="About2">Preview:</string>
     <string name="About3">7OH @ xda-developers.com</string>
     <string name="About4">Clicking here will move you to advanced statistics tab..</string>
     <string name="CustomString">Statusbar</string>
@@ -62,7 +62,6 @@
     <string name="sAlign">Icons in statusbar</string>
     <string name="RestartXString">Restart X</string>
     <string name="rebootMenuT">Reboot phone</string>
-    <string name="sNavBarDesc">Navbar</string>
     <string name="sNavBarEnable">Navbar state</string>
     <string name="m7ShowClockOpt">Show Clock</string>
     <string name="m7ShowClockSum">Show Clock in StatusBar</string>
@@ -79,4 +78,5 @@
     <string name="sVolumeExtSum">Extend volume steps from 15 to 30</string>
     <string name="LinkTogglesTitle">7OH Toggles</string>
     <string name="sHeapGeneral">Select VMHeap size and press APPLY. It will changes to build.prop. Then reboot if You wish to see changes.</string>
+    <string name="sNavBarDesc">Navbar</string>
 </resources>

@@ -17,12 +17,12 @@ local-modified-apps := Camera FmRadio m7Parts VFX
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider MiuiVideo SuperMarket Updater VoiceAssist GameCenter GameCenterSDKService
+local-miui-removed-apps := MediaProvider SuperMarket Updater VoiceAssist GameCenter GameCenterSDKService
 
-local-miui-modified-apps := AntiSpam Backup Bluetooth Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
-			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email FileExplorer MiuiCompass \
+local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
-			PaymentService Provision QuickSearchBox Settings SoundRecorder Stk TelephonyProvider ThemeManager Transfer VpnDialogs \
+			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager VpnDialogs \
 			Weather WeatherProvider XiaomiServiceFramework YellowPage
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
@@ -58,6 +58,8 @@ local-pre-zip-misc:
 	cp -f other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
+	cp other/Email.apk $(ZIP_DIR)/system/app/Email.apk
+	cp other/XiaomiAuthenticator.apk $(ZIP_DIR)/system/app/XiaomiAuthenticator.apk
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
@@ -67,7 +69,7 @@ local-pre-zip-misc:
 	cp -f other/bootanimation.zip $(ZIP_DIR)/system/media/bootanimation.zip
 	
 	@echo Remove usless stuff
-	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
+	rm -rf $(ZIP_DIR)/data/miui/apps/*.apk
 	rm -rf $(ZIP_DIR)/system/csc
 	rm -rf $(ZIP_DIR)/system/tts/lang_SMT
 	rm -rf $(ZIP_DIR)/system/tts/lang_SVOX

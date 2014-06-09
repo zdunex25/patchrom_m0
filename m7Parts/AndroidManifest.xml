@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest android:versionCode="3" android:versionName="3.3.0" package="pavlyukoff.m7Parts"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="16" />
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
@@ -10,7 +10,7 @@
         <activity android:label="@string/app_name" android:name=".m7PartsActivity" android:icon="@drawable/ic_launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.android.settings.M7PARTS" />
+                <action android:name="com.android.systemui.M7PARTS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

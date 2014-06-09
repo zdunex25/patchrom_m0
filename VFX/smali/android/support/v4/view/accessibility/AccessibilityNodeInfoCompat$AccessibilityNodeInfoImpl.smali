@@ -66,6 +66,9 @@
 .method public abstract getContentDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
 .end method
 
+.method public abstract getLiveRegion(Ljava/lang/Object;)I
+.end method
+
 .method public abstract getMovementGranularities(Ljava/lang/Object;)I
 .end method
 
@@ -76,6 +79,9 @@
 .end method
 
 .method public abstract getText(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getViewIdResourceName(Ljava/lang/Object;)Ljava/lang/String;
 .end method
 
 .method public abstract getWindowId(Ljava/lang/Object;)I
@@ -171,6 +177,9 @@
 .method public abstract setFocused(Ljava/lang/Object;Z)V
 .end method
 
+.method public abstract setLiveRegion(Ljava/lang/Object;I)V
+.end method
+
 .method public abstract setLongClickable(Ljava/lang/Object;Z)V
 .end method
 
@@ -202,6 +211,9 @@
 .end method
 
 .method public abstract setText(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract setViewIdResourceName(Ljava/lang/Object;Ljava/lang/String;)V
 .end method
 
 .method public abstract setVisibleToUser(Ljava/lang/Object;Z)V

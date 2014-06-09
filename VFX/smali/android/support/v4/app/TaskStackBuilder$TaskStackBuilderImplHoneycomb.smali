@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public getPendingIntent(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
-    .locals 2
+    .locals 3
     .parameter "context"
     .parameter "intents"
     .parameter "requestCode"
@@ -39,16 +39,24 @@
     .parameter "options"
 
     .prologue
-    .line 88
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    aget-object v0, p2, v0
+    .line 93
+    new-instance v0, Landroid/content/Intent;
 
-    const v1, 0x10008000
+    aget-object v1, p2, v2
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    const v1, 0x1000c000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 90
+    move-result-object v0
+
+    aput-object v0, p2, v2
+
+    .line 96
     invoke-static {p1, p3, p2, p4}, Landroid/support/v4/app/TaskStackBuilderHoneycomb;->getActivitiesPendingIntent(Landroid/content/Context;I[Landroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0

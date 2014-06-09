@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 80
+    .line 95
     invoke-direct {p0}, Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-><init>()V
 
     return-void
@@ -32,21 +32,21 @@
     .parameter "activity"
 
     .prologue
-    .line 86
+    .line 101
     invoke-static {p1}, Landroid/support/v4/app/NavUtilsJB;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 87
+    .line 102
     .local v0, result:Landroid/content/Intent;
     if-nez v0, :cond_0
 
-    .line 88
-    invoke-super {p0, p1}, Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
+    .line 103
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/NavUtils$NavUtilsImplJB;->superGetParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 90
+    .line 105
     :cond_0
     return-object v0
 .end method
@@ -57,21 +57,21 @@
     .parameter "info"
 
     .prologue
-    .line 105
+    .line 124
     invoke-static {p2}, Landroid/support/v4/app/NavUtilsJB;->getParentActivityName(Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 106
+    .line 125
     .local v0, result:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 107
+    .line 126
     invoke-super {p0, p1, p2}, Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 109
+    .line 128
     :cond_0
     return-object v0
 .end method
@@ -82,10 +82,10 @@
     .parameter "upIntent"
 
     .prologue
-    .line 100
+    .line 119
     invoke-static {p1, p2}, Landroid/support/v4/app/NavUtilsJB;->navigateUpTo(Landroid/app/Activity;Landroid/content/Intent;)V
 
-    .line 101
+    .line 120
     return-void
 .end method
 
@@ -95,10 +95,23 @@
     .parameter "targetIntent"
 
     .prologue
-    .line 95
+    .line 114
     invoke-static {p1, p2}, Landroid/support/v4/app/NavUtilsJB;->shouldUpRecreateTask(Landroid/app/Activity;Landroid/content/Intent;)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method superGetParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
+    .locals 1
+    .parameter "activity"
+
+    .prologue
+    .line 109
+    invoke-super {p0, p1}, Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
 .end method

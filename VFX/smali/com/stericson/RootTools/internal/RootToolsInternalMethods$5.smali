@@ -1,11 +1,11 @@
 .class Lcom/stericson/RootTools/internal/RootToolsInternalMethods$5;
-.super Lcom/stericson/RootTools/execution/Command;
+.super Lcom/stericson/RootTools/execution/CommandCapture;
 .source "RootToolsInternalMethods.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->isAccessGiven()Z
+    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getInode(Ljava/lang/String;)Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,17 +19,18 @@
 
 
 # direct methods
-.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;)V
+.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;IZ[Ljava/lang/String;)V
     .locals 0
     .parameter
     .parameter "x0"
     .parameter "x1"
+    .parameter "x2"
 
     .prologue
-    .line 729
+    .line 715
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$5;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-    invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(IZ[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -37,93 +38,69 @@
 
 # virtual methods
 .method public output(ILjava/lang/String;)V
-    .locals 5
+    .locals 3
     .parameter "id"
     .parameter "line"
 
     .prologue
-    .line 732
-    const/4 v3, 0x2
+    const/4 v2, 0x0
 
-    if-ne p1, v3, :cond_2
+    .line 719
+    const/4 v0, 0x5
 
-    .line 733
-    new-instance v0, Ljava/util/HashSet;
+    if-ne p1, v0, :cond_0
 
-    const-string v3, " "
+    .line 720
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    const-string v1, ""
 
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v0
 
-    invoke-direct {v0, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    if-nez v0, :cond_0
 
-    .line 734
-    .local v0, ID:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    .local v1, i$:Ljava/util/Iterator;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object v0
+
+    aget-char v0, v0, v2
+
+    invoke-static {v0}, Ljava/lang/Character;->isDigit(C)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 721
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    aget-object v0, v0, v2
+
+    sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->inode:Ljava/lang/String;
+
+    .line 724
     :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 735
-    .local v2, userid:Ljava/lang/String;
-    invoke-static {v2}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 737
-    invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "uid=0"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 738
-    const/4 v3, 0x1
-
-    sput-boolean v3, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
-
-    .line 739
-    const-string v3, "Access Given"
-
-    invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 743
-    .end local v2           #userid:Ljava/lang/String;
-    :cond_1
-    sget-boolean v3, Lcom/stericson/RootTools/internal/InternalVariables;->accessGiven:Z
-
-    if-nez v3, :cond_2
-
-    .line 744
-    const-string v3, "Access Denied?"
-
-    invoke-static {v3}, Lcom/stericson/RootTools/RootTools;->log(Ljava/lang/String;)V
-
-    .line 747
-    .end local v0           #ID:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
-    :cond_2
     return-void
 .end method

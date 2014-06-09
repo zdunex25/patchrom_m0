@@ -1,11 +1,11 @@
 .class Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;
-.super Lcom/stericson/RootTools/execution/Command;
+.super Lcom/stericson/RootTools/execution/CommandCapture;
 .source "RootToolsInternalMethods.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getSymlink(Ljava/lang/String;)Ljava/lang/String;
+    value = Lcom/stericson/RootTools/internal/RootToolsInternalMethods;->getSpace(Ljava/lang/String;)J
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,24 +17,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-.field final synthetic val$results:Ljava/util/List;
-
 
 # direct methods
-.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;I[Ljava/lang/String;Ljava/util/List;)V
+.method varargs constructor <init>(Lcom/stericson/RootTools/internal/RootToolsInternalMethods;IZ[Ljava/lang/String;)V
     .locals 0
     .parameter
     .parameter "x0"
     .parameter "x1"
-    .parameter
+    .parameter "x2"
 
     .prologue
-    .line 1024
+    .line 974
     iput-object p1, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->this$0:Lcom/stericson/RootTools/internal/RootToolsInternalMethods;
 
-    iput-object p4, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->val$results:Ljava/util/List;
-
-    invoke-direct {p0, p2, p3}, Lcom/stericson/RootTools/execution/Command;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/stericson/RootTools/execution/CommandCapture;-><init>(IZ[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -42,35 +38,39 @@
 
 # virtual methods
 .method public output(ILjava/lang/String;)V
-    .locals 2
+    .locals 1
     .parameter "id"
     .parameter "line"
 
     .prologue
-    .line 1028
-    const/4 v0, 0x7
+    .line 978
+    const/4 v0, 0x6
 
     if-ne p1, v0, :cond_0
 
-    .line 1029
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+    .line 979
+    sget-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->getSpaceFor:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 1030
-    iget-object v0, p0, Lcom/stericson/RootTools/internal/RootToolsInternalMethods$8;->val$results:Ljava/util/List;
+    .line 980
+    const-string v0, " "
 
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 1033
+    move-result-object v0
+
+    sput-object v0, Lcom/stericson/RootTools/internal/InternalVariables;->space:[Ljava/lang/String;
+
+    .line 983
     :cond_0
     return-void
 .end method

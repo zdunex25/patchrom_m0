@@ -1,10 +1,10 @@
-.class public Landroid/support/v4/net/TrafficStatsCompatIcs;
+.class Landroid/support/v4/net/TrafficStatsCompatIcs;
 .super Ljava/lang/Object;
 .source "TrafficStatsCompatIcs.java"
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue

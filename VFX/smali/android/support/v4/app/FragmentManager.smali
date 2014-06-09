@@ -21,10 +21,10 @@
     .locals 0
 
     .prologue
-    .line 59
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
+    .line 117
     return-void
 .end method
 
@@ -33,10 +33,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 334
+    .line 345
     sput-boolean p0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG:Z
 
-    .line 335
+    .line 346
     return-void
 .end method
 
@@ -69,13 +69,25 @@
 .method public abstract getFragment(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;
 .end method
 
+.method public abstract getFragments()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public openTransaction()Landroid/support/v4/app/FragmentTransaction;
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
-    .line 139
+    .line 142
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v0

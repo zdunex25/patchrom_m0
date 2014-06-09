@@ -1,5 +1,5 @@
 .class Landroid/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs;
-.super Landroid/support/v4/widget/ScrollerCompat;
+.super Landroid/support/v4/widget/ScrollerCompat$ScrollerCompatImplGingerbread;
 .source "ScrollerCompat.java"
 
 
@@ -15,28 +15,25 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method constructor <init>()V
     .locals 0
-    .parameter "context"
 
     .prologue
-    .line 34
-    invoke-direct {p0, p1}, Landroid/support/v4/widget/ScrollerCompat;-><init>(Landroid/content/Context;)V
+    .line 231
+    invoke-direct {p0}, Landroid/support/v4/widget/ScrollerCompat$ScrollerCompatImplGingerbread;-><init>()V
 
-    .line 35
     return-void
 .end method
 
 
 # virtual methods
-.method public getCurrVelocity()F
+.method public getCurrVelocity(Ljava/lang/Object;)F
     .locals 1
+    .parameter "scroller"
 
     .prologue
-    .line 39
-    iget-object v0, p0, Landroid/support/v4/widget/ScrollerCompat$ScrollerCompatImplIcs;->mScroller:Landroid/widget/Scroller;
-
-    invoke-static {v0}, Landroid/support/v4/widget/ScrollerCompatIcs;->getCurrVelocity(Landroid/widget/Scroller;)F
+    .line 234
+    invoke-static {p1}, Landroid/support/v4/widget/ScrollerCompatIcs;->getCurrVelocity(Ljava/lang/Object;)F
 
     move-result v0
 

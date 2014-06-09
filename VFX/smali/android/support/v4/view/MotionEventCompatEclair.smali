@@ -28,6 +28,19 @@
     return v0
 .end method
 
+.method public static getPointerCount(Landroid/view/MotionEvent;)I
+    .locals 1
+    .parameter "event"
+
+    .prologue
+    .line 38
+    invoke-virtual {p0}, Landroid/view/MotionEvent;->getPointerCount()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static getPointerId(Landroid/view/MotionEvent;I)I
     .locals 1
     .parameter "event"

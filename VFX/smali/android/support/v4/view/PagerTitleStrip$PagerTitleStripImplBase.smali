@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,9 +35,9 @@
     .parameter "text"
 
     .prologue
-    .line 84
+    .line 88
     invoke-virtual {p1}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 85
+    .line 89
     return-void
 .end method

@@ -1659,12 +1659,8 @@
     move-result-object v10
 
     .line 578
-    .local v10, myPrefName:Landroid/preference/Preference;
-    move-object/from16 v0, p0
-
-    invoke-static {v0, v10}, Lpavlyukoff/m7Parts/m7PartsActivity;->getNetName(Landroid/content/Context;Landroid/preference/Preference;)V
-
     .line 580
+    .local v10, myPrefName:Landroid/preference/Preference;
     move-object/from16 v0, p0
 
     iget v0, v0, Lpavlyukoff/m7Parts/m7PartsActivity;->romVersion:I

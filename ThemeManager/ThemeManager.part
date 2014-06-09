@@ -1,0 +1,112 @@
+
+--- a/ThemeManager/smali/miui/resourcebrowser/activity/ResourceTabActivity.smali
++++ b/ThemeManager/smali/miui/resourcebrowser/activity/ResourceTabActivity.smali
+@@ -1140,107 +1140,14 @@
+ .end method
+ 
+ .method protected getPresetPageTabConfig()Lmiui/resourcebrowser/model/PageTabConfig;
+-    .locals 8
++    .locals 1
+ 
+     .prologue
+     .line 184
+-    iget-object v6, p0, Lmiui/resourcebrowser/activity/ResourceTabActivity;->mResContext:Lmiui/resourcebrowser/ResourceContext;
+-
+-    invoke-virtual {v6}, Lmiui/resourcebrowser/ResourceContext;->getResourceCode()Ljava/lang/String;
+-
+-    move-result-object v5
+ 
+-    .line 185
+-    .local v5, resourceCode:Ljava/lang/String;
+     const/4 v0, 0x0
+ 
+-    .line 187
+-    .local v0, config:Lmiui/resourcebrowser/model/PageTabConfig;
+-    sget-object v6, Lmiui/resourcebrowser/activity/ResourceTabActivity;->sPageTabConfigCodeCache:Ljava/util/Map;
+-
+-    invoke-interface {v6, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+-
+-    move-result-object v4
+-
+-    check-cast v4, Ljava/lang/ref/WeakReference;
+-
+-    .line 188
+-    .local v4, ref:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lmiui/resourcebrowser/model/PageTabConfig;>;"
+-    if-eqz v4, :cond_0
+-
+-    .line 189
+-    invoke-virtual {v4}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+-
+-    move-result-object v0
+-
+-    .end local v0           #config:Lmiui/resourcebrowser/model/PageTabConfig;
+-    check-cast v0, Lmiui/resourcebrowser/model/PageTabConfig;
+-
+-    .line 191
+-    .restart local v0       #config:Lmiui/resourcebrowser/model/PageTabConfig;
+-    :cond_0
+-    if-nez v0, :cond_1
+-
+-    .line 192
+-    new-instance v2, Ljava/io/File;
+-
+-    iget-object v6, p0, Lmiui/resourcebrowser/activity/ResourceTabActivity;->mResContext:Lmiui/resourcebrowser/ResourceContext;
+-
+-    invoke-static {p0}, Lmiui/resourcebrowser/util/ResourceTabConfigHelper;->composeLocale(Landroid/content/Context;)Ljava/lang/String;
+-
+-    move-result-object v7
+-
+-    invoke-static {p0, v6, v7}, Lmiui/resourcebrowser/util/ResourceTabConfigHelper;->composeStoredPath(Landroid/content/Context;Lmiui/resourcebrowser/ResourceContext;Ljava/lang/String;)Ljava/lang/String;
+-
+-    move-result-object v6
+-
+-    invoke-direct {v2, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+-
+-    .line 194
+-    .local v2, file:Ljava/io/File;
+-    new-instance v3, Lmiui/resourcebrowser/controller/local/PageTabConfigSerializableParser;
+-
+-    invoke-direct {v3}, Lmiui/resourcebrowser/controller/local/PageTabConfigSerializableParser;-><init>()V
+-
+-    .line 196
+-    .local v3, parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
+-    :try_start_0
+-    invoke-virtual {v3, v2}, Lmiui/resourcebrowser/controller/local/PageTabConfigParser;->loadPageTabConfig(Ljava/io/File;)Lmiui/resourcebrowser/model/PageTabConfig;
+-    :try_end_0
+-    .catch Lmiui/resourcebrowser/controller/local/PersistenceException; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    move-result-object v0
+-
+-    .line 200
+-    :goto_0
+-    if-eqz v0, :cond_1
+-
+-    .line 201
+-    sget-object v6, Lmiui/resourcebrowser/activity/ResourceTabActivity;->sPageTabConfigCodeCache:Ljava/util/Map;
+-
+-    new-instance v7, Ljava/lang/ref/WeakReference;
+-
+-    invoke-direct {v7, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+-
+-    invoke-interface {v6, v5, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+-
+-    .line 205
+-    .end local v2           #file:Ljava/io/File;
+-    .end local v3           #parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
+-    :cond_1
+     return-object v0
+-
+-    .line 197
+-    .restart local v2       #file:Ljava/io/File;
+-    .restart local v3       #parser:Lmiui/resourcebrowser/controller/local/PageTabConfigParser;
+-    :catch_0
+-    move-exception v1
+-
+-    .line 198
+-    .local v1, e:Lmiui/resourcebrowser/controller/local/PersistenceException;
+-    invoke-virtual {v1}, Lmiui/resourcebrowser/controller/local/PersistenceException;->printStackTrace()V
+-
+-    goto :goto_0
+ .end method
+ 
+ .method protected getResourceController(Lmiui/resourcebrowser/ResourceContext;)Lmiui/resourcebrowser/controller/ResourceController;
