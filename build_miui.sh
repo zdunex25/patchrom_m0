@@ -1,6 +1,5 @@
 #!/bin/bash
 cd ../..
-export PATH=$PATH:/home/$USER/android-sdk-linux/tools:/home/$USER/android-sdk-linux/platform-tools
 cd patchromv542
 . build/envsetup.sh -p m0
 cd m0
