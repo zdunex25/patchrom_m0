@@ -8,7 +8,7 @@
 -    const-string v2, "com.xiaomi.market"
 +    const-string v2, "com.android.vending"
  
-     const v3, 0x7f090027
+     const v3, 0x7f070001
  
 
 --- a/QuickSearchBox/smali/com/android/quicksearchbox/ui/SearchActivityView$2.smali
