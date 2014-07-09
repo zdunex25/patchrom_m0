@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="build_author">Developer</string>
+    <string name="polish_translation">Polish by</string>
+    <string name="viper_settings">Viper FX</string>
+    <string name="galaxy_settings">Galaxy settings</string>
+    <string name="line_breaking_title">Optimize paragraph text</string>
+    <string name="line_breaking_summary">Optimize paragraphs wrap effect</string>
+    <string name="perm_notice">Security notification</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.system" android:versionCode="19" android:versionName="4.2.2-eng.faryaab.20130601.172910" package="com.cyanogenmod.settings.device"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <application android:theme="@miui:style/V5.Theme.Light" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:icon="@drawable/ic_launcher_cmdevicesettings" android:name="com.cyanogenmod.settings.device.DeviceSettings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".Startup">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".HapticFragmentActivity" />
+        <activity android:name=".RadioFragmentActivity" />
+        <activity android:name=".ScreenFragmentActivity" />
+    </application>
+</manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.systemui.statusbar.phone.StatusBarWindowView android:background="@*android:color/transparent" android:focusable="true" android:fitsSystemWindows="true" android:descendantFocusability="afterDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
+    <View android:id="@id/status_bar_scrim" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_width="fill_parent" android:layout_height="@miui:dimen/android_status_bar_height" layout="@layout/status_bar_ios" />
+    <include android:layout_width="fill_parent" android:layout_height="0.0dip" layout="@layout/status_bar_expanded" />
+</com.android.systemui.statusbar.phone.StatusBarWindowView>

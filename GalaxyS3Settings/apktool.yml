@@ -1,0 +1,14 @@
+version: 1.5.2
+apkFileName: GalaxyS3Settings.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 6
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '19'
+packageInfo:
+  cur_package: com.cyanogenmod.settings.device
+  orig_package: com.cyanogenmod.settings.device
+compressionType: false

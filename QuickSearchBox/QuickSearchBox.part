@@ -1,0 +1,43 @@
+
+--- a/QuickSearchBox/smali/com/android/quicksearchbox/ui/SearchActivityView.smali
++++ b/QuickSearchBox/smali/com/android/quicksearchbox/ui/SearchActivityView.smali	
+@@ -1109,7 +1109,7 @@
+     invoke-direct {p0, v1, v2, v3}, Lcom/android/quicksearchbox/ui/SearchActivityView;->fillFixedSuggestionView(Lcom/android/quicksearchbox/ui/DefaultSuggestionView;Ljava/lang/String;I)V
+ 
+     .line 133
+-    const-string v2, "com.xiaomi.market"
++    const-string v2, "com.android.vending"
+ 
+     const v3, 0x7f070001
+ 
+
+--- a/QuickSearchBox/smali/com/android/quicksearchbox/ui/SearchActivityView$2.smali
++++ b/QuickSearchBox/smali/com/android/quicksearchbox/ui/SearchActivityView$2.smali	
+@@ -45,9 +45,9 @@
+     .line 145
+     new-instance v0, Landroid/content/ComponentName;
+ 
+-    const-string v2, "com.xiaomi.market"
++    const-string v2, "com.android.vending"
+ 
+-    const-string v3, "com.xiaomi.market.ui.JoinActivity"
++    const-string v3, "com.google.android.finsky.activities.MainActivity"
+ 
+     invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+ 
+
+--- a/QuickSearchBox/smali/com/android/quicksearchbox/SingleSourceCorpus.smali
++++ b/QuickSearchBox/smali/com/android/quicksearchbox/SingleSourceCorpus.smali
+@@ -207,11 +207,7 @@
+ 
+     .prologue
+     .line 92
+-    iget-object v0, p0, Lcom/android/quicksearchbox/SingleSourceCorpus;->mSource:Lcom/android/quicksearchbox/Source;
+-
+-    invoke-interface {v0}, Lcom/android/quicksearchbox/Source;->includeInAll()Z
+-
+-    move-result v0
++    const/4 v0, 0x0
+ 
+     return v0
+ .end method

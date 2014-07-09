@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Układ ikon</string>
+    <string name="AboutString">Informacje</string>
+    <string name="About1">Zmiana układu wymaga ponownego uruchomienia systemu!</string>
+    <string name="About2">Podgląd dostępnych stylów:</string>
+    <string name="sStatusBarType">Układ</string>
+    <string name="sAlign">Styl rozmieszczenia ikon</string>
+	<string name="sNavBarSizeTitle">Wielkość paska nawigacji</string>
+    <string name="sHeight">Rozmiar w pionie</string>
+    <string name="sWidth">Rozmiar w poziomie</string>
+	<string name="sNavBarDesc">Pasek nawigacji</string>
+	<string name="sNavBarEnable">Stan klawiszy ekranowych</string>
+</resources>

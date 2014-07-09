@@ -1,0 +1,14 @@
+version: 1.5.2
+apkFileName: ViPER4Android_FX_A4.x.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 6
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '19'
+packageInfo:
+  cur_package: com.vipercn.viper4android_v2
+  orig_package: com.vipercn.viper4android_v2
+compressionType: false

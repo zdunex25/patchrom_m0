@@ -1,0 +1,101 @@
+
+--- a/Settings/res/xml/device_info_settings.xml
++++ b/Settings/res/xml/device_info_settings.xml
+@@ -12,6 +12,8 @@
+     <miui.preference.ValuePreference android:title="@string/baseband_version" android:key="baseband_version" />
+     <miui.preference.ValuePreference android:title="@string/kernel_version" android:key="kernel_version" />
+     <miui.preference.ValuePreference android:title="@string/build_number" android:key="build_number" />
++    <miui.preference.ValuePreference android:title="@string/build_author" android:key="build_author" />
++    <miui.preference.ValuePreference android:title="@string/polish_translation" android:key="polish_translation" />
+     <miui.preference.ValuePreference android:title="@string/wifi_type_approval_title" android:key="wifi_type_approval" />
+     <PreferenceScreen android:title="@string/device_status" android:key="status_info" android:summary="@string/device_status_summary">
+         <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.deviceinfo.Status" />
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -51,9 +51,12 @@
+     <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
+         <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
+     </header>
+-    <header android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_ringer_volume_settings" android:title="@string/viper_settings">
++        <intent android:action="com.android.settings.VIPER" />
++    </header>
++    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings" android:title="@string/galaxy_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+     <header android:id="@id/system_section" android:title="@string/header_category_system" />
+     <header android:icon="@drawable/ic_oldman_mode_settings" android:id="@id/oldman_mode_settings" android:title="@string/oldman_mode_entry_name">
+         <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.OldmanModeSettings" />
+
+--- a/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali
++++ b/Settings/smali/com/android/settings/MiuiDeviceInfoSettings.smali
+@@ -1533,6 +1533,56 @@
+ 
+     invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
+ 
++    .line 116
++    const-string v25, "build_author"
++
++    new-instance v26, Ljava/lang/StringBuilder;
++
++    invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v27, "ZduneX25"
++
++    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v26
++
++    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v26
++
++    move-object/from16 v0, p0
++
++    move-object/from16 v1, v25
++
++    move-object/from16 v2, v26
++
++    invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
++
++    .line 118
++    const-string v25, "polish_translation"
++
++    new-instance v26, Ljava/lang/StringBuilder;
++
++    invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v27, "Acid (MIUI Polska)"
++
++    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v26
++
++    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v26
++
++    move-object/from16 v0, p0
++
++    move-object/from16 v1, v25
++
++    move-object/from16 v2, v26
++
++    invoke-direct {v0, v1, v2}, Lcom/android/settings/MiuiDeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
++
+     .line 142
+     const-string v25, "device_cpu"
+ 
+
+--- a/Settings/smali/com/android/settings/inputmethod/DefaultInputMethodSettings.smali
++++ b/Settings/smali/com/android/settings/inputmethod/DefaultInputMethodSettings.smali
+@@ -100,7 +100,7 @@
+ 
+     move-result-object v4
+ 
+-    const-string v5, "com.android.inputmethod.latin"
++    const-string v5, "com.sonyericsson.textinput.uxp2"
+ 
+     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="textView1">false</item>
+    <item type="id" name="textView4">false</item>
+    <item type="id" name="button6">false</item>
+    <item type="id" name="textView8">false</item>
+    <item type="id" name="textView2">false</item>
+    <item type="id" name="textView3">false</item>
+    <item type="id" name="textView5">false</item>
+    <item type="id" name="textView6">false</item>
+    <item type="id" name="textView7">false</item>
+    <item type="id" name="textView9">false</item>
+    <item type="id" name="textView10">false</item>
+    <item type="id" name="textView11">false</item>
+    <item type="id" name="nbEnable">false</item>
+    <item type="id" name="nbDisable">false</item>
+    <item type="id" name="nbReboot">false</item>
+    <item type="id" name="button7">false</item>
+</resources>

@@ -1,0 +1,105 @@
+
+--- a/MiuiSystemUI/res/values/public.xml
++++ b/MiuiSystemUI/res/values/public.xml
+@@ -436,6 +436,14 @@
+     <public type="layout" name="task_item_view" id="0x7f030032" />
+     <public type="layout" name="task_manager" id="0x7f030033" />
+     <public type="layout" name="torch_main" id="0x7f030034" />
++    <public type="layout" name="status_bar_center" id="0x7f030035" />
++    <public type="layout" name="status_bar_simple_center" id="0x7f030036" />
++    <public type="layout" name="super_status_bar_center" id="0x7f030037" />
++    <public type="layout" name="signal_cluster_view_ios" id="0x7f030038" />
++    <public type="layout" name="status_bar_ios" id="0x7f030039" />
++    <public type="layout" name="status_bar_simple_ios" id="0x7f03003a" />
++    <public type="layout" name="super_status_bar_ios" id="0x7f03003b" />
++    <public type="layout" name="status_bar_simple_blank" id="0x7f03003c" />
+     <public type="layout" name="status_bar_search_panel" id="0x7f03001d" />
+     <public type="anim" name="notification_final_disappear" id="0x7f040000" />
+     <public type="anim" name="priority_alert_enter" id="0x7f040001" />
+
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
+@@ -2465,6 +2465,47 @@
+     return-object v0
+ .end method
+ 
++.method private getStatusBarType(I)I
++    .locals 6
++    .parameter
++
++    .prologue
++    const/4 v0, 0x0
++
++    .line 3190
++    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mContext:Landroid/content/Context;
++
++    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v1
++
++    const-string v2, "m7StatusBarType"
++
++    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
++
++    move-result v5
++
++    const/4 v3, 0x1
++
++    if-eq v3, v5, :cond_0
++
++    const/4 v3, 0x2
++
++    if-eq v3, v5, :cond_1
++
++    return p1
++
++    :cond_0
++    const v4, 0x7f030037
++
++    return v4
++
++    :cond_1
++    const v4, 0x7f03003b
++
++    return v4
++.end method
++
+ .method private getTabIndicatorPosition(I)I
+     .locals 5
+     .parameter "tabIndex"
+@@ -9456,6 +9456,10 @@
+     .line 670
+     const v0, 0x7f030024
+ 
++    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getStatusBarType(I)I
++
++    move-result v0
++
+     invoke-static {v4, v0, v9}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+ 
+     move-result-object v0
+
+--- a/MiuiSystemUI/res/layout/status_bar_expanded.xml
++++ b/MiuiSystemUI/res/layout/status_bar_expanded.xml
+@@ -2,7 +2,7 @@
+ <com.android.systemui.statusbar.phone.TrackingView android:id="@id/notification_panel" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <LinearLayout android:orientation="vertical" android:id="@id/expanded_fixed" android:layout_width="fill_parent" android:layout_height="fill_parent">
+-        <include layout="@layout/status_bar_simple" />
++        <include layout="@layout/status_bar_simple_blank" />
+         <LinearLayout android:orientation="vertical" android:id="@id/expanded_fixed_backgroud" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+             <include layout="@layout/status_bar_expanded_header" />
+             <com.android.systemui.statusbar.phone.ExpandedView android:id="@id/expanded_contents" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+
+--- a/MiuiSystemUI/res/xml/advanced_settings.xml
++++ b/MiuiSystemUI/res/xml/advanced_settings.xml
+@@ -7,6 +7,9 @@
+         <miui.preference.ValuePreference android:persistent="false" android:title="@string/settings_custom_carrier" android:key="custom_carrier">
+             <intent android:targetPackage="com.android.systemui" android:targetClass="com.android.systemui.settings.CarrierCustomSettings" />
+         </miui.preference.ValuePreference>
++        <PreferenceScreen android:title="@string/status_bar_icon_style">
++            <intent android:action="com.android.systemui.M7PARTS" />
++        </PreferenceScreen>
+     </PreferenceCategory>
+     <PreferenceCategory android:title="@string/settings_notification_bar">
+         <CheckBoxPreference android:persistent="true" android:title="@string/settings_show_screenshot_notification" android:key="show_screenshot_notification" />

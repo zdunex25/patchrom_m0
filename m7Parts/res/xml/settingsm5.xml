@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sStatusBarType">
+        <ListPreference android:entries="@array/StatusBarTypes5" android:title="@string/sAlign" android:key="m7StatusBarType" android:defaultValue="0" android:entryValues="@array/StatusBarValues5" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/AboutString">
+        <PreferenceScreen android:layout="@layout/main" />
+    </PreferenceCategory>
+</PreferenceScreen>

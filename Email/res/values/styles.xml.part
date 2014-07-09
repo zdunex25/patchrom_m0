@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget"></style>
+    <style name="Widget.AppCompat"></style>
+    <style name="Widget.AppCompat.Base"></style>
+    <style name="Widget.AppCompat.Base.DropDownItem"></style>
+    <style name="Widget.AppCompat.Light"></style>
+    <style name="Widget.AppCompat.Light.Base"></style>
+    <style name="TextAppearance"></style>
+    <style name="TextAppearance.AppCompat"></style>
+    <style name="TextAppearance.AppCompat.Base"></style>
+    <style name="Theme.AppCompat.Base"></style>
+</resources>

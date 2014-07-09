@@ -1,0 +1,71 @@
+
+--- a/telephony-common/smali/com/android/internal/telephony/gsm/GsmServiceStateTracker.smali
++++ b/telephony-common/smali/com/android/internal/telephony/gsm/GsmServiceStateTracker.smali
+@@ -2606,11 +2606,7 @@
+ 
+     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/gsm/GSMPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
+ 
+-    invoke-static/range {v27 .. v27}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+-
+-    move-result v37
+-
+-    if-eqz v37, :cond_1e
++    if-nez v27, :cond_1e
+ 
+     const-string v37, "operatorNumeric is null"
+ 
+@@ -9195,11 +9191,11 @@
+     .line 557
+     .local v5, showSpn:Z
+     :goto_4
+-    if-eqz v5, :cond_miui
++    if-eqz v5, :cond_a
+ 
+     iget-boolean v9, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mEmergencyOnly:Z
+ 
+-    if-nez v9, :cond_miui
++    if-nez v9, :cond_a
+ 
+     iget-object v9, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mSS:Landroid/telephony/ServiceState;
+ 
+@@ -9207,11 +9203,11 @@
+ 
+     move-result v9
+ 
+-    if-nez v9, :cond_miui
++    if-nez v9, :cond_a
+ 
+     move v5, v8
+ 
+-    :goto_miui
++    :goto_5
+     iget-boolean v9, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mCurShowPlmn:Z
+ 
+     if-ne v4, v9, :cond_1
+@@ -9411,13 +9407,13 @@
+ 
+     move v4, v8
+ 
+-    :goto_5
++    :goto_6
+     goto/16 :goto_2
+ 
+     :cond_6
+     move v4, v7
+ 
+-    goto :goto_5
++    goto :goto_6
+ 
+     .line 544
+     :cond_7
+@@ -9467,8 +9463,8 @@
+     goto/16 :goto_4
+ 
+     .restart local v5       #showSpn:Z
+-    :cond_miui
++    :cond_a
+     move v5, v7
+ 
+-    goto/16 :goto_miui
++    goto/16 :goto_5
+ .end method
