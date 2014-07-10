@@ -101,44 +101,6 @@
     return-object v0
 .end method
 
-.method private addClipDataExtra(Landroid/content/ClipData;)V
-    .locals 3
-    .parameter "clip"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
-    .prologue
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    invoke-static {}, Lmiui/content/ClipServiceManagerExtra;->getInstance()Lmiui/content/ClipServiceManagerExtra;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    move-result-object v1
-
-    iget-object v2, p0, Landroid/content/ClipboardManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmiui/content/ClipServiceManagerExtra;->addData(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method private static getService()Landroid/content/IClipboard;
     .locals 3
 
@@ -621,8 +583,6 @@
     .parameter "clip"
 
     .prologue
-    invoke-direct {p0, p1}, Landroid/content/ClipboardManager;->addClipDataExtra(Landroid/content/ClipData;)V
-
     invoke-static {p0, p1}, Landroid/content/Injector$ClipboardManagerHook;->before_setPrimaryClip(Landroid/content/ClipboardManager;Landroid/content/ClipData;)V
 
     if-eqz p1, :cond_0
