@@ -14,7 +14,7 @@ local-modified-apps := Camera GalaxyS3Settings m7Parts VFX #MiuiUpdater
 local-modified-jars := #framework_ext
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService
+local-miui-removed-apps := MediaProvider SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService O2O
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi FileExplorer MiuiCompass \
