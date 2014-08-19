@@ -62,7 +62,7 @@ local-pre-zip-misc:
 #	cp -f other/extras/miui_mod_icons/*.png $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 #	cp -f other/extras/lock_wallpaper $(ZIP_DIR)/system/media/theme/default/lock_wallpaper
 	cp other/XiaomiAuthenticator.apk $(ZIP_DIR)/system/app/XiaomiAuthenticator.apk
-	cp other/lbesec $(ZIP_DIR)/system/xbin/lbesec
+#	cp other/lbesec $(ZIP_DIR)/system/xbin/lbesec
 	
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

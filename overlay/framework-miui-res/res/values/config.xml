@@ -6,6 +6,6 @@
         <item>en_US</item>
         <item>pl_PL</item>
     </string-array>
-    <bool name="enable_magnifier_when_input">true</bool>
+    <bool name="enable_magnifier_when_input">false</bool>
     <integer name="config_screen_on_proximity_sensor_first_change_delay">1000</integer>
 </resources>

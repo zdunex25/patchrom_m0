@@ -924,7 +924,6 @@
     .line 1697
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1694
     return-object v2
 
     .line 1696
@@ -937,7 +936,6 @@
     .line 1697
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1696
     throw v3
 .end method
 
@@ -1043,7 +1041,7 @@
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1080,7 +1078,7 @@
     .line 2334
     iget-object v2, v1, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
-    invoke-virtual {v2, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v2, p1, p2, p3, p4}, Landroid/media/MediaPlayer$EventHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -1088,7 +1086,7 @@
     .local v0, m:Landroid/os/Message;
     iget-object v2, v1, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
-    invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v2, v0}, Landroid/media/MediaPlayer$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method
@@ -1269,7 +1267,6 @@
     .line 2091
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2090
     throw v2
 .end method
 
@@ -1674,7 +1671,7 @@
 
     .line 1809
     .local v3, thread:Landroid/os/HandlerThread;
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+    invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
 
     .line 1810
     new-instance v2, Landroid/os/Handler;
@@ -1784,14 +1781,11 @@
     if-eqz v0, :cond_1
 
     .line 1939
-    .end local v1           #resolver:Landroid/content/ContentResolver;
-    :goto_1
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
     .line 1933
-    .restart local v1       #resolver:Landroid/content/ContentResolver;
     :cond_3
     :try_start_1
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -1807,29 +1801,23 @@
     .line 1938
     if-eqz v0, :cond_1
 
-    goto :goto_1
-
-    .end local v1           #resolver:Landroid/content/ContentResolver;
-    :catchall_0
-    move-exception v3
-
-    if-eqz v0, :cond_4
-
     .line 1939
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 1938
-    :cond_4
-    throw v3
+    goto :goto_0
 
     .line 1935
+    .end local v1           #resolver:Landroid/content/ContentResolver;
     :catch_0
     move-exception v3
 
     .line 1938
     if-eqz v0, :cond_1
 
-    goto :goto_1
+    .line 1939
+    invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
+
+    goto :goto_0
 
     .line 1936
     :catch_1
@@ -1838,7 +1826,22 @@
     .line 1938
     if-eqz v0, :cond_1
 
-    goto :goto_1
+    .line 1939
+    invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
+
+    goto :goto_0
+
+    .line 1938
+    :catchall_0
+    move-exception v3
+
+    if-eqz v0, :cond_4
+
+    .line 1939
+    invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
+
+    :cond_4
+    throw v3
 .end method
 
 .method public addTimedTextSource(Ljava/io/FileDescriptor;JJLjava/lang/String;)V
@@ -1946,7 +1949,6 @@
     .line 2002
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2001
     throw v2
 .end method
 
@@ -2236,7 +2238,7 @@
     .local v1, i:I
     iget-object v5, p0, Landroid/media/MediaPlayer;->mOutOfBandSubtitleTracks:Ljava/util/Vector;
 
-    invoke-virtual {v5}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v5}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
@@ -2605,7 +2607,7 @@
     :try_start_0
     iget-object v2, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
-    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -2703,7 +2705,7 @@
     .line 1394
     iget-object v2, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
-    invoke-virtual {v2, v5}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    invoke-virtual {v2, v5}, Landroid/media/MediaPlayer$EventHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 1397
     :cond_3
@@ -2882,7 +2884,6 @@
     if-eqz v6, :cond_1
 
     .line 915
-    :goto_1
     invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
@@ -2906,15 +2907,23 @@
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 914
-    :goto_2
+    :goto_1
     if-eqz v6, :cond_1
 
-    goto :goto_1
+    .line 915
+    invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
+
+    goto :goto_0
 
     .line 908
     :cond_4
+    :try_start_2
     invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v1
@@ -2930,12 +2939,12 @@
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_2
+    goto :goto_1
 
     .line 911
     .end local v7           #resolver:Landroid/content/ContentResolver;
@@ -2946,11 +2955,11 @@
     if-eqz v6, :cond_5
 
     .line 915
-    :goto_3
     invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     .line 919
     :cond_5
+    :goto_2
     const-string v0, "MediaPlayer"
 
     const-string v1, "Couldn\'t open file on client side, trying server side"
@@ -2987,6 +2996,18 @@
 
     goto :goto_0
 
+    .line 912
+    :catch_1
+    move-exception v0
+
+    .line 914
+    if-eqz v6, :cond_5
+
+    .line 915
+    invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
+
+    goto :goto_2
+
     .line 914
     :catchall_0
     move-exception v0
@@ -2996,18 +3017,8 @@
     .line 915
     invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 914
     :cond_7
     throw v0
-
-    .line 912
-    :catch_1
-    move-exception v0
-
-    .line 914
-    if-eqz v6, :cond_5
-
-    goto :goto_3
 .end method
 
 .method public setDataSource(Ljava/io/FileDescriptor;)V
@@ -3753,7 +3764,6 @@
     .line 773
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 772
     throw v3
 .end method
 

@@ -32,7 +32,7 @@ then
             rm -rf "$file3"
     done
 
-    cp -f $PORT_ROOT/android/Editor/* $BUILD_OUT/framework/smali/android/widget
+    # cp -f $PORT_ROOT/android/Editor/* $BUILD_OUT/framework/smali/android/widget
 fi
 
 if [ $2 = "$BUILD_OUT/framework2" ]

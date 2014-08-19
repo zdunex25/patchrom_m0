@@ -154,7 +154,7 @@
     .line 2845
     iget-object v2, p0, Landroid/media/MediaPlayer$TimeProvider;->mHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+    invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
     .line 2846
     iget-object v2, p0, Landroid/media/MediaPlayer$TimeProvider;->mHandlerThread:Landroid/os/HandlerThread;
@@ -873,7 +873,7 @@
 
     .line 3094
     :goto_4
-    invoke-virtual {v4}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v4}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
