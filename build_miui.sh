@@ -48,7 +48,7 @@ rm -f "resources.arsc"
 #rm -rf out/temp/data
 #cp -f -r other/extras/data2 out/temp/data
 #cp -f -r other/extras/miui out/temp/META-INF/com
-cp -rf /home/kamilz/patchromv544/miui/XHDPI/system/lib/* out/temp/system/lib
+cp -rf ../miui/XHDPI/system/lib/* out/temp/system/lib
 cp -r other/extras/gapps/* out/temp/system
 cp -f -r other/extras/data/* out/temp/system/media/theme/.data
 cp -f ../miuipolska/Polish/extras/system/etc/* out/temp/system/etc
