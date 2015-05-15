@@ -16,7 +16,7 @@ local-modified-jars := #framework_ext
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider SuperMarket VoiceAssist BaiduNetworkLocation GameCenter GameCenterSDKService O2O
 
-local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
+local-miui-modified-apps := AntiSpam Backup BarcodeScanner Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi FileExplorer MiuiCompass \
 			MiuiGallery MiuiHome MiuiSystemUI MiuiVideo MiWallpaper Mms Music NetworkAssistant2 Notes PackageInstaller Phone \
 			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Updater VpnDialogs \

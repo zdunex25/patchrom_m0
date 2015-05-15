@@ -42,6 +42,12 @@ if [ $1 = "Backup" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
+if [ $1 = "BarcodeScanner" ];then
+	addPolish $1
+	adjustDpi $1
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi
+
 if [ $1 = "Browser" ];then
 	addPolish $1
 	adjustDpi $1
